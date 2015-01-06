@@ -1,0 +1,49 @@
+ExternalInterface,
+  FunctionalMockupUnitImport;		!- Name of External Interface
+
+ExternalInterface:FunctionalMockupUnitImport,
+  MoistAir.fmu,		!- FMU Filename
+   ,		!- FMU Timeout in milli-seconds
+   ;		!- FMU LoggingOn Value
+
+ExternalInterface:FunctionalMockupUnitImport:From:Variable,
+   ,		!- EnergyPlus Key Value
+   ,		!- EnergyPlus Variable Name
+   MoistAir.fmu,		!- FMU Filename
+   ,		!- FMU Instance Name
+   TRooMea;		!- FMU Variable Name
+
+ExternalInterface:FunctionalMockupUnitImport:From:Variable,
+   ,		!- EnergyPlus Key Value
+   ,		!- EnergyPlus Variable Name
+   MoistAir.fmu,		!- FMU Filename
+   ,		!- FMU Instance Name
+   outRelHum;		!- FMU Variable Name
+
+ExternalInterface:FunctionalMockupUnitImport:From:Variable,
+   ,		!- EnergyPlus Key Value
+   ,		!- EnergyPlus Variable Name
+   MoistAir.fmu,		!- FMU Filename
+   ,		!- FMU Instance Name
+   rooRelHum;		!- FMU Variable Name
+
+ExternalInterface:FunctionalMockupUnitImport:To:,
+   ,		!- EnergyPlus Variable Name
+   MoistAir.fmu,		!- FMU Filename
+   ,		!- FMU Instance Name
+   QSensible,		!- FMU Variable Name
+   ;		!- Initial Value
+
+ExternalInterface:FunctionalMockupUnitImport:To:,
+   ,		!- EnergyPlus Variable Name
+   MoistAir.fmu,		!- FMU Filename
+   ,		!- FMU Instance Name
+   QLatent,		!- FMU Variable Name
+   ;		!- Initial Value
+
+ExternalInterface:FunctionalMockupUnitImport:From:Variable,
+   ,		!- EnergyPlus Key Value
+   ,		!- EnergyPlus Variable Name
+   MoistAir.fmu,		!- FMU Filename
+   ,		!- FMU Instance Name
+   TDryBul;		!- FMU Variable Name
