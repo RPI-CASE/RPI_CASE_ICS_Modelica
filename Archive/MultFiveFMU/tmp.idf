@@ -1,0 +1,21 @@
+ExternalInterface,
+  FunctionalMockupUnitImport;		!- Name of External Interface
+
+ExternalInterface:FunctionalMockupUnitImport,
+  MultFive.fmu,		!- FMU Filename
+   ,		!- FMU Timeout in milli-seconds
+   ;		!- FMU LoggingOn Value
+
+ExternalInterface:FunctionalMockupUnitImport:To:,
+   ,		!- EnergyPlus Variable Name
+   MultFive.fmu,		!- FMU Filename
+   ,		!- FMU Instance Name
+   Output,		!- FMU Variable Name
+   ;		!- Initial Value
+
+ExternalInterface:FunctionalMockupUnitImport:From:Variable,
+   ,		!- EnergyPlus Key Value
+   ,		!- EnergyPlus Variable Name
+   MultFive.fmu,		!- FMU Filename
+   ,		!- FMU Instance Name
+   Input;		!- FMU Variable Name

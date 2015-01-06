@@ -1,0 +1,180 @@
+
+ Meters for 12,MAIN ZONE:Zone Air System Sensible Heating Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:Building [J]
+  OnMeter=EnergyTransfer:Zone:MAIN ZONE [J]
+  OnMeter=Heating:EnergyTransfer [J]
+  OnMeter=Heating:EnergyTransfer:Zone:MAIN ZONE [J]
+
+ Meters for 63,MAIN ZONE:Zone Air System Sensible Cooling Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:Building [J]
+  OnMeter=EnergyTransfer:Zone:MAIN ZONE [J]
+  OnMeter=Cooling:EnergyTransfer [J]
+  OnMeter=Cooling:EnergyTransfer:Zone:MAIN ZONE [J]
+
+ Meters for 84,MAIN ZONE BASEBOARD:Baseboard Total Heating Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:HVAC [J]
+  OnMeter=Baseboard:EnergyTransfer [J]
+
+ Meters for 105,MAIN ZONE BASEBOARD:Baseboard Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:HVAC [J]
+  OnMeter=Heating:Electricity [J]
+
+ Meters for 137,SUPPLY FAN:Fan Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:HVAC [J]
+  OnMeter=Fans:Electricity [J]
+  OnMeter=General:Fans:Electricity [J]
+
+ Meters for 158,EVAPORATIVE COOLER:Evaporative Cooler Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:HVAC [J]
+  OnMeter=Cooling:Electricity [J]
+
+ Meters for 169,EVAPORATIVE COOLER:Evaporative Cooler Water Volume [m3]
+  OnMeter=Water:Facility [m3]
+  OnMeter=Water:HVAC [m3]
+  OnMeter=Cooling:Water [m3]
+
+ Meters for 200,EVAPORATIVE COOLER:Evaporative Cooler Mains Water Volume [m3]
+  OnMeter=MainsWater:Facility [m3]
+  OnMeter=MainsWater:HVAC [m3]
+  OnMeter=Cooling:MainsWater [m3]
+
+ Meters for 231,Whole Building:Facility Total Purchased Electric Energy [J]
+  OnMeter=ElectricityPurchased:Facility [J]
+  OnMeter=ElectricityPurchased:Plant [J]
+  OnMeter=Cogeneration:ElectricityPurchased [J]
+
+ Meters for 262,Whole Building:Facility Total Surplus Electric Energy [J]
+  OnMeter=ElectricitySurplusSold:Facility [J]
+  OnMeter=ElectricitySurplusSold:Plant [J]
+  OnMeter=Cogeneration:ElectricitySurplusSold [J]
+
+ Meters for 293,Whole Building:Facility Net Purchased Electric Energy [J]
+  OnMeter=ElectricityNet:Facility [J]
+  OnMeter=ElectricityNet:Plant [J]
+  OnMeter=Cogeneration:ElectricityNet [J]
+
+ Meters for 336,Site:Environmental Impact Total N2O Emissions Carbon Equivalent Mass [kg]
+  OnMeter=Carbon Equivalent:Facility [kg]
+  OnMeter=CarbonEquivalentEmissions:Carbon Equivalent [kg]
+
+ Meters for 357,Site:Environmental Impact Total CH4 Emissions Carbon Equivalent Mass [kg]
+  OnMeter=Carbon Equivalent:Facility [kg]
+  OnMeter=CarbonEquivalentEmissions:Carbon Equivalent [kg]
+
+ Meters for 358,Site:Environmental Impact Total CO2 Emissions Carbon Equivalent Mass [kg]
+  OnMeter=Carbon Equivalent:Facility [kg]
+  OnMeter=CarbonEquivalentEmissions:Carbon Equivalent [kg]
+
+ For Meter=EnergyTransfer:Facility [J], ResourceType=EnergyTransfer, contents are:
+  MAIN ZONE:Zone Air System Sensible Heating Energy
+  MAIN ZONE:Zone Air System Sensible Cooling Energy
+  MAIN ZONE BASEBOARD:Baseboard Total Heating Energy
+
+ For Meter=EnergyTransfer:Building [J], ResourceType=EnergyTransfer, Group=Building, contents are:
+  MAIN ZONE:Zone Air System Sensible Heating Energy
+  MAIN ZONE:Zone Air System Sensible Cooling Energy
+
+ For Meter=EnergyTransfer:Zone:MAIN ZONE [J], ResourceType=EnergyTransfer, Group=Zone, contents are:
+  MAIN ZONE:Zone Air System Sensible Heating Energy
+  MAIN ZONE:Zone Air System Sensible Cooling Energy
+
+ For Meter=Heating:EnergyTransfer [J], ResourceType=EnergyTransfer, EndUse=Heating, contents are:
+  MAIN ZONE:Zone Air System Sensible Heating Energy
+
+ For Meter=Heating:EnergyTransfer:Zone:MAIN ZONE [J], ResourceType=EnergyTransfer, EndUse=Heating, Group=Zone, contents are:
+  MAIN ZONE:Zone Air System Sensible Heating Energy
+
+ For Meter=Cooling:EnergyTransfer [J], ResourceType=EnergyTransfer, EndUse=Cooling, contents are:
+  MAIN ZONE:Zone Air System Sensible Cooling Energy
+
+ For Meter=Cooling:EnergyTransfer:Zone:MAIN ZONE [J], ResourceType=EnergyTransfer, EndUse=Cooling, Group=Zone, contents are:
+  MAIN ZONE:Zone Air System Sensible Cooling Energy
+
+ For Meter=EnergyTransfer:HVAC [J], ResourceType=EnergyTransfer, Group=HVAC, contents are:
+  MAIN ZONE BASEBOARD:Baseboard Total Heating Energy
+
+ For Meter=Baseboard:EnergyTransfer [J], ResourceType=EnergyTransfer, EndUse=Baseboard, contents are:
+  MAIN ZONE BASEBOARD:Baseboard Total Heating Energy
+
+ For Meter=Electricity:Facility [J], ResourceType=Electricity, contents are:
+  MAIN ZONE BASEBOARD:Baseboard Electric Energy
+  SUPPLY FAN:Fan Electric Energy
+  EVAPORATIVE COOLER:Evaporative Cooler Electric Energy
+
+ For Meter=Electricity:HVAC [J], ResourceType=Electricity, Group=HVAC, contents are:
+  MAIN ZONE BASEBOARD:Baseboard Electric Energy
+  SUPPLY FAN:Fan Electric Energy
+  EVAPORATIVE COOLER:Evaporative Cooler Electric Energy
+
+ For Meter=Heating:Electricity [J], ResourceType=Electricity, EndUse=Heating, contents are:
+  MAIN ZONE BASEBOARD:Baseboard Electric Energy
+
+ For Meter=Fans:Electricity [J], ResourceType=Electricity, EndUse=Fans, contents are:
+  SUPPLY FAN:Fan Electric Energy
+
+ For Meter=General:Fans:Electricity [J], ResourceType=Electricity, EndUse=Fans, contents are:
+  SUPPLY FAN:Fan Electric Energy
+
+ For Meter=Cooling:Electricity [J], ResourceType=Electricity, EndUse=Cooling, contents are:
+  EVAPORATIVE COOLER:Evaporative Cooler Electric Energy
+
+ For Meter=Water:Facility [m3], ResourceType=Water, contents are:
+  EVAPORATIVE COOLER:Evaporative Cooler Water Volume
+
+ For Meter=Water:HVAC [m3], ResourceType=Water, Group=HVAC, contents are:
+  EVAPORATIVE COOLER:Evaporative Cooler Water Volume
+
+ For Meter=Cooling:Water [m3], ResourceType=Water, EndUse=Cooling, contents are:
+  EVAPORATIVE COOLER:Evaporative Cooler Water Volume
+
+ For Meter=MainsWater:Facility [m3], ResourceType=MainsWater, contents are:
+  EVAPORATIVE COOLER:Evaporative Cooler Mains Water Volume
+
+ For Meter=MainsWater:HVAC [m3], ResourceType=MainsWater, Group=HVAC, contents are:
+  EVAPORATIVE COOLER:Evaporative Cooler Mains Water Volume
+
+ For Meter=Cooling:MainsWater [m3], ResourceType=MainsWater, EndUse=Cooling, contents are:
+  EVAPORATIVE COOLER:Evaporative Cooler Mains Water Volume
+
+ For Meter=ElectricityPurchased:Facility [J], ResourceType=ElectricityPurchased, contents are:
+  Whole Building:Facility Total Purchased Electric Energy
+
+ For Meter=ElectricityPurchased:Plant [J], ResourceType=ElectricityPurchased, Group=Plant, contents are:
+  Whole Building:Facility Total Purchased Electric Energy
+
+ For Meter=Cogeneration:ElectricityPurchased [J], ResourceType=ElectricityPurchased, EndUse=Cogeneration, contents are:
+  Whole Building:Facility Total Purchased Electric Energy
+
+ For Meter=ElectricitySurplusSold:Facility [J], ResourceType=ElectricitySurplusSold, contents are:
+  Whole Building:Facility Total Surplus Electric Energy
+
+ For Meter=ElectricitySurplusSold:Plant [J], ResourceType=ElectricitySurplusSold, Group=Plant, contents are:
+  Whole Building:Facility Total Surplus Electric Energy
+
+ For Meter=Cogeneration:ElectricitySurplusSold [J], ResourceType=ElectricitySurplusSold, EndUse=Cogeneration, contents are:
+  Whole Building:Facility Total Surplus Electric Energy
+
+ For Meter=ElectricityNet:Facility [J], ResourceType=ElectricityNet, contents are:
+  Whole Building:Facility Net Purchased Electric Energy
+
+ For Meter=ElectricityNet:Plant [J], ResourceType=ElectricityNet, Group=Plant, contents are:
+  Whole Building:Facility Net Purchased Electric Energy
+
+ For Meter=Cogeneration:ElectricityNet [J], ResourceType=ElectricityNet, EndUse=Cogeneration, contents are:
+  Whole Building:Facility Net Purchased Electric Energy
+
+ For Meter=Carbon Equivalent:Facility [kg], ResourceType=Carbon Equivalent, contents are:
+  Site:Environmental Impact Total N2O Emissions Carbon Equivalent Mass
+  Site:Environmental Impact Total CH4 Emissions Carbon Equivalent Mass
+  Site:Environmental Impact Total CO2 Emissions Carbon Equivalent Mass
+
+ For Meter=CarbonEquivalentEmissions:Carbon Equivalent [kg], ResourceType=Carbon Equivalent, EndUse=CarbonEquivalentEmissions, contents are:
+  Site:Environmental Impact Total N2O Emissions Carbon Equivalent Mass
+  Site:Environmental Impact Total CH4 Emissions Carbon Equivalent Mass
+  Site:Environmental Impact Total CO2 Emissions Carbon Equivalent Mass

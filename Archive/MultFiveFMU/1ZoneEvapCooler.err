@@ -1,0 +1,20 @@
+Program Version,EnergyPlus-Windows-64 8.1.0.009, YMD=2014.08.13 12:42,IDD_Version 8.1.0.009
+   ** Warning ** GetAirPathData: AirLoopHVAC="EVAP COOLER SYSTEM" has no Controllers.
+   ************* Testing Individual Branch Integrity
+   ************* All Branches passed integrity testing
+   ************* Testing Individual Supply Air Path Integrity
+   ************* All Supply Air Paths passed integrity testing
+   ************* Testing Individual Return Air Path Integrity
+   ************* All Return Air Paths passed integrity testing
+   ************* No node connection errors were found.
+   ************* Beginning Simulation
+   ** Severe  ** ExternalInterface/InitExternalInterfaceFMUImport: Error when trying to
+   **   ~~~   ** unpack the FMU "multfive.fmu".
+   **   ~~~   ** Check if the FMU exists. Also check if the FMU folder is not write protected.
+   **  Fatal  ** ExternalInterface/StopExternalInterfaceIfError: Error in ExternalInterface:Check EnergyPlus *.err file.
+   ...Summary of Errors that led to program termination:
+   ..... Reference severe error count=1
+   ..... Last severe error=ExternalInterface/InitExternalInterfaceFMUImport: Error when trying to
+   ************* EnergyPlus Warmup Error Summary. During Warmup: 0 Warning; 1 Severe Errors.
+   ************* EnergyPlus Sizing Error Summary. During Sizing: 0 Warning; 0 Severe Errors.
+   ************* EnergyPlus Terminated--Fatal Error Detected. 1 Warning; 1 Severe Errors; Elapsed Time=00hr 00min  1.51sec

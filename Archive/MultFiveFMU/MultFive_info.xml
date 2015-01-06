@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="application/xml" href="simcodedump.xsl"?>
+<simcodedump model="MultFive">
+<variables>
+  <variable name="$dummy" comment="" variability = "continuous" isDiscrete = "false">
+    <Real useStart="false" fixed="true" useNominal="false" />
+    <source>
+      <info file="" lineStart="0" lineEnd="0" colStart="0" colEnd="0"/>
+    </source>
+  </variable>
+  <variable name="$PRE.$dummy" comment="" variability = "continuous" isDiscrete = "true">
+    <Real useStart="false" fixed="true" useNominal="false" />
+    <source>
+      <info file="" lineStart="0" lineEnd="0" colStart="0" colEnd="0"/>
+    </source>
+  </variable>
+  <variable name="der($dummy)" comment="" variability = "continuous" isDiscrete = "false">
+    <Real useStart="false" fixed="true" useNominal="false" />
+    <source>
+      <info file="" lineStart="0" lineEnd="0" colStart="0" colEnd="0"/>
+    </source>
+  </variable>
+  <variable name="$PRE.der($dummy)" comment="" variability = "continuous" isDiscrete = "true">
+    <Real useStart="false" fixed="true" useNominal="false" />
+    <source>
+      <info file="" lineStart="0" lineEnd="0" colStart="0" colEnd="0"/>
+    </source>
+  </variable>
+  <variable name="Output" comment="" variability = "continuous" isDiscrete = "false">
+    <Real useStart="false" fixed="false" useNominal="false" />
+    <source>
+      <info file="C:\EnergyPlusV8-1-0\DataSets\FMUs\MultFive.mo" lineStart="3" lineEnd="3" colStart="3" colEnd="247"/>
+      <part-of>within Real;</part-of>
+      <type>MultFive</type>
+      <type>Modelica.Blocks.Interfaces.RealOutput</type>
+    </source>
+  </variable>
+  <variable name="$PRE.Output" comment="" variability = "continuous" isDiscrete = "true">
+    <Real useStart="false" fixed="false" useNominal="false" />
+    <source>
+      <info file="C:\EnergyPlusV8-1-0\DataSets\FMUs\MultFive.mo" lineStart="3" lineEnd="3" colStart="3" colEnd="247"/>
+      <part-of>within Real;</part-of>
+      <type>MultFive</type>
+      <type>Modelica.Blocks.Interfaces.RealOutput</type>
+    </source>
+  </variable>
+  <variable name="Input" comment="" variability = "continuous" isDiscrete = "false">
+    <Real useStart="false" fixed="false" useNominal="false" />
+    <source>
+      <info file="C:\EnergyPlusV8-1-0\DataSets\FMUs\MultFive.mo" lineStart="2" lineEnd="2" colStart="3" colEnd="247"/>
+      <part-of>within Real;</part-of>
+      <type>MultFive</type>
+      <type>Modelica.Blocks.Interfaces.RealInput</type>
+    </source>
+  </variable>
+  <variable name="$PRE.Input" comment="" variability = "continuous" isDiscrete = "true">
+    <Real useStart="false" fixed="false" useNominal="false" />
+    <source>
+      <info file="C:\EnergyPlusV8-1-0\DataSets\FMUs\MultFive.mo" lineStart="2" lineEnd="2" colStart="3" colEnd="247"/>
+      <part-of>within Real;</part-of>
+      <type>MultFive</type>
+      <type>Modelica.Blocks.Interfaces.RealInput</type>
+    </source>
+  </variable>
+  <variable name="Input" comment="" variability = "continuous" isDiscrete = "false">
+    <Real useStart="false" fixed="false" useNominal="false" />
+    <source>
+      <info file="C:\EnergyPlusV8-1-0\DataSets\FMUs\MultFive.mo" lineStart="2" lineEnd="2" colStart="3" colEnd="247"/>
+      <part-of>within Real;</part-of>
+      <type>MultFive</type>
+      <type>Modelica.Blocks.Interfaces.RealInput</type>
+    </source>
+  </variable>
+  <variable name="$PRE.Input" comment="" variability = "continuous" isDiscrete = "true">
+    <Real useStart="false" fixed="false" useNominal="false" />
+    <source>
+      <info file="C:\EnergyPlusV8-1-0\DataSets\FMUs\MultFive.mo" lineStart="2" lineEnd="2" colStart="3" colEnd="247"/>
+      <part-of>within Real;</part-of>
+      <type>MultFive</type>
+      <type>Modelica.Blocks.Interfaces.RealInput</type>
+    </source>
+  </variable>
+  <variable name="Output" comment="" variability = "continuous" isDiscrete = "false">
+    <Real useStart="false" fixed="false" useNominal="false" />
+    <source>
+      <info file="C:\EnergyPlusV8-1-0\DataSets\FMUs\MultFive.mo" lineStart="3" lineEnd="3" colStart="3" colEnd="247"/>
+      <part-of>within Real;</part-of>
+      <type>MultFive</type>
+      <type>Modelica.Blocks.Interfaces.RealOutput</type>
+    </source>
+  </variable>
+  <variable name="$PRE.Output" comment="" variability = "continuous" isDiscrete = "true">
+    <Real useStart="false" fixed="false" useNominal="false" />
+    <source>
+      <info file="C:\EnergyPlusV8-1-0\DataSets\FMUs\MultFive.mo" lineStart="3" lineEnd="3" colStart="3" colEnd="247"/>
+      <part-of>within Real;</part-of>
+      <type>MultFive</type>
+      <type>Modelica.Blocks.Interfaces.RealOutput</type>
+    </source>
+  </variable>
+</variables>
+<initial-equations size="1">
+  <equation index="1">
+    <assign>
+      <defines name="Output" />
+      <depends name="Input" />
+      <rhs>5.0 * Input</rhs>
+    </assign>
+    <source>
+      <info file="C:\EnergyPlusV8-1-0\DataSets\FMUs\MultFive.mo" lineStart="5" lineEnd="5" colStart="3" colEnd="21"/>
+      <part-of>within MultFive;</part-of>
+    </source>
+  </equation>
+</initial-equations>
+<residual-equations size="0">
+</residual-equations>
+<equations size="2">
+  <equation index="2">
+    <assign>
+      <defines name="der($dummy)" />
+      <rhs>0.0</rhs>
+    </assign>
+    <source>
+      <info file="" lineStart="0" lineEnd="0" colStart="0" colEnd="0"/>
+    </source>
+  </equation>
+  <equation index="3">
+    <assign>
+      <defines name="Output" />
+      <depends name="Input" />
+      <rhs>5.0 * Input</rhs>
+    </assign>
+    <source>
+      <info file="C:\EnergyPlusV8-1-0\DataSets\FMUs\MultFive.mo" lineStart="5" lineEnd="5" colStart="3" colEnd="21"/>
+      <part-of>within MultFive;</part-of>
+    </source>
+  </equation>
+</equations>
+<start-equations size="0">
+</start-equations>
+<nominal-equations size="0">
+</nominal-equations>
+<min-equations size="0">
+</min-equations>
+<max-equations size="0">
+</max-equations>
+<parameter-equations size="0">
+</parameter-equations>
+<assertions size="0">
+</assertions>
+<jacobian-equations>
+</jacobian-equations>
+<literals size="0">
+</literals>
+<functions size="0">
+</functions>
+</simcodedump>
