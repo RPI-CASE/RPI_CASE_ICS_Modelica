@@ -1,4 +1,4 @@
-package ICSolar "Integrated Concentrating Solar simulation, packaged into one file for hierarchy construction"
+package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarchy construction"
   extends Modelica.Icons.Package;
   model ICS_Skeleton "This model calculates the electrical and thermal generation of ICSolar. This model is used as a skeleton piece to hold together the other models until it is packages as an FMU."
     parameter Real FLensWidth = 0.25019 "Lens width";
