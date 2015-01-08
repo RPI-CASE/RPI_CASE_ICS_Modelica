@@ -3,7 +3,7 @@ char Aclass(3,24)
 Adymosim
 1.4
 Modelica experiment file
-
+//TEST EDIT
 
 #    Experiment parameters
 double experiment(7,1)
