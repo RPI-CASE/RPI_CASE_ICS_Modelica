@@ -1,9 +1,8 @@
-package ICSolar "Integrated Concentrating Solar simulation, packaged into one file for hierarchy construction"
+package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarchy construction"
   extends Modelica.Icons.Package;
 
   model ICS_Skeleton "This model calculates the electrical and thermal generation of ICSolar. This model is used as a skeleton piece to hold together the other models until it is packages as an FMU."
-    parameter Real FLensWidth = 0.25019 "Lens width";
-    parameter Real CellWidth = 0.01 "PV Cell width";
+    extends ICSolar.Parameters;
     parameter Modelica.SIunits.Pressure PAmb(displayUnit = "PA") = 101325 "Ambient pressure";
     Modelica.Thermal.FluidHeatFlow.Sources.Ambient Sink(medium = Modelica.Thermal.FluidHeatFlow.Media.Water(), constantAmbientPressure = 101325, constantAmbientTemperature = 300) "Thermal fluid sink, will be replaced with a tank later" annotation(Placement(visible = true, transformation(origin = {80, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     Modelica.Thermal.FluidHeatFlow.Sources.Ambient Source(medium = Modelica.Thermal.FluidHeatFlow.Media.Water(), useTemperatureInput = false, constantAmbientPressure = 101325, constantAmbientTemperature = 300) "Thermal fluid source" annotation(Placement(visible = true, transformation(origin = {-60, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 180)));
@@ -30,13 +29,14 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged into one fi
     connect(ics_context1.SurfTilt_out, ics_envelopecassette1.SurfaceTilt) annotation(Line(points = {{-155, 50}, {-5, 50}}));
     connect(ics_context1.TDryBul, ics_envelopecassette1.TAmb_in) annotation(Line(points = {{-155, 55}, {-5, 55}}));
     connect(ics_context1.DNI, ics_envelopecassette1.DNI) annotation(Line(points = {{-155, 25}, {-5, 25}}, color = {0, 0, 127}));
-    annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200, -100}, {200, 100}}), graphics), experiment(StartTime = 28561600.0, StopTime = 28566600.0, Tolerance = 1e-006, Interval = 10.2459));
+    annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200, -100}, {200, 100}}), graphics), experiment(StartTime = 0, StopTime = 3.15569e+07, Tolerance = 1e-06, Interval = 3600.33));
   end ICS_Skeleton;
 
   model ICS_Context "This model provides the pieces necessary to set up the context to run the simulation, in FMU practice this will be cut out and provided from the EnergyPlus file"
-    parameter Real Lat = 40.71 * Modelica.Constants.pi / 180 "Latitude";
-    parameter Real SurfOrientation = 0 "Surface orientation: Change 'S' to 'W','E', or 'N' for other orientations";
-    parameter Real SurfTilt = 0 "0 wall, pi/2 roof";
+    extends ICSolar.Parameters;
+    parameter Real Lat = BuildingLatitude "Latitude";
+    parameter Real SurfOrientation = BuildingOrientation "Surface orientation: Change 'S' to 'W','E', or 'N' for other orientations";
+    parameter Real SurfTilt = ArrayTilt "Tilt of the ICSolar array";
     Buildings.BoundaryConditions.WeatherData.ReaderTMY3 weaDat(filNam = "modelica://Buildings/Resources/weatherdata/USA_NY_New.York-Central.Park.725033_TMY3.mos", pAtmSou = Buildings.BoundaryConditions.Types.DataSource.Parameter, TDryBul(displayUnit = "K"), TDewPoi(displayUnit = "K"), totSkyCovSou = Buildings.BoundaryConditions.Types.DataSource.Parameter, opaSkyCovSou = Buildings.BoundaryConditions.Types.DataSource.Parameter, totSkyCov = 0.01, opaSkyCov = 0.01) "Weather data reader for New York Central Park" annotation(Placement(visible = true, transformation(origin = {-40, 20}, extent = {{-20, -20}, {20, 20}}, rotation = 0)));
     // Buildings.BoundaryConditions.SolarIrradiation.DirectTiltedSurface HDirTil(til = SurfTilt, lat = Lat, azi = 0) "Irradiance on tilted surface" annotation(Placement(visible = true, transformation(origin = {20, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     Buildings.BoundaryConditions.SolarGeometry.BaseClasses.Declination decAng "Solar declination (seasonal offset)" annotation(Placement(visible = true, transformation(origin = {-40, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
@@ -95,9 +95,6 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged into one fi
     extends Modelica.Icons.Package;
 
     model ICS_EnvelopeCassette "This model in the Envelope Cassette (Double-Skin Facade) that houses the ICSolar Stack and Modules. This presents a building envelope"
-      parameter Real StackHeight = 6.0 "Number of Modules in a stack, currently not used";
-      parameter Real NumStacks = 4.0 "Number of stacks in an envelope, currently not used";
-      parameter Modelica.SIunits.Area ArrayArea = 1 "Area of the array";
       Modelica.Thermal.HeatTransfer.Interfaces.HeatPort_a TAmb_in "Ambient cavity temperature" annotation(Placement(visible = true, transformation(origin = {-100, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.Thermal.FluidHeatFlow.Interfaces.FlowPort_a flowport_a "Thermal fluid inflow port, before heat exchange" annotation(Placement(visible = true, transformation(origin = {-100, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-95, -85}, extent = {{-5, -5}, {5, 5}}, rotation = 0)));
       Modelica.Blocks.Interfaces.RealInput DNI "DNI from weather file" annotation(Placement(visible = true, transformation(origin = {-100, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
@@ -144,7 +141,6 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged into one fi
       connect(ics_selfshading1.DNI_out, ics_stack1.DNI) annotation(Line(points = {{1.5, 7.5}, {6.04915, 7.5}, {6.04915, -4.53686}, {15, -4.53686}, {15, -5}}));
       connect(ics_stack1.flowport_b1, flowport_b) annotation(Line(points = {{65, 0}, {80.1512, 0}, {80.1512, -22.3062}, {100, -22.3062}, {100, -20}}));
       connect(ics_stack1.Power_out, Power_Electric) annotation(Line(points = {{65, 10}, {80.9074, 10}, {80.9074, 18.9036}, {100, 18.9036}, {100, 20}}));
-      ics_stack1.StackHeight = StackHeight "linking variables of stack height";
       annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2}), graphics = {Text(origin = {14.1802, -9.308960000000001}, extent = {{-81.85129999999999, 57.4687}, {64.45999999999999, -43.48}}, textString = "Envelope")}), Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics), experiment(StartTime = 0, StopTime = 31536000.0, Tolerance = 1e-006, Interval = 3600));
     end ICS_EnvelopeCassette;
 
@@ -238,8 +234,6 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged into one fi
 
     model CavityHeatBalance
       extends ICSolar.Parameters;
-      parameter Real GlassArea = NumModules * 0.3 * 0.3;
-      parameter Real CavityVolume = GlassArea * 0.5;
       Modelica.Thermal.HeatTransfer.Components.ThermalConductor Conduction_Exterior(G = 10.17809 * GlassArea) "Lumped Thermal Conduction between Exterior and Cavity" annotation(Placement(visible = true, transformation(origin = {-40, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.Thermal.HeatTransfer.Interfaces.HeatPort_a Interior annotation(Placement(visible = true, transformation(origin = {100, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.Thermal.HeatTransfer.Interfaces.HeatPort_a Exterior annotation(Placement(visible = true, transformation(origin = {-100, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
@@ -277,7 +271,6 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged into one fi
     extends Modelica.Icons.Package;
 
     model ICS_Stack "This model represents an individual Integrated Concentrating Solar Stack"
-      Modelica.Blocks.Interfaces.RealInput StackHeight "Might be used later to multiply Modules" annotation(Placement(visible = true, transformation(origin = {-100, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.Blocks.Interfaces.RealInput DNI "DNI in from Envelope (Parent)" annotation(Placement(visible = true, transformation(origin = {-100, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.Thermal.FluidHeatFlow.Interfaces.FlowPort_a flowport_a1 "Thermal fluid inflow port" annotation(Placement(visible = true, transformation(origin = {-100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.Thermal.FluidHeatFlow.Interfaces.FlowPort_b flowport_b1 "Thermal fluid outflow port" annotation(Placement(visible = true, transformation(origin = {100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
@@ -526,9 +519,18 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged into one fi
   end Receiver;
 
   model Parameters
+    parameter Real BuildingOrientation = 0 "Radians, 0 being south";
+    parameter Real BuildingLatitude = 40.71 * Modelica.Constants.pi / 180 "Latitude (radians)";
+    parameter Real ArrayTilt = 0 "Radians, 0 being wall";
+    parameter Real ModulesPerStack = 3 "Number of Modules per stack";
+    parameter Real NumOfStacks = 1 "Number of stacks";
+    parameter Real NumOfModules = ModulesPerStack * NumOfStacks "Number of modules being simulated. Will be replaced with a calculation based on wall area in the future.";
+    parameter Real GlassArea = NumOfModules * 0.3 * 0.3 "Glass Area exposed to either the interior or exterior. Could be replaced later with wall area";
+    parameter Real CavityVolume = GlassArea * 0.5 "Volume of cavity for air calculations";
+    // parameter Real FLensWidth = 0.25019 "Lens width";
+    // parameter Real CellWidth = 0.01 "PV Cell width";
     parameter Real SystemsFlow = 2e-006;
     Real HeatSinkResistivity = 0.0282 * SystemsFlow ^ (-0.773);
-    parameter Real NumModules = 3 "Number of Modules being simulated";
     annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})));
   end Parameters;
 
