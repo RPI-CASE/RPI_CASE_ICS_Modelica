@@ -147,8 +147,6 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged into one fi
       connect(ics_selfshading1.DNI_out, ics_stack1.DNI) annotation(Line(points = {{1.5, 7.5}, {6, 7.5}, {6, -8}, {17.5, -8}, {17.5, -8.5}}));
       connect(ics_stack1.flowport_b1, flowport_b) annotation(Line(points = {{65, 0}, {80.1512, 0}, {80.1512, -22.3062}, {100, -22.3062}, {100, -20}}));
       connect(ics_stack1.Power_out, Power_Electric) annotation(Line(points = {{65, 10}, {80.9074, 10}, {80.9074, 18.9036}, {100, 18.9036}, {100, 20}}));
-      // connect(ics_stack1.Power_in, GND_stack) annotation(Line(points = {{65, 10}, {80.9074, 10}, {80.9074, 18.9036}, {100, 18.9036}, {100, 20}}));
-      //  ics_stack1.StackHeight = StackHeight "linking variables of stack height";
       annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2}), graphics = {Text(origin = {14.1802, -9.308960000000001}, extent = {{-81.85129999999999, 57.4687}, {64.45999999999999, -43.48}}, textString = "Envelope")}), Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics), experiment(StartTime = 0, StopTime = 31536000.0, Tolerance = 1e-006, Interval = 3600));
     end ICS_EnvelopeCassette;
 
