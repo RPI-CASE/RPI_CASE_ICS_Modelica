@@ -30,7 +30,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged into one fi
     connect(ics_context1.SurfTilt_out, ics_envelopecassette1.SurfaceTilt) annotation(Line(points = {{-155, 50}, {-5, 50}}));
     connect(ics_context1.TDryBul, ics_envelopecassette1.TAmb_in) annotation(Line(points = {{-155, 55}, {-5, 55}}));
     connect(ics_context1.DNI, ics_envelopecassette1.DNI) annotation(Line(points = {{-155, 25}, {-5, 25}}, color = {0, 0, 127}));
-    annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200, -100}, {200, 100}}), graphics), experiment(StartTime = 0, StopTime = 3.1536e+07, Tolerance = 1e-06, Interval = 3600));
+    annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200, -100}, {200, 100}}), graphics), experiment(StartTime = 0, StopTime = 3.1536e+05, Tolerance = 1e-06, Interval = 3624.83));
   end ICS_Skeleton;
 
   model ICS_Context "This model provides the pieces necessary to set up the context to run the simulation, in FMU practice this will be cut out and provided from the EnergyPlus file"
@@ -119,7 +119,12 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged into one fi
       ICSolar.Envelope.RotationMatrixForSphericalCood rotationmatrixforsphericalcood1 annotation(Placement(visible = true, transformation(origin = {-60, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       // Modelica.Blocks.Interfaces.RealOutput DNI_toIndoors "the DNI that slips past the modules and gets through the interior-side glazing" annotation(Placement(visible = true, transformation(origin = {100, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       // ICSolar.Envelope.DNIReduction_AreaFraction dnireduction_areafraction1 annotation(Placement(visible = true, transformation(origin = {-20, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      Modelica.Thermal.FluidHeatFlow.Sensors.TemperatureSensor temperaturesensor1 annotation(Placement(visible = true, transformation(origin = {80, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      Modelica.Thermal.FluidHeatFlow.Sensors.EnthalpyFlowSensor enthalpyflowsensor1 annotation(Placement(visible = true, transformation(origin = {60, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     equation
+      connect(ics_stack1.flowport_b1, enthalpyflowsensor1.flowPort_b) annotation(Line(points = {{65, 0}, {70.4762, 0}, {70.4762, -60.1361}, {70.4762, -60.1361}}, color = {255, 0, 0}));
+      connect(flowport_a, enthalpyflowsensor1.flowPort_a) annotation(Line(points = {{-100, -80}, {16.0544, -80}, {16.0544, -59.8639}, {49.5238, -59.8639}, {49.5238, -59.8639}}, color = {255, 0, 0}));
+      connect(ics_stack1.flowport_b1, temperaturesensor1.flowPort) annotation(Line(points = {{65, 0}, {69.932, 0}, {69.932, 39.4558}, {69.932, 39.4558}}, color = {255, 0, 0}));
       // connect(dnireduction_areafraction1.DNI_out, glazingLossesInner.DNI) annotation(Line(points = {{-10, -58}, {-4.08163, -58}, {-4.08163, -51.7007}, {45, -51.7007}, {45, -51}}, color = {0, 0, 127}));
       // connect(glazingLossesOuter.SurfDirNor, dnireduction_areafraction1.DNI_in) annotation(Line(points = {{-45, 63}, {-40.0494, 63}, {-40.0494, -12.1137}, {-30.1607, -52}, {-30, -52}}, color = {0, 0, 127}));
       // connect(dnireduction_areafraction1.arrayPitch, rotationmatrixforsphericalcood1.arrayPitch) annotation(Line(points = {{-30, -60}, {-38.6395, -60}, {-38.3923, -24.6627}, {-49.7528, -24.445}, {-50, -24}}, color = {0, 0, 127}));
