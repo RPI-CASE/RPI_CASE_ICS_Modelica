@@ -530,9 +530,9 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     ////////////////////////
     ///// ARRAY SIZING /////
     ////////////////////////
-    parameter Integer StackHeight = 10 "Number of Modules per stack";
-    parameter Integer NumOfStacks = 16 "Number of stacks, controls the .Stack object";
-    parameter Integer NumOfModules = 3 "ModulesPerStack * NumOfStacks Number of modules being simulated. Will be replaced with a calculation based on wall area in the future.";
+    parameter Integer StackHeight = 9 "Number of Modules per stack";
+    parameter Integer NumOfStacks = 1 "Number of stacks, controls the .Stack object";
+    parameter Integer NumOfModules = StackHeight * NumOfStacks "ModulesPerStack * NumOfStacks Number of modules being simulated. Will be replaced with a calculation based on wall area in the future.";
     parameter Real GlassArea = NumOfModules * 0.3 * 0.3 "Glass Area exposed to either the interior or exterior. Could be replaced later with wall area";
     parameter Real CavityVolume = GlassArea * 0.5 "Volume of cavity for air calculations";
     ////////////////////////////////
