@@ -32,7 +32,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     connect(ics_context1.SurfTilt_out, ics_envelopecassette1.SurfaceTilt) annotation(Line(points = {{-155, 50}, {-5, 50}}));
     connect(ics_context1.TDryBul, ics_envelopecassette1.TAmb_in) annotation(Line(points = {{-155, 55}, {-5, 55}}));
     connect(ics_context1.DNI, ics_envelopecassette1.DNI) annotation(Line(points = {{-155, 25}, {-5, 25}}, color = {0, 0, 127}));
-    annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200, -100}, {200, 100}}), graphics), experiment(StartTime = 0, StopTime = 3.1536e+05, Tolerance = 1e-06, Interval = 3624.83));
+    annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200, -100}, {200, 100}}), graphics), experiment(StartTime = 0, StopTime = 3.156e+07, Tolerance = 1e-06, Interval = 3600.68));
   end ICS_Skeleton;
 
   model ICS_Context "This model provides the pieces necessary to set up the context to run the simulation, in FMU practice this will be cut out and provided from the EnergyPlus file"
@@ -476,7 +476,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
         Modelica.Thermal.HeatTransfer.Interfaces.HeatPort_a heatLoss_to_ambient annotation(Placement(visible = true, transformation(origin = {-100, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
         Modelica.Thermal.HeatTransfer.Components.ThermalCollector thermalcollector1 annotation(Placement(visible = true, transformation(origin = {-20, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
         Modelica.Thermal.FluidHeatFlow.Components.HeatedPipe heatedpipe1(h_g = 0, T0 = TAmb, medium = mediumHTF, T(start = TAmb), pressureDrop(fixed = false), T0fixed = false, m = 0.003, dpNominal(displayUnit = "kPa") = 62270, V_flowLaminar(displayUnit = "l/min") = 1.6666666666667e-006, dpLaminar(displayUnit = "kPa") = 14690, V_flowNominal(displayUnit = "l/min") = 3.995e-006) annotation(Placement(visible = true, transformation(origin = {-20, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-        Modelica.Thermal.HeatTransfer.Components.ThermalResistor thermalresistor_waterblock(R = Resistivity_WaterBlock) annotation(Placement(visible = true, transformation(origin = {-20, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 90)));
+        Modelica.Thermal.HeatTransfer.Components.ThermalResistor thermalresistor_waterblock(R = Resistivity_WaterPlate) annotation(Placement(visible = true, transformation(origin = {-20, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 90)));
         Modelica.Thermal.HeatTransfer.Components.ThermalResistor thermalresistor_celltoreceiver(R = Resistivity_Cell) annotation(Placement(visible = true, transformation(origin = {-60, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       equation
         connect(thermalconductor1.port_a, thermalcollector1.port_a[3]) annotation(Line(points = {{10, 0}, {-20.029, 0}, {-20.029, -10.1597}, {-20.029, -10.1597}}));
@@ -524,22 +524,22 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     //////////////////////////////////
     ///// BUILDING CONFIGURATION /////
     //////////////////////////////////
-    parameter Real BuildingOrientation = 0 "Radians, 0 being south";
+    parameter Real BuildingOrientation = 40 * 3.14159 / 180 "Radians, 0 being south";
     parameter Real BuildingLatitude = 40.71 * Modelica.Constants.pi / 180 "Latitude (radians)";
     parameter Real ArrayTilt = 0 "Radians, 0 being wall";
     ////////////////////////
     ///// ARRAY SIZING /////
     ////////////////////////
-    parameter Integer StackHeight = 10 "Number of Modules per stack";
-    parameter Integer NumOfStacks = 16 "Number of stacks, controls the .Stack object";
-    parameter Integer NumOfModules = 3 "ModulesPerStack * NumOfStacks Number of modules being simulated. Will be replaced with a calculation based on wall area in the future.";
+    parameter Integer StackHeight = 9 "Number of Modules per stack";
+    parameter Integer NumOfStacks = 1 "Number of stacks, controls the .Stack object";
+    parameter Integer NumOfModules = StackHeight * NumOfStacks "ModulesPerStack * NumOfStacks Number of modules being simulated. Will be replaced with a calculation based on wall area in the future.";
     parameter Real GlassArea = NumOfModules * 0.3 * 0.3 "Glass Area exposed to either the interior or exterior. Could be replaced later with wall area";
     parameter Real CavityVolume = GlassArea * 0.5 "Volume of cavity for air calculations";
     ////////////////////////////////
     ///// OPTICAL EFFICIENCIES /////
     ////////////////////////////////
     parameter Real Trans_glazinglosses = 0.74 "Transmittance of outter glazing losses (single glass layer). Good glass: Guardian Ultraclear 6mm: 0.87. For our studio IGUs, measured 0.71. But give it 0.74, because we measured at ~28degrees, which will increase absorptance losses.";
-    parameter Real OpticalEfficiency = 0.882 "The optical efficiency of the concentrating lens and optics prior to the photovoltaic cell";
+    parameter Real OpticalEfficiency = 0.66 "The optical efficiency of the concentrating lens and optics prior to the photovoltaic cell";
     parameter Real Exp_Observed = 0.215 "observed electrical efficiency of ICSFg8";
     parameter Real Exp_nom_tweak = 0.364 * OpticalEfficiency "matching the observed to modeled data, compensating for temperature 'unknown'. 0.364 matches the Nov25-13 data well when eta_observed is 0.215. set same as eta_obs for full-strength output.";
     ////////////////////////
@@ -555,15 +555,16 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     ///// FLUID /////
     /////////////////
     parameter Modelica.Thermal.FluidHeatFlow.Media.Medium mediumHTF = Modelica.Thermal.FluidHeatFlow.Media.Water() "Water" annotation(choicesAllMatching = true);
-    parameter Real OneBranchFlow = 2e-006;
+    parameter Real OneBranchFlow = 1.63533E-06;
     //////////////////////////////////////
     ///// HEAT TRANSFER COEFFICIENTS /////
     //////////////////////////////////////
     parameter Real Resistivity_WaterBlock = 5.69e-6 * OneBranchFlow ^ (-0.773) "Thermal resisitivity of the water block heat exchanger";
+    //5.69e-6 * OneBranchFlow ^ (-0.773)
     parameter Real Resistivity_Cell = 0.2 "The thermal heat resistivity of the photovoltaic cell";
-    parameter Real Resistivity_WaterPlate = 0.281991 "Thermal resisitivity of the water plate heat exchanger";
+    parameter Real Resistivity_WaterPlate = 1.6 "Thermal resisitivity of the water plate heat exchanger";
     parameter Real Cond_RecToEnv = 10 "This is a thermal conductivity to determine the amount of heat lost to the environment from the receiver";
-    parameter Real Conv_Receiver = 10 * 0.004 "Convection Heat Transfer of Receiver to air h(=10)*A(=0.004m2)";
+    parameter Real Conv_Receiver = 0.0618321 "Convection Heat Transfer of Receiver to air h(=10)*A(=0.004m2)";
     parameter Real Conv_WaterTube = 3.66 * 0.58 / (2 * 0.003175) * 2 * Modelica.Constants.pi * 0.003175 * 0.3 "Convection Heat Transfer of Water to Piping = h*SurfArea = Nu(=3.66) * kofWater / Diameter * Surface Area";
     parameter Real Conv_InsulationAir = 3.66 * 0.023 / (2 * (0.003175 + 0.0015 + 0.09525)) * 2 * Modelica.Constants.pi * (0.003175 + 0.0015 + 0.01905) * 0.3 "Convection Heat Transfer of Piping to Air Nu(=3.66) * kofAir / Diameter * Surface Area";
     parameter Real Cond_Insulation = 1 / (Modelica.Math.log(14.2 / 4.675) / (2 * Modelica.Constants.pi * 0.037 * 0.3)) "Thermal conductivity of Tubing Insulation: ln((23.55e-3)/(4.5e-3))/(2*pi*0.037*0.3)";
