@@ -559,7 +559,8 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     parameter Real Resistivity_Cell = 0.2 "The thermal heat resistivity of the photovoltaic cell";
     parameter Real Resistivity_WaterPlate = 1.6 "Thermal resisitivity of the water plate heat exchanger";
     parameter Real Cond_RecToEnv = 10 "This is a thermal conductivity to determine the amount of heat lost to the environment from the receiver";
-    parameter Real Conv_Receiver = 0.0618321 "Convection Heat Transfer of Receiver to air h(=10)*A(=0.004m2)";
+    parameter Real Conv_Receiver = 0.10 "Convection Heat Transfer of Receiver to air h(=10)*A(=0.004m2)";
+    //parameter Real Conv_Receiver = 0.0618321 "Convection Heat Transfer of Receiver to air h(=10)*A(=0.004m2)";
     parameter Real Conv_WaterTube = 3.66 * 0.58 / (2 * 0.003175) * 2 * Modelica.Constants.pi * 0.003175 * 0.3 "Convection Heat Transfer of Water to Piping = h*SurfArea = Nu(=3.66) * kofWater / Diameter * Surface Area";
     parameter Real Conv_InsulationAir = 3.66 * 0.023 / (2 * (0.003175 + 0.0015 + 0.09525)) * 2 * Modelica.Constants.pi * (0.003175 + 0.0015 + 0.01905) * 0.3 "Convection Heat Transfer of Piping to Air Nu(=3.66) * kofAir / Diameter * Surface Area";
     parameter Real Cond_Insulation = 1 / (Modelica.Math.log(14.2 / 4.675) / (2 * Modelica.Constants.pi * 0.037 * 0.3)) "Thermal conductivity of Tubing Insulation: ln((23.55e-3)/(4.5e-3))/(2*pi*0.037*0.3)";
