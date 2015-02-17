@@ -534,7 +534,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     ///// OPTICAL EFFICIENCIES /////
     ////////////////////////////////
     parameter Real Trans_glazinglosses = 0.74 "Transmittance of outter glazing losses (single glass layer). Good glass: Guardian Ultraclear 6mm: 0.87. For our studio IGUs, measured 0.71. But give it 0.74, because we measured at ~28degrees, which will increase absorptance losses.";
-    parameter Real OpticalEfficiency = 0.66 "The optical efficiency of the concentrating lens and optics prior to the photovoltaic cell";
+    parameter Real OpticalEfficiency = 0.58 "The optical efficiency of the concentrating lens and optics prior to the photovoltaic cell";
     parameter Real Exp_Observed = 0.215 "observed electrical efficiency of ICSFg8";
     parameter Real Exp_nom_tweak = 0.364 * OpticalEfficiency "matching the observed to modeled data, compensating for temperature 'unknown'. 0.364 matches the Nov25-13 data well when eta_observed is 0.215. set same as eta_obs for full-strength output.";
     ////////////////////////
@@ -557,9 +557,9 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     parameter Real Resistivity_WaterBlock = 5.69e-6 * OneBranchFlow ^ (-0.773) "Thermal resisitivity of the water block heat exchanger";
     //5.69e-6 * OneBranchFlow ^ (-0.773)
     parameter Real Resistivity_Cell = 0.2 "The thermal heat resistivity of the photovoltaic cell";
-    parameter Real Resistivity_WaterPlate = 1.6 "Thermal resisitivity of the water plate heat exchanger";
-    parameter Real Cond_RecToEnv = 10 "This is a thermal conductivity to determine the amount of heat lost to the environment from the receiver";
-    parameter Real Conv_Receiver = 0.10 "Convection Heat Transfer of Receiver to air h(=10)*A(=0.004m2)";
+    parameter Real Resistivity_WaterPlate = 0.8 "Thermal resisitivity of the water plate heat exchanger";
+    parameter Real Cond_RecToEnv = 100 "This is a thermal conductivity to determine the amount of heat lost to the environment from the receiver";
+    parameter Real Conv_Receiver = 0.07 "Convection Heat Transfer of Receiver to air h(=10)*A(=0.004m2)";
     //parameter Real Conv_Receiver = 0.0618321 "Convection Heat Transfer of Receiver to air h(=10)*A(=0.004m2)";
     parameter Real Conv_WaterTube = 3.66 * 0.58 / (2 * 0.003175) * 2 * Modelica.Constants.pi * 0.003175 * 0.3 "Convection Heat Transfer of Water to Piping = h*SurfArea = Nu(=3.66) * kofWater / Diameter * Surface Area";
     parameter Real Conv_InsulationAir = 3.66 * 0.023 / (2 * (0.003175 + 0.0015 + 0.09525)) * 2 * Modelica.Constants.pi * (0.003175 + 0.0015 + 0.01905) * 0.3 "Convection Heat Transfer of Piping to Air Nu(=3.66) * kofAir / Diameter * Surface Area";
