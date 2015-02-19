@@ -379,7 +379,8 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       // parameter Real Eta_Observed = Exp_Observed "From ICSolar.Parameters, observed electrical efficiency of ICSFg8";
       // parameter Real Eta_nom_tweak = Exp_nom_tweak "From ICSolar.Parameters, matching the observed to modeled data, compensating for temperature 'unknown'. 0.364 matches the Nov25-13 data well when eta_observed is 0.215. set same as eta_obs for full-strength output.";
       Real CellWidth = 0.01 "Width of the PV Cell";
-      Real CellEfficiency = (0.36436 + (52.5 - (ThermalGen.T - 273.15)) * 0.0005004 + (ConcentrationFactor - 627.5) * 1.9965e-006) * Exp_Observed / Exp_nom_tweak "Equation to determine the PVEfficiency from the ConcentrationFactor and Cell Temperature";
+      Real CellEfficiency = 0.36436 + (52.5 - (ThermalGen.T - 273.15)) * 0.0005004 + (ConcentrationFactor - 627.5) * 1.9965e-006;
+      //* Exp_Observed / Exp_nom_tweak "Equation to determine the PVEfficiency from the ConcentrationFactor and Cell Temperature";
       Real EIPC "Energy In Per Cell";
       Modelica.Blocks.Interfaces.RealInput ConcentrationFactor "Used to represent 'suns's for the calculation of PVEfficiency" annotation(Placement(visible = true, transformation(origin = {-100, -60}, extent = {{-25, -25}, {25, 25}}, rotation = 0), iconTransformation(origin = {-100, -60}, extent = {{-15, -15}, {15, 15}}, rotation = 0)));
       Modelica.Blocks.Interfaces.RealOutput ElectricalGen "Real output for piping the generated electrical energy out" annotation(Placement(visible = true, transformation(origin = {100, 20}, extent = {{-25, -25}, {25, 25}}, rotation = 0), iconTransformation(origin = {100, 40}, extent = {{-25, -25}, {25, 25}}, rotation = 0)));
@@ -535,9 +536,9 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     ///// OPTICAL EFFICIENCIES /////
     ////////////////////////////////
     parameter Real Trans_glazinglosses = 0.74 "Transmittance of outter glazing losses (single glass layer). Good glass: Guardian Ultraclear 6mm: 0.87. For our studio IGUs, measured 0.71. But give it 0.74, because we measured at ~28degrees, which will increase absorptance losses.";
-    parameter Real OpticalEfficiency = 0.70 "The optical efficiency of the concentrating lens and optics prior to the photovoltaic cell";
-    parameter Real Exp_Observed = 0.215 "observed electrical efficiency of ICSFg8";
-    parameter Real Exp_nom_tweak = 0.364 * OpticalEfficiency "matching the observed to modeled data, compensating for temperature 'unknown'. 0.364 matches the Nov25-13 data well when eta_observed is 0.215. set same as eta_obs for full-strength output.";
+    parameter Real OpticalEfficiency = 0.57 "The optical efficiency of the concentrating lens and optics prior to the photovoltaic cell";
+    //parameter Real Exp_Observed = 0.215 "observed electrical efficiency of ICSFg8";
+    //parameter Real Exp_nom_tweak = 0.364 * OpticalEfficiency "matching the observed to modeled data, compensating for temperature 'unknown'. 0.364 matches the Nov25-13 data well when eta_observed is 0.215. set same as eta_obs for full-strength output.";
     ////////////////////////
     ///// TEMPERATURES /////
     ////////////////////////
@@ -558,10 +559,10 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     //////////////////////////////////////
     parameter Real Resistivity_WaterBlock = 5.69e-6 * OneBranchFlow ^ (-0.773) "Thermal resisitivity of the water block heat exchanger";
     //5.69e-6 * OneBranchFlow ^ (-0.773)
-    parameter Real Resistivity_Cell = 0.1 "The thermal heat resistivity of the photovoltaic cell";
-    parameter Real Resistivity_WaterPlate = 0.02 "Thermal resisitivity of the water plate heat exchanger";
-    parameter Real Cond_RecToEnv = 100 "This is a thermal conductivity to determine the amount of heat lost to the environment from the receiver";
-    parameter Real Conv_Receiver = 0.09;
+    parameter Real Resistivity_Cell = 0.2 "The thermal heat resistivity of the photovoltaic cell";
+    parameter Real Resistivity_WaterPlate = 1.6 "Thermal resisitivity of the water plate heat exchanger";
+    parameter Real Cond_RecToEnv = 10 "This is a thermal conductivity to determine the amount of heat lost to the environment from the receiver";
+    parameter Real Conv_Receiver = 0.0534;
     // 0.07 "Convection Heat Transfer of Receiver to air h(=10)*A(=0.004m2)";
     //parameter Real Conv_Receiver = 0.0618321 "Convection Heat Transfer of Receiver to air h(=10)*A(=0.004m2)";
     parameter Real Conv_WaterTube = 3.66 * 0.58 / (2 * 0.003175) * 2 * Modelica.Constants.pi * 0.003175 * 0.3 "Convection Heat Transfer of Water to Piping = h*SurfArea = Nu(=3.66) * kofWater / Diameter * Surface Area";
