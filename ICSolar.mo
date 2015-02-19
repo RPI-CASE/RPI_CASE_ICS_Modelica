@@ -289,7 +289,11 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       output Modelica.Blocks.Interfaces.RealOutput Power_out "Electrical power generated" annotation(Placement(visible = true, transformation(origin = {100, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Module.ICS_Module iCS_Module[StackHeight] annotation(Placement(visible = true, transformation(origin = {0, 20}, extent = {{-25, -25}, {25, 25}}, rotation = 0)));
       Modelica.Thermal.FluidHeatFlow.Sensors.TemperatureSensor temperaturesensor1(medium = mediumHTF) annotation(Placement(visible = true, transformation(origin = {80, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      Modelica.Thermal.FluidHeatFlow.Sensors.VolumeFlowSensor volumeflowsensor1 annotation(Placement(visible = true, transformation(origin = {-60, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      Modelica.Thermal.FluidHeatFlow.Sensors.MassFlowSensor massflowsensor1 annotation(Placement(visible = true, transformation(origin = {-40, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     equation
+      connect(flowport_a1, massflowsensor1.flowPort_a) annotation(Line(points = {{-100, -60}, {-79.3572, -60}, {-79.3572, -40.0494}, {-49.4438, -40.0494}, {-49.4438, -40.0494}}, color = {255, 0, 0}));
+      connect(flowport_a1, volumeflowsensor1.flowPort_a) annotation(Line(points = {{-100, -60}, {-69.4685, -60}, {-69.4685, -60.3214}, {-69.4685, -60.3214}}, color = {255, 0, 0}));
       connect(temperaturesensor1.flowPort, flowport_b1) annotation(Line(points = {{70, -20}, {66.1224, -20}, {66.1224, 0.544218}, {100.408, 0.544218}, {100.408, 0.544218}}, color = {255, 0, 0}));
       //make the connections between modules: electrical and flow
       for i in 1:StackHeight - 1 loop
@@ -536,8 +540,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     parameter Real Trans_glazinglosses = 0.74 "Transmittance of outter glazing losses (single glass layer). Good glass: Guardian Ultraclear 6mm: 0.87. For our studio IGUs, measured 0.71. But give it 0.74, because we measured at ~28degrees, which will increase absorptance losses.";
     parameter Real OpticalEfficiency = 0.70 "The optical efficiency of the concentrating lens and optics prior to the photovoltaic cell";
     parameter Real Exp_Observed = 0.215 "observed electrical efficiency of ICSFg8";
-    parameter Real Exp_nom_tweak = 0.364;
-    //* OpticalEfficiency "matching the observed to modeled data, compensating for temperature 'unknown'. 0.364 matches the Nov25-13 data well when eta_observed is 0.215. set same as eta_obs for full-strength output.";
+    parameter Real Exp_nom_tweak = 0.364 * OpticalEfficiency "matching the observed to modeled data, compensating for temperature 'unknown'. 0.364 matches the Nov25-13 data well when eta_observed is 0.215. set same as eta_obs for full-strength output.";
     ////////////////////////
     ///// TEMPERATURES /////
     ////////////////////////
@@ -558,10 +561,10 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     //////////////////////////////////////
     parameter Real Resistivity_WaterBlock = 5.69e-6 * OneBranchFlow ^ (-0.773) "Thermal resisitivity of the water block heat exchanger";
     //5.69e-6 * OneBranchFlow ^ (-0.773)
-    parameter Real Resistivity_Cell = 0.2 "The thermal heat resistivity of the photovoltaic cell";
-    parameter Real Resistivity_WaterPlate = 0.2 "Thermal resisitivity of the water plate heat exchanger";
+    parameter Real Resistivity_Cell = 0.1 "The thermal heat resistivity of the photovoltaic cell";
+    parameter Real Resistivity_WaterPlate = 0.02 "Thermal resisitivity of the water plate heat exchanger";
     parameter Real Cond_RecToEnv = 100 "This is a thermal conductivity to determine the amount of heat lost to the environment from the receiver";
-    parameter Real Conv_Receiver = 0.12;
+    parameter Real Conv_Receiver = 0.09;
     // 0.07 "Convection Heat Transfer of Receiver to air h(=10)*A(=0.004m2)";
     //parameter Real Conv_Receiver = 0.0618321 "Convection Heat Transfer of Receiver to air h(=10)*A(=0.004m2)";
     parameter Real Conv_WaterTube = 3.66 * 0.58 / (2 * 0.003175) * 2 * Modelica.Constants.pi * 0.003175 * 0.3 "Convection Heat Transfer of Water to Piping = h*SurfArea = Nu(=3.66) * kofWater / Diameter * Surface Area";
