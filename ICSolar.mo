@@ -657,7 +657,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     end subClasses;
   end Receiver;
 
-  model Parameters
+  model Parameters "Inputs for the ICSF model"
     //////////////////////////////////
     //////// MODEL OPERATION /////////
     //////////////////////////////////
@@ -715,7 +715,16 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     parameter Real Cond_Tube = 1 / (Modelica.Math.log(4.675 / 3.175) / (2 * Modelica.Constants.pi * 0.145 * 0.3) * 2 * Modelica.Constants.pi * (0.003175 + 0.0015) * 0.3) "Thermal conductivity of the silicone tubing: 1/(ln(4.5e-3/3e-3)/(2*pi*0.145*0.3))";
     parameter Real HeatCap_Receiver = 30;
     //30;
-    annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), experiment(StartTime = 47130, StopTime = 58120, Tolerance = 1e-06, Interval = 10));
+    annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), experiment(StartTime = 47130, StopTime = 58120, Tolerance = 1e-06, Interval = 10), Documentation(info = "<html>
+Don't forget to:<br/>
+fix the shading matrices path in <code>Envelope.ICS_SelfShading</code>.<br/> </html>", revisions = "<html>
+<ul>
+<li>
+Jan2015, by Justin Shultz:<br/>
+First implementation.<br/>
+</li>
+</ul>
+</html>"));
   end Parameters;
 
   model HeatCapacitorPCMLike00 "Lumped thermal element storing heat with temperature-varying capacitance"
