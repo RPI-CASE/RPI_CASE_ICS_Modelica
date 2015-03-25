@@ -129,14 +129,13 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       end for;
       //make the connections for all stacks: Flow in, flow out, shading, heat port (loss)
       for i in 1:NumOfStacks loop
-        ICSolar.Stack.ICS_Stack.StackNumber = i;
+        ics_stack[i].StackNumber = i;
         connect(rotationmatrixforsphericalcood1.arrayYaw, ics_stack[i].arrayYaw);
         connect(rotationmatrixforsphericalcood1.arrayPitch, ics_stack[i].arrayPitch);
         connect(glazingLossesOuter.SurfDirNor, ics_stack[i].DNI);
         connect(ics_stack[i].flowport_a1, flowport_a) annotation(Line(points = {{15, -15}, {5.78072, -15}, {5.78072, -13.5009}, {-100, -13.5009}, {-100, -80}}));
         connect(ics_stack[i].flowport_b1, flowport_b) annotation(Line(points = {{65, 0}, {80, 0}, {80, -21.2245}, {100, -21.2245}, {100, -20}}, color = {255, 0, 0}));
         connect(ics_stack[i].TAmb_in, cavityheatbalance1.ICS_Heat) annotation(Line(points = {{15, 20}, {0.593472, 20}, {0.593472, 20.178}, {20, 20.178}, {20, 50}}));
-        connect(ics_stack[i].DNI, ics_selfshading1.DNI_out) annotation(Line(points = {{17.5, -8.5}, {6, -8.5}, {6, -8}, {1.5, -8}, {1.5, 7.5}}));
       end for;
       //after the stacks
       connect(ics_stack[NumOfStacks].Power_out, Power_Electric);
@@ -298,8 +297,8 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       Modelica.Blocks.Interfaces.IntegerInput StackNumber annotation(Placement(visible = true, transformation(origin = {-100, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.Blocks.Interfaces.RealInput arrayYaw annotation(Placement(visible = true, transformation(origin = {-100, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.Blocks.Interfaces.RealInput arrayPitch annotation(Placement(visible = true, transformation(origin = {-100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-      ICSolar.Module.chooseShadeMatrix chooseshadematrix1 annotation(Placement(visible = true, transformation(origin = {-60, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-      ICSolar.Stack.Shading shading1 annotation(Placement(visible = true, transformation(origin = {-20, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      ICSolar.Module.chooseShadeMatrix chooseshadematrix1[StackHeight] annotation(Placement(visible = true, transformation(origin = {-60, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      ICSolar.Stack.Shading shading1[StackHeight] annotation(Placement(visible = true, transformation(origin = {-20, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     equation
       //make the connections between modules: electrical and flow
       for i in 1:StackHeight - 1 loop
@@ -308,13 +307,14 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       end for;
       //make the connections between modules and the world: DNI, T_ambient
       for i in 1:StackHeight loop
-        connect(StackNumber, chooseshadematrix1.ModuleColumn);
-        connect(i, chooseshadematrix1.ModuleRow);
-        connect(chooseshadematrix1.ShadeMatrixEnum, shading1.ShadingTable);
-        connect(arrayYaw, shading1.arrayYaw);
-        connect(arrayPitch, shading1.arrayPitch);
-        connect(DNI, shading1.DNI_in);
-        connect(shading1.DNI_out, iCS_Module[i].DNI);
+        connect(StackNumber, chooseshadematrix1[i].ModuleColumn);
+        //chooseshadematrix1[i].ModuleRow = i;
+        connect(i, chooseshadematrix1[i].ModuleRow);
+        connect(chooseshadematrix1[i].ShadeMatrixEnum, shading1[i].ShadingTable);
+        connect(arrayYaw, shading1[i].arrayYaw);
+        connect(arrayPitch, shading1[i].arrayPitch);
+        connect(DNI, shading1[i].DNI_in);
+        connect(shading1[i].DNI_out, iCS_Module[i].DNI);
         // connect(iCS_Module[i].DNI, DNI);
         connect(iCS_Module[i].TAmb_in, TAmb_in);
       end for;
@@ -327,20 +327,20 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
 
     model Shading
       Modelica.Blocks.Interfaces.RealOutput DNI_out "DNI after shading factor multiplication" annotation(Placement(visible = true, transformation(origin = {100, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-      Modelica.Blocks.Interfaces.RealInput DNI_in "DNI in before shading factor multiplication" annotation(Placement(visible = true, transformation(origin = {-100, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.Blocks.Math.Product product1 "Multiplication of DNI and shading factor" annotation(Placement(visible = true, transformation(origin = {20, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-      Modelica.Blocks.Interfaces.RealInput arrayPitch "pitch (up/down) angle of 2axis tracking array (rads)" annotation(Placement(visible = true, transformation(origin = {-100, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-      Modelica.Blocks.Interfaces.RealInput arrayYaw "yaw (left/right) angle of tracking array (in radians)" annotation(Placement(visible = true, transformation(origin = {-100, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-      final parameter String ShadingName = "table2D_1";
-      //String(ShadingTable);
-      Modelica.Blocks.Tables.CombiTable2D Shading(tableOnFile = true, fileName = "modelica://ICSolar/shading/example.txt", tableName = ShadingName) annotation(Placement(visible = true, transformation(origin = {-40, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       parameter Modelica.Blocks.Interfaces.IntegerInput ShadingTable annotation(Placement(visible = true, transformation(origin = {-100, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      final parameter String ShadingName = "22s";
+      //String(ShadingTable);
+      Modelica.Blocks.Tables.CombiTable2D Shading_matrix(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = ShadingName) annotation(Placement(visible = true, transformation(origin = {-40, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      Modelica.Blocks.Interfaces.RealInput arrayPitch "pitch (up/down) angle of 2axis tracking array (rads)" annotation(Placement(visible = true, transformation(origin = {-100, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      Modelica.Blocks.Interfaces.RealInput DNI_in "DNI in before shading factor multiplication" annotation(Placement(visible = true, transformation(origin = {-100, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      Modelica.Blocks.Interfaces.RealInput arrayYaw "yaw (left/right) angle of tracking array (in radians)" annotation(Placement(visible = true, transformation(origin = {-100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     equation
-      product1.u2 = if Shading.y < 0 then 0 else Shading.y;
+      product1.u2 = if Shading_matrix.y < 0 then 0 else Shading_matrix.y;
       connect(product1.y, DNI_out) "DNI after multiplication connected to output of model" annotation(Line(points = {{31, 40}, {58.5909, 40}, {58.5909, 19.7775}, {100, 19.7775}, {100, 20}}));
       connect(DNI_in, product1.u1) "Model input DNI connecting to product" annotation(Line(points = {{-100, 80}, {-36.3412, 80}, {-36.3412, 45.9827}, {8, 45.9827}, {8, 46}}));
-      connect(arrayYaw, Shading.u2);
-      connect(arrayPitch, Shading.u1);
+      connect(arrayYaw, Shading_matrix.u2);
+      connect(arrayPitch, Shading_matrix.u1);
       annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2}), graphics = {Text(origin = {-4.59, 2.51}, extent = {{-72.63, 35.36}, {72.63, -35.36}}, textString = "Self Shading")}));
       annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})));
     end Shading;
@@ -658,10 +658,6 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
   end Receiver;
 
   model Parameters
-    /////////////////////////////
-    //////// LOAD FILES /////////
-    /////////////////////////////
-    final constant String ModelPath = classDirectory();
     //////////////////////////////////
     //////// MODEL OPERATION /////////
     //////////////////////////////////
@@ -676,7 +672,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     ///// ARRAY SIZING /////
     ////////////////////////
     parameter Integer StackHeight = 6 "Number of Modules per stack";
-    parameter Integer NumOfStacks = 3 "Number of stacks, controls the .Stack object";
+    parameter Integer NumOfStacks = 2 "Number of stacks, controls the .Stack object";
     parameter Integer NumOfModules = StackHeight * NumOfStacks "ModulesPerStack * NumOfStacks Number of modules being simulated. Will be replaced with a calculation based on wall area in the future.";
     parameter Real GlassArea = NumOfModules * 0.3 * 0.3 "Glass Area exposed to either the interior or exterior. Could be replaced later with wall area";
     parameter Real CavityVolume = GlassArea * 0.5 "Volume of cavity for air calculations";
