@@ -417,23 +417,108 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
 </HTML>"), Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2}), graphics = {Text(origin = {0.694127, 36.2079}, extent = {{-72.52, 54.46}, {72.52, -54.46}}, textString = "Lens Losses")}));
     end ICS_LensLosses;
 
-    model chooseShadeMatrix
+    model chooseShadeMatrix "based on a module's position in an array, choose it's shading matrix. Two modes of operation, based on the value of the isStudioExperiment boolean flag in Parameters"
       //  extends ICSolar.Envelope.ICS_EnvelopeCassette;
       //  extends ICSolar.Stack.ICS_Stack;
-      //  extends ICSolar.Parameters;
-      parameter Modelica.Blocks.Interfaces.IntegerInput ModuleRow(start = 1) "Module Row" annotation(Placement(visible = true, transformation(origin = {-100, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-90, -86}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-      parameter Modelica.Blocks.Interfaces.IntegerInput ModuleColumn = 1 "Module Column" annotation(Placement(visible = true, transformation(origin = {-100, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-90, -86}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-      output Modelica.Blocks.Interfaces.IntegerOutput TestOut(start = 0);
-    equation
-      //step through the rows outer and columns inner
-      if ModuleRow == 1 then
-        TestOut = 1;
-      elseif ModuleRow == 2 then
-        TestOut = 2;
+      extends ICSolar.Parameters;
+      //  input String TestOutString (start = "initttt");
+      parameter Modelica.Blocks.Interfaces.IntegerInput ModuleColumn = 1 "Module Column" annotation(Placement(visible = true, transformation(origin = {-60, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-90, -86}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      parameter Modelica.Blocks.Interfaces.IntegerInput ModuleRow(fixed = false) "Module Row" annotation(Placement(visible = true, transformation(origin = {-60, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-90, -86}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      output Modelica.Blocks.Interfaces.IntegerOutput ShadeMatrixEnum(start = 0) "Enumeration of shading matrix" annotation(Placement(visible = true, transformation(origin = {60, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-90, -86}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    algorithm
+      //step through the rows outer and columns inner, assigning shadeMatrix enumeration
+      if isStudioExperiment then
+        if ModuleRow == 1 then
+          if ModuleColumn == 1 then
+            ShadeMatrixEnum := 11;
+          elseif ModuleColumn == 2 then
+            ShadeMatrixEnum := 12;
+          end if;
+        elseif ModuleRow == 2 then
+          if ModuleColumn == 1 then
+            ShadeMatrixEnum := 21;
+          elseif ModuleColumn == 2 then
+            ShadeMatrixEnum := 22;
+          end if;
+        elseif ModuleRow == 3 then
+          if ModuleColumn == 1 then
+            ShadeMatrixEnum := 31;
+          elseif ModuleColumn == 2 then
+            ShadeMatrixEnum := 32;
+          end if;
+        elseif ModuleRow == 4 then
+          if ModuleColumn == 1 then
+            ShadeMatrixEnum := 41;
+          elseif ModuleColumn == 2 then
+            ShadeMatrixEnum := 42;
+          end if;
+        elseif ModuleRow == 5 then
+          if ModuleColumn == 1 then
+            ShadeMatrixEnum := 51;
+          elseif ModuleColumn == 2 then
+            ShadeMatrixEnum := 52;
+          end if;
+        elseif ModuleRow == 6 then
+          if ModuleColumn == 1 then
+            ShadeMatrixEnum := 61;
+          elseif ModuleColumn == 2 then
+            ShadeMatrixEnum := 62;
+          end if;
+        end if;
       else
-        TestOut = 33;
+        if ModuleRow == 1 then
+          if ModuleColumn == 1 then
+            ShadeMatrixEnum := 11;
+          elseif ModuleColumn == 2 then
+            ShadeMatrixEnum := 12;
+          elseif ModuleColumn == NumOfStacks - 1 then
+            ShadeMatrixEnum := 18;
+          elseif ModuleColumn == NumOfStacks then
+            ShadeMatrixEnum := 19;
+          else
+            ShadeMatrixEnum := 15;
+          end if;
+        elseif ModuleRow == 2 then
+          if ModuleColumn == 1 then
+            ShadeMatrixEnum := 21;
+          elseif ModuleColumn == 2 then
+            ShadeMatrixEnum := 22;
+          elseif ModuleColumn == NumOfStacks - 1 then
+            ShadeMatrixEnum := 28;
+          elseif ModuleColumn == NumOfStacks then
+            ShadeMatrixEnum := 29;
+          else
+            ShadeMatrixEnum := 25;
+          end if;
+        elseif ModuleRow == StackHeight - 1 then
+          if ModuleColumn == 1 then
+            ShadeMatrixEnum := 81;
+          elseif ModuleColumn == 2 then
+            ShadeMatrixEnum := 82;
+          elseif ModuleColumn == NumOfStacks - 1 then
+            ShadeMatrixEnum := 88;
+          elseif ModuleColumn == NumOfStacks then
+            ShadeMatrixEnum := 89;
+          else
+            ShadeMatrixEnum := 85;
+          end if;
+        elseif ModuleRow == StackHeight then
+          if ModuleColumn == 1 then
+            ShadeMatrixEnum := 91;
+          elseif ModuleColumn == 2 then
+            ShadeMatrixEnum := 92;
+          elseif ModuleColumn == NumOfStacks - 1 then
+            ShadeMatrixEnum := 98;
+          elseif ModuleColumn == NumOfStacks then
+            ShadeMatrixEnum := 99;
+          else
+            ShadeMatrixEnum := 95;
+          end if;
+        else
+          ShadeMatrixEnum := 55;
+        end if;
       end if;
-      annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})));
+      annotation(Icon(coordinateSystem(extent = {{-60, -60}, {60, 60}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-60, -60}, {60, 60}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2}), graphics = {Rectangle(origin = {0, 0}, extent = {{-60, 60}, {60, -60}})}));
     end chooseShadeMatrix;
   end Module;
 
@@ -541,6 +626,10 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
   end Receiver;
 
   model Parameters
+    //////////////////////////////////
+    //////// MODEL OPERATION /////////
+    //////////////////////////////////
+    parameter Boolean isStudioExperiment = True "True if this run is referring to the gen8 studio experiment";
     //////////////////////////////////
     ///// BUILDING CONFIGURATION /////
     //////////////////////////////////
