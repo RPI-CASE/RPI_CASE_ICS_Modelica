@@ -93,7 +93,6 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       Modelica.Blocks.Interfaces.RealInput SunAzi "Azimuth of the sun " annotation(Placement(visible = true, transformation(origin = {-100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.Blocks.Interfaces.RealInput SurfaceOrientation annotation(Placement(visible = true, transformation(origin = {-100, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.Blocks.Interfaces.RealInput SurfaceTilt annotation(Placement(visible = true, transformation(origin = {-100, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-      ICSolar.Envelope.ICS_SelfShading ics_selfshading1 annotation(Placement(visible = true, transformation(origin = {-16, 4}, extent = {{-17.5, -17.5}, {17.5, 17.5}}, rotation = 0)));
       ICSolar.Stack.ICS_Stack ics_stack[NumOfStacks] annotation(Placement(visible = true, transformation(origin = {40, 0}, extent = {{-25, -25}, {25, 25}}, rotation = 0)));
       Modelica.Blocks.Interfaces.RealOutput Power_Electric "Electric power generated" annotation(Placement(visible = true, transformation(origin = {100, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 60}, extent = {{-20, -20}, {20, 20}}, rotation = 0)));
       Modelica.Thermal.FluidHeatFlow.Interfaces.FlowPort_b flowport_b(medium = mediumHTF) "Thermal fluid outflow port, after heat exchange" annotation(Placement(visible = true, transformation(origin = {100, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
@@ -102,7 +101,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       Modelica.Thermal.HeatTransfer.Sources.FixedTemperature T_indoors(T = Temp_Indoor) annotation(Placement(visible = true, transformation(origin = {-20, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       ICSolar.Envelope.CavityHeatBalance cavityheatbalance1 annotation(Placement(visible = true, transformation(origin = {20, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       // ICSolar.Envelope.ICS_GlazingLosses glazingLossesInner(Trans_glaz = 0.76) annotation(Placement(visible = true, transformation(origin = {60, -60}, extent = {{-15, -15}, {15, 15}}, rotation = 0)));
-      ICSolar.Envelope.ICS_GlazingLosses glazingLossesOuter(Trans_glaz = 0.74) annotation(Placement(visible = true, transformation(origin = {-60, 60}, extent = {{-15, -15}, {15, 15}}, rotation = 0)));
+      ICSolar.Envelope.ICS_GlazingLosses glazingLossesOuter annotation(Placement(visible = true, transformation(origin = {-60, 60}, extent = {{-15, -15}, {15, 15}}, rotation = 0)));
       ICSolar.Envelope.RotationMatrixForSphericalCood rotationmatrixforsphericalcood1 annotation(Placement(visible = true, transformation(origin = {-60, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       // Modelica.Blocks.Interfaces.RealOutput DNI_toIndoors "the DNI that slips past the modules and gets through the interior-side glazing" annotation(Placement(visible = true, transformation(origin = {100, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       // ICSolar.Envelope.DNIReduction_AreaFraction dnireduction_areafraction1 annotation(Placement(visible = true, transformation(origin = {-20, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
@@ -118,9 +117,6 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       connect(SurfaceOrientation, rotationmatrixforsphericalcood1.SurfaceOrientation) annotation(Line(points = {{-100, -20}, {-83.9024, -20}, {-83.6552, -20.2011}, {-69.7528, -20.445}, {-70, -20}}, color = {0, 0, 127}));
       connect(SurfaceTilt, rotationmatrixforsphericalcood1.SurfaceTilt) annotation(Line(points = {{-100, -40}, {-85.6098, -40}, {-85.3626, -24.5913}, {-69.7528, -24.445}, {-70, -24}}, color = {0, 0, 127}));
       //how much self-shading
-      connect(rotationmatrixforsphericalcood1.arrayYaw, ics_selfshading1.arrayYaw) annotation(Line(points = {{-50, -14}, {-46.5555, -14.445}, {-46.8027, 7.34694}, {-33.5, 7.34694}, {-33.5, 11}}, color = {0, 0, 127}));
-      connect(rotationmatrixforsphericalcood1.arrayPitch, ics_selfshading1.arrayPitch) annotation(Line(points = {{-50, -24}, {-42.4739, -24.445}, {-42.7211, -0.544218}, {-33.5, -0.544218}, {-33.5, 4}}, color = {0, 0, 127}));
-      connect(glazingLossesOuter.SurfDirNor, ics_selfshading1.DNI_in) annotation(Line(points = {{-45, 63}, {-40.5439, 63}, {-40.5439, 18.047}, {-33.5, 18.047}, {-33.5, 18}}, color = {0, 0, 127}));
       //thermal balance
       connect(T_indoors.port, cavityheatbalance1.Interior) annotation(Line(points = {{-10, 60}, {-1.48368, 60}, {-1.48368, 55.7864}, {10, 55.7864}, {10, 56}}));
       connect(TAmb_in, cavityheatbalance1.Exterior) annotation(Line(points = {{-100, 80}, {5.04451, 80}, {5.04451, 65.8754}, {10, 66}, {10, 66}}));
@@ -133,6 +129,10 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       end for;
       //make the connections for all stacks: Flow in, flow out, shading, heat port (loss)
       for i in 1:NumOfStacks loop
+        ICSolar.Stack.ICS_Stack.StackNumber = i;
+        connect(rotationmatrixforsphericalcood1.arrayYaw, ics_stack[i].arrayYaw);
+        connect(rotationmatrixforsphericalcood1.arrayPitch, ics_stack[i].arrayPitch);
+        connect(glazingLossesOuter.SurfDirNor, ics_stack[i].DNI);
         connect(ics_stack[i].flowport_a1, flowport_a) annotation(Line(points = {{15, -15}, {5.78072, -15}, {5.78072, -13.5009}, {-100, -13.5009}, {-100, -80}}));
         connect(ics_stack[i].flowport_b1, flowport_b) annotation(Line(points = {{65, 0}, {80, 0}, {80, -21.2245}, {100, -21.2245}, {100, -20}}, color = {255, 0, 0}));
         connect(ics_stack[i].TAmb_in, cavityheatbalance1.ICS_Heat) annotation(Line(points = {{15, 20}, {0.593472, 20}, {0.593472, 20.178}, {20, 20.178}, {20, 50}}));
@@ -288,13 +288,18 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
 
     model ICS_Stack "This model represents an individual Integrated Concentrating Solar Stack"
       extends ICSolar.Parameters;
-      input Modelica.Blocks.Interfaces.RealInput Power_in(start = 0) "Power input to stack from (GND?)" annotation(Placement(visible = true, transformation(origin = {-100, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-90, -86}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-      Modelica.Blocks.Interfaces.RealInput DNI "DNI in from Envelope (Parent)" annotation(Placement(visible = true, transformation(origin = {-100, -34}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-90, -34}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-      Modelica.Thermal.FluidHeatFlow.Interfaces.FlowPort_a flowport_a1(medium = mediumHTF) "Thermal fluid inflow port" annotation(Placement(visible = true, transformation(origin = {-100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.Thermal.FluidHeatFlow.Interfaces.FlowPort_b flowport_b1(medium = mediumHTF) "Thermal fluid outflow port" annotation(Placement(visible = true, transformation(origin = {100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.Thermal.HeatTransfer.Interfaces.HeatPort_a TAmb_in "Ambient temperature of the cavity" annotation(Placement(visible = true, transformation(origin = {-100, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       output Modelica.Blocks.Interfaces.RealOutput Power_out "Electrical power generated" annotation(Placement(visible = true, transformation(origin = {100, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-      Module.ICS_Module iCS_Module[StackHeight] annotation(Placement(visible = true, transformation(origin = {0, 20}, extent = {{-25, -25}, {25, 25}}, rotation = 0)));
+      Modelica.Thermal.FluidHeatFlow.Interfaces.FlowPort_a flowport_a1(medium = mediumHTF) "Thermal fluid inflow port" annotation(Placement(visible = true, transformation(origin = {-100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      input Modelica.Blocks.Interfaces.RealInput Power_in(start = 0) "Power input to stack from (GND?)" annotation(Placement(visible = true, transformation(origin = {-100, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-90, -86}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      Module.ICS_Module iCS_Module[StackHeight] annotation(Placement(visible = true, transformation(origin = {20, 20}, extent = {{-25, -25}, {25, 25}}, rotation = 0)));
+      Modelica.Blocks.Interfaces.RealInput DNI "DNI in from Envelope (Parent)" annotation(Placement(visible = true, transformation(origin = {-100, 26}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-90, 46}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      Modelica.Blocks.Interfaces.IntegerInput StackNumber annotation(Placement(visible = true, transformation(origin = {-100, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      Modelica.Blocks.Interfaces.RealInput arrayYaw annotation(Placement(visible = true, transformation(origin = {-100, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      Modelica.Blocks.Interfaces.RealInput arrayPitch annotation(Placement(visible = true, transformation(origin = {-100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      ICSolar.Module.chooseShadeMatrix chooseshadematrix1 annotation(Placement(visible = true, transformation(origin = {-60, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      ICSolar.Stack.Shading shading1 annotation(Placement(visible = true, transformation(origin = {-20, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     equation
       //make the connections between modules: electrical and flow
       for i in 1:StackHeight - 1 loop
@@ -303,15 +308,42 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       end for;
       //make the connections between modules and the world: DNI, T_ambient
       for i in 1:StackHeight loop
-        connect(iCS_Module[i].DNI, DNI);
+        connect(StackNumber, chooseshadematrix1.ModuleColumn);
+        connect(i, chooseshadematrix1.ModuleRow);
+        connect(chooseshadematrix1.ShadeMatrixEnum, shading1.ShadingTable);
+        connect(arrayYaw, shading1.arrayYaw);
+        connect(arrayPitch, shading1.arrayPitch);
+        connect(DNI, shading1.DNI_in);
+        connect(shading1.DNI_out, iCS_Module[i].DNI);
+        // connect(iCS_Module[i].DNI, DNI);
         connect(iCS_Module[i].TAmb_in, TAmb_in);
       end for;
       connect(iCS_Module[1].flowport_a1, flowport_a1);
       connect(iCS_Module[StackHeight].flowport_b1, flowport_b1);
       connect(iCS_Module[1].Power_in, Power_in);
       connect(iCS_Module[StackHeight].Power_out, Power_out);
-      annotation(Placement(transformation(extent = {{-10, 64}, {10, 84}})), Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = false, initialScale = 0.1, grid = {2, 2}), graphics = {Rectangle(extent = {{-100, 100}, {100, -100}}, lineColor = {0, 0, 0}, fillPattern = FillPattern.VerticalCylinder, fillColor = {215, 215, 215}), Text(origin = {0.95, 5.29}, extent = {{-61.06, 40.08}, {61.06, -40.08}}, textString = "Stack"), Rectangle(extent = {{-100, 100}, {100, -100}}, lineColor = {0, 0, 0})}), Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics = {Rectangle(extent = {{-100, 100}, {100, -100}}, lineColor = {0, 0, 0})}), experiment(StartTime = 0, StopTime = 315360, Tolerance = 1e-06, Interval = 3710.12));
+      annotation(Placement(transformation(extent = {{-10, 64}, {10, 84}})), Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = false, initialScale = 0.1, grid = {2, 2}), graphics = {Rectangle(extent = {{-100, 100}, {100, -100}}, lineColor = {0, 0, 0}, fillPattern = FillPattern.VerticalCylinder, fillColor = {215, 215, 215}), Text(origin = {0.95, 5.29}, extent = {{-61.06, 40.08}, {61.06, -40.08}}, textString = "Stack"), Rectangle(extent = {{-100, 100}, {100, -100}}, lineColor = {0, 0, 0})}), experiment(StartTime = 0, StopTime = 315360, Tolerance = 1e-06, Interval = 3710.12), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = false, initialScale = 0.1, grid = {2, 2}), graphics = {Rectangle(origin = {0, -0.288066}, extent = {{-100, 100}, {100, -100}})}));
     end ICS_Stack;
+
+    model Shading
+      Modelica.Blocks.Interfaces.RealOutput DNI_out "DNI after shading factor multiplication" annotation(Placement(visible = true, transformation(origin = {100, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      Modelica.Blocks.Interfaces.RealInput DNI_in "DNI in before shading factor multiplication" annotation(Placement(visible = true, transformation(origin = {-100, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      Modelica.Blocks.Math.Product product1 "Multiplication of DNI and shading factor" annotation(Placement(visible = true, transformation(origin = {20, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      Modelica.Blocks.Interfaces.RealInput arrayPitch "pitch (up/down) angle of 2axis tracking array (rads)" annotation(Placement(visible = true, transformation(origin = {-100, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      Modelica.Blocks.Interfaces.RealInput arrayYaw "yaw (left/right) angle of tracking array (in radians)" annotation(Placement(visible = true, transformation(origin = {-100, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      final parameter String ShadingName = "table2D_1";
+      //String(ShadingTable);
+      Modelica.Blocks.Tables.CombiTable2D Shading(tableOnFile = true, fileName = "modelica://ICSolar/shading/example.txt", tableName = ShadingName) annotation(Placement(visible = true, transformation(origin = {-40, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      parameter Modelica.Blocks.Interfaces.IntegerInput ShadingTable annotation(Placement(visible = true, transformation(origin = {-100, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    equation
+      product1.u2 = if Shading.y < 0 then 0 else Shading.y;
+      connect(product1.y, DNI_out) "DNI after multiplication connected to output of model" annotation(Line(points = {{31, 40}, {58.5909, 40}, {58.5909, 19.7775}, {100, 19.7775}, {100, 20}}));
+      connect(DNI_in, product1.u1) "Model input DNI connecting to product" annotation(Line(points = {{-100, 80}, {-36.3412, 80}, {-36.3412, 45.9827}, {8, 45.9827}, {8, 46}}));
+      connect(arrayYaw, Shading.u2);
+      connect(arrayPitch, Shading.u1);
+      annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2}), graphics = {Text(origin = {-4.59, 2.51}, extent = {{-72.63, 35.36}, {72.63, -35.36}}, textString = "Self Shading")}));
+      annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})));
+    end Shading;
   end Stack;
 
   package Module "Package of all the necessary components to create an Integrated Concentrating Solar simulation"
@@ -422,9 +454,9 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       //  extends ICSolar.Stack.ICS_Stack;
       extends ICSolar.Parameters;
       //  input String TestOutString (start = "initttt");
+      output Modelica.Blocks.Interfaces.IntegerOutput ShadeMatrixEnum(start = 0) "Enumeration of shading matrix" annotation(Placement(visible = true, transformation(origin = {60, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-90, -86}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       parameter Modelica.Blocks.Interfaces.IntegerInput ModuleColumn = 1 "Module Column" annotation(Placement(visible = true, transformation(origin = {-60, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-90, -86}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       parameter Modelica.Blocks.Interfaces.IntegerInput ModuleRow(fixed = false) "Module Row" annotation(Placement(visible = true, transformation(origin = {-60, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-90, -86}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-      output Modelica.Blocks.Interfaces.IntegerOutput ShadeMatrixEnum(start = 0) "Enumeration of shading matrix" annotation(Placement(visible = true, transformation(origin = {60, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-90, -86}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     algorithm
       //step through the rows outer and columns inner, assigning shadeMatrix enumeration
       if isStudioExperiment then
@@ -626,10 +658,14 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
   end Receiver;
 
   model Parameters
+    /////////////////////////////
+    //////// LOAD FILES /////////
+    /////////////////////////////
+    final constant String ModelPath = classDirectory();
     //////////////////////////////////
     //////// MODEL OPERATION /////////
     //////////////////////////////////
-    parameter Boolean isStudioExperiment = True "True if this run is referring to the gen8 studio experiment";
+    parameter Boolean isStudioExperiment = true "True if this run is referring to the gen8 studio experiment";
     //////////////////////////////////
     ///// BUILDING CONFIGURATION /////
     //////////////////////////////////
