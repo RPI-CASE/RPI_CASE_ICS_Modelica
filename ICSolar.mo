@@ -108,6 +108,10 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       constant Real GND = 0 "Ground input for stack power flow, Real";
       //  constant Modelica.Blocks.Sources.Constant GND(k = 0) "a zero source for the Real electrical input" annotation(Placement(visible = true, transformation(origin = {-20, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       ICSolar.Stack.ICS_Stack2 ics_stack2 annotation(Placement(visible = true, transformation(origin = {40, -60}, extent = {{-25, -25}, {25, 25}}, rotation = 0)));
+      Modelica.Blocks.Sources.CombiTimeTable DNI_experimental(tableOnFile = true, fileName = "modelica://ICSolar/20150323/DNI.txt", tableName = "DNI", extrapolation = Modelica.Blocks.Types.Extrapolation.Periodic, smoothness = Modelica.Blocks.Types.Smoothness.ConstantSegments) annotation(Placement(visible = true, transformation(origin = {-30, 60}, extent = {{-15, -15}, {15, 15}}, rotation = 0)));
+      //, table = [0, 0; 2
+      //Shading_matrix(tableOnFile = true, fileName = "modelica://ICSolar/20150323/DNI.txt", tableName = ShadingName)
+      ///20150323/DNI.txt"
     equation
       //  pre-stacks
       //DNI into cavity
