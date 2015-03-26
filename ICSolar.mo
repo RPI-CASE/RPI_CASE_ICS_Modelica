@@ -307,15 +307,13 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       end for;
       //make the connections between modules and the world: DNI, T_ambient
       for i in 1:StackHeight loop
-        connect(StackNumber, chooseshadematrix1[i].ModuleColumn);
-        //chooseshadematrix1[i].ModuleRow = i;
-        connect(i, chooseshadematrix1[i].ModuleRow);
-        connect(chooseshadematrix1[i].ShadeMatrixEnum, shading1[i].ShadingTable);
+        chooseshadematrix1[i].ModuleColumn = 1;
+        chooseshadematrix1[i].ModuleRow = 1;
+        shading1[i].ShadingTable = chooseshadematrix1[i].ShadeMatrixEnum;
         connect(arrayYaw, shading1[i].arrayYaw);
         connect(arrayPitch, shading1[i].arrayPitch);
         connect(DNI, shading1[i].DNI_in);
         connect(shading1[i].DNI_out, iCS_Module[i].DNI);
-        // connect(iCS_Module[i].DNI, DNI);
         connect(iCS_Module[i].TAmb_in, TAmb_in);
       end for;
       connect(iCS_Module[1].flowport_a1, flowport_a1);
@@ -329,8 +327,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       Modelica.Blocks.Interfaces.RealOutput DNI_out "DNI after shading factor multiplication" annotation(Placement(visible = true, transformation(origin = {100, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.Blocks.Math.Product product1 "Multiplication of DNI and shading factor" annotation(Placement(visible = true, transformation(origin = {20, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       parameter Modelica.Blocks.Interfaces.IntegerInput ShadingTable annotation(Placement(visible = true, transformation(origin = {-100, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-      final parameter String ShadingName = "22s";
-      //String(ShadingTable);
+      final parameter String ShadingName = String(ShadingTable);
       Modelica.Blocks.Tables.CombiTable2D Shading_matrix(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = ShadingName) annotation(Placement(visible = true, transformation(origin = {-40, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.Blocks.Interfaces.RealInput arrayPitch "pitch (up/down) angle of 2axis tracking array (rads)" annotation(Placement(visible = true, transformation(origin = {-100, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.Blocks.Interfaces.RealInput DNI_in "DNI in before shading factor multiplication" annotation(Placement(visible = true, transformation(origin = {-100, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
@@ -341,8 +338,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       connect(DNI_in, product1.u1) "Model input DNI connecting to product" annotation(Line(points = {{-100, 80}, {-36.3412, 80}, {-36.3412, 45.9827}, {8, 45.9827}, {8, 46}}));
       connect(arrayYaw, Shading_matrix.u2);
       connect(arrayPitch, Shading_matrix.u1);
-      annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2}), graphics = {Text(origin = {-4.59, 2.51}, extent = {{-72.63, 35.36}, {72.63, -35.36}}, textString = "Self Shading")}));
-      annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})));
+      annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2}), graphics = {Text(origin = {-4.59, 2.51}, extent = {{-72.63, 35.36}, {72.63, -35.36}}, textString = "Self Shading")}), Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})));
     end Shading;
   end Stack;
 
@@ -454,9 +450,9 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       //  extends ICSolar.Stack.ICS_Stack;
       extends ICSolar.Parameters;
       //  input String TestOutString (start = "initttt");
-      output Modelica.Blocks.Interfaces.IntegerOutput ShadeMatrixEnum(start = 0) "Enumeration of shading matrix" annotation(Placement(visible = true, transformation(origin = {60, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-90, -86}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-      parameter Modelica.Blocks.Interfaces.IntegerInput ModuleColumn = 1 "Module Column" annotation(Placement(visible = true, transformation(origin = {-60, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-90, -86}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-      parameter Modelica.Blocks.Interfaces.IntegerInput ModuleRow(fixed = false) "Module Row" annotation(Placement(visible = true, transformation(origin = {-60, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-90, -86}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      output Modelica.Blocks.Interfaces.IntegerOutput ShadeMatrixEnum "Enumeration of shading matrix" annotation(Placement(visible = true, transformation(origin = {60, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-90, -86}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      parameter Modelica.Blocks.Interfaces.IntegerInput ModuleColumn "Module Column" annotation(Placement(visible = true, transformation(origin = {-60, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-90, -86}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      parameter Modelica.Blocks.Interfaces.IntegerInput ModuleRow "Module Row" annotation(Placement(visible = true, transformation(origin = {-60, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-90, -86}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     algorithm
       //step through the rows outer and columns inner, assigning shadeMatrix enumeration
       if isStudioExperiment then
