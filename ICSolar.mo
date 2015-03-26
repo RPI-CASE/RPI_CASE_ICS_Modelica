@@ -108,11 +108,10 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       constant Real GND = 0 "Ground input for stack power flow, Real";
       //  constant Modelica.Blocks.Sources.Constant GND(k = 0) "a zero source for the Real electrical input" annotation(Placement(visible = true, transformation(origin = {-20, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       ICSolar.Stack.ICS_Stack2 ics_stack2 annotation(Placement(visible = true, transformation(origin = {40, -60}, extent = {{-25, -25}, {25, 25}}, rotation = 0)));
-      Modelica.Blocks.Sources.CombiTimeTable DNI_experimental(tableOnFile = true, fileName = "modelica://ICSolar/20150323/DNI.txt", tableName = "DNI", extrapolation = Modelica.Blocks.Types.Extrapolation.Periodic, smoothness = Modelica.Blocks.Types.Smoothness.ConstantSegments) annotation(Placement(visible = true, transformation(origin = {-30, 60}, extent = {{-15, -15}, {15, 15}}, rotation = 0)));
-      //, table = [0, 0; 2
-      //Shading_matrix(tableOnFile = true, fileName = "modelica://ICSolar/20150323/DNI.txt", tableName = ShadingName)
-      ///20150323/DNI.txt"
+      Modelica.Blocks.Sources.CombiTimeTable DNI_measured(tableOnFile = true, fileName = "modelica://ICSolar/20150323/DNI.txt", tableName = "DNI", extrapolation = Modelica.Blocks.Types.Extrapolation.HoldLastPoint, smoothness = Modelica.Blocks.Types.Smoothness.ConstantSegments, columns = 1) annotation(Placement(visible = true, transformation(origin = {-60, 20}, extent = {{-15, -15}, {15, 15}}, rotation = 0)));
     equation
+      connect(DNI_measured.y[1], ics_stack2.DNI) annotation(Line(points = {{-43.5, 20}, {-13.6054, 20}, {-13.6054, -47.619}, {16.5986, -47.619}, {16.5986, -47.619}}, color = {0, 0, 127}));
+      connect(DNI_measured.y[1], ics_stack1.DNI) annotation(Line(points = {{-43.5, 20}, {-14.4218, 20}, {-14.4218, 10.6122}, {17.415, 10.6122}, {17.415, 10.6122}}, color = {0, 0, 127}));
       //  pre-stacks
       //DNI into cavity
       connect(DNI, glazingLossesOuter.DNI) annotation(Line(points = {{-100, 60}, {-75.88079999999999, 60}, {-75.88079999999999, 63.9566}, {-70, 69}, {-75, 69}}));
@@ -133,8 +132,10 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       connect(rotationmatrixforsphericalcood1.arrayPitch, ics_stack1.arrayPitch);
       connect(rotationmatrixforsphericalcood1.arrayYaw, ics_stack2.arrayYaw);
       connect(rotationmatrixforsphericalcood1.arrayPitch, ics_stack2.arrayPitch);
-      connect(glazingLossesOuter.SurfDirNor, ics_stack1.DNI);
-      connect(glazingLossesOuter.SurfDirNor, ics_stack2.DNI);
+      //  connect(glazingLossesOuter.SurfDirNor, ics_stack1.DNI);
+      // connect(glazingLossesOuter.SurfDirNor, ics_stack2.DNI);
+      //  connect(DNI_measured.y, ics_stack1.DNI);
+      // connect(DNI_measured.y, ics_stack2.DNI);
       connect(ics_stack1.flowport_a1, flowport_a);
       connect(ics_stack1.flowport_b1, ics_stack2.flowport_a1);
       connect(ics_stack2.flowport_b1, flowport_b);
