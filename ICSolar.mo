@@ -306,8 +306,9 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       // Modelica.Blocks.Interfaces.RealOutput DNI_toIndoors "the DNI that slips past the modules and gets through the interior-side glazing" annotation(Placement(visible = true, transformation(origin = {100, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       // ICSolar.Envelope.DNIReduction_AreaFraction dnireduction_areafraction1 annotation(Placement(visible = true, transformation(origin = {-20, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       constant Real GND = 0 annotation(Placement(visible = true, transformation(origin = {-40, 0}, extent = {{-25, -25}, {25, 25}}, rotation = 0)));
-      ICSolar.Stack.ICS_Stack_Twelve ics_stack1 annotation(Placement(visible = true, transformation(origin = {40, 0}, extent = {{-25, -25}, {25, 25}}, rotation = 0)));
+      ICSolar.Stack.ICS_Stack_Twelve ics_stack2 annotation(Placement(visible = true, transformation(origin = {40, 0}, extent = {{-25, -25}, {25, 25}}, rotation = 0)));
       //  Modelica.Blocks.Sources.Constant GND(k = 0) = 0 "Ground input for stack power flow, Real" annotation(Placement(visible = true, transformation(origin = {-20, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      ICSolar.Stack.ICS_Stack_Twelve ics_stack1 annotation(Placement(visible = true, transformation(origin = {0, -60}, extent = {{-25, -25}, {25, 25}}, rotation = 0)));
     equation
       //  pre-stacks
       //DNI into cavity
@@ -321,20 +322,29 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       //thermal balance
       connect(T_indoors.port, cavityheatbalance1.Interior) annotation(Line(points = {{-10, 60}, {-1.48368, 60}, {-1.48368, 55.7864}, {10, 55.7864}, {10, 56}}));
       connect(TAmb_in, cavityheatbalance1.Exterior) annotation(Line(points = {{-100, 80}, {5.04451, 80}, {5.04451, 65.8754}, {10, 66}, {10, 66}}));
+      //
+      connect(rotationmatrixforsphericalcood1.arrayYaw, ics_stack1.arrayYaw);
+      connect(rotationmatrixforsphericalcood1.arrayPitch, ics_stack1.arrayPitch);
+      connect(rotationmatrixforsphericalcood1.arrayYaw, ics_stack2.arrayYaw);
+      connect(rotationmatrixforsphericalcood1.arrayPitch, ics_stack2.arrayPitch);
+      //
       //prep the stacks inputs:
       ics_stack1.Power_in = 0;
       //connect(GND.y, ics_stack1.Power_in) annotation(Line(points = {{-9, -60}, {0.816327, -60}, {0.816327, -20.6803}, {17.1429, -20.6803}, {17.1429, -20.6803}}, color = {0, 0, 127}));
-      connect(ics_stack1.Power_out, Power_Electric);
-      connect(rotationmatrixforsphericalcood1.arrayYaw, ics_stack1.arrayYaw);
-      connect(rotationmatrixforsphericalcood1.arrayPitch, ics_stack1.arrayPitch);
-      //  connect(rotationmatrixforsphericalcood1.arrayYaw, ics_stack2.arrayYaw);
-      //  connect(rotationmatrixforsphericalcood1.arrayPitch, ics_stack2.arrayPitch);
+      connect(ics_stack1.Power_out, ics_stack2.Power_in);
+      connect(ics_stack2.Power_out, Power_Electric);
+      //these two are used with weatherdata input
       //  connect(glazingLossesOuter.SurfDirNor, ics_stack1.DNI);
       // connect(glazingLossesOuter.SurfDirNor, ics_stack2.DNI);
+      //
+      //these are used with experimental data:
       connect(DNI_measured.y[1], ics_stack1.DNI);
+      connect(DNI_measured.y[1], ics_stack2.DNI);
       connect(ics_stack1.flowport_a1, flowport_a);
-      connect(ics_stack1.flowport_b1, flowport_b);
+      connect(ics_stack1.flowport_b1, ics_stack2.flowport_a1);
+      connect(ics_stack2.flowport_b1, flowport_b);
       connect(ics_stack1.TAmb_in, cavityheatbalance1.ICS_Heat);
+      connect(ics_stack2.TAmb_in, cavityheatbalance1.ICS_Heat);
       //stacks:
       //make the connections between stacks: electrical
       //for i in 1:NumOfStacks - 1 loop
@@ -375,12 +385,12 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       Modelica.Blocks.Tables.CombiTable2D Shading51(tableOnFile = true, fileName = "modelica://ICSolar/ShadingTable2014.txt", tableName = "ShadingTable2014");
       Modelica.Blocks.Tables.CombiTable2D Shading61(tableOnFile = true, fileName = "modelica://ICSolar/ShadingTable2014.txt", tableName = "ShadingTable2014");
       /*  Modelica.Blocks.Tables.CombiTable2D Shading1(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "1");
-                                                                                                                                                                                                                                                                                                                                                              Modelica.Blocks.Tables.CombiTable2D Shading2(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "2");
-                                                                                                                                                                                                                                                                                                                                                              Modelica.Blocks.Tables.CombiTable2D Shading3(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "3");
-                                                                                                                                                                                                                                                                                                                                                              Modelica.Blocks.Tables.CombiTable2D Shading4(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "4");
-                                                                                                                                                                                                                                                                                                                                                              Modelica.Blocks.Tables.CombiTable2D Shading5(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "5");
-                                                                                                                                                                                                                                                                                                                                                              Modelica.Blocks.Tables.CombiTable2D Shading6(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "6");
-                                                                                                                                                                                                                                                                                                                                                            */
+                                                                                                                                                                                                                                                                                                                                                                                Modelica.Blocks.Tables.CombiTable2D Shading2(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "2");
+                                                                                                                                                                                                                                                                                                                                                                                Modelica.Blocks.Tables.CombiTable2D Shading3(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "3");
+                                                                                                                                                                                                                                                                                                                                                                                Modelica.Blocks.Tables.CombiTable2D Shading4(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "4");
+                                                                                                                                                                                                                                                                                                                                                                                Modelica.Blocks.Tables.CombiTable2D Shading5(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "5");
+                                                                                                                                                                                                                                                                                                                                                                                Modelica.Blocks.Tables.CombiTable2D Shading6(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "6");
+                                                                                                                                                                                                                                                                                                                                                                              */
       Modelica.Blocks.Math.Product product11 "Multiplication of DNI and shading factor";
       Modelica.Blocks.Math.Product product21 "Multiplication of DNI and shading factor";
       Modelica.Blocks.Math.Product product31 "Multiplication of DNI and shading factor";
