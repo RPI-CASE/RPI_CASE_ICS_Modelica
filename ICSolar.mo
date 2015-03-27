@@ -7,15 +7,19 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     //[[20150211]]
     ICSolar.ICS_Context ics_context1(SurfOrientation = 40 * 2 * Modelica.Constants.pi / 360) annotation(Placement(visible = true, transformation(origin = {-180, 40}, extent = {{-25, -25}, {25, 25}}, rotation = 0)));
     ICSolar.Envelope.ICS_EnvelopeCassette ics_envelopecassette1 annotation(Placement(visible = true, transformation(origin = {20, 40}, extent = {{-25, -25}, {25, 25}}, rotation = 0)));
-    Modelica.Thermal.FluidHeatFlow.Sources.Ambient Source(medium = mediumHTF, useTemperatureInput = true, constantAmbientPressure = 101325, constantAmbientTemperature = TAmb) "Thermal fluid source" annotation(Placement(visible = true, transformation(origin = {-60, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 180)));
-    Modelica.Thermal.FluidHeatFlow.Sources.VolumeFlow Pump(constantVolumeFlow = OneBranchFlow, m = 0.1, medium = mediumHTF, T0 = TAmb, T0fixed = false, useVolumeFlowInput = true) "Fluid pump for thermal fluid" annotation(Placement(visible = true, transformation(origin = {-20, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     //    Modelica.Blocks.Sources.CombiTimeTable T_HTF_in_measured_K(tableOnFile = true, fileName = "modelica://ICSolar/20150323/ICSFData.txt", tableName = "DNI_THTFin_vdot", extrapolation = Modelica.Blocks.Types.Extrapolation.HoldLastPoint, smoothness = Modelica.Blocks.Types.Smoothness.ConstantSegments, columns = {3}) annotation(Placement(visible = true, transformation(origin = {-160, -60}, extent = {{-15, -15}, {15, 15}}, rotation = 0)));
     //    Modelica.Blocks.Sources.CombiTimeTable vDot_measured_m3s(tableOnFile = true, fileName = "modelica://ICSolar/20150323/ICSFData.txt", tableName = "DNI_THTFin_vdot", extrapolation = Modelica.Blocks.Types.Extrapolation.HoldLastPoint, smoothness = Modelica.Blocks.Types.Smoothness.ConstantSegments, columns = {4}) "measured mass flow data" annotation(Placement(visible = true, transformation(origin = {-100, -20}, extent = {{-15, -15}, {15, 15}}, rotation = 0)));
+    Modelica.Thermal.FluidHeatFlow.Sources.Ambient Source(medium = mediumHTF, useTemperatureInput = true, constantAmbientPressure = 101325, constantAmbientTemperature = TAmb) "Thermal fluid source" annotation(Placement(visible = true, transformation(origin = {-60, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 180)));
+    Modelica.Thermal.FluidHeatFlow.Sources.VolumeFlow Pump(constantVolumeFlow = OneBranchFlow, m = 0.1, medium = mediumHTF, T0 = TAmb, T0fixed = false, useVolumeFlowInput = true) "Fluid pump for thermal fluid" annotation(Placement(visible = true, transformation(origin = {-20, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Blocks.Sources.Constant vFlow_const(k = 1.383e-6) "to simplify boundary conditions" annotation(Placement(visible = true, transformation(origin = {-120, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Blocks.Sources.Constant T_HTF_fixed_real(k = 350) "simplify things" annotation(Placement(visible = true, transformation(origin = {-120, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   equation
-    connect(vDot_measured_m3s.y[1], Pump.volumeFlow);
-    connect(T_HTF_in_measured_K.y[1], Source.ambientTemperature);
-    connect(Pump.flowPort_b, ics_envelopecassette1.flowport_a) annotation(Line(points = {{-10, -60}, {-6.53227, -59.4558}, {-4.3554, 17.6597}, {6.25, 18.75}, {-3.75, 18.75}}));
-    connect(Source.flowPort, Pump.flowPort_a) annotation(Line(points = {{-50, -60}, {-36.1769, -59.4558}, {-30, -60}}));
+    connect(T_HTF_fixed_real.y, Source.ambientTemperature) annotation(Line(points = {{-109, -40}, {-93.8675, -40.0491}, {-93.8675, -33.0335}, {-71.6353, -33.0335}, {-70, -33}}, color = {0, 0, 127}));
+    connect(vFlow_const.y, Pump.volumeFlow) annotation(Line(points = {{-109, 0}, {-21.7161, -0.0490597}, {-21.7161, -29.4432}, {-20.0808, -29.3941}}, color = {0, 0, 127}));
+    connect(Source.flowPort, Pump.flowPort_a) annotation(Line(points = {{-50, -40}, {-37.8122, -39.5049}, {-30, -40}}));
+    connect(Pump.flowPort_b, ics_envelopecassette1.flowport_a) annotation(Line(points = {{-10, -40}, {-8.16759, -39.5049}, {-4.3554, 17.6597}, {6.25, 18.75}, {-3.75, 18.75}}));
+    //  connect(vDot_measured_m3s.y[1], Pump.volumeFlow);
+    //  connect(T_HTF_in_measured_K.y[1], Source.ambientTemperature);
     connect(ics_envelopecassette1.flowport_b, Sink.flowPort) annotation(Line(points = {{45, 40}, {60.0812, 40}, {60.0812, -20.2977}, {70, -20.2977}, {70, -20}}, color = {255, 0, 0}));
     connect(ics_context1.AOI, ics_envelopecassette1.AOI) annotation(Line(points = {{-155, 30}, {-5, 30}}));
     connect(ics_context1.SunAzi, ics_envelopecassette1.SunAzi) annotation(Line(points = {{-155, 35}, {-5, 35}}));
@@ -116,8 +120,8 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     equation
       //  pre-stacks
       //DNI into cavity
-      connect(DNI, glazingLossesOuter.DNI) annotation(Line(points = {{-100, 60}, {-75.88079999999999, 60}, {-75.88079999999999, 63.9566}, {-70, 69}, {-75, 69}}));
-      connect(AOI, glazingLossesOuter.AOI) annotation(Line(points = {{-100, 40}, {-83.1978, 40}, {-83.1978, 45.7995}, {-70, 51}, {-75, 51}}));
+      connect(DNI, glazingLossesOuter.DNI) annotation(Line(points = {{-100, 60}, {-75, 60}, {-75, 64}, {-70, 69}, {-75, 69}}));
+      connect(AOI, glazingLossesOuter.AOI) annotation(Line(points = {{-100, 40}, {-84, 40}, {-84, 45}, {-70, 51}, {-75, 51}}));
       connect(SunAlt, rotationmatrixforsphericalcood1.SunAlt) annotation(Line(points = {{-100, 20}, {-81.4634, 20}, {-81.2162, -16.5426}, {-69.7528, -16.445}, {-70, -16}}, color = {0, 0, 127}));
       connect(SunAzi, rotationmatrixforsphericalcood1.SunAzi) annotation(Line(points = {{-100, 0}, {-87.0732, 0}, {-86.826, -11.9084}, {-69.7528, -12.445}, {-70, -12}}, color = {0, 0, 127}));
       connect(SurfaceOrientation, rotationmatrixforsphericalcood1.SurfaceOrientation) annotation(Line(points = {{-100, -20}, {-83.9024, -20}, {-83.6552, -20.2011}, {-69.7528, -20.445}, {-70, -20}}, color = {0, 0, 127}));
@@ -288,25 +292,25 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       Modelica.Blocks.Interfaces.RealInput arrayYaw annotation(Placement(visible = true, transformation(origin = {-100, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.Blocks.Interfaces.RealInput arrayPitch annotation(Placement(visible = true, transformation(origin = {-100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Module.ICS_Module iCS_Module[StackHeight] annotation(Placement(visible = true, transformation(origin = {25.75, 36.25}, extent = {{-18.25, -16.25}, {18.25, 16.25}}, rotation = 0)));
-      Modelica.Blocks.Tables.CombiTable2D Shading1(tableOnFile = true, fileName = "modelica://ICSolar/ShadingTable2014.txt", tableName = "ShadingTable2014");
-      Modelica.Blocks.Tables.CombiTable2D Shading2(tableOnFile = true, fileName = "modelica://ICSolar/ShadingTable2014.txt", tableName = "ShadingTable2014");
-      Modelica.Blocks.Tables.CombiTable2D Shading3(tableOnFile = true, fileName = "modelica://ICSolar/ShadingTable2014.txt", tableName = "ShadingTable2014");
-      Modelica.Blocks.Tables.CombiTable2D Shading4(tableOnFile = true, fileName = "modelica://ICSolar/ShadingTable2014.txt", tableName = "ShadingTable2014");
-      Modelica.Blocks.Tables.CombiTable2D Shading5(tableOnFile = true, fileName = "modelica://ICSolar/ShadingTable2014.txt", tableName = "ShadingTable2014");
-      Modelica.Blocks.Tables.CombiTable2D Shading6(tableOnFile = true, fileName = "modelica://ICSolar/ShadingTable2014.txt", tableName = "ShadingTable2014");
+      Modelica.Blocks.Tables.CombiTable2D Shading11(tableOnFile = true, fileName = "modelica://ICSolar/ShadingTable2014.txt", tableName = "ShadingTable2014");
+      Modelica.Blocks.Tables.CombiTable2D Shading21(tableOnFile = true, fileName = "modelica://ICSolar/ShadingTable2014.txt", tableName = "ShadingTable2014");
+      Modelica.Blocks.Tables.CombiTable2D Shading31(tableOnFile = true, fileName = "modelica://ICSolar/ShadingTable2014.txt", tableName = "ShadingTable2014");
+      Modelica.Blocks.Tables.CombiTable2D Shading41(tableOnFile = true, fileName = "modelica://ICSolar/ShadingTable2014.txt", tableName = "ShadingTable2014");
+      Modelica.Blocks.Tables.CombiTable2D Shading51(tableOnFile = true, fileName = "modelica://ICSolar/ShadingTable2014.txt", tableName = "ShadingTable2014");
+      Modelica.Blocks.Tables.CombiTable2D Shading61(tableOnFile = true, fileName = "modelica://ICSolar/ShadingTable2014.txt", tableName = "ShadingTable2014");
       /*  Modelica.Blocks.Tables.CombiTable2D Shading1(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "1");
-                                                                                                                                                        Modelica.Blocks.Tables.CombiTable2D Shading2(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "2");
-                                                                                                                                                        Modelica.Blocks.Tables.CombiTable2D Shading3(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "3");
-                                                                                                                                                        Modelica.Blocks.Tables.CombiTable2D Shading4(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "4");
-                                                                                                                                                        Modelica.Blocks.Tables.CombiTable2D Shading5(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "5");
-                                                                                                                                                        Modelica.Blocks.Tables.CombiTable2D Shading6(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "6");
-                                                                                                                                                      */
-      Modelica.Blocks.Math.Product product1 "Multiplication of DNI and shading factor";
-      Modelica.Blocks.Math.Product product2 "Multiplication of DNI and shading factor";
-      Modelica.Blocks.Math.Product product3 "Multiplication of DNI and shading factor";
-      Modelica.Blocks.Math.Product product4 "Multiplication of DNI and shading factor";
-      Modelica.Blocks.Math.Product product5 "Multiplication of DNI and shading factor";
-      Modelica.Blocks.Math.Product product6 "Multiplication of DNI and shading factor";
+                                                                                                                                                                                      Modelica.Blocks.Tables.CombiTable2D Shading2(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "2");
+                                                                                                                                                                                      Modelica.Blocks.Tables.CombiTable2D Shading3(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "3");
+                                                                                                                                                                                      Modelica.Blocks.Tables.CombiTable2D Shading4(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "4");
+                                                                                                                                                                                      Modelica.Blocks.Tables.CombiTable2D Shading5(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "5");
+                                                                                                                                                                                      Modelica.Blocks.Tables.CombiTable2D Shading6(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "6");
+                                                                                                                                                                                    */
+      Modelica.Blocks.Math.Product product11 "Multiplication of DNI and shading factor";
+      Modelica.Blocks.Math.Product product21 "Multiplication of DNI and shading factor";
+      Modelica.Blocks.Math.Product product31 "Multiplication of DNI and shading factor";
+      Modelica.Blocks.Math.Product product41 "Multiplication of DNI and shading factor";
+      Modelica.Blocks.Math.Product product51 "Multiplication of DNI and shading factor";
+      Modelica.Blocks.Math.Product product61 "Multiplication of DNI and shading factor";
     equation
       //make the connections between modules: electrical and flow
       for i in 1:StackHeight - 1 loop
@@ -330,41 +334,41 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       connect(iCS_Module[StackHeight].Power_out, Power_out);
       //Manual connection of shading matrixes and products
       //Module1
-      product1.u2 = if Shading1.y < 0 then 0 else Shading1.y;
-      connect(product1.y, iCS_Module[1].DNI) "DNI after multiplication connected to output of model";
-      connect(DNI, product1.u1) "Model input DNI connecting to product";
-      connect(arrayYaw, Shading1.u2);
-      connect(arrayPitch, Shading1.u1);
+      product11.u2 = if Shading11.y < 0 then 0 else Shading11.y;
+      connect(product11.y, iCS_Module[1].DNI) "DNI after multiplication connected to output of model";
+      connect(DNI, product11.u1) "Model input DNI connecting to product";
+      connect(arrayYaw, Shading11.u2);
+      connect(arrayPitch, Shading11.u1);
       //Module2
-      product2.u2 = if Shading2.y < 0 then 0 else Shading2.y;
-      connect(product2.y, iCS_Module[2].DNI) "DNI after multiplication connected to output of model";
-      connect(DNI, product2.u1) "Model input DNI connecting to product";
-      connect(arrayYaw, Shading2.u2);
-      connect(arrayPitch, Shading2.u1);
+      product21.u2 = if Shading21.y < 0 then 0 else Shading21.y;
+      connect(product21.y, iCS_Module[2].DNI) "DNI after multiplication connected to output of model";
+      connect(DNI, product21.u1) "Model input DNI connecting to product";
+      connect(arrayYaw, Shading21.u2);
+      connect(arrayPitch, Shading21.u1);
       //Module3
-      product3.u2 = if Shading3.y < 0 then 0 else Shading3.y;
-      connect(product3.y, iCS_Module[3].DNI) "DNI after multiplication connected to output of model";
-      connect(DNI, product3.u1) "Model input DNI connecting to product";
-      connect(arrayYaw, Shading3.u2);
-      connect(arrayPitch, Shading3.u1);
+      product31.u2 = if Shading31.y < 0 then 0 else Shading31.y;
+      connect(product31.y, iCS_Module[3].DNI) "DNI after multiplication connected to output of model";
+      connect(DNI, product31.u1) "Model input DNI connecting to product";
+      connect(arrayYaw, Shading31.u2);
+      connect(arrayPitch, Shading31.u1);
       //Module4
-      product4.u2 = if Shading4.y < 0 then 0 else Shading4.y;
-      connect(product4.y, iCS_Module[4].DNI) "DNI after multiplication connected to output of model";
-      connect(DNI, product4.u1) "Model input DNI connecting to product";
-      connect(arrayYaw, Shading4.u2);
-      connect(arrayPitch, Shading4.u1);
+      product41.u2 = if Shading41.y < 0 then 0 else Shading41.y;
+      connect(product41.y, iCS_Module[4].DNI) "DNI after multiplication connected to output of model";
+      connect(DNI, product41.u1) "Model input DNI connecting to product";
+      connect(arrayYaw, Shading41.u2);
+      connect(arrayPitch, Shading41.u1);
       //Module5
-      product5.u2 = if Shading5.y < 0 then 0 else Shading5.y;
-      connect(product5.y, iCS_Module[5].DNI) "DNI after multiplication connected to output of model";
-      connect(DNI, product5.u1) "Model input DNI connecting to product";
-      connect(arrayYaw, Shading5.u2);
-      connect(arrayPitch, Shading5.u1);
+      product51.u2 = if Shading51.y < 0 then 0 else Shading51.y;
+      connect(product51.y, iCS_Module[5].DNI) "DNI after multiplication connected to output of model";
+      connect(DNI, product51.u1) "Model input DNI connecting to product";
+      connect(arrayYaw, Shading51.u2);
+      connect(arrayPitch, Shading51.u1);
       //Module6
-      product6.u2 = if Shading6.y < 0 then 0 else Shading6.y;
-      connect(product6.y, iCS_Module[6].DNI) "DNI after multiplication connected to output of model";
-      connect(DNI, product6.u1) "Model input DNI connecting to product";
-      connect(arrayYaw, Shading6.u2);
-      connect(arrayPitch, Shading6.u1);
+      product61.u2 = if Shading61.y < 0 then 0 else Shading61.y;
+      connect(product61.y, iCS_Module[6].DNI) "DNI after multiplication connected to output of model";
+      connect(DNI, product61.u1) "Model input DNI connecting to product";
+      connect(arrayYaw, Shading61.u2);
+      connect(arrayPitch, Shading61.u1);
       annotation(Placement(transformation(extent = {{-10, 64}, {10, 84}})), Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = false, initialScale = 0.1, grid = {2, 2}), graphics = {Rectangle(extent = {{-100, 100}, {100, -100}}, lineColor = {0, 0, 0}, fillPattern = FillPattern.VerticalCylinder, fillColor = {215, 215, 215}), Text(origin = {0.95, 5.29}, extent = {{-61.06, 40.08}, {61.06, -40.08}}, textString = "Stack"), Rectangle(extent = {{-100, 100}, {100, -100}}, lineColor = {0, 0, 0})}), experiment(StartTime = 0, StopTime = 315360, Tolerance = 1e-06, Interval = 3710.12), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = false, initialScale = 0.1, grid = {2, 2}), graphics = {Rectangle(origin = {0, -0.288066}, extent = {{-100, 100}, {100, -100}})}));
     end ICS_Stack;
 
@@ -379,17 +383,23 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       Modelica.Blocks.Interfaces.RealInput arrayYaw annotation(Placement(visible = true, transformation(origin = {-100, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.Blocks.Interfaces.RealInput arrayPitch annotation(Placement(visible = true, transformation(origin = {-100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Module.ICS_Module iCS_Module[StackHeight] annotation(Placement(visible = true, transformation(origin = {25.75, 36.25}, extent = {{-18.25, -16.25}, {18.25, 16.25}}, rotation = 0)));
-      Modelica.Blocks.Tables.CombiTable2D Shading1(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "7");
+      Modelica.Blocks.Tables.CombiTable2D Shading12(tableOnFile = true, fileName = "modelica://ICSolar/ShadingTable2014.txt", tableName = "ShadingTable2014");
+      Modelica.Blocks.Tables.CombiTable2D Shading22(tableOnFile = true, fileName = "modelica://ICSolar/ShadingTable2014.txt", tableName = "ShadingTable2014");
+      Modelica.Blocks.Tables.CombiTable2D Shading32(tableOnFile = true, fileName = "modelica://ICSolar/ShadingTable2014.txt", tableName = "ShadingTable2014");
+      Modelica.Blocks.Tables.CombiTable2D Shading42(tableOnFile = true, fileName = "modelica://ICSolar/ShadingTable2014.txt", tableName = "ShadingTable2014");
+      Modelica.Blocks.Tables.CombiTable2D Shading52(tableOnFile = true, fileName = "modelica://ICSolar/ShadingTable2014.txt", tableName = "ShadingTable2014");
+      Modelica.Blocks.Tables.CombiTable2D Shading62(tableOnFile = true, fileName = "modelica://ICSolar/ShadingTable2014.txt", tableName = "ShadingTable2014");
+      //  Modelica.Blocks.Tables.CombiTable2D Shading12(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "7");
+      //  Modelica.Blocks.Tables.CombiTable2D Shading22(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "8");
+      //  Modelica.Blocks.Tables.CombiTable2D Shading32(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "9");
+      //  Modelica.Blocks.Tables.CombiTable2D Shading42(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "10");
+      //  Modelica.Blocks.Tables.CombiTable2D Shading52(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "11");
+      //  Modelica.Blocks.Tables.CombiTable2D Shading62(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "12");
       Modelica.Blocks.Math.Product product1 "Multiplication of DNI and shading factor";
-      Modelica.Blocks.Tables.CombiTable2D Shading2(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "8");
       Modelica.Blocks.Math.Product product2 "Multiplication of DNI and shading factor";
-      Modelica.Blocks.Tables.CombiTable2D Shading3(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "9");
       Modelica.Blocks.Math.Product product3 "Multiplication of DNI and shading factor";
-      Modelica.Blocks.Tables.CombiTable2D Shading4(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "10");
       Modelica.Blocks.Math.Product product4 "Multiplication of DNI and shading factor";
-      Modelica.Blocks.Tables.CombiTable2D Shading5(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "11");
       Modelica.Blocks.Math.Product product5 "Multiplication of DNI and shading factor";
-      Modelica.Blocks.Tables.CombiTable2D Shading6(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "12");
       Modelica.Blocks.Math.Product product6 "Multiplication of DNI and shading factor";
     equation
       //make the connections between modules: electrical and flow
@@ -414,41 +424,41 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       connect(iCS_Module[StackHeight].Power_out, Power_out);
       //Manual connection of shading matrixes and products
       //Module1
-      product1.u2 = if Shading1.y < 0 then 0 else Shading1.y;
+      product1.u2 = if Shading12.y < 0 then 0 else Shading12.y;
       connect(product1.y, iCS_Module[1].DNI) "DNI after multiplication connected to output of model";
       connect(DNI, product1.u1) "Model input DNI connecting to product";
-      connect(arrayYaw, Shading1.u2);
-      connect(arrayPitch, Shading1.u1);
+      connect(arrayYaw, Shading12.u2);
+      connect(arrayPitch, Shading12.u1);
       //Module2
-      product2.u2 = if Shading2.y < 0 then 0 else Shading2.y;
+      product2.u2 = if Shading22.y < 0 then 0 else Shading22.y;
       connect(product2.y, iCS_Module[2].DNI) "DNI after multiplication connected to output of model";
       connect(DNI, product2.u1) "Model input DNI connecting to product";
-      connect(arrayYaw, Shading2.u2);
-      connect(arrayPitch, Shading2.u1);
+      connect(arrayYaw, Shading22.u2);
+      connect(arrayPitch, Shading22.u1);
       //Module3
-      product3.u2 = if Shading3.y < 0 then 0 else Shading3.y;
+      product3.u2 = if Shading32.y < 0 then 0 else Shading32.y;
       connect(product3.y, iCS_Module[3].DNI) "DNI after multiplication connected to output of model";
       connect(DNI, product3.u1) "Model input DNI connecting to product";
-      connect(arrayYaw, Shading3.u2);
-      connect(arrayPitch, Shading3.u1);
+      connect(arrayYaw, Shading32.u2);
+      connect(arrayPitch, Shading32.u1);
       //Module4
-      product4.u2 = if Shading4.y < 0 then 0 else Shading4.y;
+      product4.u2 = if Shading42.y < 0 then 0 else Shading42.y;
       connect(product4.y, iCS_Module[4].DNI) "DNI after multiplication connected to output of model";
       connect(DNI, product4.u1) "Model input DNI connecting to product";
-      connect(arrayYaw, Shading4.u2);
-      connect(arrayPitch, Shading4.u1);
+      connect(arrayYaw, Shading42.u2);
+      connect(arrayPitch, Shading42.u1);
       //Module5
-      product5.u2 = if Shading5.y < 0 then 0 else Shading5.y;
+      product5.u2 = if Shading52.y < 0 then 0 else Shading52.y;
       connect(product5.y, iCS_Module[5].DNI) "DNI after multiplication connected to output of model";
       connect(DNI, product5.u1) "Model input DNI connecting to product";
-      connect(arrayYaw, Shading5.u2);
-      connect(arrayPitch, Shading5.u1);
+      connect(arrayYaw, Shading52.u2);
+      connect(arrayPitch, Shading52.u1);
       //Module6
-      product6.u2 = if Shading6.y < 0 then 0 else Shading6.y;
+      product6.u2 = if Shading62.y < 0 then 0 else Shading62.y;
       connect(product6.y, iCS_Module[6].DNI) "DNI after multiplication connected to output of model";
       connect(DNI, product6.u1) "Model input DNI connecting to product";
-      connect(arrayYaw, Shading6.u2);
-      connect(arrayPitch, Shading6.u1);
+      connect(arrayYaw, Shading62.u2);
+      connect(arrayPitch, Shading62.u1);
       annotation(Placement(transformation(extent = {{-10, 64}, {10, 84}})), Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = false, initialScale = 0.1, grid = {2, 2}), graphics = {Rectangle(extent = {{-100, 100}, {100, -100}}, lineColor = {0, 0, 0}, fillPattern = FillPattern.VerticalCylinder, fillColor = {215, 215, 215}), Text(origin = {0.95, 5.29}, extent = {{-61.06, 40.08}, {61.06, -40.08}}, textString = "Stack"), Rectangle(extent = {{-100, 100}, {100, -100}}, lineColor = {0, 0, 0})}), experiment(StartTime = 0, StopTime = 315360, Tolerance = 1e-06, Interval = 3710.12), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = false, initialScale = 0.1, grid = {2, 2}), graphics = {Rectangle(origin = {0, -0.288066}, extent = {{-100, 100}, {100, -100}})}));
     end ICS_Stack2;
 
