@@ -4,28 +4,24 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
   model ICS_Skeleton "This model calculates the electrical and thermal generation of ICSolar. This model is used as a skeleton piece to hold together the other models until it is packages as an FMU."
     extends ICSolar.Parameters;
     Modelica.Thermal.FluidHeatFlow.Sources.Ambient Sink(medium = mediumHTF, constantAmbientPressure = 101325, constantAmbientTemperature = TAmb) "Thermal fluid sink, will be replaced with a tank later" annotation(Placement(visible = true, transformation(origin = {80, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-    //[[20150211]]
     ICSolar.ICS_Context ics_context1(SurfOrientation = 40 * 2 * Modelica.Constants.pi / 360) annotation(Placement(visible = true, transformation(origin = {-180, 40}, extent = {{-25, -25}, {25, 25}}, rotation = 0)));
     //
-    // LOOK HERE...I'm using the _Twelve tag to name the bits I've created in parallel to what was there before. this is the only place where they over-
-    //lap (so far). OG code is simply commented out.
     ICSolar.Envelope.ICS_EnvelopeCassette_Twelve ics_envelopecassette1 annotation(Placement(visible = true, transformation(origin = {20, 40}, extent = {{-25, -25}, {25, 25}}, rotation = 0)));
-    //  ICSolar.Envelope.ICS_EnvelopeCassette ics_envelopecassette1 annotation(Placement(visible = true, transformation(origin = {20, 40}, extent = {{-25, -25}, {25, 25}}, rotation = 0)));
     //
     //
-    //    Modelica.Blocks.Sources.CombiTimeTable T_HTF_in_measured_K(tableOnFile = true, fileName = "modelica://ICSolar/20150323/ICSFData.txt", tableName = "DNI_THTFin_vdot", extrapolation = Modelica.Blocks.Types.Extrapolation.HoldLastPoint, smoothness = Modelica.Blocks.Types.Smoothness.ConstantSegments, columns = {3}) annotation(Placement(visible = true, transformation(origin = {-160, -60}, extent = {{-15, -15}, {15, 15}}, rotation = 0)));
+    // Don't need a second load for the same file, since using [y] to determine column.
     //    Modelica.Blocks.Sources.CombiTimeTable vDot_measured_m3s(tableOnFile = true, fileName = "modelica://ICSolar/20150323/ICSFData.txt", tableName = "DNI_THTFin_vdot", extrapolation = Modelica.Blocks.Types.Extrapolation.HoldLastPoint, smoothness = Modelica.Blocks.Types.Smoothness.ConstantSegments, columns = {4}) "measured mass flow data" annotation(Placement(visible = true, transformation(origin = {-100, -20}, extent = {{-15, -15}, {15, 15}}, rotation = 0)));
     Modelica.Thermal.FluidHeatFlow.Sources.Ambient Source(medium = mediumHTF, useTemperatureInput = true, constantAmbientPressure = 101325, constantAmbientTemperature = TAmb) "Thermal fluid source" annotation(Placement(visible = true, transformation(origin = {-60, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 180)));
     Modelica.Thermal.FluidHeatFlow.Sources.VolumeFlow Pump(constantVolumeFlow = OneBranchFlow, m = 0.1, medium = mediumHTF, T0 = TAmb, T0fixed = false, useVolumeFlowInput = true) "Fluid pump for thermal fluid" annotation(Placement(visible = true, transformation(origin = {-20, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-    Modelica.Blocks.Sources.Constant vFlow_const(k = 1.383e-6) "to simplify boundary conditions" annotation(Placement(visible = true, transformation(origin = {-120, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-    Modelica.Blocks.Sources.Constant T_HTF_fixed_real(k = 350) "simplify things" annotation(Placement(visible = true, transformation(origin = {-120, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    //Modelica.Blocks.Sources.Constant vFlow_const(k = 1.383e-6) "to simplify boundary conditions" annotation(Placement(visible = true, transformation(origin = {-120, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    //Modelica.Blocks.Sources.Constant T_HTF_fixed_real(k = 350) "simplify things" annotation(Placement(visible = true, transformation(origin = {-120, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Blocks.Sources.CombiTimeTable Flowrate(tableOnFile = true, fileName = Path + "20150323\\ICSFdata_Flow.txt", tableName = "Flow", extrapolation = Modelica.Blocks.Types.Extrapolation.HoldLastPoint, smoothness = Modelica.Blocks.Types.Smoothness.ConstantSegments) annotation(Placement(visible = true, transformation(origin = {-80, 0}, extent = {{-15, -15}, {15, 15}}, rotation = 0)));
+    Modelica.Blocks.Sources.CombiTimeTable Tpump(tableOnFile = true, fileName = Path + "\\20150323\\ICSFdata_Tpump.txt", tableName = "Tpump", extrapolation = Modelica.Blocks.Types.Extrapolation.HoldLastPoint, smoothness = Modelica.Blocks.Types.Smoothness.ConstantSegments) annotation(Placement(visible = true, transformation(origin = {-120, -40}, extent = {{-15, -15}, {15, 15}}, rotation = 0)));
   equation
-    connect(T_HTF_fixed_real.y, Source.ambientTemperature) annotation(Line(points = {{-109, -40}, {-93.8675, -40.0491}, {-93.8675, -33.0335}, {-71.6353, -33.0335}, {-70, -33}}, color = {0, 0, 127}));
-    connect(vFlow_const.y, Pump.volumeFlow) annotation(Line(points = {{-109, 0}, {-21.7161, -0.0490597}, {-21.7161, -29.4432}, {-20.0808, -29.3941}}, color = {0, 0, 127}));
+    connect(Tpump.y[1], Source.ambientTemperature) annotation(Line(points = {{-103.5, -40}, {-87.8769, -40}, {-87.8769, -32.9846}, {-70.1538, -32.9846}, {-70.1538, -32.9846}}, color = {0, 0, 127}));
+    connect(Flowrate.y[1], Pump.volumeFlow) annotation(Line(points = {{-63.5, 0}, {-20.1846, 0}, {-20.1846, -29.5385}, {-20.1846, -29.5385}}, color = {0, 0, 127}));
     connect(Source.flowPort, Pump.flowPort_a) annotation(Line(points = {{-50, -40}, {-37.8122, -39.5049}, {-30, -40}}));
     connect(Pump.flowPort_b, ics_envelopecassette1.flowport_a) annotation(Line(points = {{-10, -40}, {-8.16759, -39.5049}, {-4.3554, 17.6597}, {6.25, 18.75}, {-3.75, 18.75}}));
-    //  connect(vDot_measured_m3s.y[1], Pump.volumeFlow);
-    //  connect(T_HTF_in_measured_K.y[1], Source.ambientTemperature);
     connect(ics_envelopecassette1.flowport_b, Sink.flowPort) annotation(Line(points = {{45, 40}, {60.0812, 40}, {60.0812, -20.2977}, {70, -20.2977}, {70, -20}}, color = {255, 0, 0}));
     connect(ics_context1.AOI, ics_envelopecassette1.AOI) annotation(Line(points = {{-155, 30}, {-5, 30}}));
     connect(ics_context1.SunAzi, ics_envelopecassette1.SunAzi) annotation(Line(points = {{-155, 35}, {-5, 35}}));
@@ -122,7 +118,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       //  constant Modelica.Blocks.Sources.Constant GND(k = 0) "a zero source for the Real electrical input" annotation(Placement(visible = true, transformation(origin = {-20, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       ICSolar.Stack.ICS_Stack ics_stack1 annotation(Placement(visible = true, transformation(origin = {40, 0}, extent = {{-25, -25}, {25, 25}}, rotation = 0)));
       ICSolar.Stack.ICS_Stack2 ics_stack2 annotation(Placement(visible = true, transformation(origin = {40, -60}, extent = {{-25, -25}, {25, 25}}, rotation = 0)));
-      //  Modelica.Blocks.Sources.CombiTimeTable DNI_measured(tableOnFile = true, fileName = "modelica://ICSolar/20150323/ICSFData.txt", tableName = "DNI_THTFin_vdot", extrapolation = Modelica.Blocks.Types.Extrapolation.HoldLastPoint, smoothness = Modelica.Blocks.Types.Smoothness.ConstantSegments, columns = {2}) annotation(Placement(visible = true, transformation(origin = {-60, 20}, extent = {{-15, -15}, {15, 15}}, rotation = 0)));
+      Modelica.Blocks.Sources.CombiTimeTable DNI_measured(tableOnFile = true, fileName = "modelica://ICSolar/20150323/ICSFdata_DNI.txt", tableName = "DNI", extrapolation = Modelica.Blocks.Types.Extrapolation.HoldLastPoint, smoothness = Modelica.Blocks.Types.Smoothness.ConstantSegments, columns = {2}) annotation(Placement(visible = true, transformation(origin = {-60, 20}, extent = {{-15, -15}, {15, 15}}, rotation = 0)));
     equation
       //  pre-stacks
       //DNI into cavity
@@ -153,22 +149,6 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       connect(ics_stack2.flowport_b1, flowport_b);
       connect(ics_stack1.TAmb_in, cavityheatbalance1.ICS_Heat);
       connect(ics_stack2.TAmb_in, cavityheatbalance1.ICS_Heat);
-      //stacks:
-      //make the connections between stacks: electrical
-      //for i in 1:NumOfStacks - 1 loop
-      //connect(ics_stack[i].Power_out, ics_stack[i + 1].Power_in);
-      //end for;
-      //make the connections for all stacks: Flow in, flow out, shading, heat port (loss)
-      //for i in 1:NumOfStacks loop
-      // ics_stack[i].StackNumber = i;
-      //  connect(rotationmatrixforsphericalcood1.arrayYaw, ics_stack[i].arrayYaw);
-      // connect(rotationmatrixforsphericalcood1.arrayPitch, ics_stack[i].arrayPitch);
-      //  connect(glazingLossesOuter.SurfDirNor, ics_stack[i].DNI);
-      //  connect(ics_stack[i].flowport_a1, flowport_a) annotation(Line(points = {{15, -15}, {5.78072, -15}, {5.78072, -13.5009}, {-100, -13.5009}, {-100, -80}}));
-      // connect(ics_stack[i].flowport_b1, flowport_b) annotation(Line(points = {{65, 0}, {80, 0}, {80, -21.2245}, {100, -21.2245}, {100, -20}}, color = {255, 0, 0}));
-      // connect(ics_stack[i].TAmb_in, cavityheatbalance1.ICS_Heat) annotation(Line(points = {{15, 20}, {0.593472, 20}, {0.593472, 20.178}, {20, 20.178}, {20, 50}}));
-      // end for;
-      //after the stacks
     end ICS_EnvelopeCassette;
 
     model ICS_GlazingLosses "This model calculates the transmittance of a single glass layer and discounts the DNI by the absorption and reflection"
@@ -385,12 +365,12 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       Modelica.Blocks.Tables.CombiTable2D Shading51(tableOnFile = true, fileName = "modelica://ICSolar/ShadingTable2014.txt", tableName = "ShadingTable2014");
       Modelica.Blocks.Tables.CombiTable2D Shading61(tableOnFile = true, fileName = "modelica://ICSolar/ShadingTable2014.txt", tableName = "ShadingTable2014");
       /*  Modelica.Blocks.Tables.CombiTable2D Shading1(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "1");
-                                                                                                                                                                                                                                                                                                                                                                                Modelica.Blocks.Tables.CombiTable2D Shading2(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "2");
-                                                                                                                                                                                                                                                                                                                                                                                Modelica.Blocks.Tables.CombiTable2D Shading3(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "3");
-                                                                                                                                                                                                                                                                                                                                                                                Modelica.Blocks.Tables.CombiTable2D Shading4(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "4");
-                                                                                                                                                                                                                                                                                                                                                                                Modelica.Blocks.Tables.CombiTable2D Shading5(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "5");
-                                                                                                                                                                                                                                                                                                                                                                                Modelica.Blocks.Tables.CombiTable2D Shading6(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "6");
-                                                                                                                                                                                                                                                                                                                                                                              */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                        Modelica.Blocks.Tables.CombiTable2D Shading2(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "2");
+                                                                                                                                                                                                                                                                                                                                                                                                                                                        Modelica.Blocks.Tables.CombiTable2D Shading3(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "3");
+                                                                                                                                                                                                                                                                                                                                                                                                                                                        Modelica.Blocks.Tables.CombiTable2D Shading4(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "4");
+                                                                                                                                                                                                                                                                                                                                                                                                                                                        Modelica.Blocks.Tables.CombiTable2D Shading5(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "5");
+                                                                                                                                                                                                                                                                                                                                                                                                                                                        Modelica.Blocks.Tables.CombiTable2D Shading6(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "6");
+                                                                                                                                                                                                                                                                                                                                                                                                                                                      */
       Modelica.Blocks.Math.Product product11 "Multiplication of DNI and shading factor";
       Modelica.Blocks.Math.Product product21 "Multiplication of DNI and shading factor";
       Modelica.Blocks.Math.Product product31 "Multiplication of DNI and shading factor";
@@ -962,8 +942,10 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
   end Receiver;
 
   model Parameters "Inputs for the ICSF model"
-    //not every component needs access to all these tables
-    //  extends ICSolar.measured_data;
+    ///////////////////////
+    //////// PATH /////////
+    ///////////////////////
+    parameter String Path = "C:\\Users\\JShultz\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\";
     //////////////////////////////////
     //////// MODEL OPERATION /////////
     //////////////////////////////////
