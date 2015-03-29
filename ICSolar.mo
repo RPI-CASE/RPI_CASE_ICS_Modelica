@@ -11,10 +11,10 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     Real temp_flowport_b = abs(ics_envelopecassette1.flowport_b.H_flow / (0.00137691 * 4177));
     Real Q_arrayTotal = abs(ics_envelopecassette1.flowport_b.H_flow) - ics_envelopecassette1.flowport_a.H_flow;
     // m_dot*cp*(1 - Tamb/T2)
-    Real Ex_carnot_arrayTotal = Q_arrayTotal * (1 - 293 / temp_flowport_b);
+    Real Ex_carnot_arrayTotal = Q_arrayTotal * (1 - TAmb / temp_flowport_b);
     // m_dot*cp*(T2 - T1 - Tamb*ln(T2/T1))
     // note log in OMedit is the natural log.  Log is log10 in OM
-    Real Ex_arrayTotal = 0.00137691 * 4177 * (temp_flowport_b - temp_flowport_a - 293 * log(temp_flowport_b / temp_flowport_a)) + ics_envelopecassette1.Power_Electric;
+    Real Ex_arrayTotal = 0.00137691 * 4177 * (temp_flowport_b - temp_flowport_a - TAmb * log(temp_flowport_b / temp_flowport_a)) + ics_envelopecassette1.Power_Electric;
     //epsilon = the Exergenic efficiency (~93% for sunlight)
     Real epsilon = Ex_arrayTotal / (DNI_measured.y[1] * GlassArea * 0.93);
     ////// end of Exergy /////////
@@ -33,8 +33,10 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     Modelica.Blocks.Sources.CombiTimeTable Flowrate(tableOnFile = true, fileName = Path + "20150323\\ICSFdata_Flow.txt", tableName = "Flow", extrapolation = Modelica.Blocks.Types.Extrapolation.HoldLastPoint, smoothness = Modelica.Blocks.Types.Smoothness.ConstantSegments) annotation(Placement(visible = true, transformation(origin = {-80, 0}, extent = {{-15, -15}, {15, 15}}, rotation = 0)));
     Modelica.Blocks.Sources.CombiTimeTable Tpump(tableOnFile = true, fileName = Path + "\\20150323\\ICSFdata_Tpump.txt", tableName = "Tpump", extrapolation = Modelica.Blocks.Types.Extrapolation.HoldLastPoint, smoothness = Modelica.Blocks.Types.Smoothness.ConstantSegments) annotation(Placement(visible = true, transformation(origin = {-120, -40}, extent = {{-15, -15}, {15, 15}}, rotation = 0)));
   equation
-    connect(Tpump.y[1], Source.ambientTemperature) annotation(Line(points = {{-103.5, -40}, {-87.8769, -40}, {-87.8769, -32.9846}, {-70.1538, -32.9846}, {-70.1538, -32.9846}}, color = {0, 0, 127}));
-    connect(Flowrate.y[1], Pump.volumeFlow) annotation(Line(points = {{-63.5, 0}, {-20.1846, 0}, {-20.1846, -29.5385}, {-20.1846, -29.5385}}, color = {0, 0, 127}));
+    //connect(Tpump.y[1], Source.ambientTemperature) annotation(Line(points = {{-103.5, -40}, {-87.8769, -40}, {-87.8769, -32.9846}, {-70.1538, -32.9846}, {-70.1538, -32.9846}}, color = {0, 0, 127}));
+    //connect(Flowrate.y[1], Pump.volumeFlow) annotation(Line(points = {{-63.5, 0}, {-20.1846, 0}, {-20.1846, -29.5385}, {-20.1846, -29.5385}}, color = {0, 0, 127}));
+    connect(T_HTF_in_measured_K.y[1], Source.ambientTemperature) annotation(Line(points = {{-103.5, -40}, {-87.8769, -40}, {-87.8769, -32.9846}, {-70.1538, -32.9846}, {-70.1538, -32.9846}}, color = {0, 0, 127}));
+    connect(vDot_measured_m3s.y[1], Pump.volumeFlow) annotation(Line(points = {{-63.5, 0}, {-20.1846, 0}, {-20.1846, -29.5385}, {-20.1846, -29.5385}}, color = {0, 0, 127}));
     connect(Source.flowPort, Pump.flowPort_a) annotation(Line(points = {{-50, -40}, {-37.8122, -39.5049}, {-30, -40}}));
     connect(Pump.flowPort_b, ics_envelopecassette1.flowport_a) annotation(Line(points = {{-10, -40}, {-8.16759, -39.5049}, {-4.3554, 17.6597}, {6.25, 18.75}, {-3.75, 18.75}}));
     connect(ics_envelopecassette1.flowport_b, Sink.flowPort) annotation(Line(points = {{45, 40}, {60.0812, 40}, {60.0812, -20.2977}, {70, -20.2977}, {70, -20}}, color = {255, 0, 0}));
@@ -383,12 +385,12 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       Modelica.Blocks.Tables.CombiTable2D Shading51(tableOnFile = true, fileName = "modelica://ICSolar/ShadingTable2014.txt", tableName = "ShadingTable2014");
       Modelica.Blocks.Tables.CombiTable2D Shading61(tableOnFile = true, fileName = "modelica://ICSolar/ShadingTable2014.txt", tableName = "ShadingTable2014");
       /*  Modelica.Blocks.Tables.CombiTable2D Shading1(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "1");
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Modelica.Blocks.Tables.CombiTable2D Shading2(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "2");
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Modelica.Blocks.Tables.CombiTable2D Shading3(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "3");
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Modelica.Blocks.Tables.CombiTable2D Shading4(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "4");
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Modelica.Blocks.Tables.CombiTable2D Shading5(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "5");
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Modelica.Blocks.Tables.CombiTable2D Shading6(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "6");
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Modelica.Blocks.Tables.CombiTable2D Shading2(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "2");
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Modelica.Blocks.Tables.CombiTable2D Shading3(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "3");
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Modelica.Blocks.Tables.CombiTable2D Shading4(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "4");
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Modelica.Blocks.Tables.CombiTable2D Shading5(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "5");
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Modelica.Blocks.Tables.CombiTable2D Shading6(tableOnFile = true, fileName = "modelica://ICSolar/shading/ICSF_shading_matrices_studio.txt", tableName = "6");
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    */
       Modelica.Blocks.Math.Product product11 "Multiplication of DNI and shading factor";
       Modelica.Blocks.Math.Product product21 "Multiplication of DNI and shading factor";
       Modelica.Blocks.Math.Product product31 "Multiplication of DNI and shading factor";
@@ -701,13 +703,13 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     equation
       DNI_out = DNI_in * Eff_Optic * ConcentrationFactor;
       annotation(Documentation(info = "<HTML>
-                        <p><b> Tramission losses associated with the lens / optic elements. Ratio of power on the cell to power on the entry aperture.</b></p>
+                            <p><b> Tramission losses associated with the lens / optic elements. Ratio of power on the cell to power on the entry aperture.</b></p>
 
-                        <p>Optical efficiency from LBI Benitez <b>High performance Fresnel-based photovoltaic concentrator</b> where Eff_Opt(F#). Assuming anti-reflective coating on secondary optic element (SOE), current Gen8 module design Eff_Opt(0.84) = 88.2%</p> 
+                            <p>Optical efficiency from LBI Benitez <b>High performance Fresnel-based photovoltaic concentrator</b> where Eff_Opt(F#). Assuming anti-reflective coating on secondary optic element (SOE), current Gen8 module design Eff_Opt(0.84) = 88.2%</p> 
 
-                        <b>More Information:</b>
-                        <p> The F-number for a Fresnal-Köhler lens is the ratio of the distance between cell and Fresenel lens to the diagonal measurement of the front lens. The concentrator optical efficiency is defined as the ratio of power on the cell to the power on the entry aperture when the sun is exactly on-axis.</p>
-                        </HTML>"), Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2}), graphics = {Text(origin = {0.694127, 36.2079}, extent = {{-72.52, 54.46}, {72.52, -54.46}}, textString = "Lens Losses")}));
+                            <b>More Information:</b>
+                            <p> The F-number for a Fresnal-Köhler lens is the ratio of the distance between cell and Fresenel lens to the diagonal measurement of the front lens. The concentrator optical efficiency is defined as the ratio of power on the cell to the power on the entry aperture when the sun is exactly on-axis.</p>
+                            </HTML>"), Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2}), graphics = {Text(origin = {0.694127, 36.2079}, extent = {{-72.52, 54.46}, {72.52, -54.46}}, textString = "Lens Losses")}));
     end ICS_LensLosses;
 
     model chooseShadeMatrix "based on a module's position in an array, choose it's shading matrix. Two modes of operation, based on the value of the isStudioExperiment boolean flag in Parameters"
@@ -1035,15 +1037,15 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     parameter Real HeatCap_Receiver = 30;
     //30;
     annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), experiment(StartTime = 47130, StopTime = 58120, Tolerance = 1e-06, Interval = 10), Documentation(info = "<html>
-                         Don't forget to:<br/>
-                         fix the shading matrices path in <code>Envelope.ICS_SelfShading</code>.<br/> </html>", revisions = "<html>
-                         <ul>
-                         <li>
-                         Jan2015, by Justin Shultz:<br/>
-                         First implementation.<br/>
-                         </li>
-                         </ul>
-                         </html>"));
+                             Don't forget to:<br/>
+                             fix the shading matrices path in <code>Envelope.ICS_SelfShading</code>.<br/> </html>", revisions = "<html>
+                             <ul>
+                             <li>
+                             Jan2015, by Justin Shultz:<br/>
+                             First implementation.<br/>
+                             </li>
+                             </ul>
+                             </html>"));
   end Parameters;
 
   model HeatCapacitorPCMLike00 "Lumped thermal element storing heat with temperature-varying capacitance"
@@ -1094,56 +1096,56 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     end if;
     //  try = Modelica.Thermal.FluidHeatFlow.Media.Water.rho;
     annotation(Icon(coordinateSystem(preserveAspectRatio = true, extent = {{-100, -100}, {100, 100}}), graphics = {Text(extent = {{-150, 110}, {150, 70}}, textString = "%name", lineColor = {0, 0, 255}), Polygon(points = {{0, 67}, {-20, 63}, {-40, 57}, {-52, 43}, {-58, 35}, {-68, 25}, {-72, 13}, {-76, -1}, {-78, -15}, {-76, -31}, {-76, -43}, {-76, -53}, {-70, -65}, {-64, -73}, {-48, -77}, {-30, -83}, {-18, -83}, {-2, -85}, {8, -89}, {22, -89}, {32, -87}, {42, -81}, {54, -75}, {56, -73}, {66, -61}, {68, -53}, {70, -51}, {72, -35}, {76, -21}, {78, -13}, {78, 3}, {74, 15}, {66, 25}, {54, 33}, {44, 41}, {36, 57}, {26, 65}, {0, 67}}, lineColor = {160, 160, 164}, fillColor = {192, 192, 192}, fillPattern = FillPattern.Solid), Polygon(points = {{-58, 35}, {-68, 25}, {-72, 13}, {-76, -1}, {-78, -15}, {-76, -31}, {-76, -43}, {-76, -53}, {-70, -65}, {-64, -73}, {-48, -77}, {-30, -83}, {-18, -83}, {-2, -85}, {8, -89}, {22, -89}, {32, -87}, {42, -81}, {54, -75}, {42, -77}, {40, -77}, {30, -79}, {20, -81}, {18, -81}, {10, -81}, {2, -77}, {-12, -73}, {-22, -73}, {-30, -71}, {-40, -65}, {-50, -55}, {-56, -43}, {-58, -35}, {-58, -25}, {-60, -13}, {-60, -5}, {-60, 7}, {-58, 17}, {-56, 19}, {-52, 27}, {-48, 35}, {-44, 45}, {-40, 57}, {-58, 35}}, lineColor = {0, 0, 0}, fillColor = {160, 160, 164}, fillPattern = FillPattern.Solid), Text(extent = {{-69, 7}, {71, -24}}, lineColor = {0, 0, 0}, textString = "%C")}), Diagram(coordinateSystem(preserveAspectRatio = true, extent = {{-100, -100}, {100, 100}}), graphics = {Polygon(points = {{0, 67}, {-20, 63}, {-40, 57}, {-52, 43}, {-58, 35}, {-68, 25}, {-72, 13}, {-76, -1}, {-78, -15}, {-76, -31}, {-76, -43}, {-76, -53}, {-70, -65}, {-64, -73}, {-48, -77}, {-30, -83}, {-18, -83}, {-2, -85}, {8, -89}, {22, -89}, {32, -87}, {42, -81}, {54, -75}, {56, -73}, {66, -61}, {68, -53}, {70, -51}, {72, -35}, {76, -21}, {78, -13}, {78, 3}, {74, 15}, {66, 25}, {54, 33}, {44, 41}, {36, 57}, {26, 65}, {0, 67}}, lineColor = {160, 160, 164}, fillColor = {192, 192, 192}, fillPattern = FillPattern.Solid), Polygon(points = {{-58, 35}, {-68, 25}, {-72, 13}, {-76, -1}, {-78, -15}, {-76, -31}, {-76, -43}, {-76, -53}, {-70, -65}, {-64, -73}, {-48, -77}, {-30, -83}, {-18, -83}, {-2, -85}, {8, -89}, {22, -89}, {32, -87}, {42, -81}, {54, -75}, {42, -77}, {40, -77}, {30, -79}, {20, -81}, {18, -81}, {10, -81}, {2, -77}, {-12, -73}, {-22, -73}, {-30, -71}, {-40, -65}, {-50, -55}, {-56, -43}, {-58, -35}, {-58, -25}, {-60, -13}, {-60, -5}, {-60, 7}, {-58, 17}, {-56, 19}, {-52, 27}, {-48, 35}, {-44, 45}, {-40, 57}, {-58, 35}}, lineColor = {0, 0, 0}, fillColor = {160, 160, 164}, fillPattern = FillPattern.Solid), Ellipse(extent = {{-6, -1}, {6, -12}}, lineColor = {255, 0, 0}, fillColor = {191, 0, 0}, fillPattern = FillPattern.Solid), Text(extent = {{11, 13}, {50, -25}}, lineColor = {0, 0, 0}, textString = "T"), Line(points = {{0, -12}, {0, -96}}, color = {255, 0, 0})}), Documentation(info = "<HTML>
-                        <p>
-                        This is copied from:
-                        This is a generic model for the heat capacity of a material.
-                        No specific geometry is assumed beyond a total volume with
-                        uniform temperature for the entire volume.
-                        Furthermore, it is assumed that the heat capacity
-                        is constant (independent of temperature).
-                        </p>
-                        <p>
-                        The temperature T [Kelvin] of this component is a <b>state</b>.
-                        A default of T = 25 degree Celsius (= SIunits.Conversions.from_degC(25))
-                        is used as start value for initialization.
-                        This usually means that at start of integration the temperature of this
-                        component is 25 degrees Celsius. You may, of course, define a different
-                        temperature as start value for initialization. Alternatively, it is possible
-                        to set parameter <b>steadyStateStart</b> to <b>true</b>. In this case
-                        the additional equation '<b>der</b>(T) = 0' is used during
-                        initialization, i.e., the temperature T is computed in such a way that
-                        the component starts in <b>steady state</b>. This is useful in cases,
-                        where one would like to start simulation in a suitable operating
-                        point without being forced to integrate for a long time to arrive
-                        at this point.
-                        </p>
-                        <p>
-                        Note, that parameter <b>steadyStateStart</b> is not available in
-                        the parameter menu of the simulation window, because its value
-                        is utilized during translation to generate quite different
-                        equations depending on its setting. Therefore, the value of this
-                        parameter can only be changed before translating the model.
-                        </p>
-                        <p>
-                        This component may be used for complicated geometries where
-                        the heat capacity C is determined my measurements. If the component
-                        consists mainly of one type of material, the <b>mass m</b> of the
-                        component may be measured or calculated and multiplied with the
-                        <b>specific heat capacity cp</b> of the component material to
-                        compute C:
-                        </p>
-                        <pre>
-                           C = cp*m.
-                           Typical values for cp at 20 degC in J/(kg.K):
-                              aluminium   896
-                              concrete    840
-                              copper      383
-                              iron        452
-                              silver      235
-                              steel       420 ... 500 (V2A)
-                              wood       2500
-                        </pre>
-                        </html>"));
+                            <p>
+                            This is copied from:
+                            This is a generic model for the heat capacity of a material.
+                            No specific geometry is assumed beyond a total volume with
+                            uniform temperature for the entire volume.
+                            Furthermore, it is assumed that the heat capacity
+                            is constant (independent of temperature).
+                            </p>
+                            <p>
+                            The temperature T [Kelvin] of this component is a <b>state</b>.
+                            A default of T = 25 degree Celsius (= SIunits.Conversions.from_degC(25))
+                            is used as start value for initialization.
+                            This usually means that at start of integration the temperature of this
+                            component is 25 degrees Celsius. You may, of course, define a different
+                            temperature as start value for initialization. Alternatively, it is possible
+                            to set parameter <b>steadyStateStart</b> to <b>true</b>. In this case
+                            the additional equation '<b>der</b>(T) = 0' is used during
+                            initialization, i.e., the temperature T is computed in such a way that
+                            the component starts in <b>steady state</b>. This is useful in cases,
+                            where one would like to start simulation in a suitable operating
+                            point without being forced to integrate for a long time to arrive
+                            at this point.
+                            </p>
+                            <p>
+                            Note, that parameter <b>steadyStateStart</b> is not available in
+                            the parameter menu of the simulation window, because its value
+                            is utilized during translation to generate quite different
+                            equations depending on its setting. Therefore, the value of this
+                            parameter can only be changed before translating the model.
+                            </p>
+                            <p>
+                            This component may be used for complicated geometries where
+                            the heat capacity C is determined my measurements. If the component
+                            consists mainly of one type of material, the <b>mass m</b> of the
+                            component may be measured or calculated and multiplied with the
+                            <b>specific heat capacity cp</b> of the component material to
+                            compute C:
+                            </p>
+                            <pre>
+                               C = cp*m.
+                               Typical values for cp at 20 degC in J/(kg.K):
+                                  aluminium   896
+                                  concrete    840
+                                  copper      383
+                                  iron        452
+                                  silver      235
+                                  steel       420 ... 500 (V2A)
+                                  wood       2500
+                            </pre>
+                            </html>"));
   end HeatCapacitorPCMLike00;
 
   function EnthalpyDifferential
