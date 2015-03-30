@@ -1,5 +1,5 @@
 #1	
-double	EgenIO(4,1)
+double	EgenIO(4,1) #this file serves for the 03232015 data
 0	0
 7128000	0	0	0	0	0	0	0	0	0	0	0	0
 7128001	0	1	1	0	0	1	0	1	1	0	0	1
