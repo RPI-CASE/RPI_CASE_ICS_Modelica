@@ -607,6 +607,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       ICS_Module_Twelve_1[StackHeight + 1 - i].modNum = i + (stackNum - 1) * StackHeight;
 
       end for;
+      ///////////Legacy from reversed plumbing
       //connect the inlets and outlets of the stack
       //  connect(ICS_Module_Twelve_1[1].flowport_a1,flowport_a1);
       //  connect(ICS_Module_Twelve_1[StackHeight].flowport_b1,flowport_b1);
@@ -853,18 +854,15 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     end chooseShadeMatrix;
     model ICS_Module_Twelve "This model contains all the components and equations that simulate one module of Integrated Concentrating Solar"
       extends ICSolar.Parameters;
-      // extends ICSolar.measured_data;
       parameter Modelica.SIunits.Length LensWidth = 0.25019 "Width of Fresnel Lens, meters";
       parameter Modelica.SIunits.Length CellWidth = 0.01 "Width of the PV cell, meters";
-      // parameter Boolean PV_on = true;
       Real measured_eGen_on = eGen_on.y[modNum];
+      //Stores only column related to module of interests
       //  parameter String FresMat = "PMMA" "'PMMA' or 'Silicon on Glass', use the exact spellings provided";
       //  parameter Real FNum = 0.85 "FNum determines the lens transmittance based on concentrating";
       //  Integer FMatNum "Integer used to pipe the material to other models";
-      //////////////////////////
-      ///   IMPORT eGen On   ///
-      //////////////////////////
       Modelica.Blocks.Sources.CombiTimeTable eGen_on(tableOnFile = true, fileName = Path + "20150323\\EgenIO.txt", tableName = "EgenIO", nout = 12, columns = {2,3,4,5,6,7,8,9,10,11,12,13}, smoothness = Modelica.Blocks.Types.Smoothness.ConstantSegments, extrapolation = Modelica.Blocks.Types.Extrapolation.HoldLastPoint);
+      // Imports the entire eGen matri
       Modelica.Thermal.FluidHeatFlow.Interfaces.FlowPort_b flowport_b1(medium = mediumHTF) "Outflow port of the thermal fluid (to Parent)" annotation(Placement(visible = true, transformation(origin = {100,-40}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {100,-40}, extent = {{-10,-10},{10,10}}, rotation = 0)));
       Modelica.Thermal.FluidHeatFlow.Interfaces.FlowPort_a flowport_a1(medium = mediumHTF) "Inflow port of the thermal fluid (from Parent)" annotation(Placement(visible = true, transformation(origin = {-100,-40}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {-100,-40}, extent = {{-10,-10},{10,10}}, rotation = 0)));
       Modelica.Thermal.HeatTransfer.Interfaces.HeatPort_a TAmb_in "Ambient temperature of the cavity into Module model for use in the heat receiver" annotation(Placement(visible = true, transformation(origin = {-100,78}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {-100,78}, extent = {{-10,-10},{10,10}}, rotation = 0)));
