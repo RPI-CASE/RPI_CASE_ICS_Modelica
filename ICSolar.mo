@@ -3,9 +3,10 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
   model ICS_Skeleton "This model calculates the electrical and thermal generation of ICSolar. This model is used as a skeleton piece to hold together the other models until it is packages as an FMU."
     extends ICSolar.Parameters;
     //extends ICSolar.measured_data;
-    /////////////////////
+	/////////////////////
     /// Measured Data ///
     /////////////////////
+	
     // DNI, T inlet, vFlow
     Modelica.Blocks.Sources.CombiTimeTable IC_Data_all(tableOnFile = true, fileName = Path + "20150323\\ICSFdata.txt", tableName = "DNI_THTFin_vdot", nout = 3, columns = {2,3,4}) annotation(Placement(visible = true, transformation(origin = {-80,0}, extent = {{-15,-15},{15,15}}, rotation = 0)));
     Real measured_DNI = IC_Data_all.y[1];
