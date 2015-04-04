@@ -3,10 +3,9 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
   model ICS_Skeleton "This model calculates the electrical and thermal generation of ICSolar. This model is used as a skeleton piece to hold together the other models until it is packages as an FMU."
     extends ICSolar.Parameters;
     //extends ICSolar.measured_data;
-	/////////////////////
+    /////////////////////
     /// Measured Data ///
     /////////////////////
-	
     // DNI, T inlet, vFlow
     Modelica.Blocks.Sources.CombiTimeTable IC_Data_all(tableOnFile = true, fileName = Path + "20150323\\ICSFdata.txt", tableName = "DNI_THTFin_vdot", nout = 3, columns = {2,3,4}) annotation(Placement(visible = true, transformation(origin = {-80,0}, extent = {{-15,-15},{15,15}}, rotation = 0)));
     Real measured_DNI = IC_Data_all.y[1];
@@ -16,10 +15,6 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     // Ambient / Cavity Temp
     Modelica.Blocks.Sources.CombiTimeTable T_cav_in(tableOnFile = true, fileName = Path + "20150323\\T_Cav_data.txt", tableName = "T_Cav");
     Real measured_T_amb = T_cav_in.y[1];
-    // Egen On/Off
-    // Modelica.Blocks.Sources.CombiTimeTable eGen_on(tableOnFile = true, fileName = Path + "20150323\\EgenIO.txt", tableName = "EgenIO", nout = 2, columns = {2,3}, extrapolation = Modelica.Blocks.Types.Extrapolation.NoExtrapolation, smoothness = Modelica.Blocks.Types.Smoothness.ConstantSegments);
-    //  Modelica.Blocks.Sources.CombiTimeTable eGen_on(tableOnFile = true, fileName = Path + "20150323\\EgenIO.txt", tableName = "EgenIO", nout = 12, columns = {2,3,4,5,6,7,8,9,10,11,12}, smoothness = Modelica.Blocks.Types.Smoothness.ConstantSegments, extrapolation = Modelica.Blocks.Types.Extrapolation.HoldLastPoint);
-    //  Real measured_eGen_on = eGen_on.y[2];
     /////////////////////////////
     ///  Energy / Exergy Var. ///
     /////////////////////////////
@@ -879,6 +874,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       ICSolar.Shading_Twelve shading_twelve1 annotation(Placement(visible = true, transformation(origin = {-60,40}, extent = {{-10,-10},{10,10}}, rotation = 0)));
       Modelica.Blocks.Interfaces.IntegerInput modNum annotation(Placement(visible = true, transformation(origin = {-100,-80}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {-80,-80}, extent = {{-10,-10},{10,10}}, rotation = 0)));
     equation
+      connect(modNum,shading_twelve1.ShadingTable);
       connect(shading_twelve1.DNI_out,ics_lenslosses1.DNI_in) annotation(Line(points = {{-50,42},{-43.6957,42},{-43.6957,14.205},{-83.377,14.205},{-83.377,6.94808},{-75.3481,6.94808},{-75.3481,6.94808}}, color = {0,0,127}));
       connect(shading_twelve1.arrayPitch,arrayPitch) annotation(Line(points = {{-70,40},{-78.59050000000001,40},{-78.59050000000001,30.4172},{-95.8836,30.4172},{-95.8836,30.4172}}, color = {0,0,127}));
       connect(shading_twelve1.arrayYaw,arrayYaw) annotation(Line(points = {{-70,44},{-77.9729,44},{-77.9729,49.4086},{-96.038,49.4086},{-96.038,49.4086}}, color = {0,0,127}));
@@ -1243,18 +1239,70 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
                               annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), experiment(StartTime = 7.137e+06, StopTime = 7.1412e+06, Tolerance = 1e-06, Interval = 60)); */
   end measured_data;
   model Shading_Twelve "reduce DNI by factor according to shading"
+    //extends ICSolar.Parameters;
     extends ICSolar.ShadingLUT0;
+    extends ICSolar.shadingImport;
+    //String Path_2 = "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\";
     Modelica.Blocks.Interfaces.RealOutput DNI_out "DNI after shading factor multiplication" annotation(Placement(visible = true, transformation(origin = {100,20}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {100,20}, extent = {{-10,-10},{10,10}}, rotation = 0)));
     Modelica.Blocks.Math.Product product1 "Multiplication of DNI and shading factor" annotation(Placement(visible = true, transformation(origin = {20,40}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-    parameter Modelica.Blocks.Interfaces.IntegerInput ShadingTable annotation(Placement(visible = true, transformation(origin = {-100,40}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {-100,40}, extent = {{-10,-10},{10,10}}, rotation = 0)));
+    Modelica.Blocks.Interfaces.IntegerInput ShadingTable annotation(Placement(visible = true, transformation(origin = {-100,40}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {-100,40}, extent = {{-10,-10},{10,10}}, rotation = 0)));
     //for picking different shading matrices:
-    //  final parameter String ShadingName = String(ShadingTable);
-    //  Modelica.Blocks.Tables.CombiTable2D Shading_matrix(tableOnFile = true, smoothness = Modelica.Blocks.Types.Smoothness.LinearSegments, fileName = "modelica://ICSolar/ShadingTable2014.txt", tableName = "ShadingTable2014") annotation(Placement(visible = true, transformation(origin = {-40, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    //Modelica.Blocks.Tables.CombiTable2D Shading_matrix_2(tableOnFile = true, fileName = "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\shading_matrices\\" + String(ShadingTable) + ".txt", tableName = "shading_matrix") annotation(Placement(visible = true, transformation(origin = {-40, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     Modelica.Blocks.Interfaces.RealInput arrayPitch "pitch (up/down) angle of 2axis tracking array (rads)" annotation(Placement(visible = true, transformation(origin = {-100,-20}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {-100,0}, extent = {{-10,-10},{10,10}}, rotation = 0)));
     Modelica.Blocks.Interfaces.RealInput arrayYaw "yaw (left/right) angle of tracking array (in radians)" annotation(Placement(visible = true, transformation(origin = {-100,-60}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {-100,40}, extent = {{-10,-10},{10,10}}, rotation = 0)));
     Modelica.Blocks.Interfaces.RealInput DNI_in "DNI in before shading factor multiplication" annotation(Placement(visible = true, transformation(origin = {-100,80}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {-100,80}, extent = {{-10,-10},{10,10}}, rotation = 0)));
   equation
-    product1.u2 = if Shading_matrix.y < 0 then 0 else Shading_matrix.y;
+    // BRUTE FORCE IMPORT
+    connect(arrayPitch,table_1.u1);
+    connect(arrayYaw,table_1.u2);
+    connect(arrayPitch,table_2.u1);
+    connect(arrayYaw,table_2.u2);
+    connect(arrayPitch,table_3.u1);
+    connect(arrayYaw,table_3.u2);
+    connect(arrayPitch,table_4.u1);
+    connect(arrayYaw,table_4.u2);
+    connect(arrayPitch,table_5.u1);
+    connect(arrayYaw,table_5.u2);
+    connect(arrayPitch,table_6.u1);
+    connect(arrayYaw,table_6.u2);
+    connect(arrayPitch,table_7.u1);
+    connect(arrayYaw,table_7.u2);
+    connect(arrayPitch,table_8.u1);
+    connect(arrayYaw,table_8.u2);
+    connect(arrayPitch,table_9.u1);
+    connect(arrayYaw,table_9.u2);
+    connect(arrayPitch,table_10.u1);
+    connect(arrayYaw,table_10.u2);
+    connect(arrayPitch,table_11.u1);
+    connect(arrayYaw,table_11.u2);
+    connect(arrayPitch,table_12.u1);
+    connect(arrayYaw,table_12.u2);
+    if ShadingTable == 1 then
+      product1.u2 = table_1.y;
+    elseif ShadingTable == 2 then
+      product1.u2 = table_2.y;
+    elseif ShadingTable == 3 then
+      product1.u2 = table_3.y;
+    elseif ShadingTable == 4 then
+      product1.u2 = table_4.y;
+    elseif ShadingTable == 5 then
+      product1.u2 = table_5.y;
+    elseif ShadingTable == 6 then
+      product1.u2 = table_6.y;
+    elseif ShadingTable == 7 then
+      product1.u2 = table_7.y;
+    elseif ShadingTable == 8 then
+      product1.u2 = table_8.y;
+    elseif ShadingTable == 9 then
+      product1.u2 = table_9.y;
+    elseif ShadingTable == 10 then
+      product1.u2 = table_10.y;
+    elseif ShadingTable == 11 then
+      product1.u2 = table_11.y;
+    else
+      product1.u2 = table_12.y;
+    end if;
+    //product1.u2 = if Shading_matrix.y < 0 then 0 else Shading_matrix.y;
     connect(product1.y,DNI_out) "DNI after multiplication connected to output of model" annotation(Line(points = {{31,40},{58.5909,40},{58.5909,19.7775},{100,19.7775},{100,20}}));
     connect(DNI_in,product1.u1) "Model input DNI connecting to product" annotation(Line(points = {{-100,80},{-36.3412,80},{-36.3412,45.9827},{8,45.9827},{8,46}}));
     connect(arrayYaw,Shading_matrix.u2);
@@ -1266,5 +1314,20 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     //(extrapolation = Modelica.Blocks.Types.Extrapolation.HoldLastPoint, smoothness = Modelica.Blocks.Types.Smoothness.ConstantSegments, columns = {2}, table = [0, 27
     annotation(Icon(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2,2})), Diagram(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {1,1})));
   end ShadingLUT0;
+  model shadingImport
+    parameter String Path_2 = "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\shading_matrices\\";
+    Modelica.Blocks.Tables.CombiTable2D table_1(tableOnFile = true, fileName = Path_2 + "1" + ".txt", tableName = "shading_matrix");
+    Modelica.Blocks.Tables.CombiTable2D table_2(tableOnFile = true, fileName = Path_2 + "2" + ".txt", tableName = "shading_matrix");
+    Modelica.Blocks.Tables.CombiTable2D table_3(tableOnFile = true, fileName = Path_2 + "3" + ".txt", tableName = "shading_matrix");
+    Modelica.Blocks.Tables.CombiTable2D table_4(tableOnFile = true, fileName = Path_2 + "4" + ".txt", tableName = "shading_matrix");
+    Modelica.Blocks.Tables.CombiTable2D table_5(tableOnFile = true, fileName = Path_2 + "5" + ".txt", tableName = "shading_matrix");
+    Modelica.Blocks.Tables.CombiTable2D table_6(tableOnFile = true, fileName = Path_2 + "6" + ".txt", tableName = "shading_matrix");
+    Modelica.Blocks.Tables.CombiTable2D table_7(tableOnFile = true, fileName = Path_2 + "7" + ".txt", tableName = "shading_matrix");
+    Modelica.Blocks.Tables.CombiTable2D table_8(tableOnFile = true, fileName = Path_2 + "8" + ".txt", tableName = "shading_matrix");
+    Modelica.Blocks.Tables.CombiTable2D table_9(tableOnFile = true, fileName = Path_2 + "9" + ".txt", tableName = "shading_matrix");
+    Modelica.Blocks.Tables.CombiTable2D table_10(tableOnFile = true, fileName = Path_2 + "10" + ".txt", tableName = "shading_matrix");
+    Modelica.Blocks.Tables.CombiTable2D table_11(tableOnFile = true, fileName = Path_2 + "11" + ".txt", tableName = "shading_matrix");
+    Modelica.Blocks.Tables.CombiTable2D table_12(tableOnFile = true, fileName = Path_2 + "12" + ".txt", tableName = "shading_matrix");
+  end shadingImport;
   annotation(uses(Modelica(version = "3.2.1"), Buildings(version = "1.6")), experiment(StartTime = 7137000.0, StopTime = 7141200.0, Tolerance = 1e-006, Interval = 60));
 end ICSolar;
