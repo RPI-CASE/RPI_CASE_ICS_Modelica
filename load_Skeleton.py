@@ -1,6 +1,6 @@
 from pyfmi import load_fmu
 
-myModel = load_fmu('ICSolar_ICS_Skeleton.fmu')
+myModel = load_fmu('ICSolar_ICS_Master.fmu')
 
 days = 365
 year_time = 86400.0 * days
