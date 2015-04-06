@@ -7,11 +7,12 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     /// Measured Data ///
     /////////////////////
     // DNI, T inlet, vFlow
-    Modelica.Blocks.Sources.CombiTimeTable IC_Data_all(tableOnFile = true, fileName = Path + "20150323\\ICSFdata_DLS.txt", tableName = "DNI_THTFin_vdot", nout = 3, columns = {2,3,4}) annotation(Placement(visible = true, transformation(origin = {-80,0}, extent = {{-15,-15},{15,15}}, rotation = 0)));
+    Modelica.Blocks.Sources.CombiTimeTable IC_Data_all(tableOnFile = true, fileName = Path + "20150323\\ICSdata5cols.txt", tableName = "DNI_THTFin_vdot", nout = 5, columns = {2,3,4,5,6}) annotation(Placement(visible = true, transformation(origin = {-80,0}, extent = {{-15,-15},{15,15}}, rotation = 0)));
     Real measured_DNI = IC_Data_all.y[1];
     Real measured_T_HTFin = IC_Data_all.y[2];
-    Integer three = 2;
-    Real measured_vFlow = IC_Data_all.y[three + 1];
+    Real measured_vFlow = IC_Data_all.y[3];
+    Real measured_Egen = IC_Data_all.y[4];
+    Real measured_T_HTFout = IC_Data_all.y[5];
     // Ambient / Cavity Temp
     Modelica.Blocks.Sources.CombiTimeTable T_cav_in(tableOnFile = true, fileName = Path + "20150323\\T_Cav_data.txt", tableName = "T_Cav");
     Real measured_T_amb = T_cav_in.y[1];
@@ -21,7 +22,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     Real temp_flowport_a = ics_envelopecassette1.flowport_a.H_flow / (0.00137691 * 4177);
     Real temp_flowport_b = abs(ics_envelopecassette1.flowport_b.H_flow / (0.00137691 * 4177));
     Real Q_arrayTotal = abs(ics_envelopecassette1.flowport_b.H_flow) - ics_envelopecassette1.flowport_a.H_flow;
-    Real E_arrayTotal = ics_envelopecassette1.Power_Electric;
+    Real Egen_arrayTotal = ics_envelopecassette1.Power_Electric;
     // Area of modules is assumed to be 0.3^2
     Real eta_Q = Q_arrayTotal / (measured_DNI * GlassArea);
     Real eta_E = ics_envelopecassette1.Power_Electric / (measured_DNI * GlassArea);
@@ -56,7 +57,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     connect(ics_context1.TDryBul,ics_envelopecassette1.TAmb_in) annotation(Line(points = {{-155,55},{-5,55}}));
     connect(ics_context1.DNI,ics_envelopecassette1.DNI) annotation(Line(points = {{-155,25},{-5,25}}, color = {0,0,127}));
     //experiment(StartTime = 7137000.0, StopTime = 7141200.0, Tolerance = 1e-006, Interval = 100));
-    annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200,-100},{200,100}}), graphics), experiment(StartTime = 7133500.0, StopTime = 7137500.0, Tolerance = 1e-006, Interval = 19.6078));
+    annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200,-100},{200,100}}), graphics), experiment(StartTime = 7133000.0, StopTime = 7137500.0, Tolerance = 1e-006, Interval = 22.0588));
   end ICS_Skeleton;
   model ICS_Context "This model provides the pieces necessary to set up the context to run the simulation, in FMU practice this will be cut out and provided from the EnergyPlus file"
     extends ICSolar.Parameters;
@@ -1027,7 +1028,8 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     ///// OPTICAL EFFICIENCIES /////
     ////////////////////////////////
     parameter Real Trans_glazinglosses = 0.74 "Transmittance of outter glazing losses (single glass layer). Good glass: Guardian Ultraclear 6mm: 0.87. For our studio IGUs, measured 0.71. But give it 0.74, because we measured at ~28degrees, which will increase absorptance losses.";
-    parameter Real OpticalEfficiency = 0.57 "The optical efficiency of the concentrating lens and optics prior to the photovoltaic cell";
+    // parameter Real OpticalEfficiency = 0.57 "The optical efficiency of the concentrating lens and optics prior to the photovoltaic cell";
+    parameter Real OpticalEfficiency = 0.66;
     //parameter Real Exp_Observed = 0.215 "observed electrical efficiency of ICSFg8";
     //parameter Real Exp_nom_tweak = 0.364 * OpticalEfficiency "matching the observed to modeled data, compensating for temperature 'unknown'. 0.364 matches the Nov25-13 data well when eta_observed is 0.215. set same as eta_obs for full-strength output.";
     ///////////////////////
