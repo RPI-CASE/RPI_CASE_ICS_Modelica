@@ -7,7 +7,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     /// Measured Data ///
     /////////////////////
     // DNI, T inlet, vFlow
-    Modelica.Blocks.Sources.CombiTimeTable IC_Data_all(tableOnFile = true, fileName = Path + "20150323\\ICSFdata.txt", tableName = "DNI_THTFin_vdot", nout = 3, columns = {2,3,4}) annotation(Placement(visible = true, transformation(origin = {-80,0}, extent = {{-15,-15},{15,15}}, rotation = 0)));
+    Modelica.Blocks.Sources.CombiTimeTable IC_Data_all(tableOnFile = true, fileName = Path + "20150323\\ICSFdata_DLS.txt", tableName = "DNI_THTFin_vdot", nout = 3, columns = {2,3,4}) annotation(Placement(visible = true, transformation(origin = {-80,0}, extent = {{-15,-15},{15,15}}, rotation = 0)));
     Real measured_DNI = IC_Data_all.y[1];
     Real measured_T_HTFin = IC_Data_all.y[2];
     Integer three = 2;
@@ -55,7 +55,8 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     connect(ics_context1.SurfTilt_out,ics_envelopecassette1.SurfaceTilt) annotation(Line(points = {{-155,50},{-5,50}}));
     connect(ics_context1.TDryBul,ics_envelopecassette1.TAmb_in) annotation(Line(points = {{-155,55},{-5,55}}));
     connect(ics_context1.DNI,ics_envelopecassette1.DNI) annotation(Line(points = {{-155,25},{-5,25}}, color = {0,0,127}));
-    annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200,-100},{200,100}}), graphics), experiment(StartTime = 7137000.0, StopTime = 7141200.0, Tolerance = 1e-006, Interval = 100));
+    //experiment(StartTime = 7137000.0, StopTime = 7141200.0, Tolerance = 1e-006, Interval = 100));
+    annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200,-100},{200,100}}), graphics), experiment(StartTime = 7133500.0, StopTime = 7137500.0, Tolerance = 1e-006, Interval = 19.6078));
   end ICS_Skeleton;
   model ICS_Context "This model provides the pieces necessary to set up the context to run the simulation, in FMU practice this will be cut out and provided from the EnergyPlus file"
     extends ICSolar.Parameters;
@@ -111,7 +112,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     //Eq 1.6.2 Solar Engineering of Thermal Processes - Duff & Beckman
     // Ask about the origin of this AOI when we can get AOI from HDirTil component.
     AOI = Modelica.Math.acos(del_s * phi_s * bet_c - del_s * phi_c * bet_s * gam_c + del_c * phi_c * bet_c * omg_c + del_c * phi_s * bet_s * gam_c * omg_c + del_c * bet_s * gam_s * omg_s);
-    annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100,-100},{100,100}}), graphics));
+    annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100,-100},{100,100}}), graphics), experiment(StartTime = 7084800, StopTime = 7171200, Tolerance = 1e-006, Interval = 864));
   end ICS_Context;
   package Envelope "Package of all the Envelope components to create an Integrated Concentrating Solar simulation"
     extends Modelica.Icons.Package;
@@ -140,7 +141,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       //  constant Modelica.Blocks.Sources.Constant GND(k = 0) "a zero source for the Real electrical input" annotation(Placement(visible = true, transformation(origin = {-20, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       ICSolar.Stack.ICS_Stack ics_stack1 annotation(Placement(visible = true, transformation(origin = {40,0}, extent = {{-25,-25},{25,25}}, rotation = 0)));
       ICSolar.Stack.ICS_Stack2 ics_stack2 annotation(Placement(visible = true, transformation(origin = {40,-60}, extent = {{-25,-25},{25,25}}, rotation = 0)));
-      Modelica.Blocks.Sources.CombiTimeTable DNI_measured(tableOnFile = true, fileName = "modelica://ICSolar/20150323/ICSFdata_DNI.txt", tableName = "DNI", extrapolation = Modelica.Blocks.Types.Extrapolation.HoldLastPoint, smoothness = Modelica.Blocks.Types.Smoothness.ConstantSegments, columns = {2}) annotation(Placement(visible = true, transformation(origin = {-60,20}, extent = {{-15,-15},{15,15}}, rotation = 0)));
+      Modelica.Blocks.Sources.CombiTimeTable DNI_measured(tableOnFile = true, fileName = Path + "20150323\\ICSFdata_DLS.txt", tableName = "DNI_THTFin_vdot", nout = 2, columns = {2});
     equation
       //  pre-stacks
       //DNI into cavity
@@ -282,7 +283,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     model ICS_EnvelopeCassette_Twelve "This model in the Envelope Cassette (Double-Skin Facade) that houses the ICSolar Stack and Modules. This presents a building envelope"
       extends ICSolar.Parameters;
       /// Redundant but here to true model
-      Modelica.Blocks.Sources.CombiTimeTable IC_Data_all(tableOnFile = true, fileName = Path + "20150323\\ICSFdata.txt", tableName = "DNI_THTFin_vdot", nout = 3, columns = {2,3,4}) annotation(Placement(visible = true, transformation(origin = {-80,0}, extent = {{-15,-15},{15,15}}, rotation = 0)));
+      Modelica.Blocks.Sources.CombiTimeTable IC_Data_all(tableOnFile = true, fileName = Path + "20150323\\ICSFdata_DLS.txt", tableName = "DNI_THTFin_vdot", nout = 3, columns = {2,3,4}) annotation(Placement(visible = true, transformation(origin = {-80,0}, extent = {{-15,-15},{15,15}}, rotation = 0)));
       Real DNI_measured = IC_Data_all.y[1];
       Integer stackNum_1 = 1;
       Integer stackNum_2 = 2;
