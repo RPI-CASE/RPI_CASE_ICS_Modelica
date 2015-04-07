@@ -460,6 +460,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
         Modelica.Thermal.FluidHeatFlow.Components.HeatedPipe heatedpipe1(h_g = 0, T0 = TAmb, medium = mediumHTF, T(start = TAmb), pressureDrop(fixed = false), T0fixed = false, m = 0.003, dpNominal(displayUnit = "kPa") = 62270, V_flowLaminar(displayUnit = "l/min") = 1.6666666666667e-006, dpLaminar(displayUnit = "kPa") = 14690, V_flowNominal(displayUnit = "l/min") = 3.995e-006) annotation(Placement(visible = true, transformation(origin = {-20, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
         Modelica.Thermal.HeatTransfer.Components.ThermalResistor thermalresistor_waterblock(R = Resistivity_WaterPlate) annotation(Placement(visible = true, transformation(origin = {-20, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 90)));
         Modelica.Thermal.HeatTransfer.Components.ThermalResistor thermalresistor_celltoreceiver(R = Resistivity_Cell) annotation(Placement(visible = true, transformation(origin = {-60, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+        Real Q_module = abs(heatedpipe1.flowPort_b.H_flow) - heatedpipe1.flowPort_a.H_flow;
       equation
         connect(thermalconductor1.port_a, thermalcollector1.port_a[3]) annotation(Line(points = {{10, 0}, {-20.029, 0}, {-20.029, -10.1597}, {-20.029, -10.1597}}));
         connect(thermalresistor_waterblock.port_a, thermalcollector1.port_a[2]) annotation(Line(points = {{-20, 10}, {-20, -9.5791}, {-19.4485, -9.5791}, {-19.4485, -9.5791}}));
