@@ -45,44 +45,60 @@ opts_c["ncp"] = (24*100) # Change the number of communication points
 # myModel.set(vars, values)
 
 NumOfModules = myModel.get('NumOfModules')
+# time = time_current+3600*14
+# myModel.set('time',time)
+print NumOfModules
 
-res = myModel.simulate(final_time=time_plus, options=opts)
+res = myModel.simulate(start_time=time_current,final_time=time_plus, options=opts)
 
 # Tstart = time_current
 # myModel.time = Tstart
 # myModel.initialize()
 
-myModel.reset()
+# myModel.reset()
 
-res_b = myModel.simulate(start_time=time_current, final_time=time_plus, options=opts_b)
+# res_b = myModel.simulate(start_time=time_current, final_time=time_plus, options=opts_b)
 
-myModel.reset()
+# myModel.reset()
 
-res_c = myModel.simulate(start_time=time_current+3600*14, final_time=time_current+3600*15, options=opts_c)
+# res_c = myModel.simulate(start_time=time_current+3600*14, final_time=time_current+3600*15, options=opts_c)
 
 timestamp = res['time']
-timestamp_b = res_b['time']
-timestamp_c = res_c['time']
+# timestamp_b = res_b['time']
+# timestamp_c = res_c['time']
 
-# for i in range(1,NumOfModules+1):
-# 	Module_string = 'ics_envelopecassette1.ics_stack1.iCS_Module['+str(i)+'].modulereceiver1.water_Block_HX1.Q_module'
-# 	Q_module[i] = res[Module_string]
-# 	print Q_module[i]
+for i in range(1,NumOfModules+1):
+	Module_string = 'ics_envelopecassette1.ics_stack1.iCS_Module['+str(i)+'].modulereceiver1.water_Block_HX1.Q_module'
+	print Module_string
+	Q_module[i] = res[Module_string]
+	print Q_module[i]
 
+Q_module1 = res['ics_envelopecassette1.ics_stack1.iCS_Module[1].modulereceiver1.water_Block_HX1.Q_module']
+Q_module2 = res['ics_envelopecassette1.ics_stack1.iCS_Module[2].modulereceiver1.water_Block_HX1.Q_module']
+Q_module3 = res['ics_envelopecassette1.ics_stack1.iCS_Module[3].modulereceiver1.water_Block_HX1.Q_module']
+Q_module4 = res['ics_envelopecassette1.ics_stack1.iCS_Module[4].modulereceiver1.water_Block_HX1.Q_module']
+Q_module5 = res['ics_envelopecassette1.ics_stack1.iCS_Module[5].modulereceiver1.water_Block_HX1.Q_module']
+Q_module6 = res['ics_envelopecassette1.ics_stack1.iCS_Module[6].modulereceiver1.water_Block_HX1.Q_module']
 cellTemp1 = res['ics_envelopecassette1.ics_stack1.iCS_Module[1].modulereceiver1.water_Block_HX1.thermalresistor_celltoreceiver.port_b.T']
 cellTemp2 = res['ics_envelopecassette1.ics_stack1.iCS_Module[2].modulereceiver1.water_Block_HX1.thermalresistor_celltoreceiver.port_b.T']
 
-cellTemp1_b = res_b['ics_envelopecassette1.ics_stack1.iCS_Module[1].modulereceiver1.water_Block_HX1.thermalresistor_celltoreceiver.port_b.T']
+heatGen = [Q_module1,Q_module2,Q_module3,Q_module4,Q_module5,Q_module6]
 
-cellTemp1_c = res_c['ics_envelopecassette1.ics_stack1.iCS_Module[1].modulereceiver1.water_Block_HX1.thermalresistor_celltoreceiver.port_b.T']
+# cellTemp1_b = res_b['ics_envelopecassette1.ics_stack1.iCS_Module[1].modulereceiver1.water_Block_HX1.thermalresistor_celltoreceiver.port_b.T']
+
+# cellTemp1_c = res_c['ics_envelopecassette1.ics_stack1.iCS_Module[1].modulereceiver1.water_Block_HX1.thermalresistor_celltoreceiver.port_b.T']
 
 
 plt.figure(1)
-plt.plot(timestamp, cellTemp1, 'r--')
-plt.plot(timestamp_b, cellTemp1_b, 'b')
-plt.plot(timestamp_c, cellTemp1_c, 'g')
+plt.plot(timestamp, heatGen[0], 'r--')
 plt.show()
 
+# plt.plot(timestamp, cellTemp1, 'r--')
+# plt.plot(timestamp_b, cellTemp1_b, 'b')
+# plt.plot(timestamp_c, cellTemp1_c, 'g')
+# plt.show()
+
 print timestamp
-print cellTemp1
-print cellTemp2
+print heatGen
+# print cellTemp1
+# print cellTemp2
