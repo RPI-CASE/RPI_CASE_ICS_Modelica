@@ -12,7 +12,7 @@ steps = 24 * days
 opts = myModel.simulate_options()
 # opts["tfinal"] = 86400.0 #End time of simulation in seconds
 opts['solver'] = 'CVode' # Solver Description: https://computation.llnl.gov/casc/sundials/description/description.html
-opts["ncp"] = steps # Change the number of communication points
+opts["ncp"] = 1 #steps # Change the number of communication points
 
 opts_b = myModel.simulate_options()
 # opts["tfinal"] = 86400.0 #End time of simulation in seconds
@@ -49,7 +49,7 @@ NumOfModules = myModel.get('NumOfModules')
 # myModel.set('time',time)
 print NumOfModules
 
-res = myModel.simulate(start_time=time_current,final_time=time_plus, options=opts)
+res = myModel.simulate(start_time=10,final_time=20, options=opts)
 
 # Tstart = time_current
 # myModel.time = Tstart
