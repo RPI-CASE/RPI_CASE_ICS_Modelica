@@ -1,5 +1,7 @@
 from pyfmi import load_fmu
 import matplotlib.pyplot as plt
+from assimulo.solvers import CVode
+from assimulo.problem import Explicit_Problem
 
 myModel = load_fmu('ICSolar_ICS_Skeleton.fmu')
 
@@ -12,7 +14,11 @@ steps = 24 * days
 opts = myModel.simulate_options()
 # opts["tfinal"] = 86400.0 #End time of simulation in seconds
 opts['solver'] = 'CVode' # Solver Description: https://computation.llnl.gov/casc/sundials/description/description.html
-opts["ncp"] = 1 #steps # Change the number of communication points
+opts["ncp"] = steps #steps # Change the number of communication points
+opts['initialize'] = True
+opts['CVode_options']["maxh"] = 10
+opts['CVode_options']["report_continuously"] = True
+opts['CVode_options']["clock_step"] = True
 
 opts_b = myModel.simulate_options()
 # opts["tfinal"] = 86400.0 #End time of simulation in seconds
@@ -49,7 +55,7 @@ NumOfModules = myModel.get('NumOfModules')
 # myModel.set('time',time)
 print NumOfModules
 
-res = myModel.simulate(start_time=10,final_time=20, options=opts)
+res = myModel.simulate(start_time=0,final_time=time_plus, options=opts)
 
 # Tstart = time_current
 # myModel.time = Tstart
