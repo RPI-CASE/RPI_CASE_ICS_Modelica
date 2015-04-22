@@ -1267,54 +1267,54 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     Modelica.Blocks.Interfaces.RealInput DNI_in "DNI in before shading factor multiplication" annotation(Placement(visible = true, transformation(origin = {-100, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   equation
     // BRUTE FORCE IMPORT
-    connect(arrayPitch, table_1.u1);
-    connect(arrayYaw, table_1.u2);
-    connect(arrayPitch, table_2.u1);
-    connect(arrayYaw, table_2.u2);
-    connect(arrayPitch, table_3.u1);
-    connect(arrayYaw, table_3.u2);
-    connect(arrayPitch, table_4.u1);
-    connect(arrayYaw, table_4.u2);
-    connect(arrayPitch, table_5.u1);
-    connect(arrayYaw, table_5.u2);
-    connect(arrayPitch, table_6.u1);
-    connect(arrayYaw, table_6.u2);
-    connect(arrayPitch, table_7.u1);
-    connect(arrayYaw, table_7.u2);
-    connect(arrayPitch, table_8.u1);
-    connect(arrayYaw, table_8.u2);
-    connect(arrayPitch, table_9.u1);
-    connect(arrayYaw, table_9.u2);
-    connect(arrayPitch, table_10.u1);
-    connect(arrayYaw, table_10.u2);
-    connect(arrayPitch, table_11.u1);
-    connect(arrayYaw, table_11.u2);
-    connect(arrayPitch, table_12.u1);
-    connect(arrayYaw, table_12.u2);
+    connect(arrayPitch, modShadingLUT_1.u1);
+    connect(arrayYaw, modShadingLUT_1.u2);
+    connect(arrayPitch, modShadingLUT_2.u1);
+    connect(arrayYaw, modShadingLUT_2.u2);
+    connect(arrayPitch, modShadingLUT_3.u1);
+    connect(arrayYaw, modShadingLUT_3.u2);
+    connect(arrayPitch, modShadingLUT_4.u1);
+    connect(arrayYaw, modShadingLUT_4.u2);
+    connect(arrayPitch, modShadingLUT_5.u1);
+    connect(arrayYaw, modShadingLUT_5.u2);
+    connect(arrayPitch, modShadingLUT_6.u1);
+    connect(arrayYaw, modShadingLUT_6.u2);
+    connect(arrayPitch, modShadingLUT_7.u1);
+    connect(arrayYaw, modShadingLUT_7.u2);
+    connect(arrayPitch, modShadingLUT_8.u1);
+    connect(arrayYaw, modShadingLUT_8.u2);
+    connect(arrayPitch, modShadingLUT_9.u1);
+    connect(arrayYaw, modShadingLUT_9.u2);
+    connect(arrayPitch, modShadingLUT_10.u1);
+    connect(arrayYaw, modShadingLUT_10.u2);
+    connect(arrayPitch, modShadingLUT_11.u1);
+    connect(arrayYaw, modShadingLUT_11.u2);
+    connect(arrayPitch, modShadingLUT_12.u1);
+    connect(arrayYaw, modShadingLUT_12.u2);
     if ShadingTable == 1 then
-      product1.u2 = table_1.y;
+      product1.u2 = modShadingLUT_1.y;
     elseif ShadingTable == 2 then
-      product1.u2 = table_2.y;
+      product1.u2 = modShadingLUT_2.y;
     elseif ShadingTable == 3 then
-      product1.u2 = table_3.y;
+      product1.u2 = modShadingLUT_3.y;
     elseif ShadingTable == 4 then
-      product1.u2 = table_4.y;
+      product1.u2 = modShadingLUT_4.y;
     elseif ShadingTable == 5 then
-      product1.u2 = table_5.y;
+      product1.u2 = modShadingLUT_5.y;
     elseif ShadingTable == 6 then
-      product1.u2 = table_6.y;
+      product1.u2 = modShadingLUT_6.y;
     elseif ShadingTable == 7 then
-      product1.u2 = table_7.y;
+      product1.u2 = modShadingLUT_7.y;
     elseif ShadingTable == 8 then
-      product1.u2 = table_8.y;
+      product1.u2 = modShadingLUT_8.y;
     elseif ShadingTable == 9 then
-      product1.u2 = table_9.y;
+      product1.u2 = modShadingLUT_9.y;
     elseif ShadingTable == 10 then
-      product1.u2 = table_10.y;
+      product1.u2 = modShadingLUT_10.y;
     elseif ShadingTable == 11 then
-      product1.u2 = table_11.y;
+      product1.u2 = modShadingLUT_11.y;
     else
-      product1.u2 = table_12.y;
+      product1.u2 = modShadingLUT_12.y;
     end if;
     //product1.u2 = if Shading_matrix.y < 0 then 0 else Shading_matrix.y;
     connect(product1.y, DNI_out) "DNI after multiplication connected to output of model" annotation(Line(points = {{31, 40}, {58.5909, 40}, {58.5909, 19.7775}, {100, 19.7775}, {100, 20}}));
@@ -1333,20 +1333,20 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
   model shadingImport
     //  parameter String Path_2 = "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\shading_matrices\\";
     parameter String Path_2 = "C:\\Users\\Nick\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\shading_matrices\\";
-    Modelica.Blocks.Tables.CombiTable2D table_1(tableOnFile = true, fileName = Path_2 + "1" + ".txt", tableName = "shading_matrix", smoothness = Modelica.Blocks.Types.Smoothness.LinearSegments);
-    Modelica.Blocks.Tables.CombiTable2D table_2(tableOnFile = true, fileName = Path_2 + "2" + ".txt", tableName = "shading_matrix", smoothness = Modelica.Blocks.Types.Smoothness.LinearSegments);
-    Modelica.Blocks.Tables.CombiTable2D table_3(tableOnFile = true, fileName = Path_2 + "3" + ".txt", tableName = "shading_matrix", smoothness = Modelica.Blocks.Types.Smoothness.LinearSegments);
-    Modelica.Blocks.Tables.CombiTable2D table_4(tableOnFile = true, fileName = Path_2 + "4" + ".txt", tableName = "shading_matrix", smoothness = Modelica.Blocks.Types.Smoothness.LinearSegments);
-    Modelica.Blocks.Tables.CombiTable2D table_5(tableOnFile = true, fileName = Path_2 + "5" + ".txt", tableName = "shading_matrix", smoothness = Modelica.Blocks.Types.Smoothness.LinearSegments);
-    Modelica.Blocks.Tables.CombiTable2D table_6(tableOnFile = true, fileName = Path_2 + "6" + ".txt", tableName = "shading_matrix", smoothness = Modelica.Blocks.Types.Smoothness.LinearSegments);
-    Modelica.Blocks.Tables.CombiTable2D table_7(tableOnFile = true, fileName = Path_2 + "7" + ".txt", tableName = "shading_matrix", smoothness = Modelica.Blocks.Types.Smoothness.LinearSegments);
-    Modelica.Blocks.Tables.CombiTable2D table_8(tableOnFile = true, fileName = Path_2 + "8" + ".txt", tableName = "shading_matrix", smoothness = Modelica.Blocks.Types.Smoothness.LinearSegments);
-    Modelica.Blocks.Tables.CombiTable2D table_9(tableOnFile = true, fileName = Path_2 + "9" + ".txt", tableName = "shading_matrix", smoothness = Modelica.Blocks.Types.Smoothness.LinearSegments);
-    Modelica.Blocks.Tables.CombiTable2D table_10(tableOnFile = true, fileName = Path_2 + "10" + ".txt", tableName = "shading_matrix", smoothness = Modelica.Blocks.Types.Smoothness.LinearSegments);
-    Modelica.Blocks.Tables.CombiTable2D table_11(tableOnFile = true, fileName = Path_2 + "11" + ".txt", tableName = "shading_matrix", smoothness = Modelica.Blocks.Types.Smoothness.LinearSegments);
+    Modelica.Blocks.Tables.CombiTable2D modShadingLUT_1(tableOnFile = true, fileName = Path_2 + "1" + ".txt", tableName = "shading_matrix", smoothness = Modelica.Blocks.Types.Smoothness.LinearSegments);
+    Modelica.Blocks.Tables.CombiTable2D modShadingLUT_2(tableOnFile = true, fileName = Path_2 + "2" + ".txt", tableName = "shading_matrix", smoothness = Modelica.Blocks.Types.Smoothness.LinearSegments);
+    Modelica.Blocks.Tables.CombiTable2D modShadingLUT_3(tableOnFile = true, fileName = Path_2 + "3" + ".txt", tableName = "shading_matrix", smoothness = Modelica.Blocks.Types.Smoothness.LinearSegments);
+    Modelica.Blocks.Tables.CombiTable2D modShadingLUT_4(tableOnFile = true, fileName = Path_2 + "4" + ".txt", tableName = "shading_matrix", smoothness = Modelica.Blocks.Types.Smoothness.LinearSegments);
+    Modelica.Blocks.Tables.CombiTable2D modShadingLUT_5(tableOnFile = true, fileName = Path_2 + "5" + ".txt", tableName = "shading_matrix", smoothness = Modelica.Blocks.Types.Smoothness.LinearSegments);
+    Modelica.Blocks.Tables.CombiTable2D modShadingLUT_6(tableOnFile = true, fileName = Path_2 + "6" + ".txt", tableName = "shading_matrix", smoothness = Modelica.Blocks.Types.Smoothness.LinearSegments);
+    Modelica.Blocks.Tables.CombiTable2D modShadingLUT_7(tableOnFile = true, fileName = Path_2 + "7" + ".txt", tableName = "shading_matrix", smoothness = Modelica.Blocks.Types.Smoothness.LinearSegments);
+    Modelica.Blocks.Tables.CombiTable2D modShadingLUT_8(tableOnFile = true, fileName = Path_2 + "8" + ".txt", tableName = "shading_matrix", smoothness = Modelica.Blocks.Types.Smoothness.LinearSegments);
+    Modelica.Blocks.Tables.CombiTable2D modShadingLUT_9(tableOnFile = true, fileName = Path_2 + "9" + ".txt", tableName = "shading_matrix", smoothness = Modelica.Blocks.Types.Smoothness.LinearSegments);
+    Modelica.Blocks.Tables.CombiTable2D modShadingLUT_10(tableOnFile = true, fileName = Path_2 + "10" + ".txt", tableName = "shading_matrix", smoothness = Modelica.Blocks.Types.Smoothness.LinearSegments);
+    Modelica.Blocks.Tables.CombiTable2D modShadingLUT_11(tableOnFile = true, fileName = Path_2 + "11" + ".txt", tableName = "shading_matrix", smoothness = Modelica.Blocks.Types.Smoothness.LinearSegments);
     //here we're using shading LUT 6 in place of the supposed 12, which doesn't exist correctly [[nn]]
-    //    Modelica.Blocks.Tables.CombiTable2D table_12(tableOnFile = true, fileName = Path_2 + "12" + ".txt", tableName = "shading_matrix", smoothness = Modelica.Blocks.Types.Smoothness.LinearSegments);
-    Modelica.Blocks.Tables.CombiTable2D table_12(tableOnFile = true, fileName = Path_2 + "6" + ".txt", tableName = "shading_matrix", smoothness = Modelica.Blocks.Types.Smoothness.LinearSegments);
+    //    Modelica.Blocks.Tables.CombiTable2D modShadingLUT_12(tableOnFile = true, fileName = Path_2 + "12" + ".txt", tableName = "shading_matrix", smoothness = Modelica.Blocks.Types.Smoothness.LinearSegments);
+    Modelica.Blocks.Tables.CombiTable2D modShadingLUT_12(tableOnFile = true, fileName = Path_2 + "6" + ".txt", tableName = "shading_matrix", smoothness = Modelica.Blocks.Types.Smoothness.LinearSegments);
   end shadingImport;
   annotation(uses(Modelica(version = "3.2.1"), Buildings(version = "1.6")), experiment(StartTime = 7137000.0, StopTime = 7141200.0, Tolerance = 1e-006, Interval = 60));
 end ICSolar;
