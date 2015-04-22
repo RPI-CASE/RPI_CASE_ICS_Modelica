@@ -1344,7 +1344,9 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     Modelica.Blocks.Tables.CombiTable2D table_9(tableOnFile = true, fileName = Path_2 + "9" + ".txt", tableName = "shading_matrix", smoothness = Modelica.Blocks.Types.Smoothness.LinearSegments);
     Modelica.Blocks.Tables.CombiTable2D table_10(tableOnFile = true, fileName = Path_2 + "10" + ".txt", tableName = "shading_matrix", smoothness = Modelica.Blocks.Types.Smoothness.LinearSegments);
     Modelica.Blocks.Tables.CombiTable2D table_11(tableOnFile = true, fileName = Path_2 + "11" + ".txt", tableName = "shading_matrix", smoothness = Modelica.Blocks.Types.Smoothness.LinearSegments);
-    Modelica.Blocks.Tables.CombiTable2D table_12(tableOnFile = true, fileName = Path_2 + "12" + ".txt", tableName = "shading_matrix", smoothness = Modelica.Blocks.Types.Smoothness.LinearSegments);
+    //here we're using shading LUT 6 in place of the supposed 12, which doesn't exist correctly [[nn]]
+    //    Modelica.Blocks.Tables.CombiTable2D table_12(tableOnFile = true, fileName = Path_2 + "12" + ".txt", tableName = "shading_matrix", smoothness = Modelica.Blocks.Types.Smoothness.LinearSegments);
+    Modelica.Blocks.Tables.CombiTable2D table_12(tableOnFile = true, fileName = Path_2 + "6" + ".txt", tableName = "shading_matrix", smoothness = Modelica.Blocks.Types.Smoothness.LinearSegments);
   end shadingImport;
   annotation(uses(Modelica(version = "3.2.1"), Buildings(version = "1.6")), experiment(StartTime = 7137000.0, StopTime = 7141200.0, Tolerance = 1e-006, Interval = 60));
 end ICSolar;
