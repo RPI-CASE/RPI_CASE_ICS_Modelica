@@ -1032,6 +1032,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     ///////////////////////
     //  parameter String Path = "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\";
     parameter String Path = "C:\\Users\\Nick\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\";
+    //    parameter String Path = "C:\\Users\\Nicholas.Novelli\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\";
     //////////////////////////////////
     //////// MODEL OPERATION /////////
     //////////////////////////////////
@@ -1350,6 +1351,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
   model shadingImport
     //  parameter String Path_2 = "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\shading_matrices\\";
     parameter String Path_2 = "C:\\Users\\Nick\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\shading_matrices\\";
+    //    parameter String Path_2 = "C:\\Users\\Nicholas.Novelli\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\shading_matrices\\";
     Modelica.Blocks.Tables.CombiTable2D modShadingLUT_1(tableOnFile = true, fileName = Path_2 + "1" + ".txt", tableName = "shading_matrix", smoothness = Modelica.Blocks.Types.Smoothness.LinearSegments);
     Modelica.Blocks.Tables.CombiTable2D modShadingLUT_2(tableOnFile = true, fileName = Path_2 + "2" + ".txt", tableName = "shading_matrix", smoothness = Modelica.Blocks.Types.Smoothness.LinearSegments);
     Modelica.Blocks.Tables.CombiTable2D modShadingLUT_3(tableOnFile = true, fileName = Path_2 + "3" + ".txt", tableName = "shading_matrix", smoothness = Modelica.Blocks.Types.Smoothness.LinearSegments);
