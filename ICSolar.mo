@@ -8,7 +8,8 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     /// Measured Data ///
     /////////////////////
     // DNI, T inlet, vFlow
-    Modelica.Blocks.Sources.CombiTimeTable IC_Data_all(tableOnFile = true, fileName = Path + "20150323\\ICSdata5cols.txt", tableName = "DNI_THTFin_vdot", nout = 6, columns = {2, 3, 4, 5, 6, 7}) annotation(Placement(visible = true, transformation(origin = {-80, 0}, extent = {{-15, -15}, {15, 15}}, rotation = 0)));
+    Modelica.Blocks.Sources.CombiTimeTable IC_Data_all(tableOnFile = true, fileName = Path + "20150323\\measuredData20150323.txt", tableName = "DNI_THTFin_vdot", nout = 18, columns = {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}) annotation(Placement(visible = true, transformation(origin = {-80, 0}, extent = {{-15, -15}, {15, 15}}, rotation = 0)));
+    Modelica.Blocks.Sources.CombiTimeTable IC_Data_all_og(tableOnFile = true, fileName = Path + "20150323\\ICSdata5cols.txt", tableName = "DNI_THTFin_vdot", nout = 6, columns = {2, 3, 4, 5, 6, 7}) annotation(Placement(visible = true, transformation(origin = {-80, 0}, extent = {{-15, -15}, {15, 15}}, rotation = 0)));
     Real measured_DNI = IC_Data_all.y[1];
     Real measured_T_HTFin = IC_Data_all.y[2];
     Real measured_vFlow = IC_Data_all.y[3];
