@@ -7,15 +7,31 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     /////////////////////
     /// Measured Data ///
     /////////////////////
-    // DNI, T inlet, vFlow
-    Modelica.Blocks.Sources.CombiTimeTable IC_Data_all(tableOnFile = true, fileName = Path + "20150323\\measuredData20150323.txt", tableName = "DNI_THTFin_vdot", nout = 18, columns = {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}) annotation(Placement(visible = true, transformation(origin = {-80, 0}, extent = {{-15, -15}, {15, 15}}, rotation = 0)));
-    Modelica.Blocks.Sources.CombiTimeTable IC_Data_all_og(tableOnFile = true, fileName = Path + "20150323\\ICSdata5cols.txt", tableName = "DNI_THTFin_vdot", nout = 6, columns = {2, 3, 4, 5, 6, 7}) annotation(Placement(visible = true, transformation(origin = {-80, 0}, extent = {{-15, -15}, {15, 15}}, rotation = 0)));
+    // DNI, T inlet, vFlow...and then aaaalll the T ins and outs. Total situational awareness. good for tuning both
+    //module behavior and whole-array behavior
+    Modelica.Blocks.Sources.CombiTimeTable IC_Data_all(tableOnFile = true, fileName = Path + "20150323\\measuredData20150323.txt", tableName = "DNI_THTFin_vdot", nout = 20, columns = {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21}) annotation(Placement(visible = true, transformation(origin = {-80, 0}, extent = {{-15, -15}, {15, 15}}, rotation = 0)));
+    //previously this smaller input file was used:
+    //  Modelica.Blocks.Sources.CombiTimeTable IC_Data_all_og(tableOnFile = true, fileName = Path + "20150323\\ICSdata5cols.txt", tableName = "DNI_THTFin_vdot", nout = 6, columns = {2, 3, 4, 5, 6, 7}) annotation(Placement(visible = true, transformation(origin = {-120, 0}, extent = {{-15, -15}, {15, 15}}, rotation = 0)));
     Real measured_DNI = IC_Data_all.y[1];
     Real measured_T_HTFin = IC_Data_all.y[2];
     Real measured_vFlow = IC_Data_all.y[3];
     Real measured_Egen = IC_Data_all.y[4];
     Real measured_T_HTFout = IC_Data_all.y[5];
     Real measured_T_cavAvg = IC_Data_all.y[6];
+    Real measured_T_s3m6in = IC_Data_all.y[7];
+    Real measured_T_s3m6out = IC_Data_all.y[8];
+    Real measured_T_s3m5in = IC_Data_all.y[9];
+    Real measured_T_s3m5out = IC_Data_all.y[10];
+    Real measured_T_s3m4in = IC_Data_all.y[11];
+    Real measured_T_s3m4out = IC_Data_all.y[12];
+    Real measured_T_s3m3in = IC_Data_all.y[13];
+    Real measured_T_s3m3out = IC_Data_all.y[14];
+    Real measured_T_s3m2in = IC_Data_all.y[15];
+    Real measured_T_s3m2out = IC_Data_all.y[16];
+    Real measured_T_s3m1in = IC_Data_all.y[17];
+    Real measured_T_s3m1out = IC_Data_all.y[18];
+    Real measured_T_s2m6in = IC_Data_all.y[19];
+    Real measured_T_s2m1out = IC_Data_all.y[20];
     // Ambient / Cavity Temp
     Modelica.Blocks.Sources.CombiTimeTable T_cav_in(tableOnFile = true, fileName = Path + "20150323\\T_Cav_data.txt", tableName = "T_Cav");
     Real measured_T_amb = measured_T_cavAvg;
