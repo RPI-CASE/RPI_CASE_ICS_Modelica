@@ -8,7 +8,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     /////////////////////
     // DNI, T inlet, vFlow...and then aaaalll the T ins and outs. Total situational awareness. good for tuning both
     //module behavior and whole-array behavior
-    Modelica.Blocks.Sources.CombiTimeTable IC_Data_all(tableOnFile = true, fileName = Path + "20150323\\measuredData20150323.txt", tableName = "DNI_THTFin_vdot", nout = 22, columns = {2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23}) annotation(Placement(visible = true, transformation(origin = {-80,0}, extent = {{-15,-15},{15,15}}, rotation = 0)));
+    Modelica.Blocks.Sources.CombiTimeTable IC_Data_all(tableOnFile = true, fileName = Path + "20150323\\measuredData20150323.txt", tableName = "DNI_THTFin_vdot", nout = 24, columns = {2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25}) annotation(Placement(visible = true, transformation(origin = {-80,0}, extent = {{-15,-15},{15,15}}, rotation = 0)));
     Real measured_DNI = IC_Data_all.y[1];
     Real measured_T_HTFin = IC_Data_all.y[2];
     Real measured_vFlow = IC_Data_all.y[3];
@@ -33,6 +33,8 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     //know exactly fluid T either (but we can guess pretty well)
     Real measured_T_s2CPVa = IC_Data_all.y[21];
     Real measured_T_s2CPVb = IC_Data_all.y[22];
+    Real measured_yaw = IC_Data_all.y[23];
+    Real measured_pitch = IC_Data_all.y[24];
     //
     Real measured_T_drop_jumper = measured_T_s2m6in - measured_T_s3m1out;
     //previously this smaller input file was used:
