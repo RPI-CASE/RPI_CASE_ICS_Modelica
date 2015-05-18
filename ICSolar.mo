@@ -1650,5 +1650,11 @@ package ICSolar
     annotation (Documentation(info="<html>
 Medium: properties of water
 </html>"));
+  //to do...
+  //refer to an external combitable (LUT) with rho V T data
+  ////could just build in the combitable here -
+  //that increases memory allocation but speeds up compiling, right?
+  //assign rho to the value from LUT
+  //go about your business
   end Water_rhovT;
 end ICSolar;
