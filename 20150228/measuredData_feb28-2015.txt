@@ -1,4 +1,4 @@
-#1	28-Feb-15	31557185.89	…should be the last timestamp.Double up the first and last records in post (will make #rows correct, remarkably).																			
+#1	28-Feb-15	31557185.89	…should be the last timestamp. Double up the first and last records in post (will make #rows correct, remarkably).		data looks good for feb 28, but the stacks are in parallel, so modelica would need to be tweaked.
 float	DNI_THTFin_vdot(1600,23)		#vectors: (SecOfYear), DNI (W/m2), THTF_in (K), vdot (m3/s), Egen(W), THTF_out (K), Tcavity (K), THTFout(K), Tcav(K), T_s3m6in, T_s3m6out, T_s3m5in, T_s3m5out, T_s3m4in, T_s3m4out, T_s3m3in, T_s3m3out, T_s3m2in, T_s3m2out, T_s3m1in, T_s3m1out, T_s2m6in, T_s2m1out, T_s2m2or3, T_s2m3or2																			
 0	659.5	350.21	0.000001594	64.98	358.62	300.42	350.21	351.71	351.37	352.76	352.49	353.19	352.92	354.59	353.77	355.40	355.13	357.16	350.12	358.62	363.80	365.18
 1	659.5	350.21	0.000001594	64.98	358.62	300.42	350.21	351.71	351.37	352.76	352.49	353.19	352.92	354.59	353.77	355.40	355.13	357.16	350.12	358.62	363.80	365.18
