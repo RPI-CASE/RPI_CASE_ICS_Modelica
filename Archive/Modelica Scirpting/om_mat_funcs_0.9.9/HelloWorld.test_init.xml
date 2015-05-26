@@ -1,0 +1,102 @@
+<?xml version = "1.0" encoding="UTF-8"?>
+
+<!-- description of the model interface using an extention of the FMI standard -->
+<fmiModelDescription
+  fmiVersion                          = "1.0"
+
+  modelName                           = "HelloWorld.test"
+  modelIdentifier                     = "HelloWorld_test"
+  
+  OPENMODELICAHOME                    = "D:/Application/OpenModelica1.9.1/"
+  
+  guid                                = "{d924a589-5d7e-40a3-98b0-66b4f25da02d}"
+  
+  description                         = ""
+  generationTool                      = "OpenModelica Compiler 1.9.1 Beta4 (r22666) (RML version)"
+  generationDateAndTime               = "2015-05-23T19:07:42Z"
+  
+  variableNamingConvention            = "structured"
+  
+  numberOfEventIndicators             = "0"  cmt_numberOfEventIndicators             = "NG:       number of zero crossings,                           FMI"
+  numberOfTimeEvents                  = "0"  cmt_numberOfTimeEvents                  = "NG_SAM:   number of zero crossings that are samples,          OMC"
+  
+  numberOfInputVariables              = "0"  cmt_numberOfInputVariables              = "NI:       number of inputvar on topmodel,                     OMC"
+  numberOfOutputVariables             = "0"  cmt_numberOfOutputVariables             = "NO:       number of outputvar on topmodel,                    OMC"
+  
+  numberOfResidualsForInitialization  = "0"  cmt_numberOfResidualsForInitialization  = "NR:       number of residuals for initialialization function, OMC"
+  numberOfExternalObjects             = "0"  cmt_numberOfExternalObjects             = "NEXT:     number of external objects,                         OMC"
+  numberOfFunctions                   = "0"  cmt_numberOfFunctions                   = "NFUNC:    number of functions used by the simulation,         OMC"
+  
+  numberOfContinuousStates            = "1"  cmt_numberOfContinuousStates            = "NX:       number of states,                                   FMI"
+  numberOfRealAlgebraicVariables      = "0"  cmt_numberOfRealAlgebraicVariables      = "NY:       number of real variables,                           OMC"
+  numberOfRealAlgebraicAliasVariables = "0"  cmt_numberOfRealAlgebraicAliasVariables = "NA:       number of alias variables,                          OMC"
+  numberOfRealParameters              = "1"  cmt_numberOfRealParameters              = "NP:       number of parameters,                               OMC"
+  
+  numberOfIntegerAlgebraicVariables   = "0"  cmt_numberOfIntegerAlgebraicVariables   = "NYINT:    number of alg. int variables,                       OMC"
+  numberOfIntegerAliasVariables       = "0"  cmt_numberOfIntegerAliasVariables       = "NAINT:    number of alias int variables,                      OMC"
+  numberOfIntegerParameters           = "0"  cmt_numberOfIntegerParameters           = "NPINT:    number of int parameters,                           OMC"
+  
+  numberOfStringAlgebraicVariables    = "0"  cmt_numberOfStringAlgebraicVariables    = "NYSTR:    number of alg. string variables,                    OMC"
+  numberOfStringAliasVariables        = "0"  cmt_numberOfStringAliasVariables        = "NASTR:    number of alias string variables,                   OMC"
+  numberOfStringParameters            = "0"  cmt_numberOfStringParameters            = "NPSTR:    number of string parameters,                        OMC"
+  
+  numberOfBooleanAlgebraicVariables   = "0"  cmt_numberOfBooleanAlgebraicVariables   = "NYBOOL:   number of alg. bool variables,                      OMC"
+  numberOfBooleanAliasVariables       = "0"  cmt_numberOfBooleanAliasVariables       = "NABOOL:   number of alias bool variables,                     OMC"
+  numberOfBooleanParameters           = "0"  cmt_numberOfBooleanParameters           = "NPBOOL:   number of bool parameters,                          OMC" >
+  
+  
+  <!-- startTime, stopTime, tolerance are FMI specific, all others are OMC specific -->
+  <DefaultExperiment
+    startTime      = "0.0"
+    stopTime       = "1.0"
+    stepSize       = "0.002"
+    tolerance      = "1e-006"
+    solver         = "dassl"
+    outputFormat   = "mat"
+    variableFilter = ".*" />
+    
+  <!-- variables in the model -->
+  <ModelVariables>
+
+  <ScalarVariable
+  name = "Hello1.x"
+  valueReference = "1000"
+  variability = "continuous" isDiscrete = "false"
+  causality = "internal" isValueChangeable = "true"
+  alias = "noAlias"
+  classIndex = "0" classType = "rSta"
+  isProtected = "false"
+  fileName = "C:/Users/Kenton/Desktop/Modelica Scirpting/om_mat_funcs_0.9.9/hello.mo" startLine = "3" startColumn = "5" endLine = "3" endColumn = "22" fileWritable = "true">
+  <Real useStart="true" start="1.0" fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+  name = "der(Hello1.x)"
+  valueReference = "1001"
+  variability = "continuous" isDiscrete = "false"
+  causality = "internal" isValueChangeable = "false"
+  alias = "noAlias"
+  classIndex = "0" classType = "rDer"
+  isProtected = "false"
+  fileName = "C:/Users/Kenton/Desktop/Modelica Scirpting/om_mat_funcs_0.9.9/hello.mo" startLine = "3" startColumn = "5" endLine = "3" endColumn = "22" fileWritable = "true">
+  <Real useStart="false" fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+  name = "Hello1.a"
+  valueReference = "1002"
+  description = "a"
+  variability = "parameter" isDiscrete = "false"
+  causality = "internal" isValueChangeable = "true"
+  alias = "noAlias"
+  classIndex = "0" classType = "rPar"
+  isProtected = "false"
+<Real start="2" fixed="true" />
+  <Real useStart="true" start="1.0" fixed="true" useNominal="false" />
+  </ScalarVariable>
+
+
+
+  </ModelVariables>
+  
+  
+</fmiModelDescription>
+

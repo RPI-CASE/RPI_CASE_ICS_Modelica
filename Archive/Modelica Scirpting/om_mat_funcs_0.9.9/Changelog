@@ -1,0 +1,19 @@
+0.9.9   - Compatibility for Linux OpenModelica 1.8.1+ added (tested with nightly build R12260), quick and dirty, probably still buggy , can't check Windows  
+
+0.9.8   - Compatibility for Linux (.deb-Package) 1.4.5 added, can't check Windows...  
+
+0.9.7	- Octave compatibility added
+
+0.9.6	- omcompilerun accepts now several additional libraries
+
+0.9.5   - In Linux, LD_LIBRARY_PATH is deleted before execution of omc, so OM 1.4.4 is running independently of Matlab Version  
+	- *.exe after modelname  removed under linux for OM 1.4.4 	
+	- omparvar accepts now several plots
+
+0.9.4	- fixed stupid error in win path, omparvar plots points now
+
+0.9.3   - omrun under windows works again, commandline output modified
+
+0.9.2	- Added commandline flag "debug" in omcompilerun 
+
+0.9.1 	- Added 'omcleanup.m'-function and additional examplefunction 'omparvar.m'

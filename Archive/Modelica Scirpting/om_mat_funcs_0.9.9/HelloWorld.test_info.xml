@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="application/xml" href="simcodedump.xsl"?>
+<simcodedump model="HelloWorld.test">
+<variables>
+  <variable name="Hello1.x" comment="" variability = "continuous" isDiscrete = "false">
+    <Real useStart="true" start="1.0" fixed="false" useNominal="false" />
+    <source>
+      <info file="C:/Users/Kenton/Desktop/Modelica Scirpting/om_mat_funcs_0.9.9/hello.mo" lineStart="3" lineEnd="3" colStart="5" colEnd="22"/>
+      <part-of>within Real;</part-of>
+      <instance>Hello1</instance>
+      <type>HelloWorld.test</type>
+      <type>HelloWorld.Hello</type>
+      <type>Real</type>
+    </source>
+  </variable>
+  <variable name="$PRE.Hello1.x" comment="" variability = "continuous" isDiscrete = "true">
+    <Real useStart="true" start="1.0" fixed="false" useNominal="false" />
+    <source>
+      <info file="C:/Users/Kenton/Desktop/Modelica Scirpting/om_mat_funcs_0.9.9/hello.mo" lineStart="3" lineEnd="3" colStart="5" colEnd="22"/>
+      <part-of>within Real;</part-of>
+      <instance>Hello1</instance>
+      <type>HelloWorld.test</type>
+      <type>HelloWorld.Hello</type>
+      <type>Real</type>
+    </source>
+  </variable>
+  <variable name="der(Hello1.x)" comment="" variability = "continuous" isDiscrete = "false">
+    <Real useStart="false" fixed="false" useNominal="false" />
+    <source>
+      <info file="C:/Users/Kenton/Desktop/Modelica Scirpting/om_mat_funcs_0.9.9/hello.mo" lineStart="3" lineEnd="3" colStart="5" colEnd="22"/>
+      <part-of>within Real;</part-of>
+      <instance>Hello1</instance>
+      <type>HelloWorld.test</type>
+      <type>HelloWorld.Hello</type>
+      <type>Real</type>
+    </source>
+  </variable>
+  <variable name="$PRE.der(Hello1.x)" comment="" variability = "continuous" isDiscrete = "true">
+    <Real useStart="false" fixed="false" useNominal="false" />
+    <source>
+      <info file="C:/Users/Kenton/Desktop/Modelica Scirpting/om_mat_funcs_0.9.9/hello.mo" lineStart="3" lineEnd="3" colStart="5" colEnd="22"/>
+      <part-of>within Real;</part-of>
+      <instance>Hello1</instance>
+      <type>HelloWorld.test</type>
+      <type>HelloWorld.Hello</type>
+      <type>Real</type>
+    </source>
+  </variable>
+  <variable name="Hello1.a" comment="a" variability = "parameter" isDiscrete = "false">
+    <Real useStart="true" start="1.0" fixed="true" useNominal="false" />
+    <source>
+      <info file="C:/Users/Kenton/Desktop/Modelica Scirpting/om_mat_funcs_0.9.9/hello.mo" lineStart="4" lineEnd="4" colStart="5" colEnd="29"/>
+      <part-of>within Real;</part-of>
+      <instance>Hello1</instance>
+      <type>HelloWorld.test</type>
+      <type>HelloWorld.Hello</type>
+      <type>Real</type>
+    </source>
+  </variable>
+  <variable name="$PRE.Hello1.a" comment="a" variability = "parameter" isDiscrete = "true">
+    <Real useStart="true" start="1.0" fixed="true" useNominal="false" />
+    <source>
+      <info file="C:/Users/Kenton/Desktop/Modelica Scirpting/om_mat_funcs_0.9.9/hello.mo" lineStart="4" lineEnd="4" colStart="5" colEnd="29"/>
+      <part-of>within Real;</part-of>
+      <instance>Hello1</instance>
+      <type>HelloWorld.test</type>
+      <type>HelloWorld.Hello</type>
+      <type>Real</type>
+    </source>
+  </variable>
+</variables>
+<initial-equations size="2">
+  <equation index="1">
+    <assign>
+      <defines name="Hello1.x" />
+      <depends name="Hello1.x" />
+      <rhs>$_start(Hello1.x)</rhs>
+    </assign>
+    <source>
+      <info file="" lineStart="0" lineEnd="0" colStart="0" colEnd="0"/>
+    </source>
+  </equation>
+  <equation index="2">
+    <assign>
+      <defines name="der(Hello1.x)" />
+      <depends name="Hello1.x" />
+      <depends name="Hello1.a" />
+      <rhs>(-Hello1.a) * Hello1.x</rhs>
+    </assign>
+    <source>
+      <info file="C:/Users/Kenton/Desktop/Modelica Scirpting/om_mat_funcs_0.9.9/hello.mo" lineStart="6" lineEnd="6" colStart="5" colEnd="21"/>
+      <part-of>within HelloWorld.Hello;</part-of>
+      <instance>Hello1</instance>
+    </source>
+  </equation>
+</initial-equations>
+<removed-initial-equations size="0">
+</removed-initial-equations>
+<residual-equations size="0">
+</residual-equations>
+<equations size="1">
+  <equation index="3">
+    <assign>
+      <defines name="der(Hello1.x)" />
+      <depends name="Hello1.x" />
+      <depends name="Hello1.a" />
+      <rhs>(-Hello1.a) * Hello1.x</rhs>
+    </assign>
+    <source>
+      <info file="C:/Users/Kenton/Desktop/Modelica Scirpting/om_mat_funcs_0.9.9/hello.mo" lineStart="6" lineEnd="6" colStart="5" colEnd="21"/>
+      <part-of>within HelloWorld.Hello;</part-of>
+      <instance>Hello1</instance>
+    </source>
+  </equation>
+</equations>
+<start-equations size="0">
+</start-equations>
+<nominal-equations size="0">
+</nominal-equations>
+<min-equations size="0">
+</min-equations>
+<max-equations size="0">
+</max-equations>
+<parameter-equations size="0">
+</parameter-equations>
+<assertions size="0">
+</assertions>
+<jacobian-equations>
+</jacobian-equations>
+<literals size="2">
+  <exp>&quot;'p&quot;</exp>
+  <exp>&quot;'p/s&quot;</exp>
+</literals>
+<functions size="0">
+</functions>
+</simcodedump>

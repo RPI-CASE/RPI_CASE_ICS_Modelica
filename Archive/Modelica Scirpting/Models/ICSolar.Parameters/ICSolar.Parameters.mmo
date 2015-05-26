@@ -1,0 +1,7 @@
+<!DOCTYPE MOModelXML>
+<ModModelPlus>
+ <Basic modelName="ICSolar.Parameters" modelType="0" name="ICSolar.Parameters"/>
+ <Infos text=""/>
+ <Variables/>
+ <moDependencies list=""/>
+</ModModelPlus>
