@@ -1,7 +1,7 @@
 from pymodelica import compile_fmu
 
 model_name = 'ICSolar.ICS_Skeleton'
-mo_file = '../ICSolar_master.mo'
+mo_file = 'ICSolar_master.mo'
 
 my_fmu = compile_fmu(model_name, mo_file,
 	compiler='auto',
