@@ -908,7 +908,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       elseif ModuleCol < 3 then
         FractExposedTypeCol := 2;
       elseif ModuleCol > ArrayCols - 1 then
-        FractExposedTypeRow := 5;
+        FractExposedTypeCol := 5;
       elseif ModuleCol > ArrayCols - 2 then
         FractExposedTypeCol := 4;
       else
@@ -1495,6 +1495,8 @@ Evidently yes. still sorting that one out, but let's not get distracted.
     //##############################################################################
     output Modelica.Blocks.Interfaces.IntegerOutput FractExposedTypeRow "Enumeration of FractExposed Row" annotation(Placement(visible = true, transformation(origin = {110, 10}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 10}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     output Modelica.Blocks.Interfaces.IntegerOutput FractExposedTypeCol "Enumeration of FractExposed Column" annotation(Placement(visible = true, transformation(origin = {110, -10}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, -10}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    output Modelica.Blocks.Interfaces.IntegerOutput FractExposedTypeRow2 "Enumeration of FractExposed Row" annotation(Placement(visible = true, transformation(origin = {110, 10}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 10}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    output Modelica.Blocks.Interfaces.IntegerOutput FractExposedTypeCol2 "Enumeration of FractExposed Column" annotation(Placement(visible = true, transformation(origin = {110, -10}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, -10}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     //
     //______________________________________________________________________________
     ICSolar.Module.chooseFractExposedLUTPosition choosefractexposedlutposition1 annotation(Placement(visible = true, transformation(origin = {5, -25}, extent = {{-15, -15}, {15, 15}}, rotation = 0)));
@@ -1505,6 +1507,7 @@ Evidently yes. still sorting that one out, but let's not get distracted.
     connect(ModRow.y, choosefractexposedlutposition1.ModuleRow) annotation(Line(points = {{-49, 60}, {-42.029, 60}, {-42.029, -16.1836}, {-9.42029, -16.1836}, {-9.42029, -16.1836}}, color = {255, 127, 0}));
     connect(choosefractexposedlutposition1.FractExposedTypeCol, FractExposedTypeCol) annotation(Line(points = {{20, -26.5}, {42.9675, -26.5}, {42.9675, -10.2009}, {102.628, -10.2009}, {102.628, -10.2009}}, color = {255, 127, 0}));
     connect(choosefractexposedlutposition1.FractExposedTypeRow, FractExposedTypeRow) annotation(Line(points = {{20, -23.5}, {34.6213, -23.5}, {34.6213, 9.27357}, {102.318, 9.27357}, {102.318, 9.27357}}, color = {255, 127, 0}));
+    (FractExposedTypeRow2, FractExposedTypeCol2) = ShadingPalette(2, 16, 10, 16);
     //  connect(ArrayCols.y, choosefractexposedlutposition2.ArrayCols) annotation(Line(points = {{-49, -60}, {-35.5487, -60}, {-35.5487, 26.2751}, {-10.2009, 26.2751}, {-10.2009, 26.2751}}, color = {255, 127, 0}));
     //  connect(ArrayRows.y, choosefractexposedlutposition2.ArrayRows) annotation(Line(points = {{-49, -20}, {-41.1128, -20}, {-41.1128, 31.8393}, {-10.2009, 31.8393}, {-10.2009, 31.8393}}, color = {255, 127, 0}));
     //  connect(ModuleCol.y, choosefractexposedlutposition2.ModuleCol) annotation(Line(points = {{-49, 20}, {-44.204, 20}, {-44.204, 37.7125}, {-11.1283, 37.7125}, {-11.1283, 37.7125}}, color = {255, 127, 0}));
@@ -1512,5 +1515,47 @@ Evidently yes. still sorting that one out, but let's not get distracted.
     //##############################################################################
     annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {1, 1})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {0.5, 0.5})));
   end testPalette;
+
+  function ShadingPalette
+    input Integer ModuleRow;
+    input Integer ModuleCol;
+    input Integer ArrayRows;
+    input Integer ArrayCols;
+    output Integer FractExposedTypeRow;
+    output Integer FractExposedTypeCol;
+  algorithm
+    //
+    //this first case is a robustness measure, solving an out-of-bounds condition
+    if ModuleCol > ArrayCols then
+      FractExposedTypeCol := 3;
+    elseif ModuleCol < 2 then
+      FractExposedTypeCol := 1;
+    elseif ModuleCol < 3 then
+      FractExposedTypeCol := 2;
+    elseif ModuleCol > ArrayCols - 1 then
+      FractExposedTypeCol := 5;
+    elseif ModuleCol > ArrayCols - 2 then
+      FractExposedTypeCol := 4;
+    else
+      FractExposedTypeCol := 3;
+    end if;
+    //
+    //this first case is a robustness measure, solving an out-of-bounds condition
+    if ModuleRow > ArrayRows then
+      FractExposedTypeRow := 3;
+    elseif ModuleRow < 2 then
+      FractExposedTypeRow := 1;
+    elseif ModuleRow < 3 then
+      FractExposedTypeRow := 2;
+    elseif ModuleRow > ArrayRows - 1 then
+      FractExposedTypeRow := 5;
+    elseif ModuleRow > ArrayRows - 2 then
+      FractExposedTypeRow := 4;
+    else
+      FractExposedTypeRow := 3;
+    end if;
+    //##############################################################################
+    annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})));
+  end ShadingPalette;
   annotation(uses(Modelica(version = "3.2.1"), Buildings(version = "1.6")), experiment(StartTime = 7137000.0, StopTime = 7141200.0, Tolerance = 1e-006, Interval = 60));
 end ICSolar;
