@@ -335,13 +335,17 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       //  Modelica.Blocks.Sources.CombiTimeTable IC_Data_all(tableOnFile = true, fileName = Path + "20150323\\ICSFdata_DLS.txt", tableName = "DNI_THTFin_vdot", nout = 3, columns = {2, 3, 4}) annotation(Placement(visible = true, transformation(origin = {-80, 0}, extent = {{-15, -15}, {15, 15}}, rotation = 0)));
       Integer stackNum_1 = 1;
       Integer stackNum_2 = 2;
-      Modelica.Thermal.FluidHeatFlow.Interfaces.FlowPort_a flowport_a(medium = mediumHTF) "Thermal fluid inflow port, before heat exchange" annotation(Placement(visible = true, transformation(origin = {-100, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-95, -85}, extent = {{-5, -5}, {5, 5}}, rotation = 0)));
+      //
+      //______________________________________________________________________________
       Modelica.Blocks.Interfaces.RealInput AOI "Angle of incidence" annotation(Placement(visible = true, transformation(origin = {-100, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.Blocks.Interfaces.RealInput SunAlt "Altitude of the sun " annotation(Placement(visible = true, transformation(origin = {-100, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.Blocks.Interfaces.RealInput SunAzi "Azimuth of the sun " annotation(Placement(visible = true, transformation(origin = {-100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.Blocks.Interfaces.RealInput SurfaceOrientation annotation(Placement(visible = true, transformation(origin = {-100, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.Blocks.Interfaces.RealInput SurfaceTilt annotation(Placement(visible = true, transformation(origin = {-100, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      //
+      //______________________________________________________________________________
       Modelica.Blocks.Interfaces.RealOutput Power_Electric "Electric power generated" annotation(Placement(visible = true, transformation(origin = {100, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 60}, extent = {{-20, -20}, {20, 20}}, rotation = 0)));
+      Modelica.Thermal.FluidHeatFlow.Interfaces.FlowPort_a flowport_a(medium = mediumHTF) "Thermal fluid inflow port, before heat exchange" annotation(Placement(visible = true, transformation(origin = {-100, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-95, -85}, extent = {{-5, -5}, {5, 5}}, rotation = 0)));
       Modelica.Thermal.FluidHeatFlow.Interfaces.FlowPort_b flowport_b(medium = mediumHTF) "Thermal fluid outflow port, after heat exchange" annotation(Placement(visible = true, transformation(origin = {100, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       // Modelica.Thermal.FluidHeatFlow.Interfaces.FlowPort_b Power_Heat "Heat power generated" annotation(Placement(visible = true, transformation(origin = {100,-60}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {100,-60}, extent = {{-10,-10},{10,10}}, rotation = 0)));
       // Modelica.Thermal.FluidHeatFlow.Interfaces.FlowPort generated_enthalpy "Placeholder to make" annotation(Placement(visible = false));
@@ -364,22 +368,35 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       Modelica.Thermal.HeatTransfer.Sources.PrescribedTemperature prescribedtemperature1 annotation(Placement(visible = true, transformation(origin = {-20, 100}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.Thermal.HeatTransfer.Components.ThermalConductor thermalconductor1(G = 0.2) annotation(Placement(visible = true, transformation(origin = {80, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.Thermal.FluidHeatFlow.Components.HeatedPipe Tubing(medium = mediumHTF, V_flowLaminar = OneBranchFlow, V_flowNominal = 1e-005, h_g = 0, m = 0.0025, T0 = T_HTF_start, dpLaminar = 0.45, dpNominal = 10) annotation(Placement(visible = true, transformation(origin = {40, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 90)));
+      //
+      //______________________________________________________________________________
     equation
+      //[[here's the intervention  connect(ics_stack1.flowport_a1, flowport_a);
+      connect(ics_stack2.flowport_a1, flowport_a);
+      connect(ics_stack2.flowport_b1, flowport_b);
       connect(ics_stack1.flowport_b1, Tubing.flowPort_a) annotation(Line(points = {{25, -60}, {28.5063, -60}, {28.5063, -90.5359}, {39.9088, -90.5359}, {39.9088, -90.5359}}, color = {255, 0, 0}));
-      connect(ics_stack2.flowport_a1, Tubing.flowPort_b) annotation(Line(points = {{15, -15}, {10.9464, -15}, {10.9464, -30.7868}, {67.5029, -30.7868}, {67.5029, -64.0821}, {39.6807, -64.0821}, {39.6807, -70.0114}, {39.6807, -70.0114}}, color = {255, 0, 0}));
+      connect(Tubing.flowPort_b, flowport_b);
+      //  connect(ics_stack2.flowport_a1, Tubing.flowPort_b) annotation(Line(points = {{15, -15}, {10.9464, -15}, {10.9464, -30.7868}, {67.5029, -30.7868}, {67.5029, -64.0821}, {39.6807, -64.0821}, {39.6807, -70.0114}, {39.6807, -70.0114}}, color = {255, 0, 0}));
       connect(Tubing.heatPort, thermalconductor1.port_a) annotation(Line(points = {{50, -80}, {50, -80.5017}, {70.4675, -80.5017}, {70.4675, -80.5017}}, color = {191, 0, 0}));
+      connect(ics_stack1.TAmb_in, cavityheatbalance1.ICS_Heat);
+      connect(ics_stack2.TAmb_in, cavityheatbalance1.ICS_Heat);
+      connect(thermalconductor1.port_b, cavityheatbalance1.ICS_Heat);
+      connect(stackNum_1, ics_stack1.stackNum);
+      connect(stackNum_2, ics_stack2.stackNum);
       connect(prescribedtemperature1.port, cavityheatbalance1.Tcav_measured) annotation(Line(points = {{-10, 100}, {-2.657, 100}, {-2.657, 52.657}, {10, 52.657}, {10, 53}}, color = {191, 0, 0}));
       connect(Tcav_measured, prescribedtemperature1.T) annotation(Line(points = {{-60, 100}, {-32.1256, 100}, {-32.1256, 100}, {-32, 100}}, color = {0, 0, 127}));
       //  connect(Tcav_measured, cavityheatbalance1.Tcav_measured) annotation(Line(points = {{-60, 100}, {-0.483092, 100}, {-0.483092, 52.657}, {10, 52.657}, {10, 53}}, color = {191, 0, 0}));
       connect(TAmb_in, cavityheatbalance1.Exterior) annotation(Line(points = {{-100, 80}, {5.04451, 80}, {5.04451, 65.8754}, {10, 66}, {10, 66}}));
       connect(DNI, glazingLossesOuter.DNI) annotation(Line(points = {{-100, 60}, {-75, 60}, {-75, 64}, {-70, 69}, {-75, 69}}));
-      //  pre-stacks
+      //_______________________________________________________________________________
+      //pre-stacks
       //DNI into cavity
       connect(AOI, glazingLossesOuter.AOI) annotation(Line(points = {{-100, 40}, {-84, 40}, {-84, 45}, {-70, 51}, {-75, 51}}));
       connect(SunAlt, rotationmatrixforsphericalcood1.SunAlt) annotation(Line(points = {{-100, 20}, {-81.46339999999999, 20}, {-81.2162, -16.5426}, {-69.75279999999999, -16.445}, {-70, -16}}, color = {0, 0, 127}));
       connect(SunAzi, rotationmatrixforsphericalcood1.SunAzi) annotation(Line(points = {{-100, 0}, {-87.0732, 0}, {-86.82599999999999, -11.9084}, {-69.75279999999999, -12.445}, {-70, -12}}, color = {0, 0, 127}));
       connect(SurfaceOrientation, rotationmatrixforsphericalcood1.SurfaceOrientation) annotation(Line(points = {{-100, -20}, {-83.9024, -20}, {-83.65519999999999, -20.2011}, {-69.75279999999999, -20.445}, {-70, -20}}, color = {0, 0, 127}));
       connect(SurfaceTilt, rotationmatrixforsphericalcood1.SurfaceTilt) annotation(Line(points = {{-100, -40}, {-85.60980000000001, -40}, {-85.3626, -24.5913}, {-69.75279999999999, -24.445}, {-70, -24}}, color = {0, 0, 127}));
+      //_______________________________________________________________________________
       //how much self-shading
       //thermal balance
       connect(T_indoors.port, cavityheatbalance1.Interior) annotation(Line(points = {{-10, 60}, {-1.48368, 60}, {-1.48368, 55.7864}, {10, 55.7864}, {10, 56}}));
@@ -401,13 +418,6 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       //these are used with experimental data:
       connect(DNI_measured, ics_stack1.DNI);
       connect(DNI_measured, ics_stack2.DNI);
-      connect(ics_stack1.flowport_a1, flowport_a);
-      connect(ics_stack2.flowport_b1, flowport_b);
-      connect(ics_stack1.TAmb_in, cavityheatbalance1.ICS_Heat);
-      connect(ics_stack2.TAmb_in, cavityheatbalance1.ICS_Heat);
-      connect(thermalconductor1.port_b, cavityheatbalance1.ICS_Heat);
-      connect(stackNum_1, ics_stack1.stackNum);
-      connect(stackNum_2, ics_stack2.stackNum);
       //stacks:
       //make the connections between stacks: electrical
       //for i in 1:NumOfStacks - 1 loop
