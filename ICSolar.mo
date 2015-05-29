@@ -735,18 +735,23 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
 
     model ICS_PVPerformance "This model uses the EIPC (based on cell area) and PVEfficiency (based on ConcentrationFactor) to calculate the ElectricalGen and ThermalGen"
       extends ICSolar.Parameters;
+      //
+      //##############################################################################
       // parameter Real Eta_Observed = Exp_Observed "From ICSolar.Parameters, observed electrical efficiency of ICSFg8";
       // parameter Real Eta_nom_tweak = Exp_nom_tweak "From ICSolar.Parameters, matching the observed to modeled data, compensating for temperature 'unknown'. 0.364 matches the Nov25-13 data well when eta_observed is 0.215. set same as eta_obs for full-strength output.";
       Real CellWidth = 0.01 "Width of the PV Cell";
       Real CellEfficiency = 0.36436 + (52.5 - (ThermalGen.T - 273.15)) * 0.0005004 + (ConcentrationFactor - 627.5) * 1.9965e-006;
       //* Exp_Observed / Exp_nom_tweak "Equation to determine the PVEfficiency from the ConcentrationFactor and Cell Temperature";
       Real EIPC "Energy In Per Cell";
+      //
+      //##############################################################################
       Modelica.Blocks.Interfaces.RealOutput ElectricalGen "Real output for piping the generated electrical energy out" annotation(Placement(visible = true, transformation(origin = {100, 20}, extent = {{-25, -25}, {25, 25}}, rotation = 0), iconTransformation(origin = {100, 40}, extent = {{-25, -25}, {25, 25}}, rotation = 0)));
       Modelica.Thermal.HeatTransfer.Interfaces.HeatPort_b ThermalGen "Output heat port to pipe the generated heat out and to the heat receiver" annotation(Placement(visible = true, transformation(origin = {100, -60}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {100, -45}, extent = {{-25, -25}, {25, 25}}, rotation = 0)));
       //Modelica.Blocks.Interfaces.IntegerInput modNum annotation(Placement(visible = true, transformation(origin = {-100,80}, extent = {{-25,-25},{25,25}}, rotation = 0), iconTransformation(origin = {-80,80}, extent = {{-10,-10},{10,10}}, rotation = 0)));
       Modelica.Blocks.Interfaces.RealInput ConcentrationFactor "Used to represent 'suns's for the calculation of PVEfficiency" annotation(Placement(visible = true, transformation(origin = {-100, -40}, extent = {{-25, -25}, {25, 25}}, rotation = 0), iconTransformation(origin = {-100, -60}, extent = {{-15, -15}, {15, 15}}, rotation = 0)));
       Modelica.Blocks.Interfaces.RealInput DNI_in "DNI in from the Lens model (include Concentration)" annotation(Placement(visible = true, transformation(origin = {-100, 0}, extent = {{-25, -25}, {25, 25}}, rotation = 0), iconTransformation(origin = {-100, 0}, extent = {{-15, -15}, {15, 15}}, rotation = 0)));
       Modelica.Blocks.Interfaces.RealInput PV_on annotation(Placement(visible = true, transformation(origin = {-100, 40}, extent = {{-25, -25}, {25, 25}}, rotation = 0), iconTransformation(origin = {-40, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      //##############################################################################
     equation
       EIPC = DNI_in * CellWidth ^ 2 "Energy In Per Cell, used to calculate maximum energy on the cell";
       ElectricalGen = EIPC * CellEfficiency * PV_on "Electrical energy conversion";
@@ -877,6 +882,65 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       end if;
       annotation(Icon(coordinateSystem(extent = {{-60, -60}, {60, 60}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-60, -60}, {60, 60}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2}), graphics = {Rectangle(origin = {0, 0}, extent = {{-60, 60}, {60, -60}})}));
     end chooseShadeMatrix;
+
+    model chooseFractExposedLUTPosition "based on a module's position in an ICSF array, choose it's position in the 5x5 array of 'shading' types. Outputs a 2D vector somewhere in the space of [1:5 1:5]"
+      //
+      //extends ICSolar.Parameters;
+      //
+      //______________________________________________________________________________
+      Modelica.Blocks.Interfaces.IntegerInput ModuleRow "Module Row" annotation(Placement(visible = true, transformation(origin = {-100, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      Modelica.Blocks.Interfaces.IntegerInput ModuleCol "Module Column" annotation(Placement(visible = true, transformation(origin = {-100, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      Modelica.Blocks.Interfaces.IntegerInput ArrayRows "Rows in Array" annotation(Placement(visible = true, transformation(origin = {-100, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      Modelica.Blocks.Interfaces.IntegerInput ArrayCols "Columns in Array" annotation(Placement(visible = true, transformation(origin = {-100, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      //
+      //______________________________________________________________________________
+      output Modelica.Blocks.Interfaces.IntegerOutput FractExposedTypeRow "Enumeration of FractExposed Row" annotation(Placement(visible = true, transformation(origin = {110, 10}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 10}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      output Modelica.Blocks.Interfaces.IntegerOutput FractExposedTypeCol "Enumeration of FractExposed Column" annotation(Placement(visible = true, transformation(origin = {110, -10}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, -10}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      //
+      //______________________________________________________________________________
+    algorithm
+      //
+      //
+      if ModuleCol > ArrayCols then
+        FractExposedTypeCol := 3;
+      elseif ModuleCol < 2 then
+        FractExposedTypeCol := 1;
+      elseif ModuleCol < 3 then
+        FractExposedTypeCol := 2;
+      elseif ModuleCol > ArrayCols - 1 then
+        FractExposedTypeRow := 5;
+      elseif ModuleCol > ArrayCols - 2 then
+        FractExposedTypeCol := 4;
+      else
+        FractExposedTypeCol := 3;
+      end if;
+      //
+      if ModuleRow > ArrayRows then
+        FractExposedTypeRow := 3;
+      elseif ModuleRow < 2 then
+        FractExposedTypeRow := 1;
+      elseif ModuleRow < 3 then
+        FractExposedTypeRow := 2;
+      elseif ModuleRow > ArrayRows - 1 then
+        FractExposedTypeRow := 5;
+      elseif ModuleRow > ArrayRows - 2 then
+        FractExposedTypeRow := 4;
+      else
+        FractExposedTypeRow := 3;
+      end if;
+      //##############################################################################
+      annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2}), graphics = {Rectangle(origin = {0, 0}, extent = {{-100, 100}, {100, -100}})}), Documentation(info = "<html>
+<p>
+This didn't work with equations, so shifted over to algortihm. There was a div/0 problem if your mod or col was the last possible mod or col, which I get on a basic level. 
+
+OK, I see now that my logic is delivering, somehow, an output of 0 if the mod or col is trying to choose the last row or column. 
+
+So was it necessary to take the parameter designations off the integer inputs?
+
+Evidently yes. still sorting that one out, but let's not get distracted.
+</p>
+</html>"));
+    end chooseFractExposedLUTPosition;
 
     model ICS_Module_Twelve "This model contains all the components and equations that simulate one module of Integrated Concentrating Solar"
       extends ICSolar.Parameters;
@@ -1410,5 +1474,34 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
                                         Medium: properties of water
                                         </html>"));
   end Water_rhovT;
+
+  model testPalette
+    //##############################################################################
+    //##############################################################################
+    Modelica.Blocks.Sources.IntegerConstant ModRow(k = 1) annotation(Placement(visible = true, transformation(origin = {-60, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Blocks.Sources.IntegerConstant ModCol(k = 15) annotation(Placement(visible = true, transformation(origin = {-60, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Blocks.Sources.IntegerConstant ArrRows(k = 10) annotation(Placement(visible = true, transformation(origin = {-60, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Blocks.Sources.IntegerConstant ArrCols(k = 16) annotation(Placement(visible = true, transformation(origin = {-60, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    //##############################################################################
+    //##############################################################################
+    output Modelica.Blocks.Interfaces.IntegerOutput FractExposedTypeRow "Enumeration of FractExposed Row" annotation(Placement(visible = true, transformation(origin = {110, 10}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 10}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    output Modelica.Blocks.Interfaces.IntegerOutput FractExposedTypeCol "Enumeration of FractExposed Column" annotation(Placement(visible = true, transformation(origin = {110, -10}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, -10}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    //
+    //______________________________________________________________________________
+    ICSolar.Module.chooseFractExposedLUTPosition choosefractexposedlutposition1 annotation(Placement(visible = true, transformation(origin = {5, -25}, extent = {{-15, -15}, {15, 15}}, rotation = 0)));
+  equation
+    connect(ArrCols.y, choosefractexposedlutposition1.ArrayCols) annotation(Line(points = {{-49, -60}, {-47.8261, -60}, {-47.8261, -34.2995}, {-10.628, -34.2995}, {-10.628, -34.2995}}, color = {255, 127, 0}));
+    connect(ArrRows.y, choosefractexposedlutposition1.ArrayRows) annotation(Line(points = {{-49, -20}, {-46.6184, -20}, {-46.6184, -28.5024}, {-11.5942, -28.5024}, {-11.5942, -28.5024}}, color = {255, 127, 0}));
+    connect(ModCol.y, choosefractexposedlutposition1.ModuleCol) annotation(Line(points = {{-49, 20}, {-42.5121, 20}, {-42.5121, -22.7053}, {-9.42029, -22.7053}, {-9.42029, -22.7053}}, color = {255, 127, 0}));
+    connect(ModRow.y, choosefractexposedlutposition1.ModuleRow) annotation(Line(points = {{-49, 60}, {-42.029, 60}, {-42.029, -16.1836}, {-9.42029, -16.1836}, {-9.42029, -16.1836}}, color = {255, 127, 0}));
+    connect(choosefractexposedlutposition1.FractExposedTypeCol, FractExposedTypeCol) annotation(Line(points = {{20, -26.5}, {42.9675, -26.5}, {42.9675, -10.2009}, {102.628, -10.2009}, {102.628, -10.2009}}, color = {255, 127, 0}));
+    connect(choosefractexposedlutposition1.FractExposedTypeRow, FractExposedTypeRow) annotation(Line(points = {{20, -23.5}, {34.6213, -23.5}, {34.6213, 9.27357}, {102.318, 9.27357}, {102.318, 9.27357}}, color = {255, 127, 0}));
+    //  connect(ArrayCols.y, choosefractexposedlutposition2.ArrayCols) annotation(Line(points = {{-49, -60}, {-35.5487, -60}, {-35.5487, 26.2751}, {-10.2009, 26.2751}, {-10.2009, 26.2751}}, color = {255, 127, 0}));
+    //  connect(ArrayRows.y, choosefractexposedlutposition2.ArrayRows) annotation(Line(points = {{-49, -20}, {-41.1128, -20}, {-41.1128, 31.8393}, {-10.2009, 31.8393}, {-10.2009, 31.8393}}, color = {255, 127, 0}));
+    //  connect(ModuleCol.y, choosefractexposedlutposition2.ModuleCol) annotation(Line(points = {{-49, 20}, {-44.204, 20}, {-44.204, 37.7125}, {-11.1283, 37.7125}, {-11.1283, 37.7125}}, color = {255, 127, 0}));
+    //  connect(ModuleRow.y, choosefractexposedlutposition2.ModuleRow) annotation(Line(points = {{-49, 60}, {-44.204, 60}, {-44.204, 43.8949}, {-10.2009, 43.8949}, {-10.2009, 43.8949}}, color = {255, 127, 0}));
+    //##############################################################################
+    annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {1, 1})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {0.5, 0.5})));
+  end testPalette;
   annotation(uses(Modelica(version = "3.2.1"), Buildings(version = "1.6")), experiment(StartTime = 7137000.0, StopTime = 7141200.0, Tolerance = 1e-006, Interval = 60));
 end ICSolar;
