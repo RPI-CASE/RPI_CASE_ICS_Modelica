@@ -113,9 +113,6 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     Modelica.Blocks.Interfaces.RealOutput SunAzi "Solar azimuth" annotation(Placement(visible = true, transformation(origin = {100, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     Modelica.Blocks.Interfaces.RealOutput AOI "Angle of incidence" annotation(Placement(visible = true, transformation(origin = {100, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     Modelica.Blocks.Interfaces.RealOutput DNI "Direct normal irradiance" annotation(Placement(visible = true, transformation(origin = {100, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-    // Modelica.Blocks.Sources.CombiTimeTable ICSg8_Egen_data_11252013(extrapolation = Modelica.Blocks.Types.Extrapolation.Periodic, smoothness = Modelica.Blocks.Types.Smoothness.ConstantSegments, table = [0, 0; 28561626.199, 0.0; 28561636.32, 0.0; 28561646.261, 0.0; 28561656.197, 0.0; 28561666.207, 0.0; 28561676.262, 0.0; 28561686.195, 0.0; 28561696.208, 0.0; 28561706.385, 0.0; 28561716.208, 0.0; 28561726.209, 0.0; 28561736.192, 0.0; 28561777.538, 0.0; 28561786.19, 0.0; 28561796.189, 0.0; 28561806.321, 0.0; 28561816.188, 0.0; 28561826.203, 0.0; 28561836.187, 0.0; 28561846.186, 0.0; 28561856.345, 0.0; 28561866.185, 0.0; 28561876.184, 0.0; 28561886.184, 0.0; 28561896.183, 0.0; 28561906.25, 0.0; 28561916.182, 0.0; 28561926.182, 0.0; 28561936.37, 0.0; 28561946.18, 0.0; 28561956.18, 0.0; 28561966.179, 0.0; 28561976.2, 0.0; 28561986.178, 0.0; 28561996.203, 0.0; 28562006.177, 0.0; 28562016.176, 0.0; 28562026.199, 0.0; 28562036.175, 0.0; 28562046.175, 0.0; 28562056.2, 0.0; 28562066.174, 0.0; 28562076.173, 0.0; 28562086.199, 24.8; 28562096.252, 25.8; 28562106.433, 25.3; 28562116.171, 25.1; 28562126.17, 25.4; 28562136.17, 25.9; 28562146.201, 26.1; 28562156.168, 26.0; 28562166.168, 25.8; 28562176.197, 25.9; 28562186.167, 25.9; 28562196.195, 25.9; 28562206.166, 25.8; 28562216.197, 25.9; 28562226.164, 26.0; 28562236.164, 26.0; 28562246.163, 26.1; 28562256.203, 26.0; 28562266.162, 26.1; 28562276.532, 26.1; 28562286.321, 26.1; 28562296.197, 26.1; 28562306.16, 26.0; 28562316.159, 26.0; 28562326.159, 25.9; 28562336.158, 26.1; 28562346.194, 26.0; 28562356.618, 26.0; 28562366.585, 25.9; 28562492.064, 25.9; 28562496.149, 8.800000000000001; 28562506.148, 25.7; 28562516.188, 25.9; 28562526.187, 25.8; 28562536.147, 25.7; 28562546.146, 25.6; 28562556.146, 25.7; 28562566.539, 25.7; 28562576.144, 25.7; 28562586.144, 25.6; 28562596.143, 25.5; 28562606.143, 25.6; 28562616.142, 25.5; 28562626.142, 25.5; 28562636.184, 25.5; 28562646.14, 25.6; 28562656.14, 25.5; 28562666.139, 25.6; 28562676.139, 25.5; 28562686.138, 25.4; 28562696.138, 25.4; 28562706.137, 25.3; 28562716.136, 25.4; 28562726.136, 25.3; 28562736.184, 25.4; 28562746.135, 25.4; 28562756.134, 25.3; 28562766.134, 25.4; 28562776.133, 23.9; 28562786.132, 23.1; 28562796.181, 25.0; 28562806.131, 25.2; 28562816.183, 25.2; 28562826.13, 25.2; 28562836.183, 25.2; 28562846.129, 25.2; 28562856.128, 25.2; 28562866.182, 25.2; 28562876.127, 25.1; 28562886.127, 25.2; 28562896.178, 25.2; 28562906.192, 25.2; 28562916.125, 25.2; 28562926.124, 25.2; 28562936.124, 25.2; 28562946.123, 25.1; 28562956.854, 25.2; 28562966.122, 25.1; 28562976.122, 25.2; 28562986.121, 25.1; 28562996.12, 25.1; 28563006.12, 25.1; 28563016.119, 25.1; 28563026.119, 25.1; 28563036.118, 25.2; 28563046.183, 25.0; 28563056.117, 25.0; 28563066.116, 24.9; 28563076.116, 24.9; 28563086.223, 24.9; 28563096.115, 24.9; 28563106.177, 24.9; 28563116.114, 24.8; 28563126.113, 24.9; 28563136.763, 24.9; 28563146.112, 24.9; 28563156.174, 24.7; 28563166.111, 24.8; 28563176.11, 24.8; 28563186.11, 24.7; 28563196.109, 24.7; 28563206.108, 24.7; 28563216.875, 24.7; 28563226.107, 24.6; 28563236.171, 24.6; 28563246.106, 24.7; 28563256.106, 24.7; 28563266.105, 24.6; 28563276.104, 24.6; 28563286.104, 24.6; 28563296.103, 24.6; 28563306.103, 24.6; 28563316.102, 24.5; 28563326.178, 24.5; 28563336.17, 24.4; 28563346.1, 24.6; 28563356.17, 24.6; 28563366.167, 24.5; 28563376.099, 24.5; 28563386.168, 24.2; 28563396.098, 24.2; 28563406.097, 24.4; 28563416.168, 24.3; 28563426.096, 24.5; 28563437.118, 24.3; 28563446.095, 24.3; 28563456.166, 24.4; 28563466.094, 24.4; 28563476.093, 24.3; 28563486.168, 24.3; 28563496.092, 24.3; 28563506.233, 24.4; 28563516.091, 24.2; 28563526.09, 24.1; 28563536.174, 24.1; 28563546.167, 24.1; 28563556.088, 24.1; 28563566.088, 24.1; 28563576.167, 24.1; 28563586.087, 24.1; 28563596.086, 24.1; 28563606.085, 23.9; 28563616.085, 24.0; 28563626.084, 24.0; 28563636.168, 24.0; 28563646.083, 23.9; 28563656.083, 23.9; 28563666.161, 23.9; 28563676.081, 23.9; 28563686.081, 23.9; 28563696.08, 23.8; 28563706.08, 23.8; 28563716.079, 23.9; 28563726.079, 23.8; 28563736.078, 23.8; 28563746.077, 23.8; 28563756.077, 23.8; 28563766.076, 23.8; 28563776.076, 23.8; 28563786.075, 23.8; 28563796.075, 23.8; 28563806.074, 23.7; 28563816.073, 23.7; 28563826.073, 23.7; 28563836.072, 23.7; 28563846.072, 23.6; 28563856.071, 23.7; 28563866.162, 23.7; 28563876.159, 23.6; 28563886.069, 23.6; 28563896.069, 23.6; 28563906.068, 23.5; 28563916.068, 23.6; 28563926.159, 23.5; 28563936.067, 23.6; 28563946.066, 23.5; 28563956.065, 23.5; 28563966.065, 23.5; 28563976.064, 23.6; 28563986.064, 23.5; 28563996.163, 23.4; 28564006.063, 23.5; 28564016.062, 23.5; 28564026.063, 23.4; 28564036.155, 23.4; 28564046.06, 0.0; 28564056.06, 23.5; 28564066.155, 23.4; 28564076.059, 23.3; 28564086.058, 23.3; 28564096.154, 23.3; 28564106.158, 23.4; 28564116.056, 23.3; 28564126.056, 23.3; 28564136.055, 23.2; 28564146.055, 23.2; 28564156.054, 23.3; 28564166.053, 23.3; 28564176.053, 23.3; 28564186.052, 23.2; 28564196.052, 23.2; 28564206.051, 23.2; 28564216.051, 23.1; 28564226.05, 23.1; 28564236.157, 23.1; 28564246.049, 23.0; 28564256.048, 23.0; 28564266.048, 23.0; 28564276.047, 23.0; 28564286.047, 23.1; 28564296.046, 23.0; 28564306.156, 23.0; 28564316.148, 22.8; 28564326.044, 22.9; 28564336.155, 22.8; 28564346.043, 22.8; 28564356.043, 22.4; 28564366.042, 22.8; 28564376.041, 22.8; 28564386.041, 22.8; 28564396.15, 22.8; 28564406.153, 22.7; 28564416.039, 22.6; 28564426.039, 22.6; 28564436.038, 22.6; 28564446.037, 22.7; 28564456.037, 22.6; 28564466.036, 22.6; 28564476.935, 22.4; 28564487.708, 22.4; 28564496.035, 22.4; 28564506.034, 22.3; 28564516.033, 22.3; 28564526.033, 22.1; 28564536.035, 22.1; 28564546.155, 22.4; 28564556.044, 22.4; 28564566.049, 22.3; 28564576.053, 22.3; 28564586.057, 22.1; 28564596.062, 22.0; 28564606.066, 22.1; 28564616.071, 22.0; 28564626.075, 22.0; 28564636.08, 22.1; 28564646.084, 22.1; 28564656.088, 22.1; 28564666.277, 22.1; 28564676.097, 21.9; 28564686.102, 22.1; 28564696.106, 22.0; 28564706.111, 22.0; 28564716.115, 22.3; 28564726.119, 22.0; 28564737.719, 22.1; 28564746.128, 22.1; 28564756.133, 22.0; 28564766.293, 22.1; 28564776.142, 22.0; 28564786.146, 21.9; 28564796.15, 21.9; 28564806.155, 21.9; 28564816.159, 21.8; 28564826.164, 21.9; 28564836.166, 21.7; 28564846.168, 21.6; 28564856.295, 21.5; 28564866.17, 21.4; 28564876.299, 21.3; 28564886.173, 21.4; 28564896.306, 21.4; 28564906.307, 21.3; 28564916.306, 21.4; 28564926.309, 21.3; 28564936.18, 21.4; 28564946.182, 21.2; 28564956.183, 21.3; 28564966.185, 21.2; 28564976.186, 21.0; 28564986.188, 21.0; 28564996.189, 20.8; 28565006.19, 20.9; 28565016.323, 20.9; 28565026.193, 20.8; 28565036.195, 20.7; 28565046.334, 20.5; 28565056.198, 20.4; 28565066.199, 20.3; 28565076.339, 20.1; 28565088.297, 20.0; 28565096.203, 19.8; 28565106.205, 19.4; 28565116.206, 19.3; 28565126.208, 19.0; 28565136.209, 18.5; 28565146.209, 18.3; 28565156.349, 18.1; 28565168.487, 18.0; 28565176.352, 17.9; 28565186.211, 18.0; 28565196.212, 18.0; 28565206.356, 18.0; 28565216.349, 17.9; 28565226.213, 18.0; 28565236.363, 17.9; 28565247.61, 18.1; 28565256.36, 18.1; 28565266.36, 18.1; 28565276.215, 18.2; 28565288.329, 18.4; 28565296.363, 18.4; 28565306.361, 18.7; 28565316.217, 18.7; 28565326.365, 18.8; 28565336.218, 19.2; 28565346.218, 19.3; 28565356.218, 19.5; 28565366.219, 19.4; 28565376.219, 19.3; 28565386.366, 19.3; 28565397.935, 19.2; 28565406.221, 19.3; 28565416.221, 19.5; 28565426.379, 19.7; 28565436.374, 19.1; 28565446.222, 19.1; 28565456.371, 19.0; 28565466.373, 18.3; 28565478.263, 17.9; 28565488.418, 17.8; 28565496.378, 18.1; 28565506.225, 18.6; 28565516.225, 18.5; 28565526.382, 18.5; 28565536.226, 18.5; 28565546.227, 18.2; 28565556.227, 17.8; 28565566.227, 17.1; 28565576.228, 16.0; 28565586.228, 15.1; 28565596.229, 14.5; 28565606.384, 14.2; 28565616.23, 13.3; 28565626.23, 13.4; 28565637.968, 13.7; 28565646.231, 13.7; 28565656.385, 14.3; 28565666.232, 15.4; 28565676.232, 16.4; 28565686.233, 16.6; 28565696.233, 16.1; 28565706.393, 15.1; 28565718.766, 14.4; 28565726.392, 13.5; 28565736.235, 13.0; 28565746.235, 13.8; 28565756.399, 15.1; 28565766.408, 15.8; 28565776.236, 15.6; 28565786.402, 14.6; 28565796.412, 13.5; 28565806.403, 12.9; 28565817.933, 12.3; 28565826.595, 11.6; 28565836.239, 11.7; 28565848.516, 11.9; 28565856.24, 12.0; 28565866.24, 12.1; 28565876.241, 12.6; 28565886.241, 13.2; 28565898.65, 12.2; 28565906.242, 12.0; 28565916.242, 10.7; 28565926.243, 9.1; 28565936.243, 7.6; 28565946.244, 6.1; 28565956.244, 4.7; 28565966.413, 3.4; 28565976.245, 2.3; 28565986.413, 1.5; 28565996.246, 1.0; 28566006.246, 0.6; 28566016.247, 0.4; 28566026.42, 0.3; 28566036.248, 0.2; 28566046.425, 0.2; 28566056.248, 0.1; 28566066.249, 0.1; 28566076.249, 0.0; 28566086.25, 0.0; 28566096.25, 0.0; 28566106.428, 0.0; 28566116.251, 0.0; 28566126.251, 0.0; 28566136.455, 0.0; 28566148.668, 0.0; 28566156.253, 0.0; 28566166.441, 0.0; 28566176.429, 0.0; 28566186.435, 0.0; 28566196.429, 0.0; 28566206.435, 0.0; 28566216.255, 0.0; 28566229.023, 0.0; 28566236.256, 0.0; 28566246.434, 0.0; 28566259.013, 0.0; 28566266.257, 0.0; 28566276.442, 0.0; 28566286.258, 0.0; 28566296.259, 0.0; 28566306.452, 0.0; 28566316.259, 0.0; 28566326.444, 0.0; 28566336.442, 0.0; 28566346.261, 0.0; 28566356.447, 0.0; 28566366.45, 0.0; 28566376.262, 0.0; 28566386.262, 0.0; 28566396.263, 0.0; 28566406.446, 0.0; 28566416.453, 0.0; 28566426.264, 0.0; 28566436.454, 0.0; 28566446.458, 0.0; 28566456.265, 0.0; 28566468.931, 0.0; 28566476.266, 0.0; 28566487.038, 0.0; 28566496.267, 0.0; 28566506.268, 0.0; 28566516.268, 0.0; 28566526.268, 0.0; 28566536.269, 0.0; 28566546.269, 0.0; 28566556.27, 0.0; 28566566.459, 0.0; 28566576.463, 0.0; 28566586.47, 0.0; 28566596.271, 0.0; 28566606.272, 0.0; 28566616.272, 0.0; 28566626.273, 0.0; 28566636.465, 0.0; 28566636.466, 0; 3.15569e8, 0]) annotation(Placement(visible = true, transformation(origin = {-22, 66}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-    // Modelica.Blocks.Interfaces.RealOutput ICSg8_Egen_data_11252013_conn "egen data from icsg8" annotation(Placement(visible = true, transformation(origin = {100, 42}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-    // Modelica.Blocks.Sources.CombiTimeTable ICSg8_Qgen_data_11252013(extrapolation = Modelica.Blocks.Types.Extrapolation.Periodic, smoothness = Modelica.Blocks.Types.Smoothness.ConstantSegments, table = [0, 0; 28561622.622, 2.9; 28561633.075, 3.9; 28561643.572, 23.4; 28561654.096, 47.8; 28561662.587, 60.1; 28561673.035, 65.3; 28561683.502, 73.40000000000001; 28561694.002, 73.3; 28561702.412, 73.5; 28561712.86, 76.09999999999999; 28561723.285, 77.3; 28561733.811, 77.8; 28561737.976, 77.90000000000001; 28561783.794, 89.7; 28561792.155, 91.7; 28561802.608, 92.5; 28561813.105, 93.8; 28561823.635, 95.09999999999999; 28561834.054, 96.3; 28561842.426, 98.3; 28561852.85, 100.5; 28561863.288, 102.2; 28561873.733, 103.7; 28561882.099, 103.7; 28561892.454, 102.8; 28561902.92, 103.1; 28561913.333, 102.6; 28561921.998, 101.2; 28561932.579, 98.90000000000001; 28561943.041, 97.59999999999999; 28561953.463, 90.59999999999999; 28561963.962, 85.40000000000001; 28561972.308, 88.09999999999999; 28561982.794, 89.2; 28561993.402, 92.09999999999999; 28562003.928, 95.7; 28562012.445, 100.0; 28562022.883, 105.6; 28562033.444, 109.2; 28562043.927, 111.3; 28562052.284, 112.3; 28562062.735, 113.1; 28562073.187, 113.5; 28562083.685, 112.8; 28562092.066, 102.8; 28562102.501, 91.90000000000001; 28562112.984, 86.40000000000001; 28562123.493, 83.40000000000001; 28562133.961, 82.7; 28562142.322, 82.7; 28562152.822, 82.8; 28562163.292, 82.5; 28562173.724, 81.7; 28562182.086, 78.0; 28562192.571, 69.5; 28562203.082, 61.2; 28562213.503, 58.6; 28562223.999, 57.9; 28562232.377, 57.6; 28562242.847, 57.5; 28562253.325, 57.3; 28562263.829, 57.4; 28562272.299, 57.5; 28562282.749, 39.9; 28562293.202, 40.9; 28562303.696, 40.9; 28562312.089, 40.0; 28562322.604, 38.8; 28562333.041, 38.5; 28562343.478, 38.4; 28562353.946, 38.2; 28562362.337, 38.2; 28562366.594, 38.3; 28562492.064, 38.7; 28562502.449, 42.9; 28562512.917, 41.6; 28562523.385, 40.2; 28562533.96, 39.9; 28562542.353, 39.9; 28562552.819, 40.0; 28562563.392, 40.0; 28562573.845, 40.0; 28562582.206, 40.0; 28562592.624, 39.9; 28562603.06, 40.0; 28562613.495, 39.9; 28562623.874, 40.0; 28562632.283, 39.9; 28562642.778, 39.8; 28562653.165, 39.8; 28562663.577, 39.9; 28562671.978, 39.8; 28562682.433, 39.7; 28562692.928, 39.6; 28562703.414, 39.4; 28562711.914, 39.4; 28562722.443, 39.3; 28562732.97, 39.2; 28562743.452, 39.3; 28562753.876, 39.2; 28562762.255, 39.4; 28562772.69, 39.0; 28562783.169, 37.2; 28562793.625, 36.5; 28562801.981, 37.6; 28562812.463, 38.6; 28562822.904, 38.7; 28562833.386, 38.8; 28562843.989, 38.9; 28562852.351, 38.7; 28562862.806, 38.5; 28562873.306, 38.3; 28562883.815, 38.7; 28562892.213, 38.5; 28562902.736, 38.2; 28562913.267, 38.1; 28562923.879, 38.5; 28562932.219, 38.6; 28562942.691, 38.6; 28562953.189, 38.3; 28562963.656, 38.2; 28562972.156, 37.8; 28562982.64, 37.6; 28562993.181, 37.6; 28563003.695, 37.7; 28563012.124, 37.7; 28563022.726, 37.7; 28563033.224, 37.4; 28563043.679, 37.2; 28563052.099, 37.2; 28563062.633, 37.2; 28563073.037, 37.3; 28563083.552, 37.4; 28563093.971, 37.4; 28563102.345, 37.5; 28563112.861, 37.4; 28563123.293, 37.4; 28563133.719, 37.4; 28563142.089, 37.4; 28563152.574, 37.5; 28563163.154, 37.4; 28563173.621, 37.4; 28563182.087, 37.5; 28563192.592, 37.5; 28563203.038, 37.5; 28563213.629, 37.5; 28563222.007, 37.6; 28563232.568, 37.8; 28563243.081, 37.8; 28563253.578, 37.9; 28563261.926, 37.8; 28563272.424, 37.6; 28563282.903, 37.5; 28563293.403, 37.4; 28563303.856, 37.2; 28563312.33, 37.1; 28563322.824, 37.0; 28563333.257, 37.1; 28563343.71, 37.1; 28563352.104, 37.2; 28563362.606, 37.3; 28563373.104, 37.2; 28563383.508, 37.2; 28563393.973, 37.1; 28563402.368, 37.1; 28563412.836, 37.1; 28563423.272, 36.9; 28563433.748, 36.9; 28563442.126, 36.9; 28563452.598, 37.0; 28563463.064, 37.2; 28563473.449, 37.2; 28563483.875, 37.4; 28563492.199, 37.5; 28563502.589, 37.6; 28563513.012, 37.9; 28563523.554, 38.0; 28563531.92, 37.9; 28563542.325, 38.1; 28563552.806, 37.9; 28563563.274, 38.0; 28563573.722, 37.9; 28563582.176, 37.9; 28563592.673, 38.0; 28563603.124, 38.0; 28563613.598, 37.9; 28563621.94, 37.8; 28563632.409, 37.9; 28563642.89, 38.0; 28563653.297, 37.9; 28563663.778, 37.9; 28563672.095, 37.9; 28563682.525, 38.0; 28563693.012, 37.9; 28563703.574, 37.9; 28563711.934, 37.8; 28563722.443, 37.8; 28563732.927, 37.8; 28563743.379, 37.7; 28563753.845, 37.6; 28563762.304, 37.6; 28563772.802, 37.3; 28563783.239, 37.2; 28563793.721, 37.2; 28563802.08, 37.3; 28563812.565, 37.2; 28563823.041, 37.2; 28563833.514, 37.0; 28563841.965, 37.1; 28563852.447, 37.3; 28563862.931, 37.3; 28563873.459, 37.3; 28563883.942, 37.2; 28563892.288, 37.2; 28563902.712, 37.1; 28563913.196, 37.1; 28563923.689, 37.2; 28563932.112, 37.3; 28563942.659, 37.2; 28563953.141, 37.2; 28563963.577, 37.2; 28563972.02, 37.2; 28563982.423, 37.1; 28563992.936, 37.1; 28564003.417, 37.1; 28564013.92, 37.1; 28564022.296, 37.2; 28564032.748, 37.1; 28564043.226, 37.1; 28564053.663, 37.0; 28564062.044, 37.1; 28564072.476, 37.0; 28564082.93, 36.8; 28564093.331, 36.8; 28564103.816, 36.9; 28564112.221, 36.9; 28564122.812, 36.9; 28564133.346, 36.7; 28564143.721, 36.6; 28564152.077, 36.5; 28564162.497, 36.6; 28564172.95, 36.6; 28564183.389, 36.7; 28564193.851, 36.6; 28564202.323, 36.6; 28564212.825, 36.6; 28564223.335, 36.6; 28564233.848, 36.5; 28564242.214, 36.5; 28564252.681, 36.5; 28564263.142, 36.5; 28564273.615, 36.5; 28564282.056, 36.4; 28564292.504, 36.4; 28564302.958, 36.4; 28564313.374, 36.4; 28564323.808, 36.3; 28564332.129, 36.3; 28564342.669, 36.3; 28564353.155, 36.1; 28564363.592, 36.2; 28564371.967, 36.3; 28564382.389, 36.3; 28564392.822, 36.4; 28564403.317, 36.3; 28564413.697, 36.3; 28564422.041, 36.4; 28564432.614, 36.3; 28564443.179, 36.3; 28564453.782, 36.3; 28564462.175, 36.4; 28564472.642, 36.2; 28564483.094, 36.2; 28564493.528, 36.2; 28564501.898, 36.1; 28564512.374, 35.9; 28564522.811, 35.9; 28564533.267, 35.4; 28564543.734, 35.7; 28564552.151, 35.8; 28564562.554, 35.9; 28564572.984, 36.0; 28564583.424, 35.8; 28564591.93, 35.8; 28564602.341, 35.7; 28564612.826, 35.6; 28564623.252, 35.6; 28564633.756, 35.6; 28564642.17, 35.6; 28564652.638, 35.7; 28564663.163, 35.7; 28564673.709, 35.7; 28564682.112, 35.7; 28564692.593, 35.8; 28564703.098, 35.7; 28564713.558, 35.8; 28564721.982, 35.8; 28564732.452, 35.8; 28564742.865, 35.9; 28564753.272, 36.1; 28564763.733, 36.0; 28564772.078, 36.1; 28564782.539, 35.9; 28564792.994, 35.9; 28564803.449, 35.9; 28564813.942, 35.9; 28564822.303, 35.9; 28564832.7, 35.8; 28564843.169, 35.8; 28564853.715, 35.8; 28564862.094, 35.6; 28564872.519, 35.6; 28564882.941, 35.4; 28564893.407, 35.6; 28564903.832, 35.5; 28564912.174, 35.6; 28564922.613, 35.7; 28564933.05, 35.8; 28564943.463, 35.7; 28564953.944, 35.6; 28564962.353, 35.4; 28564972.93, 35.4; 28564983.555, 35.4; 28564994.008, 35.3; 28565002.338, 35.2; 28565012.767, 35.1; 28565023.204, 35.1; 28565033.643, 35.0; 28565042.021, 34.8; 28565052.459, 34.7; 28565062.94, 34.5; 28565073.383, 34.3; 28565083.805, 34.2; 28565092.167, 34.0; 28565102.607, 33.6; 28565113.073, 33.2; 28565123.527, 32.8; 28565132.011, 32.6; 28565142.467, 32.1; 28565153.058, 31.7; 28565163.495, 31.3; 28565173.902, 31.2; 28565182.231, 31.1; 28565192.639, 31.1; 28565203.119, 31.1; 28565213.62, 31.0; 28565224.093, 31.0; 28565232.402, 30.9; 28565242.89, 31.0; 28565253.308, 31.1; 28565263.666, 31.2; 28565274.103, 31.4; 28565282.486, 31.6; 28565292.917, 31.7; 28565303.448, 31.8; 28565313.884, 31.9; 28565322.263, 32.2; 28565332.764, 32.7; 28565343.312, 33.1; 28565353.871, 33.5; 28565362.247, 33.8; 28565372.767, 33.7; 28565383.206, 33.6; 28565393.765, 32.6; 28565402.155, 33.0; 28565412.684, 33.0; 28565423.138, 33.5; 28565433.635, 33.9; 28565444.105, 33.1; 28565452.45, 33.2; 28565462.889, 33.0; 28565473.33, 32.1; 28565483.781, 31.7; 28565492.142, 31.6; 28565502.606, 31.7; 28565513.032, 32.0; 28565523.469, 32.0; 28565533.999, 32.0; 28565542.313, 32.0; 28565552.769, 31.5; 28565563.188, 30.8; 28565573.653, 29.5; 28565584.09, 28.0; 28565592.42, 27.0; 28565602.891, 26.1; 28565613.362, 25.1; 28565623.858, 23.8; 28565632.237, 23.8; 28565642.642, 23.9; 28565653.059, 24.1; 28565663.611, 25.2; 28565674.043, 26.7; 28565682.469, 27.8; 28565692.936, 28.3; 28565703.488, 27.5; 28565713.924, 26.4; 28565722.318, 25.5; 28565732.736, 24.2; 28565743.187, 23.8; 28565753.608, 25.0; 28565764.077, 26.6; 28565772.502, 27.2; 28565782.985, 26.8; 28565793.499, 25.5; 28565803.894, 24.1; 28565812.24, 23.2; 28565822.77, 22.1; 28565833.238, 21.1; 28565843.676, 20.9; 28565854.11, 21.0; 28565862.507, 21.1; 28565873.03, 21.7; 28565883.421, 23.3; 28565893.971, 25.0; 28565902.376, 25.6; 28565912.817, 27.0; 28565923.345, 26.6; 28565933.783, 25.8; 28565944.14, 24.6; 28565952.501, 23.4; 28565962.923, 21.3; 28565973.391, 18.6; 28565983.863, 15.9; 28565992.238, 13.9; 28566002.663, 11.5; 28566013.084, 9.4; 28566023.489, 7.3; 28566033.938, 5.5; 28566042.3, 4.3; 28566052.726, 3.0; 28566063.175, 2.1; 28566073.631, 1.1; 28566084.1, 0.5; 28566092.427, 0.2; 28566102.928, -0.2; 28566113.365, -0.6; 28566123.829, -0.6; 28566132.18, -0.7; 28566142.629, -0.8; 28566153.085, -0.8; 28566163.519, -0.9; 28566173.943, -1.1; 28566182.29, -1.2; 28566192.728, -1.3; 28566203.165, -1.3; 28566213.614, -1.3; 28566224.051, -1.3; 28566232.379, -1.4; 28566242.883, -1.5; 28566253.321, -1.5; 28566263.704, -1.5; 28566274.148, -1.6; 28566282.541, -1.7; 28566292.991, -1.7; 28566303.444, -1.7; 28566313.943, -1.7; 28566322.288, -1.8; 28566332.789, -1.8; 28566343.181, -1.8; 28566353.603, -1.8; 28566364.068, -1.9; 28566372.402, -1.9; 28566382.839, -1.8; 28566393.333, -1.6; 28566403.759, -1.5; 28566412.117, -1.8; 28566422.589, -2.1; 28566433.21, -2.1; 28566443.728, -2.2; 28566452.054, -2.2; 28566462.633, -2.3; 28566473.135, -2.7; 28566483.6, -2.9; 28566494.118, -3.1; 28566502.668, -3.3; 28566513.162, -3.3; 28566523.602, -3.4; 28566534.052, -3.6; 28566542.444, -3.7; 28566552.913, -3.9; 28566563.416, -4.0; 28566573.896, -4.2; 28566582.321, -4.3; 28566592.728, -4.5; 28566603.121, -4.6; 28566613.619, -4.6; 28566624.105, -4.8; 28566632.477, -4.9; 28566632.478, 0; 3.15569e8, 0]) annotation(Placement(visible = true, transformation(origin = {0, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     Modelica.Thermal.HeatTransfer.Interfaces.HeatPort_b TDryBul "Dry bulb temperature" annotation(Placement(visible = true, transformation(origin = {100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     // Modelica.Blocks.Interfaces.RealOutput Q_gen "don't know why these experiment outputs get stuck in context, but here they are" annotation(Placement(visible = true, transformation(origin = {100, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   protected
@@ -130,10 +127,6 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     Real gam_c = Modelica.Math.cos(SurfOrientation);
     Real gam_s = Modelica.Math.sin(SurfOrientation);
   equation
-    //connect(ICSFg8_DNI_Nov252013.y[1], DNI) annotation(Line(points = {{51, -80}, {65.7602, -80}, {65.7602, -19.7775}, {93.9431, -19.7775}, {93.9431, -19.7775}}, color = {0, 0, 127}));
-    //connect(ICSg8_Egen_data_11252013.y[1], ICSg8_Egen_data_11252013_conn) annotation(Line(points = {{-11, 66}, {12, 66}, {12, 54}, {54, 54}, {69.5748, 53.8443}, {100, 40}, {100, 42}}, color = {0, 0, 127}));
-    //[[11252013]]
-    //connect(ICSg8_Qgen_data_11252013.y[1], Q_gen) annotation(Line(points = {{11, 80}, {16.0544, 80}, {16.0544, 42.9932}, {72.9252, 42.9932}, {72.9252, 19.8639}, {100, 19.8639}, {100, 20}}, color = {0, 0, 127}));
     connect(TOutside.port, TDryBul) annotation(Line(points = {{70, 20}, {97.8229, 0}, {100, 0}}));
     connect(weatherBus.HDirNor, DNI) "Connects Hourly Direct Normal Irradiance from the weather file to the DNI output of context";
     connect(SurfOrientation, SurfOrientation_out) "Connects Surface Orientation Parameter to Surface Orientation Output";
@@ -357,32 +350,52 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       // Modelica.Blocks.Interfaces.RealOutput DNI_toIndoors "the DNI that slips past the modules and gets through the interior-side glazing" annotation(Placement(visible = true, transformation(origin = {100, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       // ICSolar.Envelope.DNIReduction_AreaFraction dnireduction_areafraction1 annotation(Placement(visible = true, transformation(origin = {-20, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       constant Real GND = 0 annotation(Placement(visible = true, transformation(origin = {-40, 0}, extent = {{-25, -25}, {25, 25}}, rotation = 0)));
-      ICSolar.Stack.ICS_Stack_Twelve ics_stack2 annotation(Placement(visible = true, transformation(origin = {40, 0}, extent = {{-25, -25}, {25, 25}}, rotation = 0)));
+      ICSolar.Stack.ICS_Stack_Twelve ics_stack[NumOfStacks] annotation(Placement(visible = true, transformation(origin = {40, 0}, extent = {{-25, -25}, {25, 25}}, rotation = 0)));
+      //ICSolar.Stack.ICS_Stack_Twelve ics_stack2 annotation(Placement(visible = true, transformation(origin = {40, 0}, extent = {{-25, -25}, {25, 25}}, rotation = 0)));
       //  Modelica.Blocks.Sources.Constant GND(k = 0) = 0 "Ground input for stack power flow, Real" annotation(Placement(visible = true, transformation(origin = {-20, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-      ICSolar.Stack.ICS_Stack_Twelve ics_stack1 annotation(Placement(visible = true, transformation(origin = {0, -60}, extent = {{-25, -25}, {25, 25}}, rotation = 0)));
+      //ICSolar.Stack.ICS_Stack_Twelve ics_stack1 annotation(Placement(visible = true, transformation(origin = {0, -60}, extent = {{-25, -25}, {25, 25}}, rotation = 0)));
       //  Real DNI_measured = IC_Data_all.y[1] annotation(Placement(visible = true, transformation(origin = {-100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.Blocks.Interfaces.RealInput DNI_measured "DNI from data file" annotation(Placement(visible = true, transformation(origin = {-100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.Blocks.Interfaces.RealInput DNI "DNI from weather file" annotation(Placement(visible = true, transformation(origin = {-100, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.Thermal.HeatTransfer.Interfaces.HeatPort_a TAmb_in "Ambient cavity temperature" annotation(Placement(visible = true, transformation(origin = {-100, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.Blocks.Interfaces.RealInput Tcav_measured annotation(Placement(visible = true, transformation(origin = {-60, 100}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 90}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.Thermal.HeatTransfer.Sources.PrescribedTemperature prescribedtemperature1 annotation(Placement(visible = true, transformation(origin = {-20, 100}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-      Modelica.Thermal.HeatTransfer.Components.ThermalConductor thermalconductor1(G = 0.2) annotation(Placement(visible = true, transformation(origin = {80, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-      Modelica.Thermal.FluidHeatFlow.Components.HeatedPipe Tubing(medium = mediumHTF, V_flowLaminar = OneBranchFlow, V_flowNominal = 1e-005, h_g = 0, m = 0.0025, T0 = T_HTF_start, dpLaminar = 0.45, dpNominal = 10) annotation(Placement(visible = true, transformation(origin = {40, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 90)));
+      Modelica.Thermal.HeatTransfer.Components.ThermalConductor thermalconductor[NumOfStacks](G = 0.2) annotation(Placement(visible = true, transformation(origin = {80, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      Modelica.Thermal.FluidHeatFlow.Components.HeatedPipe Tubing[NumOfStacks](medium = mediumHTF, V_flowLaminar = OneBranchFlow, V_flowNominal = 1e-005, h_g = 0, m = 0.0025, T0 = T_HTF_start, dpLaminar = 0.45, dpNominal = 10) annotation(Placement(visible = true, transformation(origin = {40, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 90)));
       //
       //______________________________________________________________________________
     equation
-      //[[here's the intervention  connect(ics_stack1.flowport_a1, flowport_a);
-      connect(ics_stack2.flowport_a1, flowport_a);
-      connect(ics_stack2.flowport_b1, flowport_b);
-      connect(ics_stack1.flowport_b1, Tubing.flowPort_a) annotation(Line(points = {{25, -60}, {28.5063, -60}, {28.5063, -90.5359}, {39.9088, -90.5359}, {39.9088, -90.5359}}, color = {255, 0, 0}));
-      connect(Tubing.flowPort_b, flowport_b);
+      // Create the number of parallel stacks
+      ics_stack[1].Power_in = 0;
+      for i in 1:NumOfStacks loop
+        connect(DNI_measured, ics_stack[i].DNI);
+        connect(ics_stack[i].flowport_a1, flowport_a);
+        ics_stack[i].stackNum = i;
+        connect(rotationmatrixforsphericalcood1.arrayYaw, ics_stack[i].arrayYaw);
+        connect(rotationmatrixforsphericalcood1.arrayPitch, ics_stack[i].arrayPitch);
+        connect(ics_stack[i].TAmb_in, cavityheatbalance1.ICS_Heat);
+        connect(ics_stack[i].flowport_b1, Tubing[i].flowPort_a);
+        connect(Tubing[i].flowPort_b, flowport_b);
+        connect(Tubing[i].heatPort, thermalconductor[i].port_a);
+        connect(thermalconductor[i].port_b, cavityheatbalance1.ICS_Heat);
+      end for;
+      for i in 1:NumOfStacks - 1 loop
+        connect(ics_stack[i].Power_out, ics_stack[i + 1].Power_in);
+      end for;
+      connect(ics_stack[NumOfStacks].Power_out, Power_Electric);
+      //connect(ics_stack1.flowport_a1, flowport_a);
+      //connect(ics_stack2.flowport_a1, flowport_a);
+      //connect(ics_stack2.flowport_b1, flowport_b);
+      //connect(ics_stack1.flowport_b1, flowport_b);
+      //connect(ics_stack1.flowport_b1, Tubing.flowPort_a) annotation(Line(points = {{25, -60}, {28.5063, -60}, {28.5063, -90.5359}, {39.9088, -90.5359}, {39.9088, -90.5359}}, color = {255, 0, 0}));
+      //connect(Tubing.flowPort_b, flowport_b);
       //  connect(ics_stack2.flowport_a1, Tubing.flowPort_b) annotation(Line(points = {{15, -15}, {10.9464, -15}, {10.9464, -30.7868}, {67.5029, -30.7868}, {67.5029, -64.0821}, {39.6807, -64.0821}, {39.6807, -70.0114}, {39.6807, -70.0114}}, color = {255, 0, 0}));
-      connect(Tubing.heatPort, thermalconductor1.port_a) annotation(Line(points = {{50, -80}, {50, -80.5017}, {70.4675, -80.5017}, {70.4675, -80.5017}}, color = {191, 0, 0}));
-      connect(ics_stack1.TAmb_in, cavityheatbalance1.ICS_Heat);
-      connect(ics_stack2.TAmb_in, cavityheatbalance1.ICS_Heat);
-      connect(thermalconductor1.port_b, cavityheatbalance1.ICS_Heat);
-      connect(stackNum_1, ics_stack1.stackNum);
-      connect(stackNum_2, ics_stack2.stackNum);
+      //connect(Tubing.heatPort, thermalconductor1.port_a) annotation(Line(points = {{50, -80}, {50, -80.5017}, {70.4675, -80.5017}, {70.4675, -80.5017}}, color = {191, 0, 0}));
+      //connect(ics_stack1.TAmb_in, cavityheatbalance1.ICS_Heat);
+      //connect(ics_stack2.TAmb_in, cavityheatbalance1.ICS_Heat);
+      //connect(thermalconductor1.port_b, cavityheatbalance1.ICS_Heat);
+      //connect(stackNum_1, ics_stack1.stackNum);
+      //connect(stackNum_2, ics_stack2.stackNum);
       connect(prescribedtemperature1.port, cavityheatbalance1.Tcav_measured) annotation(Line(points = {{-10, 100}, {-2.657, 100}, {-2.657, 52.657}, {10, 52.657}, {10, 53}}, color = {191, 0, 0}));
       connect(Tcav_measured, prescribedtemperature1.T) annotation(Line(points = {{-60, 100}, {-32.1256, 100}, {-32.1256, 100}, {-32, 100}}, color = {0, 0, 127}));
       //  connect(Tcav_measured, cavityheatbalance1.Tcav_measured) annotation(Line(points = {{-60, 100}, {-0.483092, 100}, {-0.483092, 52.657}, {10, 52.657}, {10, 53}}, color = {191, 0, 0}));
@@ -401,23 +414,22 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       //thermal balance
       connect(T_indoors.port, cavityheatbalance1.Interior) annotation(Line(points = {{-10, 60}, {-1.48368, 60}, {-1.48368, 55.7864}, {10, 55.7864}, {10, 56}}));
       //
-      connect(rotationmatrixforsphericalcood1.arrayYaw, ics_stack1.arrayYaw);
-      connect(rotationmatrixforsphericalcood1.arrayPitch, ics_stack1.arrayPitch);
-      connect(rotationmatrixforsphericalcood1.arrayYaw, ics_stack2.arrayYaw);
-      connect(rotationmatrixforsphericalcood1.arrayPitch, ics_stack2.arrayPitch);
+      //connect(rotationmatrixforsphericalcood1.arrayYaw, ics_stack1.arrayYaw);
+      //connect(rotationmatrixforsphericalcood1.arrayPitch, ics_stack1.arrayPitch);
+      //connect(rotationmatrixforsphericalcood1.arrayYaw, ics_stack2.arrayYaw);
+      //connect(rotationmatrixforsphericalcood1.arrayPitch, ics_stack2.arrayPitch);
       //
       //prep the stacks inputs:
-      ics_stack1.Power_in = 0;
       //connect(GND.y, ics_stack1.Power_in) annotation(Line(points = {{-9, -60}, {0.816327, -60}, {0.816327, -20.6803}, {17.1429, -20.6803}, {17.1429, -20.6803}}, color = {0, 0, 127}));
-      connect(ics_stack1.Power_out, ics_stack2.Power_in);
-      connect(ics_stack2.Power_out, Power_Electric);
+      //connect(ics_stack1.Power_out, ics_stack2.Power_in);
+      //connect(ics_stack2.Power_out, Power_Electric);
       //these two are used with weatherdata input
       //  connect(glazingLossesOuter.SurfDirNor, ics_stack1.DNI);
       // connect(glazingLossesOuter.SurfDirNor, ics_stack2.DNI);
       //
       //these are used with experimental data:
-      connect(DNI_measured, ics_stack1.DNI);
-      connect(DNI_measured, ics_stack2.DNI);
+      //connect(DNI_measured, ics_stack1.DNI);
+      //connect(DNI_measured, ics_stack2.DNI);
       //stacks:
       //make the connections between stacks: electrical
       //for i in 1:NumOfStacks - 1 loop
@@ -662,7 +674,9 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
         connect(ICS_Module_Twelve_1[i].arrayPitch, arrayPitch);
         connect(ICS_Module_Twelve_1[i].arrayYaw, arrayYaw);
         connect(ICS_Module_Twelve_1[i].TAmb_in, TAmb_in);
-        ICS_Module_Twelve_1[StackHeight + 1 - i].modNum = i + (stackNum - 1) * StackHeight;
+        ICS_Module_Twelve_1[StackHeight + 1 - i].modNum = i;
+        ICS_Module_Twelve_1[StackHeight + 1 - i].stackNum = stackNum;
+        //i + (stackNum - 1) * StackHeight;
       end for;
       ///////////Legacy from reversed plumbing
       //connect the inlets and outlets of the stack
@@ -971,21 +985,35 @@ Evidently yes. still sorting that one out, but let's not get distracted.
       ICSolar.Receiver.moduleReceiver modulereceiver1 "Heat Receiver to calculate the heat transfer between heat gen and heat transfered to thermal fluid" annotation(Placement(visible = true, transformation(origin = {65, -5}, extent = {{-15, -15}, {15, 15}}, rotation = 0)));
       ICSolar.Module.ICS_LensLosses ics_lenslosses1 annotation(Placement(visible = true, transformation(origin = {-60, -2}, extent = {{-15, -15}, {15, 15}}, rotation = 0)));
       ICSolar.Module.ICS_PVPerformance ics_pvperformance1 annotation(Placement(visible = true, transformation(origin = {0, 0}, extent = {{-16.25, -16.25}, {16.25, 16.25}}, rotation = 0)));
-      Modelica.Blocks.Math.Add add annotation(Placement(transformation(extent = {{36, 32}, {46, 42}})));
+      Modelica.Blocks.Math.Product product1;
       Modelica.Blocks.Interfaces.RealOutput Power_out "Electrical generation outflow (to Parent)" annotation(Placement(visible = true, transformation(origin = {100, 54}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.Blocks.Interfaces.RealInput arrayPitch "pass pitch to module" annotation(Placement(visible = true, transformation(origin = {-100, 30}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       input Modelica.Blocks.Interfaces.RealInput Power_in "electrical power in from previous module or GND" annotation(Placement(visible = true, transformation(origin = {-100, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-      Modelica.Blocks.Interfaces.RealInput DNI "DNI into the Module" annotation(Placement(visible = true, transformation(origin = {-100, 18}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.Blocks.Interfaces.RealInput arrayYaw "pass yaw to module" annotation(Placement(visible = true, transformation(origin = {-100, 50}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-      ICSolar.Shading_Twelve shading_twelve1 annotation(Placement(visible = true, transformation(origin = {-60, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-      Modelica.Blocks.Interfaces.IntegerInput modNum annotation(Placement(visible = true, transformation(origin = {-100, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-80, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      //ICSolar.Shading_Twelve shading_twelve1 annotation(Placement(visible = true, transformation(origin = {-60, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      Modelica.Blocks.Interfaces.IntegerInput stackNum annotation(Placement(visible = true, transformation(origin = {-100, -100}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, -100}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      Modelica.Blocks.Interfaces.RealInput DNI "DNI into the Module" annotation(Placement(visible = true, transformation(origin = {-100, 18}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      Modelica.Blocks.Interfaces.IntegerInput modNum annotation(Placement(visible = true, transformation(origin = {-100, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      Integer RCType[2] = ShadingPalette(modNum, stackNum, StackHeight, NumOfStacks);
+      Integer rowType = RCType[1];
+      Integer colType = RCType[2];
+      Real SFraction = ShadingFractionFunction(rowType, colType, arrayYaw, arrayPitch);
+      Modelica.Blocks.Math.Add add annotation(Placement(visible = true, transformation(origin = {40, 40}, extent = {{-5, -5}, {5, 5}}, rotation = 0)));
+      //(rowType, colType) = ShadingPalette(modNum, stackNum, StackHeight, NumOfStacks);
+      //SFraction = ShadingFractionFunction(rowType, colType, arrayYaw, arrayPitch);
     equation
-      connect(modNum, shading_twelve1.ShadingTable);
-      connect(shading_twelve1.DNI_out, ics_lenslosses1.DNI_in) annotation(Line(points = {{-50, 42}, {-43.6957, 42}, {-43.6957, 14.205}, {-83.377, 14.205}, {-83.377, 6.94808}, {-75.3481, 6.94808}, {-75.3481, 6.94808}}, color = {0, 0, 127}));
-      connect(shading_twelve1.arrayPitch, arrayPitch) annotation(Line(points = {{-70, 40}, {-78.59050000000001, 40}, {-78.59050000000001, 30.4172}, {-95.8836, 30.4172}, {-95.8836, 30.4172}}, color = {0, 0, 127}));
-      connect(shading_twelve1.arrayYaw, arrayYaw) annotation(Line(points = {{-70, 44}, {-77.9729, 44}, {-77.9729, 49.4086}, {-96.038, 49.4086}, {-96.038, 49.4086}}, color = {0, 0, 127}));
-      connect(shading_twelve1.DNI_in, DNI) annotation(Line(points = {{-70, 48}, {-85.693, 48}, {-85.693, 17.6018}, {-95.72920000000001, 17.6018}, {-95.72920000000001, 17.6018}}, color = {0, 0, 127}));
-      connect(Power_in, add.u1) annotation(Line(points = {{-100, 60}, {-28, 60}, {-28, 40}, {35, 40}}, color = {0, 0, 127}));
+      connect(add.y, Power_out) annotation(Line(points = {{45.5, 40}, {69.25, 40}, {69.25, 54}, {100, 54}}, color = {0, 0, 127}));
+      connect(ics_pvperformance1.ElectricalGen, add.u2) annotation(Line(points = {{16.25, 6.5}, {16.25, 31.25}, {34, 31.25}, {34, 37}}, color = {0, 0, 127}));
+      connect(Power_in, add.u1) annotation(Line(points = {{-100, 60}, {-28, 60}, {34, 40}, {34, 43}}, color = {0, 0, 127}));
+      connect(product1.u1, DNI);
+      connect(product1.u2, SFraction);
+      //ics_lenslosses1.DNI_in = SFraction * DNI;
+      connect(product1.y, ics_lenslosses1.DNI_in);
+      //connect(modNum, shading_twelve1.ShadingTable);
+      //connect(shading_twelve1.DNI_out, ics_lenslosses1.DNI_in) annotation(Line(points = {{-50, 42}, {-43.6957, 42}, {-43.6957, 14.205}, {-83.377, 14.205}, {-83.377, 6.94808}, {-75.3481, 6.94808}, {-75.3481, 6.94808}}, color = {0, 0, 127}));
+      //connect(shading_twelve1.arrayPitch, arrayPitch) annotation(Line(points = {{-70, 40}, {-78.59050000000001, 40}, {-78.59050000000001, 30.4172}, {-95.8836, 30.4172}, {-95.8836, 30.4172}}, color = {0, 0, 127}));
+      //connect(shading_twelve1.arrayYaw, arrayYaw) annotation(Line(points = {{-70, 44}, {-77.9729, 44}, {-77.9729, 49.4086}, {-96.038, 49.4086}, {-96.038, 49.4086}}, color = {0, 0, 127}));
+      //connect(shading_twelve1.DNI_in, DNI) annotation(Line(points = {{-70, 48}, {-85.693, 48}, {-85.693, 17.6018}, {-95.72920000000001, 17.6018}, {-95.72920000000001, 17.6018}}, color = {0, 0, 127}));
       connect(modulereceiver1.flowport_b1, flowport_b1) annotation(Line(points = {{80, 5.71429}, {86.535, 5.71429}, {86.535, -40.2154}, {99.4614, -40.2154}, {99.4614, -40.2154}}, color = {255, 0, 0}));
       connect(TAmb_in, modulereceiver1.TAmb_in) annotation(Line(points = {{-100, 78}, {-2.90276, 78}, {-2.90276, 13.0624}, {50, 13.0624}, {50, 6.78571}}));
       connect(ics_pvperformance1.ThermalGen, modulereceiver1.ThermalGen) annotation(Line(points = {{16.25, -7.3125}, {45.38, -7.3125}, {45.38, 6.04915}, {50, 6.04915}, {50, -0.714286}}));
@@ -993,20 +1021,8 @@ Evidently yes. still sorting that one out, but let's not get distracted.
       connect(ics_lenslosses1.DNI_out, ics_pvperformance1.DNI_in) annotation(Line(points = {{-45, 4}, {-34.4045, 4}, {-34.4045, 0.378072}, {-16.25, 0.378072}, {-16.25, 0}}));
       connect(modulereceiver1.flowport_a1, flowport_a1) "Connect pump flow the heat receiver" annotation(Line(points = {{62, 10}, {39.4366, 10}, {39.4366, -40.1408}, {-100, -40.1408}, {-100, -40}}));
       connect(measured_eGen_on, ics_pvperformance1.PV_on);
-      //  end if;
-      //  if FresMat == "PMMA" then
-      //    FMatNum = 1;
-      //  elseif FresMat == "Silicon on Glass" then
-      //    FMatNum = 2;
-      //  else
-      //  end if;
-      //  ics_lens1.FMat = FMatNum "Connects FMatNum calculated in Module to Lens FMat input";
       ics_lenslosses1.LensWidth = LensWidth "Connects LensWidth defined in Module to Lens LensWidth";
       ics_lenslosses1.CellWidth = CellWidth "Connect CellWidth defined in Module to CellWidth in Lens";
-      // ics_pvperformance1.CellWidth = CellWidth "Connect CellWidth defined in Module to CellWidth in PVPerformance for EIPC calc on Cell";
-      // ics_lens1.FNum = FNum "Connects the FNumber defined in Module to FNum in Lens for concentration and transmission equations";
-      connect(ics_pvperformance1.ElectricalGen, add.u2) annotation(Line(points = {{16.25, 6.5}, {16.25, 31.25}, {35, 31.25}, {35, 34}}, color = {0, 0, 127}, smooth = Smooth.None));
-      connect(add.y, Power_out) annotation(Line(points = {{46.5, 37}, {69.25, 37}, {69.25, 54}, {100, 54}}, color = {0, 0, 127}, smooth = Smooth.None));
       annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2}), graphics = {Text(origin = {-1.41, 9.98}, extent = {{-67.14, 46.6}, {67.14, -46.6}}, textString = "Module")}), Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics));
     end ICS_Module_Twelve;
   end Module;
@@ -1126,7 +1142,7 @@ Evidently yes. still sorting that one out, but let's not get distracted.
     // C:\Users\Kenton\Documents\GitHub\RPI_CASE_ICS_Modelica
     // parameter String Path = "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\";
     //   parameter String Path = "C:\\Users\\Kenton\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\";
-    parameter String Path = "C:\\Users\\Nick\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\";
+    parameter String Path = "C:\\Users\\JShultz\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\";
     //    parameter String Path = "C:\\Users\\Nicholas.Novelli\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\";
     //________________________________
     //////// MODEL OPERATION /////////
@@ -1142,7 +1158,7 @@ Evidently yes. still sorting that one out, but let's not get distracted.
     ///// ARRAY SIZING /////
     ////////////////////////
     parameter Integer StackHeight = 6 "Number of Modules per stack";
-    parameter Integer NumOfStacks = 2 "Number of stacks, controls the .Stack object";
+    parameter Integer NumOfStacks = 3 "Number of stacks, controls the .Stack object";
     parameter Integer NumOfModules = StackHeight * NumOfStacks "ModulesPerStack * NumOfStacks Number of modules being simulated. Will be replaced with a calculation based on wall area in the future.";
     parameter Real GlassArea = NumOfModules * 0.3 * 0.3 "Glass Area exposed to either the interior or exterior. Could be replaced later with wall area";
     parameter Real CavityVolume = GlassArea * 0.5 "Volume of cavity for air calculations";
@@ -1461,7 +1477,7 @@ Evidently yes. still sorting that one out, but let's not get distracted.
 
   model shadingImport
     //   parameter String Path_2 = "C:\\Users\\Kenton\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\shading_matrices\\";
-    parameter String Path_2 = "C:\\Users\\Nick\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\shading_matrices\\";
+    parameter String Path_2 = "C:\\Users\\JShultz\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\shading_matrices\\";
     //    parameter String Path_2 = "C:\\Users\\Nicholas.Novelli\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\shading_matrices\\";
     Modelica.Blocks.Tables.CombiTable2D modShadingLUT_1(tableOnFile = true, fileName = Path_2 + "1" + ".txt", tableName = "shading_matrix", smoothness = Modelica.Blocks.Types.Smoothness.LinearSegments);
     Modelica.Blocks.Tables.CombiTable2D modShadingLUT_2(tableOnFile = true, fileName = Path_2 + "2" + ".txt", tableName = "shading_matrix", smoothness = Modelica.Blocks.Types.Smoothness.LinearSegments);
@@ -1522,5 +1538,63 @@ Evidently yes. still sorting that one out, but let's not get distracted.
     //##############################################################################
     annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {1, 1})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {0.5, 0.5})));
   end testPalette;
+
+  function ShadingPalette
+    input Integer ModuleRow;
+    input Integer ModuleCol;
+    input Integer ArrayRows;
+    input Integer ArrayCols;
+    output Integer RCType[2];
+  protected
+    Integer FractExposedTypeRow;
+    Integer FractExposedTypeCol;
+  algorithm
+    //
+    //this first case is a robustness measure, solving an out-of-bounds condition
+    if ModuleCol > ArrayCols then
+      FractExposedTypeCol := 3;
+    elseif ModuleCol < 2 then
+      FractExposedTypeCol := 1;
+    elseif ModuleCol < 3 then
+      FractExposedTypeCol := 2;
+    elseif ModuleCol > ArrayCols - 1 then
+      FractExposedTypeCol := 5;
+    elseif ModuleCol > ArrayCols - 2 then
+      FractExposedTypeCol := 4;
+    else
+      FractExposedTypeCol := 3;
+    end if;
+    //
+    //this first case is a robustness measure, solving an out-of-bounds condition
+    if ModuleRow > ArrayRows then
+      FractExposedTypeRow := 3;
+    elseif ModuleRow < 2 then
+      FractExposedTypeRow := 1;
+    elseif ModuleRow < 3 then
+      FractExposedTypeRow := 2;
+    elseif ModuleRow > ArrayRows - 1 then
+      FractExposedTypeRow := 5;
+    elseif ModuleRow > ArrayRows - 2 then
+      FractExposedTypeRow := 4;
+    else
+      FractExposedTypeRow := 3;
+    end if;
+    RCType[1] := FractExposedTypeRow;
+    RCType[2] := FractExposedTypeCol;
+    //##############################################################################
+    annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})));
+  end ShadingPalette;
+
+  function ShadingFractionFunction
+    input Integer rowType;
+    input Integer colType;
+    input Real arrayYaw;
+    input Real arrayPitch;
+    output Real SFraction;
+  algorithm
+    // The below equation is simply a placeholder until the real function is available
+    SFraction := rowType * colType * arrayYaw * arrayPitch;
+    annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})));
+  end ShadingFractionFunction;
   annotation(uses(Modelica(version = "3.2.1"), Buildings(version = "1.6")), experiment(StartTime = 7137000.0, StopTime = 7141200.0, Tolerance = 1e-006, Interval = 60));
 end ICSolar;
