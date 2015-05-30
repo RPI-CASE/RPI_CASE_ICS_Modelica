@@ -688,12 +688,12 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       ICSolar.Module.ICS_LensLosses ics_lenslosses1 annotation(Placement(visible = true, transformation(origin = {-60, -2}, extent = {{-15, -15}, {15, 15}}, rotation = 0)));
       ICSolar.Module.ICS_PVPerformance ics_pvperformance1 annotation(Placement(visible = true, transformation(origin = {0, 0}, extent = {{-16.25, -16.25}, {16.25, 16.25}}, rotation = 0)));
       Modelica.Blocks.Math.Add add annotation(Placement(transformation(extent = {{36, 32}, {46, 42}})));
-      ICSolar.Receiver.moduleReceiver modulereceiver1 "Heat Receiver to calculate the heat transfer between heat gen and heat transfered to thermal fluid" annotation(Placement(visible = true, transformation(origin = {60, 0}, extent = {{-15, -8.571429999999999}, {15, 21.4286}}, rotation = 0)));
+      ICSolar.Receiver.moduleReceiver modulereceiver1 "Heat Receiver to calculate the heat transfer between heat gen and heat transfered to thermal fluid" annotation(Placement(visible = true, transformation(origin = {60, 0}, extent = {{-15, -8.57144}, {15, 21.4286}}, rotation = 0)));
     equation
-      connect(modulereceiver1.flowport_a1, flowport_a1) annotation(Line(points = {{57, 21.4286}, {39.4366, 21.4286}, {39.4366, -40.1408}, {-100, -40.1408}, {-100, -40}}));
-      connect(ics_pvperformance1.ThermalGen, modulereceiver1.ThermalGen) annotation(Line(points = {{16.25, -7.3125}, {45.38, -7.3125}, {45.38, 6.04915}, {50, 10.7143}, {45, 10.7143}}));
-      connect(TAmb_in, modulereceiver1.TAmb_in) annotation(Line(points = {{-100, 78}, {-2.90276, 78}, {-2.90276, 13.0624}, {50, 18.2143}, {45, 18.2143}}));
       connect(modulereceiver1.flowport_b1, flowport_b1) annotation(Line(points = {{75, 10.7143}, {86.535, 10.7143}, {86.535, -40.2154}, {99.4614, -40.2154}, {99.4614, -40.2154}}, color = {255, 0, 0}));
+      connect(TAmb_in, modulereceiver1.TAmb_in) annotation(Line(points = {{-100, 78}, {-2.90276, 78}, {-2.90276, 13.0624}, {50, 18.2143}, {45, 18.2143}}));
+      connect(ics_pvperformance1.ThermalGen, modulereceiver1.ThermalGen) annotation(Line(points = {{16.25, -7.3125}, {45.38, -7.3125}, {45.38, 6.04915}, {50, 10.7143}, {45, 10.7143}}));
+      connect(modulereceiver1.flowport_a1, flowport_a1) annotation(Line(points = {{57, 21.4286}, {39.4366, 21.4286}, {39.4366, -40.1408}, {-100, -40.1408}, {-100, -40}}));
       connect(ics_lenslosses1.ConcentrationFactor, ics_pvperformance1.ConcentrationFactor) annotation(Line(points = {{-45, -11}, {-39.3195, -11}, {-39.3195, -9.82987}, {-16.25, -9.82987}, {-16.25, -9.75}}));
       connect(ics_lenslosses1.DNI_out, ics_pvperformance1.DNI_in) annotation(Line(points = {{-45, 4}, {-34.4045, 4}, {-34.4045, 0.378072}, {-16.25, 0.378072}, {-16.25, 0}}));
       connect(DNI, ics_lenslosses1.DNI_in) annotation(Line(points = {{-100, 18}, {-75, 18}, {-75, 7}}));
@@ -735,18 +735,23 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
 
     model ICS_PVPerformance "This model uses the EIPC (based on cell area) and PVEfficiency (based on ConcentrationFactor) to calculate the ElectricalGen and ThermalGen"
       extends ICSolar.Parameters;
+      //
+      //##############################################################################
       // parameter Real Eta_Observed = Exp_Observed "From ICSolar.Parameters, observed electrical efficiency of ICSFg8";
       // parameter Real Eta_nom_tweak = Exp_nom_tweak "From ICSolar.Parameters, matching the observed to modeled data, compensating for temperature 'unknown'. 0.364 matches the Nov25-13 data well when eta_observed is 0.215. set same as eta_obs for full-strength output.";
       Real CellWidth = 0.01 "Width of the PV Cell";
       Real CellEfficiency = 0.36436 + (52.5 - (ThermalGen.T - 273.15)) * 0.0005004 + (ConcentrationFactor - 627.5) * 1.9965e-006;
       //* Exp_Observed / Exp_nom_tweak "Equation to determine the PVEfficiency from the ConcentrationFactor and Cell Temperature";
       Real EIPC "Energy In Per Cell";
+      //
+      //##############################################################################
       Modelica.Blocks.Interfaces.RealOutput ElectricalGen "Real output for piping the generated electrical energy out" annotation(Placement(visible = true, transformation(origin = {100, 20}, extent = {{-25, -25}, {25, 25}}, rotation = 0), iconTransformation(origin = {100, 40}, extent = {{-25, -25}, {25, 25}}, rotation = 0)));
       Modelica.Thermal.HeatTransfer.Interfaces.HeatPort_b ThermalGen "Output heat port to pipe the generated heat out and to the heat receiver" annotation(Placement(visible = true, transformation(origin = {100, -60}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {100, -45}, extent = {{-25, -25}, {25, 25}}, rotation = 0)));
       //Modelica.Blocks.Interfaces.IntegerInput modNum annotation(Placement(visible = true, transformation(origin = {-100,80}, extent = {{-25,-25},{25,25}}, rotation = 0), iconTransformation(origin = {-80,80}, extent = {{-10,-10},{10,10}}, rotation = 0)));
       Modelica.Blocks.Interfaces.RealInput ConcentrationFactor "Used to represent 'suns's for the calculation of PVEfficiency" annotation(Placement(visible = true, transformation(origin = {-100, -40}, extent = {{-25, -25}, {25, 25}}, rotation = 0), iconTransformation(origin = {-100, -60}, extent = {{-15, -15}, {15, 15}}, rotation = 0)));
       Modelica.Blocks.Interfaces.RealInput DNI_in "DNI in from the Lens model (include Concentration)" annotation(Placement(visible = true, transformation(origin = {-100, 0}, extent = {{-25, -25}, {25, 25}}, rotation = 0), iconTransformation(origin = {-100, 0}, extent = {{-15, -15}, {15, 15}}, rotation = 0)));
       Modelica.Blocks.Interfaces.RealInput PV_on annotation(Placement(visible = true, transformation(origin = {-100, 40}, extent = {{-25, -25}, {25, 25}}, rotation = 0), iconTransformation(origin = {-40, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      //##############################################################################
     equation
       EIPC = DNI_in * CellWidth ^ 2 "Energy In Per Cell, used to calculate maximum energy on the cell";
       ElectricalGen = EIPC * CellEfficiency * PV_on "Electrical energy conversion";
@@ -878,6 +883,66 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       annotation(Icon(coordinateSystem(extent = {{-60, -60}, {60, 60}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-60, -60}, {60, 60}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2}), graphics = {Rectangle(origin = {0, 0}, extent = {{-60, 60}, {60, -60}})}));
     end chooseShadeMatrix;
 
+    model chooseFractExposedLUTPosition "based on a module's position in an ICSF array, choose it's position in the 5x5 array of 'shading' types. Outputs a 2D vector somewhere in the space of [1:5 1:5]"
+      //
+      //extends ICSolar.Parameters;
+      //
+      //______________________________________________________________________________
+      Modelica.Blocks.Interfaces.IntegerInput ModuleRow "Module Row" annotation(Placement(visible = true, transformation(origin = {-100, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      Modelica.Blocks.Interfaces.IntegerInput ModuleCol "Module Column" annotation(Placement(visible = true, transformation(origin = {-100, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      Modelica.Blocks.Interfaces.IntegerInput ArrayRows "Rows in Array" annotation(Placement(visible = true, transformation(origin = {-100, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      Modelica.Blocks.Interfaces.IntegerInput ArrayCols "Columns in Array" annotation(Placement(visible = true, transformation(origin = {-100, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      //
+      //______________________________________________________________________________
+      output Modelica.Blocks.Interfaces.IntegerOutput FractExposedTypeRow "Enumeration of FractExposed Row" annotation(Placement(visible = true, transformation(origin = {110, 10}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 10}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      output Modelica.Blocks.Interfaces.IntegerOutput FractExposedTypeCol "Enumeration of FractExposed Column" annotation(Placement(visible = true, transformation(origin = {110, -10}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, -10}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      //
+      //______________________________________________________________________________
+    algorithm
+      //
+      //this first case is a robustness measure, solving an out-of-bounds condition
+      if ModuleCol > ArrayCols then
+        FractExposedTypeCol := 3;
+      elseif ModuleCol < 2 then
+        FractExposedTypeCol := 1;
+      elseif ModuleCol < 3 then
+        FractExposedTypeCol := 2;
+      elseif ModuleCol > ArrayCols - 1 then
+        FractExposedTypeCol := 5;
+      elseif ModuleCol > ArrayCols - 2 then
+        FractExposedTypeCol := 4;
+      else
+        FractExposedTypeCol := 3;
+      end if;
+      //
+      //this first case is a robustness measure, solving an out-of-bounds condition
+      if ModuleRow > ArrayRows then
+        FractExposedTypeRow := 3;
+      elseif ModuleRow < 2 then
+        FractExposedTypeRow := 1;
+      elseif ModuleRow < 3 then
+        FractExposedTypeRow := 2;
+      elseif ModuleRow > ArrayRows - 1 then
+        FractExposedTypeRow := 5;
+      elseif ModuleRow > ArrayRows - 2 then
+        FractExposedTypeRow := 4;
+      else
+        FractExposedTypeRow := 3;
+      end if;
+      //##############################################################################
+      annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2}), graphics = {Rectangle(origin = {0, 0}, extent = {{-100, 100}, {100, -100}})}), Documentation(info = "<html>
+<p>
+This didn't work with equations, so shifted over to algortihm. There was a div/0 problem if your mod or col was the last possible mod or col, which I get on a basic level. 
+
+OK, I see now that my logic is delivering, somehow, an output of 0 if the mod or col is trying to choose the last row or column. 
+
+So was it necessary to take the parameter designations off the integer inputs?
+
+Evidently yes. still sorting that one out, but let's not get distracted.
+</p>
+</html>"));
+    end chooseFractExposedLUTPosition;
+
     model ICS_Module_Twelve "This model contains all the components and equations that simulate one module of Integrated Concentrating Solar"
       extends ICSolar.Parameters;
       parameter Modelica.SIunits.Length LensWidth = 0.25019 "Width of Fresnel Lens, meters";
@@ -944,20 +1009,20 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       Real temp_flowport_a = water_Block_HX1.flowport_a1.H_flow / (water_Block_HX1.flowport_a1.m_flow * mediumHTF.cp);
       Real temp_flowport_b = abs(water_Block_HX1.flowport_b1.H_flow / (flowport_a1.m_flow * mediumHTF.cp));
       ICSolar.Receiver.subClasses.receiverInternalEnergy receiverInternalEnergy1 annotation(Placement(visible = true, transformation(origin = {-158.447, -48.4473}, extent = {{-23.4473, -23.4473}, {23.4473, 23.4473}}, rotation = 0)));
-      ICSolar.Receiver.subClasses.Water_Block_HX water_Block_HX1 annotation(Placement(visible = true, transformation(origin = {-28.4646, 3.4646}, extent = {{-33.4646, -33.4646}, {33.4646, 33.4646}}, rotation = 0)));
-      ICSolar.Receiver.subClasses.Tubing_Losses tubing_Losses1(Tubing(medium = mediumHTF, m = 0.0023, T0 = 298.15, V_flowLaminar(displayUnit = "l/min") = 4.1666666666667e-006, dpLaminar(displayUnit = "kPa") = 1000, V_flowNominal(displayUnit = "l/min") = 0.00041666666666667, dpNominal(displayUnit = "kPa") = 100000, h_g = 0.3)) annotation(Placement(visible = true, transformation(origin = {61.4355, -1.4355}, extent = {{-31.4355, -31.4355}, {31.4355, 31.4355}}, rotation = 0)));
       Modelica.Thermal.FluidHeatFlow.Interfaces.FlowPort_b flowport_b1(medium = mediumHTF) annotation(Placement(visible = true, transformation(origin = {200, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {200, 100}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.Thermal.HeatTransfer.Interfaces.HeatPort_a TAmb_in annotation(Placement(visible = true, transformation(origin = {-200, 170}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-200, 170}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.Thermal.HeatTransfer.Interfaces.HeatPort_a ThermalGen annotation(Placement(visible = true, transformation(origin = {-200, -10}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-200, 100}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.Thermal.FluidHeatFlow.Interfaces.FlowPort_a flowport_a1(medium = mediumHTF) annotation(Placement(visible = true, transformation(origin = {-200, 40}, extent = {{-10, -10}, {10, 10}}, rotation = -90), iconTransformation(origin = {-40, 200}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      ICSolar.Receiver.subClasses.Water_Block_HX water_Block_HX1 annotation(Placement(visible = true, transformation(origin = {0, 0}, extent = {{-33.4646, -33.4646}, {33.4646, 33.4646}}, rotation = 0)));
+      ICSolar.Receiver.subClasses.Tubing_Losses tubing_Losses1(Tubing(medium = mediumHTF, m = 0.0023, T0 = 298.15, V_flowLaminar(displayUnit = "l/min") = 4.1666666666667e-006, dpLaminar(displayUnit = "kPa") = 1000, V_flowNominal(displayUnit = "l/min") = 0.00041666666666667, dpNominal(displayUnit = "kPa") = 100000, h_g = 0.3)) annotation(Placement(visible = true, transformation(origin = {100, 0}, extent = {{-31.4355, -31.4355}, {31.4355, 31.4355}}, rotation = 0)));
     equation
-      connect(water_Block_HX1.flowport_b1, tubing_Losses1.flowport_a1) annotation(Line(points = {{5.66929, 2.12602}, {16.7742, 2.12602}, {16.7742, -0.860215}, {30.5376, -0.860215}, {30.5376, -0.860215}}, color = {255, 0, 0}));
-      connect(TAmb_in, tubing_Losses1.port_a) annotation(Line(points = {{-200, 170}, {123.541, 170}, {123.541, -23.164}, {92.2496, -23.164}, {92.2496, -23.164}}));
-      connect(tubing_Losses1.flowport_b1, flowport_b1) annotation(Line(points = {{92.871, -1.4355}, {137.358, -1.4355}, {137.358, 58.1132}, {200, 58.1132}, {200, 60}}));
-      connect(ThermalGen, water_Block_HX1.energyFrom_CCA) annotation(Line(points = {{-200, -10}, {-119.049, -10}, {-119.049, -9.75}, {-61.929, -9.75}, {-61.929, -9.92}}));
-      connect(receiverInternalEnergy1.port_b, water_Block_HX1.heatCap_waterBlock) annotation(Line(visible = true, origin = {-79.7717, -20.413}, points = {{-55.228, -13.9659}, {-5.2283, -13.9659}, {-5.2283, -4.587}, {17.8425, -4.587}, {17.8425, -2.89408}}, color = {191, 0, 0}));
-      connect(flowport_a1, water_Block_HX1.flowport_a1) annotation(Line(points = {{-200, 40}, {-130, 40}, {-130, 16.8504}, {-61.9292, 16.8504}}, color = {255, 0, 0}, smooth = Smooth.None));
-      connect(TAmb_in, water_Block_HX1.heatLoss_to_ambient) annotation(Line(points = {{-200, 170}, {-140, 170}, {-140, 3.4646}, {-61.9292, 3.4646}}, color = {191, 0, 0}, smooth = Smooth.None));
+      connect(tubing_Losses1.flowport_b1, flowport_b1) annotation(Line(points = {{131.435, 0}, {137.358, 0}, {137.358, 58.1132}, {200, 58.1132}, {200, 60}}));
+      connect(TAmb_in, tubing_Losses1.port_a) annotation(Line(points = {{-200, 170}, {123.541, 170}, {123.541, -23.164}, {92.2496, -22.0048}, {132.064, -22.0048}}));
+      connect(water_Block_HX1.flowport_b1, tubing_Losses1.flowport_a1) annotation(Line(points = {{34.1339, -1.33858}, {16.7742, -1.33858}, {16.7742, -0.860215}, {30.5376, 0}, {68.5645, 0}}, color = {255, 0, 0}));
+      connect(TAmb_in, water_Block_HX1.heatLoss_to_ambient) annotation(Line(points = {{-200, 170}, {-140, 170}, {-33.4646, 3.4646}, {-33.4646, 0}}, color = {191, 0, 0}));
+      connect(flowport_a1, water_Block_HX1.flowport_a1) annotation(Line(points = {{-200, 40}, {-130, 40}, {-130, 13.3858}, {-33.4646, 13.3858}}, color = {255, 0, 0}));
+      connect(receiverInternalEnergy1.port_b, water_Block_HX1.heatCap_waterBlock) annotation(Line(points = {{-135, -34.3789}, {-85, -34.3789}, {-85, -25}, {-61.9292, -26.7717}, {-33.4646, -26.7717}}, color = {191, 0, 0}));
+      connect(ThermalGen, water_Block_HX1.energyFrom_CCA) annotation(Line(points = {{-200, -10}, {-119.049, -10}, {-119.049, -9.75}, {-61.929, -13.3858}, {-33.4646, -13.3858}}));
       annotation(Diagram(coordinateSystem(extent = {{-200, -80}, {200, 200}}, preserveAspectRatio = false, initialScale = 0.1, grid = {10, 10}), graphics = {Text(origin = {12.5, 110}, fillPattern = FillPattern.Solid, extent = {{-42.5, -5}, {42.5, 5}}, textString = "Bring the Ambient Sources and pump Outside the Class ", fontName = "Arial")}), Icon(coordinateSystem(extent = {{-200, -80}, {200, 200}}, preserveAspectRatio = false, initialScale = 0.1, grid = {10, 10}), graphics = {Text(origin = {3.12, 117.49}, extent = {{-133.92, 40.92}, {133.92, -40.92}}, textString = "Heat"), Text(origin = {9.854509999999999, 16.9292}, extent = {{-154.79, 56.03}, {154.79, -56.03}}, textString = "Receiver")}));
     end moduleReceiver;
 
@@ -999,6 +1064,8 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
         Modelica.Thermal.FluidHeatFlow.Components.HeatedPipe heatedpipe1(h_g = 0, T0 = TAmb, medium = mediumHTF, T(start = TAmb), pressureDrop(fixed = false), T0fixed = false, m = 0.003, dpNominal(displayUnit = "kPa") = 62270, V_flowLaminar(displayUnit = "l/min") = 1.6666666666667e-006, dpLaminar(displayUnit = "kPa") = 14690, V_flowNominal(displayUnit = "l/min") = 3.995e-006) annotation(Placement(visible = true, transformation(origin = {-20, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
         Modelica.Thermal.HeatTransfer.Components.ThermalResistor thermalresistor_waterblock(R = Resistivity_WaterPlate) annotation(Placement(visible = true, transformation(origin = {-20, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 90)));
         Modelica.Thermal.HeatTransfer.Components.ThermalResistor thermalresistor_celltoreceiver(R = Resistivity_Cell) annotation(Placement(visible = true, transformation(origin = {-60, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+        //
+        //______________________________________________________________________________
       equation
         connect(thermalconductor1.port_a, thermalcollector1.port_a[3]) annotation(Line(points = {{10, 0}, {-20.029, 0}, {-20.029, -10.1597}, {-20.029, -10.1597}}));
         connect(thermalresistor_waterblock.port_a, thermalcollector1.port_a[2]) annotation(Line(points = {{-20, 10}, {-20, -9.5791}, {-19.4485, -9.5791}, {-19.4485, -9.5791}}));
@@ -1048,13 +1115,13 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     //need to change path here to compile, also where path_2 shows up:
     // C:\Users\Kenton\Documents\GitHub\RPI_CASE_ICS_Modelica
     // parameter String Path = "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\";
-    parameter String Path = "C:\\Users\\Kenton\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\";
-    // parameter String Path = "C:\\Users\\Nick\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\";
+    //   parameter String Path = "C:\\Users\\Kenton\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\";
+    parameter String Path = "C:\\Users\\Nick\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\";
     //    parameter String Path = "C:\\Users\\Nicholas.Novelli\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\";
-    //////////////////////////////////
+    //________________________________
     //////// MODEL OPERATION /////////
-    //////////////////////////////////
-    parameter Boolean isStudioExperiment = true "True if this run is referring to the gen8 studio experiment";
+    //--------------------------------
+    parameter Boolean isStudioExperiment = true "True if this run is referring to the gen8 studio experiment. For now, just search through the code for the variable name and flip things where necessary";
     //////////////////////////////////
     ///// BUILDING CONFIGURATION /////
     //////////////////////////////////
@@ -1102,10 +1169,16 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     //////////////////////////////////////
     ///// HEAT TRANSFER COEFFICIENTS /////
     //////////////////////////////////////
-    parameter Real Resistivity_WaterBlock = 5.69e-006 * OneBranchFlow ^ (-0.773) "Thermal resisitivity of the water block heat exchanger";
-    //5.69e-6 * OneBranchFlow ^ (-0.773)
+    parameter Real Resistivity_WaterBlock = 5.05e3 * OneBranchFlow ^ (-0.773) "Thermal resisitivity of the water block heat exchanger";
     parameter Real Resistivity_Cell = 0.22 "The thermal heat resistivity of the photovoltaic cell";
-    parameter Real Resistivity_WaterPlate = 0.8 "Thermal resisitivity of the water plate heat exchanger";
+    //?Why doesn't this if structure work here? for now, swap things manually
+    //if isStudioExperiment == true then
+    parameter Real Resistivity_WaterPlate = 0.8 "Thermal resisitivity of the water plate heat exchanger, experiment";
+    //else
+    //  parameter Real Resistivity_WaterPlate = 5.05e3 * OneBranchFlow ^ (-0.773) "Thermal resisitivity of the water block heat exchanger, projected";
+    //end if;
+    //
+    //
     parameter Real Cond_RecToEnv = adj_2 * 0.083 "This is a thermal conductivity to determine the amount of heat lost to the environment from the receiver";
     //parameter Real Conv_Receiver = 0.0534;
     parameter Real Conv_Receiver = adj_2 * 5;
@@ -1377,8 +1450,8 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
   end ShadingLUT0;
 
   model shadingImport
-    parameter String Path_2 = "C:\\Users\\Kenton\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\shading_matrices\\";
-    //parameter String Path_2 = "C:\\Users\\Nick\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\shading_matrices\\";
+    //   parameter String Path_2 = "C:\\Users\\Kenton\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\shading_matrices\\";
+    parameter String Path_2 = "C:\\Users\\Nick\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\shading_matrices\\";
     //    parameter String Path_2 = "C:\\Users\\Nicholas.Novelli\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\shading_matrices\\";
     Modelica.Blocks.Tables.CombiTable2D modShadingLUT_1(tableOnFile = true, fileName = Path_2 + "1" + ".txt", tableName = "shading_matrix", smoothness = Modelica.Blocks.Types.Smoothness.LinearSegments);
     Modelica.Blocks.Tables.CombiTable2D modShadingLUT_2(tableOnFile = true, fileName = Path_2 + "2" + ".txt", tableName = "shading_matrix", smoothness = Modelica.Blocks.Types.Smoothness.LinearSegments);
@@ -1410,5 +1483,79 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
                                         Medium: properties of water
                                         </html>"));
   end Water_rhovT;
+
+  model testPalette
+    //##############################################################################
+    //##############################################################################
+    Modelica.Blocks.Sources.IntegerConstant ModRow(k = 1) annotation(Placement(visible = true, transformation(origin = {-60, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Blocks.Sources.IntegerConstant ModCol(k = 15) annotation(Placement(visible = true, transformation(origin = {-60, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Blocks.Sources.IntegerConstant ArrRows(k = 10) annotation(Placement(visible = true, transformation(origin = {-60, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Blocks.Sources.IntegerConstant ArrCols(k = 16) annotation(Placement(visible = true, transformation(origin = {-60, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    //##############################################################################
+    //##############################################################################
+    output Modelica.Blocks.Interfaces.IntegerOutput FractExposedTypeRow "Enumeration of FractExposed Row" annotation(Placement(visible = true, transformation(origin = {110, 10}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 10}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    output Modelica.Blocks.Interfaces.IntegerOutput FractExposedTypeCol "Enumeration of FractExposed Column" annotation(Placement(visible = true, transformation(origin = {110, -10}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, -10}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    output Modelica.Blocks.Interfaces.IntegerOutput FractExposedTypeRow2 "Enumeration of FractExposed Row" annotation(Placement(visible = true, transformation(origin = {110, 10}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 10}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    output Modelica.Blocks.Interfaces.IntegerOutput FractExposedTypeCol2 "Enumeration of FractExposed Column" annotation(Placement(visible = true, transformation(origin = {110, -10}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, -10}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    //
+    //______________________________________________________________________________
+    ICSolar.Module.chooseFractExposedLUTPosition choosefractexposedlutposition1 annotation(Placement(visible = true, transformation(origin = {5, -25}, extent = {{-15, -15}, {15, 15}}, rotation = 0)));
+  equation
+    connect(ArrCols.y, choosefractexposedlutposition1.ArrayCols) annotation(Line(points = {{-49, -60}, {-47.8261, -60}, {-47.8261, -34.2995}, {-10.628, -34.2995}, {-10.628, -34.2995}}, color = {255, 127, 0}));
+    connect(ArrRows.y, choosefractexposedlutposition1.ArrayRows) annotation(Line(points = {{-49, -20}, {-46.6184, -20}, {-46.6184, -28.5024}, {-11.5942, -28.5024}, {-11.5942, -28.5024}}, color = {255, 127, 0}));
+    connect(ModCol.y, choosefractexposedlutposition1.ModuleCol) annotation(Line(points = {{-49, 20}, {-42.5121, 20}, {-42.5121, -22.7053}, {-9.42029, -22.7053}, {-9.42029, -22.7053}}, color = {255, 127, 0}));
+    connect(ModRow.y, choosefractexposedlutposition1.ModuleRow) annotation(Line(points = {{-49, 60}, {-42.029, 60}, {-42.029, -16.1836}, {-9.42029, -16.1836}, {-9.42029, -16.1836}}, color = {255, 127, 0}));
+    connect(choosefractexposedlutposition1.FractExposedTypeCol, FractExposedTypeCol) annotation(Line(points = {{20, -26.5}, {42.9675, -26.5}, {42.9675, -10.2009}, {102.628, -10.2009}, {102.628, -10.2009}}, color = {255, 127, 0}));
+    connect(choosefractexposedlutposition1.FractExposedTypeRow, FractExposedTypeRow) annotation(Line(points = {{20, -23.5}, {34.6213, -23.5}, {34.6213, 9.27357}, {102.318, 9.27357}, {102.318, 9.27357}}, color = {255, 127, 0}));
+    (FractExposedTypeRow2, FractExposedTypeCol2) = ShadingPalette(2, 16, 10, 16);
+    //  connect(ArrayCols.y, choosefractexposedlutposition2.ArrayCols) annotation(Line(points = {{-49, -60}, {-35.5487, -60}, {-35.5487, 26.2751}, {-10.2009, 26.2751}, {-10.2009, 26.2751}}, color = {255, 127, 0}));
+    //  connect(ArrayRows.y, choosefractexposedlutposition2.ArrayRows) annotation(Line(points = {{-49, -20}, {-41.1128, -20}, {-41.1128, 31.8393}, {-10.2009, 31.8393}, {-10.2009, 31.8393}}, color = {255, 127, 0}));
+    //  connect(ModuleCol.y, choosefractexposedlutposition2.ModuleCol) annotation(Line(points = {{-49, 20}, {-44.204, 20}, {-44.204, 37.7125}, {-11.1283, 37.7125}, {-11.1283, 37.7125}}, color = {255, 127, 0}));
+    //  connect(ModuleRow.y, choosefractexposedlutposition2.ModuleRow) annotation(Line(points = {{-49, 60}, {-44.204, 60}, {-44.204, 43.8949}, {-10.2009, 43.8949}, {-10.2009, 43.8949}}, color = {255, 127, 0}));
+    //##############################################################################
+    annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {1, 1})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {0.5, 0.5})));
+  end testPalette;
+
+  function ShadingPalette
+    input Integer ModuleRow;
+    input Integer ModuleCol;
+    input Integer ArrayRows;
+    input Integer ArrayCols;
+    output Integer FractExposedTypeRow;
+    output Integer FractExposedTypeCol;
+  algorithm
+    //
+    //this first case is a robustness measure, solving an out-of-bounds condition
+    if ModuleCol > ArrayCols then
+      FractExposedTypeCol := 3;
+    elseif ModuleCol < 2 then
+      FractExposedTypeCol := 1;
+    elseif ModuleCol < 3 then
+      FractExposedTypeCol := 2;
+    elseif ModuleCol > ArrayCols - 1 then
+      FractExposedTypeCol := 5;
+    elseif ModuleCol > ArrayCols - 2 then
+      FractExposedTypeCol := 4;
+    else
+      FractExposedTypeCol := 3;
+    end if;
+    //
+    //this first case is a robustness measure, solving an out-of-bounds condition
+    if ModuleRow > ArrayRows then
+      FractExposedTypeRow := 3;
+    elseif ModuleRow < 2 then
+      FractExposedTypeRow := 1;
+    elseif ModuleRow < 3 then
+      FractExposedTypeRow := 2;
+    elseif ModuleRow > ArrayRows - 1 then
+      FractExposedTypeRow := 5;
+    elseif ModuleRow > ArrayRows - 2 then
+      FractExposedTypeRow := 4;
+    else
+      FractExposedTypeRow := 3;
+    end if;
+    //##############################################################################
+    annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})));
+  end ShadingPalette;
   annotation(uses(Modelica(version = "3.2.1"), Buildings(version = "1.6")), experiment(StartTime = 7137000.0, StopTime = 7141200.0, Tolerance = 1e-006, Interval = 60));
 end ICSolar;
