@@ -12,7 +12,8 @@ load ([modelname,'_res.mat']);
 %Sort out double times 
 
 
-deltat0=find(diff(data_2(1,:))<1e-5);
+%deltat0=find(diff(data_2(1,:))<1e-5);
+deltat0=find(diff(data_2(1,:))<120);
 disp(['Removed same time values: ',num2str(length(deltat0)),'/',num2str(length(data_2(1,:)))])
 assignin('base','data_2',data_2);
 assignin('base','dataInfo',dataInfo);

@@ -11,15 +11,21 @@ extern "C" {
 #endif
 
 
-DLLExport
-modelica_real omc_RMSE(threadData_t *threadData, real_array _x1, real_array _x2);
-DLLExport
-modelica_metatype boxptr_RMSE(threadData_t *threadData, modelica_metatype _x1, modelica_metatype _x2);
-static const MMC_DEFSTRUCTLIT(boxvar_lit_RMSE,2,0) {boxptr_RMSE,0}};
-#define boxvar_RMSE MMC_REFSTRUCTLIT(boxvar_lit_RMSE)
+typedef struct RMSE_rettype_s {
+  modelica_real c1; /* error */
+} RMSE_rettype;
 
+DLLExport
+int in_RMSE(type_description * inArgs, type_description * outVar);
+DLLExport
+RMSE_rettype omc_RMSE(threadData_t *threadData, real_array _x1, real_array _x2);
+
+
+/* start - annotation(Include=...) if we have any */
+/* end - annotation(Include=...) */
 
 #ifdef __cplusplus
 }
 #endif
 #endif
+

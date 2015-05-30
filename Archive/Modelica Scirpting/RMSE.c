@@ -1,52 +1,58 @@
 #include "RMSE.h"
 #include "util/modelica.h"
-
-#include "RMSE_includes.h"
-
-
-void (*omc_assert)(threadData_t*,FILE_INFO info,const char *msg,...) __attribute__ ((noreturn)) = omc_assert_function;
+void (*omc_assert)(threadData_t*,FILE_INFO info,const char *msg,...) = omc_assert_function;
 void (*omc_assert_warning)(FILE_INFO info,const char *msg,...) = omc_assert_warning_function;
 void (*omc_terminate)(FILE_INFO info,const char *msg,...) = omc_terminate_function;
-void (*omc_throw)(threadData_t*) __attribute__ ((noreturn)) = omc_throw_function;
+void (*omc_throw)(threadData_t*) = omc_throw_function;
 
 DLLExport
-modelica_real omc_RMSE(threadData_t *threadData, real_array _x1, real_array _x2)
+RMSE_rettype omc_RMSE(threadData_t *threadData, real_array _x1, real_array _x2)
 {
+  /* functionBodyRegularFunction: arguments */
+  /* functionBodyRegularFunction: locals */
+  RMSE_rettype tmp1;
   modelica_real _error;
   modelica_real _length;
   real_array _y;
-  modelica_integer tmp1;
   modelica_integer tmp2;
-  modelica_real tmp3;
+  modelica_integer tmp3;
+  real_array tmp4;
+  real_array tmp5;
   _tailrecursive: OMC_LABEL_UNUSED
-  TRACE_PUSH
-  tmp1 = size_of_dimension_base_array(_x1, (modelica_integer) 1);
-  alloc_real_array(&_y, 1, tmp1);
-  tmp2 = size_of_dimension_base_array(_x1, (modelica_integer) 1);
-  _length = ((modelica_real)tmp2);
+  /* functionBodyRegularFunction: out inits */
+  /* functionBodyRegularFunction: var inits */
+  tmp2 = size_of_dimension_base_array(&_x1, (modelica_integer) 1);
+  alloc_real_array(&_y, 1, tmp2);
+  /* functionBodyRegularFunction: body */
+  tmp3 = size_of_dimension_base_array(&_x1, (modelica_integer) 1);
+  _length = ((modelica_real)tmp3);
 
-  copy_real_array(pow_alloc_real_array_scalar(sub_alloc_real_array(_x1, _x2), 2.0), &_y);
+  sub_alloc_real_array(&_x1, &_x2, &tmp4);
+  pow_alloc_real_array_scalar(&tmp4, 2.0, &tmp5);
+  copy_real_array(&tmp5, &_y);
 
-  tmp3 = _length;
-  if (tmp3 == 0) {throwStreamPrint(threadData, "Division by zero %s", "sum(y) / length");}
-  _error = (sum_real_array(_y) / _length);
+  _error = (sum_real_array(&_y) / _length);
   _return: OMC_LABEL_UNUSED
-  TRACE_POP
-  return _error;
+  /* functionBodyRegularFunction: out var copy */
+  /* functionBodyRegularFunction: out var assign */
+  tmp1.c1 = _error;
+  /* GC: pop the mark! */
+  /* functionBodyRegularFunction: return the outs */
+  return  tmp1;
 }
 DLLExport
 int in_RMSE(type_description * inArgs, type_description * outVar)
 {
   real_array _x1;
   real_array _x2;
-  modelica_real _error;
+  RMSE_rettype out;
   if (read_real_array(&inArgs, &_x1)) return 1;
   if (read_real_array(&inArgs, &_x2)) return 1;
   MMC_INIT();
   MMC_TRY_TOP()
-  _error = omc_RMSE(threadData, _x1, _x2);
+  out = omc_RMSE(threadData, _x1, _x2);
   MMC_CATCH_TOP(return 1)
-  write_modelica_real(outVar, &_error);
+  write_modelica_real(outVar, &out.c1);
   fflush(NULL);
   return 0;
 }
@@ -93,12 +99,4 @@ int main(int argc, char **argv) {
   return 0;
 }
 #endif
-modelica_metatype boxptr_RMSE(threadData_t *threadData, modelica_metatype _x1, modelica_metatype _x2)
-{
-  modelica_real _error;
-  modelica_metatype out_error;
-  _error = omc_RMSE(threadData, *((base_array_t*)_x1), *((base_array_t*)_x2));
-  out_error = mmc_mk_rcon(_error);
-  return out_error;
-}
 

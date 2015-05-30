@@ -13,11 +13,11 @@ function omcompile (filename,modelname,varargin)  % Filename des *.mo-files, mod
 % Feedback/problems: Christian Schaad, ingenieurbuero@christian-schaad.de
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Adapt path here!!!!%%%%%%%%%
-win_om_path='D:\Application\OpenModelica1.9.1\bin\';
+win_om_path='C:\OpenModelica1.9.1Beta2\bin\';
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 linux=isunix;
-%L??schen des MOS-Files, der Executable und Resultdateien, etc.
+%? rule the MOS - Files , the executable files and Result.
 omcleanup(modelname);
 delete([modelname,'_res.mat']); 
 delete([modelname,'.exe']);
@@ -34,7 +34,7 @@ switch varargin{end}
         varargin(end)=[];
 end
 end
-% Erzeugen des MOS-Files
+% Generating the MOS File
 
 
 mosstring=['loadModel(Modelica);\n loadFile("',filename,'");\n instantiateModel(',modelname,');\n  buildModel(',modelname,');\n'];
@@ -48,7 +48,7 @@ end
 
 
 
-% Kompilieren und Simulieren der Kommandos im Modelica-Script-File "simo.mos"
+% Compile and simulate the commands in Modelica -Script File "simo.mos"
 
 if exist('debug')&&debug==1
     switch linux

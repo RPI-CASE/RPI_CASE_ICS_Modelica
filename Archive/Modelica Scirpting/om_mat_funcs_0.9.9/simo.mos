@@ -1,0 +1,4 @@
+loadModel(Modelica);
+loadFile("hello.mo");
+instantiateModel(HelloWorld.test);
+buildModel(HelloWorld.test);
