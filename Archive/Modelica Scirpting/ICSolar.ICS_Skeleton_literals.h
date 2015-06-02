@@ -124,9 +124,9 @@ static const char _OMC_LIT38[5] = _OMC_LIT38_data;
 #define _OMC_LIT39_data "1"
 static const size_t _OMC_LIT39_strlen = 1;
 static const char _OMC_LIT39[2] = _OMC_LIT39_data;
-#define _OMC_LIT40_data "20150323\\EgenIO.txt"
-static const size_t _OMC_LIT40_strlen = 19;
-static const char _OMC_LIT40[20] = _OMC_LIT40_data;
+#define _OMC_LIT40_data "EgenIO.txt"
+static const size_t _OMC_LIT40_strlen = 10;
+static const char _OMC_LIT40[11] = _OMC_LIT40_data;
 #define _OMC_LIT41_data "6"
 static const size_t _OMC_LIT41_strlen = 1;
 static const char _OMC_LIT41[2] = _OMC_LIT41_data;
@@ -163,9 +163,9 @@ static const char _OMC_LIT51[2] = _OMC_LIT51_data;
 #define _OMC_LIT52_data "20150323\\T_Cav_data.txt"
 static const size_t _OMC_LIT52_strlen = 23;
 static const char _OMC_LIT52[24] = _OMC_LIT52_data;
-#define _OMC_LIT53_data "20150323\\measuredData20150323r1.txt"
-static const size_t _OMC_LIT53_strlen = 35;
-static const char _OMC_LIT53[36] = _OMC_LIT53_data;
+#define _OMC_LIT53_data "measuredData.txt"
+static const size_t _OMC_LIT53_strlen = 16;
+static const char _OMC_LIT53[17] = _OMC_LIT53_data;
 
 #ifdef __cplusplus
 }

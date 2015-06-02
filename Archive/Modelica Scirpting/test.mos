@@ -1,7 +1,3 @@
-
-
-
-
 // INCLUDE YOUR LIBRARY
 loadModel(Modelica);
 loadFile("RMSE.mo");
@@ -10,10 +6,7 @@ loadFile("RMSE.mo");
 //loadFile("D:/Application/OpenModelica1.9.1/lib/omlibrary/Buildings 1.6/package.mo");
 loadFile("C:/OpenModelica1.9.1Beta2/lib/omlibrary/Buildings 1.6/package.mo");
 
-
-
-
-//load IC Solar Fiel
+//load IC Solar File
 loadFile("C:/Users/kenton.phillips/Documents/GitHub/RPI_CASE_ICS_Modelica/ICSolar.mo");
 // Use this to report the error is run the script
 getErrorString(); 
@@ -28,8 +21,8 @@ setParameterValue(ICSolar.shadingImport, Path_2, "C:\\Users\\Kenton.phillips\\Do
 
 //i := 1;
 
-setParameterValue(ICSolar.Parameters, OpticalEfficiency, 0.45);
-getErrorString();
+//setParameterValue(ICSolar.Parameters, OpticalEfficiency, 0.45);
+//getErrorString();
 
 
 simulate(ICSolar.ICS_Skeleton,startTime=7123000.0, StopTime = 7147500.0, Interval = 120.098);
@@ -90,7 +83,7 @@ getErrorString();
 
 plot(Egen_arrayTotal,measured_Egen);
 
-/*
+
 size := readSimulationResultSize("ICSolar.ICS_Skeleton_res.mat");
 
 

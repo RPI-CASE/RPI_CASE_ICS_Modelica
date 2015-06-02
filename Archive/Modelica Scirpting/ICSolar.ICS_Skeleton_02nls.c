@@ -37,7 +37,7 @@
 /* dummy REAL_ATTRIBUTE */
 const REAL_ATTRIBUTE dummyREAL_ATTRIBUTE = omc_dummyRealAttribute;
 #include "ICSolar.ICS_Skeleton_12jac.h"
-void initializeStaticNLSData1747(void *inData, void *inNlsData)
+void initializeStaticNLSData1746(void *inData, void *inNlsData)
 {
   DATA* data = (DATA*) inData;
   NONLINEAR_SYSTEM_DATA* nlsData = (NONLINEAR_SYSTEM_DATA*) inNlsData;
@@ -52,13 +52,42 @@ void initializeStaticNLSData1747(void *inData, void *inNlsData)
   nlsData->max[i++]   = $P$ATTRIBUTE$Pics_context1$PweatherBus$PTWetBul.max;
 }
 
-void residualFunc1747(void* dataIn, double* xloc, double* res, integer* iflag)
+void residualFunc1746(void* dataIn, double* xloc, double* res, integer* iflag)
 {
   DATA* data = (DATA*) dataIn;
-  const int equationIndexes[2] = {1,1747};
+  const int equationIndexes[2] = {1,1746};
+  modelica_real tmp3135;
+  #ifdef _OMC_MEASURE_TIME
+  SIM_PROF_ADD_NCALL_EQ(modelInfoXmlGetEquation(&data->modelData.modelDataXml,1746).profileBlockIndex,1);
+  #endif
+  $Pics_context1$PweaDat$PtWetBul_TDryBulXi$PXiSat = xloc[0];
+  $Pics_context1$PweatherBus$PTWetBul = xloc[1];
+  res[0] = (($Pics_context1$PweatherBus$PTWetBul * ((1006.0 * (1.0 - $Pics_context1$PweaDat$PtWetBul_TDryBulXi$PXiSat)) + (1860.0 * $Pics_context1$PweaDat$PtWetBul_TDryBulXi$PXiSat))) + (((-$Pics_context1$PTOutside$PT) * ((1006.0 * (1.0 - $Pics_context1$PweaDat$PtWetBul_TDryBulXi$PXiDryBul)) + (1860.0 * $Pics_context1$PweaDat$PtWetBul_TDryBulXi$PXiDryBul))) + (-2501014.5 * ($Pics_context1$PweaDat$PtWetBul_TDryBulXi$PXiDryBul - $Pics_context1$PweaDat$PtWetBul_TDryBulXi$PXiSat))));
+  tmp3135 = exp((17.2799 + DIVISION_SIM(-4102.99,(-35.719 + $Pics_context1$PweatherBus$PTWetBul),"-35.719 + ics_context1.weatherBus.TWetBul",equationIndexes)));
+  res[1] = (-0.621964713077499 + ($Pics_context1$PweaDat$PtWetBul_TDryBulXi$PXiSat * (-0.378035286922501 + DIVISION_SIM($Pics_context1$PweaDat$PpAtm,(tmp3135 * 611.657),"exp(17.2799 + DIVISION(-4102.99, -35.719 + ics_context1.weatherBus.TWetBul)) * 611.657",equationIndexes))));
+}
+void initializeStaticNLSData3985(void *inData, void *inNlsData)
+{
+  DATA* data = (DATA*) inData;
+  NONLINEAR_SYSTEM_DATA* nlsData = (NONLINEAR_SYSTEM_DATA*) inNlsData;
+  int i=0;
+  /* static nls data for $Pics_context1$PweaDat$PtWetBul_TDryBulXi$PXiSat */
+  nlsData->nominal[i] = $P$ATTRIBUTE$Pics_context1$PweaDat$PtWetBul_TDryBulXi$PXiSat.nominal;
+  nlsData->min[i]     = $P$ATTRIBUTE$Pics_context1$PweaDat$PtWetBul_TDryBulXi$PXiSat.min;
+  nlsData->max[i++]   = $P$ATTRIBUTE$Pics_context1$PweaDat$PtWetBul_TDryBulXi$PXiSat.max;
+  /* static nls data for $Pics_context1$PweatherBus$PTWetBul */
+  nlsData->nominal[i] = $P$ATTRIBUTE$Pics_context1$PweatherBus$PTWetBul.nominal;
+  nlsData->min[i]     = $P$ATTRIBUTE$Pics_context1$PweatherBus$PTWetBul.min;
+  nlsData->max[i++]   = $P$ATTRIBUTE$Pics_context1$PweatherBus$PTWetBul.max;
+}
+
+void residualFunc3985(void* dataIn, double* xloc, double* res, integer* iflag)
+{
+  DATA* data = (DATA*) dataIn;
+  const int equationIndexes[2] = {1,3985};
   modelica_real tmp3136;
   #ifdef _OMC_MEASURE_TIME
-  SIM_PROF_ADD_NCALL_EQ(modelInfoXmlGetEquation(&data->modelData.modelDataXml,1747).profileBlockIndex,1);
+  SIM_PROF_ADD_NCALL_EQ(modelInfoXmlGetEquation(&data->modelData.modelDataXml,3985).profileBlockIndex,1);
   #endif
   $Pics_context1$PweaDat$PtWetBul_TDryBulXi$PXiSat = xloc[0];
   $Pics_context1$PweatherBus$PTWetBul = xloc[1];
@@ -66,56 +95,27 @@ void residualFunc1747(void* dataIn, double* xloc, double* res, integer* iflag)
   tmp3136 = exp((17.2799 + DIVISION_SIM(-4102.99,(-35.719 + $Pics_context1$PweatherBus$PTWetBul),"-35.719 + ics_context1.weatherBus.TWetBul",equationIndexes)));
   res[1] = (-0.621964713077499 + ($Pics_context1$PweaDat$PtWetBul_TDryBulXi$PXiSat * (-0.378035286922501 + DIVISION_SIM($Pics_context1$PweaDat$PpAtm,(tmp3136 * 611.657),"exp(17.2799 + DIVISION(-4102.99, -35.719 + ics_context1.weatherBus.TWetBul)) * 611.657",equationIndexes))));
 }
-void initializeStaticNLSData3986(void *inData, void *inNlsData)
-{
-  DATA* data = (DATA*) inData;
-  NONLINEAR_SYSTEM_DATA* nlsData = (NONLINEAR_SYSTEM_DATA*) inNlsData;
-  int i=0;
-  /* static nls data for $Pics_context1$PweaDat$PtWetBul_TDryBulXi$PXiSat */
-  nlsData->nominal[i] = $P$ATTRIBUTE$Pics_context1$PweaDat$PtWetBul_TDryBulXi$PXiSat.nominal;
-  nlsData->min[i]     = $P$ATTRIBUTE$Pics_context1$PweaDat$PtWetBul_TDryBulXi$PXiSat.min;
-  nlsData->max[i++]   = $P$ATTRIBUTE$Pics_context1$PweaDat$PtWetBul_TDryBulXi$PXiSat.max;
-  /* static nls data for $Pics_context1$PweatherBus$PTWetBul */
-  nlsData->nominal[i] = $P$ATTRIBUTE$Pics_context1$PweatherBus$PTWetBul.nominal;
-  nlsData->min[i]     = $P$ATTRIBUTE$Pics_context1$PweatherBus$PTWetBul.min;
-  nlsData->max[i++]   = $P$ATTRIBUTE$Pics_context1$PweatherBus$PTWetBul.max;
-}
-
-void residualFunc3986(void* dataIn, double* xloc, double* res, integer* iflag)
-{
-  DATA* data = (DATA*) dataIn;
-  const int equationIndexes[2] = {1,3986};
-  modelica_real tmp3137;
-  #ifdef _OMC_MEASURE_TIME
-  SIM_PROF_ADD_NCALL_EQ(modelInfoXmlGetEquation(&data->modelData.modelDataXml,3986).profileBlockIndex,1);
-  #endif
-  $Pics_context1$PweaDat$PtWetBul_TDryBulXi$PXiSat = xloc[0];
-  $Pics_context1$PweatherBus$PTWetBul = xloc[1];
-  res[0] = (($Pics_context1$PweatherBus$PTWetBul * ((1006.0 * (1.0 - $Pics_context1$PweaDat$PtWetBul_TDryBulXi$PXiSat)) + (1860.0 * $Pics_context1$PweaDat$PtWetBul_TDryBulXi$PXiSat))) + (((-$Pics_context1$PTOutside$PT) * ((1006.0 * (1.0 - $Pics_context1$PweaDat$PtWetBul_TDryBulXi$PXiDryBul)) + (1860.0 * $Pics_context1$PweaDat$PtWetBul_TDryBulXi$PXiDryBul))) + (-2501014.5 * ($Pics_context1$PweaDat$PtWetBul_TDryBulXi$PXiDryBul - $Pics_context1$PweaDat$PtWetBul_TDryBulXi$PXiSat))));
-  tmp3137 = exp((17.2799 + DIVISION_SIM(-4102.99,(-35.719 + $Pics_context1$PweatherBus$PTWetBul),"-35.719 + ics_context1.weatherBus.TWetBul",equationIndexes)));
-  res[1] = (-0.621964713077499 + ($Pics_context1$PweaDat$PtWetBul_TDryBulXi$PXiSat * (-0.378035286922501 + DIVISION_SIM($Pics_context1$PweaDat$PpAtm,(tmp3137 * 611.657),"exp(17.2799 + DIVISION(-4102.99, -35.719 + ics_context1.weatherBus.TWetBul)) * 611.657",equationIndexes))));
-}
 
 /* funtion initialize non-linear systems */
 void ICSolar_ICS_Skeleton_initialNonLinearSystem(NONLINEAR_SYSTEM_DATA* nonLinearSystemData)
 {
-  nonLinearSystemData[0].equationIndex = 1747;
+  nonLinearSystemData[0].equationIndex = 1746;
   nonLinearSystemData[0].size = 2;
   nonLinearSystemData[0].method = 0;
-  nonLinearSystemData[0].residualFunc = residualFunc1747;
+  nonLinearSystemData[0].residualFunc = residualFunc1746;
   nonLinearSystemData[0].analyticalJacobianColumn = NULL;
   nonLinearSystemData[0].initialAnalyticalJacobian = NULL;
   nonLinearSystemData[0].jacobianIndex = -1;
-  nonLinearSystemData[0].initializeStaticNLSData = initializeStaticNLSData1747;
+  nonLinearSystemData[0].initializeStaticNLSData = initializeStaticNLSData1746;
   
-  nonLinearSystemData[1].equationIndex = 3986;
+  nonLinearSystemData[1].equationIndex = 3985;
   nonLinearSystemData[1].size = 2;
   nonLinearSystemData[1].method = 0;
-  nonLinearSystemData[1].residualFunc = residualFunc3986;
+  nonLinearSystemData[1].residualFunc = residualFunc3985;
   nonLinearSystemData[1].analyticalJacobianColumn = NULL;
   nonLinearSystemData[1].initialAnalyticalJacobian = NULL;
   nonLinearSystemData[1].jacobianIndex = -1;
-  nonLinearSystemData[1].initializeStaticNLSData = initializeStaticNLSData3986;
+  nonLinearSystemData[1].initializeStaticNLSData = initializeStaticNLSData3985;
   
 }
 

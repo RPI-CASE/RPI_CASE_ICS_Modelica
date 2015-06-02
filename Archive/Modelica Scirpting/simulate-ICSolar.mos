@@ -1,0 +1,50 @@
+// This scirpt will run the IC Solar in studio set up
+// Can be run in OpenModelica Shell by 
+//      runScript("simulate-ICSolar.mos");
+// or in Matlab by
+//       system([win_om_path,'omc.exe +d=failtrace +s simulate-ICSolar.mos.']) 
+// or    system(['C:\OpenModelica1.9.1Beta2\bin\','omc.exe +d=failtrace +s simulate-ICSolar.mos.'])    
+// where win_om_path is set a string set to the open modelica directory bin. In this case
+// 'C:\OpenModelica1.9.1Beta2\bin\'
+
+
+// INCLUDE YOUR LIBRARY
+loadModel(Modelica);
+
+//loadFile("D:/Application/OpenModelica1.9.1/lib/omlibrary/Buildings 1.6/package.mo");
+loadFile("C:/OpenModelica1.9.1Beta2/lib/omlibrary/Buildings 1.6/package.mo");
+
+//load IC Solar File
+loadFile("C:/Users/kenton.phillips/Documents/GitHub/RPI_CASE_ICS_Modelica/ICSolar.mo");
+
+// Use this to report the error is run the script
+getErrorString(); 
+
+
+//Make sure we have the proper path
+//setParameterValue(ICSolar.Parameters, Path, "C:\\Users\\Kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\");
+//setParameterValue(ICSolar.shadingImport, Path_2, "C:\\Users\\Kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\shading_matrices\\");
+
+//Change a parameter, if ya want
+//setParameterValue(ICSolar.Parameters, OpticalEfficiency, 0.45);
+//getErrorString();
+
+
+// ---- FOR MARCH 19
+setParameterValue(ICSolar.Parameters, Date, "20150319\\");
+simulate(ICSolar.ICS_Skeleton,startTime=6787900, StopTime = 6790071, Interval = 60);
+getErrorString();
+
+
+/*
+// ---- FOR MARCH 23
+setParameterValue(ICSolar.Parameters, Date, "20150323\\");
+simulate(ICSolar.ICS_Skeleton,startTime=7123000.0, StopTime = 7147500.0, Interval = 120);
+getErrorString();
+*/
+
+
+
+
+
+
