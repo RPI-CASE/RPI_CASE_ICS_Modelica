@@ -908,14 +908,15 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     end chooseShadeMatrix;
 
     model chooseFractExposedLUTPosition "based on a module's position in an ICSF array, choose it's position in the 5x5 array of 'shading' types. Outputs a 2D vector somewhere in the space of [1:5 1:5]"
+      extends ICSolar.Parameters;
       //
       //extends ICSolar.Parameters;
       //
       //______________________________________________________________________________
       Modelica.Blocks.Interfaces.IntegerInput ModuleRow "Module Row" annotation(Placement(visible = true, transformation(origin = {-100, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.Blocks.Interfaces.IntegerInput ModuleCol "Module Column" annotation(Placement(visible = true, transformation(origin = {-100, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-      Modelica.Blocks.Interfaces.IntegerInput ArrayRows "Rows in Array" annotation(Placement(visible = true, transformation(origin = {-100, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-      Modelica.Blocks.Interfaces.IntegerInput ArrayCols "Columns in Array" annotation(Placement(visible = true, transformation(origin = {-100, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      Integer ArrayRows = StackHeight "Rows in Array" annotation(Placement(visible = true, transformation(origin = {-100, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      Integer ArrayCols = NumOfStacks "Columns in Array" annotation(Placement(visible = true, transformation(origin = {-100, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       //
       //______________________________________________________________________________
       //
@@ -989,53 +990,35 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       Modelica.Blocks.Interfaces.RealInput arrayPitch "pass pitch to module" annotation(Placement(visible = true, transformation(origin = {-100, 30}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       input Modelica.Blocks.Interfaces.RealInput Power_in "electrical power in from previous module or GND" annotation(Placement(visible = true, transformation(origin = {-100, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.Blocks.Interfaces.RealInput arrayYaw "pass yaw to module" annotation(Placement(visible = true, transformation(origin = {-100, 50}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-      Modelica.Blocks.Interfaces.IntegerInput stackNum annotation(Placement(visible = true, transformation(origin = {-100, -100}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, -100}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      parameter Modelica.Blocks.Interfaces.IntegerInput stackNum annotation(Placement(visible = true, transformation(origin = {-100, -100}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, -100}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.Blocks.Interfaces.RealInput DNI "DNI into the Module" annotation(Placement(visible = true, transformation(origin = {-100, 18}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-      Modelica.Blocks.Interfaces.IntegerInput modNum annotation(Placement(visible = true, transformation(origin = {-100, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      parameter Modelica.Blocks.Interfaces.IntegerInput modNum annotation(Placement(visible = true, transformation(origin = {-100, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.Blocks.Math.Add add annotation(Placement(visible = true, transformation(origin = {40, 40}, extent = {{-5, -5}, {5, 5}}, rotation = 0)));
       ICSolar.ShadingFraction_Function shadingfraction_function1 annotation(Placement(visible = true, transformation(origin = {-60, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-      Modelica.Blocks.Math.Product product1 annotation(Placement(visible = true, transformation(origin = {-20, 40}, extent = {{-8.125, -8.125}, {8.125, 8.125}}, rotation = 0)));
+      Modelica.Blocks.Math.Product shadeProduct annotation(Placement(visible = true, transformation(origin = {-20, 40}, extent = {{-8.125, -8.125}, {8.125, 8.125}}, rotation = 0)));
       ICSolar.Module.chooseFractExposedLUTPosition choosefractexposedlutposition1 annotation(Placement(visible = true, transformation(origin = {-60, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     equation
+      connect(choosefractexposedlutposition1.ModuleCol, stackNum);
+      connect(choosefractexposedlutposition1.ModuleRow, modNum);
       connect(choosefractexposedlutposition1.FractExposedTypeCol, shadingfraction_function1.colType) annotation(Line(points = {{-50, -81}, {-35.9946, -81}, {-35.9946, -17.0501}, {-83.3559, -17.0501}, {-83.3559, 39.5129}, {-70.9066, 39.5129}, {-70.9066, 39.5129}, {-70.9066, 39.5129}}, color = {255, 127, 0}));
       connect(choosefractexposedlutposition1.FractExposedTypeRow, shadingfraction_function1.rowType) annotation(Line(points = {{-50, -79}, {-38.7009, -79}, {-38.7009, -18.4032}, {-85.2503, -18.4032}, {-85.2503, 43.843}, {-71.1773, 43.843}, {-71.1773, 43.843}}, color = {255, 127, 0}));
-      //connect(StackHeight, choosefractexposedlutposition1.ArrayRows);
-      choosefractexposedlutposition1.ArrayRows = StackHeight;
-      //connect(NumOfStacks, choosefractexposedlutposition1.ArrayCols);
-      choosefractexposedlutposition1.ArrayCols = NumOfStacks;
-      connect(stackNum, choosefractexposedlutposition1.ModuleCol) annotation(Line(points = {{-100, -100}, {-79.567, -100}, {-79.567, -77.9432}, {-70.636, -77.9432}, {-70.636, -77.9432}}, color = {255, 127, 0}));
-      connect(modNum, choosefractexposedlutposition1.ModuleRow) annotation(Line(points = {{-100, -80}, {-83.8972, -80}, {-83.8972, -73.613}, {-70.3654, -73.613}, {-70.3654, -73.613}}, color = {255, 127, 0}));
-      connect(product1.y, ics_lenslosses1.DNI_in) annotation(Line(points = {{-11.0625, 40}, {-6.7659, 40}, {-6.7659, 14.3437}, {-82.8146, 14.3437}, {-82.8146, 6.49526}, {-75.5074, 6.49526}, {-75.5074, 6.49526}}, color = {0, 0, 127}));
-      connect(DNI, product1.u1) annotation(Line(points = {{-100, 18}, {-37.3478, 18}, {-37.3478, 44.3843}, {-30.8525, 44.3843}, {-30.8525, 44.3843}}, color = {0, 0, 127}));
-      connect(shadingfraction_function1.SOLAR_frac, product1.u2) annotation(Line(points = {{-50, 40}, {-42.2192, 40}, {-42.2192, 34.1001}, {-30.8525, 34.1001}, {-30.8525, 34.1001}}, color = {0, 0, 127}));
       connect(arrayYaw, shadingfraction_function1.arrayYaw) annotation(Line(points = {{-100, 50}, {-77.9432, 50}, {-77.9432, 31.6644}, {-70.9066, 31.6644}, {-70.9066, 31.6644}}, color = {0, 0, 127}));
       connect(arrayPitch, shadingfraction_function1.arrayPitch) annotation(Line(points = {{-100, 30}, {-81.4614, 30}, {-81.4614, 35.724}, {-71.1773, 35.724}, {-71.1773, 35.724}}, color = {0, 0, 127}));
-      //RCType = ShadingPalette(modNum, stackNum, StackHeight, NumOfStacks);
-      //connect(RCType[1], shadingfraction_function1.rowType);
-      //connect(RCType[2], shadingfraction_function1.colType);
-      //connect(arrayPitch, shadingfraction_function1.arrayPitch);
-      //connect(arrayYaw, shadingfraction_function1.arrayYaw);
-      connect(add.y, Power_out) annotation(Line(points = {{45.5, 40}, {69.25, 40}, {69.25, 54}, {100, 54}}, color = {0, 0, 127}));
-      connect(ics_pvperformance1.ElectricalGen, add.u2) annotation(Line(points = {{16.25, 6.5}, {16.25, 31.25}, {34, 31.25}, {34, 37}}, color = {0, 0, 127}));
-      connect(Power_in, add.u1) annotation(Line(points = {{-100, 60}, {-28, 60}, {34, 40}, {34, 43}}, color = {0, 0, 127}));
-      //connect(product1.u1, DNI);
-      //connect(product1.u2, shadingfraction_function1.SOLAR_frac);
-      //ics_lenslosses1.DNI_in = SFraction * DNI;
-      connect(product1.y, ics_lenslosses1.DNI_in);
-      //connect(modNum, shading_twelve1.ShadingTable);
-      //connect(shading_twelve1.DNI_out, ics_lenslosses1.DNI_in) annotation(Line(points = {{-50, 42}, {-43.6957, 42}, {-43.6957, 14.205}, {-83.377, 14.205}, {-83.377, 6.94808}, {-75.3481, 6.94808}, {-75.3481, 6.94808}}, color = {0, 0, 127}));
-      //connect(shading_twelve1.arrayPitch, arrayPitch) annotation(Line(points = {{-70, 40}, {-78.59050000000001, 40}, {-78.59050000000001, 30.4172}, {-95.8836, 30.4172}, {-95.8836, 30.4172}}, color = {0, 0, 127}));
-      //connect(shading_twelve1.arrayYaw, arrayYaw) annotation(Line(points = {{-70, 44}, {-77.9729, 44}, {-77.9729, 49.4086}, {-96.038, 49.4086}, {-96.038, 49.4086}}, color = {0, 0, 127}));
-      //connect(shading_twelve1.DNI_in, DNI) annotation(Line(points = {{-70, 48}, {-85.693, 48}, {-85.693, 17.6018}, {-95.72920000000001, 17.6018}, {-95.72920000000001, 17.6018}}, color = {0, 0, 127}));
-      connect(modulereceiver1.flowport_b1, flowport_b1) annotation(Line(points = {{80, 5.71429}, {86.535, 5.71429}, {86.535, -40.2154}, {99.4614, -40.2154}, {99.4614, -40.2154}}, color = {255, 0, 0}));
-      connect(TAmb_in, modulereceiver1.TAmb_in) annotation(Line(points = {{-100, 78}, {-2.90276, 78}, {-2.90276, 13.0624}, {50, 13.0624}, {50, 6.78571}}));
-      connect(ics_pvperformance1.ThermalGen, modulereceiver1.ThermalGen) annotation(Line(points = {{16.25, -7.3125}, {45.38, -7.3125}, {45.38, 6.04915}, {50, 6.04915}, {50, -0.714286}}));
-      connect(ics_lenslosses1.ConcentrationFactor, ics_pvperformance1.ConcentrationFactor) annotation(Line(points = {{-45, -11}, {-39.3195, -11}, {-39.3195, -9.82987}, {-16.25, -9.82987}, {-16.25, -9.75}}));
-      connect(ics_lenslosses1.DNI_out, ics_pvperformance1.DNI_in) annotation(Line(points = {{-45, 4}, {-34.4045, 4}, {-34.4045, 0.378072}, {-16.25, 0.378072}, {-16.25, 0}}));
-      connect(modulereceiver1.flowport_a1, flowport_a1) "Connect pump flow the heat receiver" annotation(Line(points = {{62, 10}, {39.4366, 10}, {39.4366, -40.1408}, {-100, -40.1408}, {-100, -40}}));
-      connect(measured_eGen_on, ics_pvperformance1.PV_on);
+      connect(shadeProduct.u2, shadingfraction_function1.SOLAR_frac) annotation(Line(points = {{-50, 40}, {-42.2192, 40}, {-42.2192, 34.1001}, {-30.8525, 34.1001}, {-30.8525, 34.1001}}, color = {0, 0, 127}));
+      connect(shadeProduct.u1, DNI) annotation(Line(points = {{-100, 18}, {-37.3478, 18}, {-37.3478, 44.3843}, {-30.8525, 44.3843}, {-30.8525, 44.3843}}, color = {0, 0, 127}));
+      connect(shadeProduct.y, ics_lenslosses1.DNI_in) annotation(Line(points = {{-11.0625, 40}, {-6.7659, 40}, {-6.7659, 14.3437}, {-82.8146, 14.3437}, {-82.8146, 6.49526}, {-75.5074, 6.49526}, {-75.5074, 6.49526}}, color = {0, 0, 127}));
       ics_lenslosses1.LensWidth = LensWidth "Connects LensWidth defined in Module to Lens LensWidth";
       ics_lenslosses1.CellWidth = CellWidth "Connect CellWidth defined in Module to CellWidth in Lens";
+      connect(ics_lenslosses1.ConcentrationFactor, ics_pvperformance1.ConcentrationFactor) annotation(Line(points = {{-45, -11}, {-39.3195, -11}, {-39.3195, -9.82987}, {-16.25, -9.82987}, {-16.25, -9.75}}));
+      connect(ics_lenslosses1.DNI_out, ics_pvperformance1.DNI_in) annotation(Line(points = {{-45, 4}, {-34.4045, 4}, {-34.4045, 0.378072}, {-16.25, 0.378072}, {-16.25, 0}}));
+      connect(ics_pvperformance1.ThermalGen, modulereceiver1.ThermalGen) annotation(Line(points = {{16.25, -7.3125}, {45.38, -7.3125}, {45.38, 6.04915}, {50, 6.04915}, {50, -0.714286}}));
+      connect(ics_pvperformance1.ElectricalGen, add.u2) annotation(Line(points = {{16.25, 6.5}, {16.25, 31.25}, {34, 31.25}, {34, 37}}, color = {0, 0, 127}));
+      connect(Power_in, add.u1) annotation(Line(points = {{-100, 60}, {-28, 60}, {34, 40}, {34, 43}}, color = {0, 0, 127}));
+      connect(add.y, Power_out) annotation(Line(points = {{45.5, 40}, {69.25, 40}, {69.25, 54}, {100, 54}}, color = {0, 0, 127}));
+      connect(modulereceiver1.flowport_b1, flowport_b1) annotation(Line(points = {{80, 5.71429}, {86.535, 5.71429}, {86.535, -40.2154}, {99.4614, -40.2154}, {99.4614, -40.2154}}, color = {255, 0, 0}));
+      connect(modulereceiver1.TAmb_in, TAmb_in) annotation(Line(points = {{-100, 78}, {-2.90276, 78}, {-2.90276, 13.0624}, {50, 13.0624}, {50, 6.78571}}));
+      connect(modulereceiver1.flowport_a1, flowport_a1) "Connect pump flow the heat receiver" annotation(Line(points = {{62, 10}, {39.4366, 10}, {39.4366, -40.1408}, {-100, -40.1408}, {-100, -40}}));
+      connect(measured_eGen_on, ics_pvperformance1.PV_on);
       annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2}), graphics = {Text(origin = {-1.41, 9.98}, extent = {{-67.14, 46.6}, {67.14, -46.6}}, textString = "Module")}), Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics));
     end ICS_Module_Twelve;
   end Module;
@@ -1538,8 +1521,8 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     //______________________________________________________________________________
     ICSolar.Module.chooseFractExposedLUTPosition choosefractexposedlutposition1 annotation(Placement(visible = true, transformation(origin = {5, -25}, extent = {{-15, -15}, {15, 15}}, rotation = 0)));
   equation
-    connect(ArrCols.y, choosefractexposedlutposition1.ArrayCols) annotation(Line(points = {{-49, -60}, {-47.8261, -60}, {-47.8261, -34.2995}, {-10.628, -34.2995}, {-10.628, -34.2995}}, color = {255, 127, 0}));
-    connect(ArrRows.y, choosefractexposedlutposition1.ArrayRows) annotation(Line(points = {{-49, -20}, {-46.6184, -20}, {-46.6184, -28.5024}, {-11.5942, -28.5024}, {-11.5942, -28.5024}}, color = {255, 127, 0}));
+    //connect(ArrCols.y, choosefractexposedlutposition1.ArrayCols) annotation(Line(points = {{-49, -60}, {-47.8261, -60}, {-47.8261, -34.2995}, {-10.628, -34.2995}, {-10.628, -34.2995}}, color = {255, 127, 0}));
+    //connect(ArrRows.y, choosefractexposedlutposition1.ArrayRows) annotation(Line(points = {{-49, -20}, {-46.6184, -20}, {-46.6184, -28.5024}, {-11.5942, -28.5024}, {-11.5942, -28.5024}}, color = {255, 127, 0}));
     connect(ModCol.y, choosefractexposedlutposition1.ModuleCol) annotation(Line(points = {{-49, 20}, {-42.5121, 20}, {-42.5121, -22.7053}, {-9.42029, -22.7053}, {-9.42029, -22.7053}}, color = {255, 127, 0}));
     connect(ModRow.y, choosefractexposedlutposition1.ModuleRow) annotation(Line(points = {{-49, 60}, {-42.029, 60}, {-42.029, -16.1836}, {-9.42029, -16.1836}, {-9.42029, -16.1836}}, color = {255, 127, 0}));
     connect(choosefractexposedlutposition1.FractExposedTypeCol, FractExposedTypeCol) annotation(Line(points = {{20, -26.5}, {42.9675, -26.5}, {42.9675, -10.2009}, {102.628, -10.2009}, {102.628, -10.2009}}, color = {255, 127, 0}));
@@ -1664,11 +1647,11 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     // THE PATH FOR THE LUT TXT WILL NEED TO BE DYNAMIC
     //*******************************************************
     /*
-                                                                                                           Modelica.Blocks.Interfaces.IntegerInput rowType annotation(Placement(visible = true, transformation(origin = {-100, 40}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {-100, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-                                                                                                          Modelica.Blocks.Interfaces.IntegerInput colType annotation(Placement(visible = true, transformation(origin = {-100, 80}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {-100, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-                                                                                                          Modelica.Blocks.Interfaces.RealInput arrayYaw annotation(Placement(visible = true, transformation(origin = {-100, 0}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {-100, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-                                                                                                          Modelica.Blocks.Interfaces.RealInput arrayPitch annotation(Placement(visible = true, transformation(origin = {-100, -60}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {-100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-                                                                                                                                              */
+                                                                                                                               Modelica.Blocks.Interfaces.IntegerInput rowType annotation(Placement(visible = true, transformation(origin = {-100, 40}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {-100, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+                                                                                                                              Modelica.Blocks.Interfaces.IntegerInput colType annotation(Placement(visible = true, transformation(origin = {-100, 80}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {-100, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+                                                                                                                              Modelica.Blocks.Interfaces.RealInput arrayYaw annotation(Placement(visible = true, transformation(origin = {-100, 0}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {-100, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+                                                                                                                              Modelica.Blocks.Interfaces.RealInput arrayPitch annotation(Placement(visible = true, transformation(origin = {-100, -60}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {-100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+                                                                                                                                                                  */
     Modelica.Blocks.Interfaces.RealOutput SOLAR_frac annotation(Placement(visible = true, transformation(origin = {100, 0}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     Modelica.Blocks.Tables.CombiTable1Ds LUT(tableOnFile = true, fileName = "C:\\Users\\Justin\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\4D_LUT\\4DLUT.txt", tableName = "4DLUT");
     parameter Real index_num = ShadingFraction_Index(rowType, colType, arrayPitch, arrayYaw);
