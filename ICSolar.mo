@@ -94,7 +94,8 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     connect(measured_DNI,ics_envelopecassette1.DNI_measured);
     connect(measured_T_cavAvg,ics_envelopecassette1.Tcav_measured);
     //experiment(StartTime = 7137000.0, StopTime = 7141200.0, Tolerance = 1e-006, Interval = 100));
-    annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200,-100},{200,100}}), graphics), experiment(StartTime = 6787900, StopTime = 6790070, Tolerance = 1e-006, Interval = 60));
+    //annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200,-100},{200,100}}), graphics), experiment(StartTime = 6787900, StopTime = 6790070, Tolerance = 1e-006, Interval = 60));
+    annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200,-100},{200,100}}), graphics), experiment(StartTime = 4365153, StopTime = 4376623, Tolerance = 1e-006, Interval = 60));
   end ICS_Skeleton;
   model ICS_Context "This model provides the pieces necessary to set up the context to run the simulation, in FMU practice this will be cut out and provided from the EnergyPlus file"
     extends ICSolar.Parameters;
@@ -1122,7 +1123,8 @@ Evidently yes. still sorting that one out, but let's not get distracted.
     //////// PATH /////////
     ///////////////////////
     //parameter String Date = "20150323\\";
-    parameter String Date = "20150319\\";
+    //parameter String Date = "20150319\\";
+    parameter String Date = "20150220\\";
     //need to change path here to compile, also where path_2 shows up:
     // C:\Users\Kenton\Documents\GitHub\RPI_CASE_ICS_Modelica
     parameter String Path = "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\";

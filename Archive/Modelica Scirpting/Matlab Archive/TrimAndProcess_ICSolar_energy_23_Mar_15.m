@@ -29,17 +29,14 @@ plot(t_s_Egen,'LineStyle',':',...
     'Color',[0.494117647409439 0.184313729405403 0.556862771511078],...
     'DisplayName','t_s_Egen','LineWidth',2);
 
-title({'23 March 2015: Array Total Energy Generation','6 Modules of PV & 12 Modules of Thermal Collection'},...
-    'FontWeight','bold',...
-    'FontSize',16);
+title({'23 March 2015: Array Total Energy Generation','6 Modules of PV & 12 Modules of Thermal Collection'});
 
 axis([0 30 0 100])
 % Create xlabel
-xlabel('Time (minutes)','FontSize',16);
-set(gca,'XTickLabel',{'0','','','30','','','60'},'FontSize',16); 
+xlabel('Time (minutes)');
+set(gca,'XTickLabel',{'0','','','30','','','60'}); 
 
 % Create ylabel
-ylabel('Power (Watts)','FontSize',16);
+ylabel('Power (Watts)');
 
-figure1 = figure('Color',[1 1 1]);
 legend('Measured Qgen','Modeled Qgen','Measured Egen','Modeled Egen','Location','southeast');  

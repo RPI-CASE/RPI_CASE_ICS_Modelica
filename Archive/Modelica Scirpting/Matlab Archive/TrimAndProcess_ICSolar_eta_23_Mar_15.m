@@ -21,18 +21,16 @@ plot(t_s_eta_Egen,'LineStyle',':',...
 % Plot COmbined
 plot(t_s_eta_Com,'LineStyle',':','Color',[0 0 1],'DisplayName','eta Combined','LineWidth',2);
 
-title({'23 March 2015: Array Efficiency','6 Modules of PV & 12 Modules of Thermal Collection'},...
-    'FontWeight','bold',...
-    'FontSize',16);
+title({'23 March 2015: Array Efficiency','6 Modules of PV & 12 Modules of Thermal Collection'});
 
 axis([0 30 0 0.7])
 % Create xlabel
-xlabel('Time (minutes)','FontSize',16);
-set(gca,'XTickLabel',{'0','','','30','','','60'},'FontSize',16); 
+xlabel('Time (minutes)');
+set(gca,'XTickLabel',{'0','','','30','','','60'}); 
 
 % Create ylabel
-ylabel('Effciency)','FontSize',16);
+ylabel('Effciency (energy * # of modules * APOE / DNI )');
 
 legend('eta Qgen','eta Egen','eta Combined','Location','northeast');  
 
-figure1 = figure('Color',[1 1 1]);
+
