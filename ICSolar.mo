@@ -774,8 +774,8 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       //Modelica.Blocks.Interfaces.IntegerInput modNum annotation(Placement(visible = true, transformation(origin = {-100,80}, extent = {{-25,-25},{25,25}}, rotation = 0), iconTransformation(origin = {-80,80}, extent = {{-10,-10},{10,10}}, rotation = 0)));
       Modelica.Blocks.Interfaces.RealInput ConcentrationFactor "Used to represent 'suns's for the calculation of PVEfficiency" annotation(Placement(visible = true, transformation(origin = {-100, -40}, extent = {{-25, -25}, {25, 25}}, rotation = 0), iconTransformation(origin = {-100, -60}, extent = {{-15, -15}, {15, 15}}, rotation = 0)));
       Modelica.Blocks.Interfaces.RealInput DNI_in "DNI in from the Lens model (include Concentration)" annotation(Placement(visible = true, transformation(origin = {-100, 0}, extent = {{-25, -25}, {25, 25}}, rotation = 0), iconTransformation(origin = {-100, 0}, extent = {{-15, -15}, {15, 15}}, rotation = 0)));
-      Modelica.Blocks.Interfaces.RealInput PV_on annotation(Placement(visible = true, transformation(origin = {-100, 40}, extent = {{-25, -25}, {25, 25}}, rotation = 0), iconTransformation(origin = {-40, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       //##############################################################################
+      Modelica.Blocks.Interfaces.RealInput PV_on annotation(Placement(visible = true, transformation(origin = {-100, 40}, extent = {{-25, -25}, {25, 25}}, rotation = 0), iconTransformation(origin = {-100, 60}, extent = {{-15, -15}, {15, 15}}, rotation = 0)));
     equation
       EIPC = DNI_in * CellWidth ^ 2 "Energy In Per Cell, used to calculate maximum energy on the cell";
       ElectricalGen = EIPC * CellEfficiency * PV_on "Electrical energy conversion";
@@ -997,16 +997,21 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       Integer RCType[2] = ShadingPalette(modNum, stackNum, StackHeight, NumOfStacks);
       Integer rowType = RCType[1];
       Integer colType = RCType[2];
-      Real SFraction = ShadingFractionFunction(rowType, colType, arrayYaw, arrayPitch);
+      //Real SFraction = ShadingFractionFunction(rowType, colType, arrayYaw, arrayPitch);
       Modelica.Blocks.Math.Add add annotation(Placement(visible = true, transformation(origin = {40, 40}, extent = {{-5, -5}, {5, 5}}, rotation = 0)));
       //(rowType, colType) = ShadingPalette(modNum, stackNum, StackHeight, NumOfStacks);
       //SFraction = ShadingFractionFunction(rowType, colType, arrayYaw, arrayPitch);
+      ICSolar.ShadingFraction_Function shadingfraction_function1 annotation(Placement(visible = true, transformation(origin = {-60, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     equation
+      connect(rowType, shadingfraction_function1.rowType);
+      connect(colType, shadingfraction_function1.colType);
+      connect(arrayPitch, shadingfraction_function1.arrayPitch);
+      connect(arrayYaw, shadingfraction_function1.arrayYaw);
       connect(add.y, Power_out) annotation(Line(points = {{45.5, 40}, {69.25, 40}, {69.25, 54}, {100, 54}}, color = {0, 0, 127}));
       connect(ics_pvperformance1.ElectricalGen, add.u2) annotation(Line(points = {{16.25, 6.5}, {16.25, 31.25}, {34, 31.25}, {34, 37}}, color = {0, 0, 127}));
       connect(Power_in, add.u1) annotation(Line(points = {{-100, 60}, {-28, 60}, {34, 40}, {34, 43}}, color = {0, 0, 127}));
       connect(product1.u1, DNI);
-      connect(product1.u2, SFraction);
+      connect(product1.u2, shadingfraction_function1.SOLAR_frac);
       //ics_lenslosses1.DNI_in = SFraction * DNI;
       connect(product1.y, ics_lenslosses1.DNI_in);
       //connect(modNum, shading_twelve1.ShadingTable);
@@ -1651,11 +1656,11 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     // THE PATH FOR THE LUT TXT WILL NEED TO BE DYNAMIC
     //*******************************************************
     /*
-     Modelica.Blocks.Interfaces.IntegerInput rowType annotation(Placement(visible = true, transformation(origin = {-100, 40}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {-100, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-    Modelica.Blocks.Interfaces.IntegerInput colType annotation(Placement(visible = true, transformation(origin = {-100, 80}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {-100, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-    Modelica.Blocks.Interfaces.RealInput arrayYaw annotation(Placement(visible = true, transformation(origin = {-100, 0}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {-100, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-    Modelica.Blocks.Interfaces.RealInput arrayPitch annotation(Placement(visible = true, transformation(origin = {-100, -60}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {-100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-                                        */
+                   Modelica.Blocks.Interfaces.IntegerInput rowType annotation(Placement(visible = true, transformation(origin = {-100, 40}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {-100, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+                  Modelica.Blocks.Interfaces.IntegerInput colType annotation(Placement(visible = true, transformation(origin = {-100, 80}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {-100, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+                  Modelica.Blocks.Interfaces.RealInput arrayYaw annotation(Placement(visible = true, transformation(origin = {-100, 0}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {-100, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+                  Modelica.Blocks.Interfaces.RealInput arrayPitch annotation(Placement(visible = true, transformation(origin = {-100, -60}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {-100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+                                                      */
     Modelica.Blocks.Interfaces.RealOutput SOLAR_frac annotation(Placement(visible = true, transformation(origin = {100, 0}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     Modelica.Blocks.Tables.CombiTable1Ds LUT(tableOnFile = true, fileName = "C:\\Users\\Kenton\\Desktop\\4DLUT.txt", tableName = "4DLUT");
     parameter Integer rowType = 1;
