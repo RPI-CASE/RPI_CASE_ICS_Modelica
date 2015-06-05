@@ -29,8 +29,8 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     Real measured_T_s3m1out = IC_Data_all.y[18];
     Real measured_T_s2m6in = IC_Data_all.y[19];
     Real measured_T_s2m1out = IC_Data_all.y[20];
-    Real measured_T_s2CPVa = IC_Data_all.y[21];
-    Real measured_T_s2CPVb = IC_Data_all.y[22];
+    Real measured_T_s2CPVa_s3m3 = IC_Data_all.y[21];
+    Real measured_T_s2CPVb_s3m2 = IC_Data_all.y[22];
     //Real measured_yaw = IC_Data_all.y[23];
     //Real measured_pitch = IC_Data_all.y[24];
     // Processed Data
@@ -50,12 +50,14 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     /////////////////////////////
     //work in the measured flow rate vector here
     Real temp_flowport_a = ics_envelopecassette1.flowport_a.H_flow / (measured_vFlow * mediumHTF.rho * mediumHTF.cp);
-    Real temp_flowport_b = abs(ics_envelopecassette1.flowport_b.H_flow / (measured_vFlow * mediumHTF.rho * mediumHTF.cp));
-    Real Qgen_arrayTotal = abs(ics_envelopecassette1.flowport_b.H_flow) - ics_envelopecassette1.flowport_a.H_flow;
+    Real temp_flowport_b = abs(ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[1].modulereceiver1.water_Block_HX1.flowport_b1.H_flow / (measured_vFlow * mediumHTF.rho * mediumHTF.cp));
+    Real Qgen_mods = ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[2].Qgen_mod + ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[3].Qgen_mod + ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[6].Qgen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[2].Qgen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[3].Qgen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[6].Qgen_mod;
+    Real Qgen_arrayTotal = abs(ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[1].modulereceiver1.water_Block_HX1.flowport_b1.H_flow) - ics_envelopecassette1.flowport_a.H_flow;
     Real Egen_arrayTotal = ics_envelopecassette1.Power_Electric;
     // Area of modules is assumed to be 0.3^2
-    Real eta_Q = Qgen_arrayTotal / (measured_DNI * 0.25019 ^ 2 * 6);
-    Real eta_E = ics_envelopecassette1.Power_Electric / (measured_DNI * 0.25019 ^ 2 * 6);
+    Real eta_Q = Qgen_mods * Trans_glazinglosses_eta / (measured_DNI * cos(ics_envelopecassette1.AOI) * GlassArea_perMod * 6);
+    Real eta_E = ics_envelopecassette1.Power_Electric * Trans_glazinglosses_eta / (measured_DNI * cos(ics_envelopecassette1.AOI) * GlassArea_perMod * 6);
+    Real eta_combined = eta_Q + eta_E;
     // m_dot*cp*(1 - Tamb/T2)
     Real Ex_carnot_arrayTotal = Qgen_arrayTotal * (1 - TAmb / temp_flowport_b);
     // m_dot*cp*(T2 - T1 - Tamb*ln(T2/T1))
@@ -70,8 +72,8 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     ICSolar.ICS_Context ics_context1(SurfOrientation = 40 * 2 * Modelica.Constants.pi / 360) annotation(Placement(visible = true, transformation(origin = {-180,40}, extent = {{-25,-25},{25,25}}, rotation = 0)));
     ICSolar.Envelope.ICS_EnvelopeCassette_Twelve ics_envelopecassette1 annotation(Placement(visible = true, transformation(origin = {20,40}, extent = {{-25,-25},{25,25}}, rotation = 0)));
     // Fluid Comp.
-    Modelica.Thermal.FluidHeatFlow.Sources.Ambient Source(medium = mediumHTF, useTemperatureInput = true, constantAmbientPressure = 101325, constantAmbientTemperature = TAmb) "Thermal fluid source" annotation(Placement(visible = true, transformation(origin = {-60,-40}, extent = {{-10,-10},{10,10}}, rotation = 180)));
-    Modelica.Thermal.FluidHeatFlow.Sources.VolumeFlow Pump(constantVolumeFlow = OneBranchFlow, m = 0.01, medium = mediumHTF, T0 = TAmb, T0fixed = false, useVolumeFlowInput = true) "Fluid pump for thermal fluid" annotation(Placement(visible = true, transformation(origin = {-20,-40}, extent = {{-10,-10},{10,10}}, rotation = 0)));
+    Modelica.Thermal.FluidHeatFlow.Sources.Ambient Source(medium = mediumHTF, useTemperatureInput = true, constantAmbientPressure = 101325, constantAmbientTemperature = 346) "Thermal fluid source" annotation(Placement(visible = true, transformation(origin = {-60,-40}, extent = {{-10,-10},{10,10}}, rotation = 180)));
+    Modelica.Thermal.FluidHeatFlow.Sources.VolumeFlow Pump(constantVolumeFlow = OneBranchFlow, m = 0.01, medium = mediumHTF, T0 = 346, T0fixed = false, useVolumeFlowInput = true) "Fluid pump for thermal fluid" annotation(Placement(visible = true, transformation(origin = {-20,-40}, extent = {{-10,-10},{10,10}}, rotation = 0)));
     Modelica.Thermal.FluidHeatFlow.Sources.Ambient Sink(medium = mediumHTF, constantAmbientPressure = 101325, constantAmbientTemperature = TAmb) "Thermal fluid sink, will be replaced with a tank later" annotation(Placement(visible = true, transformation(origin = {80,-20}, extent = {{-10,-10},{10,10}}, rotation = 0)));
   equation
     //set the HTF temperature according to measured data
@@ -93,9 +95,9 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     //connect measured data for DNI and cavity temperature to cassette (kept as Reals)
     connect(measured_DNI,ics_envelopecassette1.DNI_measured);
     connect(measured_T_cavAvg,ics_envelopecassette1.Tcav_measured);
-    //experiment(StartTime = 7137000.0, StopTime = 7141200.0, Tolerance = 1e-006, Interval = 100));
-    //annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200,-100},{200,100}}), graphics), experiment(StartTime = 6787900, StopTime = 6790070, Tolerance = 1e-006, Interval = 60));
-    annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200,-100},{200,100}}), graphics), experiment(StartTime = 4365153, StopTime = 4376623, Tolerance = 1e-006, Interval = 60));
+    //experiment(StartTime = 7036600, StopTime = 7061100, Tolerance = 1e-006, Interval = 60));
+    //  annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200,-100},{200,100}}), graphics), experiment(StartTime = 4365153, StopTime = 4376623, Tolerance = 1e-006, Interval = 60));
+    annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200,-100},{200,100}}), graphics), experiment(StartTime = 7036600, StopTime = 7061100, Tolerance = 1e-006, Interval = 60));
   end ICS_Skeleton;
   model ICS_Context "This model provides the pieces necessary to set up the context to run the simulation, in FMU practice this will be cut out and provided from the EnergyPlus file"
     extends ICSolar.Parameters;
@@ -972,6 +974,7 @@ Evidently yes. still sorting that one out, but let's not get distracted.
       //  parameter Real FNum = 0.85 "FNum determines the lens transmittance based on concentrating";
       //  Integer FMatNum "Integer used to pipe the material to other models";
       // Adding in temperature outputs for truing-up model (5.3.15)_kP
+      Real Qgen_mod = abs(flowport_b1.H_flow) - flowport_a1.H_flow;
       Modelica.Blocks.Sources.CombiTimeTable eGen_on(tableOnFile = true, fileName = Path + Date + "EgenIO.txt", tableName = "EgenIO", nout = 12, columns = {2,3,4,5,6,7,8,9,10,11,12,13}, smoothness = Modelica.Blocks.Types.Smoothness.ConstantSegments, extrapolation = Modelica.Blocks.Types.Extrapolation.HoldLastPoint);
       // Imports the entire eGen matri
       Modelica.Thermal.FluidHeatFlow.Interfaces.FlowPort_b flowport_b1(medium = mediumHTF) "Outflow port of the thermal fluid (to Parent)" annotation(Placement(visible = true, transformation(origin = {100,-40}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {100,-40}, extent = {{-10,-10},{10,10}}, rotation = 0)));
@@ -1122,9 +1125,9 @@ Evidently yes. still sorting that one out, but let's not get distracted.
     ///////////////////////
     //////// PATH /////////
     ///////////////////////
-    //parameter String Date = "20150323\\";
+    parameter String Date = "20150323\\";
     //parameter String Date = "20150319\\";
-    parameter String Date = "20150220\\";
+    //parameter String Date = "20150220\\";
     //need to change path here to compile, also where path_2 shows up:
     // C:\Users\Kenton\Documents\GitHub\RPI_CASE_ICS_Modelica
     parameter String Path = "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\";
@@ -1147,14 +1150,18 @@ Evidently yes. still sorting that one out, but let's not get distracted.
     parameter Integer StackHeight = 6 "Number of Modules per stack";
     parameter Integer NumOfStacks = 2 "Number of stacks, controls the .Stack object";
     parameter Integer NumOfModules = StackHeight * NumOfStacks "ModulesPerStack * NumOfStacks Number of modules being simulated. Will be replaced with a calculation based on wall area in the future.";
-    parameter Real GlassArea = NumOfModules * 0.3 * 0.3 "Glass Area exposed to either the interior or exterior. Could be replaced later with wall area";
+    // 11 in. height       13.5 in. width
+    parameter Real GlassArea_perMod = 0.2794 * 0.3429 "Glass Area exposed to either the interior or exterior. Could be replaced later with wall area";
+    parameter Real GlassArea = 0.3 ^ 2;
     parameter Real CavityVolume = GlassArea * 0.5 "Volume of cavity for air calculations";
     ////////////////////////////////
     ///// OPTICAL EFFICIENCIES /////
     ////////////////////////////////
     parameter Real Trans_glazinglosses = 0.74 "Transmittance of outter glazing losses (single glass layer). Good glass: Guardian Ultraclear 6mm: 0.87. For our studio IGUs, measured 0.71. But give it 0.74, because we measured at ~28degrees, which will increase absorptance losses.";
+    parameter Real Trans_glazinglosses_eta = 0.86;
     // parameter Real OpticalEfficiency = 0.57 "The optical efficiency of the concentrating lens and optics prior to the photovoltaic cell";
     parameter Real OpticalEfficiency = 0.5649999999999999;
+    // parameter Real OpticalEfficiency = 0.886;
     //parameter Real Exp_Observed = 0.215 "observed electrical efficiency of ICSFg8";
     //parameter Real Exp_nom_tweak = 0.364 * OpticalEfficiency "matching the observed to modeled data, compensating for temperature 'unknown'. 0.364 matches the Nov25-13 data well when eta_observed is 0.215. set same as eta_obs for full-strength output.";
     ///////////////////////
@@ -1197,7 +1204,7 @@ Evidently yes. still sorting that one out, but let's not get distracted.
     parameter Real Conv_Receiver = adj_2 * 5;
     // 0.07 "Convection Heat Transfer of Receiver to air h(=10)*A(=0.004m2)";
     //parameter Real Conv_Receiver = 0.0618321 "Convection Heat Transfer of Receiver to air h(=10)*A(=0.004m2)";
-    parameter Real adj = 0.21;
+    parameter Real adj = 0.23;
     parameter Real adj_2 = 0.7;
     // adjustment to keep the temperatures the same, but change the overall heat loss
     parameter Real factor_1 = 10 * adj;

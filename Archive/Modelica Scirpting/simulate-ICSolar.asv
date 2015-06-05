@@ -39,7 +39,7 @@ getErrorString();
 
 // ---- FOR MARCH 23
 setParameterValue(ICSolar.Parameters, Date, "20150323\\");
-simulate(ICSolar.ICS_Skeleton,startTime=7036600, StopTime = 7061100, Interval = 120);
+simulate(ICSolar.ICS_Skeleton,startTime=7036600, StopTime = 7061100, Interval = 60);
 getErrorString();
 
 
