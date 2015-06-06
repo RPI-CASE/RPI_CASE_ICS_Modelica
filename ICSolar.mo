@@ -54,12 +54,15 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     //
     //calculating power output and efficiencies...
     Real Qgen_mods = ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[2].Qgen_mod + ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[3].Qgen_mod + ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[6].Qgen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[2].Qgen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[3].Qgen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[6].Qgen_mod;
+    Real eta_Qgen_mods = (ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[2].eta_Qgen_mod + ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[3].eta_Qgen_mod + ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[6].eta_Qgen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[2].eta_Qgen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[3].eta_Qgen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[6].eta_Qgen_mod) / 6;
+    Real eta_Egen_mods = (ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[2].eta_Egen_mod + ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[3].eta_Egen_mod + ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[6].eta_Egen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[2].eta_Egen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[3].eta_Egen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[6].eta_Egen_mod) / 6;
+    Real eta_combined_mods = eta_Qgen_mods + eta_Egen_mods;
     Real Qgen_arrayTotal = abs(ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[1].modulereceiver1.water_Block_HX1.flowport_b1.H_flow) - ics_envelopecassette1.flowport_a.H_flow;
     Real Egen_arrayTotal = ics_envelopecassette1.Power_Electric;
     // Area of modules is assumed to be 0.3^2
-    Real eta_Q = Qgen_mods * Trans_glazinglosses_eta / (measured_DNI * cos(ics_envelopecassette1.AOI) * GlassArea_perMod * 6);
-    Real eta_E = ics_envelopecassette1.Power_Electric * Trans_glazinglosses_eta / (measured_DNI * cos(ics_envelopecassette1.AOI) * GlassArea_perMod * 6);
-    Real eta_combined = eta_Q + eta_E;
+    Real eta_Q_arrayTotal = Qgen_mods * Trans_glazinglosses_eta / (measured_DNI * cos(ics_envelopecassette1.AOI) * GlassArea_perMod * 6);
+    Real eta_E_arrayTotal = ics_envelopecassette1.Power_Electric * Trans_glazinglosses_eta / (measured_DNI * cos(ics_envelopecassette1.AOI) * GlassArea_perMod * 6);
+    Real eta_combined_arrayTotal = eta_Q_arrayTotal + eta_E_arrayTotal;
     // m_dot*cp*(1 - Tamb/T2)
     Real Ex_carnot_arrayTotal = Qgen_arrayTotal * (1 - TAmb / temp_flowport_b);
     // m_dot*cp*(T2 - T1 - Tamb*ln(T2/T1))
@@ -99,8 +102,8 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     connect(measured_DNI,ics_envelopecassette1.DNI_measured);
     connect(measured_T_cavAvg,ics_envelopecassette1.Tcav_measured);
     //experiment(StartTime = 7036600, StopTime = 7061100, Tolerance = 1e-006, Interval = 60));
-    //  annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200,-100},{200,100}}), graphics), experiment(StartTime = 4365153, StopTime = 4376623, Tolerance = 1e-006, Interval = 60));
-    annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200,-100},{200,100}}), graphics), experiment(StartTime = 7047000, StopTime = 7050593, Tolerance = 1e-006, Interval = 10));
+    //  annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200,-100},{200,100}}), graphics), experiment(StartTime = 7046000, StopTime = 7050593, Tolerance = 1e-006, Interval = 10));
+    annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200,-100},{200,100}}), graphics), experiment(StartTime = 4365153, StopTime = 4371284, Tolerance = 1e-006, Interval = 10));
   end ICS_Skeleton;
   model ICS_Context "This model provides the pieces necessary to set up the context to run the simulation, in FMU practice this will be cut out and provided from the EnergyPlus file"
     extends ICSolar.Parameters;
@@ -988,6 +991,9 @@ Evidently yes. still sorting that one out, but let's not get distracted.
       //  Integer FMatNum "Integer used to pipe the material to other models";
       // Adding in temperature outputs for truing-up model (5.3.15)_kP
       Real Qgen_mod = abs(flowport_b1.H_flow) - flowport_a1.H_flow;
+      Real Egen_mod = Power_out - Power_in;
+      Real eta_Qgen_mod = Qgen_mod / (shading_twelve1.DNI_out * LensWidth ^ 2);
+      Real eta_Egen_mod = Egen_mod / (shading_twelve1.DNI_out * LensWidth ^ 2);
       Modelica.Blocks.Sources.CombiTimeTable eGen_on(tableOnFile = true, fileName = Path + Date + "EgenIO.txt", tableName = "EgenIO", nout = 12, columns = {2,3,4,5,6,7,8,9,10,11,12,13}, smoothness = Modelica.Blocks.Types.Smoothness.ConstantSegments, extrapolation = Modelica.Blocks.Types.Extrapolation.HoldLastPoint);
       // Imports the entire eGen matri
       Modelica.Thermal.FluidHeatFlow.Interfaces.FlowPort_b flowport_b1(medium = mediumHTF) "Outflow port of the thermal fluid (to Parent)" annotation(Placement(visible = true, transformation(origin = {100,-40}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {100,-40}, extent = {{-10,-10},{10,10}}, rotation = 0)));
@@ -1066,7 +1072,7 @@ Evidently yes. still sorting that one out, but let's not get distracted.
       class receiverInternalEnergy
         extends ICSolar.Parameters;
         Modelica.Thermal.HeatTransfer.Interfaces.HeatPort_b port_b annotation(Placement(visible = true, transformation(origin = {100,60}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {100,60}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-        Modelica.Thermal.HeatTransfer.Components.HeatCapacitor heatcapacitor1(C = HeatCap_Receiver) "60 J/K is calculated in spreadsheet in 1-DOCS\\calculators ...thermal mass or heat capacity of receiver.xlsx" annotation(Placement(visible = true, transformation(origin = {-20,0}, extent = {{-10,10},{10,-10}}, rotation = 0)));
+        Modelica.Thermal.HeatTransfer.Components.HeatCapacitor heatcapacitor1(C = HeatCap_Receiver, T(start = T_HTF_start, fixed = true)) "60 J/K is calculated in spreadsheet in 1-DOCS\\calculators ...thermal mass or heat capacity of receiver.xlsx" annotation(Placement(visible = true, transformation(origin = {-20,0}, extent = {{-10,10},{10,-10}}, rotation = 0)));
       equation
         connect(heatcapacitor1.port,port_b) annotation(Line(points = {{-20,10},{-20.023,10},{-20.023,60.5293},{100,60.5293},{100,60}}));
       end receiverInternalEnergy;
@@ -1138,9 +1144,9 @@ Evidently yes. still sorting that one out, but let's not get distracted.
     ///////////////////////
     //////// PATH /////////
     ///////////////////////
-    parameter String Date = "20150323\\";
+    //parameter String Date = "20150323\\";
     //parameter String Date = "20150319\\";
-    //parameter String Date = "20150220\\";
+    parameter String Date = "20150220\\";
     //need to change path here to compile, also where path_2 shows up:
     // C:\Users\Kenton\Documents\GitHub\RPI_CASE_ICS_Modelica
     parameter String Path = "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\";
@@ -1230,7 +1236,7 @@ Evidently yes. still sorting that one out, but let's not get distracted.
     parameter Real Conv_Receiver = adj_2 * 5;
     // 0.07 "Convection Heat Transfer of Receiver to air h(=10)*A(=0.004m2)";
     //parameter Real Conv_Receiver = 0.0618321 "Convection Heat Transfer of Receiver to air h(=10)*A(=0.004m2)";
-    parameter Real adj = 0.25;
+    parameter Real adj = 0.26;
     parameter Real adj_2 = 0.7;
     // adjustment to keep the temperatures the same, but change the overall heat loss
     parameter Real factor_1 = 10 * adj;
