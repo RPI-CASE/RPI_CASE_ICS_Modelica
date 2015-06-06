@@ -42,13 +42,14 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     Real UQ_measured_T_HTFout_upper = measured_T_HTFout + 0.5;
     Real UQ_measured_T_HTFout_lower = measured_T_HTFout - 0.5;
     // Ambient / Cavity Temp
-    Modelica.Blocks.Sources.CombiTimeTable T_cav_in(tableOnFile = true, fileName = Path + Date + "T_Cav_data.txt", tableName = "T_Cav");
-    Real measured_T_amb = measured_T_cavAvg;
+    //Modelica.Blocks.Sources.CombiTimeTable T_cav_in(tableOnFile = true, fileName = Path + Date + "T_Cav_data.txt", tableName = "T_Cav");
+    // Real measured_T_amb =
     //  Real measured_T_amb = T_cav_in.y[1];
     /////////////////////////////
     ///  Energy / Exergy Var. ///
     /////////////////////////////
     //work in the measured flow rate vector here
+    Real chi_modeled = (temp_flowport_a - measured_T_cavAvg) / measured_DNI;
     Real temp_flowport_a = ics_envelopecassette1.flowport_a.H_flow / (measured_vFlow * mediumHTF.rho * mediumHTF.cp);
     Real temp_flowport_b = abs(ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[1].modulereceiver1.water_Block_HX1.flowport_b1.H_flow / (measured_vFlow * mediumHTF.rho * mediumHTF.cp));
     //
