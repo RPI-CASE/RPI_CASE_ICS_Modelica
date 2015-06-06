@@ -52,6 +52,8 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     //work in the measured flow rate vector here
     Real temp_flowport_a = ics_envelopecassette1.flowport_a.H_flow / (measured_vFlow * mediumHTF.rho * mediumHTF.cp);
     Real temp_flowport_b = abs(ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[1].modulereceiver1.water_Block_HX1.flowport_b1.H_flow / (measured_vFlow * mediumHTF.rho * mediumHTF.cp));
+    //
+    //calculating power output and efficiencies...
     Real Qgen_mods = ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[2].Qgen_mod + ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[3].Qgen_mod + ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[6].Qgen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[2].Qgen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[3].Qgen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[6].Qgen_mod;
     Real Qgen_arrayTotal = abs(ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[1].modulereceiver1.water_Block_HX1.flowport_b1.H_flow) - ics_envelopecassette1.flowport_a.H_flow;
     Real Egen_arrayTotal = ics_envelopecassette1.Power_Electric;
