@@ -256,7 +256,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       if DNI > 0 then
         Trans_glaz_transient = SurfDirNor / DNI;
       else
-        Trans_glaz_transient = Trans_glaz;
+        Trans_glaz_transient = Trans_glazinglosses_Schlick;
       end if;
       annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2}), graphics = {Text(origin = {-2.81, 1.48}, extent = {{-67, 33.14}, {67, -33.14}}, textString = "Glazing Losses")}), experiment(StartTime = 1, StopTime = 31536000.0, Tolerance = 1e-006, Interval = 3600));
     end ICS_GlazingLosses;
