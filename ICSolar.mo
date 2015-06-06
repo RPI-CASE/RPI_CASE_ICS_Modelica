@@ -1647,22 +1647,38 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     // THE PATH FOR THE LUT TXT WILL NEED TO BE DYNAMIC
     //*******************************************************
     /*
-                                                                                                                               Modelica.Blocks.Interfaces.IntegerInput rowType annotation(Placement(visible = true, transformation(origin = {-100, 40}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {-100, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-                                                                                                                              Modelica.Blocks.Interfaces.IntegerInput colType annotation(Placement(visible = true, transformation(origin = {-100, 80}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {-100, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-                                                                                                                              Modelica.Blocks.Interfaces.RealInput arrayYaw annotation(Placement(visible = true, transformation(origin = {-100, 0}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {-100, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-                                                                                                                              Modelica.Blocks.Interfaces.RealInput arrayPitch annotation(Placement(visible = true, transformation(origin = {-100, -60}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {-100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-                                                                                                                                                                  */
+                                                                                                                                     Modelica.Blocks.Interfaces.IntegerInput rowType annotation(Placement(visible = true, transformation(origin = {-100, 40}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {-100, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+                                                                                                                                    Modelica.Blocks.Interfaces.IntegerInput colType annotation(Placement(visible = true, transformation(origin = {-100, 80}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {-100, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+                                                                                                                                    Modelica.Blocks.Interfaces.RealInput arrayYaw annotation(Placement(visible = true, transformation(origin = {-100, 0}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {-100, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+                                                                                                                                    Modelica.Blocks.Interfaces.RealInput arrayPitch annotation(Placement(visible = true, transformation(origin = {-100, -60}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {-100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+                                                                                                                                                                        */
     Modelica.Blocks.Interfaces.RealOutput SOLAR_frac annotation(Placement(visible = true, transformation(origin = {100, 0}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     Modelica.Blocks.Tables.CombiTable1Ds LUT(tableOnFile = true, fileName = "C:\\Users\\Justin\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\4D_LUT\\4DLUT.txt", tableName = "4DLUT");
-    parameter Real index_num = ShadingFraction_Index(rowType, colType, arrayPitch, arrayYaw);
-    parameter Modelica.Blocks.Interfaces.RealInput arrayYaw = -1.15 annotation(Placement(visible = true, transformation(origin = {-100, -60}, extent = {{-16.25, -16.25}, {16.25, 16.25}}, rotation = 0), iconTransformation(origin = {-100, -80}, extent = {{-16.25, -16.25}, {16.25, 16.25}}, rotation = 0)));
-    parameter Modelica.Blocks.Interfaces.RealInput arrayPitch = 1.25 annotation(Placement(visible = true, transformation(origin = {-100, -20}, extent = {{-16.25, -16.25}, {16.25, 16.25}}, rotation = 0), iconTransformation(origin = {-100, -40}, extent = {{-16.25, -16.25}, {16.25, 16.25}}, rotation = 0)));
-    parameter Modelica.Blocks.Interfaces.IntegerInput colType = 1 annotation(Placement(visible = true, transformation(origin = {-100, 40}, extent = {{-16.25, -16.25}, {16.25, 16.25}}, rotation = 0), iconTransformation(origin = {-100, 0}, extent = {{-16.25, -16.25}, {16.25, 16.25}}, rotation = 0)));
-    parameter Modelica.Blocks.Interfaces.IntegerInput rowType = 1 annotation(Placement(visible = true, transformation(origin = {-100, 80}, extent = {{-16.25, -16.25}, {16.25, 16.25}}, rotation = 0), iconTransformation(origin = {-100, 40}, extent = {{-16.25, -16.25}, {16.25, 16.25}}, rotation = 0)));
+    Real index_num = ShadingFraction_Index(rowType, colType, arrayPitch, arrayYaw);
+    Modelica.Blocks.Interfaces.RealInput arrayYaw = -1.15 annotation(Placement(visible = true, transformation(origin = {-100, -60}, extent = {{-16.25, -16.25}, {16.25, 16.25}}, rotation = 0), iconTransformation(origin = {-100, -80}, extent = {{-16.25, -16.25}, {16.25, 16.25}}, rotation = 0)));
+    Modelica.Blocks.Interfaces.RealInput arrayPitch = 1.25 annotation(Placement(visible = true, transformation(origin = {-100, -20}, extent = {{-16.25, -16.25}, {16.25, 16.25}}, rotation = 0), iconTransformation(origin = {-100, -40}, extent = {{-16.25, -16.25}, {16.25, 16.25}}, rotation = 0)));
+    Modelica.Blocks.Interfaces.IntegerInput colType = 1 annotation(Placement(visible = true, transformation(origin = {-100, 40}, extent = {{-16.25, -16.25}, {16.25, 16.25}}, rotation = 0), iconTransformation(origin = {-100, 0}, extent = {{-16.25, -16.25}, {16.25, 16.25}}, rotation = 0)));
+    Modelica.Blocks.Interfaces.IntegerInput rowType = 1 annotation(Placement(visible = true, transformation(origin = {-100, 80}, extent = {{-16.25, -16.25}, {16.25, 16.25}}, rotation = 0), iconTransformation(origin = {-100, 40}, extent = {{-16.25, -16.25}, {16.25, 16.25}}, rotation = 0)));
   equation
     connect(index_num, LUT.u);
     connect(LUT.y[1], SOLAR_frac);
     annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})));
   end ShadingFraction_Function;
+
+  model testShadingFunction
+    ICSolar.ShadingFraction_Function shadingfraction_function1 annotation(Placement(visible = true, transformation(origin = {0, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Blocks.Sources.IntegerConstant rowType(k = 3) annotation(Placement(visible = true, transformation(origin = {-80, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Blocks.Sources.IntegerConstant modType(k = 3) annotation(Placement(visible = true, transformation(origin = {-80, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Blocks.Sources.Constant Pitch(k = 0.75) annotation(Placement(visible = true, transformation(origin = {-80, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Blocks.Sources.Constant Yaw(k = 0) annotation(Placement(visible = true, transformation(origin = {-80, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Blocks.Interfaces.RealOutput ShadingFraction annotation(Placement(visible = true, transformation(origin = {100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {80, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  equation
+    connect(shadingfraction_function1.SOLAR_frac, ShadingFraction) annotation(Line(points = {{10, 0}, {93.0988, 0}, {93.0988, -0.270636}, {93.0988, -0.270636}}, color = {0, 0, 127}));
+    connect(Yaw.y, shadingfraction_function1.arrayYaw) annotation(Line(points = {{-69, -80}, {-24.3572, -80}, {-24.3572, -8.11908}, {-10.8254, -8.11908}, {-10.8254, -8.11908}}, color = {0, 0, 127}));
+    connect(Pitch.y, shadingfraction_function1.arrayPitch) annotation(Line(points = {{-69, -40}, {-36.8065, -40}, {-36.8065, -3.7889}, {-10.2842, -3.7889}, {-10.2842, -3.7889}}, color = {0, 0, 127}));
+    connect(modType.y, shadingfraction_function1.colType) annotation(Line(points = {{-69, 0}, {-10.8254, 0}, {-10.8254, 0}, {-10.8254, 0}}, color = {255, 127, 0}));
+    connect(rowType.y, shadingfraction_function1.rowType) annotation(Line(points = {{-69, 40}, {-19.7564, 40}, {-19.7564, 3.51827}, {-11.0961, 3.51827}, {-11.0961, 3.51827}}, color = {255, 127, 0}));
+    annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})));
+  end testShadingFunction;
   annotation(uses(Modelica(version = "3.2.1"), Buildings(version = "1.6")), experiment(StartTime = 7137000.0, StopTime = 7141200.0, Tolerance = 1e-006, Interval = 60));
 end ICSolar;
