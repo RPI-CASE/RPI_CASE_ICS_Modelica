@@ -736,11 +736,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     model ICS_Lens "This model does the concentrating lens calculations: transmission losses and concentration. DNI_out is the DNI after concentration"
       Modelica.Blocks.Interfaces.RealInput DNI_in "DNI in from Module (Parent)" annotation(Placement(visible = true, transformation(origin = {-100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.Blocks.Interfaces.RealInput FNum "F Number of concentrating Lens" annotation(Placement(visible = false, transformation(origin = {-100, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-<<<<<<< HEAD
       //      Modelica.Blocks.Interfaces.RealInput LensWidth "Width of Concentrating Lens" annotation(Placement(visible = false, transformation(origin = {-100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-=======
-      Modelica.Blocks.Interfaces.RealInput LensWidth "Width of Concentrating Lens" annotation(Placement(visible = false, transformation(origin = {-100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
->>>>>>> parent of 38dcfc6... Working no truing thermal output
       Modelica.Blocks.Interfaces.RealInput CellWidth "Width of PV Cell" annotation(Placement(visible = false, transformation(origin = {-100, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.Blocks.Interfaces.IntegerInput FMat "Integer describing lens material and selecting tran losses equation accordingly" annotation(Placement(visible = false, transformation(origin = {-100, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Real ModuleDepth = LensWidth * sqrt(2) * FNum;
@@ -785,11 +781,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     model ICS_LensLosses "This model does the concentrating lens calculations: transmission losses and concentration. DNI_out is the DNI after concentration"
       extends ICSolar.Parameters;
       parameter Real Eff_Optic = OpticalEfficiency "Optical efficiency of the concentrating lens and optical device before the photovoltaic cell, value comes from ICSolar.Parameter";
-<<<<<<< HEAD
       //     Modelica.Blocks.Interfaces.RealInput LensWidth annotation(Placement(visible = false, transformation(origin = {-100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-=======
-      Modelica.Blocks.Interfaces.RealInput LensWidth annotation(Placement(visible = false, transformation(origin = {-100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
->>>>>>> parent of 38dcfc6... Working no truing thermal output
       Modelica.Blocks.Interfaces.RealInput CellWidth annotation(Placement(visible = false, transformation(origin = {-100, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.Blocks.Interfaces.RealOutput DNI_out annotation(Placement(visible = true, transformation(origin = {100, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.Blocks.Interfaces.RealOutput ConcentrationFactor = LensWidth ^ 2 / CellWidth ^ 2 annotation(Placement(visible = true, transformation(origin = {100, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
@@ -999,11 +991,7 @@ Evidently yes. still sorting that one out, but let's not get distracted.
       Modelica.Blocks.Interfaces.IntegerInput modNum annotation(Placement(visible = true, transformation(origin = {-100, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-80, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     equation
       connect(modNum, shading_twelve1.ShadingTable);
-<<<<<<< HEAD
       connect(shading_twelve1.DNI_onPOE, ics_lenslosses1.DNI_in) annotation(Line(points = {{-50, 42}, {-43.6957, 42}, {-43.6957, 14.205}, {-83.377, 14.205}, {-83.377, 6.94808}, {-75.3481, 6.94808}, {-75.3481, 6.94808}}, color = {0, 0, 127}));
-=======
-      connect(shading_twelve1.DNI_out, ics_lenslosses1.DNI_in) annotation(Line(points = {{-50, 42}, {-43.6957, 42}, {-43.6957, 14.205}, {-83.377, 14.205}, {-83.377, 6.94808}, {-75.3481, 6.94808}, {-75.3481, 6.94808}}, color = {0, 0, 127}));
->>>>>>> parent of 38dcfc6... Working no truing thermal output
       connect(shading_twelve1.arrayPitch, arrayPitch) annotation(Line(points = {{-70, 40}, {-78.59050000000001, 40}, {-78.59050000000001, 30.4172}, {-95.8836, 30.4172}, {-95.8836, 30.4172}}, color = {0, 0, 127}));
       connect(shading_twelve1.arrayYaw, arrayYaw) annotation(Line(points = {{-70, 44}, {-77.9729, 44}, {-77.9729, 49.4086}, {-96.038, 49.4086}, {-96.038, 49.4086}}, color = {0, 0, 127}));
       connect(shading_twelve1.DNI_in, DNI) annotation(Line(points = {{-70, 48}, {-85.693, 48}, {-85.693, 17.6018}, {-95.72920000000001, 17.6018}, {-95.72920000000001, 17.6018}}, color = {0, 0, 127}));
@@ -1428,11 +1416,7 @@ Evidently yes. still sorting that one out, but let's not get distracted.
     //extends ICSolar.Parameters;
     extends ICSolar.ShadingLUT0;
     extends ICSolar.shadingImport;
-<<<<<<< HEAD
     Modelica.Blocks.Interfaces.RealOutput DNI_onPOE "DNI after shading factor multiplication" annotation(Placement(visible = true, transformation(origin = {100, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-=======
-    Modelica.Blocks.Interfaces.RealOutput DNI_out "DNI after shading factor multiplication" annotation(Placement(visible = true, transformation(origin = {100, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
->>>>>>> parent of 38dcfc6... Working no truing thermal output
     Modelica.Blocks.Math.Product product1 "Multiplication of DNI and shading factor" annotation(Placement(visible = true, transformation(origin = {20, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     Modelica.Blocks.Interfaces.IntegerInput ShadingTable annotation(Placement(visible = true, transformation(origin = {-100, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     //for picking different shading matrices:
@@ -1492,11 +1476,7 @@ Evidently yes. still sorting that one out, but let's not get distracted.
       product1.u2 = modShadingLUT_12.y;
     end if;
     //product1.u2 = if Shading_matrix.y < 0 then 0 else Shading_matrix.y;
-<<<<<<< HEAD
     connect(product1.y, DNI_onPOE) "DNI after multiplication connected to output of model" annotation(Line(points = {{31, 40}, {58.5909, 40}, {58.5909, 19.7775}, {100, 19.7775}, {100, 20}}));
-=======
-    connect(product1.y, DNI_out) "DNI after multiplication connected to output of model" annotation(Line(points = {{31, 40}, {58.5909, 40}, {58.5909, 19.7775}, {100, 19.7775}, {100, 20}}));
->>>>>>> parent of 38dcfc6... Working no truing thermal output
     connect(DNI_in, product1.u1) "Model input DNI connecting to product" annotation(Line(points = {{-100, 80}, {-36.3412, 80}, {-36.3412, 45.9827}, {8, 45.9827}, {8, 46}}));
     connect(arrayYaw, Shading_matrix.u2);
     connect(arrayPitch, Shading_matrix.u1);
