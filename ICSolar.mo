@@ -1094,8 +1094,10 @@ Evidently yes. still sorting that one out, but let's not get distracted.
         //
         //waterblock resistance
         //  constant Modelica.SIunits.SpecificHeatCapacity mikrosCP = 5050;
-        Real R_waterblock = R_wb(flowport_a1.m_flow);
-        parameter Modelica.Thermal.HeatTransfer.Components.ThermalResistor thermalresistor_waterblock(R = R_waterblock) annotation(Placement(visible = true, transformation(origin = {-20, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 90)));
+        //final parameter Real R_waterblock = ICSolar.Receiver.subClasses.R_wb(flowport_a1.m_flow);
+        //parameter Modelica.Thermal.HeatTransfer.Components.ThermalResistor thermalresistor_waterblock(R = R_waterblock) annotation(Placement(visible = true, transformation(origin = {-20, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 90)));
+        //Modelica.Thermal.HeatTransfer.Components.ThermalResistor thermalresistor_waterblock(final R = 5050 * flowport_a1.m_flow ^ (-0.773)) annotation(Placement(visible = true, transformation(origin = {-20, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 90)));
+        Modelica.Thermal.HeatTransfer.Components.ThermalResistor thermalresistor_waterblock(R = 5050) annotation(Placement(visible = true, transformation(origin = {-20, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 90)));
         //
         //this is unrelated to the water flow
         Modelica.Thermal.HeatTransfer.Components.ThermalResistor thermalresistor_celltoreceiver(R = Resistivity_Cell) annotation(Placement(visible = true, transformation(origin = {-60, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
@@ -1144,7 +1146,8 @@ Evidently yes. still sorting that one out, but let's not get distracted.
       end Tubing_Losses;
 
       function R_wb
-        input Real flowRate = 1 "mass flow rate";
+        //  input Real flowRate = 1 "mass flow rate";
+        input Real flowRate "mass flow rate";
         output Real R_wb "thermal resistance of waterblock";
       protected
         Real gain = 5050;
