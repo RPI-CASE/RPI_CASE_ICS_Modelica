@@ -1,4 +1,5 @@
 #1 will need to update the number of rows in the next header row by noting file rows length and subtracting 2:
+#here's a nother row will it be ignored?
 float	DNI_THTFin_vdot(221,23)		#vectors: (SecOfYear), DNI (W/m2), THTF_in (K), vdot (m3/s), Egen(W), THTF_out (K), Tcavity (K), THTFout(K), Tcav(K), T_s3m6in, T_s3m6out, T_s3m5in, T_s3m5out, T_s3m4in, T_s3m4out, T_s3m3in, T_s3m3out, T_s3m2in, T_s3m2out, T_s3m1in, T_s3m1out, T_s2m6in, T_s2m1out, T_s2m2or3, T_s2m3or2
 0	1.2	348.74	0.000002574	0.00	343.35	298.39	348.74	348.53	348.41	348.05	347.91	347.22	347.08	347.02	346.46	346.44	346.26	346.10	345.00	343.35	346.06	346.55
 6787901.075	582.9	349.54	0.000000010	0.00	345.50	299.39	349.5	349.4	349.4	349.0	348.9	348.3	348.3	348.3	347.8	347.8	347.6	347.6	346.7	345.5	347.7	348.0

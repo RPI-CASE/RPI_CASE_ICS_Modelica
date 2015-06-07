@@ -46,6 +46,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     //Modelica.Blocks.Sources.CombiTimeTable T_cav_in(tableOnFile = true, fileName = Path + Date + "T_Cav_data.txt", tableName = "T_Cav");
     // Real measured_T_amb =
     //  Real measured_T_amb = T_cav_in.y[1];
+    //_____________________________________________________________________________
     /////////////////////////////
     ///  Energy / Exergy Var. ///
     /////////////////////////////
@@ -81,7 +82,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     ICSolar.Envelope.ICS_EnvelopeCassette_Twelve ics_envelopecassette1 annotation(Placement(visible = true, transformation(origin = {20, 40}, extent = {{-25, -25}, {25, 25}}, rotation = 0)));
     // Fluid Comp.
     Modelica.Thermal.FluidHeatFlow.Sources.Ambient Source(medium = mediumHTF, useTemperatureInput = true, constantAmbientPressure = 101325, constantAmbientTemperature = T_HTF_start) "Thermal fluid source" annotation(Placement(visible = true, transformation(origin = {-60, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 180)));
-    Modelica.Thermal.FluidHeatFlow.Sources.VolumeFlow Pump(constantVolumeFlow = OneBranchFlow, m = 0.01, medium = mediumHTF, T0 = T_HTF_start, T0fixed = true, useVolumeFlowInput = true) "Fluid pump for thermal fluid" annotation(Placement(visible = true, transformation(origin = {-20, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Thermal.FluidHeatFlow.Sources.VolumeFlow Pump(m = 0.01, medium = mediumHTF, T0 = T_HTF_start, T0fixed = true, useVolumeFlowInput = true) "Fluid pump for thermal fluid" annotation(Placement(visible = true, transformation(origin = {-20, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     Modelica.Thermal.FluidHeatFlow.Sources.Ambient Sink(medium = mediumHTF, constantAmbientPressure = 101325, constantAmbientTemperature = T_HTF_start) "Thermal fluid sink, will be replaced with a tank later" annotation(Placement(visible = true, transformation(origin = {80, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   equation
     //set the HTF temperature according to measured data
@@ -106,8 +107,8 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     //experiment(StartTime = 7036600, StopTime = 7061100, Tolerance = 1e-006, Interval = 60));
     //    annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200,-100},{200,100}}), graphics), experiment(StartTime = 7046000, StopTime = 7050593, Tolerance = 1e-006, Interval = 10));
     //annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200, -100}, {200, 100}}), graphics), experiment(StartTime = 4365153, StopTime = 4371284, Tolerance = 1e-006, Interval = 10));
-    //start and stop from the mar19_2015 data:
     //start and stop from the mar23_2015 data:    annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200, -100}, {200, 100}}), graphics), experiment(StartTime = 7047292, StopTime = 7050593, Tolerance = 1e-006, Interval = 60));
+    //start and stop from the mar19_2015 data:
     annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200, -100}, {200, 100}}), graphics), experiment(StartTime = 6.7879e6, StopTime = 6.79e6, Tolerance = 1e-006, Interval = 60));
   end ICS_Skeleton;
 
@@ -1090,7 +1091,10 @@ Evidently yes. still sorting that one out, but let's not get distracted.
         Modelica.Thermal.HeatTransfer.Interfaces.HeatPort_a heatLoss_to_ambient annotation(Placement(visible = true, transformation(origin = {-100, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
         Modelica.Thermal.HeatTransfer.Components.ThermalCollector thermalcollector1 annotation(Placement(visible = true, transformation(origin = {-20, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
         Modelica.Thermal.FluidHeatFlow.Components.HeatedPipe heatedpipe1(h_g = 0, T0 = T_HTF_start, medium = mediumHTF, T(start = T_HTF_start), pressureDrop(fixed = false), T0fixed = true, m = 0.003, dpNominal(displayUnit = "kPa") = 62270, V_flowLaminar(displayUnit = "l/min") = 1.6666666666667e-006, dpLaminar(displayUnit = "kPa") = 14690, V_flowNominal(displayUnit = "l/min") = 3.995e-006) annotation(Placement(visible = true, transformation(origin = {-20, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-        Modelica.Thermal.HeatTransfer.Components.ThermalResistor thermalresistor_waterblock(R = Resistivity_WaterPlate) annotation(Placement(visible = true, transformation(origin = {-20, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 90)));
+        //
+        //waterblock resistance
+        Real R_waterblock = 5050 * flowport_a1.V_flow ^ (-0.773) "modeling the mikros heat sink";
+        Modelica.Thermal.HeatTransfer.Components.ThermalResistor thermalresistor_waterblock(R = R_waterblock) annotation(Placement(visible = true, transformation(origin = {-20, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 90)));
         Modelica.Thermal.HeatTransfer.Components.ThermalResistor thermalresistor_celltoreceiver(R = Resistivity_Cell) annotation(Placement(visible = true, transformation(origin = {-60, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
         //
         //______________________________________________________________________________
@@ -1218,16 +1222,21 @@ Evidently yes. still sorting that one out, but let's not get distracted.
     //////////////////////////////////////
     ///// HEAT TRANSFER COEFFICIENTS /////
     //////////////////////////////////////
-    parameter Real Resistivity_WaterBlock = 5050.0 * OneBranchFlow ^ (-0.773) "Thermal resisitivity of the water block heat exchanger";
+    //____________________________________________________________________________
+    //////////////////////////////////////////////////////////////////////////////
+    //water block R value (refer to Mikros data for curve) is now in the component in Module
+    parameter Real R_wb_scaler = 1 "with the calc of the waterblock R moved to skeleton, maintain some control up in Parameters";
     parameter Real Resistivity_Cell = 0.22 "The thermal heat resistivity of the photovoltaic cell";
+    //  parameter Real Resistivity_WaterBlock = 5050.0 * measured_vFlow ^ (-0.773) * R_wb_scaler "Thermal resisitivity of the water block heat exchanger";
+    parameter Real Resistivity_WaterBlock = 0.16 * R_wb_scaler "Thermal resisitivity of the water block heat exchanger";
     //?Why doesn't this if structure work here? for now, swap things manually
     //if isStudioExperiment == true then
-    parameter Real Resistivity_WaterPlate = 0.8 "Thermal resisitivity of the water plate heat exchanger, experiment";
+    parameter Real Resistivity_WaterPlate = Resistivity_WaterBlock "Thermal resisitivity of the water plate heat exchanger, experiment";
+    //    parameter Real Resistivity_WaterPlate = 0.8 "Thermal resisitivity of the water plate heat exchanger, experiment";
     //else
     //  parameter Real Resistivity_WaterPlate = 5.05e3 * OneBranchFlow ^ (-0.773) "Thermal resisitivity of the water block heat exchanger, projected";
     //end if;
-    //
-    //
+    //____________________________________________________________________________
     parameter Real Cond_RecToEnv = adj_2 * 0.083 "This is a thermal conductivity to determine the amount of heat lost to the environment from the receiver";
     //parameter Real Conv_Receiver = 0.0534;
     parameter Real Conv_Receiver = adj_2 * 5;
