@@ -1093,11 +1093,16 @@ Evidently yes. still sorting that one out, but let's not get distracted.
         Modelica.Thermal.FluidHeatFlow.Components.HeatedPipe heatedpipe1(h_g = 0, T0 = T_HTF_start, medium = mediumHTF, T(start = T_HTF_start), pressureDrop(fixed = false), T0fixed = true, m = 0.003, dpNominal(displayUnit = "kPa") = 62270, V_flowLaminar(displayUnit = "l/min") = 1.6666666666667e-006, dpLaminar(displayUnit = "kPa") = 14690, V_flowNominal(displayUnit = "l/min") = 3.995e-006) annotation(Placement(visible = true, transformation(origin = {-20, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
         //
         //waterblock resistance
-        Real R_waterblock = 5050 * flowport_a1.V_flow ^ (-0.773) "modeling the mikros heat sink";
-        Modelica.Thermal.HeatTransfer.Components.ThermalResistor thermalresistor_waterblock(R = R_waterblock) annotation(Placement(visible = true, transformation(origin = {-20, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 90)));
+        //  constant Modelica.SIunits.SpecificHeatCapacity mikrosCP = 5050;
+        Real R_waterblock = R_wb(flowport_a1.m_flow);
+        parameter Modelica.Thermal.HeatTransfer.Components.ThermalResistor thermalresistor_waterblock(R = R_waterblock) annotation(Placement(visible = true, transformation(origin = {-20, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 90)));
+        //
+        //this is unrelated to the water flow
         Modelica.Thermal.HeatTransfer.Components.ThermalResistor thermalresistor_celltoreceiver(R = Resistivity_Cell) annotation(Placement(visible = true, transformation(origin = {-60, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
         //
         //______________________________________________________________________________
+        //algorithm
+        //R_waterblock := 5050 * flowport_a1.m_flow ^ (-0.773) "modeling the mikros heat sink";
       equation
         connect(thermalconductor1.port_a, thermalcollector1.port_a[3]) annotation(Line(points = {{10, 0}, {-20.029, 0}, {-20.029, -10.1597}, {-20.029, -10.1597}}));
         connect(thermalresistor_waterblock.port_a, thermalcollector1.port_a[2]) annotation(Line(points = {{-20, 10}, {-20, -9.5791}, {-19.4485, -9.5791}, {-19.4485, -9.5791}}));
@@ -1137,6 +1142,16 @@ Evidently yes. still sorting that one out, but let's not get distracted.
         connect(Conv_InsulationAir, convection1.Gc);
         annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics));
       end Tubing_Losses;
+
+      function R_wb
+        input Real flowRate = 1 "mass flow rate";
+        output Real R_wb "thermal resistance of waterblock";
+      protected
+        Real gain = 5050;
+      algorithm
+        R_wb := gain * flowRate ^ (-0.773);
+        annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {1, 1})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {0.5, 0.5})));
+      end R_wb;
     end subClasses;
   end Receiver;
 
