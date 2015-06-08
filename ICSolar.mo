@@ -73,7 +73,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     Modelica.Thermal.FluidHeatFlow.Sources.VolumeFlow Pump(constantVolumeFlow = OneBranchFlow, m = 0.01, medium = mediumHTF, T0 = TAmb, T0fixed = false, useVolumeFlowInput = false) "Fluid pump for thermal fluid" annotation(Placement(visible = true, transformation(origin = {-20, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     Modelica.Thermal.FluidHeatFlow.Sources.Ambient Sink(medium = mediumHTF, constantAmbientPressure = 101325, constantAmbientTemperature = TAmb) "Thermal fluid sink, will be replaced with a tank later" annotation(Placement(visible = true, transformation(origin = {80, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     Modelica.Blocks.Sources.Constant inletTempConst(k = inletTemp) annotation(Placement(visible = true, transformation(origin = {-160, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-    Modelica.Blocks.Sources.Constant PumpFlowRate(k = OneBranchFlow) annotation(Placement(visible = true, transformation(origin = {-160, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Blocks.Sources.Constant PumpFlowRate(k = AllBranchesFlow) annotation(Placement(visible = true, transformation(origin = {-160, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     Modelica.Blocks.Sources.CombiTimeTable IC_Data_all(tableOnFile = true, fileName = Path + "20150323\\measuredData20150323r1.txt", tableName = "DNI_THTFin_vdot", nout = 24, columns = {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25}) annotation(Placement(visible = true, transformation(origin = {-120, -80}, extent = {{-15, -15}, {15, 15}}, rotation = 0)));
   equation
     connect(inletTempConst.y, Source.ambientTemperature) annotation(Line(points = {{-149, -40}, {-95.2639, -40}, {-95.2639, -33.0176}, {-70.3654, -33.0176}, {-70.3654, -33.0176}}, color = {0, 0, 127}));
@@ -97,7 +97,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     connect(measured_DNI, ics_envelopecassette1.DNI_measured);
     //connect(measured_T_cavAvg, ics_envelopecassette1.Tcav_measured);
     //experiment(StartTime = 7137000.0, StopTime = 7141200.0, Tolerance = 1e-006, Interval = 100));
-    annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200, -100}, {200, 100}}), graphics), experiment(StartTime = 0, StopTime = 3.1536e+07, Tolerance = 1e-06, Interval = 3600));
+    annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200, -100}, {200, 100}}), graphics), experiment(StartTime = 0, StopTime = 3.1536e+06, Tolerance = 1e-06, Interval = 3600));
   end ICS_Skeleton;
 
   model ICS_Context "This model provides the pieces necessary to set up the context to run the simulation, in FMU practice this will be cut out and provided from the EnergyPlus file"
@@ -360,7 +360,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       Modelica.Blocks.Interfaces.RealInput DNI_measured "DNI from data file" annotation(Placement(visible = true, transformation(origin = {-100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.Blocks.Interfaces.RealInput DNI "DNI from weather file" annotation(Placement(visible = true, transformation(origin = {-100, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.Thermal.HeatTransfer.Interfaces.HeatPort_a TAmb_in "Ambient cavity temperature" annotation(Placement(visible = true, transformation(origin = {-100, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-      Modelica.Thermal.HeatTransfer.Components.ThermalConductor thermalconductor[NumOfStacks](G = 0.2) annotation(Placement(visible = true, transformation(origin = {80, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      Modelica.Thermal.HeatTransfer.Components.ThermalConductor thermalconductor[NumOfStacks](each G = 0.2) annotation(Placement(visible = true, transformation(origin = {80, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.Thermal.FluidHeatFlow.Components.HeatedPipe Tubing[NumOfStacks](medium = mediumHTF, V_flowLaminar = OneBranchFlow, V_flowNominal = 1e-005, h_g = 0, m = 0.0025, T0 = T_HTF_start, dpLaminar = 0.45, dpNominal = 10) annotation(Placement(visible = true, transformation(origin = {40, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 90)));
       //
       //______________________________________________________________________________
@@ -394,7 +394,6 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       connect(SurfaceOrientation, rotationmatrixforsphericalcood1.SurfaceOrientation) annotation(Line(points = {{-100, -20}, {-83.9024, -20}, {-83.65519999999999, -20.2011}, {-69.75279999999999, -20.445}, {-70, -20}}, color = {0, 0, 127}));
       connect(SurfaceTilt, rotationmatrixforsphericalcood1.SurfaceTilt) annotation(Line(points = {{-100, -40}, {-85.60980000000001, -40}, {-85.3626, -24.5913}, {-69.75279999999999, -24.445}, {-70, -24}}, color = {0, 0, 127}));
       //_______________________________________________________________________________
-      //how much self-shading
       //thermal balance
       connect(T_indoors.port, cavityheatbalance1.Interior) annotation(Line(points = {{-10, 60}, {-1.48368, 60}, {-1.48368, 55.7864}, {10, 55.7864}, {10, 56}}));
     end ICS_EnvelopeCassette_Twelve;
@@ -1092,12 +1091,21 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     // C:\Users\Kenton\Documents\GitHub\RPI_CASE_ICS_Modelica
     //    parameter String Path = "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\";
     //   parameter String Path = "C:\\Users\\Kenton\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\";
-    parameter String Path = "C:\\Users\\Justin\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\";
+    constant String Path = "C:\\Users\\Nick\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\";
+    //parameter String Path = "C:\\Users\\Justin\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\";
     //    parameter String Path = "C:\\Users\\Nicholas.Novelli\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\";
     //________________________________
     //////// MODEL OPERATION /////////
     //--------------------------------
     parameter Boolean isStudioExperiment = true "True if this run is referring to the gen8 studio experiment. For now, just search through the code for the variable name and flip things where necessary";
+    /*off hand, that's 
+                                    numOfStacks
+                                    StackHeight
+                                    BuildingOrientation
+                                    ArrayTilt
+                                    [glazing losses stuff]
+                                  opticalEfficiency
+                                    */
     //////////////////////////////////
     ///// BUILDING CONFIGURATION /////
     //////////////////////////////////
@@ -1107,8 +1115,9 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     ////////////////////////
     ///// ARRAY SIZING /////
     ////////////////////////
-    parameter Integer StackHeight = 6 "Number of Modules per stack";
-    parameter Integer NumOfStacks = 4 "Number of stacks, controls the .Stack object";
+    //due to the shading tables, modeling anything smaller than 4x4 is sort of weird. It should work OK tho.
+    parameter Integer StackHeight = 3 "Number of Modules per stack";
+    parameter Integer NumOfStacks = 3 "Number of stacks, controls the .Stack object";
     parameter Integer NumOfModules = StackHeight * NumOfStacks "ModulesPerStack * NumOfStacks Number of modules being simulated. Will be replaced with a calculation based on wall area in the future.";
     // 11 in. height       13.5 in. width
     parameter Real stackSpacing = 0.3429 "distance between stacks (m)";
@@ -1118,7 +1127,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     parameter Real CavityVolume = GlassArea * 0.5 "Volume of cavity for air calculations";
     //
     ////////////////////////////////
-    ///// OPTICAL EFFICIENCIES /////
+    ///////  GLAZING LOSSES  ///////
     ////////////////////////////////
     //Using Schlick's approximation to get glazing transmittance
     //  Real x_lite = 6 "thickness of lite (mm) (isStudioExperiment=false)";
@@ -1132,8 +1141,11 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     //still need to do something about this:
     parameter Real Trans_glazinglosses_eta = 0.86;
     // parameter Real OpticalEfficiency = 0.57 "The optical efficiency of the concentrating lens and optics prior to the photovoltaic cell";
-    parameter Real OpticalEfficiency = 0.565;
-    // parameter Real OpticalEfficiency = 0.886;
+    ////////////////////////////////
+    ///// OPTICAL EFFICIENCIES /////
+    ////////////////////////////////
+    //  parameter Real OpticalEfficiency = 0.565 "isStudioExperiment = true";
+    parameter Real OpticalEfficiency = 0.886;
     //parameter Real Exp_Observed = 0.215 "observed electrical efficiency of ICSFg8";
     //parameter Real Exp_nom_tweak = 0.364 * OpticalEfficiency "matching the observed to modeled data, compensating for temperature 'unknown'. 0.364 matches the Nov25-13 data well when eta_observed is 0.215. set same as eta_obs for full-strength output.";
     //
@@ -1158,6 +1170,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     /////////////////
     parameter Modelica.Thermal.FluidHeatFlow.Media.Medium mediumHTF = Modelica.Thermal.FluidHeatFlow.Media.Water() "Water" annotation(choicesAllMatching = true);
     parameter Real OneBranchFlow = 1.63533e-006 * NumOfStacks;
+    parameter Real AllBranchesFlow = OneBranchFlow * NumOfStacks;
     parameter Real inletTemp = 300;
     //parameter Real cp_h2o = 4177;
     //////////////////////////////////////
@@ -1178,7 +1191,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     parameter Real Conv_Receiver = adj_2 * 5;
     // 0.07 "Convection Heat Transfer of Receiver to air h(=10)*A(=0.004m2)";
     //parameter Real Conv_Receiver = 0.0618321 "Convection Heat Transfer of Receiver to air h(=10)*A(=0.004m2)";
-    parameter Real adj = 0.23;
+    parameter Real adj = 0.26;
     parameter Real adj_2 = 0.7;
     // adjustment to keep the temperatures the same, but change the overall heat loss
     parameter Real factor_1 = 10 * adj;
@@ -1445,7 +1458,8 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
 
   model shadingImport
     //   parameter String Path_2 = "C:\\Users\\Kenton\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\shading_matrices\\";
-    parameter String Path_2 = "C:\\Users\\Justin\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\shading_matrices\\";
+    //parameter String Path_2 = "C:\\Users\\Justin\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\shading_matrices\\";
+    parameter String Path_2 = "C:\\Users\\Nick\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\shading_matrices\\";
     //    parameter String Path_2 = "C:\\Users\\Nicholas.Novelli\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\shading_matrices\\";
     Modelica.Blocks.Tables.CombiTable2D modShadingLUT_1(tableOnFile = true, fileName = Path_2 + "1" + ".txt", tableName = "shading_matrix", smoothness = Modelica.Blocks.Types.Smoothness.LinearSegments);
     Modelica.Blocks.Tables.CombiTable2D modShadingLUT_2(tableOnFile = true, fileName = Path_2 + "2" + ".txt", tableName = "shading_matrix", smoothness = Modelica.Blocks.Types.Smoothness.LinearSegments);
@@ -1619,18 +1633,18 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     // THE PATH FOR THE LUT TXT WILL NEED TO BE DYNAMIC
     //*******************************************************
     /*
-                                                                                                                                                                                                                                         Modelica.Blocks.Interfaces.IntegerInput rowType annotation(Placement(visible = true, transformation(origin = {-100, 40}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {-100, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-                                                                                                                                                                                                                                        Modelica.Blocks.Interfaces.IntegerInput colType annotation(Placement(visible = true, transformation(origin = {-100, 80}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {-100, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-                                                                                                                                                                                                                                        Modelica.Blocks.Interfaces.RealInput arrayYaw annotation(Placement(visible = true, transformation(origin = {-100, 0}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {-100, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-                                                                                                                                                                                                                                        Modelica.Blocks.Interfaces.RealInput arrayPitch annotation(Placement(visible = true, transformation(origin = {-100, -60}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {-100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-                                                                                                                                                                                                                                                                            */
+                                                                                                                                                                                                                                                                             Modelica.Blocks.Interfaces.IntegerInput rowType annotation(Placement(visible = true, transformation(origin = {-100, 40}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {-100, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+                                                                                                                                                                                                                                                                            Modelica.Blocks.Interfaces.IntegerInput colType annotation(Placement(visible = true, transformation(origin = {-100, 80}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {-100, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+                                                                                                                                                                                                                                                                            Modelica.Blocks.Interfaces.RealInput arrayYaw annotation(Placement(visible = true, transformation(origin = {-100, 0}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {-100, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+                                                                                                                                                                                                                                                                            Modelica.Blocks.Interfaces.RealInput arrayPitch annotation(Placement(visible = true, transformation(origin = {-100, -60}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {-100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+                                                                                                                                                                                                                                                                                                                */
     Modelica.Blocks.Interfaces.RealOutput SOLAR_frac annotation(Placement(visible = true, transformation(origin = {100, 0}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     Real index_num = ShadingFraction_Index(rowType, colType, arrayPitch, arrayYaw);
     Modelica.Blocks.Interfaces.RealInput arrayYaw annotation(Placement(visible = true, transformation(origin = {-100, -60}, extent = {{-16.25, -16.25}, {16.25, 16.25}}, rotation = 0), iconTransformation(origin = {-100, -80}, extent = {{-16.25, -16.25}, {16.25, 16.25}}, rotation = 0)));
     Modelica.Blocks.Interfaces.RealInput arrayPitch annotation(Placement(visible = true, transformation(origin = {-100, -20}, extent = {{-16.25, -16.25}, {16.25, 16.25}}, rotation = 0), iconTransformation(origin = {-100, -40}, extent = {{-16.25, -16.25}, {16.25, 16.25}}, rotation = 0)));
     Modelica.Blocks.Interfaces.IntegerInput colType annotation(Placement(visible = true, transformation(origin = {-100, 40}, extent = {{-16.25, -16.25}, {16.25, 16.25}}, rotation = 0), iconTransformation(origin = {-100, 0}, extent = {{-16.25, -16.25}, {16.25, 16.25}}, rotation = 0)));
     Modelica.Blocks.Interfaces.IntegerInput rowType annotation(Placement(visible = true, transformation(origin = {-100, 80}, extent = {{-16.25, -16.25}, {16.25, 16.25}}, rotation = 0), iconTransformation(origin = {-100, 40}, extent = {{-16.25, -16.25}, {16.25, 16.25}}, rotation = 0)));
-    Modelica.Blocks.Tables.CombiTable1Ds LUT(tableOnFile = true, fileName = "C:\\Users\\Justin\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\4D_LUT\\4DLUT.txt", tableName = "4DLUT") annotation(Placement(visible = true, transformation(origin = {0, 0}, extent = {{-15, -15}, {15, 15}}, rotation = 0)));
+    Modelica.Blocks.Tables.CombiTable1Ds LUT(tableOnFile = true, fileName = ICSolar.Parameters.Path + "4D_LUT\\4DLUT.txt", tableName = "4DLUT") annotation(Placement(visible = true, transformation(origin = {0, 0}, extent = {{-15, -15}, {15, 15}}, rotation = 0)));
   equation
     connect(LUT.y[1], SOLAR_frac) annotation(Line(points = {{16.5, 0}, {90.9337, 0}, {90.9337, -0.811908}, {90.9337, -0.811908}}, color = {0, 0, 127}));
     //connect(index_num, LUT.u);
