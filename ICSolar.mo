@@ -12,6 +12,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     Modelica.Blocks.Sources.CombiTimeTable IC_Data_all(tableOnFile = true, fileName = Path + Date + "measuredData.txt", tableName = "DNI_THTFin_vdot", nout = 22, columns = {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23}) annotation(Placement(visible = true, transformation(origin = {-80, 0}, extent = {{-15, -15}, {15, 15}}, rotation = 0)));
     Real measured_DNI = IC_Data_all.y[1];
     Real measured_T_HTFin = IC_Data_all.y[2];
+    //Real measured_T_HTFin = T_HTF_start;
     Real measured_vFlow = IC_Data_all.y[3];
     Real measured_Egen = IC_Data_all.y[4];
     Real measured_T_HTFout = IC_Data_all.y[5];
@@ -36,7 +37,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     //Real measured_pitch = IC_Data_all.y[24];
     // Processed Data
     Real measured_T_drop_jumper = measured_T_s2m6in - measured_T_s3m1out;
-    Real measured_Qgen = measured_vFlow * mediumHTF.rho * mediumHTF.cp * (measured_T_HTFout - measured_T_HTFin);
+    Real measured_Qgen = measured_vFlow * mediumHTF.rho * mediumHTF.cp * (measured_T_HTFout - IC_Data_all.y[2]);
     // Uncertainity Qualification
     Real UQ_measured_Egen_upper = measured_Egen + 0.73;
     Real UQ_measured_Egen_lower = measured_Egen - 0.73;
@@ -106,9 +107,10 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     //experiment(StartTime = 7036600, StopTime = 7061100, Tolerance = 1e-006, Interval = 60));
     //    annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200,-100},{200,100}}), graphics), experiment(StartTime = 7046000, StopTime = 7050593, Tolerance = 1e-006, Interval = 10));
     //annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200, -100}, {200, 100}}), graphics), experiment(StartTime = 4365153, StopTime = 4371284, Tolerance = 1e-006, Interval = 10));
+    //start and stop from the mar23_2015 data:
+    // annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200, -100}, {200, 100}}), graphics), experiment(StartTime = 7047292, StopTime = 7050593, Tolerance = 1e-006, Interval = 60));
     //start and stop from the mar19_2015 data:
-    //start and stop from the mar23_2015 data:    annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200, -100}, {200, 100}}), graphics), experiment(StartTime = 7047292, StopTime = 7050593, Tolerance = 1e-006, Interval = 60));
-    annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200, -100}, {200, 100}}), graphics), experiment(StartTime = 6.7879e6, StopTime = 6.79e6, Tolerance = 1e-006, Interval = 60));
+    annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200, -100}, {200, 100}}), graphics), experiment(StartTime = 6.7879e6, StopTime = 6.79e6, Tolerance = 1e-006, Interval = 10));
   end ICS_Skeleton;
 
   model ICS_Context "This model provides the pieces necessary to set up the context to run the simulation, in FMU practice this will be cut out and provided from the EnergyPlus file"
@@ -794,13 +796,13 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     equation
       DNI_out = DNI_in * Eff_Optic * ConcentrationFactor;
       annotation(Documentation(info = "<HTML>
-                                                                                                                                                                                 <p><b> Tramission losses associated with the lens / optic elements. Ratio of power on the cell to power on the entry aperture.</b></p>
+                                                                                                                                                                                                                     <p><b> Tramission losses associated with the lens / optic elements. Ratio of power on the cell to power on the entry aperture.</b></p>
 
-                                                                                                                                                                                 <p>Optical efficiency from LBI Benitez <b>High performance Fresnel-based photovoltaic concentrator</b> where Eff_Opt(F#). Assuming anti-reflective coating on secondary optic element (SOE), current Gen8 module design Eff_Opt(0.84) = 88.2%</p> 
+                                                                                                                                                                                                                     <p>Optical efficiency from LBI Benitez <b>High performance Fresnel-based photovoltaic concentrator</b> where Eff_Opt(F#). Assuming anti-reflective coating on secondary optic element (SOE), current Gen8 module design Eff_Opt(0.84) = 88.2%</p> 
 
-                                                                                                                                                                                 <b>More Information:</b>
-                                                                                                                                                                                 <p> The F-number for a Fresnal-Köhler lens is the ratio of the distance between cell and Fresenel lens to the diagonal measurement of the front lens. The concentrator optical efficiency is defined as the ratio of power on the cell to the power on the entry aperture when the sun is exactly on-axis.</p>
-                                                                                                                                                                                 </HTML>"), Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2}), graphics = {Text(origin = {0.694127, 36.2079}, extent = {{-72.52, 54.46}, {72.52, -54.46}}, textString = "Lens Losses")}));
+                                                                                                                                                                                                                     <b>More Information:</b>
+                                                                                                                                                                                                                     <p> The F-number for a Fresnal-Köhler lens is the ratio of the distance between cell and Fresenel lens to the diagonal measurement of the front lens. The concentrator optical efficiency is defined as the ratio of power on the cell to the power on the entry aperture when the sun is exactly on-axis.</p>
+                                                                                                                                                                                                                     </HTML>"), Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2}), graphics = {Text(origin = {0.694127, 36.2079}, extent = {{-72.52, 54.46}, {72.52, -54.46}}, textString = "Lens Losses")}));
     end ICS_LensLosses;
 
     model chooseShadeMatrix "based on a module's position in an array, choose it's shading matrix. Two modes of operation, based on the value of the isStudioExperiment boolean flag in Parameters"
@@ -955,16 +957,16 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       end if;
       //##############################################################################
       annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2}), graphics = {Rectangle(origin = {0, 0}, extent = {{-100, 100}, {100, -100}})}), Documentation(info = "<html>
-<p>
-This didn't work with equations, so shifted over to algortihm. There was a div/0 problem if your mod or col was the last possible mod or col, which I get on a basic level. 
+                                    <p>
+                                    This didn't work with equations, so shifted over to algortihm. There was a div/0 problem if your mod or col was the last possible mod or col, which I get on a basic level. 
 
-OK, I see now that my logic is delivering, somehow, an output of 0 if the mod or col is trying to choose the last row or column. 
+                                    OK, I see now that my logic is delivering, somehow, an output of 0 if the mod or col is trying to choose the last row or column. 
 
-So was it necessary to take the parameter designations off the integer inputs?
+                                    So was it necessary to take the parameter designations off the integer inputs?
 
-Evidently yes. still sorting that one out, but let's not get distracted.
-</p>
-</html>"));
+                                    Evidently yes. still sorting that one out, but let's not get distracted.
+                                    </p>
+                                    </html>"));
     end chooseFractExposedLUTPosition;
 
     model ICS_Module_Twelve "This model contains all the components and equations that simulate one module of Integrated Concentrating Solar"
@@ -1147,8 +1149,8 @@ Evidently yes. still sorting that one out, but let's not get distracted.
     //
     // C:\Users\Kenton\Documents\GitHub\RPI_CASE_ICS_Modelica
     //parameter String Path = "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\";
-    //   parameter String Path = "C:\\Users\\Kenton\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\";
-    parameter String Path = "C:\\Users\\Nick\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\";
+    parameter String Path = "C:\\Users\\Kenton\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\";
+    //parameter String Path = "C:\\Users\\Nick\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\";
     //    parameter String Path = "C:\\Users\\Nicholas.Novelli\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\";
     //________________________________
     //////// MODEL OPERATION /////////
@@ -1189,7 +1191,7 @@ Evidently yes. still sorting that one out, but let's not get distracted.
     parameter Real Trans_glazinglosses_eta = 0.86;
     // parameter Real OpticalEfficiency = 0.57 "The optical efficiency of the concentrating lens and optics prior to the photovoltaic cell";
     parameter Real OpticalEfficiency = 0.5649999999999999;
-    // parameter Real OpticalEfficiency = 0.886;
+    //parameter Real OpticalEfficiency = 0.886;
     //parameter Real Exp_Observed = 0.215 "observed electrical efficiency of ICSFg8";
     //parameter Real Exp_nom_tweak = 0.364 * OpticalEfficiency "matching the observed to modeled data, compensating for temperature 'unknown'. 0.364 matches the Nov25-13 data well when eta_observed is 0.215. set same as eta_obs for full-strength output.";
     //
@@ -1203,7 +1205,8 @@ Evidently yes. still sorting that one out, but let's not get distracted.
     ////////////////////////
     parameter Real Temp_Indoor = 24 + 273.15 "Interior building zone temperature (Kelvin)";
     parameter Modelica.SIunits.Temperature TAmb(displayUnit = "degK") = 293.15 "Ambient temperature";
-    parameter Real T_HTF_start = 346.0;
+    parameter Real T_HTF_start = 346;
+    //313.15;
     //330;
     ///////////////////////
     ////// ATMOSPHERE /////
@@ -1213,16 +1216,18 @@ Evidently yes. still sorting that one out, but let's not get distracted.
     ///// FLUID /////
     /////////////////
     parameter Modelica.Thermal.FluidHeatFlow.Media.Medium mediumHTF = Modelica.Thermal.FluidHeatFlow.Media.Water() "Water" annotation(choicesAllMatching = true);
-    parameter Real OneBranchFlow = 1.63533e-006;
+    parameter Real OneBranchFlow = 3e-6;
     //parameter Real cp_h2o = 4177;
     //////////////////////////////////////
     ///// HEAT TRANSFER COEFFICIENTS /////
     //////////////////////////////////////
-    parameter Real Resistivity_WaterBlock = 5050.0 * OneBranchFlow ^ (-0.773) "Thermal resisitivity of the water block heat exchanger";
+    parameter Real Resistivity_WaterBlock = (OneBranchFlow * 1e6) ^ (-0.773) * 0.2487 "Thermal resisitivity of the water block heat exchanger";
     parameter Real Resistivity_Cell = 0.22 "The thermal heat resistivity of the photovoltaic cell";
     //?Why doesn't this if structure work here? for now, swap things manually
     //if isStudioExperiment == true then
-    parameter Real Resistivity_WaterPlate = 0.8 "Thermal resisitivity of the water plate heat exchanger, experiment";
+    //parameter Real Resistivity_WaterPlate = 0.7;
+    parameter Real Resistivity_WaterPlate = Resistivity_WaterBlock;
+    // 0.8 "Thermal resisitivity of the water plate heat exchanger, experiment";
     //else
     //  parameter Real Resistivity_WaterPlate = 5.05e3 * OneBranchFlow ^ (-0.773) "Thermal resisitivity of the water block heat exchanger, projected";
     //end if;
@@ -1233,8 +1238,12 @@ Evidently yes. still sorting that one out, but let's not get distracted.
     parameter Real Conv_Receiver = adj_2 * 5;
     // 0.07 "Convection Heat Transfer of Receiver to air h(=10)*A(=0.004m2)";
     //parameter Real Conv_Receiver = 0.0618321 "Convection Heat Transfer of Receiver to air h(=10)*A(=0.004m2)";
-    parameter Real adj = 0.26;
+    // parameter Real adj = 0.26: // on 3.23 and 2.20     = 0.21 on 3.19
+    parameter Real adj = 0.21;
+    // for 3.19
     parameter Real adj_2 = 0.7;
+    //0.8
+    //0.7
     // adjustment to keep the temperatures the same, but change the overall heat loss
     parameter Real factor_1 = 10 * adj;
     parameter Real Conv_WaterTube = factor_1 * 3.66 * 0.58 / (2 * 0.003175) * 2 * Modelica.Constants.pi * 0.003175 * 0.3 "Convection Heat Transfer of Water to Piping = h*SurfArea = Nu(=3.66) * kofWater / Diameter * Surface Area";
@@ -1247,15 +1256,15 @@ Evidently yes. still sorting that one out, but let's not get distracted.
     parameter Real HeatCap_Receiver = 60;
     //30;
     annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), experiment(StartTime = 47130, StopTime = 58120, Tolerance = 1e-006, Interval = 10), Documentation(info = "<html>
-                                                                                                                                                                            Don't forget to:<br/>
-                                                                                                                                                                            fix the shading matrices path in <code>Envelope.ICS_SelfShading</code>.<br/> </html>", revisions = "<html>
-                                                                                                                                                                            <ul>
-                                                                                                                                                                            <li>
-                                                                                                                                                                            Jan2015, by Justin Shultz:<br/>
-                                                                                                                                                                            First implementation.<br/>
-                                                                                                                                                                            </li>
-                                                                                                                                                                            </ul>
-                                                                                                                                                                            </html>"));
+                                                                                                                                                                                                            Don't forget to:<br/>
+                                                                                                                                                                                                            fix the shading matrices path in <code>Envelope.ICS_SelfShading</code>.<br/> </html>", revisions = "<html>
+                                                                                                                                                                                                            <ul>
+                                                                                                                                                                                                            <li>
+                                                                                                                                                                                                            Jan2015, by Justin Shultz:<br/>
+                                                                                                                                                                                                            First implementation.<br/>
+                                                                                                                                                                                                            </li>
+                                                                                                                                                                                                            </ul>
+                                                                                                                                                                                                            </html>"));
   end Parameters;
 
   model HeatCapacitorPCMLike00 "Lumped thermal element storing heat with temperature-varying capacitance"
@@ -1306,56 +1315,56 @@ Evidently yes. still sorting that one out, but let's not get distracted.
     end if;
     //  try = Modelica.Thermal.FluidHeatFlow.Media.Water.rho;
     annotation(Icon(coordinateSystem(preserveAspectRatio = true, extent = {{-100, -100}, {100, 100}}), graphics = {Text(extent = {{-150, 110}, {150, 70}}, textString = "%name", lineColor = {0, 0, 255}), Polygon(points = {{0, 67}, {-20, 63}, {-40, 57}, {-52, 43}, {-58, 35}, {-68, 25}, {-72, 13}, {-76, -1}, {-78, -15}, {-76, -31}, {-76, -43}, {-76, -53}, {-70, -65}, {-64, -73}, {-48, -77}, {-30, -83}, {-18, -83}, {-2, -85}, {8, -89}, {22, -89}, {32, -87}, {42, -81}, {54, -75}, {56, -73}, {66, -61}, {68, -53}, {70, -51}, {72, -35}, {76, -21}, {78, -13}, {78, 3}, {74, 15}, {66, 25}, {54, 33}, {44, 41}, {36, 57}, {26, 65}, {0, 67}}, lineColor = {160, 160, 164}, fillColor = {192, 192, 192}, fillPattern = FillPattern.Solid), Polygon(points = {{-58, 35}, {-68, 25}, {-72, 13}, {-76, -1}, {-78, -15}, {-76, -31}, {-76, -43}, {-76, -53}, {-70, -65}, {-64, -73}, {-48, -77}, {-30, -83}, {-18, -83}, {-2, -85}, {8, -89}, {22, -89}, {32, -87}, {42, -81}, {54, -75}, {42, -77}, {40, -77}, {30, -79}, {20, -81}, {18, -81}, {10, -81}, {2, -77}, {-12, -73}, {-22, -73}, {-30, -71}, {-40, -65}, {-50, -55}, {-56, -43}, {-58, -35}, {-58, -25}, {-60, -13}, {-60, -5}, {-60, 7}, {-58, 17}, {-56, 19}, {-52, 27}, {-48, 35}, {-44, 45}, {-40, 57}, {-58, 35}}, lineColor = {0, 0, 0}, fillColor = {160, 160, 164}, fillPattern = FillPattern.Solid), Text(extent = {{-69, 7}, {71, -24}}, lineColor = {0, 0, 0}, textString = "%C")}), Diagram(coordinateSystem(preserveAspectRatio = true, extent = {{-100, -100}, {100, 100}}), graphics = {Polygon(points = {{0, 67}, {-20, 63}, {-40, 57}, {-52, 43}, {-58, 35}, {-68, 25}, {-72, 13}, {-76, -1}, {-78, -15}, {-76, -31}, {-76, -43}, {-76, -53}, {-70, -65}, {-64, -73}, {-48, -77}, {-30, -83}, {-18, -83}, {-2, -85}, {8, -89}, {22, -89}, {32, -87}, {42, -81}, {54, -75}, {56, -73}, {66, -61}, {68, -53}, {70, -51}, {72, -35}, {76, -21}, {78, -13}, {78, 3}, {74, 15}, {66, 25}, {54, 33}, {44, 41}, {36, 57}, {26, 65}, {0, 67}}, lineColor = {160, 160, 164}, fillColor = {192, 192, 192}, fillPattern = FillPattern.Solid), Polygon(points = {{-58, 35}, {-68, 25}, {-72, 13}, {-76, -1}, {-78, -15}, {-76, -31}, {-76, -43}, {-76, -53}, {-70, -65}, {-64, -73}, {-48, -77}, {-30, -83}, {-18, -83}, {-2, -85}, {8, -89}, {22, -89}, {32, -87}, {42, -81}, {54, -75}, {42, -77}, {40, -77}, {30, -79}, {20, -81}, {18, -81}, {10, -81}, {2, -77}, {-12, -73}, {-22, -73}, {-30, -71}, {-40, -65}, {-50, -55}, {-56, -43}, {-58, -35}, {-58, -25}, {-60, -13}, {-60, -5}, {-60, 7}, {-58, 17}, {-56, 19}, {-52, 27}, {-48, 35}, {-44, 45}, {-40, 57}, {-58, 35}}, lineColor = {0, 0, 0}, fillColor = {160, 160, 164}, fillPattern = FillPattern.Solid), Ellipse(extent = {{-6, -1}, {6, -12}}, lineColor = {255, 0, 0}, fillColor = {191, 0, 0}, fillPattern = FillPattern.Solid), Text(extent = {{11, 13}, {50, -25}}, lineColor = {0, 0, 0}, textString = "T"), Line(points = {{0, -12}, {0, -96}}, color = {255, 0, 0})}), Documentation(info = "<HTML>
-                                                                                                                                                                                 <p>
-                                                                                                                                                                                 This is copied from:
-                                                                                                                                                                                 This is a generic model for the heat capacity of a material.
-                                                                                                                                                                                 No specific geometry is assumed beyond a total volume with
-                                                                                                                                                                                 uniform temperature for the entire volume.
-                                                                                                                                                                                 Furthermore, it is assumed that the heat capacity
-                                                                                                                                                                                 is constant (independent of temperature).
-                                                                                                                                                                                 </p>
-                                                                                                                                                                                 <p>
-                                                                                                                                                                                 The temperature T [Kelvin] of this component is a <b>state</b>.
-                                                                                                                                                                                 A default of T = 25 degree Celsius (= SIunits.Conversions.from_degC(25))
-                                                                                                                                                                                 is used as start value for initialization.
-                                                                                                                                                                                 This usually means that at start of integration the temperature of this
-                                                                                                                                                                                 component is 25 degrees Celsius. You may, of course, define a different
-                                                                                                                                                                                 temperature as start value for initialization. Alternatively, it is possible
-                                                                                                                                                                                 to set parameter <b>steadyStateStart</b> to <b>true</b>. In this case
-                                                                                                                                                                                 the additional equation '<b>der</b>(T) = 0' is used during
-                                                                                                                                                                                 initialization, i.e., the temperature T is computed in such a way that
-                                                                                                                                                                                 the component starts in <b>steady state</b>. This is useful in cases,
-                                                                                                                                                                                 where one would like to start simulation in a suitable operating
-                                                                                                                                                                                 point without being forced to integrate for a long time to arrive
-                                                                                                                                                                                 at this point.
-                                                                                                                                                                                 </p>
-                                                                                                                                                                                 <p>
-                                                                                                                                                                                 Note, that parameter <b>steadyStateStart</b> is not available in
-                                                                                                                                                                                 the parameter menu of the simulation window, because its value
-                                                                                                                                                                                 is utilized during translation to generate quite different
-                                                                                                                                                                                 equations depending on its setting. Therefore, the value of this
-                                                                                                                                                                                 parameter can only be changed before translating the model.
-                                                                                                                                                                                 </p>
-                                                                                                                                                                                 <p>
-                                                                                                                                                                                 This component may be used for complicated geometries where
-                                                                                                                                                                                 the heat capacity C is determined my measurements. If the component
-                                                                                                                                                                                 consists mainly of one type of material, the <b>mass m</b> of the
-                                                                                                                                                                                 component may be measured or calculated and multiplied with the
-                                                                                                                                                                                 <b>specific heat capacity cp</b> of the component material to
-                                                                                                                                                                                 compute C:
-                                                                                                                                                                                 </p>
-                                                                                                                                                                                 <pre>
-                                                                                                                                                                                    C = cp*m.
-                                                                                                                                                                                    Typical values for cp at 20 degC in J/(kg.K):
-                                                                                                                                                                                       aluminium   896
-                                                                                                                                                                                       concrete    840
-                                                                                                                                                                                       copper      383
-                                                                                                                                                                                       iron        452
-                                                                                                                                                                                       silver      235
-                                                                                                                                                                                       steel       420 ... 500 (V2A)
-                                                                                                                                                                                       wood       2500
-                                                                                                                                                                                 </pre>
-                                                                                                                                                                                 </html>"));
+                                                                                                                                                                                                                     <p>
+                                                                                                                                                                                                                     This is copied from:
+                                                                                                                                                                                                                     This is a generic model for the heat capacity of a material.
+                                                                                                                                                                                                                     No specific geometry is assumed beyond a total volume with
+                                                                                                                                                                                                                     uniform temperature for the entire volume.
+                                                                                                                                                                                                                     Furthermore, it is assumed that the heat capacity
+                                                                                                                                                                                                                     is constant (independent of temperature).
+                                                                                                                                                                                                                     </p>
+                                                                                                                                                                                                                     <p>
+                                                                                                                                                                                                                     The temperature T [Kelvin] of this component is a <b>state</b>.
+                                                                                                                                                                                                                     A default of T = 25 degree Celsius (= SIunits.Conversions.from_degC(25))
+                                                                                                                                                                                                                     is used as start value for initialization.
+                                                                                                                                                                                                                     This usually means that at start of integration the temperature of this
+                                                                                                                                                                                                                     component is 25 degrees Celsius. You may, of course, define a different
+                                                                                                                                                                                                                     temperature as start value for initialization. Alternatively, it is possible
+                                                                                                                                                                                                                     to set parameter <b>steadyStateStart</b> to <b>true</b>. In this case
+                                                                                                                                                                                                                     the additional equation '<b>der</b>(T) = 0' is used during
+                                                                                                                                                                                                                     initialization, i.e., the temperature T is computed in such a way that
+                                                                                                                                                                                                                     the component starts in <b>steady state</b>. This is useful in cases,
+                                                                                                                                                                                                                     where one would like to start simulation in a suitable operating
+                                                                                                                                                                                                                     point without being forced to integrate for a long time to arrive
+                                                                                                                                                                                                                     at this point.
+                                                                                                                                                                                                                     </p>
+                                                                                                                                                                                                                     <p>
+                                                                                                                                                                                                                     Note, that parameter <b>steadyStateStart</b> is not available in
+                                                                                                                                                                                                                     the parameter menu of the simulation window, because its value
+                                                                                                                                                                                                                     is utilized during translation to generate quite different
+                                                                                                                                                                                                                     equations depending on its setting. Therefore, the value of this
+                                                                                                                                                                                                                     parameter can only be changed before translating the model.
+                                                                                                                                                                                                                     </p>
+                                                                                                                                                                                                                     <p>
+                                                                                                                                                                                                                     This component may be used for complicated geometries where
+                                                                                                                                                                                                                     the heat capacity C is determined my measurements. If the component
+                                                                                                                                                                                                                     consists mainly of one type of material, the <b>mass m</b> of the
+                                                                                                                                                                                                                     component may be measured or calculated and multiplied with the
+                                                                                                                                                                                                                     <b>specific heat capacity cp</b> of the component material to
+                                                                                                                                                                                                                     compute C:
+                                                                                                                                                                                                                     </p>
+                                                                                                                                                                                                                     <pre>
+                                                                                                                                                                                                                        C = cp*m.
+                                                                                                                                                                                                                        Typical values for cp at 20 degC in J/(kg.K):
+                                                                                                                                                                                                                           aluminium   896
+                                                                                                                                                                                                                           concrete    840
+                                                                                                                                                                                                                           copper      383
+                                                                                                                                                                                                                           iron        452
+                                                                                                                                                                                                                           silver      235
+                                                                                                                                                                                                                           steel       420 ... 500 (V2A)
+                                                                                                                                                                                                                           wood       2500
+                                                                                                                                                                                                                     </pre>
+                                                                                                                                                                                                                     </html>"));
   end HeatCapacitorPCMLike00;
 
   function EnthalpyDifferential
@@ -1524,8 +1533,8 @@ Evidently yes. still sorting that one out, but let's not get distracted.
     //assign rho to the value from LUT
     //go about your business
     annotation(Documentation(info = "<html>
-                                        Medium: properties of water
-                                        </html>"));
+                                                                            Medium: properties of water
+                                                                            </html>"));
   end Water_rhovT;
 
   model testPalette
