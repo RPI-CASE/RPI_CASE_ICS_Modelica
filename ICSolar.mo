@@ -1107,6 +1107,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     parameter Boolean isStudioExperiment = true "True if this run is referring to the gen8 studio experiment. For now, just search through the code for the variable name and flip things where necessary";
     /*off hand, that's 
 <<<<<<< HEAD
+<<<<<<< HEAD
                                                                                         numOfStacks
                                                                                         StackHeight
                                                                                         BuildingOrientation
@@ -1115,6 +1116,8 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
                                                                                       opticalEfficiency
                                                                                         */
 =======
+=======
+>>>>>>> f3b67817e200d0f31b82f940e0f3e13471e4cd06
                                                                             numOfStacks
                                                                             StackHeight
                                                                             BuildingOrientation
@@ -1122,7 +1125,10 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
                                                                             [glazing losses stuff]
                                                                           opticalEfficiency
                                                                             */
+<<<<<<< HEAD
 >>>>>>> origin/try-parallel-stacks
+=======
+>>>>>>> f3b67817e200d0f31b82f940e0f3e13471e4cd06
     //////////////////////////////////
     ///// BUILDING CONFIGURATION /////
     //////////////////////////////////
@@ -1653,18 +1659,24 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     //*******************************************************
     /*
 <<<<<<< HEAD
+<<<<<<< HEAD
                                                                                                                                                                                                                                                                                                                                                      Modelica.Blocks.Interfaces.IntegerInput rowType annotation(Placement(visible = true, transformation(origin = {-100, 40}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {-100, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
                                                                                                                                                                                                                                                                                                                                                     Modelica.Blocks.Interfaces.IntegerInput colType annotation(Placement(visible = true, transformation(origin = {-100, 80}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {-100, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
                                                                                                                                                                                                                                                                                                                                                     Modelica.Blocks.Interfaces.RealInput arrayYaw annotation(Placement(visible = true, transformation(origin = {-100, 0}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {-100, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
                                                                                                                                                                                                                                                                                                                                                     Modelica.Blocks.Interfaces.RealInput arrayPitch annotation(Placement(visible = true, transformation(origin = {-100, -60}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {-100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
                                                                                                                                                                                                                                                                                                                                                                                         */
 =======
+=======
+>>>>>>> f3b67817e200d0f31b82f940e0f3e13471e4cd06
                                                                                                                                                                                                                                                                                                                                                                                                  Modelica.Blocks.Interfaces.IntegerInput rowType annotation(Placement(visible = true, transformation(origin = {-100, 40}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {-100, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
                                                                                                                                                                                                                                                                                                                                                                                                 Modelica.Blocks.Interfaces.IntegerInput colType annotation(Placement(visible = true, transformation(origin = {-100, 80}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {-100, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
                                                                                                                                                                                                                                                                                                                                                                                                 Modelica.Blocks.Interfaces.RealInput arrayYaw annotation(Placement(visible = true, transformation(origin = {-100, 0}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {-100, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
                                                                                                                                                                                                                                                                                                                                                                                                 Modelica.Blocks.Interfaces.RealInput arrayPitch annotation(Placement(visible = true, transformation(origin = {-100, -60}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {-100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
                                                                                                                                                                                                                                                                                                                                                                                                                                     */
+<<<<<<< HEAD
 >>>>>>> origin/try-parallel-stacks
+=======
+>>>>>>> f3b67817e200d0f31b82f940e0f3e13471e4cd06
     Modelica.Blocks.Interfaces.RealOutput SOLAR_frac annotation(Placement(visible = true, transformation(origin = {100, 0}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     Real index_num = ShadingFraction_Index(rowType, colType, arrayPitch, arrayYaw);
     Modelica.Blocks.Interfaces.RealInput arrayYaw annotation(Placement(visible = true, transformation(origin = {-100, -60}, extent = {{-16.25, -16.25}, {16.25, 16.25}}, rotation = 0), iconTransformation(origin = {-100, -80}, extent = {{-16.25, -16.25}, {16.25, 16.25}}, rotation = 0)));
