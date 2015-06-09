@@ -6,16 +6,18 @@
 // or    system(['C:\OpenModelica1.9.1Beta2\bin\','omc.exe +d=failtrace +s simulate-ICSolar.mos.'])    
 // where win_om_path is set a string set to the open modelica directory bin. In this case
 // 'C:\OpenModelica1.9.1Beta2\bin\'
+// ex win_om_path = 'C:\OpenModelica1.9.1Beta2\bin\'
+// win_om_path = 'D:\Application\OpenModelica1.9.1\bin\'
 
 
 // INCLUDE YOUR LIBRARY
 loadModel(Modelica);
 
-//loadFile("D:/Application/OpenModelica1.9.1/lib/omlibrary/Buildings 1.6/package.mo");
-loadFile("C:/OpenModelica1.9.1Beta2/lib/omlibrary/Buildings 1.6/package.mo");
+loadFile("D:/Application/OpenModelica1.9.1/lib/omlibrary/Buildings 1.6/package.mo");
+//loadFile("C:/OpenModelica1.9.1Beta2/lib/omlibrary/Buildings 1.6/package.mo");
 
 //load IC Solar File
-loadFile("C:/Users/kenton.phillips/Documents/GitHub/RPI_CASE_ICS_Modelica/ICSolar.mo");
+loadFile("C:/Users/kenton/Documents/GitHub/RPI_CASE_ICS_Modelica/ICSolar.mo");
 
 // Use this to report the error is run the script
 getErrorString(); 
@@ -29,22 +31,28 @@ getErrorString();
 //setParameterValue(ICSolar.Parameters, OpticalEfficiency, 0.45);
 //getErrorString();
 
-/*
-// ---- FOR MARCH 19
+
+// ---- FOR Mar 19 2015
 setParameterValue(ICSolar.Parameters, Date, "20150319\\");
-simulate(ICSolar.ICS_Skeleton,startTime=6787900, StopTime = 6790071, Interval = 60);
+simulate(ICSolar.ICS_Skeleton,startTime=6.7879e6, StopTime = 6.79e6, Interval = 10);
 getErrorString();
-*/
+//  parameter Real Resistivity_WaterPlate = 0.7;
+//  parameter Real adj = 0.21;
+//  parameter Real adj_2 = 0.7;
 
 
-// ---- FOR MARCH 23
+
+//********************* DIFFERENT SIMULATIONS
+
+
+
+// ---- FOR Mar 19 2015
+//setParameterValue(ICSolar.Parameters, Date, "20150319\\");
+//simulate(ICSolar.ICS_Skeleton,startTime=6787900, StopTime = 6790071, Interval = 60);
+//getErrorString();
+/*
+// ---- FOR Mar 23 2015
 setParameterValue(ICSolar.Parameters, Date, "20150323\\");
 simulate(ICSolar.ICS_Skeleton,startTime=7036600, StopTime = 7061100, Interval = 120);
 getErrorString();
-
-
-
-
-
-
-
+*/
