@@ -44,6 +44,8 @@ ylabel('Power (Watts)');
 
 legend('Measured Qgen','Modeled Qgen','Measured Egen','Modeled Egen','Location','southeast');  
 
+
+
 hold off;
 
 
