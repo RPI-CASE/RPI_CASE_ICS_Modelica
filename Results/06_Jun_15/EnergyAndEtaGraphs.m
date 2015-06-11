@@ -50,7 +50,7 @@ hold off;
 
 
 %%--PLOT MODELED EFFICIENCY
-
+Conv_Receiver
 
 %%Plots the Eta (only modeled)
 %trimmed simulated
@@ -84,6 +84,30 @@ set(gca,'XTick',[0 90 190 270 360]);
 ylabel('Effciency (module conversion efficiency)');
 
 legend('eta Qgen','eta Egen','eta Combined','Location','northeast');  
+
+
+% %% Plot chi vs eta_QGen
+% hold on;
+% 
+% figure;
+% 
+% t_s_chi = chi_modeled(:,Start:End);
+% t_o_eta_Qgen = measured_eta_Qgen_arrayTotal(:,Start:End);
+% 
+% chi_trans = transpose(t_s_chi);
+% eta_Qgen_trans = transpose(t_o_eta_Qgen);
+% 
+% f=fit(chi_trans,eta_Qgen_trans,'poly1');
+% 
+% scatter(chi_trans,eta_Qgen_trans);
+% 
+% 
+% x=0:.01:.1;
+% y=f(x);
+% 
+% plot(x,y);
+
+
 
 
 
