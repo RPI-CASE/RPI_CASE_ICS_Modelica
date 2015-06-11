@@ -1,0 +1,6 @@
+#1
+double ttesttable (3,4)  #nowtrythis
+0	1	10
+1	1	1
+5	1	4
+5	1	5

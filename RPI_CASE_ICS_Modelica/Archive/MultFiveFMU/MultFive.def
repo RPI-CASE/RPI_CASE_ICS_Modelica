@@ -1,0 +1,26 @@
+EXPORTS
+  MultFive_fmiCompletedIntegratorStep @1
+  MultFive_fmiEventUpdate @2
+  MultFive_fmiFreeModelInstance @3
+  MultFive_fmiGetBoolean @4
+  MultFive_fmiGetContinuousStates @5
+  MultFive_fmiGetDerivatives @6
+  MultFive_fmiGetEventIndicators @7
+  MultFive_fmiGetInteger @8
+  MultFive_fmiGetModelTypesPlatform @9
+  MultFive_fmiGetNominalContinuousStates @10
+  MultFive_fmiGetReal @11
+  MultFive_fmiGetStateValueReferences @12
+  MultFive_fmiGetString @13
+  MultFive_fmiGetVersion @14
+  MultFive_fmiInitialize @15
+  MultFive_fmiInstantiateModel @16
+  MultFive_fmiSetBoolean @17
+  MultFive_fmiSetContinuousStates @18
+  MultFive_fmiSetDebugLogging @19
+  MultFive_fmiSetExternalFunction @20
+  MultFive_fmiSetInteger @21
+  MultFive_fmiSetReal @22
+  MultFive_fmiSetString @23
+  MultFive_fmiSetTime @24
+  MultFive_fmiTerminate @25

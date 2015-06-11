@@ -1,0 +1,61 @@
+  Processing Data Dictionary (Energy+.idd) File -- Complete
+  Maximum number of Alpha Args=        4500
+  Maximum number of Numeric Args=       21040
+  Number of Object Definitions=         727
+  Number of Section Definitions=           2
+  Total Number of Alpha Fields=       18098
+  Total Number of Numeric Fields=       39469
+  Total Number of Fields=       57567
+  Processing Input Data File (in.idf) -- Start
+      1 ExternalInterface,
+      2   FunctionalMockupUnitImport;  !- Name of External Interface
+      ***** Tabs eliminated from above line
+      3 
+      4 ExternalInterface:FunctionalMockupUnitImport,
+      5   multfive.fmu,  !- FMU Filename
+      ***** Tabs eliminated from above line
+      6    ,  !- FMU Timeout in milli-seconds
+      ***** Tabs eliminated from above line
+      7    ;  !- FMU LoggingOn Value
+      ***** Tabs eliminated from above line
+      8 
+      9 ExternalInterface:FunctionalMockupUnitImport:To:,
+   ** Severe  ** IP: IDF line~9 Did not find "ExternalInterface:FunctionalMockupUnitImport:To:" in list of Objects
+     10    ,  !- EnergyPlus Variable Name
+      ***** Tabs eliminated from above line
+     11    multfive.fmu,  !- FMU Filename
+      ***** Tabs eliminated from above line
+     12    ,  !- FMU Instance Name
+      ***** Tabs eliminated from above line
+     13    Output,  !- FMU Variable Name
+      ***** Tabs eliminated from above line
+     14    ;  !- Initial Value
+      ***** Tabs eliminated from above line
+     15 
+     16 ExternalInterface:FunctionalMockupUnitImport:From:Variable,
+     17    ,  !- EnergyPlus Key Value
+      ***** Tabs eliminated from above line
+   ** Severe  ** IP: IDF line~17 Error detected in Object=EXTERNALINTERFACE:FUNCTIONALMOCKUPUNITIMPORT:FROM:VARIABLE
+   **   ~~~   ** Field [Output:Variable Index Key Name] is required but was blank
+     18    ,  !- EnergyPlus Variable Name
+      ***** Tabs eliminated from above line
+   ** Severe  ** IP: IDF line~18 Error detected in Object=EXTERNALINTERFACE:FUNCTIONALMOCKUPUNITIMPORT:FROM:VARIABLE, name=
+   **   ~~~   ** Field [Output:Variable Name] is required but was blank
+     19    multfive.fmu,  !- FMU Filename
+      ***** Tabs eliminated from above line
+     20    ,  !- FMU Instance Name
+      ***** Tabs eliminated from above line
+   ** Severe  ** IP: IDF line~20 Error detected in Object=EXTERNALINTERFACE:FUNCTIONALMOCKUPUNITIMPORT:FROM:VARIABLE, name=
+   **   ~~~   ** Field [FMU Instance Name] is required but was blank
+     21    Input;  !- FMU Variable Name
+      ***** Tabs eliminated from above line
+  Processing Input Data File (in.idf) -- Complete
+  Maximum number of Alpha IDF Args=           5
+  Maximum number of Numeric IDF Args=           2
+  Number of IDF "Lines"=           3
+  Number of Defaulted Fields=           2
+  Number of Fields with Defaults=           2
+  Number of Autosized Fields=           0
+  Number of Autosizable Fields =           0
+  Number of Autocalculated Fields=           0
+  Number of Autocalculatable Fields =           0

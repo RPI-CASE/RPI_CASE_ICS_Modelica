@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fmiModelDescription
+  fmiVersion="1.0"
+  modelName="MultFive"
+  modelIdentifier="MultFive"
+  guid="{62bfd85e-2fbd-4cd6-b1d4-f33804744635}"
+  description=""
+  generationTool="OpenModelica Compiler 1.9.1 Beta2 (r19512) (RML version)"
+  generationDateAndTime="2014-08-12T17:19:08Z"
+  variableNamingConvention="structured"
+  numberOfContinuousStates="0"
+  numberOfEventIndicators="0">
+  <DefaultExperiment startTime="0.0" stopTime="1.0" tolerance="1e-006"/>
+  <ModelVariables>
+  <ScalarVariable
+    name="Output"
+    valueReference="0"
+    variability="continuous"
+    causality="output"
+    alias="noAlias">
+    <Real/>
+  </ScalarVariable>
+  <ScalarVariable
+    name="Input"
+    valueReference="1"
+    variability="continuous"
+    causality="input"
+    alias="noAlias">
+    <Real/>
+  </ScalarVariable>
+  </ModelVariables>
+</fmiModelDescription>
+

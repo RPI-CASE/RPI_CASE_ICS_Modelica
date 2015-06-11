@@ -1,0 +1,45 @@
+Program Version,EnergyPlus-Windows-32 8.1.0.009, YMD=2014.08.12 18:55,IDD_Version 8.1.0.009
+   ** Severe  ** IP: IDF line~9 Did not find "ExternalInterface:FunctionalMockupUnitImport:To:" in list of Objects
+   ************* IDF Context for following error/warning message:
+   ************* Note -- lines truncated at 300 characters, if necessary...
+   *************     16 ExternalInterface:FunctionalMockupUnitImport:From:Variable,
+   ************* Only last 1 lines before error line shown.....
+   *************     17    ,  !- EnergyPlus Key Value
+   ** Severe  ** IP: IDF line~17 Error detected in Object=EXTERNALINTERFACE:FUNCTIONALMOCKUPUNITIMPORT:FROM:VARIABLE
+   **   ~~~   ** Field [Output:Variable Index Key Name] is required but was blank
+   ************* IDF Context for following error/warning message:
+   ************* Note -- lines truncated at 300 characters, if necessary...
+   *************     16 ExternalInterface:FunctionalMockupUnitImport:From:Variable,
+   ************* Only last 2 lines before error line shown.....
+   *************     17    ,  !- EnergyPlus Key Value
+   *************     18    ,  !- EnergyPlus Variable Name
+   ** Severe  ** IP: IDF line~18 Error detected in Object=EXTERNALINTERFACE:FUNCTIONALMOCKUPUNITIMPORT:FROM:VARIABLE, name=
+   **   ~~~   ** Field [Output:Variable Name] is required but was blank
+   ************* IDF Context for following error/warning message:
+   ************* Note -- lines truncated at 300 characters, if necessary...
+   *************     16 ExternalInterface:FunctionalMockupUnitImport:From:Variable,
+   ************* Only last 4 lines before error line shown.....
+   *************     17    ,  !- EnergyPlus Key Value
+   *************     18    ,  !- EnergyPlus Variable Name
+   *************     19    multfive.fmu,  !- FMU Filename
+   *************     20    ,  !- FMU Instance Name
+   ** Severe  ** IP: IDF line~20 Error detected in Object=EXTERNALINTERFACE:FUNCTIONALMOCKUPUNITIMPORT:FROM:VARIABLE, name=
+   **   ~~~   ** Field [FMU Instance Name] is required but was blank
+   ** Severe  ** IP: No items found for Required Object=BUILDING
+   ** Severe  ** IP: No items found for Required Object=GLOBALGEOMETRYRULES
+   ** Severe  ** IP: Required Object="BUILDING" not found in IDF.
+   ** Severe  ** IP: Required Object="GLOBALGEOMETRYRULES" not found in IDF.
+   ** Severe  ** IP: Blank "required" fields found in input
+   ** Severe  ** IP: Other miscellaneous errors found in input
+   ** Severe  ** IP: Possible incorrect IDD File
+   **   ~~~   ** IDD Version:"IDD_Version 8.1.0.009"
+   **   ~~~   ** Possible Invalid Numerics or other problems
+   **  Fatal  ** IP: Errors occurred on processing IDF file. Preceding condition(s) cause termination.
+   ...Summary of Errors that led to program termination:
+   ..... Reference severe error count=11
+   ..... Last severe error=IP: Possible incorrect IDD File
+   ************* Warning:  Node connection errors not checked - most system input has not been read (see previous warning).
+   ************* Fatal error -- final processing.  Program exited before simulations began.  See previous error messages.
+   ************* EnergyPlus Warmup Error Summary. During Warmup: 0 Warning; 0 Severe Errors.
+   ************* EnergyPlus Sizing Error Summary. During Sizing: 0 Warning; 0 Severe Errors.
+   ************* EnergyPlus Terminated--Fatal Error Detected. 0 Warning; 11 Severe Errors; Elapsed Time=00hr 00min  1.77sec

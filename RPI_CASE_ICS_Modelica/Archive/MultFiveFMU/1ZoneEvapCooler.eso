@@ -1,0 +1,25 @@
+Program Version,EnergyPlus-Windows-64 8.1.0.009, YMD=2014.08.13 12:42
+1,5,Environment Title[],Latitude[deg],Longitude[deg],Time Zone[],Elevation[m]
+2,6,Day of Simulation[],Month[],Day of Month[],DST Indicator[1=yes 0=no],Hour[],StartMinute[],EndMinute[],DayType
+3,3,Cumulative Day of Simulation[],Month[],Day of Month[],DST Indicator[1=yes 0=no],DayType  ! When Daily Report Variables Requested
+4,2,Cumulative Days of Simulation[],Month[]  ! When Monthly Report Variables Requested
+5,1,Cumulative Days of Simulation[] ! When Run Period Report Variables Requested
+6,1,Environment,Site Outdoor Air Drybulb Temperature [C] !Hourly
+7,1,Environment,Site Outdoor Air Wetbulb Temperature [C] !Hourly
+8,1,Environment,Site Outdoor Air Humidity Ratio [kgWater/kgDryAir] !Hourly
+9,1,Environment,Site Outdoor Air Relative Humidity [%] !Hourly
+10,1,MAIN ZONE,Zone Mean Air Temperature [C] !TimeStep
+11,1,MAIN ZONE,Zone Mean Air Temperature [C] !Hourly
+136,1,MAIN ZONE BASEBOARD,Baseboard Electric Power [W] !Hourly
+324,1,SUPPLY INLET NODE,System Node Temperature [C] !Hourly
+325,1,FAN INLET NODE,System Node Temperature [C] !Hourly
+326,1,EVAP COOLER INLET NODE,System Node Temperature [C] !Hourly
+327,1,SUPPLY OUTLET NODE,System Node Temperature [C] !Hourly
+328,1,SUPPLY OUTLET NODE,System Node Mass Flow Rate [kg/s] !Hourly
+329,1,OUTSIDE AIR INLET NODE,System Node Temperature [C] !Hourly
+330,1,MAIN ZONE OUTLET NODE,System Node Temperature [C] !Hourly
+331,1,MAIN ZONE NODE,System Node Temperature [C] !Hourly
+332,1,MAIN ZONE INLET NODE,System Node Temperature [C] !Hourly
+333,1,ZONE EQUIPMENT INLET NODE,System Node Temperature [C] !Hourly
+334,1,ZONE EQUIPMENT OUTLET NODE,System Node Temperature [C] !Hourly
+335,1,RELIEF AIR OUTLET NODE,System Node Temperature [C] !Hourly

@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<svg width="250mm" height="200mm" viewBox="0 0   2500    1500"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:ev="http://www.w3.org/2001/xml-events">
+<g font-family="Verdana" font-size="8" >
+  <rect x="   200" y="   100" width="   200" height="    20" style = "fill:snow; stroke: Black;"/>     1
+  <text x="   202" y="   113">OutdoorAir:Node</text>
+  <rect x="  1200" y="    20" width="   200" height="    20" style = "fill:chartreuse; stroke: Black;"/>     4
+  <text x="  1202" y="    33">MAIN ZONE</text>
+  <rect x="   950" y="    20" width="   200" height="    20" style = "fill:wheat; stroke: Black;"/>     5
+  <text x="   952" y="    33">ZONE SUPPLY AIR SPLITTER</text>
+  <rect x="  1450" y="    20" width="   200" height="    20" style = "fill:wheat; stroke: Black;"/>     6
+  <text x="  1452" y="    33">ZONE RETURN AIR MIXER</text>
+  <rect x="   200" y="    20" width="   200" height="    20" style = "fill:lawngreen; stroke: Black;"/>     7
+  <text x="   202" y="    33">OUTSIDE AIR MIXING BOX</text>
+  <rect x="   450" y="    20" width="   200" height="    20" style = "fill:silver; stroke: Black;"/>     9
+  <text x="   452" y="    33">SUPPLY FAN</text>
+  <rect x="   700" y="    20" width="   200" height="    20" style = "fill:aliceblue; stroke: Black;"/>    10
+  <text x="   702" y="    33">EVAPORATIVE COOLER</text>
+  <line x1="  1150" y1="    30" x2="  1200" y2="    30" style = "stroke: Black;"/>
+  <line x1="   400" y1="    30" x2="   450" y2="    30" style = "stroke: Black;"/>
+  <line x1="   650" y1="    30" x2="   700" y2="    30" style = "stroke: Black;"/>
+  <line x1="   900" y1="    30" x2="   950" y2="    30" style = "stroke: Black;"/>
+  <line x1="  1400" y1="    30" x2="  1450" y2="    30" style = "stroke: Black;"/>
+  <line x1="   200" y1="    30" x2="   175" y2="    30" style = "stroke: Black;"/>
+  <line x1="   175" y1="    30" x2="   175" y2="     0" style = "stroke: Black;"/>
+  <line x1="   175" y1="     0" x2="  1675" y2="     0" style = "stroke: Black;"/>
+  <line x1="  1675" y1="     0" x2="  1675" y2="    30" style = "stroke: Black;"/>
+  <line x1="  1675" y1="    30" x2="  1650" y2="    30" style = "stroke: Black;"/>
+  <text x="   200" y="   160">Unused Non-Parent Objects:</text>
+  <text x="   220" y="   180">HIGH TEMPERATURE TURN ON AVAILABILITY MANAGER</text>
+  <text x="   220" y="   200">LOW TEMPERATURE TURN OFF AVAILABILITY MANAGER</text>
+  <text x="   220" y="   220">OUTSIDE AIR CONTROLLER</text>
+  <text x="   200" y="   260">
+The following are not supported: objects related to controls, AirTerminal:SingleDuct:Uncontrolled, or ZoneHVAC:IdealLoadsAirSystem</text>
+</g>
+</svg>

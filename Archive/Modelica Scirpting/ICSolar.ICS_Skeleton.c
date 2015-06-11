@@ -32612,7 +32612,7 @@ void ICSolar_ICS_Skeleton_setupDataStruc(DATA *data)
   data->modelData.modelFilePrefix = "ICSolar.ICS_Skeleton";
   data->modelData.resultFileName = NULL;
   data->modelData.modelDir = "C:/Users/kenton/Documents/GitHub/RPI_CASE_ICS_Modelica";
-  data->modelData.modelGUID = "{2a713930-4e9a-487a-b419-b6cc55634fa2}";
+  data->modelData.modelGUID = "{a700850a-3683-42a3-8c41-f85d5844d977}";
   #ifdef OPENMODELICA_XML_FROM_FILE_AT_RUNTIME
   data->modelData.initXMLData = NULL;
   data->modelData.modelDataXml.infoXMLData = NULL;

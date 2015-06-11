@@ -1,0 +1,75 @@
+gcc  -I"C:/OpenModelica1.9.1Beta2//include/omc/c" -O  -falign-functions -msse2 -mfpmath=sse    -I"C:/OpenModelica1.9.1Beta2//include/omc/c" -I.   -c -o MultFive_FMU.o MultFive_FMU.c
+gcc  -I"C:/OpenModelica1.9.1Beta2//include/omc/c" -O  -falign-functions -msse2 -mfpmath=sse    -I"C:/OpenModelica1.9.1Beta2//include/omc/c" -I.   -c -o MultFive.o MultFive.c
+gcc  -I"C:/OpenModelica1.9.1Beta2//include/omc/c" -O  -falign-functions -msse2 -mfpmath=sse    -I"C:/OpenModelica1.9.1Beta2//include/omc/c" -I.   -c -o MultFive_functions.o MultFive_functions.c
+gcc  -I"C:/OpenModelica1.9.1Beta2//include/omc/c" -O  -falign-functions -msse2 -mfpmath=sse    -I"C:/OpenModelica1.9.1Beta2//include/omc/c" -I.   -c -o MultFive_records.o MultFive_records.c
+gcc  -I"C:/OpenModelica1.9.1Beta2//include/omc/c" -O  -falign-functions -msse2 -mfpmath=sse    -I"C:/OpenModelica1.9.1Beta2//include/omc/c" -I.   -c -o MultFive_01exo.o MultFive_01exo.c
+gcc  -I"C:/OpenModelica1.9.1Beta2//include/omc/c" -O  -falign-functions -msse2 -mfpmath=sse    -I"C:/OpenModelica1.9.1Beta2//include/omc/c" -I.   -c -o MultFive_02nls.o MultFive_02nls.c
+gcc  -I"C:/OpenModelica1.9.1Beta2//include/omc/c" -O  -falign-functions -msse2 -mfpmath=sse    -I"C:/OpenModelica1.9.1Beta2//include/omc/c" -I.   -c -o MultFive_03lsy.o MultFive_03lsy.c
+gcc  -I"C:/OpenModelica1.9.1Beta2//include/omc/c" -O  -falign-functions -msse2 -mfpmath=sse    -I"C:/OpenModelica1.9.1Beta2//include/omc/c" -I.   -c -o MultFive_04set.o MultFive_04set.c
+In file included from MultFive_FMU.c:59:
+C:/OpenModelica1.9.1Beta2//include/omc/c/fmu_model_interface.c: In function 'MultFive_fmiEventUpdate':
+C:/OpenModelica1.9.1Beta2//include/omc/c/fmu_model_interface.c:627: warning: passing argument 2 of 'infoStreamPrint' makes integer from pointer without a cast
+C:/OpenModelica1.9.1Beta2//include/omc/c/util/omc_error.h:142: note: expected 'int' but argument is of type 'char *'
+C:/OpenModelica1.9.1Beta2//include/omc/c/fmu_model_interface.c:627: warning: passing argument 3 of 'infoStreamPrint' makes pointer from integer without a cast
+C:/OpenModelica1.9.1Beta2//include/omc/c/util/omc_error.h:142: note: expected 'const char *' but argument is of type 'long int'
+gcc  -I"C:/OpenModelica1.9.1Beta2//include/omc/c" -O  -falign-functions -msse2 -mfpmath=sse    -I"C:/OpenModelica1.9.1Beta2//include/omc/c" -I.   -c -o MultFive_05evt.o MultFive_05evt.c
+gcc  -I"C:/OpenModelica1.9.1Beta2//include/omc/c" -O  -falign-functions -msse2 -mfpmath=sse    -I"C:/OpenModelica1.9.1Beta2//include/omc/c" -I.   -c -o MultFive_06inz.o MultFive_06inz.c
+gcc  -I"C:/OpenModelica1.9.1Beta2//include/omc/c" -O  -falign-functions -msse2 -mfpmath=sse    -I"C:/OpenModelica1.9.1Beta2//include/omc/c" -I.   -c -o MultFive_07dly.o MultFive_07dly.c
+gcc  -I"C:/OpenModelica1.9.1Beta2//include/omc/c" -O  -falign-functions -msse2 -mfpmath=sse    -I"C:/OpenModelica1.9.1Beta2//include/omc/c" -I.   -c -o MultFive_08bnd.o MultFive_08bnd.c
+gcc  -I"C:/OpenModelica1.9.1Beta2//include/omc/c" -O  -falign-functions -msse2 -mfpmath=sse    -I"C:/OpenModelica1.9.1Beta2//include/omc/c" -I.   -c -o MultFive_09alg.o MultFive_09alg.c
+gcc  -I"C:/OpenModelica1.9.1Beta2//include/omc/c" -O  -falign-functions -msse2 -mfpmath=sse    -I"C:/OpenModelica1.9.1Beta2//include/omc/c" -I.   -c -o MultFive_10asr.o MultFive_10asr.c
+gcc  -I"C:/OpenModelica1.9.1Beta2//include/omc/c" -O  -falign-functions -msse2 -mfpmath=sse    -I"C:/OpenModelica1.9.1Beta2//include/omc/c" -I.   -c -o MultFive_11mix.o MultFive_11mix.c
+gcc  -I"C:/OpenModelica1.9.1Beta2//include/omc/c" -O  -falign-functions -msse2 -mfpmath=sse    -I"C:/OpenModelica1.9.1Beta2//include/omc/c" -I.   -c -o MultFive_12jac.o MultFive_12jac.c
+gcc  -I"C:/OpenModelica1.9.1Beta2//include/omc/c" -O  -falign-functions -msse2 -mfpmath=sse    -I"C:/OpenModelica1.9.1Beta2//include/omc/c" -I.   -c -o MultFive_13opt.o MultFive_13opt.c
+gcc  -I"C:/OpenModelica1.9.1Beta2//include/omc/c" -O  -falign-functions -msse2 -mfpmath=sse    -I"C:/OpenModelica1.9.1Beta2//include/omc/c" -I.   -c -o MultFive_14lnz.o MultFive_14lnz.c
+g++ -shared -I. -o MultFive.dll MultFive_FMU.o MultFive.o MultFive_functions.o MultFive_records.o MultFive_01exo.o MultFive_02nls.o MultFive_03lsy.o MultFive_04set.o MultFive_05evt.o MultFive_06inz.o MultFive_07dly.o MultFive_08bnd.o MultFive_09alg.o MultFive_10asr.o MultFive_11mix.o MultFive_12jac.o MultFive_13opt.o MultFive_14lnz.o -I"C:/OpenModelica1.9.1Beta2//include/omc/c" -I.      -I"C:/OpenModelica1.9.1Beta2//include/omc/c" -O  -falign-functions -msse2 -mfpmath=sse    -L"C:/OpenModelica1.9.1Beta2//lib/omc" -Wl,-rpath,'C:/OpenModelica1.9.1Beta2//lib/omc' -lSimulationRuntimeC -linteractive -lregex -lexpat -lgc -lpthread -fopenmp -loleaut32  -lSimulationRuntimeC -lgc -lexpat -lregex -static-libgcc -luuid -loleaut32 -lole32 -lws2_32 -lsundials_kinsol -lsundials_nvecserial -lipopt -lcoinmumps -lcoinmetis -lpthread -lm -lgfortranbegin -lgfortran -lmingw32 -lgcc_eh -lmoldname -lmingwex -lmsvcrt -luser32 -lkernel32 -ladvapi32 -lshell32 -llapack-mingw -ltmglib-mingw -lblas-mingw -lf2c -linteractive -lwsock32 -llis -lstdc++  -Wl,-Bstatic -lf2c -Wl,-Bdynamic -llis -Wl,--kill-at
+mkdir.exe -p MultFive.fmutmp
+mkdir.exe -p MultFive.fmutmp/binaries
+mkdir.exe -p MultFive.fmutmp/binaries/win32
+mkdir.exe -p MultFive.fmutmp/sources
+dlltool -d MultFive.def --dllname MultFive.dll --output-lib MultFive.lib --kill-at
+cp MultFive.dll MultFive.fmutmp/binaries/win32/
+cp MultFive.lib MultFive.fmutmp/binaries/win32/
+cp MultFive_FMU.c MultFive_FMU.makefile MultFive_literals.h MultFive_model.h MultFive_functions.h  MultFive_11mix.h MultFive_12jac.h MultFive_init.c MultFive_info.c MultFive.c MultFive_functions.c MultFive_records.c MultFive_01exo.c MultFive_02nls.c MultFive_03lsy.c MultFive_04set.c MultFive_05evt.c MultFive_06inz.c MultFive_07dly.c MultFive_08bnd.c MultFive_09alg.c MultFive_10asr.c MultFive_11mix.c MultFive_12jac.c MultFive_13opt.c MultFive_14lnz.c MultFive_FMU.libs MultFive.fmutmp/sources/
+cp modelDescription.xml MultFive.fmutmp/modelDescription.xml
+cp C:/OpenModelica1.9.1Beta2//bin/libexpat.dll MultFive.fmutmp/binaries/win32/
+cp C:/OpenModelica1.9.1Beta2//bin/pthreadGC2.dll MultFive.fmutmp/binaries/win32/
+cp C:/OpenModelica1.9.1Beta2//bin/libgfortran-3.dll MultFive.fmutmp/binaries/win32/
+cd MultFive.fmutmp&& rm -f ../MultFive.fmu&& zip -r ../MultFive.fmu *
+  adding: binaries/ (164 bytes security) (stored 0%)
+  adding: binaries/win32/ (164 bytes security) (stored 0%)
+  adding: binaries/win32/libexpat.dll (164 bytes security) (deflated 57%)
+  adding: binaries/win32/libgfortran-3.dll (164 bytes security) (deflated 70%)
+  adding: binaries/win32/MultFive.dll (164 bytes security) (deflated 64%)
+  adding: binaries/win32/MultFive.lib (164 bytes security) (deflated 91%)
+  adding: binaries/win32/pthreadGC2.dll (164 bytes security) (deflated 66%)
+  adding: modelDescription.xml (164 bytes security) (deflated 52%)
+  adding: sources/ (164 bytes security) (stored 0%)
+  adding: sources/MultFive.c (164 bytes security) (deflated 74%)
+  adding: sources/MultFive_01exo.c (164 bytes security) (deflated 61%)
+  adding: sources/MultFive_02nls.c (164 bytes security) (deflated 57%)
+  adding: sources/MultFive_03lsy.c (164 bytes security) (deflated 64%)
+  adding: sources/MultFive_04set.c (164 bytes security) (deflated 58%)
+  adding: sources/MultFive_05evt.c (164 bytes security) (deflated 59%)
+  adding: sources/MultFive_06inz.c (164 bytes security) (deflated 60%)
+  adding: sources/MultFive_07dly.c (164 bytes security) (deflated 58%)
+  adding: sources/MultFive_08bnd.c (164 bytes security) (deflated 68%)
+  adding: sources/MultFive_09alg.c (164 bytes security) (deflated 59%)
+  adding: sources/MultFive_10asr.c (164 bytes security) (deflated 57%)
+  adding: sources/MultFive_11mix.c (164 bytes security) (deflated 61%)
+  adding: sources/MultFive_11mix.h (164 bytes security) (stored 0%)
+  adding: sources/MultFive_12jac.c (164 bytes security) (deflated 69%)
+  adding: sources/MultFive_12jac.h (164 bytes security) (deflated 77%)
+  adding: sources/MultFive_13opt.c (164 bytes security) (deflated 61%)
+  adding: sources/MultFive_14lnz.c (164 bytes security) (deflated 62%)
+  adding: sources/MultFive_FMU.c (164 bytes security) (deflated 78%)
+  adding: sources/MultFive_FMU.libs (164 bytes security) (stored 0%)
+  adding: sources/MultFive_FMU.makefile (164 bytes security) (deflated 60%)
+  adding: sources/MultFive_functions.c (164 bytes security) (deflated 36%)
+  adding: sources/MultFive_functions.h (164 bytes security) (deflated 47%)
+  adding: sources/MultFive_info.c (164 bytes security) (deflated 89%)
+  adding: sources/MultFive_init.c (164 bytes security) (deflated 78%)
+  adding: sources/MultFive_literals.h (164 bytes security) (deflated 38%)
+  adding: sources/MultFive_model.h (164 bytes security) (deflated 77%)
+  adding: sources/MultFive_records.c (164 bytes security) (deflated 13%)
+rm -rf MultFive.fmutmp

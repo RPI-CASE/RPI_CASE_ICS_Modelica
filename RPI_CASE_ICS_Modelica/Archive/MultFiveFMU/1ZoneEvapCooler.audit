@@ -1,0 +1,724 @@
+  Processing Data Dictionary (Energy+.idd) File -- Complete
+  Maximum number of Alpha Args=        4500
+  Maximum number of Numeric Args=       21040
+  Number of Object Definitions=         727
+  Number of Section Definitions=           2
+  Total Number of Alpha Fields=       18098
+  Total Number of Numeric Fields=       39469
+  Total Number of Fields=       57567
+  Processing Input Data File (in.idf) -- Start
+      1 !-Generator IDFEditor 1.34
+      2 !-Option OriginalOrderTop UseSpecialFormat
+      3 !-NOTE: All comments with '!-' are ignored by the IDFEditor and are generated automatically.
+      4 !-      Use '!' comments if they need to be retained when using the IDFEditor.
+      5 ! 1ZoneEvapCooler.idf
+      6 !
+      7 ! Basic file description:  This file models a small one-zone house with a whole-house direct evaporative cooler system.
+      8 !                          Because evaporative coolers cannot be controlled with the ZoneControl:Thermostat object,
+      9 !                          this file illustrates how an evaporative cooler system can be thermostatically controlled
+     10 !                          in a crude manner using the AvailabilityManager objects:
+     11 !
+     12 !                              AvailabilityManager:LowTemperatureTurnOff
+     13 !                              AvailabilityManager:HighTemperatureTurnOn
+     14 !
+     15 !                          Availability managers are capable of turning on or off the fan for an air system (or the pump
+     16 !                          for a plant system) by monitoring temperature conditions at a user-specified system node.
+     17 !                          In this model, the availability managers are monitoring the zone outlet air node to act as
+     18 !                          a crude thermostatic control for the zone.
+     19 !
+     20 !                          Keep in mind that availability manager control is "lagged".  This means that the node
+     21 !                          conditions from the previous time step are used to make control decisions at the current
+     22 !                          time step.
+     23 !
+     24 !                          There are two ways to use the availability managers for controlling an evaporative cooler:
+     25 !
+     26 !                              Method 1.  The fan is scheduled to be available at all times, meaning that the system
+     27 !                                         is on all the time by default.  This usually results in over-cooling.
+     28 !                                         To prevent over-cooling, the LOW TEMPERATURE TURN OFF object is used to
+     29 !                                         turn off the system fan when the temperature falls below the setpoint (23 C).
+     30 !
+     31 !                              Method 2.  The fan is scheduled to be unavailable at all times, meaning that the system
+     32 !                                         is off all the time by default.  This usually results in under-cooling.
+     33 !                                         To prevent under-cooling, the HIGH TEMPERATURE TURN ON object is used to
+     34 !                                         turn on the system fan when the temperature rises above the setpoint (26 C).
+     35 !
+     36 !                          With either method, all other equipment is scheduled to be always available.  In this file,
+     37 !                          for demonstration purposes only, the fan is scheduled to be available from 12 AM-12 PM to
+     38 !                          to demonstrate Method 1, and scheduled to be unavailable from 12 PM-12 AM for Method 2.
+     39 !
+     40 !                          Note that ZoneControl:Thermostat is still used in this model to control the baseboard
+     41 !                          heating in the winter, but it does not effect the evaporative cooler system.
+     42 !
+     43 ! Highlights:              Test of AvailabilityManagers for controlling an air system.
+     44 !
+     45 ! Simulation Location/Run: DENVER_STAPLETON_CO_USA_WMO_724690, 2 design days, 1 run period,
+     46 !                          Run Control executes two design days (see RUN PERIOD object)
+     47 !
+     48 ! Location:                Denver, CO
+     49 !
+     50 ! Design Days:             DENVER_STAPLETON_CO_USA Annual Heating 99%, MaxDB=-16°C
+     51 !                          DENVER_STAPLETON_CO_USA Annual Cooling (DB=>MWB) 1%, MaxDB=32.6°C MWB=15.5°C
+     52 !
+     53 ! Run Period (Weather File): Full Annual Simulation, DENVER_STAPLETON_CO_USA_WMO_724690
+     54 !
+     55 ! Run Control:             No zone or system sizing, design day run control (no weather file simulation)
+     56 !
+     57 ! Building:                Fictional 1 zone building with resistive walls based on 1ZoneUncontrolled example.
+     58 !                          No windows.  No internal gains.  No internal mass.  The building is oriented due north.
+     59 !
+     60 ! Floor Area:              232.25 m2
+     61 ! Number of Stories:       1
+     62 
+     63   Version,8.1;
+     64 
+     65   Timestep,6;
+     66 
+     67   Building,
+     68     Bldg,                    !- Name
+     69     0.0,                     !- North Axis {deg}
+     70     Suburbs,                 !- Terrain
+     71     0.05,                    !- Loads Convergence Tolerance Value
+     72     0.05,                    !- Temperature Convergence Tolerance Value {deltaC}
+     73     MinimalShadowing,        !- Solar Distribution
+     74     30,                      !- Maximum Number of Warmup Days
+     75     6;                       !- Minimum Number of Warmup Days
+     76 
+     77   HeatBalanceAlgorithm,ConductionTransferFunction;
+     78 
+     79   SurfaceConvectionAlgorithm:Inside,TARP;
+     80 
+     81   SurfaceConvectionAlgorithm:Outside,DOE-2;
+     82 
+     83   SimulationControl,
+     84     No,                      !- Do Zone Sizing Calculation
+     85     No,                      !- Do System Sizing Calculation
+     86     No,                      !- Do Plant Sizing Calculation
+     87     Yes,                     !- Run Simulation for Sizing Periods
+     88     Yes;                     !- Run Simulation for Weather File Run Periods
+     89 
+     90   RunPeriod,
+     91     ,                        !- Name
+     92     1,                       !- Begin Month
+     93     1,                       !- Begin Day of Month
+     94     12,                      !- End Month
+     95     31,                      !- End Day of Month
+     96     Tuesday,                 !- Day of Week for Start Day
+     97     Yes,                     !- Use Weather File Holidays and Special Days
+     98     Yes,                     !- Use Weather File Daylight Saving Period
+     99     No,                      !- Apply Weekend Holiday Rule
+    100     Yes,                     !- Use Weather File Rain Indicators
+    101     Yes;                     !- Use Weather File Snow Indicators
+    102 
+    103   Site:Location,
+    104     Denver Centennial CO USA WMO=724666,  !- Name
+    105     39.57,                   !- Latitude {deg}
+    106     -104.85,                 !- Longitude {deg}
+    107     -7.00,                   !- Time Zone {hr}
+    108     1793.00;                 !- Elevation {m}
+    109 
+    110  !  WMO=724666 Time Zone=NAM        (GMT-07:00) Mountain Time (US & Canada)
+    111  !  Data Source=ASHRAE 2009 Annual Design Conditions
+    112  ! Using Design Conditions from "Climate Design Data 2009 ASHRAE Handbook"
+    113  ! Denver Centennial CO USA Extreme Annual Wind Speeds, 1%=11.1m/s, 2.5%=9.5m/s, 5%=8.4m/s
+    114  ! Denver Centennial CO USA Extreme Annual Temperatures, Max Drybulb=-22.9°C Min Drybulb=36.1°C
+    115  ! Denver Centennial CO USA Annual Heating Design Conditions Wind Speed=3m/s Wind Dir=340
+    116  ! Coldest Month=December
+    117  ! Denver Centennial CO USA Annual Heating 99.6%, MaxDB=-18.8°C
+    118 
+    119   SizingPeriod:DesignDay,
+    120     Denver Centennial Ann Htg 99.6% Condns DB,  !- Name
+    121     12,                      !- Month
+    122     21,                      !- Day of Month
+    123     WinterDesignDay,         !- Day Type
+    124     -18.8,                   !- Maximum Dry-Bulb Temperature {C}
+    125     0.0,                     !- Daily Dry-Bulb Temperature Range {deltaC}
+    126     ,                        !- Dry-Bulb Temperature Range Modifier Type
+    127     ,                        !- Dry-Bulb Temperature Range Modifier Day Schedule Name
+    128     Wetbulb,                 !- Humidity Condition Type
+    129     -18.8,                   !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
+    130     ,                        !- Humidity Condition Day Schedule Name
+    131     ,                        !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+    132     ,                        !- Enthalpy at Maximum Dry-Bulb {J/kg}
+    133     ,                        !- Daily Wet-Bulb Temperature Range {deltaC}
+    134     81560.,                  !- Barometric Pressure {Pa}
+    135     3,                       !- Wind Speed {m/s}
+    136     340,                     !- Wind Direction {deg}
+    137     No,                      !- Rain Indicator
+    138     No,                      !- Snow Indicator
+    139     No,                      !- Daylight Saving Time Indicator
+    140     ASHRAEClearSky,          !- Solar Model Indicator
+    141     ,                        !- Beam Solar Day Schedule Name
+    142     ,                        !- Diffuse Solar Day Schedule Name
+    143     ,                        !- ASHRAE Clear Sky Optical Depth for Beam Irradiance (taub) {dimensionless}
+    144     ,                        !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance (taud) {dimensionless}
+    145     0.00;                    !- Sky Clearness
+    146 
+    147  ! Denver Centennial Annual Cooling Design Conditions Wind Speed=4.9m/s Wind Dir=0
+    148  ! Hottest Month=July
+    149  ! Denver Centennial CO USA Annual Cooling (DB=>MWB) 1%, MaxDB=32°C MWB=15.5°C
+    150 
+    151   SizingPeriod:DesignDay,
+    152     Denver Centennial Ann Clg 1% Condns DB=>MWB,  !- Name
+    153     7,                       !- Month
+    154     21,                      !- Day of Month
+    155     SummerDesignDay,         !- Day Type
+    156     32,                      !- Maximum Dry-Bulb Temperature {C}
+    157     15.2,                    !- Daily Dry-Bulb Temperature Range {deltaC}
+    158     ,                        !- Dry-Bulb Temperature Range Modifier Type
+    159     ,                        !- Dry-Bulb Temperature Range Modifier Day Schedule Name
+    160     Wetbulb,                 !- Humidity Condition Type
+    161     15.5,                    !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
+    162     ,                        !- Humidity Condition Day Schedule Name
+    163     ,                        !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+    164     ,                        !- Enthalpy at Maximum Dry-Bulb {J/kg}
+    165     ,                        !- Daily Wet-Bulb Temperature Range {deltaC}
+    166     81560.,                  !- Barometric Pressure {Pa}
+    167     4.9,                     !- Wind Speed {m/s}
+    168     0,                       !- Wind Direction {deg}
+    169     No,                      !- Rain Indicator
+    170     No,                      !- Snow Indicator
+    171     No,                      !- Daylight Saving Time Indicator
+    172     ASHRAEClearSky,          !- Solar Model Indicator
+    173     ,                        !- Beam Solar Day Schedule Name
+    174     ,                        !- Diffuse Solar Day Schedule Name
+    175     ,                        !- ASHRAE Clear Sky Optical Depth for Beam Irradiance (taub) {dimensionless}
+    176     ,                        !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance (taud) {dimensionless}
+    177     1.00;                    !- Sky Clearness
+    178 
+    179   Material:NoMass,
+    180     R13LAYER,                !- Name
+    181     Rough,                   !- Roughness
+    182     2.290965,                !- Thermal Resistance {m2-K/W}
+    183     0.9000000,               !- Thermal Absorptance
+    184     0.7500000,               !- Solar Absorptance
+    185     0.7500000;               !- Visible Absorptance
+    186 
+    187   Material:NoMass,
+    188     R31LAYER,                !- Name
+    189     Rough,                   !- Roughness
+    190     5.456,                   !- Thermal Resistance {m2-K/W}
+    191     0.9000000,               !- Thermal Absorptance
+    192     0.7500000,               !- Solar Absorptance
+    193     0.7500000;               !- Visible Absorptance
+    194 
+    195   Material,
+    196     C5 - 4 IN HW CONCRETE,   !- Name
+    197     MediumRough,             !- Roughness
+    198     0.1014984,               !- Thickness {m}
+    199     1.729577,                !- Conductivity {W/m-K}
+    200     2242.585,                !- Density {kg/m3}
+    201     836.8000,                !- Specific Heat {J/kg-K}
+    202     0.9000000,               !- Thermal Absorptance
+    203     0.6500000,               !- Solar Absorptance
+    204     0.6500000;               !- Visible Absorptance
+    205 
+    206   Construction,
+    207     R13WALL,                 !- Name
+    208     R13LAYER;                !- Outside Layer
+    209 
+    210   Construction,
+    211     FLOOR,                   !- Name
+    212     C5 - 4 IN HW CONCRETE;   !- Outside Layer
+    213 
+    214   Construction,
+    215     ROOF31,                  !- Name
+    216     R31LAYER;                !- Outside Layer
+    217 
+    218   Site:GroundTemperature:BuildingSurface,18.89,18.92,19.02,19.12,19.21,19.23,19.07,19.32,19.09,19.21,19.13,18.96;
+    219 
+    220   Zone,
+    221     Main Zone,               !- Name
+    222     0,                       !- Direction of Relative North {deg}
+    223     0,                       !- X Origin {m}
+    224     0,                       !- Y Origin {m}
+    225     0,                       !- Z Origin {m}
+    226     1,                       !- Type
+    227     1,                       !- Multiplier
+    228     autocalculate,           !- Ceiling Height {m}
+    229     autocalculate;           !- Volume {m3}
+    230 
+    231   ScheduleTypeLimits,
+    232     Fraction,                !- Name
+    233     0.0,                     !- Lower Limit Value
+    234     1.0,                     !- Upper Limit Value
+    235     CONTINUOUS;              !- Numeric Type
+    236 
+    237   GlobalGeometryRules,
+    238     UpperLeftCorner,         !- Starting Vertex Position
+    239     CounterClockWise,        !- Vertex Entry Direction
+    240     World;                   !- Coordinate System
+    241 
+    242   BuildingSurface:Detailed,
+    243     Zn001:Wall001,           !- Name
+    244     Wall,                    !- Surface Type
+    245     R13WALL,                 !- Construction Name
+    246     Main Zone,               !- Zone Name
+    247     Outdoors,                !- Outside Boundary Condition
+    248     ,                        !- Outside Boundary Condition Object
+    249     SunExposed,              !- Sun Exposure
+    250     WindExposed,             !- Wind Exposure
+    251     0.5000000,               !- View Factor to Ground
+    252     4,                       !- Number of Vertices
+    253     0,0,4.572000,  !- X,Y,Z ==> Vertex 1 {m}
+    254     0,0,0,  !- X,Y,Z ==> Vertex 2 {m}
+    255     15.24000,0,0,  !- X,Y,Z ==> Vertex 3 {m}
+    256     15.24000,0,4.572000;  !- X,Y,Z ==> Vertex 4 {m}
+    257 
+    258   BuildingSurface:Detailed,
+    259     Zn001:Wall002,           !- Name
+    260     Wall,                    !- Surface Type
+    261     R13WALL,                 !- Construction Name
+    262     Main Zone,               !- Zone Name
+    263     Outdoors,                !- Outside Boundary Condition
+    264     ,                        !- Outside Boundary Condition Object
+    265     SunExposed,              !- Sun Exposure
+    266     WindExposed,             !- Wind Exposure
+    267     0.5000000,               !- View Factor to Ground
+    268     4,                       !- Number of Vertices
+    269     15.24000,0,4.572000,  !- X,Y,Z ==> Vertex 1 {m}
+    270     15.24000,0,0,  !- X,Y,Z ==> Vertex 2 {m}
+    271     15.24000,15.24000,0,  !- X,Y,Z ==> Vertex 3 {m}
+    272     15.24000,15.24000,4.572000;  !- X,Y,Z ==> Vertex 4 {m}
+    273 
+    274   BuildingSurface:Detailed,
+    275     Zn001:Wall003,           !- Name
+    276     Wall,                    !- Surface Type
+    277     R13WALL,                 !- Construction Name
+    278     Main Zone,               !- Zone Name
+    279     Outdoors,                !- Outside Boundary Condition
+    280     ,                        !- Outside Boundary Condition Object
+    281     SunExposed,              !- Sun Exposure
+    282     WindExposed,             !- Wind Exposure
+    283     0.5000000,               !- View Factor to Ground
+    284     4,                       !- Number of Vertices
+    285     15.24000,15.24000,4.572000,  !- X,Y,Z ==> Vertex 1 {m}
+    286     15.24000,15.24000,0,  !- X,Y,Z ==> Vertex 2 {m}
+    287     0,15.24000,0,  !- X,Y,Z ==> Vertex 3 {m}
+    288     0,15.24000,4.572000;  !- X,Y,Z ==> Vertex 4 {m}
+    289 
+    290   BuildingSurface:Detailed,
+    291     Zn001:Wall004,           !- Name
+    292     Wall,                    !- Surface Type
+    293     R13WALL,                 !- Construction Name
+    294     Main Zone,               !- Zone Name
+    295     Outdoors,                !- Outside Boundary Condition
+    296     ,                        !- Outside Boundary Condition Object
+    297     SunExposed,              !- Sun Exposure
+    298     WindExposed,             !- Wind Exposure
+    299     0.5000000,               !- View Factor to Ground
+    300     4,                       !- Number of Vertices
+    301     0,15.24000,4.572000,  !- X,Y,Z ==> Vertex 1 {m}
+    302     0,15.24000,0,  !- X,Y,Z ==> Vertex 2 {m}
+    303     0,0,0,  !- X,Y,Z ==> Vertex 3 {m}
+    304     0,0,4.572000;  !- X,Y,Z ==> Vertex 4 {m}
+    305 
+    306   BuildingSurface:Detailed,
+    307     Zn001:Flr001,            !- Name
+    308     Floor,                   !- Surface Type
+    309     FLOOR,                   !- Construction Name
+    310     Main Zone,               !- Zone Name
+    311     Surface,                 !- Outside Boundary Condition
+    312     Zn001:Flr001,            !- Outside Boundary Condition Object
+    313     NoSun,                   !- Sun Exposure
+    314     NoWind,                  !- Wind Exposure
+    315     1.000000,                !- View Factor to Ground
+    316     4,                       !- Number of Vertices
+    317     15.24000,0.000000,0.0,  !- X,Y,Z ==> Vertex 1 {m}
+    318     0.000000,0.000000,0.0,  !- X,Y,Z ==> Vertex 2 {m}
+    319     0.000000,15.24000,0.0,  !- X,Y,Z ==> Vertex 3 {m}
+    320     15.24000,15.24000,0.0;  !- X,Y,Z ==> Vertex 4 {m}
+    321 
+    322   BuildingSurface:Detailed,
+    323     Zn001:Roof001,           !- Name
+    324     Roof,                    !- Surface Type
+    325     ROOF31,                  !- Construction Name
+    326     Main Zone,               !- Zone Name
+    327     Outdoors,                !- Outside Boundary Condition
+    328     ,                        !- Outside Boundary Condition Object
+    329     SunExposed,              !- Sun Exposure
+    330     WindExposed,             !- Wind Exposure
+    331     0,                       !- View Factor to Ground
+    332     4,                       !- Number of Vertices
+    333     0.000000,15.24000,4.572,  !- X,Y,Z ==> Vertex 1 {m}
+    334     0.000000,0.000000,4.572,  !- X,Y,Z ==> Vertex 2 {m}
+    335     15.24000,0.000000,4.572,  !- X,Y,Z ==> Vertex 3 {m}
+    336     15.24000,15.24000,4.572;  !- X,Y,Z ==> Vertex 4 {m}
+    337 
+    338   ZoneInfiltration:DesignFlowRate,
+    339     Main Zone Infiltration,  !- Name
+    340     Main Zone,               !- Zone or ZoneList Name
+    341     System Availability Schedule,  !- Schedule Name
+    342     Flow/Zone,               !- Design Flow Rate Calculation Method
+    343     0.02,                    !- Design Flow Rate {m3/s}
+    344     ,                        !- Flow per Zone Floor Area {m3/s-m2}
+    345     ,                        !- Flow per Exterior Surface Area {m3/s-m2}
+    346     ,                        !- Air Changes per Hour {1/hr}
+    347     1.0000,                  !- Constant Term Coefficient
+    348     0.0000,                  !- Temperature Term Coefficient
+    349     0.0000,                  !- Velocity Term Coefficient
+    350     0.0000;                  !- Velocity Squared Term Coefficient
+    351 
+    352   ScheduleTypeLimits,
+    353     Any Number;              !- Name
+    354 
+    355   Schedule:Compact,
+    356     System Availability Schedule,  !- Name
+    357     Any Number,              !- Schedule Type Limits Name
+    358     THROUGH: 12/31,          !- Field 1
+    359     FOR: AllDays,            !- Field 2
+    360     UNTIL: 24:00,1;          !- Field 3
+    361 
+    362   Schedule:Compact,
+    363     Fan Availability Schedule,  !- Name
+    364     Any Number,              !- Schedule Type Limits Name
+    365     THROUGH: 12/31,          !- Field 1
+    366     FOR: AllDays,            !- Field 2
+    367     UNTIL: 12:00,1,          !- Field 3
+    368     UNTIL: 24:00,0;          !- Field 5
+    369 
+    370   AirLoopHVAC,
+    371     Evap Cooler System,      !- Name
+    372     ,                        !- Controller List Name
+    373     Evap Cooler Availability List,  !- Availability Manager List Name
+    374     2.0,                     !- Design Supply Air Flow Rate {m3/s}
+    375     Air Loop Branches,       !- Branch List Name
+    376     ,                        !- Connector List Name
+    377     Supply Inlet Node,       !- Supply Side Inlet Node Name
+    378     Zone Equipment Outlet Node,  !- Demand Side Outlet Node Name
+    379     Zone Equipment Inlet Node,  !- Demand Side Inlet Node Names
+    380     Supply Outlet Node;      !- Supply Side Outlet Node Names
+    381 
+    382   AvailabilityManagerAssignmentList,
+    383     Evap Cooler Availability List,  !- Name
+    384     AvailabilityManager:LowTemperatureTurnOff,  !- Availability Manager 1 Object Type
+    385     Low Temperature Turn Off Availability Manager,  !- Availability Manager 1 Name
+    386     AvailabilityManager:HighTemperatureTurnOn,  !- Availability Manager 2 Object Type
+    387     High Temperature Turn On Availability Manager;  !- Availability Manager 2 Name
+    388 
+    389   AvailabilityManager:LowTemperatureTurnOff,
+    390     Low Temperature Turn Off Availability Manager,  !- Name
+    391     Main Zone Outlet Node,   !- Sensor Node Name
+    392     23.0;                    !- Temperature {C}
+    393 
+    394   AvailabilityManager:HighTemperatureTurnOn,
+    395     High Temperature Turn On Availability Manager,  !- Name
+    396     Main Zone Outlet Node,   !- Sensor Node Name
+    397     27.0;                    !- Temperature {C}
+    398 
+    399   BranchList,
+    400     Air Loop Branches,       !- Name
+    401     Air Loop Main Branch;    !- Branch 1 Name
+    402 
+    403   Branch,
+    404     Air Loop Main Branch,    !- Name
+    405     2.0,                     !- Maximum Flow Rate {m3/s}
+    406     ,                        !- Pressure Drop Curve Name
+    407     AirLoopHVAC:OutdoorAirSystem,  !- Component 1 Object Type
+    408     Outside Air System,      !- Component 1 Name
+    409     Supply Inlet Node,       !- Component 1 Inlet Node Name
+    410     Fan Inlet Node,          !- Component 1 Outlet Node Name
+    411     PASSIVE,                 !- Component 1 Branch Control Type
+    412     Fan:ConstantVolume,      !- Component 2 Object Type
+    413     Supply Fan,              !- Component 2 Name
+    414     Fan Inlet Node,          !- Component 2 Inlet Node Name
+    415     Evap Cooler Inlet Node,  !- Component 2 Outlet Node Name
+    416     ACTIVE,                  !- Component 2 Branch Control Type
+    417     EvaporativeCooler:Direct:CelDekPad,  !- Component 3 Object Type
+    418     Evaporative Cooler,      !- Component 3 Name
+    419     Evap Cooler Inlet Node,  !- Component 3 Inlet Node Name
+    420     Supply Outlet Node,      !- Component 3 Outlet Node Name
+    421     PASSIVE;                 !- Component 3 Branch Control Type
+    422 
+    423   AirLoopHVAC:OutdoorAirSystem,
+    424     Outside Air System,      !- Name
+    425     Outside Air System Controllers,  !- Controller List Name
+    426     Outside Air System Equipment,  !- Outdoor Air Equipment List Name
+    427     Evap Cooler Availability List;  !- Availability Manager List Name
+    428 
+    429   OutdoorAir:Node,
+    430     Outside Air Inlet Node;  !- Name
+    431 
+    432   AirLoopHVAC:ControllerList,
+    433     Outside Air System Controllers,  !- Name
+    434     Controller:OutdoorAir,   !- Controller 1 Object Type
+    435     Outside Air Controller;  !- Controller 1 Name
+    436 
+    437   Controller:OutdoorAir,
+    438     Outside Air Controller,  !- Name
+    439     Relief Air Outlet Node,  !- Relief Air Outlet Node Name
+    440     Supply Inlet Node,       !- Return Air Node Name
+    441     Fan Inlet Node,          !- Mixed Air Node Name
+    442     Outside Air Inlet Node,  !- Actuator Node Name
+    443     2.0,                     !- Minimum Outdoor Air Flow Rate {m3/s}
+    444     2.0,                     !- Maximum Outdoor Air Flow Rate {m3/s}
+    445     NoEconomizer,            !- Economizer Control Type
+    446     ModulateFlow,            !- Economizer Control Action Type
+    447     19.,                     !- Economizer Maximum Limit Dry-Bulb Temperature {C}
+    448     ,                        !- Economizer Maximum Limit Enthalpy {J/kg}
+    449     ,                        !- Economizer Maximum Limit Dewpoint Temperature {C}
+    450     ,                        !- Electronic Enthalpy Limit Curve Name
+    451     4.,                      !- Economizer Minimum Limit Dry-Bulb Temperature {C}
+    452     NoLockout,               !- Lockout Type
+    453     FixedMinimum;            !- Minimum Limit Type
+    454 
+    455   AirLoopHVAC:OutdoorAirSystem:EquipmentList,
+    456     Outside Air System Equipment,  !- Name
+    457     OutdoorAir:Mixer,        !- Component 1 Object Type
+    458     Outside Air Mixing Box;  !- Component 1 Name
+    459 
+    460   OutdoorAir:Mixer,
+    461     Outside Air Mixing Box,  !- Name
+    462     Fan Inlet Node,          !- Mixed Air Node Name
+    463     Outside Air Inlet Node,  !- Outdoor Air Stream Node Name
+    464     Relief Air Outlet Node,  !- Relief Air Stream Node Name
+    465     Supply Inlet Node;       !- Return Air Stream Node Name
+    466 
+    467   Fan:ConstantVolume,
+    468     Supply Fan,              !- Name
+    469     Fan Availability Schedule,  !- Availability Schedule Name
+    470     0.7,                     !- Fan Efficiency
+    471     600.0,                   !- Pressure Rise {Pa}
+    472     2.0,                     !- Maximum Flow Rate {m3/s}
+    473     0.9,                     !- Motor Efficiency
+    474     1.0,                     !- Motor In Airstream Fraction
+    475     Fan Inlet Node,          !- Air Inlet Node Name
+    476     Evap Cooler Inlet Node;  !- Air Outlet Node Name
+    477 
+    478   EvaporativeCooler:Direct:CelDekPad,
+    479     Evaporative Cooler,      !- Name
+    480     System Availability Schedule,  !- Availability Schedule Name
+    481     0.6,                     !- Direct Pad Area {m2}
+    482     0.2,                     !- Direct Pad Depth {m}
+    483     225,                     !- Recirculating Water Pump Power Consumption {W}
+    484     Evap Cooler Inlet Node,  !- Air Inlet Node Name
+    485     Supply Outlet Node,      !- Air Outlet Node Name
+    486     CONSTANT;                !- Control Type
+    487 
+    488   AirLoopHVAC:SupplyPath,
+    489     Zone Supply Air Path,    !- Name
+    490     Zone Equipment Inlet Node,  !- Supply Air Path Inlet Node Name
+    491     AirLoopHVAC:ZoneSplitter,!- Component 1 Object Type
+    492     Zone Supply Air Splitter;!- Component 1 Name
+    493 
+    494   AirLoopHVAC:ZoneSplitter,
+    495     Zone Supply Air Splitter,!- Name
+    496     Zone Equipment Inlet Node,  !- Inlet Node Name
+    497     Main Zone Inlet Node;    !- Outlet 1 Node Name
+    498 
+    499   AirLoopHVAC:ReturnPath,
+    500     Zone Return Air Path,    !- Name
+    501     Zone Equipment Outlet Node,  !- Return Air Path Outlet Node Name
+    502     AirLoopHVAC:ZoneMixer,   !- Component 1 Object Type
+    503     Zone Return Air Mixer;   !- Component 1 Name
+    504 
+    505   AirLoopHVAC:ZoneMixer,
+    506     Zone Return Air Mixer,   !- Name
+    507     Zone Equipment Outlet Node,  !- Outlet Node Name
+    508     Main Zone Outlet Node;   !- Inlet 1 Node Name
+    509 
+    510   ZoneHVAC:EquipmentConnections,
+    511     Main Zone,               !- Zone Name
+    512     Main Zone Equipment,     !- Zone Conditioning Equipment List Name
+    513     Main Zone Inlet Node,    !- Zone Air Inlet Node or NodeList Name
+    514     ,                        !- Zone Air Exhaust Node or NodeList Name
+    515     Main Zone Node,          !- Zone Air Node Name
+    516     Main Zone Outlet Node;   !- Zone Return Air Node Name
+    517 
+    518   ZoneHVAC:EquipmentList,
+    519     Main Zone Equipment,     !- Name
+    520     AirTerminal:SingleDuct:Uncontrolled,  !- Zone Equipment 1 Object Type
+    521     Main Zone Direct Air,    !- Zone Equipment 1 Name
+    522     1,                       !- Zone Equipment 1 Cooling Sequence
+    523     2,                       !- Zone Equipment 1 Heating or No-Load Sequence
+    524     ZoneHVAC:Baseboard:Convective:Electric,  !- Zone Equipment 2 Object Type
+    525     Main Zone Baseboard,     !- Zone Equipment 2 Name
+    526     2,                       !- Zone Equipment 2 Cooling Sequence
+    527     1;                       !- Zone Equipment 2 Heating or No-Load Sequence
+    528 
+    529   AirTerminal:SingleDuct:Uncontrolled,
+    530     Main Zone Direct Air,    !- Name
+    531     System Availability Schedule,  !- Availability Schedule Name
+    532     Main Zone Inlet Node,    !- Zone Supply Air Node Name
+    533     1.5;                     !- Maximum Air Flow Rate {m3/s}
+    534 
+    535   ZoneHVAC:Baseboard:Convective:Electric,
+    536     Main Zone Baseboard,     !- Name
+    537     System Availability Schedule,  !- Availability Schedule Name
+    538     8000,                    !- Nominal Capacity {W}
+    539     0.97;                    !- Efficiency
+    540 
+    541   ZoneControl:Thermostat,
+    542     Main Zone Thermostat,    !- Name
+    543     Main Zone,               !- Zone or ZoneList Name
+    544     Zone Control Type Sched, !- Control Type Schedule Name
+    545     ThermostatSetpoint:SingleHeating,  !- Control 1 Object Type
+    546     Heating Setpoint;        !- Control 1 Name
+    547 
+    548   Schedule:Compact,
+    549     Zone Control Type Sched, !- Name
+    550     Any Number,              !- Schedule Type Limits Name
+    551     Through: 12/31,          !- Field 1
+    552     For: AllDays,            !- Field 2
+    553     Until: 24:00,1;          !- Field 3
+    554 
+    555   ThermostatSetpoint:SingleHeating,
+    556     Heating Setpoint,        !- Name
+    557     Heating Setpoint Schedule;  !- Setpoint Temperature Schedule Name
+    558 
+    559   Schedule:Compact,
+    560     Heating Setpoint Schedule,  !- Name
+    561     Any Number,              !- Schedule Type Limits Name
+    562     Through: 12/31,          !- Field 1
+    563     For: AllDays,            !- Field 2
+    564     Until: 24:00,20.0;       !- Field 3
+    565 
+      ***** Tabs eliminated from above line
+    566 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    567  ExternalInterface,
+      ***** Tabs eliminated from above line
+    568   FunctionalMockupUnitImport;  !- Name of External Interface
+      ***** Tabs eliminated from above line
+    569 
+    570 ExternalInterface:FunctionalMockupUnitImport,
+    571   multfive.fmu,  !- FMU Filename
+      ***** Tabs eliminated from above line
+    572    15,  !- FMU Timeout in milli-seconds
+      ***** Tabs eliminated from above line
+    573    0;  !- FMU LoggingOn Value
+      ***** Tabs eliminated from above line
+    574 
+    575 ExternalInterface:FunctionalMockupUnitImport:To:Schedule,
+    576    TMultFive,  !- EnergyPlus Variable Name
+      ***** Tabs eliminated from above line
+    577    Any Number,
+    578    multfive.fmu,  !- FMU Filename
+      ***** Tabs eliminated from above line
+    579    Model1,  !- FMU Instance Name
+      ***** Tabs eliminated from above line
+    580    Output,  !- FMU Variable Name
+      ***** Tabs eliminated from above line
+    581    0;  !- Initial Value
+      ***** Tabs eliminated from above line
+    582 
+    583 ExternalInterface:FunctionalMockupUnitImport:From:Variable,
+    584    Main Zone,  !- EnergyPlus Key Value
+      ***** Tabs eliminated from above line
+    585    Zone Mean Air Temperature,  !- EnergyPlus Variable Name
+      ***** Tabs eliminated from above line
+    586    multfive.fmu,  !- FMU Filename
+      ***** Tabs eliminated from above line
+    587    Model1,  !- FMU Instance Name
+      ***** Tabs eliminated from above line
+    588    Input;  !- FMU Variable Name
+      ***** Tabs eliminated from above line
+    589 
+    590      Output:Variable,Main Zone,Zone Mean Air Temperature,Timestep;
+    591 
+    592    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    593 
+      ***** Tabs eliminated from above line
+    594 
+    595   Output:VariableDictionary,Regular;
+    596 
+    597   Output:Surfaces:Drawing,DXF;
+    598 
+    599   Output:Constructions,Constructions;
+    600 
+    601   Output:Variable,*,Site Outdoor Air Drybulb Temperature,hourly;
+    602 
+    603   Output:Variable,*,Site Outdoor Air Wetbulb Temperature,hourly;
+    604 
+    605   Output:Variable,*,Site Outdoor Air Humidity Ratio,hourly;
+    606 
+    607   Output:Variable,*,Site Outdoor Air Relative Humidity,hourly;
+    608 
+    609   Output:Variable,*,Zone Mean Air Temperature,hourly;
+    610 
+    611   Output:Variable,Supply Outlet Node,System Node Mass Flow Rate,hourly;
+    612 
+    613   Output:Variable,*,System Node Temperature,hourly;
+    614 
+    615   Output:Variable,*,Baseboard Electric Power,hourly;
+    616 
+    617   Output:Meter:MeterFileOnly,Electricity:Facility,monthly;
+    618 
+    619   Output:Meter:MeterFileOnly,Electricity:HVAC,monthly;
+    620 
+    621   Output:Meter:MeterFileOnly,Electricity:Facility,runperiod;
+    622 
+    623   Output:Meter:MeterFileOnly,Electricity:HVAC,runperiod;
+    624 
+    625   OutputControl:Table:Style,
+    626     TabAndHTML;              !- Column Separator
+    627 
+    628   Output:Table:SummaryReports,
+    629     AllSummary;              !- Report 1 Name
+    630 
+  Processing Input Data File (in.idf) -- Complete
+  Maximum number of Alpha IDF Args=          17
+  Maximum number of Numeric IDF Args=          14
+  Number of IDF "Lines"=          79
+  Number of Defaulted Fields=           6
+  Number of Fields with Defaults=         142
+  Number of Autosized Fields=           0
+  Number of Autosizable Fields =           7
+  Number of Autocalculated Fields=           2
+  Number of Autocalculatable Fields =          14
+ Getting object=VERSION
+ Getting object=HEATBALANCEALGORITHM
+ Getting object=TIMESTEP
+ Getting object=SIMULATIONCONTROL
+ Getting object=OUTPUT:SURFACES:DRAWING
+ Getting object=OUTPUT:VARIABLEDICTIONARY
+ Getting object=OUTPUT:CONSTRUCTIONS
+ Getting object=BRANCH
+ Getting object=BRANCHLIST
+ Getting object=OUTPUT:TABLE:SUMMARYREPORTS
+ Getting object=OUTPUT:VARIABLE
+ Getting object=SIZINGPERIOD:DESIGNDAY
+ Getting object=RUNPERIOD
+ Getting object=SITE:LOCATION
+ Getting object=SITE:GROUNDTEMPERATURE:BUILDINGSURFACE
+ Getting object=SCHEDULE:COMPACT
+  Processing Schedule Input -- Start
+ Getting object=SCHEDULETYPELIMITS
+ Getting object=EXTERNALINTERFACE:FUNCTIONALMOCKUPUNITIMPORT:TO:SCHEDULE
+  Processing Schedule Input -- Complete
+ Getting object=BUILDING
+ Getting object=SURFACECONVECTIONALGORITHM:INSIDE
+ Getting object=SURFACECONVECTIONALGORITHM:OUTSIDE
+ Getting object=MATERIAL
+ Getting object=MATERIAL:NOMASS
+ Getting object=CONSTRUCTION
+ Getting object=ZONE
+ Getting object=GLOBALGEOMETRYRULES
+ Getting object=BUILDINGSURFACE:DETAILED
+ Getting object=ZONEINFILTRATION:DESIGNFLOWRATE
+ Getting object=OUTDOORAIR:NODE
+ Getting object=ZONECONTROL:THERMOSTAT
+ Getting object=THERMOSTATSETPOINT:SINGLEHEATING
+ Getting object=AVAILABILITYMANAGER:HIGHTEMPERATURETURNON
+ Getting object=AVAILABILITYMANAGER:LOWTEMPERATURETURNOFF
+ Getting object=ZONEHVAC:EQUIPMENTCONNECTIONS
+ Getting object=ZONEHVAC:EQUIPMENTLIST
+ Getting object=AIRLOOPHVAC:SUPPLYPATH
+ Getting object=AIRLOOPHVAC:RETURNPATH
+ Getting object=AIRLOOPHVAC:ZONESPLITTER
+ Getting object=AIRTERMINAL:SINGLEDUCT:UNCONTROLLED
+ Getting object=ZONEHVAC:BASEBOARD:CONVECTIVE:ELECTRIC
+ Getting object=AIRLOOPHVAC:ZONEMIXER
+ Getting object=AIRLOOPHVAC
+ Getting object=AIRLOOPHVAC:CONTROLLERLIST
+ Getting object=AIRLOOPHVAC:OUTDOORAIRSYSTEM
+ Getting object=AIRLOOPHVAC:OUTDOORAIRSYSTEM:EQUIPMENTLIST
+ Getting object=OUTDOORAIR:MIXER
+ Getting object=AVAILABILITYMANAGERASSIGNMENTLIST
+ Getting object=CONTROLLER:OUTDOORAIR
+ Getting object=FAN:CONSTANTVOLUME
+ Getting object=EVAPORATIVECOOLER:DIRECT:CELDEKPAD
+ Getting object=OUTPUT:METER:METERFILEONLY
+ Getting object=EXTERNALINTERFACE
+ Getting object=EXTERNALINTERFACE:FUNCTIONALMOCKUPUNITIMPORT
+not found (user input)=multfive.fmu
+found (epin)=C:\Users\Justin\Dropbox\RA Material\ICSolar\IC Solar in Studio\4-ENERGY SIMULATIONS\ICS_Modelica\MultFiveFMU\multfive.fmu
+ Getting object=EXTERNALINTERFACE:FUNCTIONALMOCKUPUNITIMPORT:FROM:VARIABLE

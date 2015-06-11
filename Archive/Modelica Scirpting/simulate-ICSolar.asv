@@ -32,27 +32,23 @@ getErrorString();
 //getErrorString();
 
 
-// ---- FOR Feb 20 2015
-//setParameterValue(ICSolar.Parameters, Date, "20150220\\");
-simulate(ICSolar.ICS_Skeleton,startTime=6.7879e6, StopTime = 6.79e6, Interval = 10);
-getErrorString();
-//  parameter Real Resistivity_WaterPlate = 0.7;
-//  parameter Real adj = 0.21;
-//  parameter Real adj_2 = 0.7;
-
-
 
 //********************* DIFFERENT SIMULATIONS
 
+// ---- FOR Feb 20 2015
+//setParameterValue(ICSolar.Parameters, Date, "20150\\");
+//simulate(ICSolar.ICS_Skeleton,startTime=7036600, StopTime = 7061100, Interval = 120);
+//getErrorString();
 
-/*
+
+
 // ---- FOR Mar 19 2015
-setParameterValue(ICSolar.Parameters, Date, "20150319\\");
-simulate(ICSolar.ICS_Skeleton,startTime=6787900, StopTime = 6790071, Interval = 60);
-getErrorString();
+//setParameterValue(ICSolar.Parameters, Date, "20150319\\");
+//simulate(ICSolar.ICS_Skeleton,startTime=6701501, StopTime = 6705690, Interval = 10);
+//getErrorString();
 
 // ---- FOR Mar 23 2015
-setParameterValue(ICSolar.Parameters, Date, "20150323\\");
-simulate(ICSolar.ICS_Skeleton,startTime=7036600, StopTime = 7061100, Interval = 120);
-getErrorString();
-*/
+//setParameterValue(ICSolar.Parameters, Date, "20150323\\");
+//simulate(ICSolar.ICS_Skeleton,startTime=7046000, StopTime = 7050593, Interval = 10);
+//getErrorString();
+

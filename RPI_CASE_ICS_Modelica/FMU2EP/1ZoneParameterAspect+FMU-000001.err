@@ -1,0 +1,91 @@
+Program Version,EnergyPlus-Windows-64 8.1.0.009, YMD=2014.08.12 16:13,IDD_Version 8.1.0.009
+   ************* IDF Context for following error/warning message:
+   ************* Note -- lines truncated at 300 characters, if necessary...
+   *************    573 ExternalInterface:FunctionalMockupUnitImport,
+   ************* indicated Name=C:\Users\Nicholas.Novelli\Dropbox\IC Solar in Studio\4-ENERGY SIMULATIONS\ICS_Modelica\FMU2EP\MoistAir.fmu
+   ************* Only last 1 lines before error line shown.....
+   *************    574   C:\Users\Nicholas.Novelli\Dropbox\IC Solar in Studio\4-ENERGY SIMULATIONS\ICS_Modelica\FMU2EP\MoistAir.fmu,  !- FMU Filename
+   ** Warning ** IP: IDF line~574 Alpha Argument length exceeds maximum, will be truncated=  C:\Users\Nicholas.Novelli\Dropbox\IC Solar in Studio\4-ENERGY SIMULATIONS\ICS_Modelica\FMU2EP\MoistAir.fmu
+   **   ~~~   ** Will be processed as Alpha=C:\USERS\NICHOLAS.NOVELLI\DROPBOX\IC SOLAR IN STUDIO\4-ENERGY SIMULATIONS\ICS_MODELICA\FMU2EP\MOISTA
+   ************* IDF Context for following error/warning message:
+   ************* Note -- lines truncated at 300 characters, if necessary...
+   *************    578 ExternalInterface:FunctionalMockupUnitImport:From:Variable,
+   ************* indicated Name=Main Zone
+   ************* Only last 4 lines before error line shown.....
+   *************    579    Main Zone,  !- EnergyPlus Key Value
+   *************    580 !   Zone Mean Air Temperature [C],  !- EnergyPlus Variable Name
+   *************    581    Zone Mean Air Temperature,  !- EnergyPlus Variable Name
+   *************    582   C:\Users\Nicholas.Novelli\Dropbox\IC Solar in Studio\4-ENERGY SIMULATIONS\ICS_Modelica\FMU2EP\MoistAir.fmu,  !- FMU Filename
+   ** Warning ** IP: IDF line~582 Alpha Argument length exceeds maximum, will be truncated=  C:\Users\Nicholas.Novelli\Dropbox\IC Solar in Studio\4-ENERGY SIMULATIONS\ICS_Modelica\FMU2EP\MoistAir.fmu
+   **   ~~~   ** Will be processed as Alpha=C:\USERS\NICHOLAS.NOVELLI\DROPBOX\IC SOLAR IN STUDIO\4-ENERGY SIMULATIONS\ICS_MODELICA\FMU2EP\MOISTA
+   ************* IDF Context for following error/warning message:
+   ************* Note -- lines truncated at 300 characters, if necessary...
+   *************    586 ExternalInterface:FunctionalMockupUnitImport:From:Variable,
+   ************* indicated Name=Environment
+   ************* Only last 3 lines before error line shown.....
+   *************    587    Environment,  !- EnergyPlus Key Value
+   *************    588    Site Outdoor Air Relative Humidity,  !- EnergyPlus Variable Name
+   *************    589   C:\Users\Nicholas.Novelli\Dropbox\IC Solar in Studio\4-ENERGY SIMULATIONS\ICS_Modelica\FMU2EP\MoistAir.fmu,  !- FMU Filename
+   ** Warning ** IP: IDF line~589 Alpha Argument length exceeds maximum, will be truncated=  C:\Users\Nicholas.Novelli\Dropbox\IC Solar in Studio\4-ENERGY SIMULATIONS\ICS_Modelica\FMU2EP\MoistAir.fmu
+   **   ~~~   ** Will be processed as Alpha=C:\USERS\NICHOLAS.NOVELLI\DROPBOX\IC SOLAR IN STUDIO\4-ENERGY SIMULATIONS\ICS_MODELICA\FMU2EP\MOISTA
+   ************* IDF Context for following error/warning message:
+   ************* Note -- lines truncated at 300 characters, if necessary...
+   *************    593 ExternalInterface:FunctionalMockupUnitImport:From:Variable,
+   ************* indicated Name=Main Zone
+   ************* Only last 3 lines before error line shown.....
+   *************    594    Main Zone,  !- EnergyPlus Key Value
+   *************    595    Zone Air Relative Humidity,  !- EnergyPlus Variable Name
+   *************    596   C:\Users\Nicholas.Novelli\Dropbox\IC Solar in Studio\4-ENERGY SIMULATIONS\ICS_Modelica\FMU2EP\MoistAir.fmu,  !- FMU Filename
+   ** Warning ** IP: IDF line~596 Alpha Argument length exceeds maximum, will be truncated=  C:\Users\Nicholas.Novelli\Dropbox\IC Solar in Studio\4-ENERGY SIMULATIONS\ICS_Modelica\FMU2EP\MoistAir.fmu
+   **   ~~~   ** Will be processed as Alpha=C:\USERS\NICHOLAS.NOVELLI\DROPBOX\IC SOLAR IN STUDIO\4-ENERGY SIMULATIONS\ICS_MODELICA\FMU2EP\MOISTA
+   ************* IDF Context for following error/warning message:
+   ************* Note -- lines truncated at 300 characters, if necessary...
+   *************    600 ExternalInterface:FunctionalMockupUnitImport:To:Schedule,
+   ************* indicated Name=FMU_Qsens
+   ************* Only last 3 lines before error line shown.....
+   *************    601    FMU_Qsens,  !- EnergyPlus Variable Name
+   *************    602  Any Number,
+   *************    603   C:\Users\Nicholas.Novelli\Dropbox\IC Solar in Studio\4-ENERGY SIMULATIONS\ICS_Modelica\FMU2EP\MoistAir.fmu,  !- FMU Filename
+   ** Warning ** IP: IDF line~603 Alpha Argument length exceeds maximum, will be truncated=  C:\Users\Nicholas.Novelli\Dropbox\IC Solar in Studio\4-ENERGY SIMULATIONS\ICS_Modelica\FMU2EP\MoistAir.fmu
+   **   ~~~   ** Will be processed as Alpha=C:\USERS\NICHOLAS.NOVELLI\DROPBOX\IC SOLAR IN STUDIO\4-ENERGY SIMULATIONS\ICS_MODELICA\FMU2EP\MOISTA
+   ************* IDF Context for following error/warning message:
+   ************* Note -- lines truncated at 300 characters, if necessary...
+   *************    608 ExternalInterface:FunctionalMockupUnitImport:To:Schedule,
+   ************* indicated Name=FMU_Qlat
+   ************* Only last 3 lines before error line shown.....
+   *************    609    FMU_Qlat,  !- EnergyPlus Variable Name
+   *************    610  Any Number,
+   *************    611   C:\Users\Nicholas.Novelli\Dropbox\IC Solar in Studio\4-ENERGY SIMULATIONS\ICS_Modelica\FMU2EP\MoistAir.fmu,  !- FMU Filename
+   ** Warning ** IP: IDF line~611 Alpha Argument length exceeds maximum, will be truncated=  C:\Users\Nicholas.Novelli\Dropbox\IC Solar in Studio\4-ENERGY SIMULATIONS\ICS_Modelica\FMU2EP\MoistAir.fmu
+   **   ~~~   ** Will be processed as Alpha=C:\USERS\NICHOLAS.NOVELLI\DROPBOX\IC SOLAR IN STUDIO\4-ENERGY SIMULATIONS\ICS_MODELICA\FMU2EP\MOISTA
+   ************* IDF Context for following error/warning message:
+   ************* Note -- lines truncated at 300 characters, if necessary...
+   *************    616 ExternalInterface:FunctionalMockupUnitImport:From:Variable,
+   ************* indicated Name=Environment
+   ************* Only last 3 lines before error line shown.....
+   *************    617    Environment,  !- EnergyPlus Key Value
+   *************    618    Site Outdoor Air Drybulb Temperature,  !- EnergyPlus Variable Name
+   *************    619   C:\Users\Nicholas.Novelli\Dropbox\IC Solar in Studio\4-ENERGY SIMULATIONS\ICS_Modelica\FMU2EP\MoistAir.fmu,  !- FMU Filename
+   ** Warning ** IP: IDF line~619 Alpha Argument length exceeds maximum, will be truncated=  C:\Users\Nicholas.Novelli\Dropbox\IC Solar in Studio\4-ENERGY SIMULATIONS\ICS_Modelica\FMU2EP\MoistAir.fmu
+   **   ~~~   ** Will be processed as Alpha=C:\USERS\NICHOLAS.NOVELLI\DROPBOX\IC SOLAR IN STUDIO\4-ENERGY SIMULATIONS\ICS_MODELICA\FMU2EP\MOISTA
+   ** Warning ** GetAirPathData: AirLoopHVAC="EVAP COOLER SYSTEM" has no Controllers.
+   ** Warning ** Minimum outside air flow rate for OA Controller "OUTSIDE AIR CONTROLLER" is greater than maximum supply flow rate for Air Loop "EVAP COOLER SYSTEM"
+   **   ~~~   ** ...Min for OA Controller=[3.000000], Max Supply Flow Rate=[2.000000].
+   **   ~~~   ** ...Minimum outside air flow rate will be reset to equal maximum supply flow rate
+   ************* Testing Individual Branch Integrity
+   ************* All Branches passed integrity testing
+   ************* Testing Individual Supply Air Path Integrity
+   ************* All Supply Air Paths passed integrity testing
+   ************* Testing Individual Return Air Path Integrity
+   ************* All Return Air Paths passed integrity testing
+   ************* No node connection errors were found.
+   ************* Beginning Simulation
+   ** Severe  ** ExternalInterface/InitExternalInterfaceFMUImport:
+   **   ~~~   ** file not located="C:\Users\Nicholas.Novelli\Dropbox\IC Solar in Studio\4-ENERGY SIMULATIONS\ICS_Modelica\FMU2EP\Mois".
+   **  Fatal  ** ExternalInterface/StopExternalInterfaceIfError: Error in ExternalInterface:Check EnergyPlus *.err file.
+   ...Summary of Errors that led to program termination:
+   ..... Reference severe error count=1
+   ..... Last severe error=ExternalInterface/InitExternalInterfaceFMUImport:
+   ************* EnergyPlus Warmup Error Summary. During Warmup: 0 Warning; 1 Severe Errors.
+   ************* EnergyPlus Sizing Error Summary. During Sizing: 0 Warning; 0 Severe Errors.
+   ************* EnergyPlus Terminated--Fatal Error Detected. 9 Warning; 1 Severe Errors; Elapsed Time=00hr 00min  1.84sec
