@@ -16,9 +16,9 @@ t_s_Qgen = Qgen_arrayTotal(:,Start:End);
 t_time = time(:,Start:End);
 
 
-%%--PLOT ENERGY GENERATION
+%% --PLOT ENERGY GENERATION
 
-figure
+figure('Color','white')
 hold on;
 
 % Plot Heat
@@ -47,9 +47,7 @@ legend('Measured Qgen','Modeled Qgen','Measured Egen','Modeled Egen','Location',
 hold off;
 
 
-
-
-%%--PLOT MODELED EFFICIENCY
+%% --PLOT MODELED EFFICIENCY
 Conv_Receiver
 
 %%Plots the Eta (only modeled)
@@ -58,7 +56,7 @@ t_s_eta_Egen = eta_Egen_mods(:,Start:End);
 t_s_eta_Qgen = eta_Qgen_mods(:,Start:End); 
 t_s_eta_Com = t_s_eta_Qgen + t_s_eta_Egen;
 
-figure
+figure('Color','white')
 hold on;
 
 
@@ -86,30 +84,25 @@ ylabel('Effciency (module conversion efficiency)');
 legend('eta Qgen','eta Egen','eta Combined','Location','northeast');  
 
 
-% %% Plot chi vs eta_QGen
-% hold on;
-% 
-% figure;
-% 
-% t_s_chi = chi_modeled(:,Start:End);
-% t_o_eta_Qgen = measured_eta_Qgen_arrayTotal(:,Start:End);
-% 
-% chi_trans = transpose(t_s_chi);
-% eta_Qgen_trans = transpose(t_o_eta_Qgen);
-% 
-% f=fit(chi_trans,eta_Qgen_trans,'poly1');
-% 
-% scatter(chi_trans,eta_Qgen_trans);
-% 
-% 
-% x=0:.01:.1;
-% y=f(x);
-% 
-% plot(x,y);
+%% Plot chi vs eta_QGen
+hold on;
+
+figure('Color','white')
+
+t_s_chi = chi_modeled(:,Start:End);
+t_o_eta_Qgen = measured_eta_Qgen_arrayTotal(:,Start:End);
+
+chi_trans = transpose(t_s_chi);
+eta_Qgen_trans = transpose(t_o_eta_Qgen);
+
+f=fit(chi_trans,eta_Qgen_trans,'poly1');
+
+scatter(chi_trans,eta_Qgen_trans);
 
 
+x=0:.01:1.1;
+y=f(x);
 
+plot(x,y);
 
-
-
-
+%%
