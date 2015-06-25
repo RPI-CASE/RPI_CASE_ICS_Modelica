@@ -1,3 +1,10 @@
+%% This file creates charts for the energy, eta, and chi values from a .mat
+% file has been processed to have a start and end time (steady-state
+% region)
+
+% the 3 charts are then saved in the folder as matlab Figs.
+
+
 %%PLOT THE ENERGY OUTPUT (measured & modeled) 
 
 %Make sure the Start and End values are set as save in the .mat file
@@ -36,6 +43,15 @@ plot(t_o_Egen,'Color',[0.301960796117783 0.745098054409027 0.933333337306976],..
 plot(t_s_Egen,'LineStyle',':',...
     'Color',[0.301960796117783 0.745098054409027 0.933333337306976],...
     'DisplayName','t_s_Egen','LineWidth',2);
+
+% Plot UQ
+s_Egen = 0.73; % please refer to UQ calcs in 'UQ_24-May-15_v1_KP.xlsx'
+x = 1:length(t_o_Egen);
+y = t_o_Egen;
+b = s_Egen;
+
+[hl, hp] = boundedline(1:length(t_o_Egen), t_o_Egen , s_Egen,'cyan';
+
 
 title({strcat(day,': Array Total Energy Generation'),'6 Modules of PV & 12 Modules of Thermal Collection'},'FontName','Arial Narrow');
 

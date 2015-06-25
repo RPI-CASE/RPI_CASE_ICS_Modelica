@@ -1,3 +1,10 @@
+%% This file creates charts for the energy, eta, and chi values from a .mat
+% file has been processed to have a start and end time (steady-state
+% region)
+
+% the 3 charts are then saved in the folder as matlab Figs.
+
+
 %%PLOT THE ENERGY OUTPUT (measured & modeled) 
 
 %Make sure the Start and End values are set as save in the .mat file
@@ -7,6 +14,9 @@
 % purple [0.494117647409439 0.184313729405403 0.556862771511078]
 
 % view data to determine start and ends of collection period
+Turquoise = [0.301960796117783 0.745098054409027 0.933333337306976];
+Purple = [0.494117647409439 0.184313729405403 0.556862771511078];
+
 
 %trimmed observed 
 t_o_Egen = measured_Egen_arrayTotal(:,Start:End);
@@ -28,14 +38,34 @@ hold on;
 
 % Plot Heat
 plot(t_o_Qgen,'Color',[1 0 0],'DisplayName','t_o_Qgen','LineWidth',2);
-plot(t_s_Qgen,'LineStyle',':','Color',[1 0 0],'DisplayName','t_s_Qgen','LineWidth',2);
+plot(t_s_Qgen,'LineStyle','--','Color',[1 0 0],'DisplayName','t_s_Qgen','LineWidth',2);
 
 % Plot Eletrical
-plot(t_o_Egen,'Color',[0.301960796117783 0.745098054409027 0.933333337306976],...
+plot(t_o_Egen,'Color',Turquoise,...
     'DisplayName','t_o_Egen','LineWidth',2);
 plot(t_s_Egen,'LineStyle',':',...
-    'Color',[0.301960796117783 0.745098054409027 0.933333337306976],...
+    'Color',Turquoise,...
     'DisplayName','t_s_Egen','LineWidth',2);
+
+% Plot UQ
+s_Egen = 0.73; % please refer to UQ calcs in 'UQ_24-May-15_v1_KP.xlsx'
+s_Qgen = 10;
+
+s_Qgen_upper = t_o_Qgen + s_Qgen;
+s_Qgen_lower = t_o_Qgen - s_Qgen;
+
+x = 1:length(t_o_Qgen);
+y1 = s_Qgen_lower;
+y2 = s_Qgen_upper;
+
+X=[x,fliplr(x)];    
+Y=[y1,fliplr(y2)];  
+
+plot(s_Qgen_upper,'Color',[1 0 0],'LineStyle',':','LineWidth',2);
+
+
+
+%fill(X,Y,'red','FaceAlpha',0.2); 
 
 title({strcat(day,': Array Total Energy Generation'),'6 Modules of PV & 12 Modules of Thermal Collection'},'FontName','Arial Narrow');
 
