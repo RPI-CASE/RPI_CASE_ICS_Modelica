@@ -16,7 +16,7 @@
 % view data to determine start and ends of collection period
 Turquoise = [0.301960796117783 0.745098054409027 0.933333337306976];
 Purple = [0.494117647409439 0.184313729405403 0.556862771511078];
-
+Grey = [0.7 0.7 0.7];
 
 %trimmed observed 
 t_o_Egen = measured_Egen_arrayTotal(:,Start:End);
@@ -37,13 +37,14 @@ figure('Color',[1 1 1]);
 hold on;
 
 % Plot Heat
-plot(t_o_Qgen,'Color',[1 0 0],'DisplayName','t_o_Qgen','LineWidth',2);
+p = plot(t_o_Qgen,'Color',[1 0 0],'DisplayName','t_o_Qgen','LineWidth',2);
+
 plot(t_s_Qgen,'LineStyle','--','Color',[1 0 0],'DisplayName','t_s_Qgen','LineWidth',2);
 
 % Plot Eletrical
 plot(t_o_Egen,'Color',Turquoise,...
     'DisplayName','t_o_Egen','LineWidth',2);
-plot(t_s_Egen,'LineStyle',':',...
+plot(t_s_Egen,'LineStyle','--',...
     'Color',Turquoise,...
     'DisplayName','t_s_Egen','LineWidth',2);
 
@@ -54,14 +55,18 @@ s_Qgen = 10;
 s_Qgen_upper = t_o_Qgen + s_Qgen;
 s_Qgen_lower = t_o_Qgen - s_Qgen;
 
+s_Egen_upper = t_o_Egen + s_Egen;
+s_Egen_lower = t_o_Egen - s_Egen;
+
 x = 1:length(t_o_Qgen);
 y1 = s_Qgen_lower;
 y2 = s_Qgen_upper;
 
-X=[x,fliplr(x)];    
-Y=[y1,fliplr(y2)];  
+plot(s_Qgen_upper,'Color',Grey,'LineStyle',':','LineWidth',2);
+plot(s_Qgen_lower,'Color',Grey,'LineStyle',':','LineWidth',2);
+plot(s_Egen_upper,'Color',Grey,'LineStyle',':','LineWidth',2);
+plot(s_Egen_lower,'Color',Grey,'LineStyle',':','LineWidth',2);
 
-plot(s_Qgen_upper,'Color',[1 0 0],'LineStyle',':','LineWidth',2);
 
 
 
@@ -79,12 +84,25 @@ set(gca,'XGrid','on');
 ylabel('Power (Watts)','FontName','Arial Narrow');
 set(gca,'YGrid','on');
 
-legend('Measured Q_{gen}','Modeled Q_{gen}','Measured E_{gen}','Modeled E_{gen}','Location','southeast');  
+legend('Measured Q_{gen}','Modeled Q_{gen}','Measured E_{gen}','Modeled E_{gen}','Uncertainity','Location','southeast');  
 set(legend,'FontName','Arial Narrow');
+
+
+
 
 filename = strcat(day,' Energy'); 
 savefig(filename);
 hold off;
+
+
+
+
+
+
+% 
+
+
+
 
 
 
