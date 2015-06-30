@@ -18,9 +18,12 @@ Turquoise = [0.301960796117783 0.745098054409027 0.933333337306976];
 Purple = [0.494117647409439 0.184313729405403 0.556862771511078];
 Grey = [0.7 0.7 0.7];
 
-%trimmed observed 
+%trimmed observed .. trimed_observed
 t_o_Egen = measured_Egen_arrayTotal(:,Start:End);
 t_o_Qgen = measured_Qgen_arrayTotal(:,Start:End); 
+t_o_vFlow = measured_vFlow(:,Start:End); 
+t_o_Tin = measured_T_HTFin(:,Start:End); 
+t_o_Tout = measured_T_HTFout(:,Start:End); 
 
 %trimmed simulated
 t_s_Egen = Egen_arrayTotal(:,Start:End); 
@@ -50,7 +53,10 @@ plot(t_s_Egen,'LineStyle','--',...
 
 % Plot UQ
 s_Egen = 0.73; % please refer to UQ calcs in 'UQ_24-May-15_v1_KP.xlsx'
-s_Qgen = 10;
+s_Qgen = UQ_Qgen(t_o_vFlow,t_o_Tin,t_o_Tout);
+
+
+
 
 s_Qgen_upper = t_o_Qgen + s_Qgen;
 s_Qgen_lower = t_o_Qgen - s_Qgen;
