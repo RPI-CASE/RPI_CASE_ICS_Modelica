@@ -54,24 +54,37 @@ plot(t_s_Egen,'LineStyle','--',...
 % Plot UQ
 s_Egen = 0.73; % please refer to UQ calcs in 'UQ_24-May-15_v1_KP.xlsx'
 s_Qgen = UQ_Qgen(t_o_vFlow,t_o_Tin,t_o_Tout);
+%s_Qgen = 10;
 
 
-
-
+% Creat Upper and Lower Limits
 s_Qgen_upper = t_o_Qgen + s_Qgen;
 s_Qgen_lower = t_o_Qgen - s_Qgen;
 
 s_Egen_upper = t_o_Egen + s_Egen;
 s_Egen_lower = t_o_Egen - s_Egen;
 
+% Create Fill between lines
 x = 1:length(t_o_Qgen);
 y1 = s_Qgen_lower;
 y2 = s_Qgen_upper;
 
-plot(s_Qgen_upper,'Color',Grey,'LineStyle',':','LineWidth',2);
-plot(s_Qgen_lower,'Color',Grey,'LineStyle',':','LineWidth',2);
-plot(s_Egen_upper,'Color',Grey,'LineStyle',':','LineWidth',2);
-plot(s_Egen_lower,'Color',Grey,'LineStyle',':','LineWidth',2);
+% For Thermal
+fill([x,fliplr(x)],[y1,fliplr(y2)],Grey,'FaceAlpha',0.15,'LineStyle','--',...
+    'EdgeColor',Grey);    
+
+% Create Fill between lines
+y1 = s_Egen_lower;
+y2 = s_Egen_upper;
+
+% For Thermal
+fill([x,fliplr(x)],[y1,fliplr(y2)],Grey,'FaceAlpha',0.15,'LineStyle','--',...
+    'EdgeColor',Grey);    
+
+% plot(s_Qgen_upper,'Color',Grey,'LineStyle',':','LineWidth',2);
+% plot(s_Qgen_lower,'Color',Grey,'LineStyle',':','LineWidth',2);
+% plot(s_Egen_upper,'Color',Grey,'LineStyle',':','LineWidth',2);
+% plot(s_Egen_lower,'Color',Grey,'LineStyle',':','LineWidth',2);
 
 
 
@@ -90,7 +103,8 @@ set(gca,'XGrid','on');
 ylabel('Power (Watts)','FontName','Arial Narrow');
 set(gca,'YGrid','on');
 
-legend('Measured Q_{gen}','Modeled Q_{gen}','Measured E_{gen}','Modeled E_{gen}','Uncertainity','Location','southeast');  
+legend('Measured Q_{gen}','Modeled Q_{gen}','Measured E_{gen}',...
+    'Modeled E_{gen}','Uncertainity','Location','eastoutside');    %'southeast'
 set(legend,'FontName','Arial Narrow');
 
 
@@ -98,22 +112,14 @@ set(legend,'FontName','Arial Narrow');
 
 filename = strcat(day,' Energy'); 
 savefig(filename);
+print(filename,'-dpng');
 hold off;
 
 
 
 
 
-
-% 
-
-
-
-
-
-
-
-%%--PLOT MODELED EFFICIENCY
+%% --PLOT MODELED EFFICIENCY
 
 
 %%Plots the Eta (only modeled)
@@ -152,6 +158,8 @@ set(legend,'FontName','Arial Narrow');
 
 filename = strcat(day,' Eta'); 
 savefig(filename);
+print(filename,'-dpng');
+
 %% Plot chi vs eta_CGen
 
 
@@ -187,6 +195,6 @@ set(legend,'FontName','Arial Narrow');
 
 filename = strcat(day,' Chi'); 
 savefig(filename);
-
+print(filename,'-dpng');
 
 

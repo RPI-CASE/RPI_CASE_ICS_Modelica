@@ -17,7 +17,7 @@ loadModel(Modelica);
 loadFile("C:/OpenModelica1.9.1Beta2/lib/omlibrary/Buildings 1.6/package.mo");
 
 //load IC Solar File
-loadFile("C:/Users/kenton.phillipd/Documents/GitHub/RPI_CASE_ICS_Modelica/ICSolar.mo");
+loadFile("C:/Users/kenton.phillips/Documents/GitHub/RPI_CASE_ICS_Modelica/ICSolar.mo");
 
 // Use this to report the error is run the script
 getErrorString(); 

@@ -20,7 +20,6 @@ filename = 'ICSolar.ICS_Skeleton_20_Feb_2015.mat';
 save(filename);
 
 
-
 %Mar 19
 clear all
 win_om_path = 'C:\OpenModelica1.9.1Beta2\bin\';

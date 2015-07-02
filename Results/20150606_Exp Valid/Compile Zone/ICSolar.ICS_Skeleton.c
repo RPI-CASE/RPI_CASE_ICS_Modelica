@@ -43272,7 +43272,7 @@ void ICSolar_ICS_Skeleton_setupDataStruc(DATA *data)
   data->modelData.modelName = "ICSolar.ICS_Skeleton";
   data->modelData.modelFilePrefix = "ICSolar.ICS_Skeleton";
   data->modelData.modelDir = "";
-  data->modelData.modelGUID = "{5a6bfc08-0f5e-489d-9021-237357bab934}";
+  data->modelData.modelGUID = "{653b6ee9-efca-47b3-aab4-78e73e090e2f}";
   #ifdef OPENMODELICA_XML_FROM_FILE_AT_RUNTIME
   data->modelData.initXMLData = NULL;
   data->modelData.modelDataXml.infoXMLData = NULL;
