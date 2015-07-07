@@ -35,9 +35,9 @@ plot(x,y,'LineStyle',':','DisplayName',strcat(day, ' Linear Bestfit'),'Color','b
 
 
 
-%Plot 19-Mar
+%Plot Projected
 
-load('PROJECTED_20_Feb_2015.mat','chi_arrayTotal',...
+load('PROJECTED_ICSolar.ICS_Skeleton_20_Feb_2015.mat','chi_arrayTotal',...
     'Ex_epsilon','Start','End','day');
 
 %trimmed obseverd chi and epsilon

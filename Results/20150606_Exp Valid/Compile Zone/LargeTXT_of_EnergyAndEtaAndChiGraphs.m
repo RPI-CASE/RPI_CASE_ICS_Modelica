@@ -40,7 +40,7 @@ figure('Color',[1 1 1]);
 hold on;
 
 % Plot Heat
-p = plot(t_o_Qgen,'Color',[1 0 0],'DisplayName','t_o_Qgen','LineWidth',2);
+plot(t_o_Qgen,'Color',[1 0 0],'DisplayName','t_o_Qgen','LineWidth',2);
 
 plot(t_s_Qgen,'LineStyle','--','Color',[1 0 0],'DisplayName','t_s_Qgen','LineWidth',2);
 

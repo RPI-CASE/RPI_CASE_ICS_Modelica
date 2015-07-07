@@ -140,7 +140,7 @@ plot(t_s_eta_Egen,'LineStyle',':',...
     'Color',[0.301960796117783 0.745098054409027 0.933333337306976],...
     'DisplayName','eta Egen','LineWidth',2);
 % Plot COmbined
-plot(t_s_eta_Com,'LineStyle',':','Color',[0.494117647409439 0.184313729405403 0.556862771511078],'DisplayName','eta Combined','LineWidth',2);
+plot(t_s_eta_Com,'LineStyle',':','Color',Purple,'DisplayName','eta Combined','LineWidth',2);
 
 title({strcat(day,': Modeled Array Efficiency'),'6 Modules of PV & 12 Modules of Thermal Collection'},'FontName','Arial Narrow');
 
