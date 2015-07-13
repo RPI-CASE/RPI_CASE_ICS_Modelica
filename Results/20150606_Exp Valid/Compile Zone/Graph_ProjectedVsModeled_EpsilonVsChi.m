@@ -1,19 +1,38 @@
+Blueish = [0 0.45 0.74];
+Yellowish = [0.75 0.75 0];
 
 figure('Color',[1 1 1]);
 hold on;
 
+% title({'\chi vs \epsilon','Measured and Projected Total Array'},...
+%     'FontSize',18,...
+%     'FontName','Arial Narrow');
 
-title({'\chi vs \epsilon','Measured And Projected Total Array '},'FontName','Arial Narrow');
-xlabel('\chi_{combined} = (T_{HTF,in} - T_{cav}) / (G_{DN} / 12 modules * A_{POE})','FontName','Arial Narrow');
-set(gca,'XGrid','on');
-ylabel('\epsilon = Ex_{Array Total} / (G_{DN Array Total} * \psi_{solar})','FontName','Arial Narrow');
-set(gca,'YGrid','on');
-axis([0 0.14 0 0.8]);
+xlabel('\chi_{(C deg m^2 / W)}',...
+    'FontName','Arial Narrow',...
+    'FontSize',25,...
+    'FontWeight','bold');
+set(gca,'XGrid','on',...
+    'FontName','arial narrow',...
+    'FontSize',18,...
+    'FontWeight','bold');
 
+ylabel('\epsilon',...
+    'FontName','Arial Narrow',...
+    'FontSize',25,...
+    'FontWeight','bold');
+set(gca,'YGrid','on',...
+    'FontName','arial narrow',...
+    'FontSize',18,...
+    'FontWeight','bold');
+
+axis([0 0.14 0 0.5]);
 
 %Plot 20-Feb
 load('ICSolar.ICS_Skeleton_20_Feb_2015.mat','chi_arrayTotal',...
     'measured_Ex_epsilon','Start','End','day');
+
+Color = Blueish;
 
 %trimmed obseverd chi and epsilon
 t_o_chi = chi_arrayTotal(:,Start:End);
@@ -25,20 +44,26 @@ Ex_epsilon_trans = transpose(t_o_epsilon_arrayTotal);
 
 f=fit(chi_trans,Ex_epsilon_trans,'poly1');
 
-scatter(chi_trans,Ex_epsilon_trans,'MarkerFaceColor','blue','Marker','.','DisplayName',strcat(...
+scatter(chi_trans,Ex_epsilon_trans,...
+    'MarkerFaceColor',Color,...
+    'MarkerEdgeColor',Color,...
+    'DisplayName',strcat(...
     day,' \chi vs \epsilon'));
 
 x=0:.01:.2;
 y=f(x);
 
-plot(x,y,'LineStyle',':','DisplayName',strcat(day, ' Linear Bestfit'),'Color','blue');
-
+plot(x,y,'LineStyle',':',...
+    'DisplayName',strcat(day, ' Linear Bestfit'),...
+    'Color',Color,...
+    'LineWidth',3);
 
 
 %Plot Projected
-
 load('PROJECTED_ICSolar.ICS_Skeleton_20_Feb_2015.mat','chi_arrayTotal',...
     'Ex_epsilon','Start','End','day');
+
+Color = Yellowish;
 
 %trimmed obseverd chi and epsilon
 t_o_chi = chi_arrayTotal(:,Start:End);
@@ -50,19 +75,24 @@ Ex_epsilon_trans = transpose(t_o_epsilon_arrayTotal);
 
 f=fit(chi_trans,Ex_epsilon_trans,'poly1');
 
-scatter(chi_trans,Ex_epsilon_trans,'Marker','.','DisplayName',strcat(...
-    'Projected',' \chi vs \epsilon'));
+scatter(chi_trans,Ex_epsilon_trans,...
+    'MarkerFaceColor',Color,...
+    'MarkerEdgeColor',Color,...
+    'DisplayName',strcat(...
+    day,' Projected \chi vs \epsilon'));
 
 x=0:.01:.2;
 y=f(x);
 
-plot(x,y,'LineStyle',':','DisplayName',strcat('Projected', ' Linear Bestfit'),'Color',[0 0.5 0]);
-
+plot(x,y,'LineStyle',':',...
+    'DisplayName',strcat(day, ' Projected Linear Bestfit'),...
+    'Color',Color,...
+    'LineWidth',3);
 
 legend('show');
 set(legend,'FontName','Arial Narrow');
 
-filename = strcat(day,'Projected Chi vs Epsilon');
+filename = strcat(day,' Projected Chi vs Epsilon');
 savefig(filename);
-
+print(filename,'-dpng');
 
