@@ -24,10 +24,13 @@ t_o_Qgen = measured_Qgen_arrayTotal(:,Start:End);
 t_o_vFlow = measured_vFlow(:,Start:End); 
 t_o_Tin = measured_T_HTFin(:,Start:End); 
 t_o_Tout = measured_T_HTFout(:,Start:End); 
+ 
 
 %trimmed simulated
 t_s_Egen = Egen_arrayTotal(:,Start:End); 
 t_s_Qgen = Qgen_arrayTotal(:,Start:End); 
+t_s_Gdn = GN_arrayTotal(:,Start:End);
+
 
 %trimmed time
 t_time = time(:,Start:End);
@@ -70,16 +73,17 @@ y1 = s_Qgen_lower;
 y2 = s_Qgen_upper;
 
 % For Thermal
-fill([x,fliplr(x)],[y1,fliplr(y2)],Grey,'FaceAlpha',0.15,'LineStyle','--',...
-    'EdgeColor',Grey);    
+% fill([x,fliplr(x)],[y1,fliplr(y2)],Grey,'FaceAlpha',0.15,'LineStyle','--',...
+%     'EdgeColor',Grey);    
 
 % Create Fill between lines
 y1 = s_Egen_lower;
 y2 = s_Egen_upper;
 
-% For Thermal
-fill([x,fliplr(x)],[y1,fliplr(y2)],Grey,'FaceAlpha',0.15,'LineStyle','--',...
-    'EdgeColor',Grey);    
+% For Electrical
+%fill([x,fliplr(x)],[y1,fliplr(y2)],Grey,'FaceAlpha',0.15,'LineStyle','--',...
+  %  'EdgeColor',Grey);
+
 
 % plot(s_Qgen_upper,'Color',Grey,'LineStyle',':','LineWidth',2);
 % plot(s_Qgen_lower,'Color',Grey,'LineStyle',':','LineWidth',2);
@@ -90,11 +94,18 @@ fill([x,fliplr(x)],[y1,fliplr(y2)],Grey,'FaceAlpha',0.15,'LineStyle','--',...
 %     '6 Modules of PV & 12 Modules of Thermal Collection'},...
 %     'FontName','Arial Narrow',...
 %     'FontSize',18);
- title(day,...
+
+axis([0 360 0 100]);
+
+
+
+
+
+%BreakPlot(x,t_s_Gdn,100,350,'Patch');
+
+title(day,...
     'FontName','Arial Narrow',...
     'FontSize',18);
-
-axis([0 360 0 100])
 
 %Create xlabel
 xlabel('Time (minutes)',...
@@ -118,10 +129,10 @@ set(gca,'YGrid','on',...
     'FontSize',18,...
     'FontWeight','bold');
 
-legend('Measured Q_{gen}','Modeled Q_{gen}','Measured E_{gen}',...
-    'Modeled E_{gen}','Uncertainty',...
-    'Location','eastoutside');    %'southeast'
-set(legend,'FontName','Arial Narrow');
+% legend('Measured Q_{gen}','Modeled Q_{gen}','Measured E_{gen}',...
+%     'Modeled E_{gen}','Uncertainty',...
+%     'Location','eastoutside');    %'southeast'
+% set(legend,'FontName','Arial Narrow');
 
 
 
@@ -200,7 +211,7 @@ set(gca,'YGrid','on',...
 
 % Create Legend
 legend('\eta Q_{gen}','\eta E_{gen}','\eta Combined',...
-    'Location','eastoutside'); % northeast
+    'Location','southoutside'); % northeast
 set(legend,'FontName','Arial Narrow');
 
 filename = strcat(day,' Eta'); 

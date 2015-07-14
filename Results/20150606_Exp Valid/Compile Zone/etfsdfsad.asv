@@ -1,0 +1,16 @@
+%% --PLOT GDN AND TEMP
+%trimmed observed .. trimed_observed
+t_o_Tin = measured_T_HTFin(:,Start:End) - 273; 
+ 
+%trimmed simulated
+t_s_Gdn = GN_arrayTotal(:,Start:End);
+
+x = 1:length(t_o_Tin);
+
+plotyy(x,t_o_Tin,x,t_s_Gdn);
+
+title('G_{DNI')
+xlabel('Time (\musec)')
+
+ylabel(hAx(1),'Slow Decay') % left y-axis
+ylabel(hAx(2),'Fast Decay') % right y-axis
