@@ -1,6 +1,7 @@
 clc;
-
+close all;
 clear all;
+
 load('ICSolar.ICS_Skeleton_20_Feb_2015.mat');
 LargeTXT_of_EnergyAndEtaAndChiGraphs;
 
