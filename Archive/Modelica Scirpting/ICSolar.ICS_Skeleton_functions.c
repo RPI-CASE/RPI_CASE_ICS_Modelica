@@ -7,70 +7,122 @@ extern "C" {
 #include "ICSolar.ICS_Skeleton_includes.h"
 
 
-modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$Shading__matrix_getTableValue(threadData_t *threadData, modelica_complex _tableID, modelica_real _u1, modelica_real _u2, modelica_real _tableAvailable)
+void omc_Modelica_Blocks_Types_ExternalCombiTimeTable_destructor(threadData_t *threadData, modelica_complex _externalCombiTimeTable)
+{
+  void * _externalCombiTimeTable_ext;
+  _externalCombiTimeTable_ext = (void *)_externalCombiTimeTable;
+  ModelicaStandardTables_CombiTimeTable_close(_externalCombiTimeTable_ext);
+  return;
+}
+void boxptr_Modelica_Blocks_Types_ExternalCombiTimeTable_destructor(threadData_t *threadData, modelica_metatype _externalCombiTimeTable)
+{
+  omc_Modelica_Blocks_Types_ExternalCombiTimeTable_destructor(threadData, _externalCombiTimeTable);
+  return;
+}
+modelica_real omc_Modelica_Blocks_Sources_CombiTimeTable$ics__envelopecassette1$ics__stack$ICS__Module__Twelve__1$eGen__on_getTableTimeTmin(threadData_t *threadData, modelica_complex _tableID, modelica_real _tableAvailable)
 {
   void * _tableID_ext;
-  double _u1_ext;
-  double _u2_ext;
-  double _y_ext;
-  modelica_real _y;
+  double _timeMin_ext;
+  modelica_real _timeMin;
   _tableID_ext = (void *)_tableID;
-  _u1_ext = (double)_u1;
-  _u2_ext = (double)_u2;
-  _y_ext = ModelicaStandardTables_CombiTable2D_getValue(_tableID_ext, _u1_ext, _u2_ext);
-  _y = (modelica_real)_y_ext;
-  return _y;
+  _timeMin_ext = ModelicaStandardTables_CombiTimeTable_minimumTime(_tableID_ext);
+  _timeMin = (modelica_real)_timeMin_ext;
+  return _timeMin;
 }
-modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$Shading__matrix_getTableValue(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _u1, modelica_metatype _u2, modelica_metatype _tableAvailable)
+modelica_metatype boxptr_Modelica_Blocks_Sources_CombiTimeTable$ics__envelopecassette1$ics__stack$ICS__Module__Twelve__1$eGen__on_getTableTimeTmin(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _tableAvailable)
 {
   modelica_real tmp1;
-  modelica_real tmp2;
-  modelica_real tmp3;
-  modelica_real _y;
-  modelica_metatype out_y;
-  tmp1 = mmc_unbox_real(_u1);
-  tmp2 = mmc_unbox_real(_u2);
-  tmp3 = mmc_unbox_real(_tableAvailable);
-  _y = omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$Shading__matrix_getTableValue(threadData, _tableID, tmp1, tmp2, tmp3);
-  out_y = mmc_mk_rcon(_y);
-  return out_y;
-}
-modelica_real omc_Modelica_Blocks_Sources_CombiTimeTable$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$eGen__on_getNextTimeEvent(threadData_t *threadData, modelica_complex _tableID, modelica_real _timeIn, modelica_real _tableAvailable)
-{
-  void * _tableID_ext;
-  double _timeIn_ext;
-  double _nextTimeEvent_ext;
-  modelica_real _nextTimeEvent;
-  _tableID_ext = (void *)_tableID;
-  _timeIn_ext = (double)_timeIn;
-  _nextTimeEvent_ext = ModelicaStandardTables_CombiTimeTable_nextTimeEvent(_tableID_ext, _timeIn_ext);
-  _nextTimeEvent = (modelica_real)_nextTimeEvent_ext;
-  return _nextTimeEvent;
-}
-modelica_metatype boxptr_Modelica_Blocks_Sources_CombiTimeTable$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$eGen__on_getNextTimeEvent(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _timeIn, modelica_metatype _tableAvailable)
-{
-  modelica_real tmp1;
-  modelica_real tmp2;
-  modelica_real _nextTimeEvent;
-  modelica_metatype out_nextTimeEvent;
-  tmp1 = mmc_unbox_real(_timeIn);
-  tmp2 = mmc_unbox_real(_tableAvailable);
-  _nextTimeEvent = omc_Modelica_Blocks_Sources_CombiTimeTable$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$eGen__on_getNextTimeEvent(threadData, _tableID, tmp1, tmp2);
-  out_nextTimeEvent = mmc_mk_rcon(_nextTimeEvent);
-  return out_nextTimeEvent;
+  modelica_real _timeMin;
+  modelica_metatype out_timeMin;
+  tmp1 = mmc_unbox_real(_tableAvailable);
+  _timeMin = omc_Modelica_Blocks_Sources_CombiTimeTable$ics__envelopecassette1$ics__stack$ICS__Module__Twelve__1$eGen__on_getTableTimeTmin(threadData, _tableID, tmp1);
+  out_timeMin = mmc_mk_rcon(_timeMin);
+  return out_timeMin;
 }
 DLLExport
-modelica_real omc_Buildings_Utilities_Math_Functions_smoothMin(threadData_t *threadData, modelica_real _x1, modelica_real _x2, modelica_real _deltaX)
+modelica_real omc_ICSolar_ShadingFraction__Index(threadData_t *threadData, modelica_integer _rowType, modelica_integer _colType, modelica_real _arrayPitch, modelica_real _arrayYaw)
+{
+  modelica_real _SFraction_Index;
+  modelica_real _Index;
+  modelica_real _Max_angle;
+  modelica_real _Min_angle;
+  modelica_real _arrayPitch_2;
+  modelica_real _arrayYaw_2;
+  _tailrecursive: OMC_LABEL_UNUSED
+  TRACE_PUSH
+  _Max_angle = 1.25664;
+  _Min_angle = -1.25664;
+  if((_arrayPitch > _Max_angle))
+  {
+    _arrayPitch_2 = _Max_angle;
+  }
+  else
+  {
+    if((_arrayPitch < _Min_angle))
+    {
+      _arrayPitch_2 = _Min_angle;
+    }
+    else
+    {
+      _arrayPitch_2 = _arrayPitch;
+    }
+  }
+
+  if((_arrayYaw > _Max_angle))
+  {
+    _arrayYaw_2 = _Max_angle;
+  }
+  else
+  {
+    if((_arrayYaw < _Min_angle))
+    {
+      _arrayYaw_2 = _Min_angle;
+    }
+    else
+    {
+      _arrayYaw_2 = _arrayYaw;
+    }
+  }
+
+  _arrayPitch_2 = omc_ICSolar_roundn(threadData, _arrayPitch_2, 0.05236);
+
+  _arrayYaw_2 = omc_ICSolar_roundn(threadData, _arrayYaw_2, 0.05236);
+
+  _Index = (1201.0 + ((12005.0 * ((modelica_real)((modelica_integer)_rowType + (modelica_integer) -1))) + ((2401.0 * ((modelica_real)((modelica_integer)_colType + (modelica_integer) -1))) + ((-935.83 * _arrayPitch_2) + (19.099 * _arrayYaw_2)))));
+
+  _SFraction_Index = ((modelica_real)omc_ICSolar_round(threadData, _Index));
+  _return: OMC_LABEL_UNUSED
+  TRACE_POP
+  return _SFraction_Index;
+}
+modelica_metatype boxptr_ICSolar_ShadingFraction__Index(threadData_t *threadData, modelica_metatype _rowType, modelica_metatype _colType, modelica_metatype _arrayPitch, modelica_metatype _arrayYaw)
+{
+  modelica_integer tmp1;
+  modelica_integer tmp2;
+  modelica_real tmp3;
+  modelica_real tmp4;
+  modelica_real _SFraction_Index;
+  modelica_metatype out_SFraction_Index;
+  tmp1 = mmc_unbox_integer(_rowType);
+  tmp2 = mmc_unbox_integer(_colType);
+  tmp3 = mmc_unbox_real(_arrayPitch);
+  tmp4 = mmc_unbox_real(_arrayYaw);
+  _SFraction_Index = omc_ICSolar_ShadingFraction__Index(threadData, tmp1, tmp2, tmp3, tmp4);
+  out_SFraction_Index = mmc_mk_rcon(_SFraction_Index);
+  return out_SFraction_Index;
+}
+DLLExport
+modelica_real omc_Buildings_Utilities_Math_Functions_smoothMax(threadData_t *threadData, modelica_real _x1, modelica_real _x2, modelica_real _deltaX)
 {
   modelica_real _y;
   _tailrecursive: OMC_LABEL_UNUSED
   TRACE_PUSH
-  _y = omc_Buildings_Utilities_Math_Functions_spliceFunction(threadData, _x1, _x2, (_x2 - _x1), _deltaX);
+  _y = omc_Buildings_Utilities_Math_Functions_spliceFunction(threadData, _x1, _x2, (_x1 - _x2), _deltaX);
   _return: OMC_LABEL_UNUSED
   TRACE_POP
   return _y;
 }
-modelica_metatype boxptr_Buildings_Utilities_Math_Functions_smoothMin(threadData_t *threadData, modelica_metatype _x1, modelica_metatype _x2, modelica_metatype _deltaX)
+modelica_metatype boxptr_Buildings_Utilities_Math_Functions_smoothMax(threadData_t *threadData, modelica_metatype _x1, modelica_metatype _x2, modelica_metatype _deltaX)
 {
   modelica_real tmp1;
   modelica_real tmp2;
@@ -80,7 +132,7 @@ modelica_metatype boxptr_Buildings_Utilities_Math_Functions_smoothMin(threadData
   tmp1 = mmc_unbox_real(_x1);
   tmp2 = mmc_unbox_real(_x2);
   tmp3 = mmc_unbox_real(_deltaX);
-  _y = omc_Buildings_Utilities_Math_Functions_smoothMin(threadData, tmp1, tmp2, tmp3);
+  _y = omc_Buildings_Utilities_Math_Functions_smoothMax(threadData, tmp1, tmp2, tmp3);
   out_y = mmc_mk_rcon(_y);
   return out_y;
 }
@@ -115,155 +167,6 @@ modelica_metatype boxptr_Buildings_Utilities_Math_Functions_smoothLimit(threadDa
   _y = omc_Buildings_Utilities_Math_Functions_smoothLimit(threadData, tmp1, tmp2, tmp3, tmp4);
   out_y = mmc_mk_rcon(_y);
   return out_y;
-}
-DLLExport
-modelica_real omc_Buildings_Utilities_Math_Functions_smoothMax(threadData_t *threadData, modelica_real _x1, modelica_real _x2, modelica_real _deltaX)
-{
-  modelica_real _y;
-  _tailrecursive: OMC_LABEL_UNUSED
-  TRACE_PUSH
-  _y = omc_Buildings_Utilities_Math_Functions_spliceFunction(threadData, _x1, _x2, (_x1 - _x2), _deltaX);
-  _return: OMC_LABEL_UNUSED
-  TRACE_POP
-  return _y;
-}
-modelica_metatype boxptr_Buildings_Utilities_Math_Functions_smoothMax(threadData_t *threadData, modelica_metatype _x1, modelica_metatype _x2, modelica_metatype _deltaX)
-{
-  modelica_real tmp1;
-  modelica_real tmp2;
-  modelica_real tmp3;
-  modelica_real _y;
-  modelica_metatype out_y;
-  tmp1 = mmc_unbox_real(_x1);
-  tmp2 = mmc_unbox_real(_x2);
-  tmp3 = mmc_unbox_real(_deltaX);
-  _y = omc_Buildings_Utilities_Math_Functions_smoothMax(threadData, tmp1, tmp2, tmp3);
-  out_y = mmc_mk_rcon(_y);
-  return out_y;
-}
-modelica_real omc_Modelica_Blocks_Sources_CombiTimeTable$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$eGen__on_getNextTimeEvent(threadData_t *threadData, modelica_complex _tableID, modelica_real _timeIn, modelica_real _tableAvailable)
-{
-  void * _tableID_ext;
-  double _timeIn_ext;
-  double _nextTimeEvent_ext;
-  modelica_real _nextTimeEvent;
-  _tableID_ext = (void *)_tableID;
-  _timeIn_ext = (double)_timeIn;
-  _nextTimeEvent_ext = ModelicaStandardTables_CombiTimeTable_nextTimeEvent(_tableID_ext, _timeIn_ext);
-  _nextTimeEvent = (modelica_real)_nextTimeEvent_ext;
-  return _nextTimeEvent;
-}
-modelica_metatype boxptr_Modelica_Blocks_Sources_CombiTimeTable$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$eGen__on_getNextTimeEvent(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _timeIn, modelica_metatype _tableAvailable)
-{
-  modelica_real tmp1;
-  modelica_real tmp2;
-  modelica_real _nextTimeEvent;
-  modelica_metatype out_nextTimeEvent;
-  tmp1 = mmc_unbox_real(_timeIn);
-  tmp2 = mmc_unbox_real(_tableAvailable);
-  _nextTimeEvent = omc_Modelica_Blocks_Sources_CombiTimeTable$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$eGen__on_getNextTimeEvent(threadData, _tableID, tmp1, tmp2);
-  out_nextTimeEvent = mmc_mk_rcon(_nextTimeEvent);
-  return out_nextTimeEvent;
-}
-modelica_real omc_Modelica_Blocks_Sources_CombiTimeTable$IC__Data__all_getTableValue(threadData_t *threadData, modelica_complex _tableID, modelica_integer _icol, modelica_real _timeIn, modelica_real _nextTimeEvent, modelica_real _pre_nextTimeEvent, modelica_real _tableAvailable)
-{
-  void * _tableID_ext;
-  int _icol_ext;
-  double _timeIn_ext;
-  double _nextTimeEvent_ext;
-  double _pre_nextTimeEvent_ext;
-  double _y_ext;
-  modelica_real _y;
-  _tableID_ext = (void *)_tableID;
-  _icol_ext = (int)_icol;
-  _timeIn_ext = (double)_timeIn;
-  _nextTimeEvent_ext = (double)_nextTimeEvent;
-  _pre_nextTimeEvent_ext = (double)_pre_nextTimeEvent;
-  _y_ext = ModelicaStandardTables_CombiTimeTable_getValue(_tableID_ext, _icol_ext, _timeIn_ext, _nextTimeEvent_ext, _pre_nextTimeEvent_ext);
-  _y = (modelica_real)_y_ext;
-  return _y;
-}
-modelica_metatype boxptr_Modelica_Blocks_Sources_CombiTimeTable$IC__Data__all_getTableValue(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _icol, modelica_metatype _timeIn, modelica_metatype _nextTimeEvent, modelica_metatype _pre_nextTimeEvent, modelica_metatype _tableAvailable)
-{
-  modelica_integer tmp1;
-  modelica_real tmp2;
-  modelica_real tmp3;
-  modelica_real tmp4;
-  modelica_real tmp5;
-  modelica_real _y;
-  modelica_metatype out_y;
-  tmp1 = mmc_unbox_integer(_icol);
-  tmp2 = mmc_unbox_real(_timeIn);
-  tmp3 = mmc_unbox_real(_nextTimeEvent);
-  tmp4 = mmc_unbox_real(_pre_nextTimeEvent);
-  tmp5 = mmc_unbox_real(_tableAvailable);
-  _y = omc_Modelica_Blocks_Sources_CombiTimeTable$IC__Data__all_getTableValue(threadData, _tableID, tmp1, tmp2, tmp3, tmp4, tmp5);
-  out_y = mmc_mk_rcon(_y);
-  return out_y;
-}
-modelica_real omc_Modelica_Blocks_Sources_CombiTimeTable$IC__Data__all_getNextTimeEvent(threadData_t *threadData, modelica_complex _tableID, modelica_real _timeIn, modelica_real _tableAvailable)
-{
-  void * _tableID_ext;
-  double _timeIn_ext;
-  double _nextTimeEvent_ext;
-  modelica_real _nextTimeEvent;
-  _tableID_ext = (void *)_tableID;
-  _timeIn_ext = (double)_timeIn;
-  _nextTimeEvent_ext = ModelicaStandardTables_CombiTimeTable_nextTimeEvent(_tableID_ext, _timeIn_ext);
-  _nextTimeEvent = (modelica_real)_nextTimeEvent_ext;
-  return _nextTimeEvent;
-}
-modelica_metatype boxptr_Modelica_Blocks_Sources_CombiTimeTable$IC__Data__all_getNextTimeEvent(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _timeIn, modelica_metatype _tableAvailable)
-{
-  modelica_real tmp1;
-  modelica_real tmp2;
-  modelica_real _nextTimeEvent;
-  modelica_metatype out_nextTimeEvent;
-  tmp1 = mmc_unbox_real(_timeIn);
-  tmp2 = mmc_unbox_real(_tableAvailable);
-  _nextTimeEvent = omc_Modelica_Blocks_Sources_CombiTimeTable$IC__Data__all_getNextTimeEvent(threadData, _tableID, tmp1, tmp2);
-  out_nextTimeEvent = mmc_mk_rcon(_nextTimeEvent);
-  return out_nextTimeEvent;
-}
-modelica_real omc_Modelica_Blocks_Sources_CombiTimeTable$IC__Data__all_getDerTableValue(threadData_t *threadData, modelica_complex _tableID, modelica_integer _icol, modelica_real _timeIn, modelica_real _nextTimeEvent, modelica_real _pre_nextTimeEvent, modelica_real _tableAvailable, modelica_real _der_timeIn)
-{
-  void * _tableID_ext;
-  int _icol_ext;
-  double _timeIn_ext;
-  double _nextTimeEvent_ext;
-  double _pre_nextTimeEvent_ext;
-  double _der_timeIn_ext;
-  double _der_y_ext;
-  modelica_real _der_y;
-  _tableID_ext = (void *)_tableID;
-  _icol_ext = (int)_icol;
-  _timeIn_ext = (double)_timeIn;
-  _nextTimeEvent_ext = (double)_nextTimeEvent;
-  _pre_nextTimeEvent_ext = (double)_pre_nextTimeEvent;
-  _der_timeIn_ext = (double)_der_timeIn;
-  _der_y_ext = ModelicaStandardTables_CombiTimeTable_getDerValue(_tableID_ext, _icol_ext, _timeIn_ext, _nextTimeEvent_ext, _pre_nextTimeEvent_ext, _der_timeIn_ext);
-  _der_y = (modelica_real)_der_y_ext;
-  return _der_y;
-}
-modelica_metatype boxptr_Modelica_Blocks_Sources_CombiTimeTable$IC__Data__all_getDerTableValue(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _icol, modelica_metatype _timeIn, modelica_metatype _nextTimeEvent, modelica_metatype _pre_nextTimeEvent, modelica_metatype _tableAvailable, modelica_metatype _der_timeIn)
-{
-  modelica_integer tmp1;
-  modelica_real tmp2;
-  modelica_real tmp3;
-  modelica_real tmp4;
-  modelica_real tmp5;
-  modelica_real tmp6;
-  modelica_real _der_y;
-  modelica_metatype out_der_y;
-  tmp1 = mmc_unbox_integer(_icol);
-  tmp2 = mmc_unbox_real(_timeIn);
-  tmp3 = mmc_unbox_real(_nextTimeEvent);
-  tmp4 = mmc_unbox_real(_pre_nextTimeEvent);
-  tmp5 = mmc_unbox_real(_tableAvailable);
-  tmp6 = mmc_unbox_real(_der_timeIn);
-  _der_y = omc_Modelica_Blocks_Sources_CombiTimeTable$IC__Data__all_getDerTableValue(threadData, _tableID, tmp1, tmp2, tmp3, tmp4, tmp5, tmp6);
-  out_der_y = mmc_mk_rcon(_der_y);
-  return out_der_y;
 }
 DLLExport
 modelica_real omc_Buildings_Utilities_Math_Functions_spliceFunction(threadData_t *threadData, modelica_real _pos, modelica_real _neg, modelica_real _x, modelica_real _deltax)
@@ -317,6 +220,173 @@ modelica_metatype boxptr_Buildings_Utilities_Math_Functions_spliceFunction(threa
   out_out = mmc_mk_rcon(_out);
   return out_out;
 }
+DLLExport
+modelica_real omc_Buildings_Utilities_Math_Functions_smoothMin(threadData_t *threadData, modelica_real _x1, modelica_real _x2, modelica_real _deltaX)
+{
+  modelica_real _y;
+  _tailrecursive: OMC_LABEL_UNUSED
+  TRACE_PUSH
+  _y = omc_Buildings_Utilities_Math_Functions_spliceFunction(threadData, _x1, _x2, (_x2 - _x1), _deltaX);
+  _return: OMC_LABEL_UNUSED
+  TRACE_POP
+  return _y;
+}
+modelica_metatype boxptr_Buildings_Utilities_Math_Functions_smoothMin(threadData_t *threadData, modelica_metatype _x1, modelica_metatype _x2, modelica_metatype _deltaX)
+{
+  modelica_real tmp1;
+  modelica_real tmp2;
+  modelica_real tmp3;
+  modelica_real _y;
+  modelica_metatype out_y;
+  tmp1 = mmc_unbox_real(_x1);
+  tmp2 = mmc_unbox_real(_x2);
+  tmp3 = mmc_unbox_real(_deltaX);
+  _y = omc_Buildings_Utilities_Math_Functions_smoothMin(threadData, tmp1, tmp2, tmp3);
+  out_y = mmc_mk_rcon(_y);
+  return out_y;
+}
+modelica_real omc_Modelica_Blocks_Sources_CombiTimeTable$T__cav__in_getNextTimeEvent(threadData_t *threadData, modelica_complex _tableID, modelica_real _timeIn, modelica_real _tableAvailable)
+{
+  void * _tableID_ext;
+  double _timeIn_ext;
+  double _nextTimeEvent_ext;
+  modelica_real _nextTimeEvent;
+  _tableID_ext = (void *)_tableID;
+  _timeIn_ext = (double)_timeIn;
+  _nextTimeEvent_ext = ModelicaStandardTables_CombiTimeTable_nextTimeEvent(_tableID_ext, _timeIn_ext);
+  _nextTimeEvent = (modelica_real)_nextTimeEvent_ext;
+  return _nextTimeEvent;
+}
+modelica_metatype boxptr_Modelica_Blocks_Sources_CombiTimeTable$T__cav__in_getNextTimeEvent(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _timeIn, modelica_metatype _tableAvailable)
+{
+  modelica_real tmp1;
+  modelica_real tmp2;
+  modelica_real _nextTimeEvent;
+  modelica_metatype out_nextTimeEvent;
+  tmp1 = mmc_unbox_real(_timeIn);
+  tmp2 = mmc_unbox_real(_tableAvailable);
+  _nextTimeEvent = omc_Modelica_Blocks_Sources_CombiTimeTable$T__cav__in_getNextTimeEvent(threadData, _tableID, tmp1, tmp2);
+  out_nextTimeEvent = mmc_mk_rcon(_nextTimeEvent);
+  return out_nextTimeEvent;
+}
+modelica_real omc_Modelica_Blocks_Sources_CombiTimeTable$IC__Data__all_getNextTimeEvent(threadData_t *threadData, modelica_complex _tableID, modelica_real _timeIn, modelica_real _tableAvailable)
+{
+  void * _tableID_ext;
+  double _timeIn_ext;
+  double _nextTimeEvent_ext;
+  modelica_real _nextTimeEvent;
+  _tableID_ext = (void *)_tableID;
+  _timeIn_ext = (double)_timeIn;
+  _nextTimeEvent_ext = ModelicaStandardTables_CombiTimeTable_nextTimeEvent(_tableID_ext, _timeIn_ext);
+  _nextTimeEvent = (modelica_real)_nextTimeEvent_ext;
+  return _nextTimeEvent;
+}
+modelica_metatype boxptr_Modelica_Blocks_Sources_CombiTimeTable$IC__Data__all_getNextTimeEvent(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _timeIn, modelica_metatype _tableAvailable)
+{
+  modelica_real tmp1;
+  modelica_real tmp2;
+  modelica_real _nextTimeEvent;
+  modelica_metatype out_nextTimeEvent;
+  tmp1 = mmc_unbox_real(_timeIn);
+  tmp2 = mmc_unbox_real(_tableAvailable);
+  _nextTimeEvent = omc_Modelica_Blocks_Sources_CombiTimeTable$IC__Data__all_getNextTimeEvent(threadData, _tableID, tmp1, tmp2);
+  out_nextTimeEvent = mmc_mk_rcon(_nextTimeEvent);
+  return out_nextTimeEvent;
+}
+DLLExport
+modelica_real omc_ICSolar_roundn(threadData_t *threadData, modelica_real _r, modelica_real _n)
+{
+  modelica_real _i;
+  _tailrecursive: OMC_LABEL_UNUSED
+  TRACE_PUSH
+  if((modelica_mod_real(_r,_n) > (0.5 * _n)))
+  {
+    _i = (_r + (_n - modelica_mod_real(_r,_n)));
+  }
+  else
+  {
+    if((modelica_mod_real(_r,_n) < (0.5 * _n)))
+    {
+      _i = (_r - modelica_mod_real(_r,_n));
+    }
+    else
+    {
+      _i = _r;
+    }
+  }
+  _return: OMC_LABEL_UNUSED
+  TRACE_POP
+  return _i;
+}
+modelica_metatype boxptr_ICSolar_roundn(threadData_t *threadData, modelica_metatype _r, modelica_metatype _n)
+{
+  modelica_real tmp1;
+  modelica_real tmp2;
+  modelica_real _i;
+  modelica_metatype out_i;
+  tmp1 = mmc_unbox_real(_r);
+  tmp2 = mmc_unbox_real(_n);
+  _i = omc_ICSolar_roundn(threadData, tmp1, tmp2);
+  out_i = mmc_mk_rcon(_i);
+  return out_i;
+}
+DLLExport
+modelica_integer omc_ICSolar_round(threadData_t *threadData, modelica_real _r)
+{
+  modelica_integer _i;
+  _tailrecursive: OMC_LABEL_UNUSED
+  TRACE_PUSH
+  _i = ((_r > 0.0)?((modelica_integer)floor(floor((0.5 + _r)))):((modelica_integer)floor(ceil((_r + -0.5)))));
+  _return: OMC_LABEL_UNUSED
+  TRACE_POP
+  return _i;
+}
+modelica_metatype boxptr_ICSolar_round(threadData_t *threadData, modelica_metatype _r)
+{
+  modelica_real tmp1;
+  modelica_integer _i;
+  modelica_metatype out_i;
+  tmp1 = mmc_unbox_real(_r);
+  _i = omc_ICSolar_round(threadData, tmp1);
+  out_i = mmc_mk_icon(_i);
+  return out_i;
+}
+modelica_real omc_Modelica_Blocks_Sources_CombiTimeTable$IC__Data__all_getTableValue(threadData_t *threadData, modelica_complex _tableID, modelica_integer _icol, modelica_real _timeIn, modelica_real _nextTimeEvent, modelica_real _pre_nextTimeEvent, modelica_real _tableAvailable)
+{
+  void * _tableID_ext;
+  int _icol_ext;
+  double _timeIn_ext;
+  double _nextTimeEvent_ext;
+  double _pre_nextTimeEvent_ext;
+  double _y_ext;
+  modelica_real _y;
+  _tableID_ext = (void *)_tableID;
+  _icol_ext = (int)_icol;
+  _timeIn_ext = (double)_timeIn;
+  _nextTimeEvent_ext = (double)_nextTimeEvent;
+  _pre_nextTimeEvent_ext = (double)_pre_nextTimeEvent;
+  _y_ext = ModelicaStandardTables_CombiTimeTable_getValue(_tableID_ext, _icol_ext, _timeIn_ext, _nextTimeEvent_ext, _pre_nextTimeEvent_ext);
+  _y = (modelica_real)_y_ext;
+  return _y;
+}
+modelica_metatype boxptr_Modelica_Blocks_Sources_CombiTimeTable$IC__Data__all_getTableValue(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _icol, modelica_metatype _timeIn, modelica_metatype _nextTimeEvent, modelica_metatype _pre_nextTimeEvent, modelica_metatype _tableAvailable)
+{
+  modelica_integer tmp1;
+  modelica_real tmp2;
+  modelica_real tmp3;
+  modelica_real tmp4;
+  modelica_real tmp5;
+  modelica_real _y;
+  modelica_metatype out_y;
+  tmp1 = mmc_unbox_integer(_icol);
+  tmp2 = mmc_unbox_real(_timeIn);
+  tmp3 = mmc_unbox_real(_nextTimeEvent);
+  tmp4 = mmc_unbox_real(_pre_nextTimeEvent);
+  tmp5 = mmc_unbox_real(_tableAvailable);
+  _y = omc_Modelica_Blocks_Sources_CombiTimeTable$IC__Data__all_getTableValue(threadData, _tableID, tmp1, tmp2, tmp3, tmp4, tmp5);
+  out_y = mmc_mk_rcon(_y);
+  return out_y;
+}
 modelica_real omc_Modelica_Blocks_Sources_CombiTimeTable$IC__Data__all_getTableTimeTmin(threadData_t *threadData, modelica_complex _tableID, modelica_real _tableAvailable)
 {
   void * _tableID_ext;
@@ -357,50 +427,6 @@ modelica_metatype boxptr_Modelica_Blocks_Sources_CombiTimeTable$IC__Data__all_ge
   out_timeMax = mmc_mk_rcon(_timeMax);
   return out_timeMax;
 }
-modelica_real omc_Modelica_Blocks_Sources_CombiTimeTable$T__cav__in_getTableTimeTmin(threadData_t *threadData, modelica_complex _tableID, modelica_real _tableAvailable)
-{
-  void * _tableID_ext;
-  double _timeMin_ext;
-  modelica_real _timeMin;
-  _tableID_ext = (void *)_tableID;
-  _timeMin_ext = ModelicaStandardTables_CombiTimeTable_minimumTime(_tableID_ext);
-  _timeMin = (modelica_real)_timeMin_ext;
-  return _timeMin;
-}
-modelica_metatype boxptr_Modelica_Blocks_Sources_CombiTimeTable$T__cav__in_getTableTimeTmin(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _tableAvailable)
-{
-  modelica_real tmp1;
-  modelica_real _timeMin;
-  modelica_metatype out_timeMin;
-  tmp1 = mmc_unbox_real(_tableAvailable);
-  _timeMin = omc_Modelica_Blocks_Sources_CombiTimeTable$T__cav__in_getTableTimeTmin(threadData, _tableID, tmp1);
-  out_timeMin = mmc_mk_rcon(_timeMin);
-  return out_timeMin;
-}
-modelica_real omc_Modelica_Blocks_Sources_CombiTimeTable$T__cav__in_getNextTimeEvent(threadData_t *threadData, modelica_complex _tableID, modelica_real _timeIn, modelica_real _tableAvailable)
-{
-  void * _tableID_ext;
-  double _timeIn_ext;
-  double _nextTimeEvent_ext;
-  modelica_real _nextTimeEvent;
-  _tableID_ext = (void *)_tableID;
-  _timeIn_ext = (double)_timeIn;
-  _nextTimeEvent_ext = ModelicaStandardTables_CombiTimeTable_nextTimeEvent(_tableID_ext, _timeIn_ext);
-  _nextTimeEvent = (modelica_real)_nextTimeEvent_ext;
-  return _nextTimeEvent;
-}
-modelica_metatype boxptr_Modelica_Blocks_Sources_CombiTimeTable$T__cav__in_getNextTimeEvent(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _timeIn, modelica_metatype _tableAvailable)
-{
-  modelica_real tmp1;
-  modelica_real tmp2;
-  modelica_real _nextTimeEvent;
-  modelica_metatype out_nextTimeEvent;
-  tmp1 = mmc_unbox_real(_timeIn);
-  tmp2 = mmc_unbox_real(_tableAvailable);
-  _nextTimeEvent = omc_Modelica_Blocks_Sources_CombiTimeTable$T__cav__in_getNextTimeEvent(threadData, _tableID, tmp1, tmp2);
-  out_nextTimeEvent = mmc_mk_rcon(_nextTimeEvent);
-  return out_nextTimeEvent;
-}
 modelica_real omc_Modelica_Blocks_Sources_CombiTimeTable$IC__Data__all_readTableData(threadData_t *threadData, modelica_complex _tableID, modelica_boolean _forceRead, modelica_boolean _verboseRead)
 {
   void * _tableID_ext;
@@ -427,25 +453,29 @@ modelica_metatype boxptr_Modelica_Blocks_Sources_CombiTimeTable$IC__Data__all_re
   out_readSuccess = mmc_mk_rcon(_readSuccess);
   return out_readSuccess;
 }
-modelica_real omc_Modelica_Blocks_Sources_CombiTimeTable$T__cav__in_getTableTimeTmax(threadData_t *threadData, modelica_complex _tableID, modelica_real _tableAvailable)
+modelica_real omc_Modelica_Blocks_Sources_CombiTimeTable$ics__envelopecassette1$ics__stack$ICS__Module__Twelve__1$eGen__on_getNextTimeEvent(threadData_t *threadData, modelica_complex _tableID, modelica_real _timeIn, modelica_real _tableAvailable)
 {
   void * _tableID_ext;
-  double _timeMax_ext;
-  modelica_real _timeMax;
+  double _timeIn_ext;
+  double _nextTimeEvent_ext;
+  modelica_real _nextTimeEvent;
   _tableID_ext = (void *)_tableID;
-  _timeMax_ext = ModelicaStandardTables_CombiTimeTable_maximumTime(_tableID_ext);
-  _timeMax = (modelica_real)_timeMax_ext;
-  return _timeMax;
+  _timeIn_ext = (double)_timeIn;
+  _nextTimeEvent_ext = ModelicaStandardTables_CombiTimeTable_nextTimeEvent(_tableID_ext, _timeIn_ext);
+  _nextTimeEvent = (modelica_real)_nextTimeEvent_ext;
+  return _nextTimeEvent;
 }
-modelica_metatype boxptr_Modelica_Blocks_Sources_CombiTimeTable$T__cav__in_getTableTimeTmax(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _tableAvailable)
+modelica_metatype boxptr_Modelica_Blocks_Sources_CombiTimeTable$ics__envelopecassette1$ics__stack$ICS__Module__Twelve__1$eGen__on_getNextTimeEvent(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _timeIn, modelica_metatype _tableAvailable)
 {
   modelica_real tmp1;
-  modelica_real _timeMax;
-  modelica_metatype out_timeMax;
-  tmp1 = mmc_unbox_real(_tableAvailable);
-  _timeMax = omc_Modelica_Blocks_Sources_CombiTimeTable$T__cav__in_getTableTimeTmax(threadData, _tableID, tmp1);
-  out_timeMax = mmc_mk_rcon(_timeMax);
-  return out_timeMax;
+  modelica_real tmp2;
+  modelica_real _nextTimeEvent;
+  modelica_metatype out_nextTimeEvent;
+  tmp1 = mmc_unbox_real(_timeIn);
+  tmp2 = mmc_unbox_real(_tableAvailable);
+  _nextTimeEvent = omc_Modelica_Blocks_Sources_CombiTimeTable$ics__envelopecassette1$ics__stack$ICS__Module__Twelve__1$eGen__on_getNextTimeEvent(threadData, _tableID, tmp1, tmp2);
+  out_nextTimeEvent = mmc_mk_rcon(_nextTimeEvent);
+  return out_nextTimeEvent;
 }
 modelica_real omc_Modelica_Blocks_Sources_CombiTimeTable$T__cav__in_getTableValue(threadData_t *threadData, modelica_complex _tableID, modelica_integer _icol, modelica_real _timeIn, modelica_real _nextTimeEvent, modelica_real _pre_nextTimeEvent, modelica_real _tableAvailable)
 {
@@ -483,6 +513,46 @@ modelica_metatype boxptr_Modelica_Blocks_Sources_CombiTimeTable$T__cav__in_getTa
   out_y = mmc_mk_rcon(_y);
   return out_y;
 }
+modelica_real omc_Modelica_Blocks_Sources_CombiTimeTable$T__cav__in_getTableTimeTmin(threadData_t *threadData, modelica_complex _tableID, modelica_real _tableAvailable)
+{
+  void * _tableID_ext;
+  double _timeMin_ext;
+  modelica_real _timeMin;
+  _tableID_ext = (void *)_tableID;
+  _timeMin_ext = ModelicaStandardTables_CombiTimeTable_minimumTime(_tableID_ext);
+  _timeMin = (modelica_real)_timeMin_ext;
+  return _timeMin;
+}
+modelica_metatype boxptr_Modelica_Blocks_Sources_CombiTimeTable$T__cav__in_getTableTimeTmin(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _tableAvailable)
+{
+  modelica_real tmp1;
+  modelica_real _timeMin;
+  modelica_metatype out_timeMin;
+  tmp1 = mmc_unbox_real(_tableAvailable);
+  _timeMin = omc_Modelica_Blocks_Sources_CombiTimeTable$T__cav__in_getTableTimeTmin(threadData, _tableID, tmp1);
+  out_timeMin = mmc_mk_rcon(_timeMin);
+  return out_timeMin;
+}
+modelica_real omc_Modelica_Blocks_Sources_CombiTimeTable$T__cav__in_getTableTimeTmax(threadData_t *threadData, modelica_complex _tableID, modelica_real _tableAvailable)
+{
+  void * _tableID_ext;
+  double _timeMax_ext;
+  modelica_real _timeMax;
+  _tableID_ext = (void *)_tableID;
+  _timeMax_ext = ModelicaStandardTables_CombiTimeTable_maximumTime(_tableID_ext);
+  _timeMax = (modelica_real)_timeMax_ext;
+  return _timeMax;
+}
+modelica_metatype boxptr_Modelica_Blocks_Sources_CombiTimeTable$T__cav__in_getTableTimeTmax(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _tableAvailable)
+{
+  modelica_real tmp1;
+  modelica_real _timeMax;
+  modelica_metatype out_timeMax;
+  tmp1 = mmc_unbox_real(_tableAvailable);
+  _timeMax = omc_Modelica_Blocks_Sources_CombiTimeTable$T__cav__in_getTableTimeTmax(threadData, _tableID, tmp1);
+  out_timeMax = mmc_mk_rcon(_timeMax);
+  return out_timeMax;
+}
 modelica_real omc_Modelica_Blocks_Sources_CombiTimeTable$T__cav__in_readTableData(threadData_t *threadData, modelica_complex _tableID, modelica_boolean _forceRead, modelica_boolean _verboseRead)
 {
   void * _tableID_ext;
@@ -509,63 +579,7 @@ modelica_metatype boxptr_Modelica_Blocks_Sources_CombiTimeTable$T__cav__in_readT
   out_readSuccess = mmc_mk_rcon(_readSuccess);
   return out_readSuccess;
 }
-modelica_real omc_Modelica_Blocks_Sources_CombiTimeTable$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$eGen__on_getTableValueNoDer(threadData_t *threadData, modelica_complex _tableID, modelica_integer _icol, modelica_real _timeIn, modelica_real _nextTimeEvent, modelica_real _pre_nextTimeEvent, modelica_real _tableAvailable)
-{
-  void * _tableID_ext;
-  int _icol_ext;
-  double _timeIn_ext;
-  double _nextTimeEvent_ext;
-  double _pre_nextTimeEvent_ext;
-  double _y_ext;
-  modelica_real _y;
-  _tableID_ext = (void *)_tableID;
-  _icol_ext = (int)_icol;
-  _timeIn_ext = (double)_timeIn;
-  _nextTimeEvent_ext = (double)_nextTimeEvent;
-  _pre_nextTimeEvent_ext = (double)_pre_nextTimeEvent;
-  _y_ext = ModelicaStandardTables_CombiTimeTable_getValue(_tableID_ext, _icol_ext, _timeIn_ext, _nextTimeEvent_ext, _pre_nextTimeEvent_ext);
-  _y = (modelica_real)_y_ext;
-  return _y;
-}
-modelica_metatype boxptr_Modelica_Blocks_Sources_CombiTimeTable$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$eGen__on_getTableValueNoDer(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _icol, modelica_metatype _timeIn, modelica_metatype _nextTimeEvent, modelica_metatype _pre_nextTimeEvent, modelica_metatype _tableAvailable)
-{
-  modelica_integer tmp1;
-  modelica_real tmp2;
-  modelica_real tmp3;
-  modelica_real tmp4;
-  modelica_real tmp5;
-  modelica_real _y;
-  modelica_metatype out_y;
-  tmp1 = mmc_unbox_integer(_icol);
-  tmp2 = mmc_unbox_real(_timeIn);
-  tmp3 = mmc_unbox_real(_nextTimeEvent);
-  tmp4 = mmc_unbox_real(_pre_nextTimeEvent);
-  tmp5 = mmc_unbox_real(_tableAvailable);
-  _y = omc_Modelica_Blocks_Sources_CombiTimeTable$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$eGen__on_getTableValueNoDer(threadData, _tableID, tmp1, tmp2, tmp3, tmp4, tmp5);
-  out_y = mmc_mk_rcon(_y);
-  return out_y;
-}
-modelica_real omc_Modelica_Blocks_Sources_CombiTimeTable$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$eGen__on_getTableTimeTmin(threadData_t *threadData, modelica_complex _tableID, modelica_real _tableAvailable)
-{
-  void * _tableID_ext;
-  double _timeMin_ext;
-  modelica_real _timeMin;
-  _tableID_ext = (void *)_tableID;
-  _timeMin_ext = ModelicaStandardTables_CombiTimeTable_minimumTime(_tableID_ext);
-  _timeMin = (modelica_real)_timeMin_ext;
-  return _timeMin;
-}
-modelica_metatype boxptr_Modelica_Blocks_Sources_CombiTimeTable$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$eGen__on_getTableTimeTmin(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _tableAvailable)
-{
-  modelica_real tmp1;
-  modelica_real _timeMin;
-  modelica_metatype out_timeMin;
-  tmp1 = mmc_unbox_real(_tableAvailable);
-  _timeMin = omc_Modelica_Blocks_Sources_CombiTimeTable$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$eGen__on_getTableTimeTmin(threadData, _tableID, tmp1);
-  out_timeMin = mmc_mk_rcon(_timeMin);
-  return out_timeMin;
-}
-modelica_real omc_Modelica_Blocks_Sources_CombiTimeTable$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$eGen__on_getTableTimeTmax(threadData_t *threadData, modelica_complex _tableID, modelica_real _tableAvailable)
+modelica_real omc_Modelica_Blocks_Sources_CombiTimeTable$ics__envelopecassette1$ics__stack$ICS__Module__Twelve__1$eGen__on_getTableTimeTmax(threadData_t *threadData, modelica_complex _tableID, modelica_real _tableAvailable)
 {
   void * _tableID_ext;
   double _timeMax_ext;
@@ -575,95 +589,41 @@ modelica_real omc_Modelica_Blocks_Sources_CombiTimeTable$ics__envelopecassette1$
   _timeMax = (modelica_real)_timeMax_ext;
   return _timeMax;
 }
-modelica_metatype boxptr_Modelica_Blocks_Sources_CombiTimeTable$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$eGen__on_getTableTimeTmax(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _tableAvailable)
+modelica_metatype boxptr_Modelica_Blocks_Sources_CombiTimeTable$ics__envelopecassette1$ics__stack$ICS__Module__Twelve__1$eGen__on_getTableTimeTmax(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _tableAvailable)
 {
   modelica_real tmp1;
   modelica_real _timeMax;
   modelica_metatype out_timeMax;
   tmp1 = mmc_unbox_real(_tableAvailable);
-  _timeMax = omc_Modelica_Blocks_Sources_CombiTimeTable$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$eGen__on_getTableTimeTmax(threadData, _tableID, tmp1);
+  _timeMax = omc_Modelica_Blocks_Sources_CombiTimeTable$ics__envelopecassette1$ics__stack$ICS__Module__Twelve__1$eGen__on_getTableTimeTmax(threadData, _tableID, tmp1);
   out_timeMax = mmc_mk_rcon(_timeMax);
   return out_timeMax;
 }
-modelica_real omc_Modelica_Blocks_Sources_CombiTimeTable$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$eGen__on_readTableData(threadData_t *threadData, modelica_complex _tableID, modelica_boolean _forceRead, modelica_boolean _verboseRead)
+modelica_real omc_Modelica_Blocks_Tables_CombiTable1Ds$ics__envelopecassette1$ics__stack$ICS__Module__Twelve__1$shadingfraction__function1$LUT_getTableValue(threadData_t *threadData, modelica_complex _tableID, modelica_integer _icol, modelica_real _u, modelica_real _tableAvailable)
 {
   void * _tableID_ext;
-  int _forceRead_ext;
-  int _verboseRead_ext;
-  double _readSuccess_ext;
-  modelica_real _readSuccess;
+  int _icol_ext;
+  double _u_ext;
+  double _y_ext;
+  modelica_real _y;
   _tableID_ext = (void *)_tableID;
-  _forceRead_ext = (int)_forceRead;
-  _verboseRead_ext = (int)_verboseRead;
-  _readSuccess_ext = ModelicaStandardTables_CombiTimeTable_read(_tableID_ext, _forceRead_ext, _verboseRead_ext);
-  _readSuccess = (modelica_real)_readSuccess_ext;
-  return _readSuccess;
+  _icol_ext = (int)_icol;
+  _u_ext = (double)_u;
+  _y_ext = ModelicaStandardTables_CombiTable1D_getValue(_tableID_ext, _icol_ext, _u_ext);
+  _y = (modelica_real)_y_ext;
+  return _y;
 }
-modelica_metatype boxptr_Modelica_Blocks_Sources_CombiTimeTable$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$eGen__on_readTableData(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _forceRead, modelica_metatype _verboseRead)
+modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable1Ds$ics__envelopecassette1$ics__stack$ICS__Module__Twelve__1$shadingfraction__function1$LUT_getTableValue(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _icol, modelica_metatype _u, modelica_metatype _tableAvailable)
 {
   modelica_integer tmp1;
-  modelica_integer tmp2;
-  modelica_real _readSuccess;
-  modelica_metatype out_readSuccess;
-  tmp1 = mmc_unbox_integer(_forceRead);
-  tmp2 = mmc_unbox_integer(_verboseRead);
-  _readSuccess = omc_Modelica_Blocks_Sources_CombiTimeTable$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$eGen__on_readTableData(threadData, _tableID, tmp1, tmp2);
-  out_readSuccess = mmc_mk_rcon(_readSuccess);
-  return out_readSuccess;
-}
-modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__4_getTableValue(threadData_t *threadData, modelica_complex _tableID, modelica_real _u1, modelica_real _u2, modelica_real _tableAvailable)
-{
-  void * _tableID_ext;
-  double _u1_ext;
-  double _u2_ext;
-  double _y_ext;
-  modelica_real _y;
-  _tableID_ext = (void *)_tableID;
-  _u1_ext = (double)_u1;
-  _u2_ext = (double)_u2;
-  _y_ext = ModelicaStandardTables_CombiTable2D_getValue(_tableID_ext, _u1_ext, _u2_ext);
-  _y = (modelica_real)_y_ext;
-  return _y;
-}
-modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__4_getTableValue(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _u1, modelica_metatype _u2, modelica_metatype _tableAvailable)
-{
-  modelica_real tmp1;
   modelica_real tmp2;
   modelica_real tmp3;
   modelica_real _y;
   modelica_metatype out_y;
-  tmp1 = mmc_unbox_real(_u1);
-  tmp2 = mmc_unbox_real(_u2);
+  tmp1 = mmc_unbox_integer(_icol);
+  tmp2 = mmc_unbox_real(_u);
   tmp3 = mmc_unbox_real(_tableAvailable);
-  _y = omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__4_getTableValue(threadData, _tableID, tmp1, tmp2, tmp3);
-  out_y = mmc_mk_rcon(_y);
-  return out_y;
-}
-modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$Shading__matrix_getTableValue(threadData_t *threadData, modelica_complex _tableID, modelica_real _u1, modelica_real _u2, modelica_real _tableAvailable)
-{
-  void * _tableID_ext;
-  double _u1_ext;
-  double _u2_ext;
-  double _y_ext;
-  modelica_real _y;
-  _tableID_ext = (void *)_tableID;
-  _u1_ext = (double)_u1;
-  _u2_ext = (double)_u2;
-  _y_ext = ModelicaStandardTables_CombiTable2D_getValue(_tableID_ext, _u1_ext, _u2_ext);
-  _y = (modelica_real)_y_ext;
-  return _y;
-}
-modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$Shading__matrix_getTableValue(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _u1, modelica_metatype _u2, modelica_metatype _tableAvailable)
-{
-  modelica_real tmp1;
-  modelica_real tmp2;
-  modelica_real tmp3;
-  modelica_real _y;
-  modelica_metatype out_y;
-  tmp1 = mmc_unbox_real(_u1);
-  tmp2 = mmc_unbox_real(_u2);
-  tmp3 = mmc_unbox_real(_tableAvailable);
-  _y = omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$Shading__matrix_getTableValue(threadData, _tableID, tmp1, tmp2, tmp3);
+  _y = omc_Modelica_Blocks_Tables_CombiTable1Ds$ics__envelopecassette1$ics__stack$ICS__Module__Twelve__1$shadingfraction__function1$LUT_getTableValue(threadData, _tableID, tmp1, tmp2, tmp3);
   out_y = mmc_mk_rcon(_y);
   return out_y;
 }
@@ -695,7 +655,7 @@ modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable1Ds$ics__context1$weaD
   out_y = mmc_mk_rcon(_y);
   return out_y;
 }
-modelica_real omc_Modelica_Blocks_Sources_CombiTimeTable$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$eGen__on_getTableValueNoDer(threadData_t *threadData, modelica_complex _tableID, modelica_integer _icol, modelica_real _timeIn, modelica_real _nextTimeEvent, modelica_real _pre_nextTimeEvent, modelica_real _tableAvailable)
+modelica_real omc_Modelica_Blocks_Sources_CombiTimeTable$ics__envelopecassette1$ics__stack$ICS__Module__Twelve__1$eGen__on_getTableValueNoDer(threadData_t *threadData, modelica_complex _tableID, modelica_integer _icol, modelica_real _timeIn, modelica_real _nextTimeEvent, modelica_real _pre_nextTimeEvent, modelica_real _tableAvailable)
 {
   void * _tableID_ext;
   int _icol_ext;
@@ -713,7 +673,7 @@ modelica_real omc_Modelica_Blocks_Sources_CombiTimeTable$ics__envelopecassette1$
   _y = (modelica_real)_y_ext;
   return _y;
 }
-modelica_metatype boxptr_Modelica_Blocks_Sources_CombiTimeTable$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$eGen__on_getTableValueNoDer(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _icol, modelica_metatype _timeIn, modelica_metatype _nextTimeEvent, modelica_metatype _pre_nextTimeEvent, modelica_metatype _tableAvailable)
+modelica_metatype boxptr_Modelica_Blocks_Sources_CombiTimeTable$ics__envelopecassette1$ics__stack$ICS__Module__Twelve__1$eGen__on_getTableValueNoDer(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _icol, modelica_metatype _timeIn, modelica_metatype _nextTimeEvent, modelica_metatype _pre_nextTimeEvent, modelica_metatype _tableAvailable)
 {
   modelica_integer tmp1;
   modelica_real tmp2;
@@ -727,51 +687,11 @@ modelica_metatype boxptr_Modelica_Blocks_Sources_CombiTimeTable$ics__envelopecas
   tmp3 = mmc_unbox_real(_nextTimeEvent);
   tmp4 = mmc_unbox_real(_pre_nextTimeEvent);
   tmp5 = mmc_unbox_real(_tableAvailable);
-  _y = omc_Modelica_Blocks_Sources_CombiTimeTable$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$eGen__on_getTableValueNoDer(threadData, _tableID, tmp1, tmp2, tmp3, tmp4, tmp5);
+  _y = omc_Modelica_Blocks_Sources_CombiTimeTable$ics__envelopecassette1$ics__stack$ICS__Module__Twelve__1$eGen__on_getTableValueNoDer(threadData, _tableID, tmp1, tmp2, tmp3, tmp4, tmp5);
   out_y = mmc_mk_rcon(_y);
   return out_y;
 }
-modelica_real omc_Modelica_Blocks_Sources_CombiTimeTable$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$eGen__on_getTableTimeTmin(threadData_t *threadData, modelica_complex _tableID, modelica_real _tableAvailable)
-{
-  void * _tableID_ext;
-  double _timeMin_ext;
-  modelica_real _timeMin;
-  _tableID_ext = (void *)_tableID;
-  _timeMin_ext = ModelicaStandardTables_CombiTimeTable_minimumTime(_tableID_ext);
-  _timeMin = (modelica_real)_timeMin_ext;
-  return _timeMin;
-}
-modelica_metatype boxptr_Modelica_Blocks_Sources_CombiTimeTable$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$eGen__on_getTableTimeTmin(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _tableAvailable)
-{
-  modelica_real tmp1;
-  modelica_real _timeMin;
-  modelica_metatype out_timeMin;
-  tmp1 = mmc_unbox_real(_tableAvailable);
-  _timeMin = omc_Modelica_Blocks_Sources_CombiTimeTable$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$eGen__on_getTableTimeTmin(threadData, _tableID, tmp1);
-  out_timeMin = mmc_mk_rcon(_timeMin);
-  return out_timeMin;
-}
-modelica_real omc_Modelica_Blocks_Sources_CombiTimeTable$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$eGen__on_getTableTimeTmax(threadData_t *threadData, modelica_complex _tableID, modelica_real _tableAvailable)
-{
-  void * _tableID_ext;
-  double _timeMax_ext;
-  modelica_real _timeMax;
-  _tableID_ext = (void *)_tableID;
-  _timeMax_ext = ModelicaStandardTables_CombiTimeTable_maximumTime(_tableID_ext);
-  _timeMax = (modelica_real)_timeMax_ext;
-  return _timeMax;
-}
-modelica_metatype boxptr_Modelica_Blocks_Sources_CombiTimeTable$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$eGen__on_getTableTimeTmax(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _tableAvailable)
-{
-  modelica_real tmp1;
-  modelica_real _timeMax;
-  modelica_metatype out_timeMax;
-  tmp1 = mmc_unbox_real(_tableAvailable);
-  _timeMax = omc_Modelica_Blocks_Sources_CombiTimeTable$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$eGen__on_getTableTimeTmax(threadData, _tableID, tmp1);
-  out_timeMax = mmc_mk_rcon(_timeMax);
-  return out_timeMax;
-}
-modelica_real omc_Modelica_Blocks_Sources_CombiTimeTable$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$eGen__on_readTableData(threadData_t *threadData, modelica_complex _tableID, modelica_boolean _forceRead, modelica_boolean _verboseRead)
+modelica_real omc_Modelica_Blocks_Sources_CombiTimeTable$ics__envelopecassette1$ics__stack$ICS__Module__Twelve__1$eGen__on_readTableData(threadData_t *threadData, modelica_complex _tableID, modelica_boolean _forceRead, modelica_boolean _verboseRead)
 {
   void * _tableID_ext;
   int _forceRead_ext;
@@ -785,7 +705,7 @@ modelica_real omc_Modelica_Blocks_Sources_CombiTimeTable$ics__envelopecassette1$
   _readSuccess = (modelica_real)_readSuccess_ext;
   return _readSuccess;
 }
-modelica_metatype boxptr_Modelica_Blocks_Sources_CombiTimeTable$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$eGen__on_readTableData(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _forceRead, modelica_metatype _verboseRead)
+modelica_metatype boxptr_Modelica_Blocks_Sources_CombiTimeTable$ics__envelopecassette1$ics__stack$ICS__Module__Twelve__1$eGen__on_readTableData(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _forceRead, modelica_metatype _verboseRead)
 {
   modelica_integer tmp1;
   modelica_integer tmp2;
@@ -793,7 +713,7 @@ modelica_metatype boxptr_Modelica_Blocks_Sources_CombiTimeTable$ics__envelopecas
   modelica_metatype out_readSuccess;
   tmp1 = mmc_unbox_integer(_forceRead);
   tmp2 = mmc_unbox_integer(_verboseRead);
-  _readSuccess = omc_Modelica_Blocks_Sources_CombiTimeTable$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$eGen__on_readTableData(threadData, _tableID, tmp1, tmp2);
+  _readSuccess = omc_Modelica_Blocks_Sources_CombiTimeTable$ics__envelopecassette1$ics__stack$ICS__Module__Twelve__1$eGen__on_readTableData(threadData, _tableID, tmp1, tmp2);
   out_readSuccess = mmc_mk_rcon(_readSuccess);
   return out_readSuccess;
 }
@@ -877,1264 +797,17 @@ modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable1Ds$ics__context1$weaD
   out_readSuccess = mmc_mk_rcon(_readSuccess);
   return out_readSuccess;
 }
-modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__11_getTableValue(threadData_t *threadData, modelica_complex _tableID, modelica_real _u1, modelica_real _u2, modelica_real _tableAvailable)
+void omc_Modelica_Blocks_Types_ExternalCombiTable1D_destructor(threadData_t *threadData, modelica_complex _externalCombiTable1D)
 {
-  void * _tableID_ext;
-  double _u1_ext;
-  double _u2_ext;
-  double _y_ext;
-  modelica_real _y;
-  _tableID_ext = (void *)_tableID;
-  _u1_ext = (double)_u1;
-  _u2_ext = (double)_u2;
-  _y_ext = ModelicaStandardTables_CombiTable2D_getValue(_tableID_ext, _u1_ext, _u2_ext);
-  _y = (modelica_real)_y_ext;
-  return _y;
+  void * _externalCombiTable1D_ext;
+  _externalCombiTable1D_ext = (void *)_externalCombiTable1D;
+  ModelicaStandardTables_CombiTable1D_close(_externalCombiTable1D_ext);
+  return;
 }
-modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__11_getTableValue(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _u1, modelica_metatype _u2, modelica_metatype _tableAvailable)
+void boxptr_Modelica_Blocks_Types_ExternalCombiTable1D_destructor(threadData_t *threadData, modelica_metatype _externalCombiTable1D)
 {
-  modelica_real tmp1;
-  modelica_real tmp2;
-  modelica_real tmp3;
-  modelica_real _y;
-  modelica_metatype out_y;
-  tmp1 = mmc_unbox_real(_u1);
-  tmp2 = mmc_unbox_real(_u2);
-  tmp3 = mmc_unbox_real(_tableAvailable);
-  _y = omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__11_getTableValue(threadData, _tableID, tmp1, tmp2, tmp3);
-  out_y = mmc_mk_rcon(_y);
-  return out_y;
-}
-modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__10_getTableValue(threadData_t *threadData, modelica_complex _tableID, modelica_real _u1, modelica_real _u2, modelica_real _tableAvailable)
-{
-  void * _tableID_ext;
-  double _u1_ext;
-  double _u2_ext;
-  double _y_ext;
-  modelica_real _y;
-  _tableID_ext = (void *)_tableID;
-  _u1_ext = (double)_u1;
-  _u2_ext = (double)_u2;
-  _y_ext = ModelicaStandardTables_CombiTable2D_getValue(_tableID_ext, _u1_ext, _u2_ext);
-  _y = (modelica_real)_y_ext;
-  return _y;
-}
-modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__10_getTableValue(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _u1, modelica_metatype _u2, modelica_metatype _tableAvailable)
-{
-  modelica_real tmp1;
-  modelica_real tmp2;
-  modelica_real tmp3;
-  modelica_real _y;
-  modelica_metatype out_y;
-  tmp1 = mmc_unbox_real(_u1);
-  tmp2 = mmc_unbox_real(_u2);
-  tmp3 = mmc_unbox_real(_tableAvailable);
-  _y = omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__10_getTableValue(threadData, _tableID, tmp1, tmp2, tmp3);
-  out_y = mmc_mk_rcon(_y);
-  return out_y;
-}
-modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__1_getTableValue(threadData_t *threadData, modelica_complex _tableID, modelica_real _u1, modelica_real _u2, modelica_real _tableAvailable)
-{
-  void * _tableID_ext;
-  double _u1_ext;
-  double _u2_ext;
-  double _y_ext;
-  modelica_real _y;
-  _tableID_ext = (void *)_tableID;
-  _u1_ext = (double)_u1;
-  _u2_ext = (double)_u2;
-  _y_ext = ModelicaStandardTables_CombiTable2D_getValue(_tableID_ext, _u1_ext, _u2_ext);
-  _y = (modelica_real)_y_ext;
-  return _y;
-}
-modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__1_getTableValue(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _u1, modelica_metatype _u2, modelica_metatype _tableAvailable)
-{
-  modelica_real tmp1;
-  modelica_real tmp2;
-  modelica_real tmp3;
-  modelica_real _y;
-  modelica_metatype out_y;
-  tmp1 = mmc_unbox_real(_u1);
-  tmp2 = mmc_unbox_real(_u2);
-  tmp3 = mmc_unbox_real(_tableAvailable);
-  _y = omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__1_getTableValue(threadData, _tableID, tmp1, tmp2, tmp3);
-  out_y = mmc_mk_rcon(_y);
-  return out_y;
-}
-modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$Shading__matrix_readTableData(threadData_t *threadData, modelica_complex _tableID, modelica_boolean _forceRead, modelica_boolean _verboseRead)
-{
-  void * _tableID_ext;
-  int _forceRead_ext;
-  int _verboseRead_ext;
-  double _readSuccess_ext;
-  modelica_real _readSuccess;
-  _tableID_ext = (void *)_tableID;
-  _forceRead_ext = (int)_forceRead;
-  _verboseRead_ext = (int)_verboseRead;
-  _readSuccess_ext = ModelicaStandardTables_CombiTable2D_read(_tableID_ext, _forceRead_ext, _verboseRead_ext);
-  _readSuccess = (modelica_real)_readSuccess_ext;
-  return _readSuccess;
-}
-modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$Shading__matrix_readTableData(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _forceRead, modelica_metatype _verboseRead)
-{
-  modelica_integer tmp1;
-  modelica_integer tmp2;
-  modelica_real _readSuccess;
-  modelica_metatype out_readSuccess;
-  tmp1 = mmc_unbox_integer(_forceRead);
-  tmp2 = mmc_unbox_integer(_verboseRead);
-  _readSuccess = omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$Shading__matrix_readTableData(threadData, _tableID, tmp1, tmp2);
-  out_readSuccess = mmc_mk_rcon(_readSuccess);
-  return out_readSuccess;
-}
-modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__1_readTableData(threadData_t *threadData, modelica_complex _tableID, modelica_boolean _forceRead, modelica_boolean _verboseRead)
-{
-  void * _tableID_ext;
-  int _forceRead_ext;
-  int _verboseRead_ext;
-  double _readSuccess_ext;
-  modelica_real _readSuccess;
-  _tableID_ext = (void *)_tableID;
-  _forceRead_ext = (int)_forceRead;
-  _verboseRead_ext = (int)_verboseRead;
-  _readSuccess_ext = ModelicaStandardTables_CombiTable2D_read(_tableID_ext, _forceRead_ext, _verboseRead_ext);
-  _readSuccess = (modelica_real)_readSuccess_ext;
-  return _readSuccess;
-}
-modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__1_readTableData(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _forceRead, modelica_metatype _verboseRead)
-{
-  modelica_integer tmp1;
-  modelica_integer tmp2;
-  modelica_real _readSuccess;
-  modelica_metatype out_readSuccess;
-  tmp1 = mmc_unbox_integer(_forceRead);
-  tmp2 = mmc_unbox_integer(_verboseRead);
-  _readSuccess = omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__1_readTableData(threadData, _tableID, tmp1, tmp2);
-  out_readSuccess = mmc_mk_rcon(_readSuccess);
-  return out_readSuccess;
-}
-modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__10_readTableData(threadData_t *threadData, modelica_complex _tableID, modelica_boolean _forceRead, modelica_boolean _verboseRead)
-{
-  void * _tableID_ext;
-  int _forceRead_ext;
-  int _verboseRead_ext;
-  double _readSuccess_ext;
-  modelica_real _readSuccess;
-  _tableID_ext = (void *)_tableID;
-  _forceRead_ext = (int)_forceRead;
-  _verboseRead_ext = (int)_verboseRead;
-  _readSuccess_ext = ModelicaStandardTables_CombiTable2D_read(_tableID_ext, _forceRead_ext, _verboseRead_ext);
-  _readSuccess = (modelica_real)_readSuccess_ext;
-  return _readSuccess;
-}
-modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__10_readTableData(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _forceRead, modelica_metatype _verboseRead)
-{
-  modelica_integer tmp1;
-  modelica_integer tmp2;
-  modelica_real _readSuccess;
-  modelica_metatype out_readSuccess;
-  tmp1 = mmc_unbox_integer(_forceRead);
-  tmp2 = mmc_unbox_integer(_verboseRead);
-  _readSuccess = omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__10_readTableData(threadData, _tableID, tmp1, tmp2);
-  out_readSuccess = mmc_mk_rcon(_readSuccess);
-  return out_readSuccess;
-}
-modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__2_getTableValue(threadData_t *threadData, modelica_complex _tableID, modelica_real _u1, modelica_real _u2, modelica_real _tableAvailable)
-{
-  void * _tableID_ext;
-  double _u1_ext;
-  double _u2_ext;
-  double _y_ext;
-  modelica_real _y;
-  _tableID_ext = (void *)_tableID;
-  _u1_ext = (double)_u1;
-  _u2_ext = (double)_u2;
-  _y_ext = ModelicaStandardTables_CombiTable2D_getValue(_tableID_ext, _u1_ext, _u2_ext);
-  _y = (modelica_real)_y_ext;
-  return _y;
-}
-modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__2_getTableValue(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _u1, modelica_metatype _u2, modelica_metatype _tableAvailable)
-{
-  modelica_real tmp1;
-  modelica_real tmp2;
-  modelica_real tmp3;
-  modelica_real _y;
-  modelica_metatype out_y;
-  tmp1 = mmc_unbox_real(_u1);
-  tmp2 = mmc_unbox_real(_u2);
-  tmp3 = mmc_unbox_real(_tableAvailable);
-  _y = omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__2_getTableValue(threadData, _tableID, tmp1, tmp2, tmp3);
-  out_y = mmc_mk_rcon(_y);
-  return out_y;
-}
-modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__12_getTableValue(threadData_t *threadData, modelica_complex _tableID, modelica_real _u1, modelica_real _u2, modelica_real _tableAvailable)
-{
-  void * _tableID_ext;
-  double _u1_ext;
-  double _u2_ext;
-  double _y_ext;
-  modelica_real _y;
-  _tableID_ext = (void *)_tableID;
-  _u1_ext = (double)_u1;
-  _u2_ext = (double)_u2;
-  _y_ext = ModelicaStandardTables_CombiTable2D_getValue(_tableID_ext, _u1_ext, _u2_ext);
-  _y = (modelica_real)_y_ext;
-  return _y;
-}
-modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__12_getTableValue(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _u1, modelica_metatype _u2, modelica_metatype _tableAvailable)
-{
-  modelica_real tmp1;
-  modelica_real tmp2;
-  modelica_real tmp3;
-  modelica_real _y;
-  modelica_metatype out_y;
-  tmp1 = mmc_unbox_real(_u1);
-  tmp2 = mmc_unbox_real(_u2);
-  tmp3 = mmc_unbox_real(_tableAvailable);
-  _y = omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__12_getTableValue(threadData, _tableID, tmp1, tmp2, tmp3);
-  out_y = mmc_mk_rcon(_y);
-  return out_y;
-}
-modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__11_readTableData(threadData_t *threadData, modelica_complex _tableID, modelica_boolean _forceRead, modelica_boolean _verboseRead)
-{
-  void * _tableID_ext;
-  int _forceRead_ext;
-  int _verboseRead_ext;
-  double _readSuccess_ext;
-  modelica_real _readSuccess;
-  _tableID_ext = (void *)_tableID;
-  _forceRead_ext = (int)_forceRead;
-  _verboseRead_ext = (int)_verboseRead;
-  _readSuccess_ext = ModelicaStandardTables_CombiTable2D_read(_tableID_ext, _forceRead_ext, _verboseRead_ext);
-  _readSuccess = (modelica_real)_readSuccess_ext;
-  return _readSuccess;
-}
-modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__11_readTableData(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _forceRead, modelica_metatype _verboseRead)
-{
-  modelica_integer tmp1;
-  modelica_integer tmp2;
-  modelica_real _readSuccess;
-  modelica_metatype out_readSuccess;
-  tmp1 = mmc_unbox_integer(_forceRead);
-  tmp2 = mmc_unbox_integer(_verboseRead);
-  _readSuccess = omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__11_readTableData(threadData, _tableID, tmp1, tmp2);
-  out_readSuccess = mmc_mk_rcon(_readSuccess);
-  return out_readSuccess;
-}
-modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__12_readTableData(threadData_t *threadData, modelica_complex _tableID, modelica_boolean _forceRead, modelica_boolean _verboseRead)
-{
-  void * _tableID_ext;
-  int _forceRead_ext;
-  int _verboseRead_ext;
-  double _readSuccess_ext;
-  modelica_real _readSuccess;
-  _tableID_ext = (void *)_tableID;
-  _forceRead_ext = (int)_forceRead;
-  _verboseRead_ext = (int)_verboseRead;
-  _readSuccess_ext = ModelicaStandardTables_CombiTable2D_read(_tableID_ext, _forceRead_ext, _verboseRead_ext);
-  _readSuccess = (modelica_real)_readSuccess_ext;
-  return _readSuccess;
-}
-modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__12_readTableData(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _forceRead, modelica_metatype _verboseRead)
-{
-  modelica_integer tmp1;
-  modelica_integer tmp2;
-  modelica_real _readSuccess;
-  modelica_metatype out_readSuccess;
-  tmp1 = mmc_unbox_integer(_forceRead);
-  tmp2 = mmc_unbox_integer(_verboseRead);
-  _readSuccess = omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__12_readTableData(threadData, _tableID, tmp1, tmp2);
-  out_readSuccess = mmc_mk_rcon(_readSuccess);
-  return out_readSuccess;
-}
-modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__3_getTableValue(threadData_t *threadData, modelica_complex _tableID, modelica_real _u1, modelica_real _u2, modelica_real _tableAvailable)
-{
-  void * _tableID_ext;
-  double _u1_ext;
-  double _u2_ext;
-  double _y_ext;
-  modelica_real _y;
-  _tableID_ext = (void *)_tableID;
-  _u1_ext = (double)_u1;
-  _u2_ext = (double)_u2;
-  _y_ext = ModelicaStandardTables_CombiTable2D_getValue(_tableID_ext, _u1_ext, _u2_ext);
-  _y = (modelica_real)_y_ext;
-  return _y;
-}
-modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__3_getTableValue(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _u1, modelica_metatype _u2, modelica_metatype _tableAvailable)
-{
-  modelica_real tmp1;
-  modelica_real tmp2;
-  modelica_real tmp3;
-  modelica_real _y;
-  modelica_metatype out_y;
-  tmp1 = mmc_unbox_real(_u1);
-  tmp2 = mmc_unbox_real(_u2);
-  tmp3 = mmc_unbox_real(_tableAvailable);
-  _y = omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__3_getTableValue(threadData, _tableID, tmp1, tmp2, tmp3);
-  out_y = mmc_mk_rcon(_y);
-  return out_y;
-}
-modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__2_readTableData(threadData_t *threadData, modelica_complex _tableID, modelica_boolean _forceRead, modelica_boolean _verboseRead)
-{
-  void * _tableID_ext;
-  int _forceRead_ext;
-  int _verboseRead_ext;
-  double _readSuccess_ext;
-  modelica_real _readSuccess;
-  _tableID_ext = (void *)_tableID;
-  _forceRead_ext = (int)_forceRead;
-  _verboseRead_ext = (int)_verboseRead;
-  _readSuccess_ext = ModelicaStandardTables_CombiTable2D_read(_tableID_ext, _forceRead_ext, _verboseRead_ext);
-  _readSuccess = (modelica_real)_readSuccess_ext;
-  return _readSuccess;
-}
-modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__2_readTableData(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _forceRead, modelica_metatype _verboseRead)
-{
-  modelica_integer tmp1;
-  modelica_integer tmp2;
-  modelica_real _readSuccess;
-  modelica_metatype out_readSuccess;
-  tmp1 = mmc_unbox_integer(_forceRead);
-  tmp2 = mmc_unbox_integer(_verboseRead);
-  _readSuccess = omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__2_readTableData(threadData, _tableID, tmp1, tmp2);
-  out_readSuccess = mmc_mk_rcon(_readSuccess);
-  return out_readSuccess;
-}
-modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__3_readTableData(threadData_t *threadData, modelica_complex _tableID, modelica_boolean _forceRead, modelica_boolean _verboseRead)
-{
-  void * _tableID_ext;
-  int _forceRead_ext;
-  int _verboseRead_ext;
-  double _readSuccess_ext;
-  modelica_real _readSuccess;
-  _tableID_ext = (void *)_tableID;
-  _forceRead_ext = (int)_forceRead;
-  _verboseRead_ext = (int)_verboseRead;
-  _readSuccess_ext = ModelicaStandardTables_CombiTable2D_read(_tableID_ext, _forceRead_ext, _verboseRead_ext);
-  _readSuccess = (modelica_real)_readSuccess_ext;
-  return _readSuccess;
-}
-modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__3_readTableData(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _forceRead, modelica_metatype _verboseRead)
-{
-  modelica_integer tmp1;
-  modelica_integer tmp2;
-  modelica_real _readSuccess;
-  modelica_metatype out_readSuccess;
-  tmp1 = mmc_unbox_integer(_forceRead);
-  tmp2 = mmc_unbox_integer(_verboseRead);
-  _readSuccess = omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__3_readTableData(threadData, _tableID, tmp1, tmp2);
-  out_readSuccess = mmc_mk_rcon(_readSuccess);
-  return out_readSuccess;
-}
-modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__6_getTableValue(threadData_t *threadData, modelica_complex _tableID, modelica_real _u1, modelica_real _u2, modelica_real _tableAvailable)
-{
-  void * _tableID_ext;
-  double _u1_ext;
-  double _u2_ext;
-  double _y_ext;
-  modelica_real _y;
-  _tableID_ext = (void *)_tableID;
-  _u1_ext = (double)_u1;
-  _u2_ext = (double)_u2;
-  _y_ext = ModelicaStandardTables_CombiTable2D_getValue(_tableID_ext, _u1_ext, _u2_ext);
-  _y = (modelica_real)_y_ext;
-  return _y;
-}
-modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__6_getTableValue(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _u1, modelica_metatype _u2, modelica_metatype _tableAvailable)
-{
-  modelica_real tmp1;
-  modelica_real tmp2;
-  modelica_real tmp3;
-  modelica_real _y;
-  modelica_metatype out_y;
-  tmp1 = mmc_unbox_real(_u1);
-  tmp2 = mmc_unbox_real(_u2);
-  tmp3 = mmc_unbox_real(_tableAvailable);
-  _y = omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__6_getTableValue(threadData, _tableID, tmp1, tmp2, tmp3);
-  out_y = mmc_mk_rcon(_y);
-  return out_y;
-}
-modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__5_getTableValue(threadData_t *threadData, modelica_complex _tableID, modelica_real _u1, modelica_real _u2, modelica_real _tableAvailable)
-{
-  void * _tableID_ext;
-  double _u1_ext;
-  double _u2_ext;
-  double _y_ext;
-  modelica_real _y;
-  _tableID_ext = (void *)_tableID;
-  _u1_ext = (double)_u1;
-  _u2_ext = (double)_u2;
-  _y_ext = ModelicaStandardTables_CombiTable2D_getValue(_tableID_ext, _u1_ext, _u2_ext);
-  _y = (modelica_real)_y_ext;
-  return _y;
-}
-modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__5_getTableValue(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _u1, modelica_metatype _u2, modelica_metatype _tableAvailable)
-{
-  modelica_real tmp1;
-  modelica_real tmp2;
-  modelica_real tmp3;
-  modelica_real _y;
-  modelica_metatype out_y;
-  tmp1 = mmc_unbox_real(_u1);
-  tmp2 = mmc_unbox_real(_u2);
-  tmp3 = mmc_unbox_real(_tableAvailable);
-  _y = omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__5_getTableValue(threadData, _tableID, tmp1, tmp2, tmp3);
-  out_y = mmc_mk_rcon(_y);
-  return out_y;
-}
-modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__4_readTableData(threadData_t *threadData, modelica_complex _tableID, modelica_boolean _forceRead, modelica_boolean _verboseRead)
-{
-  void * _tableID_ext;
-  int _forceRead_ext;
-  int _verboseRead_ext;
-  double _readSuccess_ext;
-  modelica_real _readSuccess;
-  _tableID_ext = (void *)_tableID;
-  _forceRead_ext = (int)_forceRead;
-  _verboseRead_ext = (int)_verboseRead;
-  _readSuccess_ext = ModelicaStandardTables_CombiTable2D_read(_tableID_ext, _forceRead_ext, _verboseRead_ext);
-  _readSuccess = (modelica_real)_readSuccess_ext;
-  return _readSuccess;
-}
-modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__4_readTableData(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _forceRead, modelica_metatype _verboseRead)
-{
-  modelica_integer tmp1;
-  modelica_integer tmp2;
-  modelica_real _readSuccess;
-  modelica_metatype out_readSuccess;
-  tmp1 = mmc_unbox_integer(_forceRead);
-  tmp2 = mmc_unbox_integer(_verboseRead);
-  _readSuccess = omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__4_readTableData(threadData, _tableID, tmp1, tmp2);
-  out_readSuccess = mmc_mk_rcon(_readSuccess);
-  return out_readSuccess;
-}
-modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__5_readTableData(threadData_t *threadData, modelica_complex _tableID, modelica_boolean _forceRead, modelica_boolean _verboseRead)
-{
-  void * _tableID_ext;
-  int _forceRead_ext;
-  int _verboseRead_ext;
-  double _readSuccess_ext;
-  modelica_real _readSuccess;
-  _tableID_ext = (void *)_tableID;
-  _forceRead_ext = (int)_forceRead;
-  _verboseRead_ext = (int)_verboseRead;
-  _readSuccess_ext = ModelicaStandardTables_CombiTable2D_read(_tableID_ext, _forceRead_ext, _verboseRead_ext);
-  _readSuccess = (modelica_real)_readSuccess_ext;
-  return _readSuccess;
-}
-modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__5_readTableData(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _forceRead, modelica_metatype _verboseRead)
-{
-  modelica_integer tmp1;
-  modelica_integer tmp2;
-  modelica_real _readSuccess;
-  modelica_metatype out_readSuccess;
-  tmp1 = mmc_unbox_integer(_forceRead);
-  tmp2 = mmc_unbox_integer(_verboseRead);
-  _readSuccess = omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__5_readTableData(threadData, _tableID, tmp1, tmp2);
-  out_readSuccess = mmc_mk_rcon(_readSuccess);
-  return out_readSuccess;
-}
-modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__8_getTableValue(threadData_t *threadData, modelica_complex _tableID, modelica_real _u1, modelica_real _u2, modelica_real _tableAvailable)
-{
-  void * _tableID_ext;
-  double _u1_ext;
-  double _u2_ext;
-  double _y_ext;
-  modelica_real _y;
-  _tableID_ext = (void *)_tableID;
-  _u1_ext = (double)_u1;
-  _u2_ext = (double)_u2;
-  _y_ext = ModelicaStandardTables_CombiTable2D_getValue(_tableID_ext, _u1_ext, _u2_ext);
-  _y = (modelica_real)_y_ext;
-  return _y;
-}
-modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__8_getTableValue(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _u1, modelica_metatype _u2, modelica_metatype _tableAvailable)
-{
-  modelica_real tmp1;
-  modelica_real tmp2;
-  modelica_real tmp3;
-  modelica_real _y;
-  modelica_metatype out_y;
-  tmp1 = mmc_unbox_real(_u1);
-  tmp2 = mmc_unbox_real(_u2);
-  tmp3 = mmc_unbox_real(_tableAvailable);
-  _y = omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__8_getTableValue(threadData, _tableID, tmp1, tmp2, tmp3);
-  out_y = mmc_mk_rcon(_y);
-  return out_y;
-}
-modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__7_getTableValue(threadData_t *threadData, modelica_complex _tableID, modelica_real _u1, modelica_real _u2, modelica_real _tableAvailable)
-{
-  void * _tableID_ext;
-  double _u1_ext;
-  double _u2_ext;
-  double _y_ext;
-  modelica_real _y;
-  _tableID_ext = (void *)_tableID;
-  _u1_ext = (double)_u1;
-  _u2_ext = (double)_u2;
-  _y_ext = ModelicaStandardTables_CombiTable2D_getValue(_tableID_ext, _u1_ext, _u2_ext);
-  _y = (modelica_real)_y_ext;
-  return _y;
-}
-modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__7_getTableValue(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _u1, modelica_metatype _u2, modelica_metatype _tableAvailable)
-{
-  modelica_real tmp1;
-  modelica_real tmp2;
-  modelica_real tmp3;
-  modelica_real _y;
-  modelica_metatype out_y;
-  tmp1 = mmc_unbox_real(_u1);
-  tmp2 = mmc_unbox_real(_u2);
-  tmp3 = mmc_unbox_real(_tableAvailable);
-  _y = omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__7_getTableValue(threadData, _tableID, tmp1, tmp2, tmp3);
-  out_y = mmc_mk_rcon(_y);
-  return out_y;
-}
-modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__6_readTableData(threadData_t *threadData, modelica_complex _tableID, modelica_boolean _forceRead, modelica_boolean _verboseRead)
-{
-  void * _tableID_ext;
-  int _forceRead_ext;
-  int _verboseRead_ext;
-  double _readSuccess_ext;
-  modelica_real _readSuccess;
-  _tableID_ext = (void *)_tableID;
-  _forceRead_ext = (int)_forceRead;
-  _verboseRead_ext = (int)_verboseRead;
-  _readSuccess_ext = ModelicaStandardTables_CombiTable2D_read(_tableID_ext, _forceRead_ext, _verboseRead_ext);
-  _readSuccess = (modelica_real)_readSuccess_ext;
-  return _readSuccess;
-}
-modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__6_readTableData(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _forceRead, modelica_metatype _verboseRead)
-{
-  modelica_integer tmp1;
-  modelica_integer tmp2;
-  modelica_real _readSuccess;
-  modelica_metatype out_readSuccess;
-  tmp1 = mmc_unbox_integer(_forceRead);
-  tmp2 = mmc_unbox_integer(_verboseRead);
-  _readSuccess = omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__6_readTableData(threadData, _tableID, tmp1, tmp2);
-  out_readSuccess = mmc_mk_rcon(_readSuccess);
-  return out_readSuccess;
-}
-modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__7_readTableData(threadData_t *threadData, modelica_complex _tableID, modelica_boolean _forceRead, modelica_boolean _verboseRead)
-{
-  void * _tableID_ext;
-  int _forceRead_ext;
-  int _verboseRead_ext;
-  double _readSuccess_ext;
-  modelica_real _readSuccess;
-  _tableID_ext = (void *)_tableID;
-  _forceRead_ext = (int)_forceRead;
-  _verboseRead_ext = (int)_verboseRead;
-  _readSuccess_ext = ModelicaStandardTables_CombiTable2D_read(_tableID_ext, _forceRead_ext, _verboseRead_ext);
-  _readSuccess = (modelica_real)_readSuccess_ext;
-  return _readSuccess;
-}
-modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__7_readTableData(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _forceRead, modelica_metatype _verboseRead)
-{
-  modelica_integer tmp1;
-  modelica_integer tmp2;
-  modelica_real _readSuccess;
-  modelica_metatype out_readSuccess;
-  tmp1 = mmc_unbox_integer(_forceRead);
-  tmp2 = mmc_unbox_integer(_verboseRead);
-  _readSuccess = omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__7_readTableData(threadData, _tableID, tmp1, tmp2);
-  out_readSuccess = mmc_mk_rcon(_readSuccess);
-  return out_readSuccess;
-}
-modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__9_getTableValue(threadData_t *threadData, modelica_complex _tableID, modelica_real _u1, modelica_real _u2, modelica_real _tableAvailable)
-{
-  void * _tableID_ext;
-  double _u1_ext;
-  double _u2_ext;
-  double _y_ext;
-  modelica_real _y;
-  _tableID_ext = (void *)_tableID;
-  _u1_ext = (double)_u1;
-  _u2_ext = (double)_u2;
-  _y_ext = ModelicaStandardTables_CombiTable2D_getValue(_tableID_ext, _u1_ext, _u2_ext);
-  _y = (modelica_real)_y_ext;
-  return _y;
-}
-modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__9_getTableValue(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _u1, modelica_metatype _u2, modelica_metatype _tableAvailable)
-{
-  modelica_real tmp1;
-  modelica_real tmp2;
-  modelica_real tmp3;
-  modelica_real _y;
-  modelica_metatype out_y;
-  tmp1 = mmc_unbox_real(_u1);
-  tmp2 = mmc_unbox_real(_u2);
-  tmp3 = mmc_unbox_real(_tableAvailable);
-  _y = omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__9_getTableValue(threadData, _tableID, tmp1, tmp2, tmp3);
-  out_y = mmc_mk_rcon(_y);
-  return out_y;
-}
-modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__8_readTableData(threadData_t *threadData, modelica_complex _tableID, modelica_boolean _forceRead, modelica_boolean _verboseRead)
-{
-  void * _tableID_ext;
-  int _forceRead_ext;
-  int _verboseRead_ext;
-  double _readSuccess_ext;
-  modelica_real _readSuccess;
-  _tableID_ext = (void *)_tableID;
-  _forceRead_ext = (int)_forceRead;
-  _verboseRead_ext = (int)_verboseRead;
-  _readSuccess_ext = ModelicaStandardTables_CombiTable2D_read(_tableID_ext, _forceRead_ext, _verboseRead_ext);
-  _readSuccess = (modelica_real)_readSuccess_ext;
-  return _readSuccess;
-}
-modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__8_readTableData(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _forceRead, modelica_metatype _verboseRead)
-{
-  modelica_integer tmp1;
-  modelica_integer tmp2;
-  modelica_real _readSuccess;
-  modelica_metatype out_readSuccess;
-  tmp1 = mmc_unbox_integer(_forceRead);
-  tmp2 = mmc_unbox_integer(_verboseRead);
-  _readSuccess = omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__8_readTableData(threadData, _tableID, tmp1, tmp2);
-  out_readSuccess = mmc_mk_rcon(_readSuccess);
-  return out_readSuccess;
-}
-modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__9_readTableData(threadData_t *threadData, modelica_complex _tableID, modelica_boolean _forceRead, modelica_boolean _verboseRead)
-{
-  void * _tableID_ext;
-  int _forceRead_ext;
-  int _verboseRead_ext;
-  double _readSuccess_ext;
-  modelica_real _readSuccess;
-  _tableID_ext = (void *)_tableID;
-  _forceRead_ext = (int)_forceRead;
-  _verboseRead_ext = (int)_verboseRead;
-  _readSuccess_ext = ModelicaStandardTables_CombiTable2D_read(_tableID_ext, _forceRead_ext, _verboseRead_ext);
-  _readSuccess = (modelica_real)_readSuccess_ext;
-  return _readSuccess;
-}
-modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__9_readTableData(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _forceRead, modelica_metatype _verboseRead)
-{
-  modelica_integer tmp1;
-  modelica_integer tmp2;
-  modelica_real _readSuccess;
-  modelica_metatype out_readSuccess;
-  tmp1 = mmc_unbox_integer(_forceRead);
-  tmp2 = mmc_unbox_integer(_verboseRead);
-  _readSuccess = omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack1$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__9_readTableData(threadData, _tableID, tmp1, tmp2);
-  out_readSuccess = mmc_mk_rcon(_readSuccess);
-  return out_readSuccess;
-}
-modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__2_getTableValue(threadData_t *threadData, modelica_complex _tableID, modelica_real _u1, modelica_real _u2, modelica_real _tableAvailable)
-{
-  void * _tableID_ext;
-  double _u1_ext;
-  double _u2_ext;
-  double _y_ext;
-  modelica_real _y;
-  _tableID_ext = (void *)_tableID;
-  _u1_ext = (double)_u1;
-  _u2_ext = (double)_u2;
-  _y_ext = ModelicaStandardTables_CombiTable2D_getValue(_tableID_ext, _u1_ext, _u2_ext);
-  _y = (modelica_real)_y_ext;
-  return _y;
-}
-modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__2_getTableValue(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _u1, modelica_metatype _u2, modelica_metatype _tableAvailable)
-{
-  modelica_real tmp1;
-  modelica_real tmp2;
-  modelica_real tmp3;
-  modelica_real _y;
-  modelica_metatype out_y;
-  tmp1 = mmc_unbox_real(_u1);
-  tmp2 = mmc_unbox_real(_u2);
-  tmp3 = mmc_unbox_real(_tableAvailable);
-  _y = omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__2_getTableValue(threadData, _tableID, tmp1, tmp2, tmp3);
-  out_y = mmc_mk_rcon(_y);
-  return out_y;
-}
-modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__10_getTableValue(threadData_t *threadData, modelica_complex _tableID, modelica_real _u1, modelica_real _u2, modelica_real _tableAvailable)
-{
-  void * _tableID_ext;
-  double _u1_ext;
-  double _u2_ext;
-  double _y_ext;
-  modelica_real _y;
-  _tableID_ext = (void *)_tableID;
-  _u1_ext = (double)_u1;
-  _u2_ext = (double)_u2;
-  _y_ext = ModelicaStandardTables_CombiTable2D_getValue(_tableID_ext, _u1_ext, _u2_ext);
-  _y = (modelica_real)_y_ext;
-  return _y;
-}
-modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__10_getTableValue(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _u1, modelica_metatype _u2, modelica_metatype _tableAvailable)
-{
-  modelica_real tmp1;
-  modelica_real tmp2;
-  modelica_real tmp3;
-  modelica_real _y;
-  modelica_metatype out_y;
-  tmp1 = mmc_unbox_real(_u1);
-  tmp2 = mmc_unbox_real(_u2);
-  tmp3 = mmc_unbox_real(_tableAvailable);
-  _y = omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__10_getTableValue(threadData, _tableID, tmp1, tmp2, tmp3);
-  out_y = mmc_mk_rcon(_y);
-  return out_y;
-}
-modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__1_getTableValue(threadData_t *threadData, modelica_complex _tableID, modelica_real _u1, modelica_real _u2, modelica_real _tableAvailable)
-{
-  void * _tableID_ext;
-  double _u1_ext;
-  double _u2_ext;
-  double _y_ext;
-  modelica_real _y;
-  _tableID_ext = (void *)_tableID;
-  _u1_ext = (double)_u1;
-  _u2_ext = (double)_u2;
-  _y_ext = ModelicaStandardTables_CombiTable2D_getValue(_tableID_ext, _u1_ext, _u2_ext);
-  _y = (modelica_real)_y_ext;
-  return _y;
-}
-modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__1_getTableValue(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _u1, modelica_metatype _u2, modelica_metatype _tableAvailable)
-{
-  modelica_real tmp1;
-  modelica_real tmp2;
-  modelica_real tmp3;
-  modelica_real _y;
-  modelica_metatype out_y;
-  tmp1 = mmc_unbox_real(_u1);
-  tmp2 = mmc_unbox_real(_u2);
-  tmp3 = mmc_unbox_real(_tableAvailable);
-  _y = omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__1_getTableValue(threadData, _tableID, tmp1, tmp2, tmp3);
-  out_y = mmc_mk_rcon(_y);
-  return out_y;
-}
-modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$Shading__matrix_readTableData(threadData_t *threadData, modelica_complex _tableID, modelica_boolean _forceRead, modelica_boolean _verboseRead)
-{
-  void * _tableID_ext;
-  int _forceRead_ext;
-  int _verboseRead_ext;
-  double _readSuccess_ext;
-  modelica_real _readSuccess;
-  _tableID_ext = (void *)_tableID;
-  _forceRead_ext = (int)_forceRead;
-  _verboseRead_ext = (int)_verboseRead;
-  _readSuccess_ext = ModelicaStandardTables_CombiTable2D_read(_tableID_ext, _forceRead_ext, _verboseRead_ext);
-  _readSuccess = (modelica_real)_readSuccess_ext;
-  return _readSuccess;
-}
-modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$Shading__matrix_readTableData(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _forceRead, modelica_metatype _verboseRead)
-{
-  modelica_integer tmp1;
-  modelica_integer tmp2;
-  modelica_real _readSuccess;
-  modelica_metatype out_readSuccess;
-  tmp1 = mmc_unbox_integer(_forceRead);
-  tmp2 = mmc_unbox_integer(_verboseRead);
-  _readSuccess = omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$Shading__matrix_readTableData(threadData, _tableID, tmp1, tmp2);
-  out_readSuccess = mmc_mk_rcon(_readSuccess);
-  return out_readSuccess;
-}
-modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__1_readTableData(threadData_t *threadData, modelica_complex _tableID, modelica_boolean _forceRead, modelica_boolean _verboseRead)
-{
-  void * _tableID_ext;
-  int _forceRead_ext;
-  int _verboseRead_ext;
-  double _readSuccess_ext;
-  modelica_real _readSuccess;
-  _tableID_ext = (void *)_tableID;
-  _forceRead_ext = (int)_forceRead;
-  _verboseRead_ext = (int)_verboseRead;
-  _readSuccess_ext = ModelicaStandardTables_CombiTable2D_read(_tableID_ext, _forceRead_ext, _verboseRead_ext);
-  _readSuccess = (modelica_real)_readSuccess_ext;
-  return _readSuccess;
-}
-modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__1_readTableData(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _forceRead, modelica_metatype _verboseRead)
-{
-  modelica_integer tmp1;
-  modelica_integer tmp2;
-  modelica_real _readSuccess;
-  modelica_metatype out_readSuccess;
-  tmp1 = mmc_unbox_integer(_forceRead);
-  tmp2 = mmc_unbox_integer(_verboseRead);
-  _readSuccess = omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__1_readTableData(threadData, _tableID, tmp1, tmp2);
-  out_readSuccess = mmc_mk_rcon(_readSuccess);
-  return out_readSuccess;
-}
-modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__11_getTableValue(threadData_t *threadData, modelica_complex _tableID, modelica_real _u1, modelica_real _u2, modelica_real _tableAvailable)
-{
-  void * _tableID_ext;
-  double _u1_ext;
-  double _u2_ext;
-  double _y_ext;
-  modelica_real _y;
-  _tableID_ext = (void *)_tableID;
-  _u1_ext = (double)_u1;
-  _u2_ext = (double)_u2;
-  _y_ext = ModelicaStandardTables_CombiTable2D_getValue(_tableID_ext, _u1_ext, _u2_ext);
-  _y = (modelica_real)_y_ext;
-  return _y;
-}
-modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__11_getTableValue(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _u1, modelica_metatype _u2, modelica_metatype _tableAvailable)
-{
-  modelica_real tmp1;
-  modelica_real tmp2;
-  modelica_real tmp3;
-  modelica_real _y;
-  modelica_metatype out_y;
-  tmp1 = mmc_unbox_real(_u1);
-  tmp2 = mmc_unbox_real(_u2);
-  tmp3 = mmc_unbox_real(_tableAvailable);
-  _y = omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__11_getTableValue(threadData, _tableID, tmp1, tmp2, tmp3);
-  out_y = mmc_mk_rcon(_y);
-  return out_y;
-}
-modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__10_readTableData(threadData_t *threadData, modelica_complex _tableID, modelica_boolean _forceRead, modelica_boolean _verboseRead)
-{
-  void * _tableID_ext;
-  int _forceRead_ext;
-  int _verboseRead_ext;
-  double _readSuccess_ext;
-  modelica_real _readSuccess;
-  _tableID_ext = (void *)_tableID;
-  _forceRead_ext = (int)_forceRead;
-  _verboseRead_ext = (int)_verboseRead;
-  _readSuccess_ext = ModelicaStandardTables_CombiTable2D_read(_tableID_ext, _forceRead_ext, _verboseRead_ext);
-  _readSuccess = (modelica_real)_readSuccess_ext;
-  return _readSuccess;
-}
-modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__10_readTableData(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _forceRead, modelica_metatype _verboseRead)
-{
-  modelica_integer tmp1;
-  modelica_integer tmp2;
-  modelica_real _readSuccess;
-  modelica_metatype out_readSuccess;
-  tmp1 = mmc_unbox_integer(_forceRead);
-  tmp2 = mmc_unbox_integer(_verboseRead);
-  _readSuccess = omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__10_readTableData(threadData, _tableID, tmp1, tmp2);
-  out_readSuccess = mmc_mk_rcon(_readSuccess);
-  return out_readSuccess;
-}
-modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__12_getTableValue(threadData_t *threadData, modelica_complex _tableID, modelica_real _u1, modelica_real _u2, modelica_real _tableAvailable)
-{
-  void * _tableID_ext;
-  double _u1_ext;
-  double _u2_ext;
-  double _y_ext;
-  modelica_real _y;
-  _tableID_ext = (void *)_tableID;
-  _u1_ext = (double)_u1;
-  _u2_ext = (double)_u2;
-  _y_ext = ModelicaStandardTables_CombiTable2D_getValue(_tableID_ext, _u1_ext, _u2_ext);
-  _y = (modelica_real)_y_ext;
-  return _y;
-}
-modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__12_getTableValue(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _u1, modelica_metatype _u2, modelica_metatype _tableAvailable)
-{
-  modelica_real tmp1;
-  modelica_real tmp2;
-  modelica_real tmp3;
-  modelica_real _y;
-  modelica_metatype out_y;
-  tmp1 = mmc_unbox_real(_u1);
-  tmp2 = mmc_unbox_real(_u2);
-  tmp3 = mmc_unbox_real(_tableAvailable);
-  _y = omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__12_getTableValue(threadData, _tableID, tmp1, tmp2, tmp3);
-  out_y = mmc_mk_rcon(_y);
-  return out_y;
-}
-modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__11_readTableData(threadData_t *threadData, modelica_complex _tableID, modelica_boolean _forceRead, modelica_boolean _verboseRead)
-{
-  void * _tableID_ext;
-  int _forceRead_ext;
-  int _verboseRead_ext;
-  double _readSuccess_ext;
-  modelica_real _readSuccess;
-  _tableID_ext = (void *)_tableID;
-  _forceRead_ext = (int)_forceRead;
-  _verboseRead_ext = (int)_verboseRead;
-  _readSuccess_ext = ModelicaStandardTables_CombiTable2D_read(_tableID_ext, _forceRead_ext, _verboseRead_ext);
-  _readSuccess = (modelica_real)_readSuccess_ext;
-  return _readSuccess;
-}
-modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__11_readTableData(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _forceRead, modelica_metatype _verboseRead)
-{
-  modelica_integer tmp1;
-  modelica_integer tmp2;
-  modelica_real _readSuccess;
-  modelica_metatype out_readSuccess;
-  tmp1 = mmc_unbox_integer(_forceRead);
-  tmp2 = mmc_unbox_integer(_verboseRead);
-  _readSuccess = omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__11_readTableData(threadData, _tableID, tmp1, tmp2);
-  out_readSuccess = mmc_mk_rcon(_readSuccess);
-  return out_readSuccess;
-}
-modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__12_readTableData(threadData_t *threadData, modelica_complex _tableID, modelica_boolean _forceRead, modelica_boolean _verboseRead)
-{
-  void * _tableID_ext;
-  int _forceRead_ext;
-  int _verboseRead_ext;
-  double _readSuccess_ext;
-  modelica_real _readSuccess;
-  _tableID_ext = (void *)_tableID;
-  _forceRead_ext = (int)_forceRead;
-  _verboseRead_ext = (int)_verboseRead;
-  _readSuccess_ext = ModelicaStandardTables_CombiTable2D_read(_tableID_ext, _forceRead_ext, _verboseRead_ext);
-  _readSuccess = (modelica_real)_readSuccess_ext;
-  return _readSuccess;
-}
-modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__12_readTableData(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _forceRead, modelica_metatype _verboseRead)
-{
-  modelica_integer tmp1;
-  modelica_integer tmp2;
-  modelica_real _readSuccess;
-  modelica_metatype out_readSuccess;
-  tmp1 = mmc_unbox_integer(_forceRead);
-  tmp2 = mmc_unbox_integer(_verboseRead);
-  _readSuccess = omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__12_readTableData(threadData, _tableID, tmp1, tmp2);
-  out_readSuccess = mmc_mk_rcon(_readSuccess);
-  return out_readSuccess;
-}
-modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__8_getTableValue(threadData_t *threadData, modelica_complex _tableID, modelica_real _u1, modelica_real _u2, modelica_real _tableAvailable)
-{
-  void * _tableID_ext;
-  double _u1_ext;
-  double _u2_ext;
-  double _y_ext;
-  modelica_real _y;
-  _tableID_ext = (void *)_tableID;
-  _u1_ext = (double)_u1;
-  _u2_ext = (double)_u2;
-  _y_ext = ModelicaStandardTables_CombiTable2D_getValue(_tableID_ext, _u1_ext, _u2_ext);
-  _y = (modelica_real)_y_ext;
-  return _y;
-}
-modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__8_getTableValue(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _u1, modelica_metatype _u2, modelica_metatype _tableAvailable)
-{
-  modelica_real tmp1;
-  modelica_real tmp2;
-  modelica_real tmp3;
-  modelica_real _y;
-  modelica_metatype out_y;
-  tmp1 = mmc_unbox_real(_u1);
-  tmp2 = mmc_unbox_real(_u2);
-  tmp3 = mmc_unbox_real(_tableAvailable);
-  _y = omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__8_getTableValue(threadData, _tableID, tmp1, tmp2, tmp3);
-  out_y = mmc_mk_rcon(_y);
-  return out_y;
-}
-modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__5_getTableValue(threadData_t *threadData, modelica_complex _tableID, modelica_real _u1, modelica_real _u2, modelica_real _tableAvailable)
-{
-  void * _tableID_ext;
-  double _u1_ext;
-  double _u2_ext;
-  double _y_ext;
-  modelica_real _y;
-  _tableID_ext = (void *)_tableID;
-  _u1_ext = (double)_u1;
-  _u2_ext = (double)_u2;
-  _y_ext = ModelicaStandardTables_CombiTable2D_getValue(_tableID_ext, _u1_ext, _u2_ext);
-  _y = (modelica_real)_y_ext;
-  return _y;
-}
-modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__5_getTableValue(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _u1, modelica_metatype _u2, modelica_metatype _tableAvailable)
-{
-  modelica_real tmp1;
-  modelica_real tmp2;
-  modelica_real tmp3;
-  modelica_real _y;
-  modelica_metatype out_y;
-  tmp1 = mmc_unbox_real(_u1);
-  tmp2 = mmc_unbox_real(_u2);
-  tmp3 = mmc_unbox_real(_tableAvailable);
-  _y = omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__5_getTableValue(threadData, _tableID, tmp1, tmp2, tmp3);
-  out_y = mmc_mk_rcon(_y);
-  return out_y;
-}
-modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__4_getTableValue(threadData_t *threadData, modelica_complex _tableID, modelica_real _u1, modelica_real _u2, modelica_real _tableAvailable)
-{
-  void * _tableID_ext;
-  double _u1_ext;
-  double _u2_ext;
-  double _y_ext;
-  modelica_real _y;
-  _tableID_ext = (void *)_tableID;
-  _u1_ext = (double)_u1;
-  _u2_ext = (double)_u2;
-  _y_ext = ModelicaStandardTables_CombiTable2D_getValue(_tableID_ext, _u1_ext, _u2_ext);
-  _y = (modelica_real)_y_ext;
-  return _y;
-}
-modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__4_getTableValue(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _u1, modelica_metatype _u2, modelica_metatype _tableAvailable)
-{
-  modelica_real tmp1;
-  modelica_real tmp2;
-  modelica_real tmp3;
-  modelica_real _y;
-  modelica_metatype out_y;
-  tmp1 = mmc_unbox_real(_u1);
-  tmp2 = mmc_unbox_real(_u2);
-  tmp3 = mmc_unbox_real(_tableAvailable);
-  _y = omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__4_getTableValue(threadData, _tableID, tmp1, tmp2, tmp3);
-  out_y = mmc_mk_rcon(_y);
-  return out_y;
-}
-modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__3_getTableValue(threadData_t *threadData, modelica_complex _tableID, modelica_real _u1, modelica_real _u2, modelica_real _tableAvailable)
-{
-  void * _tableID_ext;
-  double _u1_ext;
-  double _u2_ext;
-  double _y_ext;
-  modelica_real _y;
-  _tableID_ext = (void *)_tableID;
-  _u1_ext = (double)_u1;
-  _u2_ext = (double)_u2;
-  _y_ext = ModelicaStandardTables_CombiTable2D_getValue(_tableID_ext, _u1_ext, _u2_ext);
-  _y = (modelica_real)_y_ext;
-  return _y;
-}
-modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__3_getTableValue(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _u1, modelica_metatype _u2, modelica_metatype _tableAvailable)
-{
-  modelica_real tmp1;
-  modelica_real tmp2;
-  modelica_real tmp3;
-  modelica_real _y;
-  modelica_metatype out_y;
-  tmp1 = mmc_unbox_real(_u1);
-  tmp2 = mmc_unbox_real(_u2);
-  tmp3 = mmc_unbox_real(_tableAvailable);
-  _y = omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__3_getTableValue(threadData, _tableID, tmp1, tmp2, tmp3);
-  out_y = mmc_mk_rcon(_y);
-  return out_y;
-}
-modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__2_readTableData(threadData_t *threadData, modelica_complex _tableID, modelica_boolean _forceRead, modelica_boolean _verboseRead)
-{
-  void * _tableID_ext;
-  int _forceRead_ext;
-  int _verboseRead_ext;
-  double _readSuccess_ext;
-  modelica_real _readSuccess;
-  _tableID_ext = (void *)_tableID;
-  _forceRead_ext = (int)_forceRead;
-  _verboseRead_ext = (int)_verboseRead;
-  _readSuccess_ext = ModelicaStandardTables_CombiTable2D_read(_tableID_ext, _forceRead_ext, _verboseRead_ext);
-  _readSuccess = (modelica_real)_readSuccess_ext;
-  return _readSuccess;
-}
-modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__2_readTableData(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _forceRead, modelica_metatype _verboseRead)
-{
-  modelica_integer tmp1;
-  modelica_integer tmp2;
-  modelica_real _readSuccess;
-  modelica_metatype out_readSuccess;
-  tmp1 = mmc_unbox_integer(_forceRead);
-  tmp2 = mmc_unbox_integer(_verboseRead);
-  _readSuccess = omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__2_readTableData(threadData, _tableID, tmp1, tmp2);
-  out_readSuccess = mmc_mk_rcon(_readSuccess);
-  return out_readSuccess;
-}
-modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__3_readTableData(threadData_t *threadData, modelica_complex _tableID, modelica_boolean _forceRead, modelica_boolean _verboseRead)
-{
-  void * _tableID_ext;
-  int _forceRead_ext;
-  int _verboseRead_ext;
-  double _readSuccess_ext;
-  modelica_real _readSuccess;
-  _tableID_ext = (void *)_tableID;
-  _forceRead_ext = (int)_forceRead;
-  _verboseRead_ext = (int)_verboseRead;
-  _readSuccess_ext = ModelicaStandardTables_CombiTable2D_read(_tableID_ext, _forceRead_ext, _verboseRead_ext);
-  _readSuccess = (modelica_real)_readSuccess_ext;
-  return _readSuccess;
-}
-modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__3_readTableData(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _forceRead, modelica_metatype _verboseRead)
-{
-  modelica_integer tmp1;
-  modelica_integer tmp2;
-  modelica_real _readSuccess;
-  modelica_metatype out_readSuccess;
-  tmp1 = mmc_unbox_integer(_forceRead);
-  tmp2 = mmc_unbox_integer(_verboseRead);
-  _readSuccess = omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__3_readTableData(threadData, _tableID, tmp1, tmp2);
-  out_readSuccess = mmc_mk_rcon(_readSuccess);
-  return out_readSuccess;
-}
-modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__4_readTableData(threadData_t *threadData, modelica_complex _tableID, modelica_boolean _forceRead, modelica_boolean _verboseRead)
-{
-  void * _tableID_ext;
-  int _forceRead_ext;
-  int _verboseRead_ext;
-  double _readSuccess_ext;
-  modelica_real _readSuccess;
-  _tableID_ext = (void *)_tableID;
-  _forceRead_ext = (int)_forceRead;
-  _verboseRead_ext = (int)_verboseRead;
-  _readSuccess_ext = ModelicaStandardTables_CombiTable2D_read(_tableID_ext, _forceRead_ext, _verboseRead_ext);
-  _readSuccess = (modelica_real)_readSuccess_ext;
-  return _readSuccess;
-}
-modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__4_readTableData(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _forceRead, modelica_metatype _verboseRead)
-{
-  modelica_integer tmp1;
-  modelica_integer tmp2;
-  modelica_real _readSuccess;
-  modelica_metatype out_readSuccess;
-  tmp1 = mmc_unbox_integer(_forceRead);
-  tmp2 = mmc_unbox_integer(_verboseRead);
-  _readSuccess = omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__4_readTableData(threadData, _tableID, tmp1, tmp2);
-  out_readSuccess = mmc_mk_rcon(_readSuccess);
-  return out_readSuccess;
-}
-modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__7_getTableValue(threadData_t *threadData, modelica_complex _tableID, modelica_real _u1, modelica_real _u2, modelica_real _tableAvailable)
-{
-  void * _tableID_ext;
-  double _u1_ext;
-  double _u2_ext;
-  double _y_ext;
-  modelica_real _y;
-  _tableID_ext = (void *)_tableID;
-  _u1_ext = (double)_u1;
-  _u2_ext = (double)_u2;
-  _y_ext = ModelicaStandardTables_CombiTable2D_getValue(_tableID_ext, _u1_ext, _u2_ext);
-  _y = (modelica_real)_y_ext;
-  return _y;
-}
-modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__7_getTableValue(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _u1, modelica_metatype _u2, modelica_metatype _tableAvailable)
-{
-  modelica_real tmp1;
-  modelica_real tmp2;
-  modelica_real tmp3;
-  modelica_real _y;
-  modelica_metatype out_y;
-  tmp1 = mmc_unbox_real(_u1);
-  tmp2 = mmc_unbox_real(_u2);
-  tmp3 = mmc_unbox_real(_tableAvailable);
-  _y = omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__7_getTableValue(threadData, _tableID, tmp1, tmp2, tmp3);
-  out_y = mmc_mk_rcon(_y);
-  return out_y;
-}
-modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__6_getTableValue(threadData_t *threadData, modelica_complex _tableID, modelica_real _u1, modelica_real _u2, modelica_real _tableAvailable)
-{
-  void * _tableID_ext;
-  double _u1_ext;
-  double _u2_ext;
-  double _y_ext;
-  modelica_real _y;
-  _tableID_ext = (void *)_tableID;
-  _u1_ext = (double)_u1;
-  _u2_ext = (double)_u2;
-  _y_ext = ModelicaStandardTables_CombiTable2D_getValue(_tableID_ext, _u1_ext, _u2_ext);
-  _y = (modelica_real)_y_ext;
-  return _y;
-}
-modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__6_getTableValue(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _u1, modelica_metatype _u2, modelica_metatype _tableAvailable)
-{
-  modelica_real tmp1;
-  modelica_real tmp2;
-  modelica_real tmp3;
-  modelica_real _y;
-  modelica_metatype out_y;
-  tmp1 = mmc_unbox_real(_u1);
-  tmp2 = mmc_unbox_real(_u2);
-  tmp3 = mmc_unbox_real(_tableAvailable);
-  _y = omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__6_getTableValue(threadData, _tableID, tmp1, tmp2, tmp3);
-  out_y = mmc_mk_rcon(_y);
-  return out_y;
-}
-modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__5_readTableData(threadData_t *threadData, modelica_complex _tableID, modelica_boolean _forceRead, modelica_boolean _verboseRead)
-{
-  void * _tableID_ext;
-  int _forceRead_ext;
-  int _verboseRead_ext;
-  double _readSuccess_ext;
-  modelica_real _readSuccess;
-  _tableID_ext = (void *)_tableID;
-  _forceRead_ext = (int)_forceRead;
-  _verboseRead_ext = (int)_verboseRead;
-  _readSuccess_ext = ModelicaStandardTables_CombiTable2D_read(_tableID_ext, _forceRead_ext, _verboseRead_ext);
-  _readSuccess = (modelica_real)_readSuccess_ext;
-  return _readSuccess;
-}
-modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__5_readTableData(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _forceRead, modelica_metatype _verboseRead)
-{
-  modelica_integer tmp1;
-  modelica_integer tmp2;
-  modelica_real _readSuccess;
-  modelica_metatype out_readSuccess;
-  tmp1 = mmc_unbox_integer(_forceRead);
-  tmp2 = mmc_unbox_integer(_verboseRead);
-  _readSuccess = omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__5_readTableData(threadData, _tableID, tmp1, tmp2);
-  out_readSuccess = mmc_mk_rcon(_readSuccess);
-  return out_readSuccess;
-}
-modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__6_readTableData(threadData_t *threadData, modelica_complex _tableID, modelica_boolean _forceRead, modelica_boolean _verboseRead)
-{
-  void * _tableID_ext;
-  int _forceRead_ext;
-  int _verboseRead_ext;
-  double _readSuccess_ext;
-  modelica_real _readSuccess;
-  _tableID_ext = (void *)_tableID;
-  _forceRead_ext = (int)_forceRead;
-  _verboseRead_ext = (int)_verboseRead;
-  _readSuccess_ext = ModelicaStandardTables_CombiTable2D_read(_tableID_ext, _forceRead_ext, _verboseRead_ext);
-  _readSuccess = (modelica_real)_readSuccess_ext;
-  return _readSuccess;
-}
-modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__6_readTableData(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _forceRead, modelica_metatype _verboseRead)
-{
-  modelica_integer tmp1;
-  modelica_integer tmp2;
-  modelica_real _readSuccess;
-  modelica_metatype out_readSuccess;
-  tmp1 = mmc_unbox_integer(_forceRead);
-  tmp2 = mmc_unbox_integer(_verboseRead);
-  _readSuccess = omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__6_readTableData(threadData, _tableID, tmp1, tmp2);
-  out_readSuccess = mmc_mk_rcon(_readSuccess);
-  return out_readSuccess;
-}
-modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__7_readTableData(threadData_t *threadData, modelica_complex _tableID, modelica_boolean _forceRead, modelica_boolean _verboseRead)
-{
-  void * _tableID_ext;
-  int _forceRead_ext;
-  int _verboseRead_ext;
-  double _readSuccess_ext;
-  modelica_real _readSuccess;
-  _tableID_ext = (void *)_tableID;
-  _forceRead_ext = (int)_forceRead;
-  _verboseRead_ext = (int)_verboseRead;
-  _readSuccess_ext = ModelicaStandardTables_CombiTable2D_read(_tableID_ext, _forceRead_ext, _verboseRead_ext);
-  _readSuccess = (modelica_real)_readSuccess_ext;
-  return _readSuccess;
-}
-modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__7_readTableData(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _forceRead, modelica_metatype _verboseRead)
-{
-  modelica_integer tmp1;
-  modelica_integer tmp2;
-  modelica_real _readSuccess;
-  modelica_metatype out_readSuccess;
-  tmp1 = mmc_unbox_integer(_forceRead);
-  tmp2 = mmc_unbox_integer(_verboseRead);
-  _readSuccess = omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__7_readTableData(threadData, _tableID, tmp1, tmp2);
-  out_readSuccess = mmc_mk_rcon(_readSuccess);
-  return out_readSuccess;
-}
-modelica_complex omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData_t *threadData, modelica_string _tableName, modelica_string _fileName, real_array _table, modelica_integer _smoothness)
-{
-  int _smoothness_ext;
-  void * _externalCombiTable2D_ext;
-  modelica_complex _externalCombiTable2D;
-  _smoothness_ext = (int)_smoothness;
-  _externalCombiTable2D_ext = ModelicaStandardTables_CombiTable2D_init(_tableName, _fileName, (const double*) data_of_real_array(&(_table)), size_of_dimension_base_array(_table, (modelica_integer) 1), size_of_dimension_base_array(_table, (modelica_integer) 2), _smoothness_ext);
-  _externalCombiTable2D = (modelica_complex)_externalCombiTable2D_ext;
-  return _externalCombiTable2D;
-}
-modelica_metatype boxptr_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData_t *threadData, modelica_metatype _tableName, modelica_metatype _fileName, modelica_metatype _table, modelica_metatype _smoothness)
-{
-  modelica_integer tmp1;
-  modelica_complex _externalCombiTable2D;
-  tmp1 = mmc_unbox_integer(_smoothness);
-  _externalCombiTable2D = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, _tableName, _fileName, *((base_array_t*)_table), tmp1);
-  /* skip box _externalCombiTable2D; ExternalObject Modelica.Blocks.Types.ExternalCombiTable2D */
-  return _externalCombiTable2D;
+  omc_Modelica_Blocks_Types_ExternalCombiTable1D_destructor(threadData, _externalCombiTable1D);
+  return;
 }
 modelica_complex omc_Modelica_Blocks_Types_ExternalCombiTable1D_constructor(threadData_t *threadData, modelica_string _tableName, modelica_string _fileName, real_array _table, integer_array _columns, modelica_integer _smoothness)
 {
@@ -2156,35 +829,7 @@ modelica_metatype boxptr_Modelica_Blocks_Types_ExternalCombiTable1D_constructor(
   /* skip box _externalCombiTable1D; ExternalObject Modelica.Blocks.Types.ExternalCombiTable1D */
   return _externalCombiTable1D;
 }
-modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__9_getTableValue(threadData_t *threadData, modelica_complex _tableID, modelica_real _u1, modelica_real _u2, modelica_real _tableAvailable)
-{
-  void * _tableID_ext;
-  double _u1_ext;
-  double _u2_ext;
-  double _y_ext;
-  modelica_real _y;
-  _tableID_ext = (void *)_tableID;
-  _u1_ext = (double)_u1;
-  _u2_ext = (double)_u2;
-  _y_ext = ModelicaStandardTables_CombiTable2D_getValue(_tableID_ext, _u1_ext, _u2_ext);
-  _y = (modelica_real)_y_ext;
-  return _y;
-}
-modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__9_getTableValue(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _u1, modelica_metatype _u2, modelica_metatype _tableAvailable)
-{
-  modelica_real tmp1;
-  modelica_real tmp2;
-  modelica_real tmp3;
-  modelica_real _y;
-  modelica_metatype out_y;
-  tmp1 = mmc_unbox_real(_u1);
-  tmp2 = mmc_unbox_real(_u2);
-  tmp3 = mmc_unbox_real(_tableAvailable);
-  _y = omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__9_getTableValue(threadData, _tableID, tmp1, tmp2, tmp3);
-  out_y = mmc_mk_rcon(_y);
-  return out_y;
-}
-modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__8_readTableData(threadData_t *threadData, modelica_complex _tableID, modelica_boolean _forceRead, modelica_boolean _verboseRead)
+modelica_real omc_Modelica_Blocks_Tables_CombiTable1Ds$ics__envelopecassette1$ics__stack$ICS__Module__Twelve__1$shadingfraction__function1$LUT_readTableData(threadData_t *threadData, modelica_complex _tableID, modelica_boolean _forceRead, modelica_boolean _verboseRead)
 {
   void * _tableID_ext;
   int _forceRead_ext;
@@ -2194,11 +839,11 @@ modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics
   _tableID_ext = (void *)_tableID;
   _forceRead_ext = (int)_forceRead;
   _verboseRead_ext = (int)_verboseRead;
-  _readSuccess_ext = ModelicaStandardTables_CombiTable2D_read(_tableID_ext, _forceRead_ext, _verboseRead_ext);
+  _readSuccess_ext = ModelicaStandardTables_CombiTable1D_read(_tableID_ext, _forceRead_ext, _verboseRead_ext);
   _readSuccess = (modelica_real)_readSuccess_ext;
   return _readSuccess;
 }
-modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__8_readTableData(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _forceRead, modelica_metatype _verboseRead)
+modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable1Ds$ics__envelopecassette1$ics__stack$ICS__Module__Twelve__1$shadingfraction__function1$LUT_readTableData(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _forceRead, modelica_metatype _verboseRead)
 {
   modelica_integer tmp1;
   modelica_integer tmp2;
@@ -2206,47 +851,9 @@ modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecasset
   modelica_metatype out_readSuccess;
   tmp1 = mmc_unbox_integer(_forceRead);
   tmp2 = mmc_unbox_integer(_verboseRead);
-  _readSuccess = omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__8_readTableData(threadData, _tableID, tmp1, tmp2);
+  _readSuccess = omc_Modelica_Blocks_Tables_CombiTable1Ds$ics__envelopecassette1$ics__stack$ICS__Module__Twelve__1$shadingfraction__function1$LUT_readTableData(threadData, _tableID, tmp1, tmp2);
   out_readSuccess = mmc_mk_rcon(_readSuccess);
   return out_readSuccess;
-}
-modelica_real omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__9_readTableData(threadData_t *threadData, modelica_complex _tableID, modelica_boolean _forceRead, modelica_boolean _verboseRead)
-{
-  void * _tableID_ext;
-  int _forceRead_ext;
-  int _verboseRead_ext;
-  double _readSuccess_ext;
-  modelica_real _readSuccess;
-  _tableID_ext = (void *)_tableID;
-  _forceRead_ext = (int)_forceRead;
-  _verboseRead_ext = (int)_verboseRead;
-  _readSuccess_ext = ModelicaStandardTables_CombiTable2D_read(_tableID_ext, _forceRead_ext, _verboseRead_ext);
-  _readSuccess = (modelica_real)_readSuccess_ext;
-  return _readSuccess;
-}
-modelica_metatype boxptr_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__9_readTableData(threadData_t *threadData, modelica_metatype _tableID, modelica_metatype _forceRead, modelica_metatype _verboseRead)
-{
-  modelica_integer tmp1;
-  modelica_integer tmp2;
-  modelica_real _readSuccess;
-  modelica_metatype out_readSuccess;
-  tmp1 = mmc_unbox_integer(_forceRead);
-  tmp2 = mmc_unbox_integer(_verboseRead);
-  _readSuccess = omc_Modelica_Blocks_Tables_CombiTable2D$ics__envelopecassette1$ics__stack2$ICS__Module__Twelve__1$shading__twelve1$modShadingLUT__9_readTableData(threadData, _tableID, tmp1, tmp2);
-  out_readSuccess = mmc_mk_rcon(_readSuccess);
-  return out_readSuccess;
-}
-void omc_Modelica_Blocks_Types_ExternalCombiTable1D_destructor(threadData_t *threadData, modelica_complex _externalCombiTable1D)
-{
-  void * _externalCombiTable1D_ext;
-  _externalCombiTable1D_ext = (void *)_externalCombiTable1D;
-  ModelicaStandardTables_CombiTable1D_close(_externalCombiTable1D_ext);
-  return;
-}
-void boxptr_Modelica_Blocks_Types_ExternalCombiTable1D_destructor(threadData_t *threadData, modelica_metatype _externalCombiTable1D)
-{
-  omc_Modelica_Blocks_Types_ExternalCombiTable1D_destructor(threadData, _externalCombiTable1D);
-  return;
 }
 modelica_complex omc_Modelica_Blocks_Types_ExternalCombiTimeTable_constructor(threadData_t *threadData, modelica_string _tableName, modelica_string _fileName, real_array _table, modelica_real _startTime, integer_array _columns, modelica_integer _smoothness, modelica_integer _extrapolation)
 {
@@ -2276,17 +883,20 @@ modelica_metatype boxptr_Modelica_Blocks_Types_ExternalCombiTimeTable_constructo
   /* skip box _externalCombiTimeTable; ExternalObject Modelica.Blocks.Types.ExternalCombiTimeTable */
   return _externalCombiTimeTable;
 }
-void omc_Modelica_Blocks_Types_ExternalCombiTable2D_destructor(threadData_t *threadData, modelica_complex _externalCombiTable2D)
+Modelica_Thermal_FluidHeatFlow_Media_Water omc_Modelica_Thermal_FluidHeatFlow_Media_Water(threadData_t *threadData, modelica_real rho, modelica_real cp, modelica_real cv, modelica_real lamda, modelica_real nue)
 {
-  void * _externalCombiTable2D_ext;
-  _externalCombiTable2D_ext = (void *)_externalCombiTable2D;
-  ModelicaStandardTables_CombiTable2D_close(_externalCombiTable2D_ext);
-  return;
+  Modelica_Thermal_FluidHeatFlow_Media_Water tmp1;
+  tmp1._rho = rho;
+  tmp1._cp = cp;
+  tmp1._cv = cv;
+  tmp1._lamda = lamda;
+  tmp1._nue = nue;
+  return tmp1;
 }
-void boxptr_Modelica_Blocks_Types_ExternalCombiTable2D_destructor(threadData_t *threadData, modelica_metatype _externalCombiTable2D)
+
+modelica_metatype boxptr_Modelica_Thermal_FluidHeatFlow_Media_Water(threadData_t *threadData, modelica_metatype _rho, modelica_metatype _cp, modelica_metatype _cv, modelica_metatype _lamda, modelica_metatype _nue)
 {
-  omc_Modelica_Blocks_Types_ExternalCombiTable2D_destructor(threadData, _externalCombiTable2D);
-  return;
+  return mmc_mk_box6(3, &Modelica_Thermal_FluidHeatFlow_Media_Water__desc, _rho, _cp, _cv, _lamda, _nue);
 }
 Modelica_Thermal_FluidHeatFlow_Media_Medium omc_Modelica_Thermal_FluidHeatFlow_Media_Medium(threadData_t *threadData, modelica_real rho, modelica_real cp, modelica_real cv, modelica_real lamda, modelica_real nue)
 {
@@ -2302,33 +912,6 @@ Modelica_Thermal_FluidHeatFlow_Media_Medium omc_Modelica_Thermal_FluidHeatFlow_M
 modelica_metatype boxptr_Modelica_Thermal_FluidHeatFlow_Media_Medium(threadData_t *threadData, modelica_metatype _rho, modelica_metatype _cp, modelica_metatype _cv, modelica_metatype _lamda, modelica_metatype _nue)
 {
   return mmc_mk_box6(3, &Modelica_Thermal_FluidHeatFlow_Media_Medium__desc, _rho, _cp, _cv, _lamda, _nue);
-}
-void omc_Modelica_Blocks_Types_ExternalCombiTimeTable_destructor(threadData_t *threadData, modelica_complex _externalCombiTimeTable)
-{
-  void * _externalCombiTimeTable_ext;
-  _externalCombiTimeTable_ext = (void *)_externalCombiTimeTable;
-  ModelicaStandardTables_CombiTimeTable_close(_externalCombiTimeTable_ext);
-  return;
-}
-void boxptr_Modelica_Blocks_Types_ExternalCombiTimeTable_destructor(threadData_t *threadData, modelica_metatype _externalCombiTimeTable)
-{
-  omc_Modelica_Blocks_Types_ExternalCombiTimeTable_destructor(threadData, _externalCombiTimeTable);
-  return;
-}
-Modelica_Thermal_FluidHeatFlow_Media_Water omc_Modelica_Thermal_FluidHeatFlow_Media_Water(threadData_t *threadData, modelica_real rho, modelica_real cp, modelica_real cv, modelica_real lamda, modelica_real nue)
-{
-  Modelica_Thermal_FluidHeatFlow_Media_Water tmp1;
-  tmp1._rho = rho;
-  tmp1._cp = cp;
-  tmp1._cv = cv;
-  tmp1._lamda = lamda;
-  tmp1._nue = nue;
-  return tmp1;
-}
-
-modelica_metatype boxptr_Modelica_Thermal_FluidHeatFlow_Media_Water(threadData_t *threadData, modelica_metatype _rho, modelica_metatype _cp, modelica_metatype _cv, modelica_metatype _lamda, modelica_metatype _nue)
-{
-  return mmc_mk_box6(3, &Modelica_Thermal_FluidHeatFlow_Media_Water__desc, _rho, _cp, _cv, _lamda, _nue);
 }
 
 #ifdef __cplusplus

@@ -33,8 +33,8 @@ getErrorString();
 //getErrorString();
 
 
-setParameterValue(ICSolar.Parameters, BuildingAngle, -45);
-setParameterValue(ICSolar.Parameters, ArrayAngle, 20);
+setParameterValue(ICSolar.Parameters, BuildingOrientation, -0.7854);
+setParameterValue(ICSolar.Parameters, ArrayTilt, 0.3491);
 simulate(ICSolar.ICS_Skeleton,startTime=0, StopTime = 3.15569e7, Interval = 3600);
 getErrorString();
 
