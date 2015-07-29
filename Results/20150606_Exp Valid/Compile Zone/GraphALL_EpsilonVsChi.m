@@ -31,31 +31,32 @@ set(gca,'YGrid','on',...
 
 axis([0 0.14 0 0.4]);
 
+load('ICSolar.ICS_Skeleton_23_Mar_2015.mat','chi_arrayTotal',...
+    'measured_Ex_epsilon','Start','End','day','measured_T_HTFin',...
+    'measured_T_cavAvg','GN_arrayTotal');
 
 
 %Plot 20-Feb
-load('ICSolar.ICS_Skeleton_20_Feb_2015.mat','chi_arrayTotal',...
-    'measured_Ex_epsilon','Start','End','day');
+% load('ICSolar.ICS_Skeleton_20_Feb_2015.mat','chi_arrayTotal',...
+%     'measured_Ex_epsilon','Start','End','day','measured_T_HTFin',...
+%     'measured_T_cavAvg','GN_arrayTotal');
 
 Color = Blueish;
 
 %trimmed obseverd chi and epsilon
 t_o_chi = chi_arrayTotal(:,Start:End);
 t_o_epsilon_arrayTotal = measured_Ex_epsilon(:,Start:End);
+t_o_Tin =  measured_T_HTFin(:,Start:End);
+t_o_Tcav = measured_T_cavAvg(:,Start:End);
+delta_T = t_o_Tin - t_o_Tcav;
 
 
 %add the zero point
 
-%need to transpose in order to scatter plot
-chi_trans = transpose(t_o_chi);
-Ex_epsilon_trans = transpose(t_o_epsilon_arrayTotal);
-
-%f=fit(chi_trans,Ex_epsilon_trans,'poly2');
-
-scatter(chi_trans,Ex_epsilon_trans,...
+scatter(t_o_chi',t_o_epsilon_arrayTotal',...
     'MarkerFaceColor',Color,...
     'MarkerEdgeColor',Color,...
-    'DisplayName',strcat(...
+    'DisplayName',strcat(...z
     day,' \chi vs \epsilon'));
 
 % x=0:.01:.2;

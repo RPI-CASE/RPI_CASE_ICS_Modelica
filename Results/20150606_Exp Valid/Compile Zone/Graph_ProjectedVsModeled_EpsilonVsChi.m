@@ -30,25 +30,28 @@ set(gca,'YGrid','on',...
     'FontWeight','bold');
 
 
-axis([0 0.14 0 0.5]);
+axis([0 55 0 0.3]);
 
 %Plot 20-Feb
-load('ICSolar.ICS_Skeleton_20_Feb_2015.mat','chi_arrayTotal',...
-    'measured_Ex_epsilon','Start','End','day');
+load('ICSolar.ICS_Skeleton_23_Mar_2015.mat','chi_arrayTotal',...
+    'measured_Ex_epsilon','measured_T_HTFin','measured_T_cavAvg','Start',...
+    'End','day');
 
 Color = Blueish;
 
 %trimmed obseverd chi and epsilon
 t_o_chi = chi_arrayTotal(:,Start:End);
 t_o_epsilon_arrayTotal = measured_Ex_epsilon(:,Start:End);
+t_o_deltaT = measured_T_HTFin(:,Start:End) - measured_T_cavAvg(:,Start:End);
+
 
 %need to transpose in order to scatter plot
 chi_trans = transpose(t_o_chi);
 Ex_epsilon_trans = transpose(t_o_epsilon_arrayTotal);
 
-f=fit(chi_trans,Ex_epsilon_trans,'poly1');
+f=fit(t_o_deltaT',t_o_epsilon_arrayTotal','poly1');
 
-scatter(chi_trans,Ex_epsilon_trans,...
+scatter(t_o_deltaT',t_o_epsilon_arrayTotal',...
     'MarkerFaceColor',Color,...
     'MarkerEdgeColor',Color,...
     'DisplayName',strcat(...
@@ -61,33 +64,33 @@ predict_eps = [0.136, 0.143, 0.148, 0.150, 0.148, 0.132];
 f=fit(predict_chi',predict_eps','poly2');
 x=0:.01:.2;
 y=f(x);
-
-plot(x,y,'LineStyle',':',...
-    'DisplayName','Predicted Fit',...
-    'Color',Color,...
-    'LineWidth',3);
+% 
+% plot(x,y,'LineStyle',':',...
+%     'DisplayName','Predicted Fit',...
+%     'Color',Color,...
+%     'LineWidth',3);
 
 %Plot Projected
 load('PROJECTED_ICSolar.ICS_Skeleton_20_Feb_2015.mat','chi_arrayTotal',...
-    'Ex_epsilon','Start','End','day');
+    'Ex_epsilon','measured_T_HTFin','measured_T_cavAvg','Start',...
+    'End','day');
 
 Color = Yellowish;
 
 %trimmed obseverd chi and epsilon
 t_o_chi = chi_arrayTotal(:,Start:End);
 t_o_epsilon_arrayTotal = Ex_epsilon(:,Start:End);
+t_o_deltaT = measured_T_HTFin(:,Start:End) - measured_T_cavAvg(:,Start:End);
 
-%need to transpose in order to scatter plot
-chi_trans = transpose(t_o_chi);
-Ex_epsilon_trans = transpose(t_o_epsilon_arrayTotal);
 
-f=fit(chi_trans,Ex_epsilon_trans,'poly1');
 
-scatter(chi_trans,Ex_epsilon_trans,...
+% f=fit(chi_trans,Ex_epsilon_trans,'poly1');
+
+scatter(t_o_deltaT',t_o_epsilon_arrayTotal',...
     'MarkerFaceColor',Color,...
     'MarkerEdgeColor',Color,...
     'DisplayName',strcat(...
-    day,' Projected \chi vs \epsilon'));
+    day,' \chi vs \epsilon'));
 
 % Predicted at experimental 
 predict_chi = [0,0.063, 0.125];
@@ -97,10 +100,10 @@ f=fit(predict_chi',predict_eps','poly2');
 x=0:.01:.2;
 y=f(x);
 
-plot(x,y,'LineStyle',':',...
-    'DisplayName','Predicted Fit',...
-    'Color',Color,...
-    'LineWidth',3);
+% plot(x,y,'LineStyle',':',...
+%     'DisplayName','Predicted Fit',...
+%     'Color',Color,...
+%     'LineWidth',3);
 
 
 legend('show');

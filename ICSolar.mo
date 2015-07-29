@@ -9,7 +9,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     //module behavior and whole-array behavior
     Modelica.Blocks.Sources.CombiTimeTable IC_Data_all(tableOnFile = true, fileName = Path + Date + "measuredData.txt", tableName = "DNI_THTFin_vdot", nout = 22, columns = {2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23}) annotation(Placement(visible = true, transformation(origin = {-80,0}, extent = {{-15,-15},{15,15}}, rotation = 0)));
     Real measured_DNI = IC_Data_all.y[1];
-    Real measured_T_HTFin = IC_Data_all.y[2];
+    Real measured_T_HTFin = IC_Data_all.y[2] + 15;
     //Real measured_T_HTFin = IC_Data_all.y[6] + 52.5;
     /// MAKING CHI ZERO
     Real measured_vFlow = IC_Data_all.y[3];
@@ -66,10 +66,16 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     // CHI: note measured chi is the same as modeled chi because the inlet temperature is given from the experiment
     // End of ARRAY TOTAL
     // 6 mods of PV and heat
-    Real Qgen_mods = ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[2].Qgen_mod + ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[3].Qgen_mod + ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[6].Qgen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[2].Qgen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[3].Qgen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[6].Qgen_mod;
-    Real eta_Qgen_mods = (ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[2].eta_Qgen_mod + ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[3].eta_Qgen_mod + ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[6].eta_Qgen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[2].eta_Qgen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[3].eta_Qgen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[6].eta_Qgen_mod) / 6;
-    Real eta_Egen_mods = (ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[2].eta_Egen_mod + ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[3].eta_Egen_mod + ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[6].eta_Egen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[2].eta_Egen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[3].eta_Egen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[6].eta_Egen_mod) / 6;
-    Real eta_Cgen_mods = eta_Qgen_mods + eta_Egen_mods;
+    Real Qgen_6mods = ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[2].Qgen_mod + ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[3].Qgen_mod + ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[6].Qgen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[2].Qgen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[3].Qgen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[6].Qgen_mod;
+    Real eta_Qgen_6mods = (ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[2].eta_Qgen_mod + ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[3].eta_Qgen_mod + ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[6].eta_Qgen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[2].eta_Qgen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[3].eta_Qgen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[6].eta_Qgen_mod) / 6;
+    Real eta_Egen_6mods = (ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[2].eta_Egen_mod + ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[3].eta_Egen_mod + ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[6].eta_Egen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[2].eta_Egen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[3].eta_Egen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[6].eta_Egen_mod) / 6;
+    Real eta_Cgen_6mods = eta_Qgen_6mods + eta_Egen_6mods;
+    Real G_DN_6mods = ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[2].G_DN_mod + ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[3].G_DN_mod + ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[6].G_DN_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[2].G_DN_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[3].G_DN_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[6].G_DN_mod;
+    Real Ex_Qgen_6mods = ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[2].Ex_Qgen_mod + ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[3].Ex_Qgen_mod + ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[6].Ex_Qgen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[2].Ex_Qgen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[3].Ex_Qgen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[6].Ex_Qgen_mod;
+    Real Ex_epsilon_Qgen_6mods = Ex_Qgen_6mods / (G_DN_6mods * Ex_epsilon_solar);
+    Real Ex_epsilon_Egen_6mods = Egen_arrayTotal / (G_DN_6mods * Ex_epsilon_solar);
+    Real Ex_epsilon_Cgen_6mods = (Egen_arrayTotal + Ex_Qgen_6mods) / (G_DN_6mods * Ex_epsilon_solar);
+    Real chi_6mods = (measured_T_HTFin - measured_T_cavAvg) / (G_DN_6mods / (6 * A_POE));
     // End of 6 mods
     //**********************
     ////////////////////////
@@ -106,9 +112,9 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     //start and stop from the mar23_2015 data:
     //start and stop from the mar19_2015 data:
     //annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200, -100}, {200, 100}}), graphics), experiment(StartTime = 0, StopTime = 7050593, Tolerance = 1e-006, Interval = 60));
-    // annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200, -100}, {200, 100}}), graphics), experiment(StartTime = 7046000, StopTime = 7050593, Tolerance = 1e-006, Interval = 10));
     //annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200,-100},{200,100}}), graphics), experiment(StartTime = 4365153, StopTime = 4371284, Tolerance = 1e-006, Interval = 10));
-    annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200,-100},{200,100}}), graphics), experiment(StartTime = 6701501, StopTime = 6705690, Tolerance = 1e-006, Interval = 10));
+    //annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200,-100},{200,100}}), graphics), experiment(StartTime = 6701501, StopTime = 6705690, Tolerance = 1e-006, Interval = 10));
+    annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200,-100},{200,100}}), graphics), experiment(StartTime = 7046000, StopTime = 7050573, Tolerance = 1e-006, Interval = 10));
   end ICS_Skeleton;
   model ICS_Context "This model provides the pieces necessary to set up the context to run the simulation, in FMU practice this will be cut out and provided from the EnergyPlus file"
     extends ICSolar.Parameters;
@@ -1000,6 +1006,9 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       Real G_DN_mod = shading_twelve1.DNI_out * LensWidth ^ 2;
       Real eta_Qgen_mod = Qgen_mod / (shading_twelve1.DNI_out * LensWidth ^ 2);
       Real eta_Egen_mod = Egen_mod / (shading_twelve1.DNI_out * LensWidth ^ 2);
+      Real T1 = flowport_a1.H_flow / (flowport_a1.m_flow * mediumHTF.cp);
+      Real T2 = abs(flowport_b1.H_flow / (flowport_a1.m_flow * mediumHTF.cp));
+      Real Ex_Qgen_mod = flowport_a1.m_flow * mediumHTF.cp * (T2 - T1 - TAmb_in.T * log(T2 / T1));
       Modelica.Blocks.Sources.CombiTimeTable eGen_on(tableOnFile = true, fileName = Path + Date + "EgenIO.txt", tableName = "EgenIO", nout = 12, columns = {2,3,4,5,6,7,8,9,10,11,12,13}, smoothness = Modelica.Blocks.Types.Smoothness.ConstantSegments, extrapolation = Modelica.Blocks.Types.Extrapolation.HoldLastPoint);
       // Imports the entire eGen matri
       Modelica.Thermal.FluidHeatFlow.Interfaces.FlowPort_b flowport_b1(medium = mediumHTF) "Outflow port of the thermal fluid (to Parent)" annotation(Placement(visible = true, transformation(origin = {100,-40}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {100,-40}, extent = {{-10,-10},{10,10}}, rotation = 0)));
@@ -1152,8 +1161,8 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     ///////////////////////
     //
     //parameter String Date = "20150220\\";
-    parameter String Date = "20150319\\";
-    //parameter String Date = "20150323\\";
+    //parameter String Date = "20150319\\";
+    parameter String Date = "20150323\\";
     // C:\Users\Kenton\Documents\GitHub\RPI_CASE_ICS_Modelica
     parameter String Path = "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\";
     //parameter String Path = "C:\\Users\\Kenton\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\";

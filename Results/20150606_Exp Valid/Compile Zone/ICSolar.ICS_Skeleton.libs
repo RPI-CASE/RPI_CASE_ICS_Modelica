@@ -1,1 +1,1 @@
--lModelicaStandardTables
+-lModelicaExternalC -lModelicaStandardTables
