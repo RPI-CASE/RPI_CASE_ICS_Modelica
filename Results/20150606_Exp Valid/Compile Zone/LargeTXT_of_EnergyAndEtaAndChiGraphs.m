@@ -154,6 +154,9 @@ hold on;
 % 2 y axes plot
 [Ax,h1,h2] = plotyy(x,t_s_Gdn,x,t_o_Tin-273);
 
+set(h1,'LineStyle',':');
+set(h2,'LineStyle','-.');
+
 title(day,...
     'FontName','Arial Narrow',...
     'FontSize',big);
@@ -189,10 +192,10 @@ h1.LineWidth = 2;
 h2.LineWidth = 2;
 
 
-% legend('G_{DN}','Inlet Temperature',...
-%     'Location','southoutside',...
-%     'Orientation','horizontal');    %'southeast'
-% set(legend,'FontName','Arial Narrow')
+legend('G_{DN}','T_{in}',...
+    'Location','southoutside',...
+    'Orientation','horizontal');    %'southeast'
+set(legend,'FontName','Arial Narrow')
 
 
 
@@ -246,7 +249,8 @@ set(H1(3),'Color',Purple,...
 
 % Set Temp Properties
 set(H2,'Color',Orange,...
-    'LineWidth',3);
+    'LineWidth',3,...
+    'LineStyle','-.');
 
 % % title({strcat(day,': Modeled Module Collection Efficiency'),...
 % %     '6 Modules of PV & Thermal Collection'},...
@@ -290,7 +294,7 @@ set(Ax(2),'XTick',[0 90 180 270 360],...
     'FontName','arial narrow',...
     'FontSize',18,... % 14
     'FontWeight','bold');    
-ylabel(Ax(2),sprintf('T_{in} (%cC) ',char(176)));
+ylabel(Ax(2),sprintf('T_{HTF,in} (%cC) ',char(176)));
 
 
 % 
@@ -301,14 +305,14 @@ ylabel(Ax(2),sprintf('T_{in} (%cC) ',char(176)));
 %     'FontWeight','bold');
 
 % Create Legend
-legend('\eta Q_{gen}','\eta E_{gen}','\eta Combined',...
+legend('\eta Q_{gen}','\eta E_{gen}','\eta Combined','T_{HTF,IN}',...
     'Location','southoutside',...
     'Orientation','horizontal'); % northeast
 set(legend,'FontName','Arial Narrow');
 
 filename = strcat(day,' Eta'); 
 savefig(filename);
-%print(filename,'-dpng');
+print(filename,'-dpng');
 
 %% Plot chi vs eta_CGen
 

@@ -29,7 +29,7 @@ set(gca,'YGrid','on',...
     'FontSize',18,...
     'FontWeight','bold');
 
-axis([30 100 0.2 0.3]);
+axis([30 100 0.2 0.4]);
 
 load('ICSolar.ICS_Skeleton_20_Feb_2015_v2.0.mat','chi_arrayTotal',...
     'Ex_epsilon_Cgen_6mods','Start','End','day','measured_T_HTFin',...
@@ -75,86 +75,9 @@ scatter(t_o_Tin',t_o_epsilon',...
 %     'LineWidth',3);
 
 
-%Plot 19-Mar
-load('ICSolar.ICS_Skeleton_19_Mar_2015_v2.0.mat','chi_arrayTotal',...
-    'Ex_epsilon_Cgen_6mods','Start','End','day','measured_T_HTFin',...
-    'measured_T_cavAvg','G_DN_6mods');
-
-Color = Yellowish;
-
-%Get rid of the tail end of the dat
-End = 402;
-
-
-t_o_Gdn = G_DN_6mods(:,Start:End);
-t_o_epsilon = Ex_epsilon_Cgen_6mods(:,Start:End);
-t_o_Tin =  measured_T_HTFin(:,Start:End) - 273;
-t_o_Tcav = measured_T_cavAvg(:,Start:End);
-delta_T = t_o_Tin - t_o_Tcav;
-
-t_o_chi = delta_T ./ (t_o_Gdn ./ (6 * 0.25019^2)); 
-
-% trim the bad data point
-t_o_Tin(19) = [];
-t_o_chi(19) = [];
-t_o_epsilon(19) = [];
-
-
-% t_o_chi = [t_o_chi 0];
-% t_o_epsilon_arrayTotal = [t_o_epsilon_arrayTotal 0.138];
-
-%need to transpose in order to scatter plot
-chi_trans = transpose(t_o_chi);
-Ex_epsilon_trans = transpose(t_o_epsilon);
-
-f=fit(chi_trans,Ex_epsilon_trans,'poly2');
-
-scatter(t_o_Tin',t_o_epsilon',...
-    'MarkerFaceColor',Color,...
-    'MarkerEdgeColor',Color,...
-    'DisplayName','19 Mar');
-
-x=0:.01:.2;
-y=f(x);
-
-% plot(x,y,'LineStyle',':',...
-%     'DisplayName',strcat(day, ' Linear Bestfit'),...
-%     'Color',Color,...
-%     'LineWidth',3);
-
-%Plot 23-Mar
-load('ICSolar.ICS_Skeleton_23_Mar_2015_v2.0.mat','chi_arrayTotal',...
-    'Ex_epsilon_Cgen_6mods','Start','End','day','measured_T_HTFin',...
-    'measured_T_cavAvg','G_DN_6mods');
-
-Color = Redish;
-
-%trimmed obseverd chi and epsilon
-t_o_Gdn = G_DN_6mods(:,Start:End);
-t_o_epsilon = Ex_epsilon_Cgen_6mods(:,Start:End);
-t_o_Tin =  measured_T_HTFin(:,Start:End) - 273;
-t_o_Tcav = measured_T_cavAvg(:,Start:End);
-delta_T = t_o_Tin - t_o_Tcav;
-
-t_o_chi = delta_T ./ (t_o_Gdn ./ (6 * 0.25019^2)); 
-
-
-%add the zero point
-
-scatter(t_o_Tin',t_o_epsilon',...
-    'MarkerFaceColor',Color,...
-    'MarkerEdgeColor',Color,...
-    'DisplayName','23 Mar');
-% x=0:.01:.2;
-% y=f(x);
-% 
-% plot(x,y,'LineStyle',':',...
-%     'DisplayName',strcat(day, ' Linear Bestfit'),...
-%     'Color',Color,...
-%     'LineWidth',3);
 
 % PREDICTION
-Color = [.5 .5 .5];
+Color =Blueish;
 % 1.5 ml/s
 predict_chi = [0.006, 0.025, 0.053, 0.08, 0.11];
 T_HTFin = [30 40 55 70 85];
@@ -168,6 +91,69 @@ plot(x,y,'LineStyle',':',...
     'DisplayName','Modeled Fit',...
     'Color',Color,...
     'LineWidth',3);
+
+% indexmax = find(max(y) == y);
+% xmax = x(indexmax);
+% ymax = y(indexmax);
+% 
+% strmax = ['Maximum = ',num2str(xmax)];
+% text(xmax,ymax,strmax,'VerticalAlignment','top');
+
+
+%Plot Projected 20 Feb
+load('PROJECTED_ICSolar.ICS_Skeleton_20_Feb_2015_v2.0.mat','chi_arrayTotal',...
+    'Ex_epsilon_Cgen_6mods','Start','End','day','measured_T_HTFin',...
+    'measured_T_cavAvg','G_DN_6mods');
+
+Color = Yellowish;
+
+t_o_Gdn = G_DN_6mods(:,Start:End);
+t_o_epsilon = Ex_epsilon_Cgen_6mods(:,Start:End);
+t_o_Tin =  measured_T_HTFin(:,Start:End) - 273;
+t_o_Tcav = measured_T_cavAvg(:,Start:End);
+delta_T = t_o_Tin - t_o_Tcav;
+
+t_o_chi = delta_T ./ (t_o_Gdn ./ (6 * 0.25019^2)); 
+
+% t_o_chi = [t_o_chi 0];
+% t_o_epsilon_arrayTotal = [t_o_epsilon_arrayTotal 0.138];
+
+%need to transpose in order to scatter plot
+chi_trans = transpose(t_o_chi);
+Ex_epsilon_trans = transpose(t_o_epsilon);
+
+
+
+scatter(t_o_Tin',t_o_epsilon',...
+    'MarkerFaceColor',Color,...
+    'MarkerEdgeColor',Color,...
+    'DisplayName','Projected 20 Feb');
+
+
+
+% PREDICTION
+Color = Yellowish;
+% 1.5 ml/s
+predict_chi = [0.006, 0.025, 0.053, 0.08, 0.11];
+T_HTFin = [40 50 60 70 80];
+predict_eps = [0.3771 0.3833 0.3864 0.3867 0.384];
+
+f=fit(T_HTFin',predict_eps','poly2');
+x=0:5:100;
+y=f(x);
+
+plot(x,y,'LineStyle',':',...
+    'DisplayName','Modeled Fit',...
+    'Color',Color,...
+    'LineWidth',3);
+
+% indexmax = find(max(y) == y);
+% xmax = x(indexmax);
+% ymax = y(indexmax);
+% 
+% strmax = ['Maximum = ',num2str(xmax)];
+% text(xmax,ymax,strmax,'VerticalAlignment','top');
+% 
 
 %3 ml/s
 predict_chi = [0, 0.086, 0.17];
@@ -188,6 +174,6 @@ set(legend,'FontName','Arial Narrow',...
     'Location','southoutside',...
     'Orientation','horizontal');
 
-filename = 'Chi vs Epsilon - Whole Array for 3 datasets';
+filename = 'Projected Chi vs Epsilon - Whole Array for 3 datasets';
 savefig(filename);
 print(filename,'-dpng');
