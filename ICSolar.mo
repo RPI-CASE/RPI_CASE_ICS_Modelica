@@ -66,6 +66,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     // CHI: note measured chi is the same as modeled chi because the inlet temperature is given from the experiment
     // End of ARRAY TOTAL
     // 6 mods of PV and heat
+    Real Measured_Qgen_3mods = measured_T_s3m5in - measured_T_s3m6in + measured_T_s3m1in - measured_T_s3m3in;
     Real Qgen_6mods = ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[2].Qgen_mod + ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[3].Qgen_mod + ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[6].Qgen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[2].Qgen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[3].Qgen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[6].Qgen_mod;
     Real eta_Qgen_6mods = (ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[2].eta_Qgen_mod + ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[3].eta_Qgen_mod + ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[6].eta_Qgen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[2].eta_Qgen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[3].eta_Qgen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[6].eta_Qgen_mod) / 6;
     Real eta_Egen_6mods = (ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[2].eta_Egen_mod + ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[3].eta_Egen_mod + ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[6].eta_Egen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[2].eta_Egen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[3].eta_Egen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[6].eta_Egen_mod) / 6;
@@ -112,9 +113,9 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     //start and stop from the mar23_2015 data:
     //start and stop from the mar19_2015 data:
     //annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200, -100}, {200, 100}}), graphics), experiment(StartTime = 0, StopTime = 7050593, Tolerance = 1e-006, Interval = 60));
-    //annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200,-100},{200,100}}), graphics), experiment(StartTime = 6701501, StopTime = 6705690, Tolerance = 1e-006, Interval = 10));
     //annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200,-100},{200,100}}), graphics), experiment(StartTime = 7046000, StopTime = 7050573, Tolerance = 1e-006, Interval = 10));
-    annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200,-100},{200,100}}), graphics), experiment(StartTime = 4365153, StopTime = 4371284, Tolerance = 1e-006, Interval = 10));
+    //annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200,-100},{200,100}}), graphics), experiment(StartTime = 4365153, StopTime = 4371284, Tolerance = 1e-006, Interval = 10));
+    annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200,-100},{200,100}}), graphics), experiment(StartTime = 6701501, StopTime = 6705690, Tolerance = 1e-006, Interval = 10));
   end ICS_Skeleton;
   model ICS_Context "This model provides the pieces necessary to set up the context to run the simulation, in FMU practice this will be cut out and provided from the EnergyPlus file"
     extends ICSolar.Parameters;
@@ -1160,8 +1161,8 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     //////// PATH /////////
     ///////////////////////
     //
-    parameter String Date = "20150220\\";
-    //parameter String Date = "20150319\\";
+    //parameter String Date = "20150220\\";
+    parameter String Date = "20150319\\";
     //parameter String Date = "20150323\\";
     // C:\Users\Kenton\Documents\GitHub\RPI_CASE_ICS_Modelica
     parameter String Path = "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\";
@@ -1247,9 +1248,9 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     //?Why doesn't this if structure work here? for now, swap things manually
     //if isStudioExperiment == true then
     //parameter Real Resistivity_WaterPlate = 0.7;
-    //parameter Real Resistivity_WaterPlate = 0.8;
-    //parameter Real Resistivity_WaterPlate = 0.6;
-    parameter Real Resistivity_WaterPlate = Resistivity_WaterBlock;
+    parameter Real Resistivity_WaterPlate = 0.7;
+    //  parameter Real Resistivity_WaterPlate = 0.17;
+    //parameter Real Resistivity_WaterPlate = Resistivity_WaterBlock;
     // 0.8 "Thermal resisitivity of the water plate heat exchanger, experiment";
     //else
     //  parameter Real Resistivity_WaterPlate = 5.05e3 * OneBranchFlow ^ (-0.773) "Thermal resisitivity of the water block heat exchanger, projected";
@@ -1262,7 +1263,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     // 0.07 "Convection Heat Transfer of Receiver to air h(=10)*A(=0.004m2)";
     //parameter Real Conv_Receiver = 0.0618321 "Convection Heat Transfer of Receiver to air h(=10)*A(=0.004m2)";
     // parameter Real adj = 0.26: // on 3.23 and 2.20     = 0.21 on 3.19
-    parameter Real adj = 0.297;
+    parameter Real adj = 0.266;
     // for 3.19
     parameter Real adj_2 = 0.6;
     //0.8

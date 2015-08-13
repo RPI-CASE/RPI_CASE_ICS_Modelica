@@ -38,11 +38,9 @@
 /* Has to be performed after _init.xml file has been read */
 void ICSolar_ICS_Skeleton_callExternalObjectConstructors(DATA *data)
 {
-  real_array tmp2821;
-  integer_array tmp2822;
-  Modelica_Blocks_Types_ExternalCombiTimeTable_constructor_rettype tmp2823;
-  real_array tmp2824;
-  Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp2825;
+  real_array tmp2823;
+  integer_array tmp2824;
+  Modelica_Blocks_Types_ExternalCombiTimeTable_constructor_rettype tmp2825;
   real_array tmp2826;
   Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp2827;
   real_array tmp2828;
@@ -66,7 +64,7 @@ void ICSolar_ICS_Skeleton_callExternalObjectConstructors(DATA *data)
   real_array tmp2846;
   Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp2847;
   real_array tmp2848;
-  real_array tmp2849;
+  Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp2849;
   real_array tmp2850;
   real_array tmp2851;
   real_array tmp2852;
@@ -88,12 +86,12 @@ void ICSolar_ICS_Skeleton_callExternalObjectConstructors(DATA *data)
   real_array tmp2868;
   real_array tmp2869;
   real_array tmp2870;
-  Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp2871;
+  real_array tmp2871;
   real_array tmp2872;
-  integer_array tmp2873;
-  Modelica_Blocks_Types_ExternalCombiTimeTable_constructor_rettype tmp2874;
-  real_array tmp2875;
-  Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp2876;
+  Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp2873;
+  real_array tmp2874;
+  integer_array tmp2875;
+  Modelica_Blocks_Types_ExternalCombiTimeTable_constructor_rettype tmp2876;
   real_array tmp2877;
   Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp2878;
   real_array tmp2879;
@@ -117,7 +115,7 @@ void ICSolar_ICS_Skeleton_callExternalObjectConstructors(DATA *data)
   real_array tmp2897;
   Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp2898;
   real_array tmp2899;
-  real_array tmp2900;
+  Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp2900;
   real_array tmp2901;
   real_array tmp2902;
   real_array tmp2903;
@@ -139,12 +137,12 @@ void ICSolar_ICS_Skeleton_callExternalObjectConstructors(DATA *data)
   real_array tmp2919;
   real_array tmp2920;
   real_array tmp2921;
-  Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp2922;
+  real_array tmp2922;
   real_array tmp2923;
-  integer_array tmp2924;
-  Modelica_Blocks_Types_ExternalCombiTimeTable_constructor_rettype tmp2925;
-  real_array tmp2926;
-  Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp2927;
+  Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp2924;
+  real_array tmp2925;
+  integer_array tmp2926;
+  Modelica_Blocks_Types_ExternalCombiTimeTable_constructor_rettype tmp2927;
   real_array tmp2928;
   Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp2929;
   real_array tmp2930;
@@ -168,7 +166,7 @@ void ICSolar_ICS_Skeleton_callExternalObjectConstructors(DATA *data)
   real_array tmp2948;
   Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp2949;
   real_array tmp2950;
-  real_array tmp2951;
+  Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp2951;
   real_array tmp2952;
   real_array tmp2953;
   real_array tmp2954;
@@ -190,12 +188,12 @@ void ICSolar_ICS_Skeleton_callExternalObjectConstructors(DATA *data)
   real_array tmp2970;
   real_array tmp2971;
   real_array tmp2972;
-  Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp2973;
+  real_array tmp2973;
   real_array tmp2974;
-  integer_array tmp2975;
-  Modelica_Blocks_Types_ExternalCombiTimeTable_constructor_rettype tmp2976;
-  real_array tmp2977;
-  Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp2978;
+  Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp2975;
+  real_array tmp2976;
+  integer_array tmp2977;
+  Modelica_Blocks_Types_ExternalCombiTimeTable_constructor_rettype tmp2978;
   real_array tmp2979;
   Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp2980;
   real_array tmp2981;
@@ -219,7 +217,7 @@ void ICSolar_ICS_Skeleton_callExternalObjectConstructors(DATA *data)
   real_array tmp2999;
   Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp3000;
   real_array tmp3001;
-  real_array tmp3002;
+  Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp3002;
   real_array tmp3003;
   real_array tmp3004;
   real_array tmp3005;
@@ -241,12 +239,12 @@ void ICSolar_ICS_Skeleton_callExternalObjectConstructors(DATA *data)
   real_array tmp3021;
   real_array tmp3022;
   real_array tmp3023;
-  Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp3024;
+  real_array tmp3024;
   real_array tmp3025;
-  integer_array tmp3026;
-  Modelica_Blocks_Types_ExternalCombiTimeTable_constructor_rettype tmp3027;
-  real_array tmp3028;
-  Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp3029;
+  Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp3026;
+  real_array tmp3027;
+  integer_array tmp3028;
+  Modelica_Blocks_Types_ExternalCombiTimeTable_constructor_rettype tmp3029;
   real_array tmp3030;
   Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp3031;
   real_array tmp3032;
@@ -270,7 +268,7 @@ void ICSolar_ICS_Skeleton_callExternalObjectConstructors(DATA *data)
   real_array tmp3050;
   Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp3051;
   real_array tmp3052;
-  real_array tmp3053;
+  Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp3053;
   real_array tmp3054;
   real_array tmp3055;
   real_array tmp3056;
@@ -292,12 +290,12 @@ void ICSolar_ICS_Skeleton_callExternalObjectConstructors(DATA *data)
   real_array tmp3072;
   real_array tmp3073;
   real_array tmp3074;
-  Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp3075;
+  real_array tmp3075;
   real_array tmp3076;
-  integer_array tmp3077;
-  Modelica_Blocks_Types_ExternalCombiTimeTable_constructor_rettype tmp3078;
-  real_array tmp3079;
-  Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp3080;
+  Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp3077;
+  real_array tmp3078;
+  integer_array tmp3079;
+  Modelica_Blocks_Types_ExternalCombiTimeTable_constructor_rettype tmp3080;
   real_array tmp3081;
   Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp3082;
   real_array tmp3083;
@@ -321,7 +319,7 @@ void ICSolar_ICS_Skeleton_callExternalObjectConstructors(DATA *data)
   real_array tmp3101;
   Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp3102;
   real_array tmp3103;
-  real_array tmp3104;
+  Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp3104;
   real_array tmp3105;
   real_array tmp3106;
   real_array tmp3107;
@@ -343,12 +341,12 @@ void ICSolar_ICS_Skeleton_callExternalObjectConstructors(DATA *data)
   real_array tmp3123;
   real_array tmp3124;
   real_array tmp3125;
-  Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp3126;
+  real_array tmp3126;
   real_array tmp3127;
-  integer_array tmp3128;
-  Modelica_Blocks_Types_ExternalCombiTimeTable_constructor_rettype tmp3129;
-  real_array tmp3130;
-  Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp3131;
+  Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp3128;
+  real_array tmp3129;
+  integer_array tmp3130;
+  Modelica_Blocks_Types_ExternalCombiTimeTable_constructor_rettype tmp3131;
   real_array tmp3132;
   Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp3133;
   real_array tmp3134;
@@ -372,7 +370,7 @@ void ICSolar_ICS_Skeleton_callExternalObjectConstructors(DATA *data)
   real_array tmp3152;
   Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp3153;
   real_array tmp3154;
-  real_array tmp3155;
+  Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp3155;
   real_array tmp3156;
   real_array tmp3157;
   real_array tmp3158;
@@ -394,12 +392,12 @@ void ICSolar_ICS_Skeleton_callExternalObjectConstructors(DATA *data)
   real_array tmp3174;
   real_array tmp3175;
   real_array tmp3176;
-  Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp3177;
+  real_array tmp3177;
   real_array tmp3178;
-  integer_array tmp3179;
-  Modelica_Blocks_Types_ExternalCombiTimeTable_constructor_rettype tmp3180;
-  real_array tmp3181;
-  Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp3182;
+  Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp3179;
+  real_array tmp3180;
+  integer_array tmp3181;
+  Modelica_Blocks_Types_ExternalCombiTimeTable_constructor_rettype tmp3182;
   real_array tmp3183;
   Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp3184;
   real_array tmp3185;
@@ -423,7 +421,7 @@ void ICSolar_ICS_Skeleton_callExternalObjectConstructors(DATA *data)
   real_array tmp3203;
   Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp3204;
   real_array tmp3205;
-  real_array tmp3206;
+  Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp3206;
   real_array tmp3207;
   real_array tmp3208;
   real_array tmp3209;
@@ -445,12 +443,12 @@ void ICSolar_ICS_Skeleton_callExternalObjectConstructors(DATA *data)
   real_array tmp3225;
   real_array tmp3226;
   real_array tmp3227;
-  Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp3228;
+  real_array tmp3228;
   real_array tmp3229;
-  integer_array tmp3230;
-  Modelica_Blocks_Types_ExternalCombiTimeTable_constructor_rettype tmp3231;
-  real_array tmp3232;
-  Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp3233;
+  Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp3230;
+  real_array tmp3231;
+  integer_array tmp3232;
+  Modelica_Blocks_Types_ExternalCombiTimeTable_constructor_rettype tmp3233;
   real_array tmp3234;
   Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp3235;
   real_array tmp3236;
@@ -474,7 +472,7 @@ void ICSolar_ICS_Skeleton_callExternalObjectConstructors(DATA *data)
   real_array tmp3254;
   Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp3255;
   real_array tmp3256;
-  real_array tmp3257;
+  Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp3257;
   real_array tmp3258;
   real_array tmp3259;
   real_array tmp3260;
@@ -496,12 +494,12 @@ void ICSolar_ICS_Skeleton_callExternalObjectConstructors(DATA *data)
   real_array tmp3276;
   real_array tmp3277;
   real_array tmp3278;
-  Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp3279;
+  real_array tmp3279;
   real_array tmp3280;
-  integer_array tmp3281;
-  Modelica_Blocks_Types_ExternalCombiTimeTable_constructor_rettype tmp3282;
-  real_array tmp3283;
-  Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp3284;
+  Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp3281;
+  real_array tmp3282;
+  integer_array tmp3283;
+  Modelica_Blocks_Types_ExternalCombiTimeTable_constructor_rettype tmp3284;
   real_array tmp3285;
   Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp3286;
   real_array tmp3287;
@@ -525,7 +523,7 @@ void ICSolar_ICS_Skeleton_callExternalObjectConstructors(DATA *data)
   real_array tmp3305;
   Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp3306;
   real_array tmp3307;
-  real_array tmp3308;
+  Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp3308;
   real_array tmp3309;
   real_array tmp3310;
   real_array tmp3311;
@@ -547,12 +545,12 @@ void ICSolar_ICS_Skeleton_callExternalObjectConstructors(DATA *data)
   real_array tmp3327;
   real_array tmp3328;
   real_array tmp3329;
-  Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp3330;
+  real_array tmp3330;
   real_array tmp3331;
-  integer_array tmp3332;
-  Modelica_Blocks_Types_ExternalCombiTimeTable_constructor_rettype tmp3333;
-  real_array tmp3334;
-  Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp3335;
+  Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp3332;
+  real_array tmp3333;
+  integer_array tmp3334;
+  Modelica_Blocks_Types_ExternalCombiTimeTable_constructor_rettype tmp3335;
   real_array tmp3336;
   Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp3337;
   real_array tmp3338;
@@ -576,7 +574,7 @@ void ICSolar_ICS_Skeleton_callExternalObjectConstructors(DATA *data)
   real_array tmp3356;
   Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp3357;
   real_array tmp3358;
-  real_array tmp3359;
+  Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp3359;
   real_array tmp3360;
   real_array tmp3361;
   real_array tmp3362;
@@ -598,12 +596,12 @@ void ICSolar_ICS_Skeleton_callExternalObjectConstructors(DATA *data)
   real_array tmp3378;
   real_array tmp3379;
   real_array tmp3380;
-  Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp3381;
+  real_array tmp3381;
   real_array tmp3382;
-  integer_array tmp3383;
-  Modelica_Blocks_Types_ExternalCombiTimeTable_constructor_rettype tmp3384;
-  real_array tmp3385;
-  Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp3386;
+  Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp3383;
+  real_array tmp3384;
+  integer_array tmp3385;
+  Modelica_Blocks_Types_ExternalCombiTimeTable_constructor_rettype tmp3386;
   real_array tmp3387;
   Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp3388;
   real_array tmp3389;
@@ -627,7 +625,7 @@ void ICSolar_ICS_Skeleton_callExternalObjectConstructors(DATA *data)
   real_array tmp3407;
   Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp3408;
   real_array tmp3409;
-  real_array tmp3410;
+  Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp3410;
   real_array tmp3411;
   real_array tmp3412;
   real_array tmp3413;
@@ -649,2178 +647,2180 @@ void ICSolar_ICS_Skeleton_callExternalObjectConstructors(DATA *data)
   real_array tmp3429;
   real_array tmp3430;
   real_array tmp3431;
-  Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp3432;
+  real_array tmp3432;
   real_array tmp3433;
-  integer_array tmp3434;
-  Modelica_Blocks_Types_ExternalCombiTable1D_constructor_rettype tmp3435;
-  real_array tmp3436;
-  integer_array tmp3437;
-  Modelica_Blocks_Types_ExternalCombiTable1D_constructor_rettype tmp3438;
-  real_array tmp3439;
-  integer_array tmp3440;
-  Modelica_Blocks_Types_ExternalCombiTimeTable_constructor_rettype tmp3441;
+  Modelica_Blocks_Types_ExternalCombiTable2D_constructor_rettype tmp3434;
+  real_array tmp3435;
+  integer_array tmp3436;
+  Modelica_Blocks_Types_ExternalCombiTable1D_constructor_rettype tmp3437;
+  real_array tmp3438;
+  integer_array tmp3439;
+  Modelica_Blocks_Types_ExternalCombiTable1D_constructor_rettype tmp3440;
+  real_array tmp3441;
+  integer_array tmp3442;
+  Modelica_Blocks_Types_ExternalCombiTimeTable_constructor_rettype tmp3443;
   /* data->simulationInfo.extObjs = NULL; */
   infoStreamPrint(LOG_DEBUG, 0, "call external Object Constructors");
-  alloc_real_array(&tmp2821, 2, 0, 1);
-  array_alloc_scalar_integer_array(&tmp2822, 12, (modelica_integer)(modelica_integer) 2, (modelica_integer)(modelica_integer) 3, (modelica_integer)(modelica_integer) 4, (modelica_integer)(modelica_integer) 5, (modelica_integer)(modelica_integer) 6, (modelica_integer)(modelica_integer) 7, (modelica_integer)(modelica_integer) 8, (modelica_integer)(modelica_integer) 9, (modelica_integer)(modelica_integer) 10, (modelica_integer)(modelica_integer) 11, (modelica_integer)(modelica_integer) 12, (modelica_integer)(modelica_integer) 13);
+  alloc_real_array(&tmp2823, 2, 0, 1);
+  array_alloc_scalar_integer_array(&tmp2824, 12, (modelica_integer)(modelica_integer) 2, (modelica_integer)(modelica_integer) 3, (modelica_integer)(modelica_integer) 4, (modelica_integer)(modelica_integer) 5, (modelica_integer)(modelica_integer) 6, (modelica_integer)(modelica_integer) 7, (modelica_integer)(modelica_integer) 8, (modelica_integer)(modelica_integer) 9, (modelica_integer)(modelica_integer) 10, (modelica_integer)(modelica_integer) 11, (modelica_integer)(modelica_integer) 12, (modelica_integer)(modelica_integer) 13);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTimeTable_constructor_index);
   #endif
-  tmp2823 = omc_Modelica_Blocks_Types_ExternalCombiTimeTable_constructor(threadData, "EgenIO", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\20150220\\EgenIO.txt", tmp2821, 0.0, tmp2822, 3, 1);
+  tmp2825 = omc_Modelica_Blocks_Types_ExternalCombiTimeTable_constructor(threadData, "EgenIO", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\20150220\\EgenIO.txt", tmp2823, 0.0, tmp2824, 3, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTimeTable_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB6$rB$PeGen_on$PtableID = tmp2823.c1;
-  alloc_real_array(&tmp2824, 2, 0, 1);
-
-  #ifdef _OMC_MEASURE_TIME
-  SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
-  #endif
-  tmp2825 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\12.txt", tmp2824, 1);
-
-  #ifdef _OMC_MEASURE_TIME
-  SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
-  #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB6$rB$Pshading_twelve1$PmodShadingLUT_12$PtableID = tmp2825.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB6$rB$PeGen_on$PtableID = tmp2825.c1;
   alloc_real_array(&tmp2826, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp2827 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\11.txt", tmp2826, 1);
+  tmp2827 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\12.txt", tmp2826, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB6$rB$Pshading_twelve1$PmodShadingLUT_11$PtableID = tmp2827.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB6$rB$Pshading_twelve1$PmodShadingLUT_12$PtableID = tmp2827.c1;
   alloc_real_array(&tmp2828, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp2829 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\10.txt", tmp2828, 1);
+  tmp2829 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\11.txt", tmp2828, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB6$rB$Pshading_twelve1$PmodShadingLUT_10$PtableID = tmp2829.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB6$rB$Pshading_twelve1$PmodShadingLUT_11$PtableID = tmp2829.c1;
   alloc_real_array(&tmp2830, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp2831 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\9.txt", tmp2830, 1);
+  tmp2831 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\10.txt", tmp2830, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB6$rB$Pshading_twelve1$PmodShadingLUT_9$PtableID = tmp2831.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB6$rB$Pshading_twelve1$PmodShadingLUT_10$PtableID = tmp2831.c1;
   alloc_real_array(&tmp2832, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp2833 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\8.txt", tmp2832, 1);
+  tmp2833 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\9.txt", tmp2832, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB6$rB$Pshading_twelve1$PmodShadingLUT_8$PtableID = tmp2833.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB6$rB$Pshading_twelve1$PmodShadingLUT_9$PtableID = tmp2833.c1;
   alloc_real_array(&tmp2834, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp2835 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\7.txt", tmp2834, 1);
+  tmp2835 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\8.txt", tmp2834, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB6$rB$Pshading_twelve1$PmodShadingLUT_7$PtableID = tmp2835.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB6$rB$Pshading_twelve1$PmodShadingLUT_8$PtableID = tmp2835.c1;
   alloc_real_array(&tmp2836, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp2837 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\6.txt", tmp2836, 1);
+  tmp2837 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\7.txt", tmp2836, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB6$rB$Pshading_twelve1$PmodShadingLUT_6$PtableID = tmp2837.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB6$rB$Pshading_twelve1$PmodShadingLUT_7$PtableID = tmp2837.c1;
   alloc_real_array(&tmp2838, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp2839 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\5.txt", tmp2838, 1);
+  tmp2839 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\6.txt", tmp2838, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB6$rB$Pshading_twelve1$PmodShadingLUT_5$PtableID = tmp2839.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB6$rB$Pshading_twelve1$PmodShadingLUT_6$PtableID = tmp2839.c1;
   alloc_real_array(&tmp2840, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp2841 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\4.txt", tmp2840, 1);
+  tmp2841 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\5.txt", tmp2840, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB6$rB$Pshading_twelve1$PmodShadingLUT_4$PtableID = tmp2841.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB6$rB$Pshading_twelve1$PmodShadingLUT_5$PtableID = tmp2841.c1;
   alloc_real_array(&tmp2842, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp2843 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\3.txt", tmp2842, 1);
+  tmp2843 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\4.txt", tmp2842, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB6$rB$Pshading_twelve1$PmodShadingLUT_3$PtableID = tmp2843.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB6$rB$Pshading_twelve1$PmodShadingLUT_4$PtableID = tmp2843.c1;
   alloc_real_array(&tmp2844, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp2845 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\2.txt", tmp2844, 1);
+  tmp2845 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\3.txt", tmp2844, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB6$rB$Pshading_twelve1$PmodShadingLUT_2$PtableID = tmp2845.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB6$rB$Pshading_twelve1$PmodShadingLUT_3$PtableID = tmp2845.c1;
   alloc_real_array(&tmp2846, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp2847 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\1.txt", tmp2846, 1);
+  tmp2847 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\2.txt", tmp2846, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB6$rB$Pshading_twelve1$PmodShadingLUT_1$PtableID = tmp2847.c1;
-  array_alloc_scalar_real_array(&tmp2849, 28, (modelica_real)0.0, (modelica_real)-3.1415926, (modelica_real)-1.04719, (modelica_real)-0.959927, (modelica_real)-0.872667, (modelica_real)-0.785397, (modelica_real)-0.6981270000000001, (modelica_real)-0.610867, (modelica_real)-0.523597, (modelica_real)-0.436327, (modelica_real)-0.349067, (modelica_real)-0.261797, (modelica_real)-0.174837, (modelica_real)-0.08726730000000001, (modelica_real)0.0, (modelica_real)0.08726730000000001, (modelica_real)0.174837, (modelica_real)0.261797, (modelica_real)0.349067, (modelica_real)0.436327, (modelica_real)0.523597, (modelica_real)0.610867, (modelica_real)0.6981270000000001, (modelica_real)0.785397, (modelica_real)0.872667, (modelica_real)0.959927, (modelica_real)1.04719, (modelica_real)3.1415926);
-  array_alloc_scalar_real_array(&tmp2850, 28, (modelica_real)-0.872665, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2851, 28, (modelica_real)-0.785398, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.515733288, (modelica_real)0.582273933, (modelica_real)0.644111335, (modelica_real)0.700774874, (modelica_real)0.751833306, (modelica_real)0.796898047, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.796898047, (modelica_real)0.751833306, (modelica_real)0.700774874, (modelica_real)0.644111335, (modelica_real)0.582273933, (modelica_real)0.515733288, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2852, 28, (modelica_real)-0.698132, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.558719885, (modelica_real)0.630806722, (modelica_real)0.697798298, (modelica_real)0.759184768, (modelica_real)0.814498944, (modelica_real)0.86331985, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.86331985, (modelica_real)0.814498944, (modelica_real)0.759184768, (modelica_real)0.697798298, (modelica_real)0.630806722, (modelica_real)0.558719885, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2853, 28, (modelica_real)-0.610865, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.5974542859999999, (modelica_real)0.674538691, (modelica_real)0.746174596, (modelica_real)0.811816808, (modelica_real)0.870965752, (modelica_real)0.923171268, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.923171268, (modelica_real)0.870965752, (modelica_real)0.811816808, (modelica_real)0.746174596, (modelica_real)0.674538691, (modelica_real)0.5974542859999999, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2854, 28, (modelica_real)-0.523599, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.6316417, (modelica_real)0.713137013, (modelica_real)0.788872054, (modelica_real)0.8582704330000001, (modelica_real)0.920803986, (modelica_real)0.975996795, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.975996795, (modelica_real)0.920803986, (modelica_real)0.8582704330000001, (modelica_real)0.788872054, (modelica_real)0.713137013, (modelica_real)0.6316417, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2855, 28, (modelica_real)-0.436332, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2856, 28, (modelica_real)-0.349066, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2857, 28, (modelica_real)-0.261799, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2858, 28, (modelica_real)-0.174533, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2859, 28, (modelica_real)-0.087266, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2860, 28, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2861, 28, (modelica_real)0.087266, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2862, 28, (modelica_real)0.174533, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2863, 28, (modelica_real)0.261799, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2864, 28, (modelica_real)0.349066, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2865, 28, (modelica_real)0.436332, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2866, 28, (modelica_real)0.523599, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.6316417, (modelica_real)0.713137013, (modelica_real)0.788872054, (modelica_real)0.8582704330000001, (modelica_real)0.920803986, (modelica_real)0.975996795, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.975996795, (modelica_real)0.920803986, (modelica_real)0.8582704330000001, (modelica_real)0.788872054, (modelica_real)0.713137013, (modelica_real)0.6316417, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2867, 28, (modelica_real)0.610865, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.5974542859999999, (modelica_real)0.674538691, (modelica_real)0.746174596, (modelica_real)0.811816808, (modelica_real)0.870965752, (modelica_real)0.923171268, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.923171268, (modelica_real)0.870965752, (modelica_real)0.811816808, (modelica_real)0.746174596, (modelica_real)0.674538691, (modelica_real)0.5974542859999999, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2868, 28, (modelica_real)0.698132, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.558719885, (modelica_real)0.630806722, (modelica_real)0.697798298, (modelica_real)0.759184768, (modelica_real)0.814498944, (modelica_real)0.86331985, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.86331985, (modelica_real)0.814498944, (modelica_real)0.759184768, (modelica_real)0.697798298, (modelica_real)0.630806722, (modelica_real)0.558719885, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2869, 28, (modelica_real)0.785398, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.515733288, (modelica_real)0.582273933, (modelica_real)0.644111335, (modelica_real)0.700774874, (modelica_real)0.751833306, (modelica_real)0.796898047, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.796898047, (modelica_real)0.751833306, (modelica_real)0.700774874, (modelica_real)0.644111335, (modelica_real)0.582273933, (modelica_real)0.515733288, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2870, 28, (modelica_real)0.872665, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_real_array(&tmp2848, 22, &tmp2849, &tmp2850, &tmp2851, &tmp2852, &tmp2853, &tmp2854, &tmp2855, &tmp2856, &tmp2857, &tmp2858, &tmp2859, &tmp2860, &tmp2861, &tmp2862, &tmp2863, &tmp2864, &tmp2865, &tmp2866, &tmp2867, &tmp2868, &tmp2869, &tmp2870);
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB6$rB$Pshading_twelve1$PmodShadingLUT_2$PtableID = tmp2847.c1;
+  alloc_real_array(&tmp2848, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp2871 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "NoName", "NoName", tmp2848, 1);
+  tmp2849 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\1.txt", tmp2848, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB6$rB$Pshading_twelve1$PShading_matrix$PtableID = tmp2871.c1;
-  alloc_real_array(&tmp2872, 2, 0, 1);
-  array_alloc_scalar_integer_array(&tmp2873, 12, (modelica_integer)(modelica_integer) 2, (modelica_integer)(modelica_integer) 3, (modelica_integer)(modelica_integer) 4, (modelica_integer)(modelica_integer) 5, (modelica_integer)(modelica_integer) 6, (modelica_integer)(modelica_integer) 7, (modelica_integer)(modelica_integer) 8, (modelica_integer)(modelica_integer) 9, (modelica_integer)(modelica_integer) 10, (modelica_integer)(modelica_integer) 11, (modelica_integer)(modelica_integer) 12, (modelica_integer)(modelica_integer) 13);
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB6$rB$Pshading_twelve1$PmodShadingLUT_1$PtableID = tmp2849.c1;
+  array_alloc_scalar_real_array(&tmp2851, 28, (modelica_real)0.0, (modelica_real)-3.1415926, (modelica_real)-1.04719, (modelica_real)-0.959927, (modelica_real)-0.872667, (modelica_real)-0.785397, (modelica_real)-0.6981270000000001, (modelica_real)-0.610867, (modelica_real)-0.523597, (modelica_real)-0.436327, (modelica_real)-0.349067, (modelica_real)-0.261797, (modelica_real)-0.174837, (modelica_real)-0.08726730000000001, (modelica_real)0.0, (modelica_real)0.08726730000000001, (modelica_real)0.174837, (modelica_real)0.261797, (modelica_real)0.349067, (modelica_real)0.436327, (modelica_real)0.523597, (modelica_real)0.610867, (modelica_real)0.6981270000000001, (modelica_real)0.785397, (modelica_real)0.872667, (modelica_real)0.959927, (modelica_real)1.04719, (modelica_real)3.1415926);
+  array_alloc_scalar_real_array(&tmp2852, 28, (modelica_real)-0.872665, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2853, 28, (modelica_real)-0.785398, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.515733288, (modelica_real)0.582273933, (modelica_real)0.644111335, (modelica_real)0.700774874, (modelica_real)0.751833306, (modelica_real)0.796898047, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.796898047, (modelica_real)0.751833306, (modelica_real)0.700774874, (modelica_real)0.644111335, (modelica_real)0.582273933, (modelica_real)0.515733288, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2854, 28, (modelica_real)-0.698132, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.558719885, (modelica_real)0.630806722, (modelica_real)0.697798298, (modelica_real)0.759184768, (modelica_real)0.814498944, (modelica_real)0.86331985, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.86331985, (modelica_real)0.814498944, (modelica_real)0.759184768, (modelica_real)0.697798298, (modelica_real)0.630806722, (modelica_real)0.558719885, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2855, 28, (modelica_real)-0.610865, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.5974542859999999, (modelica_real)0.674538691, (modelica_real)0.746174596, (modelica_real)0.811816808, (modelica_real)0.870965752, (modelica_real)0.923171268, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.923171268, (modelica_real)0.870965752, (modelica_real)0.811816808, (modelica_real)0.746174596, (modelica_real)0.674538691, (modelica_real)0.5974542859999999, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2856, 28, (modelica_real)-0.523599, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.6316417, (modelica_real)0.713137013, (modelica_real)0.788872054, (modelica_real)0.8582704330000001, (modelica_real)0.920803986, (modelica_real)0.975996795, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.975996795, (modelica_real)0.920803986, (modelica_real)0.8582704330000001, (modelica_real)0.788872054, (modelica_real)0.713137013, (modelica_real)0.6316417, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2857, 28, (modelica_real)-0.436332, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2858, 28, (modelica_real)-0.349066, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2859, 28, (modelica_real)-0.261799, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2860, 28, (modelica_real)-0.174533, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2861, 28, (modelica_real)-0.087266, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2862, 28, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2863, 28, (modelica_real)0.087266, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2864, 28, (modelica_real)0.174533, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2865, 28, (modelica_real)0.261799, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2866, 28, (modelica_real)0.349066, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2867, 28, (modelica_real)0.436332, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2868, 28, (modelica_real)0.523599, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.6316417, (modelica_real)0.713137013, (modelica_real)0.788872054, (modelica_real)0.8582704330000001, (modelica_real)0.920803986, (modelica_real)0.975996795, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.975996795, (modelica_real)0.920803986, (modelica_real)0.8582704330000001, (modelica_real)0.788872054, (modelica_real)0.713137013, (modelica_real)0.6316417, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2869, 28, (modelica_real)0.610865, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.5974542859999999, (modelica_real)0.674538691, (modelica_real)0.746174596, (modelica_real)0.811816808, (modelica_real)0.870965752, (modelica_real)0.923171268, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.923171268, (modelica_real)0.870965752, (modelica_real)0.811816808, (modelica_real)0.746174596, (modelica_real)0.674538691, (modelica_real)0.5974542859999999, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2870, 28, (modelica_real)0.698132, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.558719885, (modelica_real)0.630806722, (modelica_real)0.697798298, (modelica_real)0.759184768, (modelica_real)0.814498944, (modelica_real)0.86331985, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.86331985, (modelica_real)0.814498944, (modelica_real)0.759184768, (modelica_real)0.697798298, (modelica_real)0.630806722, (modelica_real)0.558719885, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2871, 28, (modelica_real)0.785398, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.515733288, (modelica_real)0.582273933, (modelica_real)0.644111335, (modelica_real)0.700774874, (modelica_real)0.751833306, (modelica_real)0.796898047, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.796898047, (modelica_real)0.751833306, (modelica_real)0.700774874, (modelica_real)0.644111335, (modelica_real)0.582273933, (modelica_real)0.515733288, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2872, 28, (modelica_real)0.872665, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_real_array(&tmp2850, 22, &tmp2851, &tmp2852, &tmp2853, &tmp2854, &tmp2855, &tmp2856, &tmp2857, &tmp2858, &tmp2859, &tmp2860, &tmp2861, &tmp2862, &tmp2863, &tmp2864, &tmp2865, &tmp2866, &tmp2867, &tmp2868, &tmp2869, &tmp2870, &tmp2871, &tmp2872);
+
+  #ifdef _OMC_MEASURE_TIME
+  SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
+  #endif
+  tmp2873 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "NoName", "NoName", tmp2850, 1);
+
+  #ifdef _OMC_MEASURE_TIME
+  SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
+  #endif
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB6$rB$Pshading_twelve1$PShading_matrix$PtableID = tmp2873.c1;
+  alloc_real_array(&tmp2874, 2, 0, 1);
+  array_alloc_scalar_integer_array(&tmp2875, 12, (modelica_integer)(modelica_integer) 2, (modelica_integer)(modelica_integer) 3, (modelica_integer)(modelica_integer) 4, (modelica_integer)(modelica_integer) 5, (modelica_integer)(modelica_integer) 6, (modelica_integer)(modelica_integer) 7, (modelica_integer)(modelica_integer) 8, (modelica_integer)(modelica_integer) 9, (modelica_integer)(modelica_integer) 10, (modelica_integer)(modelica_integer) 11, (modelica_integer)(modelica_integer) 12, (modelica_integer)(modelica_integer) 13);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTimeTable_constructor_index);
   #endif
-  tmp2874 = omc_Modelica_Blocks_Types_ExternalCombiTimeTable_constructor(threadData, "EgenIO", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\20150220\\EgenIO.txt", tmp2872, 0.0, tmp2873, 3, 1);
+  tmp2876 = omc_Modelica_Blocks_Types_ExternalCombiTimeTable_constructor(threadData, "EgenIO", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\20150220\\EgenIO.txt", tmp2874, 0.0, tmp2875, 3, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTimeTable_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB5$rB$PeGen_on$PtableID = tmp2874.c1;
-  alloc_real_array(&tmp2875, 2, 0, 1);
-
-  #ifdef _OMC_MEASURE_TIME
-  SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
-  #endif
-  tmp2876 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\12.txt", tmp2875, 1);
-
-  #ifdef _OMC_MEASURE_TIME
-  SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
-  #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB5$rB$Pshading_twelve1$PmodShadingLUT_12$PtableID = tmp2876.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB5$rB$PeGen_on$PtableID = tmp2876.c1;
   alloc_real_array(&tmp2877, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp2878 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\11.txt", tmp2877, 1);
+  tmp2878 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\12.txt", tmp2877, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB5$rB$Pshading_twelve1$PmodShadingLUT_11$PtableID = tmp2878.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB5$rB$Pshading_twelve1$PmodShadingLUT_12$PtableID = tmp2878.c1;
   alloc_real_array(&tmp2879, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp2880 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\10.txt", tmp2879, 1);
+  tmp2880 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\11.txt", tmp2879, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB5$rB$Pshading_twelve1$PmodShadingLUT_10$PtableID = tmp2880.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB5$rB$Pshading_twelve1$PmodShadingLUT_11$PtableID = tmp2880.c1;
   alloc_real_array(&tmp2881, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp2882 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\9.txt", tmp2881, 1);
+  tmp2882 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\10.txt", tmp2881, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB5$rB$Pshading_twelve1$PmodShadingLUT_9$PtableID = tmp2882.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB5$rB$Pshading_twelve1$PmodShadingLUT_10$PtableID = tmp2882.c1;
   alloc_real_array(&tmp2883, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp2884 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\8.txt", tmp2883, 1);
+  tmp2884 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\9.txt", tmp2883, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB5$rB$Pshading_twelve1$PmodShadingLUT_8$PtableID = tmp2884.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB5$rB$Pshading_twelve1$PmodShadingLUT_9$PtableID = tmp2884.c1;
   alloc_real_array(&tmp2885, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp2886 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\7.txt", tmp2885, 1);
+  tmp2886 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\8.txt", tmp2885, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB5$rB$Pshading_twelve1$PmodShadingLUT_7$PtableID = tmp2886.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB5$rB$Pshading_twelve1$PmodShadingLUT_8$PtableID = tmp2886.c1;
   alloc_real_array(&tmp2887, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp2888 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\6.txt", tmp2887, 1);
+  tmp2888 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\7.txt", tmp2887, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB5$rB$Pshading_twelve1$PmodShadingLUT_6$PtableID = tmp2888.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB5$rB$Pshading_twelve1$PmodShadingLUT_7$PtableID = tmp2888.c1;
   alloc_real_array(&tmp2889, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp2890 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\5.txt", tmp2889, 1);
+  tmp2890 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\6.txt", tmp2889, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB5$rB$Pshading_twelve1$PmodShadingLUT_5$PtableID = tmp2890.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB5$rB$Pshading_twelve1$PmodShadingLUT_6$PtableID = tmp2890.c1;
   alloc_real_array(&tmp2891, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp2892 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\4.txt", tmp2891, 1);
+  tmp2892 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\5.txt", tmp2891, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB5$rB$Pshading_twelve1$PmodShadingLUT_4$PtableID = tmp2892.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB5$rB$Pshading_twelve1$PmodShadingLUT_5$PtableID = tmp2892.c1;
   alloc_real_array(&tmp2893, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp2894 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\3.txt", tmp2893, 1);
+  tmp2894 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\4.txt", tmp2893, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB5$rB$Pshading_twelve1$PmodShadingLUT_3$PtableID = tmp2894.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB5$rB$Pshading_twelve1$PmodShadingLUT_4$PtableID = tmp2894.c1;
   alloc_real_array(&tmp2895, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp2896 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\2.txt", tmp2895, 1);
+  tmp2896 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\3.txt", tmp2895, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB5$rB$Pshading_twelve1$PmodShadingLUT_2$PtableID = tmp2896.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB5$rB$Pshading_twelve1$PmodShadingLUT_3$PtableID = tmp2896.c1;
   alloc_real_array(&tmp2897, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp2898 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\1.txt", tmp2897, 1);
+  tmp2898 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\2.txt", tmp2897, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB5$rB$Pshading_twelve1$PmodShadingLUT_1$PtableID = tmp2898.c1;
-  array_alloc_scalar_real_array(&tmp2900, 28, (modelica_real)0.0, (modelica_real)-3.1415926, (modelica_real)-1.04719, (modelica_real)-0.959927, (modelica_real)-0.872667, (modelica_real)-0.785397, (modelica_real)-0.6981270000000001, (modelica_real)-0.610867, (modelica_real)-0.523597, (modelica_real)-0.436327, (modelica_real)-0.349067, (modelica_real)-0.261797, (modelica_real)-0.174837, (modelica_real)-0.08726730000000001, (modelica_real)0.0, (modelica_real)0.08726730000000001, (modelica_real)0.174837, (modelica_real)0.261797, (modelica_real)0.349067, (modelica_real)0.436327, (modelica_real)0.523597, (modelica_real)0.610867, (modelica_real)0.6981270000000001, (modelica_real)0.785397, (modelica_real)0.872667, (modelica_real)0.959927, (modelica_real)1.04719, (modelica_real)3.1415926);
-  array_alloc_scalar_real_array(&tmp2901, 28, (modelica_real)-0.872665, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2902, 28, (modelica_real)-0.785398, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.515733288, (modelica_real)0.582273933, (modelica_real)0.644111335, (modelica_real)0.700774874, (modelica_real)0.751833306, (modelica_real)0.796898047, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.796898047, (modelica_real)0.751833306, (modelica_real)0.700774874, (modelica_real)0.644111335, (modelica_real)0.582273933, (modelica_real)0.515733288, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2903, 28, (modelica_real)-0.698132, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.558719885, (modelica_real)0.630806722, (modelica_real)0.697798298, (modelica_real)0.759184768, (modelica_real)0.814498944, (modelica_real)0.86331985, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.86331985, (modelica_real)0.814498944, (modelica_real)0.759184768, (modelica_real)0.697798298, (modelica_real)0.630806722, (modelica_real)0.558719885, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2904, 28, (modelica_real)-0.610865, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.5974542859999999, (modelica_real)0.674538691, (modelica_real)0.746174596, (modelica_real)0.811816808, (modelica_real)0.870965752, (modelica_real)0.923171268, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.923171268, (modelica_real)0.870965752, (modelica_real)0.811816808, (modelica_real)0.746174596, (modelica_real)0.674538691, (modelica_real)0.5974542859999999, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2905, 28, (modelica_real)-0.523599, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.6316417, (modelica_real)0.713137013, (modelica_real)0.788872054, (modelica_real)0.8582704330000001, (modelica_real)0.920803986, (modelica_real)0.975996795, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.975996795, (modelica_real)0.920803986, (modelica_real)0.8582704330000001, (modelica_real)0.788872054, (modelica_real)0.713137013, (modelica_real)0.6316417, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2906, 28, (modelica_real)-0.436332, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2907, 28, (modelica_real)-0.349066, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2908, 28, (modelica_real)-0.261799, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2909, 28, (modelica_real)-0.174533, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2910, 28, (modelica_real)-0.087266, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2911, 28, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2912, 28, (modelica_real)0.087266, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2913, 28, (modelica_real)0.174533, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2914, 28, (modelica_real)0.261799, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2915, 28, (modelica_real)0.349066, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2916, 28, (modelica_real)0.436332, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2917, 28, (modelica_real)0.523599, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.6316417, (modelica_real)0.713137013, (modelica_real)0.788872054, (modelica_real)0.8582704330000001, (modelica_real)0.920803986, (modelica_real)0.975996795, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.975996795, (modelica_real)0.920803986, (modelica_real)0.8582704330000001, (modelica_real)0.788872054, (modelica_real)0.713137013, (modelica_real)0.6316417, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2918, 28, (modelica_real)0.610865, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.5974542859999999, (modelica_real)0.674538691, (modelica_real)0.746174596, (modelica_real)0.811816808, (modelica_real)0.870965752, (modelica_real)0.923171268, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.923171268, (modelica_real)0.870965752, (modelica_real)0.811816808, (modelica_real)0.746174596, (modelica_real)0.674538691, (modelica_real)0.5974542859999999, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2919, 28, (modelica_real)0.698132, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.558719885, (modelica_real)0.630806722, (modelica_real)0.697798298, (modelica_real)0.759184768, (modelica_real)0.814498944, (modelica_real)0.86331985, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.86331985, (modelica_real)0.814498944, (modelica_real)0.759184768, (modelica_real)0.697798298, (modelica_real)0.630806722, (modelica_real)0.558719885, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2920, 28, (modelica_real)0.785398, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.515733288, (modelica_real)0.582273933, (modelica_real)0.644111335, (modelica_real)0.700774874, (modelica_real)0.751833306, (modelica_real)0.796898047, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.796898047, (modelica_real)0.751833306, (modelica_real)0.700774874, (modelica_real)0.644111335, (modelica_real)0.582273933, (modelica_real)0.515733288, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2921, 28, (modelica_real)0.872665, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_real_array(&tmp2899, 22, &tmp2900, &tmp2901, &tmp2902, &tmp2903, &tmp2904, &tmp2905, &tmp2906, &tmp2907, &tmp2908, &tmp2909, &tmp2910, &tmp2911, &tmp2912, &tmp2913, &tmp2914, &tmp2915, &tmp2916, &tmp2917, &tmp2918, &tmp2919, &tmp2920, &tmp2921);
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB5$rB$Pshading_twelve1$PmodShadingLUT_2$PtableID = tmp2898.c1;
+  alloc_real_array(&tmp2899, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp2922 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "NoName", "NoName", tmp2899, 1);
+  tmp2900 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\1.txt", tmp2899, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB5$rB$Pshading_twelve1$PShading_matrix$PtableID = tmp2922.c1;
-  alloc_real_array(&tmp2923, 2, 0, 1);
-  array_alloc_scalar_integer_array(&tmp2924, 12, (modelica_integer)(modelica_integer) 2, (modelica_integer)(modelica_integer) 3, (modelica_integer)(modelica_integer) 4, (modelica_integer)(modelica_integer) 5, (modelica_integer)(modelica_integer) 6, (modelica_integer)(modelica_integer) 7, (modelica_integer)(modelica_integer) 8, (modelica_integer)(modelica_integer) 9, (modelica_integer)(modelica_integer) 10, (modelica_integer)(modelica_integer) 11, (modelica_integer)(modelica_integer) 12, (modelica_integer)(modelica_integer) 13);
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB5$rB$Pshading_twelve1$PmodShadingLUT_1$PtableID = tmp2900.c1;
+  array_alloc_scalar_real_array(&tmp2902, 28, (modelica_real)0.0, (modelica_real)-3.1415926, (modelica_real)-1.04719, (modelica_real)-0.959927, (modelica_real)-0.872667, (modelica_real)-0.785397, (modelica_real)-0.6981270000000001, (modelica_real)-0.610867, (modelica_real)-0.523597, (modelica_real)-0.436327, (modelica_real)-0.349067, (modelica_real)-0.261797, (modelica_real)-0.174837, (modelica_real)-0.08726730000000001, (modelica_real)0.0, (modelica_real)0.08726730000000001, (modelica_real)0.174837, (modelica_real)0.261797, (modelica_real)0.349067, (modelica_real)0.436327, (modelica_real)0.523597, (modelica_real)0.610867, (modelica_real)0.6981270000000001, (modelica_real)0.785397, (modelica_real)0.872667, (modelica_real)0.959927, (modelica_real)1.04719, (modelica_real)3.1415926);
+  array_alloc_scalar_real_array(&tmp2903, 28, (modelica_real)-0.872665, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2904, 28, (modelica_real)-0.785398, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.515733288, (modelica_real)0.582273933, (modelica_real)0.644111335, (modelica_real)0.700774874, (modelica_real)0.751833306, (modelica_real)0.796898047, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.796898047, (modelica_real)0.751833306, (modelica_real)0.700774874, (modelica_real)0.644111335, (modelica_real)0.582273933, (modelica_real)0.515733288, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2905, 28, (modelica_real)-0.698132, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.558719885, (modelica_real)0.630806722, (modelica_real)0.697798298, (modelica_real)0.759184768, (modelica_real)0.814498944, (modelica_real)0.86331985, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.86331985, (modelica_real)0.814498944, (modelica_real)0.759184768, (modelica_real)0.697798298, (modelica_real)0.630806722, (modelica_real)0.558719885, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2906, 28, (modelica_real)-0.610865, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.5974542859999999, (modelica_real)0.674538691, (modelica_real)0.746174596, (modelica_real)0.811816808, (modelica_real)0.870965752, (modelica_real)0.923171268, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.923171268, (modelica_real)0.870965752, (modelica_real)0.811816808, (modelica_real)0.746174596, (modelica_real)0.674538691, (modelica_real)0.5974542859999999, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2907, 28, (modelica_real)-0.523599, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.6316417, (modelica_real)0.713137013, (modelica_real)0.788872054, (modelica_real)0.8582704330000001, (modelica_real)0.920803986, (modelica_real)0.975996795, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.975996795, (modelica_real)0.920803986, (modelica_real)0.8582704330000001, (modelica_real)0.788872054, (modelica_real)0.713137013, (modelica_real)0.6316417, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2908, 28, (modelica_real)-0.436332, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2909, 28, (modelica_real)-0.349066, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2910, 28, (modelica_real)-0.261799, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2911, 28, (modelica_real)-0.174533, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2912, 28, (modelica_real)-0.087266, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2913, 28, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2914, 28, (modelica_real)0.087266, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2915, 28, (modelica_real)0.174533, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2916, 28, (modelica_real)0.261799, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2917, 28, (modelica_real)0.349066, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2918, 28, (modelica_real)0.436332, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2919, 28, (modelica_real)0.523599, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.6316417, (modelica_real)0.713137013, (modelica_real)0.788872054, (modelica_real)0.8582704330000001, (modelica_real)0.920803986, (modelica_real)0.975996795, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.975996795, (modelica_real)0.920803986, (modelica_real)0.8582704330000001, (modelica_real)0.788872054, (modelica_real)0.713137013, (modelica_real)0.6316417, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2920, 28, (modelica_real)0.610865, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.5974542859999999, (modelica_real)0.674538691, (modelica_real)0.746174596, (modelica_real)0.811816808, (modelica_real)0.870965752, (modelica_real)0.923171268, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.923171268, (modelica_real)0.870965752, (modelica_real)0.811816808, (modelica_real)0.746174596, (modelica_real)0.674538691, (modelica_real)0.5974542859999999, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2921, 28, (modelica_real)0.698132, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.558719885, (modelica_real)0.630806722, (modelica_real)0.697798298, (modelica_real)0.759184768, (modelica_real)0.814498944, (modelica_real)0.86331985, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.86331985, (modelica_real)0.814498944, (modelica_real)0.759184768, (modelica_real)0.697798298, (modelica_real)0.630806722, (modelica_real)0.558719885, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2922, 28, (modelica_real)0.785398, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.515733288, (modelica_real)0.582273933, (modelica_real)0.644111335, (modelica_real)0.700774874, (modelica_real)0.751833306, (modelica_real)0.796898047, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.796898047, (modelica_real)0.751833306, (modelica_real)0.700774874, (modelica_real)0.644111335, (modelica_real)0.582273933, (modelica_real)0.515733288, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2923, 28, (modelica_real)0.872665, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_real_array(&tmp2901, 22, &tmp2902, &tmp2903, &tmp2904, &tmp2905, &tmp2906, &tmp2907, &tmp2908, &tmp2909, &tmp2910, &tmp2911, &tmp2912, &tmp2913, &tmp2914, &tmp2915, &tmp2916, &tmp2917, &tmp2918, &tmp2919, &tmp2920, &tmp2921, &tmp2922, &tmp2923);
+
+  #ifdef _OMC_MEASURE_TIME
+  SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
+  #endif
+  tmp2924 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "NoName", "NoName", tmp2901, 1);
+
+  #ifdef _OMC_MEASURE_TIME
+  SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
+  #endif
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB5$rB$Pshading_twelve1$PShading_matrix$PtableID = tmp2924.c1;
+  alloc_real_array(&tmp2925, 2, 0, 1);
+  array_alloc_scalar_integer_array(&tmp2926, 12, (modelica_integer)(modelica_integer) 2, (modelica_integer)(modelica_integer) 3, (modelica_integer)(modelica_integer) 4, (modelica_integer)(modelica_integer) 5, (modelica_integer)(modelica_integer) 6, (modelica_integer)(modelica_integer) 7, (modelica_integer)(modelica_integer) 8, (modelica_integer)(modelica_integer) 9, (modelica_integer)(modelica_integer) 10, (modelica_integer)(modelica_integer) 11, (modelica_integer)(modelica_integer) 12, (modelica_integer)(modelica_integer) 13);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTimeTable_constructor_index);
   #endif
-  tmp2925 = omc_Modelica_Blocks_Types_ExternalCombiTimeTable_constructor(threadData, "EgenIO", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\20150220\\EgenIO.txt", tmp2923, 0.0, tmp2924, 3, 1);
+  tmp2927 = omc_Modelica_Blocks_Types_ExternalCombiTimeTable_constructor(threadData, "EgenIO", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\20150220\\EgenIO.txt", tmp2925, 0.0, tmp2926, 3, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTimeTable_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB4$rB$PeGen_on$PtableID = tmp2925.c1;
-  alloc_real_array(&tmp2926, 2, 0, 1);
-
-  #ifdef _OMC_MEASURE_TIME
-  SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
-  #endif
-  tmp2927 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\12.txt", tmp2926, 1);
-
-  #ifdef _OMC_MEASURE_TIME
-  SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
-  #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB4$rB$Pshading_twelve1$PmodShadingLUT_12$PtableID = tmp2927.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB4$rB$PeGen_on$PtableID = tmp2927.c1;
   alloc_real_array(&tmp2928, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp2929 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\11.txt", tmp2928, 1);
+  tmp2929 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\12.txt", tmp2928, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB4$rB$Pshading_twelve1$PmodShadingLUT_11$PtableID = tmp2929.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB4$rB$Pshading_twelve1$PmodShadingLUT_12$PtableID = tmp2929.c1;
   alloc_real_array(&tmp2930, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp2931 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\10.txt", tmp2930, 1);
+  tmp2931 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\11.txt", tmp2930, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB4$rB$Pshading_twelve1$PmodShadingLUT_10$PtableID = tmp2931.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB4$rB$Pshading_twelve1$PmodShadingLUT_11$PtableID = tmp2931.c1;
   alloc_real_array(&tmp2932, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp2933 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\9.txt", tmp2932, 1);
+  tmp2933 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\10.txt", tmp2932, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB4$rB$Pshading_twelve1$PmodShadingLUT_9$PtableID = tmp2933.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB4$rB$Pshading_twelve1$PmodShadingLUT_10$PtableID = tmp2933.c1;
   alloc_real_array(&tmp2934, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp2935 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\8.txt", tmp2934, 1);
+  tmp2935 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\9.txt", tmp2934, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB4$rB$Pshading_twelve1$PmodShadingLUT_8$PtableID = tmp2935.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB4$rB$Pshading_twelve1$PmodShadingLUT_9$PtableID = tmp2935.c1;
   alloc_real_array(&tmp2936, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp2937 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\7.txt", tmp2936, 1);
+  tmp2937 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\8.txt", tmp2936, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB4$rB$Pshading_twelve1$PmodShadingLUT_7$PtableID = tmp2937.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB4$rB$Pshading_twelve1$PmodShadingLUT_8$PtableID = tmp2937.c1;
   alloc_real_array(&tmp2938, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp2939 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\6.txt", tmp2938, 1);
+  tmp2939 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\7.txt", tmp2938, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB4$rB$Pshading_twelve1$PmodShadingLUT_6$PtableID = tmp2939.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB4$rB$Pshading_twelve1$PmodShadingLUT_7$PtableID = tmp2939.c1;
   alloc_real_array(&tmp2940, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp2941 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\5.txt", tmp2940, 1);
+  tmp2941 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\6.txt", tmp2940, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB4$rB$Pshading_twelve1$PmodShadingLUT_5$PtableID = tmp2941.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB4$rB$Pshading_twelve1$PmodShadingLUT_6$PtableID = tmp2941.c1;
   alloc_real_array(&tmp2942, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp2943 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\4.txt", tmp2942, 1);
+  tmp2943 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\5.txt", tmp2942, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB4$rB$Pshading_twelve1$PmodShadingLUT_4$PtableID = tmp2943.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB4$rB$Pshading_twelve1$PmodShadingLUT_5$PtableID = tmp2943.c1;
   alloc_real_array(&tmp2944, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp2945 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\3.txt", tmp2944, 1);
+  tmp2945 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\4.txt", tmp2944, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB4$rB$Pshading_twelve1$PmodShadingLUT_3$PtableID = tmp2945.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB4$rB$Pshading_twelve1$PmodShadingLUT_4$PtableID = tmp2945.c1;
   alloc_real_array(&tmp2946, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp2947 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\2.txt", tmp2946, 1);
+  tmp2947 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\3.txt", tmp2946, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB4$rB$Pshading_twelve1$PmodShadingLUT_2$PtableID = tmp2947.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB4$rB$Pshading_twelve1$PmodShadingLUT_3$PtableID = tmp2947.c1;
   alloc_real_array(&tmp2948, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp2949 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\1.txt", tmp2948, 1);
+  tmp2949 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\2.txt", tmp2948, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB4$rB$Pshading_twelve1$PmodShadingLUT_1$PtableID = tmp2949.c1;
-  array_alloc_scalar_real_array(&tmp2951, 28, (modelica_real)0.0, (modelica_real)-3.1415926, (modelica_real)-1.04719, (modelica_real)-0.959927, (modelica_real)-0.872667, (modelica_real)-0.785397, (modelica_real)-0.6981270000000001, (modelica_real)-0.610867, (modelica_real)-0.523597, (modelica_real)-0.436327, (modelica_real)-0.349067, (modelica_real)-0.261797, (modelica_real)-0.174837, (modelica_real)-0.08726730000000001, (modelica_real)0.0, (modelica_real)0.08726730000000001, (modelica_real)0.174837, (modelica_real)0.261797, (modelica_real)0.349067, (modelica_real)0.436327, (modelica_real)0.523597, (modelica_real)0.610867, (modelica_real)0.6981270000000001, (modelica_real)0.785397, (modelica_real)0.872667, (modelica_real)0.959927, (modelica_real)1.04719, (modelica_real)3.1415926);
-  array_alloc_scalar_real_array(&tmp2952, 28, (modelica_real)-0.872665, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2953, 28, (modelica_real)-0.785398, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.515733288, (modelica_real)0.582273933, (modelica_real)0.644111335, (modelica_real)0.700774874, (modelica_real)0.751833306, (modelica_real)0.796898047, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.796898047, (modelica_real)0.751833306, (modelica_real)0.700774874, (modelica_real)0.644111335, (modelica_real)0.582273933, (modelica_real)0.515733288, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2954, 28, (modelica_real)-0.698132, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.558719885, (modelica_real)0.630806722, (modelica_real)0.697798298, (modelica_real)0.759184768, (modelica_real)0.814498944, (modelica_real)0.86331985, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.86331985, (modelica_real)0.814498944, (modelica_real)0.759184768, (modelica_real)0.697798298, (modelica_real)0.630806722, (modelica_real)0.558719885, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2955, 28, (modelica_real)-0.610865, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.5974542859999999, (modelica_real)0.674538691, (modelica_real)0.746174596, (modelica_real)0.811816808, (modelica_real)0.870965752, (modelica_real)0.923171268, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.923171268, (modelica_real)0.870965752, (modelica_real)0.811816808, (modelica_real)0.746174596, (modelica_real)0.674538691, (modelica_real)0.5974542859999999, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2956, 28, (modelica_real)-0.523599, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.6316417, (modelica_real)0.713137013, (modelica_real)0.788872054, (modelica_real)0.8582704330000001, (modelica_real)0.920803986, (modelica_real)0.975996795, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.975996795, (modelica_real)0.920803986, (modelica_real)0.8582704330000001, (modelica_real)0.788872054, (modelica_real)0.713137013, (modelica_real)0.6316417, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2957, 28, (modelica_real)-0.436332, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2958, 28, (modelica_real)-0.349066, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2959, 28, (modelica_real)-0.261799, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2960, 28, (modelica_real)-0.174533, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2961, 28, (modelica_real)-0.087266, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2962, 28, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2963, 28, (modelica_real)0.087266, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2964, 28, (modelica_real)0.174533, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2965, 28, (modelica_real)0.261799, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2966, 28, (modelica_real)0.349066, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2967, 28, (modelica_real)0.436332, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2968, 28, (modelica_real)0.523599, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.6316417, (modelica_real)0.713137013, (modelica_real)0.788872054, (modelica_real)0.8582704330000001, (modelica_real)0.920803986, (modelica_real)0.975996795, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.975996795, (modelica_real)0.920803986, (modelica_real)0.8582704330000001, (modelica_real)0.788872054, (modelica_real)0.713137013, (modelica_real)0.6316417, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2969, 28, (modelica_real)0.610865, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.5974542859999999, (modelica_real)0.674538691, (modelica_real)0.746174596, (modelica_real)0.811816808, (modelica_real)0.870965752, (modelica_real)0.923171268, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.923171268, (modelica_real)0.870965752, (modelica_real)0.811816808, (modelica_real)0.746174596, (modelica_real)0.674538691, (modelica_real)0.5974542859999999, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2970, 28, (modelica_real)0.698132, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.558719885, (modelica_real)0.630806722, (modelica_real)0.697798298, (modelica_real)0.759184768, (modelica_real)0.814498944, (modelica_real)0.86331985, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.86331985, (modelica_real)0.814498944, (modelica_real)0.759184768, (modelica_real)0.697798298, (modelica_real)0.630806722, (modelica_real)0.558719885, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2971, 28, (modelica_real)0.785398, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.515733288, (modelica_real)0.582273933, (modelica_real)0.644111335, (modelica_real)0.700774874, (modelica_real)0.751833306, (modelica_real)0.796898047, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.796898047, (modelica_real)0.751833306, (modelica_real)0.700774874, (modelica_real)0.644111335, (modelica_real)0.582273933, (modelica_real)0.515733288, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp2972, 28, (modelica_real)0.872665, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_real_array(&tmp2950, 22, &tmp2951, &tmp2952, &tmp2953, &tmp2954, &tmp2955, &tmp2956, &tmp2957, &tmp2958, &tmp2959, &tmp2960, &tmp2961, &tmp2962, &tmp2963, &tmp2964, &tmp2965, &tmp2966, &tmp2967, &tmp2968, &tmp2969, &tmp2970, &tmp2971, &tmp2972);
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB4$rB$Pshading_twelve1$PmodShadingLUT_2$PtableID = tmp2949.c1;
+  alloc_real_array(&tmp2950, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp2973 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "NoName", "NoName", tmp2950, 1);
+  tmp2951 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\1.txt", tmp2950, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB4$rB$Pshading_twelve1$PShading_matrix$PtableID = tmp2973.c1;
-  alloc_real_array(&tmp2974, 2, 0, 1);
-  array_alloc_scalar_integer_array(&tmp2975, 12, (modelica_integer)(modelica_integer) 2, (modelica_integer)(modelica_integer) 3, (modelica_integer)(modelica_integer) 4, (modelica_integer)(modelica_integer) 5, (modelica_integer)(modelica_integer) 6, (modelica_integer)(modelica_integer) 7, (modelica_integer)(modelica_integer) 8, (modelica_integer)(modelica_integer) 9, (modelica_integer)(modelica_integer) 10, (modelica_integer)(modelica_integer) 11, (modelica_integer)(modelica_integer) 12, (modelica_integer)(modelica_integer) 13);
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB4$rB$Pshading_twelve1$PmodShadingLUT_1$PtableID = tmp2951.c1;
+  array_alloc_scalar_real_array(&tmp2953, 28, (modelica_real)0.0, (modelica_real)-3.1415926, (modelica_real)-1.04719, (modelica_real)-0.959927, (modelica_real)-0.872667, (modelica_real)-0.785397, (modelica_real)-0.6981270000000001, (modelica_real)-0.610867, (modelica_real)-0.523597, (modelica_real)-0.436327, (modelica_real)-0.349067, (modelica_real)-0.261797, (modelica_real)-0.174837, (modelica_real)-0.08726730000000001, (modelica_real)0.0, (modelica_real)0.08726730000000001, (modelica_real)0.174837, (modelica_real)0.261797, (modelica_real)0.349067, (modelica_real)0.436327, (modelica_real)0.523597, (modelica_real)0.610867, (modelica_real)0.6981270000000001, (modelica_real)0.785397, (modelica_real)0.872667, (modelica_real)0.959927, (modelica_real)1.04719, (modelica_real)3.1415926);
+  array_alloc_scalar_real_array(&tmp2954, 28, (modelica_real)-0.872665, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2955, 28, (modelica_real)-0.785398, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.515733288, (modelica_real)0.582273933, (modelica_real)0.644111335, (modelica_real)0.700774874, (modelica_real)0.751833306, (modelica_real)0.796898047, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.796898047, (modelica_real)0.751833306, (modelica_real)0.700774874, (modelica_real)0.644111335, (modelica_real)0.582273933, (modelica_real)0.515733288, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2956, 28, (modelica_real)-0.698132, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.558719885, (modelica_real)0.630806722, (modelica_real)0.697798298, (modelica_real)0.759184768, (modelica_real)0.814498944, (modelica_real)0.86331985, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.86331985, (modelica_real)0.814498944, (modelica_real)0.759184768, (modelica_real)0.697798298, (modelica_real)0.630806722, (modelica_real)0.558719885, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2957, 28, (modelica_real)-0.610865, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.5974542859999999, (modelica_real)0.674538691, (modelica_real)0.746174596, (modelica_real)0.811816808, (modelica_real)0.870965752, (modelica_real)0.923171268, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.923171268, (modelica_real)0.870965752, (modelica_real)0.811816808, (modelica_real)0.746174596, (modelica_real)0.674538691, (modelica_real)0.5974542859999999, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2958, 28, (modelica_real)-0.523599, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.6316417, (modelica_real)0.713137013, (modelica_real)0.788872054, (modelica_real)0.8582704330000001, (modelica_real)0.920803986, (modelica_real)0.975996795, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.975996795, (modelica_real)0.920803986, (modelica_real)0.8582704330000001, (modelica_real)0.788872054, (modelica_real)0.713137013, (modelica_real)0.6316417, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2959, 28, (modelica_real)-0.436332, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2960, 28, (modelica_real)-0.349066, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2961, 28, (modelica_real)-0.261799, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2962, 28, (modelica_real)-0.174533, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2963, 28, (modelica_real)-0.087266, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2964, 28, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2965, 28, (modelica_real)0.087266, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2966, 28, (modelica_real)0.174533, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2967, 28, (modelica_real)0.261799, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2968, 28, (modelica_real)0.349066, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2969, 28, (modelica_real)0.436332, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2970, 28, (modelica_real)0.523599, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.6316417, (modelica_real)0.713137013, (modelica_real)0.788872054, (modelica_real)0.8582704330000001, (modelica_real)0.920803986, (modelica_real)0.975996795, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.975996795, (modelica_real)0.920803986, (modelica_real)0.8582704330000001, (modelica_real)0.788872054, (modelica_real)0.713137013, (modelica_real)0.6316417, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2971, 28, (modelica_real)0.610865, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.5974542859999999, (modelica_real)0.674538691, (modelica_real)0.746174596, (modelica_real)0.811816808, (modelica_real)0.870965752, (modelica_real)0.923171268, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.923171268, (modelica_real)0.870965752, (modelica_real)0.811816808, (modelica_real)0.746174596, (modelica_real)0.674538691, (modelica_real)0.5974542859999999, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2972, 28, (modelica_real)0.698132, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.558719885, (modelica_real)0.630806722, (modelica_real)0.697798298, (modelica_real)0.759184768, (modelica_real)0.814498944, (modelica_real)0.86331985, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.86331985, (modelica_real)0.814498944, (modelica_real)0.759184768, (modelica_real)0.697798298, (modelica_real)0.630806722, (modelica_real)0.558719885, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2973, 28, (modelica_real)0.785398, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.515733288, (modelica_real)0.582273933, (modelica_real)0.644111335, (modelica_real)0.700774874, (modelica_real)0.751833306, (modelica_real)0.796898047, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.796898047, (modelica_real)0.751833306, (modelica_real)0.700774874, (modelica_real)0.644111335, (modelica_real)0.582273933, (modelica_real)0.515733288, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp2974, 28, (modelica_real)0.872665, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_real_array(&tmp2952, 22, &tmp2953, &tmp2954, &tmp2955, &tmp2956, &tmp2957, &tmp2958, &tmp2959, &tmp2960, &tmp2961, &tmp2962, &tmp2963, &tmp2964, &tmp2965, &tmp2966, &tmp2967, &tmp2968, &tmp2969, &tmp2970, &tmp2971, &tmp2972, &tmp2973, &tmp2974);
+
+  #ifdef _OMC_MEASURE_TIME
+  SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
+  #endif
+  tmp2975 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "NoName", "NoName", tmp2952, 1);
+
+  #ifdef _OMC_MEASURE_TIME
+  SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
+  #endif
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB4$rB$Pshading_twelve1$PShading_matrix$PtableID = tmp2975.c1;
+  alloc_real_array(&tmp2976, 2, 0, 1);
+  array_alloc_scalar_integer_array(&tmp2977, 12, (modelica_integer)(modelica_integer) 2, (modelica_integer)(modelica_integer) 3, (modelica_integer)(modelica_integer) 4, (modelica_integer)(modelica_integer) 5, (modelica_integer)(modelica_integer) 6, (modelica_integer)(modelica_integer) 7, (modelica_integer)(modelica_integer) 8, (modelica_integer)(modelica_integer) 9, (modelica_integer)(modelica_integer) 10, (modelica_integer)(modelica_integer) 11, (modelica_integer)(modelica_integer) 12, (modelica_integer)(modelica_integer) 13);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTimeTable_constructor_index);
   #endif
-  tmp2976 = omc_Modelica_Blocks_Types_ExternalCombiTimeTable_constructor(threadData, "EgenIO", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\20150220\\EgenIO.txt", tmp2974, 0.0, tmp2975, 3, 1);
+  tmp2978 = omc_Modelica_Blocks_Types_ExternalCombiTimeTable_constructor(threadData, "EgenIO", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\20150220\\EgenIO.txt", tmp2976, 0.0, tmp2977, 3, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTimeTable_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB3$rB$PeGen_on$PtableID = tmp2976.c1;
-  alloc_real_array(&tmp2977, 2, 0, 1);
-
-  #ifdef _OMC_MEASURE_TIME
-  SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
-  #endif
-  tmp2978 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\12.txt", tmp2977, 1);
-
-  #ifdef _OMC_MEASURE_TIME
-  SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
-  #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB3$rB$Pshading_twelve1$PmodShadingLUT_12$PtableID = tmp2978.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB3$rB$PeGen_on$PtableID = tmp2978.c1;
   alloc_real_array(&tmp2979, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp2980 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\11.txt", tmp2979, 1);
+  tmp2980 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\12.txt", tmp2979, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB3$rB$Pshading_twelve1$PmodShadingLUT_11$PtableID = tmp2980.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB3$rB$Pshading_twelve1$PmodShadingLUT_12$PtableID = tmp2980.c1;
   alloc_real_array(&tmp2981, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp2982 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\10.txt", tmp2981, 1);
+  tmp2982 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\11.txt", tmp2981, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB3$rB$Pshading_twelve1$PmodShadingLUT_10$PtableID = tmp2982.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB3$rB$Pshading_twelve1$PmodShadingLUT_11$PtableID = tmp2982.c1;
   alloc_real_array(&tmp2983, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp2984 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\9.txt", tmp2983, 1);
+  tmp2984 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\10.txt", tmp2983, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB3$rB$Pshading_twelve1$PmodShadingLUT_9$PtableID = tmp2984.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB3$rB$Pshading_twelve1$PmodShadingLUT_10$PtableID = tmp2984.c1;
   alloc_real_array(&tmp2985, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp2986 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\8.txt", tmp2985, 1);
+  tmp2986 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\9.txt", tmp2985, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB3$rB$Pshading_twelve1$PmodShadingLUT_8$PtableID = tmp2986.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB3$rB$Pshading_twelve1$PmodShadingLUT_9$PtableID = tmp2986.c1;
   alloc_real_array(&tmp2987, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp2988 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\7.txt", tmp2987, 1);
+  tmp2988 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\8.txt", tmp2987, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB3$rB$Pshading_twelve1$PmodShadingLUT_7$PtableID = tmp2988.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB3$rB$Pshading_twelve1$PmodShadingLUT_8$PtableID = tmp2988.c1;
   alloc_real_array(&tmp2989, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp2990 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\6.txt", tmp2989, 1);
+  tmp2990 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\7.txt", tmp2989, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB3$rB$Pshading_twelve1$PmodShadingLUT_6$PtableID = tmp2990.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB3$rB$Pshading_twelve1$PmodShadingLUT_7$PtableID = tmp2990.c1;
   alloc_real_array(&tmp2991, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp2992 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\5.txt", tmp2991, 1);
+  tmp2992 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\6.txt", tmp2991, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB3$rB$Pshading_twelve1$PmodShadingLUT_5$PtableID = tmp2992.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB3$rB$Pshading_twelve1$PmodShadingLUT_6$PtableID = tmp2992.c1;
   alloc_real_array(&tmp2993, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp2994 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\4.txt", tmp2993, 1);
+  tmp2994 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\5.txt", tmp2993, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB3$rB$Pshading_twelve1$PmodShadingLUT_4$PtableID = tmp2994.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB3$rB$Pshading_twelve1$PmodShadingLUT_5$PtableID = tmp2994.c1;
   alloc_real_array(&tmp2995, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp2996 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\3.txt", tmp2995, 1);
+  tmp2996 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\4.txt", tmp2995, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB3$rB$Pshading_twelve1$PmodShadingLUT_3$PtableID = tmp2996.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB3$rB$Pshading_twelve1$PmodShadingLUT_4$PtableID = tmp2996.c1;
   alloc_real_array(&tmp2997, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp2998 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\2.txt", tmp2997, 1);
+  tmp2998 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\3.txt", tmp2997, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB3$rB$Pshading_twelve1$PmodShadingLUT_2$PtableID = tmp2998.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB3$rB$Pshading_twelve1$PmodShadingLUT_3$PtableID = tmp2998.c1;
   alloc_real_array(&tmp2999, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3000 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\1.txt", tmp2999, 1);
+  tmp3000 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\2.txt", tmp2999, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB3$rB$Pshading_twelve1$PmodShadingLUT_1$PtableID = tmp3000.c1;
-  array_alloc_scalar_real_array(&tmp3002, 28, (modelica_real)0.0, (modelica_real)-3.1415926, (modelica_real)-1.04719, (modelica_real)-0.959927, (modelica_real)-0.872667, (modelica_real)-0.785397, (modelica_real)-0.6981270000000001, (modelica_real)-0.610867, (modelica_real)-0.523597, (modelica_real)-0.436327, (modelica_real)-0.349067, (modelica_real)-0.261797, (modelica_real)-0.174837, (modelica_real)-0.08726730000000001, (modelica_real)0.0, (modelica_real)0.08726730000000001, (modelica_real)0.174837, (modelica_real)0.261797, (modelica_real)0.349067, (modelica_real)0.436327, (modelica_real)0.523597, (modelica_real)0.610867, (modelica_real)0.6981270000000001, (modelica_real)0.785397, (modelica_real)0.872667, (modelica_real)0.959927, (modelica_real)1.04719, (modelica_real)3.1415926);
-  array_alloc_scalar_real_array(&tmp3003, 28, (modelica_real)-0.872665, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3004, 28, (modelica_real)-0.785398, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.515733288, (modelica_real)0.582273933, (modelica_real)0.644111335, (modelica_real)0.700774874, (modelica_real)0.751833306, (modelica_real)0.796898047, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.796898047, (modelica_real)0.751833306, (modelica_real)0.700774874, (modelica_real)0.644111335, (modelica_real)0.582273933, (modelica_real)0.515733288, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3005, 28, (modelica_real)-0.698132, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.558719885, (modelica_real)0.630806722, (modelica_real)0.697798298, (modelica_real)0.759184768, (modelica_real)0.814498944, (modelica_real)0.86331985, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.86331985, (modelica_real)0.814498944, (modelica_real)0.759184768, (modelica_real)0.697798298, (modelica_real)0.630806722, (modelica_real)0.558719885, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3006, 28, (modelica_real)-0.610865, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.5974542859999999, (modelica_real)0.674538691, (modelica_real)0.746174596, (modelica_real)0.811816808, (modelica_real)0.870965752, (modelica_real)0.923171268, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.923171268, (modelica_real)0.870965752, (modelica_real)0.811816808, (modelica_real)0.746174596, (modelica_real)0.674538691, (modelica_real)0.5974542859999999, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3007, 28, (modelica_real)-0.523599, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.6316417, (modelica_real)0.713137013, (modelica_real)0.788872054, (modelica_real)0.8582704330000001, (modelica_real)0.920803986, (modelica_real)0.975996795, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.975996795, (modelica_real)0.920803986, (modelica_real)0.8582704330000001, (modelica_real)0.788872054, (modelica_real)0.713137013, (modelica_real)0.6316417, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3008, 28, (modelica_real)-0.436332, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3009, 28, (modelica_real)-0.349066, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3010, 28, (modelica_real)-0.261799, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3011, 28, (modelica_real)-0.174533, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3012, 28, (modelica_real)-0.087266, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3013, 28, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3014, 28, (modelica_real)0.087266, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3015, 28, (modelica_real)0.174533, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3016, 28, (modelica_real)0.261799, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3017, 28, (modelica_real)0.349066, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3018, 28, (modelica_real)0.436332, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3019, 28, (modelica_real)0.523599, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.6316417, (modelica_real)0.713137013, (modelica_real)0.788872054, (modelica_real)0.8582704330000001, (modelica_real)0.920803986, (modelica_real)0.975996795, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.975996795, (modelica_real)0.920803986, (modelica_real)0.8582704330000001, (modelica_real)0.788872054, (modelica_real)0.713137013, (modelica_real)0.6316417, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3020, 28, (modelica_real)0.610865, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.5974542859999999, (modelica_real)0.674538691, (modelica_real)0.746174596, (modelica_real)0.811816808, (modelica_real)0.870965752, (modelica_real)0.923171268, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.923171268, (modelica_real)0.870965752, (modelica_real)0.811816808, (modelica_real)0.746174596, (modelica_real)0.674538691, (modelica_real)0.5974542859999999, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3021, 28, (modelica_real)0.698132, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.558719885, (modelica_real)0.630806722, (modelica_real)0.697798298, (modelica_real)0.759184768, (modelica_real)0.814498944, (modelica_real)0.86331985, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.86331985, (modelica_real)0.814498944, (modelica_real)0.759184768, (modelica_real)0.697798298, (modelica_real)0.630806722, (modelica_real)0.558719885, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3022, 28, (modelica_real)0.785398, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.515733288, (modelica_real)0.582273933, (modelica_real)0.644111335, (modelica_real)0.700774874, (modelica_real)0.751833306, (modelica_real)0.796898047, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.796898047, (modelica_real)0.751833306, (modelica_real)0.700774874, (modelica_real)0.644111335, (modelica_real)0.582273933, (modelica_real)0.515733288, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3023, 28, (modelica_real)0.872665, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_real_array(&tmp3001, 22, &tmp3002, &tmp3003, &tmp3004, &tmp3005, &tmp3006, &tmp3007, &tmp3008, &tmp3009, &tmp3010, &tmp3011, &tmp3012, &tmp3013, &tmp3014, &tmp3015, &tmp3016, &tmp3017, &tmp3018, &tmp3019, &tmp3020, &tmp3021, &tmp3022, &tmp3023);
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB3$rB$Pshading_twelve1$PmodShadingLUT_2$PtableID = tmp3000.c1;
+  alloc_real_array(&tmp3001, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3024 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "NoName", "NoName", tmp3001, 1);
+  tmp3002 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\1.txt", tmp3001, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB3$rB$Pshading_twelve1$PShading_matrix$PtableID = tmp3024.c1;
-  alloc_real_array(&tmp3025, 2, 0, 1);
-  array_alloc_scalar_integer_array(&tmp3026, 12, (modelica_integer)(modelica_integer) 2, (modelica_integer)(modelica_integer) 3, (modelica_integer)(modelica_integer) 4, (modelica_integer)(modelica_integer) 5, (modelica_integer)(modelica_integer) 6, (modelica_integer)(modelica_integer) 7, (modelica_integer)(modelica_integer) 8, (modelica_integer)(modelica_integer) 9, (modelica_integer)(modelica_integer) 10, (modelica_integer)(modelica_integer) 11, (modelica_integer)(modelica_integer) 12, (modelica_integer)(modelica_integer) 13);
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB3$rB$Pshading_twelve1$PmodShadingLUT_1$PtableID = tmp3002.c1;
+  array_alloc_scalar_real_array(&tmp3004, 28, (modelica_real)0.0, (modelica_real)-3.1415926, (modelica_real)-1.04719, (modelica_real)-0.959927, (modelica_real)-0.872667, (modelica_real)-0.785397, (modelica_real)-0.6981270000000001, (modelica_real)-0.610867, (modelica_real)-0.523597, (modelica_real)-0.436327, (modelica_real)-0.349067, (modelica_real)-0.261797, (modelica_real)-0.174837, (modelica_real)-0.08726730000000001, (modelica_real)0.0, (modelica_real)0.08726730000000001, (modelica_real)0.174837, (modelica_real)0.261797, (modelica_real)0.349067, (modelica_real)0.436327, (modelica_real)0.523597, (modelica_real)0.610867, (modelica_real)0.6981270000000001, (modelica_real)0.785397, (modelica_real)0.872667, (modelica_real)0.959927, (modelica_real)1.04719, (modelica_real)3.1415926);
+  array_alloc_scalar_real_array(&tmp3005, 28, (modelica_real)-0.872665, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3006, 28, (modelica_real)-0.785398, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.515733288, (modelica_real)0.582273933, (modelica_real)0.644111335, (modelica_real)0.700774874, (modelica_real)0.751833306, (modelica_real)0.796898047, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.796898047, (modelica_real)0.751833306, (modelica_real)0.700774874, (modelica_real)0.644111335, (modelica_real)0.582273933, (modelica_real)0.515733288, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3007, 28, (modelica_real)-0.698132, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.558719885, (modelica_real)0.630806722, (modelica_real)0.697798298, (modelica_real)0.759184768, (modelica_real)0.814498944, (modelica_real)0.86331985, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.86331985, (modelica_real)0.814498944, (modelica_real)0.759184768, (modelica_real)0.697798298, (modelica_real)0.630806722, (modelica_real)0.558719885, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3008, 28, (modelica_real)-0.610865, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.5974542859999999, (modelica_real)0.674538691, (modelica_real)0.746174596, (modelica_real)0.811816808, (modelica_real)0.870965752, (modelica_real)0.923171268, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.923171268, (modelica_real)0.870965752, (modelica_real)0.811816808, (modelica_real)0.746174596, (modelica_real)0.674538691, (modelica_real)0.5974542859999999, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3009, 28, (modelica_real)-0.523599, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.6316417, (modelica_real)0.713137013, (modelica_real)0.788872054, (modelica_real)0.8582704330000001, (modelica_real)0.920803986, (modelica_real)0.975996795, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.975996795, (modelica_real)0.920803986, (modelica_real)0.8582704330000001, (modelica_real)0.788872054, (modelica_real)0.713137013, (modelica_real)0.6316417, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3010, 28, (modelica_real)-0.436332, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3011, 28, (modelica_real)-0.349066, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3012, 28, (modelica_real)-0.261799, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3013, 28, (modelica_real)-0.174533, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3014, 28, (modelica_real)-0.087266, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3015, 28, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3016, 28, (modelica_real)0.087266, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3017, 28, (modelica_real)0.174533, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3018, 28, (modelica_real)0.261799, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3019, 28, (modelica_real)0.349066, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3020, 28, (modelica_real)0.436332, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3021, 28, (modelica_real)0.523599, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.6316417, (modelica_real)0.713137013, (modelica_real)0.788872054, (modelica_real)0.8582704330000001, (modelica_real)0.920803986, (modelica_real)0.975996795, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.975996795, (modelica_real)0.920803986, (modelica_real)0.8582704330000001, (modelica_real)0.788872054, (modelica_real)0.713137013, (modelica_real)0.6316417, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3022, 28, (modelica_real)0.610865, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.5974542859999999, (modelica_real)0.674538691, (modelica_real)0.746174596, (modelica_real)0.811816808, (modelica_real)0.870965752, (modelica_real)0.923171268, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.923171268, (modelica_real)0.870965752, (modelica_real)0.811816808, (modelica_real)0.746174596, (modelica_real)0.674538691, (modelica_real)0.5974542859999999, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3023, 28, (modelica_real)0.698132, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.558719885, (modelica_real)0.630806722, (modelica_real)0.697798298, (modelica_real)0.759184768, (modelica_real)0.814498944, (modelica_real)0.86331985, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.86331985, (modelica_real)0.814498944, (modelica_real)0.759184768, (modelica_real)0.697798298, (modelica_real)0.630806722, (modelica_real)0.558719885, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3024, 28, (modelica_real)0.785398, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.515733288, (modelica_real)0.582273933, (modelica_real)0.644111335, (modelica_real)0.700774874, (modelica_real)0.751833306, (modelica_real)0.796898047, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.796898047, (modelica_real)0.751833306, (modelica_real)0.700774874, (modelica_real)0.644111335, (modelica_real)0.582273933, (modelica_real)0.515733288, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3025, 28, (modelica_real)0.872665, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_real_array(&tmp3003, 22, &tmp3004, &tmp3005, &tmp3006, &tmp3007, &tmp3008, &tmp3009, &tmp3010, &tmp3011, &tmp3012, &tmp3013, &tmp3014, &tmp3015, &tmp3016, &tmp3017, &tmp3018, &tmp3019, &tmp3020, &tmp3021, &tmp3022, &tmp3023, &tmp3024, &tmp3025);
+
+  #ifdef _OMC_MEASURE_TIME
+  SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
+  #endif
+  tmp3026 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "NoName", "NoName", tmp3003, 1);
+
+  #ifdef _OMC_MEASURE_TIME
+  SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
+  #endif
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB3$rB$Pshading_twelve1$PShading_matrix$PtableID = tmp3026.c1;
+  alloc_real_array(&tmp3027, 2, 0, 1);
+  array_alloc_scalar_integer_array(&tmp3028, 12, (modelica_integer)(modelica_integer) 2, (modelica_integer)(modelica_integer) 3, (modelica_integer)(modelica_integer) 4, (modelica_integer)(modelica_integer) 5, (modelica_integer)(modelica_integer) 6, (modelica_integer)(modelica_integer) 7, (modelica_integer)(modelica_integer) 8, (modelica_integer)(modelica_integer) 9, (modelica_integer)(modelica_integer) 10, (modelica_integer)(modelica_integer) 11, (modelica_integer)(modelica_integer) 12, (modelica_integer)(modelica_integer) 13);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTimeTable_constructor_index);
   #endif
-  tmp3027 = omc_Modelica_Blocks_Types_ExternalCombiTimeTable_constructor(threadData, "EgenIO", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\20150220\\EgenIO.txt", tmp3025, 0.0, tmp3026, 3, 1);
+  tmp3029 = omc_Modelica_Blocks_Types_ExternalCombiTimeTable_constructor(threadData, "EgenIO", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\20150220\\EgenIO.txt", tmp3027, 0.0, tmp3028, 3, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTimeTable_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB2$rB$PeGen_on$PtableID = tmp3027.c1;
-  alloc_real_array(&tmp3028, 2, 0, 1);
-
-  #ifdef _OMC_MEASURE_TIME
-  SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
-  #endif
-  tmp3029 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\12.txt", tmp3028, 1);
-
-  #ifdef _OMC_MEASURE_TIME
-  SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
-  #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB2$rB$Pshading_twelve1$PmodShadingLUT_12$PtableID = tmp3029.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB2$rB$PeGen_on$PtableID = tmp3029.c1;
   alloc_real_array(&tmp3030, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3031 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\11.txt", tmp3030, 1);
+  tmp3031 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\12.txt", tmp3030, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB2$rB$Pshading_twelve1$PmodShadingLUT_11$PtableID = tmp3031.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB2$rB$Pshading_twelve1$PmodShadingLUT_12$PtableID = tmp3031.c1;
   alloc_real_array(&tmp3032, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3033 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\10.txt", tmp3032, 1);
+  tmp3033 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\11.txt", tmp3032, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB2$rB$Pshading_twelve1$PmodShadingLUT_10$PtableID = tmp3033.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB2$rB$Pshading_twelve1$PmodShadingLUT_11$PtableID = tmp3033.c1;
   alloc_real_array(&tmp3034, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3035 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\9.txt", tmp3034, 1);
+  tmp3035 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\10.txt", tmp3034, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB2$rB$Pshading_twelve1$PmodShadingLUT_9$PtableID = tmp3035.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB2$rB$Pshading_twelve1$PmodShadingLUT_10$PtableID = tmp3035.c1;
   alloc_real_array(&tmp3036, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3037 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\8.txt", tmp3036, 1);
+  tmp3037 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\9.txt", tmp3036, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB2$rB$Pshading_twelve1$PmodShadingLUT_8$PtableID = tmp3037.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB2$rB$Pshading_twelve1$PmodShadingLUT_9$PtableID = tmp3037.c1;
   alloc_real_array(&tmp3038, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3039 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\7.txt", tmp3038, 1);
+  tmp3039 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\8.txt", tmp3038, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB2$rB$Pshading_twelve1$PmodShadingLUT_7$PtableID = tmp3039.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB2$rB$Pshading_twelve1$PmodShadingLUT_8$PtableID = tmp3039.c1;
   alloc_real_array(&tmp3040, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3041 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\6.txt", tmp3040, 1);
+  tmp3041 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\7.txt", tmp3040, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB2$rB$Pshading_twelve1$PmodShadingLUT_6$PtableID = tmp3041.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB2$rB$Pshading_twelve1$PmodShadingLUT_7$PtableID = tmp3041.c1;
   alloc_real_array(&tmp3042, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3043 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\5.txt", tmp3042, 1);
+  tmp3043 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\6.txt", tmp3042, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB2$rB$Pshading_twelve1$PmodShadingLUT_5$PtableID = tmp3043.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB2$rB$Pshading_twelve1$PmodShadingLUT_6$PtableID = tmp3043.c1;
   alloc_real_array(&tmp3044, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3045 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\4.txt", tmp3044, 1);
+  tmp3045 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\5.txt", tmp3044, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB2$rB$Pshading_twelve1$PmodShadingLUT_4$PtableID = tmp3045.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB2$rB$Pshading_twelve1$PmodShadingLUT_5$PtableID = tmp3045.c1;
   alloc_real_array(&tmp3046, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3047 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\3.txt", tmp3046, 1);
+  tmp3047 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\4.txt", tmp3046, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB2$rB$Pshading_twelve1$PmodShadingLUT_3$PtableID = tmp3047.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB2$rB$Pshading_twelve1$PmodShadingLUT_4$PtableID = tmp3047.c1;
   alloc_real_array(&tmp3048, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3049 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\2.txt", tmp3048, 1);
+  tmp3049 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\3.txt", tmp3048, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB2$rB$Pshading_twelve1$PmodShadingLUT_2$PtableID = tmp3049.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB2$rB$Pshading_twelve1$PmodShadingLUT_3$PtableID = tmp3049.c1;
   alloc_real_array(&tmp3050, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3051 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\1.txt", tmp3050, 1);
+  tmp3051 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\2.txt", tmp3050, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB2$rB$Pshading_twelve1$PmodShadingLUT_1$PtableID = tmp3051.c1;
-  array_alloc_scalar_real_array(&tmp3053, 28, (modelica_real)0.0, (modelica_real)-3.1415926, (modelica_real)-1.04719, (modelica_real)-0.959927, (modelica_real)-0.872667, (modelica_real)-0.785397, (modelica_real)-0.6981270000000001, (modelica_real)-0.610867, (modelica_real)-0.523597, (modelica_real)-0.436327, (modelica_real)-0.349067, (modelica_real)-0.261797, (modelica_real)-0.174837, (modelica_real)-0.08726730000000001, (modelica_real)0.0, (modelica_real)0.08726730000000001, (modelica_real)0.174837, (modelica_real)0.261797, (modelica_real)0.349067, (modelica_real)0.436327, (modelica_real)0.523597, (modelica_real)0.610867, (modelica_real)0.6981270000000001, (modelica_real)0.785397, (modelica_real)0.872667, (modelica_real)0.959927, (modelica_real)1.04719, (modelica_real)3.1415926);
-  array_alloc_scalar_real_array(&tmp3054, 28, (modelica_real)-0.872665, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3055, 28, (modelica_real)-0.785398, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.515733288, (modelica_real)0.582273933, (modelica_real)0.644111335, (modelica_real)0.700774874, (modelica_real)0.751833306, (modelica_real)0.796898047, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.796898047, (modelica_real)0.751833306, (modelica_real)0.700774874, (modelica_real)0.644111335, (modelica_real)0.582273933, (modelica_real)0.515733288, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3056, 28, (modelica_real)-0.698132, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.558719885, (modelica_real)0.630806722, (modelica_real)0.697798298, (modelica_real)0.759184768, (modelica_real)0.814498944, (modelica_real)0.86331985, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.86331985, (modelica_real)0.814498944, (modelica_real)0.759184768, (modelica_real)0.697798298, (modelica_real)0.630806722, (modelica_real)0.558719885, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3057, 28, (modelica_real)-0.610865, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.5974542859999999, (modelica_real)0.674538691, (modelica_real)0.746174596, (modelica_real)0.811816808, (modelica_real)0.870965752, (modelica_real)0.923171268, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.923171268, (modelica_real)0.870965752, (modelica_real)0.811816808, (modelica_real)0.746174596, (modelica_real)0.674538691, (modelica_real)0.5974542859999999, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3058, 28, (modelica_real)-0.523599, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.6316417, (modelica_real)0.713137013, (modelica_real)0.788872054, (modelica_real)0.8582704330000001, (modelica_real)0.920803986, (modelica_real)0.975996795, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.975996795, (modelica_real)0.920803986, (modelica_real)0.8582704330000001, (modelica_real)0.788872054, (modelica_real)0.713137013, (modelica_real)0.6316417, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3059, 28, (modelica_real)-0.436332, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3060, 28, (modelica_real)-0.349066, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3061, 28, (modelica_real)-0.261799, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3062, 28, (modelica_real)-0.174533, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3063, 28, (modelica_real)-0.087266, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3064, 28, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3065, 28, (modelica_real)0.087266, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3066, 28, (modelica_real)0.174533, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3067, 28, (modelica_real)0.261799, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3068, 28, (modelica_real)0.349066, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3069, 28, (modelica_real)0.436332, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3070, 28, (modelica_real)0.523599, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.6316417, (modelica_real)0.713137013, (modelica_real)0.788872054, (modelica_real)0.8582704330000001, (modelica_real)0.920803986, (modelica_real)0.975996795, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.975996795, (modelica_real)0.920803986, (modelica_real)0.8582704330000001, (modelica_real)0.788872054, (modelica_real)0.713137013, (modelica_real)0.6316417, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3071, 28, (modelica_real)0.610865, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.5974542859999999, (modelica_real)0.674538691, (modelica_real)0.746174596, (modelica_real)0.811816808, (modelica_real)0.870965752, (modelica_real)0.923171268, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.923171268, (modelica_real)0.870965752, (modelica_real)0.811816808, (modelica_real)0.746174596, (modelica_real)0.674538691, (modelica_real)0.5974542859999999, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3072, 28, (modelica_real)0.698132, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.558719885, (modelica_real)0.630806722, (modelica_real)0.697798298, (modelica_real)0.759184768, (modelica_real)0.814498944, (modelica_real)0.86331985, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.86331985, (modelica_real)0.814498944, (modelica_real)0.759184768, (modelica_real)0.697798298, (modelica_real)0.630806722, (modelica_real)0.558719885, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3073, 28, (modelica_real)0.785398, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.515733288, (modelica_real)0.582273933, (modelica_real)0.644111335, (modelica_real)0.700774874, (modelica_real)0.751833306, (modelica_real)0.796898047, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.796898047, (modelica_real)0.751833306, (modelica_real)0.700774874, (modelica_real)0.644111335, (modelica_real)0.582273933, (modelica_real)0.515733288, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3074, 28, (modelica_real)0.872665, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_real_array(&tmp3052, 22, &tmp3053, &tmp3054, &tmp3055, &tmp3056, &tmp3057, &tmp3058, &tmp3059, &tmp3060, &tmp3061, &tmp3062, &tmp3063, &tmp3064, &tmp3065, &tmp3066, &tmp3067, &tmp3068, &tmp3069, &tmp3070, &tmp3071, &tmp3072, &tmp3073, &tmp3074);
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB2$rB$Pshading_twelve1$PmodShadingLUT_2$PtableID = tmp3051.c1;
+  alloc_real_array(&tmp3052, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3075 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "NoName", "NoName", tmp3052, 1);
+  tmp3053 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\1.txt", tmp3052, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB2$rB$Pshading_twelve1$PShading_matrix$PtableID = tmp3075.c1;
-  alloc_real_array(&tmp3076, 2, 0, 1);
-  array_alloc_scalar_integer_array(&tmp3077, 12, (modelica_integer)(modelica_integer) 2, (modelica_integer)(modelica_integer) 3, (modelica_integer)(modelica_integer) 4, (modelica_integer)(modelica_integer) 5, (modelica_integer)(modelica_integer) 6, (modelica_integer)(modelica_integer) 7, (modelica_integer)(modelica_integer) 8, (modelica_integer)(modelica_integer) 9, (modelica_integer)(modelica_integer) 10, (modelica_integer)(modelica_integer) 11, (modelica_integer)(modelica_integer) 12, (modelica_integer)(modelica_integer) 13);
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB2$rB$Pshading_twelve1$PmodShadingLUT_1$PtableID = tmp3053.c1;
+  array_alloc_scalar_real_array(&tmp3055, 28, (modelica_real)0.0, (modelica_real)-3.1415926, (modelica_real)-1.04719, (modelica_real)-0.959927, (modelica_real)-0.872667, (modelica_real)-0.785397, (modelica_real)-0.6981270000000001, (modelica_real)-0.610867, (modelica_real)-0.523597, (modelica_real)-0.436327, (modelica_real)-0.349067, (modelica_real)-0.261797, (modelica_real)-0.174837, (modelica_real)-0.08726730000000001, (modelica_real)0.0, (modelica_real)0.08726730000000001, (modelica_real)0.174837, (modelica_real)0.261797, (modelica_real)0.349067, (modelica_real)0.436327, (modelica_real)0.523597, (modelica_real)0.610867, (modelica_real)0.6981270000000001, (modelica_real)0.785397, (modelica_real)0.872667, (modelica_real)0.959927, (modelica_real)1.04719, (modelica_real)3.1415926);
+  array_alloc_scalar_real_array(&tmp3056, 28, (modelica_real)-0.872665, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3057, 28, (modelica_real)-0.785398, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.515733288, (modelica_real)0.582273933, (modelica_real)0.644111335, (modelica_real)0.700774874, (modelica_real)0.751833306, (modelica_real)0.796898047, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.796898047, (modelica_real)0.751833306, (modelica_real)0.700774874, (modelica_real)0.644111335, (modelica_real)0.582273933, (modelica_real)0.515733288, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3058, 28, (modelica_real)-0.698132, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.558719885, (modelica_real)0.630806722, (modelica_real)0.697798298, (modelica_real)0.759184768, (modelica_real)0.814498944, (modelica_real)0.86331985, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.86331985, (modelica_real)0.814498944, (modelica_real)0.759184768, (modelica_real)0.697798298, (modelica_real)0.630806722, (modelica_real)0.558719885, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3059, 28, (modelica_real)-0.610865, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.5974542859999999, (modelica_real)0.674538691, (modelica_real)0.746174596, (modelica_real)0.811816808, (modelica_real)0.870965752, (modelica_real)0.923171268, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.923171268, (modelica_real)0.870965752, (modelica_real)0.811816808, (modelica_real)0.746174596, (modelica_real)0.674538691, (modelica_real)0.5974542859999999, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3060, 28, (modelica_real)-0.523599, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.6316417, (modelica_real)0.713137013, (modelica_real)0.788872054, (modelica_real)0.8582704330000001, (modelica_real)0.920803986, (modelica_real)0.975996795, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.975996795, (modelica_real)0.920803986, (modelica_real)0.8582704330000001, (modelica_real)0.788872054, (modelica_real)0.713137013, (modelica_real)0.6316417, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3061, 28, (modelica_real)-0.436332, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3062, 28, (modelica_real)-0.349066, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3063, 28, (modelica_real)-0.261799, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3064, 28, (modelica_real)-0.174533, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3065, 28, (modelica_real)-0.087266, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3066, 28, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3067, 28, (modelica_real)0.087266, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3068, 28, (modelica_real)0.174533, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3069, 28, (modelica_real)0.261799, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3070, 28, (modelica_real)0.349066, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3071, 28, (modelica_real)0.436332, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3072, 28, (modelica_real)0.523599, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.6316417, (modelica_real)0.713137013, (modelica_real)0.788872054, (modelica_real)0.8582704330000001, (modelica_real)0.920803986, (modelica_real)0.975996795, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.975996795, (modelica_real)0.920803986, (modelica_real)0.8582704330000001, (modelica_real)0.788872054, (modelica_real)0.713137013, (modelica_real)0.6316417, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3073, 28, (modelica_real)0.610865, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.5974542859999999, (modelica_real)0.674538691, (modelica_real)0.746174596, (modelica_real)0.811816808, (modelica_real)0.870965752, (modelica_real)0.923171268, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.923171268, (modelica_real)0.870965752, (modelica_real)0.811816808, (modelica_real)0.746174596, (modelica_real)0.674538691, (modelica_real)0.5974542859999999, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3074, 28, (modelica_real)0.698132, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.558719885, (modelica_real)0.630806722, (modelica_real)0.697798298, (modelica_real)0.759184768, (modelica_real)0.814498944, (modelica_real)0.86331985, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.86331985, (modelica_real)0.814498944, (modelica_real)0.759184768, (modelica_real)0.697798298, (modelica_real)0.630806722, (modelica_real)0.558719885, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3075, 28, (modelica_real)0.785398, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.515733288, (modelica_real)0.582273933, (modelica_real)0.644111335, (modelica_real)0.700774874, (modelica_real)0.751833306, (modelica_real)0.796898047, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.796898047, (modelica_real)0.751833306, (modelica_real)0.700774874, (modelica_real)0.644111335, (modelica_real)0.582273933, (modelica_real)0.515733288, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3076, 28, (modelica_real)0.872665, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_real_array(&tmp3054, 22, &tmp3055, &tmp3056, &tmp3057, &tmp3058, &tmp3059, &tmp3060, &tmp3061, &tmp3062, &tmp3063, &tmp3064, &tmp3065, &tmp3066, &tmp3067, &tmp3068, &tmp3069, &tmp3070, &tmp3071, &tmp3072, &tmp3073, &tmp3074, &tmp3075, &tmp3076);
+
+  #ifdef _OMC_MEASURE_TIME
+  SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
+  #endif
+  tmp3077 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "NoName", "NoName", tmp3054, 1);
+
+  #ifdef _OMC_MEASURE_TIME
+  SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
+  #endif
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB2$rB$Pshading_twelve1$PShading_matrix$PtableID = tmp3077.c1;
+  alloc_real_array(&tmp3078, 2, 0, 1);
+  array_alloc_scalar_integer_array(&tmp3079, 12, (modelica_integer)(modelica_integer) 2, (modelica_integer)(modelica_integer) 3, (modelica_integer)(modelica_integer) 4, (modelica_integer)(modelica_integer) 5, (modelica_integer)(modelica_integer) 6, (modelica_integer)(modelica_integer) 7, (modelica_integer)(modelica_integer) 8, (modelica_integer)(modelica_integer) 9, (modelica_integer)(modelica_integer) 10, (modelica_integer)(modelica_integer) 11, (modelica_integer)(modelica_integer) 12, (modelica_integer)(modelica_integer) 13);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTimeTable_constructor_index);
   #endif
-  tmp3078 = omc_Modelica_Blocks_Types_ExternalCombiTimeTable_constructor(threadData, "EgenIO", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\20150220\\EgenIO.txt", tmp3076, 0.0, tmp3077, 3, 1);
+  tmp3080 = omc_Modelica_Blocks_Types_ExternalCombiTimeTable_constructor(threadData, "EgenIO", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\20150220\\EgenIO.txt", tmp3078, 0.0, tmp3079, 3, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTimeTable_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB1$rB$PeGen_on$PtableID = tmp3078.c1;
-  alloc_real_array(&tmp3079, 2, 0, 1);
-
-  #ifdef _OMC_MEASURE_TIME
-  SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
-  #endif
-  tmp3080 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\12.txt", tmp3079, 1);
-
-  #ifdef _OMC_MEASURE_TIME
-  SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
-  #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB1$rB$Pshading_twelve1$PmodShadingLUT_12$PtableID = tmp3080.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB1$rB$PeGen_on$PtableID = tmp3080.c1;
   alloc_real_array(&tmp3081, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3082 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\11.txt", tmp3081, 1);
+  tmp3082 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\12.txt", tmp3081, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB1$rB$Pshading_twelve1$PmodShadingLUT_11$PtableID = tmp3082.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB1$rB$Pshading_twelve1$PmodShadingLUT_12$PtableID = tmp3082.c1;
   alloc_real_array(&tmp3083, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3084 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\10.txt", tmp3083, 1);
+  tmp3084 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\11.txt", tmp3083, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB1$rB$Pshading_twelve1$PmodShadingLUT_10$PtableID = tmp3084.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB1$rB$Pshading_twelve1$PmodShadingLUT_11$PtableID = tmp3084.c1;
   alloc_real_array(&tmp3085, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3086 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\9.txt", tmp3085, 1);
+  tmp3086 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\10.txt", tmp3085, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB1$rB$Pshading_twelve1$PmodShadingLUT_9$PtableID = tmp3086.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB1$rB$Pshading_twelve1$PmodShadingLUT_10$PtableID = tmp3086.c1;
   alloc_real_array(&tmp3087, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3088 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\8.txt", tmp3087, 1);
+  tmp3088 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\9.txt", tmp3087, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB1$rB$Pshading_twelve1$PmodShadingLUT_8$PtableID = tmp3088.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB1$rB$Pshading_twelve1$PmodShadingLUT_9$PtableID = tmp3088.c1;
   alloc_real_array(&tmp3089, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3090 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\7.txt", tmp3089, 1);
+  tmp3090 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\8.txt", tmp3089, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB1$rB$Pshading_twelve1$PmodShadingLUT_7$PtableID = tmp3090.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB1$rB$Pshading_twelve1$PmodShadingLUT_8$PtableID = tmp3090.c1;
   alloc_real_array(&tmp3091, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3092 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\6.txt", tmp3091, 1);
+  tmp3092 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\7.txt", tmp3091, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB1$rB$Pshading_twelve1$PmodShadingLUT_6$PtableID = tmp3092.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB1$rB$Pshading_twelve1$PmodShadingLUT_7$PtableID = tmp3092.c1;
   alloc_real_array(&tmp3093, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3094 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\5.txt", tmp3093, 1);
+  tmp3094 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\6.txt", tmp3093, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB1$rB$Pshading_twelve1$PmodShadingLUT_5$PtableID = tmp3094.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB1$rB$Pshading_twelve1$PmodShadingLUT_6$PtableID = tmp3094.c1;
   alloc_real_array(&tmp3095, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3096 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\4.txt", tmp3095, 1);
+  tmp3096 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\5.txt", tmp3095, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB1$rB$Pshading_twelve1$PmodShadingLUT_4$PtableID = tmp3096.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB1$rB$Pshading_twelve1$PmodShadingLUT_5$PtableID = tmp3096.c1;
   alloc_real_array(&tmp3097, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3098 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\3.txt", tmp3097, 1);
+  tmp3098 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\4.txt", tmp3097, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB1$rB$Pshading_twelve1$PmodShadingLUT_3$PtableID = tmp3098.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB1$rB$Pshading_twelve1$PmodShadingLUT_4$PtableID = tmp3098.c1;
   alloc_real_array(&tmp3099, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3100 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\2.txt", tmp3099, 1);
+  tmp3100 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\3.txt", tmp3099, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB1$rB$Pshading_twelve1$PmodShadingLUT_2$PtableID = tmp3100.c1;
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB1$rB$Pshading_twelve1$PmodShadingLUT_3$PtableID = tmp3100.c1;
   alloc_real_array(&tmp3101, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3102 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\1.txt", tmp3101, 1);
+  tmp3102 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\2.txt", tmp3101, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB1$rB$Pshading_twelve1$PmodShadingLUT_1$PtableID = tmp3102.c1;
-  array_alloc_scalar_real_array(&tmp3104, 28, (modelica_real)0.0, (modelica_real)-3.1415926, (modelica_real)-1.04719, (modelica_real)-0.959927, (modelica_real)-0.872667, (modelica_real)-0.785397, (modelica_real)-0.6981270000000001, (modelica_real)-0.610867, (modelica_real)-0.523597, (modelica_real)-0.436327, (modelica_real)-0.349067, (modelica_real)-0.261797, (modelica_real)-0.174837, (modelica_real)-0.08726730000000001, (modelica_real)0.0, (modelica_real)0.08726730000000001, (modelica_real)0.174837, (modelica_real)0.261797, (modelica_real)0.349067, (modelica_real)0.436327, (modelica_real)0.523597, (modelica_real)0.610867, (modelica_real)0.6981270000000001, (modelica_real)0.785397, (modelica_real)0.872667, (modelica_real)0.959927, (modelica_real)1.04719, (modelica_real)3.1415926);
-  array_alloc_scalar_real_array(&tmp3105, 28, (modelica_real)-0.872665, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3106, 28, (modelica_real)-0.785398, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.515733288, (modelica_real)0.582273933, (modelica_real)0.644111335, (modelica_real)0.700774874, (modelica_real)0.751833306, (modelica_real)0.796898047, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.796898047, (modelica_real)0.751833306, (modelica_real)0.700774874, (modelica_real)0.644111335, (modelica_real)0.582273933, (modelica_real)0.515733288, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3107, 28, (modelica_real)-0.698132, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.558719885, (modelica_real)0.630806722, (modelica_real)0.697798298, (modelica_real)0.759184768, (modelica_real)0.814498944, (modelica_real)0.86331985, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.86331985, (modelica_real)0.814498944, (modelica_real)0.759184768, (modelica_real)0.697798298, (modelica_real)0.630806722, (modelica_real)0.558719885, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3108, 28, (modelica_real)-0.610865, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.5974542859999999, (modelica_real)0.674538691, (modelica_real)0.746174596, (modelica_real)0.811816808, (modelica_real)0.870965752, (modelica_real)0.923171268, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.923171268, (modelica_real)0.870965752, (modelica_real)0.811816808, (modelica_real)0.746174596, (modelica_real)0.674538691, (modelica_real)0.5974542859999999, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3109, 28, (modelica_real)-0.523599, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.6316417, (modelica_real)0.713137013, (modelica_real)0.788872054, (modelica_real)0.8582704330000001, (modelica_real)0.920803986, (modelica_real)0.975996795, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.975996795, (modelica_real)0.920803986, (modelica_real)0.8582704330000001, (modelica_real)0.788872054, (modelica_real)0.713137013, (modelica_real)0.6316417, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3110, 28, (modelica_real)-0.436332, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3111, 28, (modelica_real)-0.349066, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3112, 28, (modelica_real)-0.261799, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3113, 28, (modelica_real)-0.174533, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3114, 28, (modelica_real)-0.087266, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3115, 28, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3116, 28, (modelica_real)0.087266, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3117, 28, (modelica_real)0.174533, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3118, 28, (modelica_real)0.261799, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3119, 28, (modelica_real)0.349066, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3120, 28, (modelica_real)0.436332, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3121, 28, (modelica_real)0.523599, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.6316417, (modelica_real)0.713137013, (modelica_real)0.788872054, (modelica_real)0.8582704330000001, (modelica_real)0.920803986, (modelica_real)0.975996795, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.975996795, (modelica_real)0.920803986, (modelica_real)0.8582704330000001, (modelica_real)0.788872054, (modelica_real)0.713137013, (modelica_real)0.6316417, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3122, 28, (modelica_real)0.610865, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.5974542859999999, (modelica_real)0.674538691, (modelica_real)0.746174596, (modelica_real)0.811816808, (modelica_real)0.870965752, (modelica_real)0.923171268, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.923171268, (modelica_real)0.870965752, (modelica_real)0.811816808, (modelica_real)0.746174596, (modelica_real)0.674538691, (modelica_real)0.5974542859999999, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3123, 28, (modelica_real)0.698132, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.558719885, (modelica_real)0.630806722, (modelica_real)0.697798298, (modelica_real)0.759184768, (modelica_real)0.814498944, (modelica_real)0.86331985, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.86331985, (modelica_real)0.814498944, (modelica_real)0.759184768, (modelica_real)0.697798298, (modelica_real)0.630806722, (modelica_real)0.558719885, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3124, 28, (modelica_real)0.785398, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.515733288, (modelica_real)0.582273933, (modelica_real)0.644111335, (modelica_real)0.700774874, (modelica_real)0.751833306, (modelica_real)0.796898047, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.796898047, (modelica_real)0.751833306, (modelica_real)0.700774874, (modelica_real)0.644111335, (modelica_real)0.582273933, (modelica_real)0.515733288, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3125, 28, (modelica_real)0.872665, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_real_array(&tmp3103, 22, &tmp3104, &tmp3105, &tmp3106, &tmp3107, &tmp3108, &tmp3109, &tmp3110, &tmp3111, &tmp3112, &tmp3113, &tmp3114, &tmp3115, &tmp3116, &tmp3117, &tmp3118, &tmp3119, &tmp3120, &tmp3121, &tmp3122, &tmp3123, &tmp3124, &tmp3125);
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB1$rB$Pshading_twelve1$PmodShadingLUT_2$PtableID = tmp3102.c1;
+  alloc_real_array(&tmp3103, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3126 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "NoName", "NoName", tmp3103, 1);
+  tmp3104 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\1.txt", tmp3103, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB1$rB$Pshading_twelve1$PShading_matrix$PtableID = tmp3126.c1;
-  alloc_real_array(&tmp3127, 2, 0, 1);
-  array_alloc_scalar_integer_array(&tmp3128, 12, (modelica_integer)(modelica_integer) 2, (modelica_integer)(modelica_integer) 3, (modelica_integer)(modelica_integer) 4, (modelica_integer)(modelica_integer) 5, (modelica_integer)(modelica_integer) 6, (modelica_integer)(modelica_integer) 7, (modelica_integer)(modelica_integer) 8, (modelica_integer)(modelica_integer) 9, (modelica_integer)(modelica_integer) 10, (modelica_integer)(modelica_integer) 11, (modelica_integer)(modelica_integer) 12, (modelica_integer)(modelica_integer) 13);
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB1$rB$Pshading_twelve1$PmodShadingLUT_1$PtableID = tmp3104.c1;
+  array_alloc_scalar_real_array(&tmp3106, 28, (modelica_real)0.0, (modelica_real)-3.1415926, (modelica_real)-1.04719, (modelica_real)-0.959927, (modelica_real)-0.872667, (modelica_real)-0.785397, (modelica_real)-0.6981270000000001, (modelica_real)-0.610867, (modelica_real)-0.523597, (modelica_real)-0.436327, (modelica_real)-0.349067, (modelica_real)-0.261797, (modelica_real)-0.174837, (modelica_real)-0.08726730000000001, (modelica_real)0.0, (modelica_real)0.08726730000000001, (modelica_real)0.174837, (modelica_real)0.261797, (modelica_real)0.349067, (modelica_real)0.436327, (modelica_real)0.523597, (modelica_real)0.610867, (modelica_real)0.6981270000000001, (modelica_real)0.785397, (modelica_real)0.872667, (modelica_real)0.959927, (modelica_real)1.04719, (modelica_real)3.1415926);
+  array_alloc_scalar_real_array(&tmp3107, 28, (modelica_real)-0.872665, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3108, 28, (modelica_real)-0.785398, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.515733288, (modelica_real)0.582273933, (modelica_real)0.644111335, (modelica_real)0.700774874, (modelica_real)0.751833306, (modelica_real)0.796898047, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.796898047, (modelica_real)0.751833306, (modelica_real)0.700774874, (modelica_real)0.644111335, (modelica_real)0.582273933, (modelica_real)0.515733288, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3109, 28, (modelica_real)-0.698132, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.558719885, (modelica_real)0.630806722, (modelica_real)0.697798298, (modelica_real)0.759184768, (modelica_real)0.814498944, (modelica_real)0.86331985, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.86331985, (modelica_real)0.814498944, (modelica_real)0.759184768, (modelica_real)0.697798298, (modelica_real)0.630806722, (modelica_real)0.558719885, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3110, 28, (modelica_real)-0.610865, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.5974542859999999, (modelica_real)0.674538691, (modelica_real)0.746174596, (modelica_real)0.811816808, (modelica_real)0.870965752, (modelica_real)0.923171268, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.923171268, (modelica_real)0.870965752, (modelica_real)0.811816808, (modelica_real)0.746174596, (modelica_real)0.674538691, (modelica_real)0.5974542859999999, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3111, 28, (modelica_real)-0.523599, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.6316417, (modelica_real)0.713137013, (modelica_real)0.788872054, (modelica_real)0.8582704330000001, (modelica_real)0.920803986, (modelica_real)0.975996795, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.975996795, (modelica_real)0.920803986, (modelica_real)0.8582704330000001, (modelica_real)0.788872054, (modelica_real)0.713137013, (modelica_real)0.6316417, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3112, 28, (modelica_real)-0.436332, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3113, 28, (modelica_real)-0.349066, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3114, 28, (modelica_real)-0.261799, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3115, 28, (modelica_real)-0.174533, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3116, 28, (modelica_real)-0.087266, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3117, 28, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3118, 28, (modelica_real)0.087266, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3119, 28, (modelica_real)0.174533, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3120, 28, (modelica_real)0.261799, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3121, 28, (modelica_real)0.349066, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3122, 28, (modelica_real)0.436332, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3123, 28, (modelica_real)0.523599, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.6316417, (modelica_real)0.713137013, (modelica_real)0.788872054, (modelica_real)0.8582704330000001, (modelica_real)0.920803986, (modelica_real)0.975996795, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.975996795, (modelica_real)0.920803986, (modelica_real)0.8582704330000001, (modelica_real)0.788872054, (modelica_real)0.713137013, (modelica_real)0.6316417, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3124, 28, (modelica_real)0.610865, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.5974542859999999, (modelica_real)0.674538691, (modelica_real)0.746174596, (modelica_real)0.811816808, (modelica_real)0.870965752, (modelica_real)0.923171268, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.923171268, (modelica_real)0.870965752, (modelica_real)0.811816808, (modelica_real)0.746174596, (modelica_real)0.674538691, (modelica_real)0.5974542859999999, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3125, 28, (modelica_real)0.698132, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.558719885, (modelica_real)0.630806722, (modelica_real)0.697798298, (modelica_real)0.759184768, (modelica_real)0.814498944, (modelica_real)0.86331985, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.86331985, (modelica_real)0.814498944, (modelica_real)0.759184768, (modelica_real)0.697798298, (modelica_real)0.630806722, (modelica_real)0.558719885, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3126, 28, (modelica_real)0.785398, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.515733288, (modelica_real)0.582273933, (modelica_real)0.644111335, (modelica_real)0.700774874, (modelica_real)0.751833306, (modelica_real)0.796898047, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.796898047, (modelica_real)0.751833306, (modelica_real)0.700774874, (modelica_real)0.644111335, (modelica_real)0.582273933, (modelica_real)0.515733288, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3127, 28, (modelica_real)0.872665, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_real_array(&tmp3105, 22, &tmp3106, &tmp3107, &tmp3108, &tmp3109, &tmp3110, &tmp3111, &tmp3112, &tmp3113, &tmp3114, &tmp3115, &tmp3116, &tmp3117, &tmp3118, &tmp3119, &tmp3120, &tmp3121, &tmp3122, &tmp3123, &tmp3124, &tmp3125, &tmp3126, &tmp3127);
+
+  #ifdef _OMC_MEASURE_TIME
+  SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
+  #endif
+  tmp3128 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "NoName", "NoName", tmp3105, 1);
+
+  #ifdef _OMC_MEASURE_TIME
+  SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
+  #endif
+  $Pics_envelopecassette1$Pics_stack1$PICS_Module_Twelve_1$lB1$rB$Pshading_twelve1$PShading_matrix$PtableID = tmp3128.c1;
+  alloc_real_array(&tmp3129, 2, 0, 1);
+  array_alloc_scalar_integer_array(&tmp3130, 12, (modelica_integer)(modelica_integer) 2, (modelica_integer)(modelica_integer) 3, (modelica_integer)(modelica_integer) 4, (modelica_integer)(modelica_integer) 5, (modelica_integer)(modelica_integer) 6, (modelica_integer)(modelica_integer) 7, (modelica_integer)(modelica_integer) 8, (modelica_integer)(modelica_integer) 9, (modelica_integer)(modelica_integer) 10, (modelica_integer)(modelica_integer) 11, (modelica_integer)(modelica_integer) 12, (modelica_integer)(modelica_integer) 13);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTimeTable_constructor_index);
   #endif
-  tmp3129 = omc_Modelica_Blocks_Types_ExternalCombiTimeTable_constructor(threadData, "EgenIO", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\20150220\\EgenIO.txt", tmp3127, 0.0, tmp3128, 3, 1);
+  tmp3131 = omc_Modelica_Blocks_Types_ExternalCombiTimeTable_constructor(threadData, "EgenIO", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\20150220\\EgenIO.txt", tmp3129, 0.0, tmp3130, 3, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTimeTable_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB6$rB$PeGen_on$PtableID = tmp3129.c1;
-  alloc_real_array(&tmp3130, 2, 0, 1);
-
-  #ifdef _OMC_MEASURE_TIME
-  SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
-  #endif
-  tmp3131 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\12.txt", tmp3130, 1);
-
-  #ifdef _OMC_MEASURE_TIME
-  SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
-  #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB6$rB$Pshading_twelve1$PmodShadingLUT_12$PtableID = tmp3131.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB6$rB$PeGen_on$PtableID = tmp3131.c1;
   alloc_real_array(&tmp3132, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3133 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\11.txt", tmp3132, 1);
+  tmp3133 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\12.txt", tmp3132, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB6$rB$Pshading_twelve1$PmodShadingLUT_11$PtableID = tmp3133.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB6$rB$Pshading_twelve1$PmodShadingLUT_12$PtableID = tmp3133.c1;
   alloc_real_array(&tmp3134, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3135 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\10.txt", tmp3134, 1);
+  tmp3135 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\11.txt", tmp3134, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB6$rB$Pshading_twelve1$PmodShadingLUT_10$PtableID = tmp3135.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB6$rB$Pshading_twelve1$PmodShadingLUT_11$PtableID = tmp3135.c1;
   alloc_real_array(&tmp3136, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3137 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\9.txt", tmp3136, 1);
+  tmp3137 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\10.txt", tmp3136, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB6$rB$Pshading_twelve1$PmodShadingLUT_9$PtableID = tmp3137.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB6$rB$Pshading_twelve1$PmodShadingLUT_10$PtableID = tmp3137.c1;
   alloc_real_array(&tmp3138, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3139 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\8.txt", tmp3138, 1);
+  tmp3139 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\9.txt", tmp3138, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB6$rB$Pshading_twelve1$PmodShadingLUT_8$PtableID = tmp3139.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB6$rB$Pshading_twelve1$PmodShadingLUT_9$PtableID = tmp3139.c1;
   alloc_real_array(&tmp3140, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3141 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\7.txt", tmp3140, 1);
+  tmp3141 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\8.txt", tmp3140, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB6$rB$Pshading_twelve1$PmodShadingLUT_7$PtableID = tmp3141.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB6$rB$Pshading_twelve1$PmodShadingLUT_8$PtableID = tmp3141.c1;
   alloc_real_array(&tmp3142, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3143 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\6.txt", tmp3142, 1);
+  tmp3143 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\7.txt", tmp3142, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB6$rB$Pshading_twelve1$PmodShadingLUT_6$PtableID = tmp3143.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB6$rB$Pshading_twelve1$PmodShadingLUT_7$PtableID = tmp3143.c1;
   alloc_real_array(&tmp3144, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3145 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\5.txt", tmp3144, 1);
+  tmp3145 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\6.txt", tmp3144, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB6$rB$Pshading_twelve1$PmodShadingLUT_5$PtableID = tmp3145.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB6$rB$Pshading_twelve1$PmodShadingLUT_6$PtableID = tmp3145.c1;
   alloc_real_array(&tmp3146, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3147 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\4.txt", tmp3146, 1);
+  tmp3147 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\5.txt", tmp3146, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB6$rB$Pshading_twelve1$PmodShadingLUT_4$PtableID = tmp3147.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB6$rB$Pshading_twelve1$PmodShadingLUT_5$PtableID = tmp3147.c1;
   alloc_real_array(&tmp3148, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3149 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\3.txt", tmp3148, 1);
+  tmp3149 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\4.txt", tmp3148, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB6$rB$Pshading_twelve1$PmodShadingLUT_3$PtableID = tmp3149.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB6$rB$Pshading_twelve1$PmodShadingLUT_4$PtableID = tmp3149.c1;
   alloc_real_array(&tmp3150, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3151 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\2.txt", tmp3150, 1);
+  tmp3151 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\3.txt", tmp3150, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB6$rB$Pshading_twelve1$PmodShadingLUT_2$PtableID = tmp3151.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB6$rB$Pshading_twelve1$PmodShadingLUT_3$PtableID = tmp3151.c1;
   alloc_real_array(&tmp3152, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3153 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\1.txt", tmp3152, 1);
+  tmp3153 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\2.txt", tmp3152, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB6$rB$Pshading_twelve1$PmodShadingLUT_1$PtableID = tmp3153.c1;
-  array_alloc_scalar_real_array(&tmp3155, 28, (modelica_real)0.0, (modelica_real)-3.1415926, (modelica_real)-1.04719, (modelica_real)-0.959927, (modelica_real)-0.872667, (modelica_real)-0.785397, (modelica_real)-0.6981270000000001, (modelica_real)-0.610867, (modelica_real)-0.523597, (modelica_real)-0.436327, (modelica_real)-0.349067, (modelica_real)-0.261797, (modelica_real)-0.174837, (modelica_real)-0.08726730000000001, (modelica_real)0.0, (modelica_real)0.08726730000000001, (modelica_real)0.174837, (modelica_real)0.261797, (modelica_real)0.349067, (modelica_real)0.436327, (modelica_real)0.523597, (modelica_real)0.610867, (modelica_real)0.6981270000000001, (modelica_real)0.785397, (modelica_real)0.872667, (modelica_real)0.959927, (modelica_real)1.04719, (modelica_real)3.1415926);
-  array_alloc_scalar_real_array(&tmp3156, 28, (modelica_real)-0.872665, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3157, 28, (modelica_real)-0.785398, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.515733288, (modelica_real)0.582273933, (modelica_real)0.644111335, (modelica_real)0.700774874, (modelica_real)0.751833306, (modelica_real)0.796898047, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.796898047, (modelica_real)0.751833306, (modelica_real)0.700774874, (modelica_real)0.644111335, (modelica_real)0.582273933, (modelica_real)0.515733288, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3158, 28, (modelica_real)-0.698132, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.558719885, (modelica_real)0.630806722, (modelica_real)0.697798298, (modelica_real)0.759184768, (modelica_real)0.814498944, (modelica_real)0.86331985, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.86331985, (modelica_real)0.814498944, (modelica_real)0.759184768, (modelica_real)0.697798298, (modelica_real)0.630806722, (modelica_real)0.558719885, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3159, 28, (modelica_real)-0.610865, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.5974542859999999, (modelica_real)0.674538691, (modelica_real)0.746174596, (modelica_real)0.811816808, (modelica_real)0.870965752, (modelica_real)0.923171268, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.923171268, (modelica_real)0.870965752, (modelica_real)0.811816808, (modelica_real)0.746174596, (modelica_real)0.674538691, (modelica_real)0.5974542859999999, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3160, 28, (modelica_real)-0.523599, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.6316417, (modelica_real)0.713137013, (modelica_real)0.788872054, (modelica_real)0.8582704330000001, (modelica_real)0.920803986, (modelica_real)0.975996795, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.975996795, (modelica_real)0.920803986, (modelica_real)0.8582704330000001, (modelica_real)0.788872054, (modelica_real)0.713137013, (modelica_real)0.6316417, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3161, 28, (modelica_real)-0.436332, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3162, 28, (modelica_real)-0.349066, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3163, 28, (modelica_real)-0.261799, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3164, 28, (modelica_real)-0.174533, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3165, 28, (modelica_real)-0.087266, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3166, 28, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3167, 28, (modelica_real)0.087266, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3168, 28, (modelica_real)0.174533, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3169, 28, (modelica_real)0.261799, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3170, 28, (modelica_real)0.349066, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3171, 28, (modelica_real)0.436332, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3172, 28, (modelica_real)0.523599, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.6316417, (modelica_real)0.713137013, (modelica_real)0.788872054, (modelica_real)0.8582704330000001, (modelica_real)0.920803986, (modelica_real)0.975996795, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.975996795, (modelica_real)0.920803986, (modelica_real)0.8582704330000001, (modelica_real)0.788872054, (modelica_real)0.713137013, (modelica_real)0.6316417, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3173, 28, (modelica_real)0.610865, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.5974542859999999, (modelica_real)0.674538691, (modelica_real)0.746174596, (modelica_real)0.811816808, (modelica_real)0.870965752, (modelica_real)0.923171268, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.923171268, (modelica_real)0.870965752, (modelica_real)0.811816808, (modelica_real)0.746174596, (modelica_real)0.674538691, (modelica_real)0.5974542859999999, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3174, 28, (modelica_real)0.698132, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.558719885, (modelica_real)0.630806722, (modelica_real)0.697798298, (modelica_real)0.759184768, (modelica_real)0.814498944, (modelica_real)0.86331985, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.86331985, (modelica_real)0.814498944, (modelica_real)0.759184768, (modelica_real)0.697798298, (modelica_real)0.630806722, (modelica_real)0.558719885, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3175, 28, (modelica_real)0.785398, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.515733288, (modelica_real)0.582273933, (modelica_real)0.644111335, (modelica_real)0.700774874, (modelica_real)0.751833306, (modelica_real)0.796898047, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.796898047, (modelica_real)0.751833306, (modelica_real)0.700774874, (modelica_real)0.644111335, (modelica_real)0.582273933, (modelica_real)0.515733288, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3176, 28, (modelica_real)0.872665, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_real_array(&tmp3154, 22, &tmp3155, &tmp3156, &tmp3157, &tmp3158, &tmp3159, &tmp3160, &tmp3161, &tmp3162, &tmp3163, &tmp3164, &tmp3165, &tmp3166, &tmp3167, &tmp3168, &tmp3169, &tmp3170, &tmp3171, &tmp3172, &tmp3173, &tmp3174, &tmp3175, &tmp3176);
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB6$rB$Pshading_twelve1$PmodShadingLUT_2$PtableID = tmp3153.c1;
+  alloc_real_array(&tmp3154, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3177 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "NoName", "NoName", tmp3154, 1);
+  tmp3155 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\1.txt", tmp3154, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB6$rB$Pshading_twelve1$PShading_matrix$PtableID = tmp3177.c1;
-  alloc_real_array(&tmp3178, 2, 0, 1);
-  array_alloc_scalar_integer_array(&tmp3179, 12, (modelica_integer)(modelica_integer) 2, (modelica_integer)(modelica_integer) 3, (modelica_integer)(modelica_integer) 4, (modelica_integer)(modelica_integer) 5, (modelica_integer)(modelica_integer) 6, (modelica_integer)(modelica_integer) 7, (modelica_integer)(modelica_integer) 8, (modelica_integer)(modelica_integer) 9, (modelica_integer)(modelica_integer) 10, (modelica_integer)(modelica_integer) 11, (modelica_integer)(modelica_integer) 12, (modelica_integer)(modelica_integer) 13);
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB6$rB$Pshading_twelve1$PmodShadingLUT_1$PtableID = tmp3155.c1;
+  array_alloc_scalar_real_array(&tmp3157, 28, (modelica_real)0.0, (modelica_real)-3.1415926, (modelica_real)-1.04719, (modelica_real)-0.959927, (modelica_real)-0.872667, (modelica_real)-0.785397, (modelica_real)-0.6981270000000001, (modelica_real)-0.610867, (modelica_real)-0.523597, (modelica_real)-0.436327, (modelica_real)-0.349067, (modelica_real)-0.261797, (modelica_real)-0.174837, (modelica_real)-0.08726730000000001, (modelica_real)0.0, (modelica_real)0.08726730000000001, (modelica_real)0.174837, (modelica_real)0.261797, (modelica_real)0.349067, (modelica_real)0.436327, (modelica_real)0.523597, (modelica_real)0.610867, (modelica_real)0.6981270000000001, (modelica_real)0.785397, (modelica_real)0.872667, (modelica_real)0.959927, (modelica_real)1.04719, (modelica_real)3.1415926);
+  array_alloc_scalar_real_array(&tmp3158, 28, (modelica_real)-0.872665, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3159, 28, (modelica_real)-0.785398, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.515733288, (modelica_real)0.582273933, (modelica_real)0.644111335, (modelica_real)0.700774874, (modelica_real)0.751833306, (modelica_real)0.796898047, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.796898047, (modelica_real)0.751833306, (modelica_real)0.700774874, (modelica_real)0.644111335, (modelica_real)0.582273933, (modelica_real)0.515733288, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3160, 28, (modelica_real)-0.698132, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.558719885, (modelica_real)0.630806722, (modelica_real)0.697798298, (modelica_real)0.759184768, (modelica_real)0.814498944, (modelica_real)0.86331985, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.86331985, (modelica_real)0.814498944, (modelica_real)0.759184768, (modelica_real)0.697798298, (modelica_real)0.630806722, (modelica_real)0.558719885, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3161, 28, (modelica_real)-0.610865, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.5974542859999999, (modelica_real)0.674538691, (modelica_real)0.746174596, (modelica_real)0.811816808, (modelica_real)0.870965752, (modelica_real)0.923171268, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.923171268, (modelica_real)0.870965752, (modelica_real)0.811816808, (modelica_real)0.746174596, (modelica_real)0.674538691, (modelica_real)0.5974542859999999, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3162, 28, (modelica_real)-0.523599, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.6316417, (modelica_real)0.713137013, (modelica_real)0.788872054, (modelica_real)0.8582704330000001, (modelica_real)0.920803986, (modelica_real)0.975996795, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.975996795, (modelica_real)0.920803986, (modelica_real)0.8582704330000001, (modelica_real)0.788872054, (modelica_real)0.713137013, (modelica_real)0.6316417, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3163, 28, (modelica_real)-0.436332, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3164, 28, (modelica_real)-0.349066, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3165, 28, (modelica_real)-0.261799, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3166, 28, (modelica_real)-0.174533, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3167, 28, (modelica_real)-0.087266, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3168, 28, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3169, 28, (modelica_real)0.087266, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3170, 28, (modelica_real)0.174533, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3171, 28, (modelica_real)0.261799, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3172, 28, (modelica_real)0.349066, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3173, 28, (modelica_real)0.436332, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3174, 28, (modelica_real)0.523599, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.6316417, (modelica_real)0.713137013, (modelica_real)0.788872054, (modelica_real)0.8582704330000001, (modelica_real)0.920803986, (modelica_real)0.975996795, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.975996795, (modelica_real)0.920803986, (modelica_real)0.8582704330000001, (modelica_real)0.788872054, (modelica_real)0.713137013, (modelica_real)0.6316417, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3175, 28, (modelica_real)0.610865, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.5974542859999999, (modelica_real)0.674538691, (modelica_real)0.746174596, (modelica_real)0.811816808, (modelica_real)0.870965752, (modelica_real)0.923171268, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.923171268, (modelica_real)0.870965752, (modelica_real)0.811816808, (modelica_real)0.746174596, (modelica_real)0.674538691, (modelica_real)0.5974542859999999, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3176, 28, (modelica_real)0.698132, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.558719885, (modelica_real)0.630806722, (modelica_real)0.697798298, (modelica_real)0.759184768, (modelica_real)0.814498944, (modelica_real)0.86331985, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.86331985, (modelica_real)0.814498944, (modelica_real)0.759184768, (modelica_real)0.697798298, (modelica_real)0.630806722, (modelica_real)0.558719885, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3177, 28, (modelica_real)0.785398, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.515733288, (modelica_real)0.582273933, (modelica_real)0.644111335, (modelica_real)0.700774874, (modelica_real)0.751833306, (modelica_real)0.796898047, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.796898047, (modelica_real)0.751833306, (modelica_real)0.700774874, (modelica_real)0.644111335, (modelica_real)0.582273933, (modelica_real)0.515733288, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3178, 28, (modelica_real)0.872665, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_real_array(&tmp3156, 22, &tmp3157, &tmp3158, &tmp3159, &tmp3160, &tmp3161, &tmp3162, &tmp3163, &tmp3164, &tmp3165, &tmp3166, &tmp3167, &tmp3168, &tmp3169, &tmp3170, &tmp3171, &tmp3172, &tmp3173, &tmp3174, &tmp3175, &tmp3176, &tmp3177, &tmp3178);
+
+  #ifdef _OMC_MEASURE_TIME
+  SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
+  #endif
+  tmp3179 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "NoName", "NoName", tmp3156, 1);
+
+  #ifdef _OMC_MEASURE_TIME
+  SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
+  #endif
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB6$rB$Pshading_twelve1$PShading_matrix$PtableID = tmp3179.c1;
+  alloc_real_array(&tmp3180, 2, 0, 1);
+  array_alloc_scalar_integer_array(&tmp3181, 12, (modelica_integer)(modelica_integer) 2, (modelica_integer)(modelica_integer) 3, (modelica_integer)(modelica_integer) 4, (modelica_integer)(modelica_integer) 5, (modelica_integer)(modelica_integer) 6, (modelica_integer)(modelica_integer) 7, (modelica_integer)(modelica_integer) 8, (modelica_integer)(modelica_integer) 9, (modelica_integer)(modelica_integer) 10, (modelica_integer)(modelica_integer) 11, (modelica_integer)(modelica_integer) 12, (modelica_integer)(modelica_integer) 13);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTimeTable_constructor_index);
   #endif
-  tmp3180 = omc_Modelica_Blocks_Types_ExternalCombiTimeTable_constructor(threadData, "EgenIO", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\20150220\\EgenIO.txt", tmp3178, 0.0, tmp3179, 3, 1);
+  tmp3182 = omc_Modelica_Blocks_Types_ExternalCombiTimeTable_constructor(threadData, "EgenIO", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\20150220\\EgenIO.txt", tmp3180, 0.0, tmp3181, 3, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTimeTable_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB5$rB$PeGen_on$PtableID = tmp3180.c1;
-  alloc_real_array(&tmp3181, 2, 0, 1);
-
-  #ifdef _OMC_MEASURE_TIME
-  SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
-  #endif
-  tmp3182 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\12.txt", tmp3181, 1);
-
-  #ifdef _OMC_MEASURE_TIME
-  SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
-  #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB5$rB$Pshading_twelve1$PmodShadingLUT_12$PtableID = tmp3182.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB5$rB$PeGen_on$PtableID = tmp3182.c1;
   alloc_real_array(&tmp3183, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3184 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\11.txt", tmp3183, 1);
+  tmp3184 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\12.txt", tmp3183, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB5$rB$Pshading_twelve1$PmodShadingLUT_11$PtableID = tmp3184.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB5$rB$Pshading_twelve1$PmodShadingLUT_12$PtableID = tmp3184.c1;
   alloc_real_array(&tmp3185, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3186 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\10.txt", tmp3185, 1);
+  tmp3186 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\11.txt", tmp3185, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB5$rB$Pshading_twelve1$PmodShadingLUT_10$PtableID = tmp3186.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB5$rB$Pshading_twelve1$PmodShadingLUT_11$PtableID = tmp3186.c1;
   alloc_real_array(&tmp3187, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3188 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\9.txt", tmp3187, 1);
+  tmp3188 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\10.txt", tmp3187, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB5$rB$Pshading_twelve1$PmodShadingLUT_9$PtableID = tmp3188.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB5$rB$Pshading_twelve1$PmodShadingLUT_10$PtableID = tmp3188.c1;
   alloc_real_array(&tmp3189, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3190 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\8.txt", tmp3189, 1);
+  tmp3190 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\9.txt", tmp3189, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB5$rB$Pshading_twelve1$PmodShadingLUT_8$PtableID = tmp3190.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB5$rB$Pshading_twelve1$PmodShadingLUT_9$PtableID = tmp3190.c1;
   alloc_real_array(&tmp3191, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3192 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\7.txt", tmp3191, 1);
+  tmp3192 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\8.txt", tmp3191, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB5$rB$Pshading_twelve1$PmodShadingLUT_7$PtableID = tmp3192.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB5$rB$Pshading_twelve1$PmodShadingLUT_8$PtableID = tmp3192.c1;
   alloc_real_array(&tmp3193, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3194 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\6.txt", tmp3193, 1);
+  tmp3194 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\7.txt", tmp3193, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB5$rB$Pshading_twelve1$PmodShadingLUT_6$PtableID = tmp3194.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB5$rB$Pshading_twelve1$PmodShadingLUT_7$PtableID = tmp3194.c1;
   alloc_real_array(&tmp3195, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3196 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\5.txt", tmp3195, 1);
+  tmp3196 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\6.txt", tmp3195, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB5$rB$Pshading_twelve1$PmodShadingLUT_5$PtableID = tmp3196.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB5$rB$Pshading_twelve1$PmodShadingLUT_6$PtableID = tmp3196.c1;
   alloc_real_array(&tmp3197, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3198 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\4.txt", tmp3197, 1);
+  tmp3198 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\5.txt", tmp3197, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB5$rB$Pshading_twelve1$PmodShadingLUT_4$PtableID = tmp3198.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB5$rB$Pshading_twelve1$PmodShadingLUT_5$PtableID = tmp3198.c1;
   alloc_real_array(&tmp3199, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3200 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\3.txt", tmp3199, 1);
+  tmp3200 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\4.txt", tmp3199, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB5$rB$Pshading_twelve1$PmodShadingLUT_3$PtableID = tmp3200.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB5$rB$Pshading_twelve1$PmodShadingLUT_4$PtableID = tmp3200.c1;
   alloc_real_array(&tmp3201, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3202 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\2.txt", tmp3201, 1);
+  tmp3202 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\3.txt", tmp3201, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB5$rB$Pshading_twelve1$PmodShadingLUT_2$PtableID = tmp3202.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB5$rB$Pshading_twelve1$PmodShadingLUT_3$PtableID = tmp3202.c1;
   alloc_real_array(&tmp3203, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3204 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\1.txt", tmp3203, 1);
+  tmp3204 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\2.txt", tmp3203, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB5$rB$Pshading_twelve1$PmodShadingLUT_1$PtableID = tmp3204.c1;
-  array_alloc_scalar_real_array(&tmp3206, 28, (modelica_real)0.0, (modelica_real)-3.1415926, (modelica_real)-1.04719, (modelica_real)-0.959927, (modelica_real)-0.872667, (modelica_real)-0.785397, (modelica_real)-0.6981270000000001, (modelica_real)-0.610867, (modelica_real)-0.523597, (modelica_real)-0.436327, (modelica_real)-0.349067, (modelica_real)-0.261797, (modelica_real)-0.174837, (modelica_real)-0.08726730000000001, (modelica_real)0.0, (modelica_real)0.08726730000000001, (modelica_real)0.174837, (modelica_real)0.261797, (modelica_real)0.349067, (modelica_real)0.436327, (modelica_real)0.523597, (modelica_real)0.610867, (modelica_real)0.6981270000000001, (modelica_real)0.785397, (modelica_real)0.872667, (modelica_real)0.959927, (modelica_real)1.04719, (modelica_real)3.1415926);
-  array_alloc_scalar_real_array(&tmp3207, 28, (modelica_real)-0.872665, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3208, 28, (modelica_real)-0.785398, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.515733288, (modelica_real)0.582273933, (modelica_real)0.644111335, (modelica_real)0.700774874, (modelica_real)0.751833306, (modelica_real)0.796898047, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.796898047, (modelica_real)0.751833306, (modelica_real)0.700774874, (modelica_real)0.644111335, (modelica_real)0.582273933, (modelica_real)0.515733288, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3209, 28, (modelica_real)-0.698132, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.558719885, (modelica_real)0.630806722, (modelica_real)0.697798298, (modelica_real)0.759184768, (modelica_real)0.814498944, (modelica_real)0.86331985, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.86331985, (modelica_real)0.814498944, (modelica_real)0.759184768, (modelica_real)0.697798298, (modelica_real)0.630806722, (modelica_real)0.558719885, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3210, 28, (modelica_real)-0.610865, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.5974542859999999, (modelica_real)0.674538691, (modelica_real)0.746174596, (modelica_real)0.811816808, (modelica_real)0.870965752, (modelica_real)0.923171268, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.923171268, (modelica_real)0.870965752, (modelica_real)0.811816808, (modelica_real)0.746174596, (modelica_real)0.674538691, (modelica_real)0.5974542859999999, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3211, 28, (modelica_real)-0.523599, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.6316417, (modelica_real)0.713137013, (modelica_real)0.788872054, (modelica_real)0.8582704330000001, (modelica_real)0.920803986, (modelica_real)0.975996795, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.975996795, (modelica_real)0.920803986, (modelica_real)0.8582704330000001, (modelica_real)0.788872054, (modelica_real)0.713137013, (modelica_real)0.6316417, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3212, 28, (modelica_real)-0.436332, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3213, 28, (modelica_real)-0.349066, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3214, 28, (modelica_real)-0.261799, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3215, 28, (modelica_real)-0.174533, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3216, 28, (modelica_real)-0.087266, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3217, 28, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3218, 28, (modelica_real)0.087266, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3219, 28, (modelica_real)0.174533, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3220, 28, (modelica_real)0.261799, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3221, 28, (modelica_real)0.349066, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3222, 28, (modelica_real)0.436332, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3223, 28, (modelica_real)0.523599, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.6316417, (modelica_real)0.713137013, (modelica_real)0.788872054, (modelica_real)0.8582704330000001, (modelica_real)0.920803986, (modelica_real)0.975996795, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.975996795, (modelica_real)0.920803986, (modelica_real)0.8582704330000001, (modelica_real)0.788872054, (modelica_real)0.713137013, (modelica_real)0.6316417, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3224, 28, (modelica_real)0.610865, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.5974542859999999, (modelica_real)0.674538691, (modelica_real)0.746174596, (modelica_real)0.811816808, (modelica_real)0.870965752, (modelica_real)0.923171268, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.923171268, (modelica_real)0.870965752, (modelica_real)0.811816808, (modelica_real)0.746174596, (modelica_real)0.674538691, (modelica_real)0.5974542859999999, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3225, 28, (modelica_real)0.698132, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.558719885, (modelica_real)0.630806722, (modelica_real)0.697798298, (modelica_real)0.759184768, (modelica_real)0.814498944, (modelica_real)0.86331985, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.86331985, (modelica_real)0.814498944, (modelica_real)0.759184768, (modelica_real)0.697798298, (modelica_real)0.630806722, (modelica_real)0.558719885, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3226, 28, (modelica_real)0.785398, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.515733288, (modelica_real)0.582273933, (modelica_real)0.644111335, (modelica_real)0.700774874, (modelica_real)0.751833306, (modelica_real)0.796898047, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.796898047, (modelica_real)0.751833306, (modelica_real)0.700774874, (modelica_real)0.644111335, (modelica_real)0.582273933, (modelica_real)0.515733288, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3227, 28, (modelica_real)0.872665, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_real_array(&tmp3205, 22, &tmp3206, &tmp3207, &tmp3208, &tmp3209, &tmp3210, &tmp3211, &tmp3212, &tmp3213, &tmp3214, &tmp3215, &tmp3216, &tmp3217, &tmp3218, &tmp3219, &tmp3220, &tmp3221, &tmp3222, &tmp3223, &tmp3224, &tmp3225, &tmp3226, &tmp3227);
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB5$rB$Pshading_twelve1$PmodShadingLUT_2$PtableID = tmp3204.c1;
+  alloc_real_array(&tmp3205, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3228 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "NoName", "NoName", tmp3205, 1);
+  tmp3206 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\1.txt", tmp3205, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB5$rB$Pshading_twelve1$PShading_matrix$PtableID = tmp3228.c1;
-  alloc_real_array(&tmp3229, 2, 0, 1);
-  array_alloc_scalar_integer_array(&tmp3230, 12, (modelica_integer)(modelica_integer) 2, (modelica_integer)(modelica_integer) 3, (modelica_integer)(modelica_integer) 4, (modelica_integer)(modelica_integer) 5, (modelica_integer)(modelica_integer) 6, (modelica_integer)(modelica_integer) 7, (modelica_integer)(modelica_integer) 8, (modelica_integer)(modelica_integer) 9, (modelica_integer)(modelica_integer) 10, (modelica_integer)(modelica_integer) 11, (modelica_integer)(modelica_integer) 12, (modelica_integer)(modelica_integer) 13);
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB5$rB$Pshading_twelve1$PmodShadingLUT_1$PtableID = tmp3206.c1;
+  array_alloc_scalar_real_array(&tmp3208, 28, (modelica_real)0.0, (modelica_real)-3.1415926, (modelica_real)-1.04719, (modelica_real)-0.959927, (modelica_real)-0.872667, (modelica_real)-0.785397, (modelica_real)-0.6981270000000001, (modelica_real)-0.610867, (modelica_real)-0.523597, (modelica_real)-0.436327, (modelica_real)-0.349067, (modelica_real)-0.261797, (modelica_real)-0.174837, (modelica_real)-0.08726730000000001, (modelica_real)0.0, (modelica_real)0.08726730000000001, (modelica_real)0.174837, (modelica_real)0.261797, (modelica_real)0.349067, (modelica_real)0.436327, (modelica_real)0.523597, (modelica_real)0.610867, (modelica_real)0.6981270000000001, (modelica_real)0.785397, (modelica_real)0.872667, (modelica_real)0.959927, (modelica_real)1.04719, (modelica_real)3.1415926);
+  array_alloc_scalar_real_array(&tmp3209, 28, (modelica_real)-0.872665, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3210, 28, (modelica_real)-0.785398, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.515733288, (modelica_real)0.582273933, (modelica_real)0.644111335, (modelica_real)0.700774874, (modelica_real)0.751833306, (modelica_real)0.796898047, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.796898047, (modelica_real)0.751833306, (modelica_real)0.700774874, (modelica_real)0.644111335, (modelica_real)0.582273933, (modelica_real)0.515733288, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3211, 28, (modelica_real)-0.698132, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.558719885, (modelica_real)0.630806722, (modelica_real)0.697798298, (modelica_real)0.759184768, (modelica_real)0.814498944, (modelica_real)0.86331985, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.86331985, (modelica_real)0.814498944, (modelica_real)0.759184768, (modelica_real)0.697798298, (modelica_real)0.630806722, (modelica_real)0.558719885, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3212, 28, (modelica_real)-0.610865, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.5974542859999999, (modelica_real)0.674538691, (modelica_real)0.746174596, (modelica_real)0.811816808, (modelica_real)0.870965752, (modelica_real)0.923171268, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.923171268, (modelica_real)0.870965752, (modelica_real)0.811816808, (modelica_real)0.746174596, (modelica_real)0.674538691, (modelica_real)0.5974542859999999, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3213, 28, (modelica_real)-0.523599, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.6316417, (modelica_real)0.713137013, (modelica_real)0.788872054, (modelica_real)0.8582704330000001, (modelica_real)0.920803986, (modelica_real)0.975996795, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.975996795, (modelica_real)0.920803986, (modelica_real)0.8582704330000001, (modelica_real)0.788872054, (modelica_real)0.713137013, (modelica_real)0.6316417, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3214, 28, (modelica_real)-0.436332, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3215, 28, (modelica_real)-0.349066, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3216, 28, (modelica_real)-0.261799, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3217, 28, (modelica_real)-0.174533, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3218, 28, (modelica_real)-0.087266, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3219, 28, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3220, 28, (modelica_real)0.087266, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3221, 28, (modelica_real)0.174533, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3222, 28, (modelica_real)0.261799, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3223, 28, (modelica_real)0.349066, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3224, 28, (modelica_real)0.436332, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3225, 28, (modelica_real)0.523599, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.6316417, (modelica_real)0.713137013, (modelica_real)0.788872054, (modelica_real)0.8582704330000001, (modelica_real)0.920803986, (modelica_real)0.975996795, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.975996795, (modelica_real)0.920803986, (modelica_real)0.8582704330000001, (modelica_real)0.788872054, (modelica_real)0.713137013, (modelica_real)0.6316417, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3226, 28, (modelica_real)0.610865, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.5974542859999999, (modelica_real)0.674538691, (modelica_real)0.746174596, (modelica_real)0.811816808, (modelica_real)0.870965752, (modelica_real)0.923171268, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.923171268, (modelica_real)0.870965752, (modelica_real)0.811816808, (modelica_real)0.746174596, (modelica_real)0.674538691, (modelica_real)0.5974542859999999, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3227, 28, (modelica_real)0.698132, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.558719885, (modelica_real)0.630806722, (modelica_real)0.697798298, (modelica_real)0.759184768, (modelica_real)0.814498944, (modelica_real)0.86331985, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.86331985, (modelica_real)0.814498944, (modelica_real)0.759184768, (modelica_real)0.697798298, (modelica_real)0.630806722, (modelica_real)0.558719885, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3228, 28, (modelica_real)0.785398, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.515733288, (modelica_real)0.582273933, (modelica_real)0.644111335, (modelica_real)0.700774874, (modelica_real)0.751833306, (modelica_real)0.796898047, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.796898047, (modelica_real)0.751833306, (modelica_real)0.700774874, (modelica_real)0.644111335, (modelica_real)0.582273933, (modelica_real)0.515733288, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3229, 28, (modelica_real)0.872665, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_real_array(&tmp3207, 22, &tmp3208, &tmp3209, &tmp3210, &tmp3211, &tmp3212, &tmp3213, &tmp3214, &tmp3215, &tmp3216, &tmp3217, &tmp3218, &tmp3219, &tmp3220, &tmp3221, &tmp3222, &tmp3223, &tmp3224, &tmp3225, &tmp3226, &tmp3227, &tmp3228, &tmp3229);
+
+  #ifdef _OMC_MEASURE_TIME
+  SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
+  #endif
+  tmp3230 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "NoName", "NoName", tmp3207, 1);
+
+  #ifdef _OMC_MEASURE_TIME
+  SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
+  #endif
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB5$rB$Pshading_twelve1$PShading_matrix$PtableID = tmp3230.c1;
+  alloc_real_array(&tmp3231, 2, 0, 1);
+  array_alloc_scalar_integer_array(&tmp3232, 12, (modelica_integer)(modelica_integer) 2, (modelica_integer)(modelica_integer) 3, (modelica_integer)(modelica_integer) 4, (modelica_integer)(modelica_integer) 5, (modelica_integer)(modelica_integer) 6, (modelica_integer)(modelica_integer) 7, (modelica_integer)(modelica_integer) 8, (modelica_integer)(modelica_integer) 9, (modelica_integer)(modelica_integer) 10, (modelica_integer)(modelica_integer) 11, (modelica_integer)(modelica_integer) 12, (modelica_integer)(modelica_integer) 13);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTimeTable_constructor_index);
   #endif
-  tmp3231 = omc_Modelica_Blocks_Types_ExternalCombiTimeTable_constructor(threadData, "EgenIO", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\20150220\\EgenIO.txt", tmp3229, 0.0, tmp3230, 3, 1);
+  tmp3233 = omc_Modelica_Blocks_Types_ExternalCombiTimeTable_constructor(threadData, "EgenIO", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\20150220\\EgenIO.txt", tmp3231, 0.0, tmp3232, 3, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTimeTable_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB4$rB$PeGen_on$PtableID = tmp3231.c1;
-  alloc_real_array(&tmp3232, 2, 0, 1);
-
-  #ifdef _OMC_MEASURE_TIME
-  SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
-  #endif
-  tmp3233 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\12.txt", tmp3232, 1);
-
-  #ifdef _OMC_MEASURE_TIME
-  SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
-  #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB4$rB$Pshading_twelve1$PmodShadingLUT_12$PtableID = tmp3233.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB4$rB$PeGen_on$PtableID = tmp3233.c1;
   alloc_real_array(&tmp3234, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3235 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\11.txt", tmp3234, 1);
+  tmp3235 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\12.txt", tmp3234, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB4$rB$Pshading_twelve1$PmodShadingLUT_11$PtableID = tmp3235.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB4$rB$Pshading_twelve1$PmodShadingLUT_12$PtableID = tmp3235.c1;
   alloc_real_array(&tmp3236, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3237 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\10.txt", tmp3236, 1);
+  tmp3237 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\11.txt", tmp3236, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB4$rB$Pshading_twelve1$PmodShadingLUT_10$PtableID = tmp3237.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB4$rB$Pshading_twelve1$PmodShadingLUT_11$PtableID = tmp3237.c1;
   alloc_real_array(&tmp3238, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3239 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\9.txt", tmp3238, 1);
+  tmp3239 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\10.txt", tmp3238, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB4$rB$Pshading_twelve1$PmodShadingLUT_9$PtableID = tmp3239.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB4$rB$Pshading_twelve1$PmodShadingLUT_10$PtableID = tmp3239.c1;
   alloc_real_array(&tmp3240, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3241 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\8.txt", tmp3240, 1);
+  tmp3241 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\9.txt", tmp3240, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB4$rB$Pshading_twelve1$PmodShadingLUT_8$PtableID = tmp3241.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB4$rB$Pshading_twelve1$PmodShadingLUT_9$PtableID = tmp3241.c1;
   alloc_real_array(&tmp3242, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3243 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\7.txt", tmp3242, 1);
+  tmp3243 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\8.txt", tmp3242, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB4$rB$Pshading_twelve1$PmodShadingLUT_7$PtableID = tmp3243.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB4$rB$Pshading_twelve1$PmodShadingLUT_8$PtableID = tmp3243.c1;
   alloc_real_array(&tmp3244, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3245 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\6.txt", tmp3244, 1);
+  tmp3245 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\7.txt", tmp3244, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB4$rB$Pshading_twelve1$PmodShadingLUT_6$PtableID = tmp3245.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB4$rB$Pshading_twelve1$PmodShadingLUT_7$PtableID = tmp3245.c1;
   alloc_real_array(&tmp3246, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3247 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\5.txt", tmp3246, 1);
+  tmp3247 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\6.txt", tmp3246, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB4$rB$Pshading_twelve1$PmodShadingLUT_5$PtableID = tmp3247.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB4$rB$Pshading_twelve1$PmodShadingLUT_6$PtableID = tmp3247.c1;
   alloc_real_array(&tmp3248, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3249 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\4.txt", tmp3248, 1);
+  tmp3249 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\5.txt", tmp3248, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB4$rB$Pshading_twelve1$PmodShadingLUT_4$PtableID = tmp3249.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB4$rB$Pshading_twelve1$PmodShadingLUT_5$PtableID = tmp3249.c1;
   alloc_real_array(&tmp3250, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3251 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\3.txt", tmp3250, 1);
+  tmp3251 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\4.txt", tmp3250, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB4$rB$Pshading_twelve1$PmodShadingLUT_3$PtableID = tmp3251.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB4$rB$Pshading_twelve1$PmodShadingLUT_4$PtableID = tmp3251.c1;
   alloc_real_array(&tmp3252, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3253 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\2.txt", tmp3252, 1);
+  tmp3253 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\3.txt", tmp3252, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB4$rB$Pshading_twelve1$PmodShadingLUT_2$PtableID = tmp3253.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB4$rB$Pshading_twelve1$PmodShadingLUT_3$PtableID = tmp3253.c1;
   alloc_real_array(&tmp3254, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3255 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\1.txt", tmp3254, 1);
+  tmp3255 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\2.txt", tmp3254, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB4$rB$Pshading_twelve1$PmodShadingLUT_1$PtableID = tmp3255.c1;
-  array_alloc_scalar_real_array(&tmp3257, 28, (modelica_real)0.0, (modelica_real)-3.1415926, (modelica_real)-1.04719, (modelica_real)-0.959927, (modelica_real)-0.872667, (modelica_real)-0.785397, (modelica_real)-0.6981270000000001, (modelica_real)-0.610867, (modelica_real)-0.523597, (modelica_real)-0.436327, (modelica_real)-0.349067, (modelica_real)-0.261797, (modelica_real)-0.174837, (modelica_real)-0.08726730000000001, (modelica_real)0.0, (modelica_real)0.08726730000000001, (modelica_real)0.174837, (modelica_real)0.261797, (modelica_real)0.349067, (modelica_real)0.436327, (modelica_real)0.523597, (modelica_real)0.610867, (modelica_real)0.6981270000000001, (modelica_real)0.785397, (modelica_real)0.872667, (modelica_real)0.959927, (modelica_real)1.04719, (modelica_real)3.1415926);
-  array_alloc_scalar_real_array(&tmp3258, 28, (modelica_real)-0.872665, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3259, 28, (modelica_real)-0.785398, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.515733288, (modelica_real)0.582273933, (modelica_real)0.644111335, (modelica_real)0.700774874, (modelica_real)0.751833306, (modelica_real)0.796898047, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.796898047, (modelica_real)0.751833306, (modelica_real)0.700774874, (modelica_real)0.644111335, (modelica_real)0.582273933, (modelica_real)0.515733288, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3260, 28, (modelica_real)-0.698132, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.558719885, (modelica_real)0.630806722, (modelica_real)0.697798298, (modelica_real)0.759184768, (modelica_real)0.814498944, (modelica_real)0.86331985, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.86331985, (modelica_real)0.814498944, (modelica_real)0.759184768, (modelica_real)0.697798298, (modelica_real)0.630806722, (modelica_real)0.558719885, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3261, 28, (modelica_real)-0.610865, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.5974542859999999, (modelica_real)0.674538691, (modelica_real)0.746174596, (modelica_real)0.811816808, (modelica_real)0.870965752, (modelica_real)0.923171268, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.923171268, (modelica_real)0.870965752, (modelica_real)0.811816808, (modelica_real)0.746174596, (modelica_real)0.674538691, (modelica_real)0.5974542859999999, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3262, 28, (modelica_real)-0.523599, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.6316417, (modelica_real)0.713137013, (modelica_real)0.788872054, (modelica_real)0.8582704330000001, (modelica_real)0.920803986, (modelica_real)0.975996795, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.975996795, (modelica_real)0.920803986, (modelica_real)0.8582704330000001, (modelica_real)0.788872054, (modelica_real)0.713137013, (modelica_real)0.6316417, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3263, 28, (modelica_real)-0.436332, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3264, 28, (modelica_real)-0.349066, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3265, 28, (modelica_real)-0.261799, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3266, 28, (modelica_real)-0.174533, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3267, 28, (modelica_real)-0.087266, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3268, 28, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3269, 28, (modelica_real)0.087266, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3270, 28, (modelica_real)0.174533, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3271, 28, (modelica_real)0.261799, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3272, 28, (modelica_real)0.349066, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3273, 28, (modelica_real)0.436332, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3274, 28, (modelica_real)0.523599, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.6316417, (modelica_real)0.713137013, (modelica_real)0.788872054, (modelica_real)0.8582704330000001, (modelica_real)0.920803986, (modelica_real)0.975996795, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.975996795, (modelica_real)0.920803986, (modelica_real)0.8582704330000001, (modelica_real)0.788872054, (modelica_real)0.713137013, (modelica_real)0.6316417, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3275, 28, (modelica_real)0.610865, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.5974542859999999, (modelica_real)0.674538691, (modelica_real)0.746174596, (modelica_real)0.811816808, (modelica_real)0.870965752, (modelica_real)0.923171268, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.923171268, (modelica_real)0.870965752, (modelica_real)0.811816808, (modelica_real)0.746174596, (modelica_real)0.674538691, (modelica_real)0.5974542859999999, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3276, 28, (modelica_real)0.698132, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.558719885, (modelica_real)0.630806722, (modelica_real)0.697798298, (modelica_real)0.759184768, (modelica_real)0.814498944, (modelica_real)0.86331985, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.86331985, (modelica_real)0.814498944, (modelica_real)0.759184768, (modelica_real)0.697798298, (modelica_real)0.630806722, (modelica_real)0.558719885, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3277, 28, (modelica_real)0.785398, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.515733288, (modelica_real)0.582273933, (modelica_real)0.644111335, (modelica_real)0.700774874, (modelica_real)0.751833306, (modelica_real)0.796898047, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.796898047, (modelica_real)0.751833306, (modelica_real)0.700774874, (modelica_real)0.644111335, (modelica_real)0.582273933, (modelica_real)0.515733288, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3278, 28, (modelica_real)0.872665, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_real_array(&tmp3256, 22, &tmp3257, &tmp3258, &tmp3259, &tmp3260, &tmp3261, &tmp3262, &tmp3263, &tmp3264, &tmp3265, &tmp3266, &tmp3267, &tmp3268, &tmp3269, &tmp3270, &tmp3271, &tmp3272, &tmp3273, &tmp3274, &tmp3275, &tmp3276, &tmp3277, &tmp3278);
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB4$rB$Pshading_twelve1$PmodShadingLUT_2$PtableID = tmp3255.c1;
+  alloc_real_array(&tmp3256, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3279 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "NoName", "NoName", tmp3256, 1);
+  tmp3257 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\1.txt", tmp3256, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB4$rB$Pshading_twelve1$PShading_matrix$PtableID = tmp3279.c1;
-  alloc_real_array(&tmp3280, 2, 0, 1);
-  array_alloc_scalar_integer_array(&tmp3281, 12, (modelica_integer)(modelica_integer) 2, (modelica_integer)(modelica_integer) 3, (modelica_integer)(modelica_integer) 4, (modelica_integer)(modelica_integer) 5, (modelica_integer)(modelica_integer) 6, (modelica_integer)(modelica_integer) 7, (modelica_integer)(modelica_integer) 8, (modelica_integer)(modelica_integer) 9, (modelica_integer)(modelica_integer) 10, (modelica_integer)(modelica_integer) 11, (modelica_integer)(modelica_integer) 12, (modelica_integer)(modelica_integer) 13);
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB4$rB$Pshading_twelve1$PmodShadingLUT_1$PtableID = tmp3257.c1;
+  array_alloc_scalar_real_array(&tmp3259, 28, (modelica_real)0.0, (modelica_real)-3.1415926, (modelica_real)-1.04719, (modelica_real)-0.959927, (modelica_real)-0.872667, (modelica_real)-0.785397, (modelica_real)-0.6981270000000001, (modelica_real)-0.610867, (modelica_real)-0.523597, (modelica_real)-0.436327, (modelica_real)-0.349067, (modelica_real)-0.261797, (modelica_real)-0.174837, (modelica_real)-0.08726730000000001, (modelica_real)0.0, (modelica_real)0.08726730000000001, (modelica_real)0.174837, (modelica_real)0.261797, (modelica_real)0.349067, (modelica_real)0.436327, (modelica_real)0.523597, (modelica_real)0.610867, (modelica_real)0.6981270000000001, (modelica_real)0.785397, (modelica_real)0.872667, (modelica_real)0.959927, (modelica_real)1.04719, (modelica_real)3.1415926);
+  array_alloc_scalar_real_array(&tmp3260, 28, (modelica_real)-0.872665, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3261, 28, (modelica_real)-0.785398, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.515733288, (modelica_real)0.582273933, (modelica_real)0.644111335, (modelica_real)0.700774874, (modelica_real)0.751833306, (modelica_real)0.796898047, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.796898047, (modelica_real)0.751833306, (modelica_real)0.700774874, (modelica_real)0.644111335, (modelica_real)0.582273933, (modelica_real)0.515733288, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3262, 28, (modelica_real)-0.698132, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.558719885, (modelica_real)0.630806722, (modelica_real)0.697798298, (modelica_real)0.759184768, (modelica_real)0.814498944, (modelica_real)0.86331985, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.86331985, (modelica_real)0.814498944, (modelica_real)0.759184768, (modelica_real)0.697798298, (modelica_real)0.630806722, (modelica_real)0.558719885, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3263, 28, (modelica_real)-0.610865, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.5974542859999999, (modelica_real)0.674538691, (modelica_real)0.746174596, (modelica_real)0.811816808, (modelica_real)0.870965752, (modelica_real)0.923171268, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.923171268, (modelica_real)0.870965752, (modelica_real)0.811816808, (modelica_real)0.746174596, (modelica_real)0.674538691, (modelica_real)0.5974542859999999, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3264, 28, (modelica_real)-0.523599, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.6316417, (modelica_real)0.713137013, (modelica_real)0.788872054, (modelica_real)0.8582704330000001, (modelica_real)0.920803986, (modelica_real)0.975996795, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.975996795, (modelica_real)0.920803986, (modelica_real)0.8582704330000001, (modelica_real)0.788872054, (modelica_real)0.713137013, (modelica_real)0.6316417, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3265, 28, (modelica_real)-0.436332, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3266, 28, (modelica_real)-0.349066, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3267, 28, (modelica_real)-0.261799, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3268, 28, (modelica_real)-0.174533, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3269, 28, (modelica_real)-0.087266, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3270, 28, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3271, 28, (modelica_real)0.087266, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3272, 28, (modelica_real)0.174533, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3273, 28, (modelica_real)0.261799, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3274, 28, (modelica_real)0.349066, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3275, 28, (modelica_real)0.436332, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3276, 28, (modelica_real)0.523599, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.6316417, (modelica_real)0.713137013, (modelica_real)0.788872054, (modelica_real)0.8582704330000001, (modelica_real)0.920803986, (modelica_real)0.975996795, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.975996795, (modelica_real)0.920803986, (modelica_real)0.8582704330000001, (modelica_real)0.788872054, (modelica_real)0.713137013, (modelica_real)0.6316417, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3277, 28, (modelica_real)0.610865, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.5974542859999999, (modelica_real)0.674538691, (modelica_real)0.746174596, (modelica_real)0.811816808, (modelica_real)0.870965752, (modelica_real)0.923171268, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.923171268, (modelica_real)0.870965752, (modelica_real)0.811816808, (modelica_real)0.746174596, (modelica_real)0.674538691, (modelica_real)0.5974542859999999, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3278, 28, (modelica_real)0.698132, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.558719885, (modelica_real)0.630806722, (modelica_real)0.697798298, (modelica_real)0.759184768, (modelica_real)0.814498944, (modelica_real)0.86331985, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.86331985, (modelica_real)0.814498944, (modelica_real)0.759184768, (modelica_real)0.697798298, (modelica_real)0.630806722, (modelica_real)0.558719885, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3279, 28, (modelica_real)0.785398, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.515733288, (modelica_real)0.582273933, (modelica_real)0.644111335, (modelica_real)0.700774874, (modelica_real)0.751833306, (modelica_real)0.796898047, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.796898047, (modelica_real)0.751833306, (modelica_real)0.700774874, (modelica_real)0.644111335, (modelica_real)0.582273933, (modelica_real)0.515733288, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3280, 28, (modelica_real)0.872665, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_real_array(&tmp3258, 22, &tmp3259, &tmp3260, &tmp3261, &tmp3262, &tmp3263, &tmp3264, &tmp3265, &tmp3266, &tmp3267, &tmp3268, &tmp3269, &tmp3270, &tmp3271, &tmp3272, &tmp3273, &tmp3274, &tmp3275, &tmp3276, &tmp3277, &tmp3278, &tmp3279, &tmp3280);
+
+  #ifdef _OMC_MEASURE_TIME
+  SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
+  #endif
+  tmp3281 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "NoName", "NoName", tmp3258, 1);
+
+  #ifdef _OMC_MEASURE_TIME
+  SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
+  #endif
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB4$rB$Pshading_twelve1$PShading_matrix$PtableID = tmp3281.c1;
+  alloc_real_array(&tmp3282, 2, 0, 1);
+  array_alloc_scalar_integer_array(&tmp3283, 12, (modelica_integer)(modelica_integer) 2, (modelica_integer)(modelica_integer) 3, (modelica_integer)(modelica_integer) 4, (modelica_integer)(modelica_integer) 5, (modelica_integer)(modelica_integer) 6, (modelica_integer)(modelica_integer) 7, (modelica_integer)(modelica_integer) 8, (modelica_integer)(modelica_integer) 9, (modelica_integer)(modelica_integer) 10, (modelica_integer)(modelica_integer) 11, (modelica_integer)(modelica_integer) 12, (modelica_integer)(modelica_integer) 13);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTimeTable_constructor_index);
   #endif
-  tmp3282 = omc_Modelica_Blocks_Types_ExternalCombiTimeTable_constructor(threadData, "EgenIO", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\20150220\\EgenIO.txt", tmp3280, 0.0, tmp3281, 3, 1);
+  tmp3284 = omc_Modelica_Blocks_Types_ExternalCombiTimeTable_constructor(threadData, "EgenIO", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\20150220\\EgenIO.txt", tmp3282, 0.0, tmp3283, 3, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTimeTable_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB3$rB$PeGen_on$PtableID = tmp3282.c1;
-  alloc_real_array(&tmp3283, 2, 0, 1);
-
-  #ifdef _OMC_MEASURE_TIME
-  SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
-  #endif
-  tmp3284 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\12.txt", tmp3283, 1);
-
-  #ifdef _OMC_MEASURE_TIME
-  SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
-  #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB3$rB$Pshading_twelve1$PmodShadingLUT_12$PtableID = tmp3284.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB3$rB$PeGen_on$PtableID = tmp3284.c1;
   alloc_real_array(&tmp3285, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3286 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\11.txt", tmp3285, 1);
+  tmp3286 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\12.txt", tmp3285, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB3$rB$Pshading_twelve1$PmodShadingLUT_11$PtableID = tmp3286.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB3$rB$Pshading_twelve1$PmodShadingLUT_12$PtableID = tmp3286.c1;
   alloc_real_array(&tmp3287, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3288 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\10.txt", tmp3287, 1);
+  tmp3288 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\11.txt", tmp3287, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB3$rB$Pshading_twelve1$PmodShadingLUT_10$PtableID = tmp3288.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB3$rB$Pshading_twelve1$PmodShadingLUT_11$PtableID = tmp3288.c1;
   alloc_real_array(&tmp3289, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3290 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\9.txt", tmp3289, 1);
+  tmp3290 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\10.txt", tmp3289, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB3$rB$Pshading_twelve1$PmodShadingLUT_9$PtableID = tmp3290.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB3$rB$Pshading_twelve1$PmodShadingLUT_10$PtableID = tmp3290.c1;
   alloc_real_array(&tmp3291, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3292 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\8.txt", tmp3291, 1);
+  tmp3292 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\9.txt", tmp3291, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB3$rB$Pshading_twelve1$PmodShadingLUT_8$PtableID = tmp3292.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB3$rB$Pshading_twelve1$PmodShadingLUT_9$PtableID = tmp3292.c1;
   alloc_real_array(&tmp3293, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3294 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\7.txt", tmp3293, 1);
+  tmp3294 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\8.txt", tmp3293, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB3$rB$Pshading_twelve1$PmodShadingLUT_7$PtableID = tmp3294.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB3$rB$Pshading_twelve1$PmodShadingLUT_8$PtableID = tmp3294.c1;
   alloc_real_array(&tmp3295, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3296 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\6.txt", tmp3295, 1);
+  tmp3296 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\7.txt", tmp3295, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB3$rB$Pshading_twelve1$PmodShadingLUT_6$PtableID = tmp3296.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB3$rB$Pshading_twelve1$PmodShadingLUT_7$PtableID = tmp3296.c1;
   alloc_real_array(&tmp3297, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3298 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\5.txt", tmp3297, 1);
+  tmp3298 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\6.txt", tmp3297, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB3$rB$Pshading_twelve1$PmodShadingLUT_5$PtableID = tmp3298.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB3$rB$Pshading_twelve1$PmodShadingLUT_6$PtableID = tmp3298.c1;
   alloc_real_array(&tmp3299, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3300 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\4.txt", tmp3299, 1);
+  tmp3300 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\5.txt", tmp3299, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB3$rB$Pshading_twelve1$PmodShadingLUT_4$PtableID = tmp3300.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB3$rB$Pshading_twelve1$PmodShadingLUT_5$PtableID = tmp3300.c1;
   alloc_real_array(&tmp3301, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3302 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\3.txt", tmp3301, 1);
+  tmp3302 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\4.txt", tmp3301, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB3$rB$Pshading_twelve1$PmodShadingLUT_3$PtableID = tmp3302.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB3$rB$Pshading_twelve1$PmodShadingLUT_4$PtableID = tmp3302.c1;
   alloc_real_array(&tmp3303, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3304 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\2.txt", tmp3303, 1);
+  tmp3304 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\3.txt", tmp3303, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB3$rB$Pshading_twelve1$PmodShadingLUT_2$PtableID = tmp3304.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB3$rB$Pshading_twelve1$PmodShadingLUT_3$PtableID = tmp3304.c1;
   alloc_real_array(&tmp3305, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3306 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\1.txt", tmp3305, 1);
+  tmp3306 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\2.txt", tmp3305, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB3$rB$Pshading_twelve1$PmodShadingLUT_1$PtableID = tmp3306.c1;
-  array_alloc_scalar_real_array(&tmp3308, 28, (modelica_real)0.0, (modelica_real)-3.1415926, (modelica_real)-1.04719, (modelica_real)-0.959927, (modelica_real)-0.872667, (modelica_real)-0.785397, (modelica_real)-0.6981270000000001, (modelica_real)-0.610867, (modelica_real)-0.523597, (modelica_real)-0.436327, (modelica_real)-0.349067, (modelica_real)-0.261797, (modelica_real)-0.174837, (modelica_real)-0.08726730000000001, (modelica_real)0.0, (modelica_real)0.08726730000000001, (modelica_real)0.174837, (modelica_real)0.261797, (modelica_real)0.349067, (modelica_real)0.436327, (modelica_real)0.523597, (modelica_real)0.610867, (modelica_real)0.6981270000000001, (modelica_real)0.785397, (modelica_real)0.872667, (modelica_real)0.959927, (modelica_real)1.04719, (modelica_real)3.1415926);
-  array_alloc_scalar_real_array(&tmp3309, 28, (modelica_real)-0.872665, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3310, 28, (modelica_real)-0.785398, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.515733288, (modelica_real)0.582273933, (modelica_real)0.644111335, (modelica_real)0.700774874, (modelica_real)0.751833306, (modelica_real)0.796898047, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.796898047, (modelica_real)0.751833306, (modelica_real)0.700774874, (modelica_real)0.644111335, (modelica_real)0.582273933, (modelica_real)0.515733288, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3311, 28, (modelica_real)-0.698132, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.558719885, (modelica_real)0.630806722, (modelica_real)0.697798298, (modelica_real)0.759184768, (modelica_real)0.814498944, (modelica_real)0.86331985, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.86331985, (modelica_real)0.814498944, (modelica_real)0.759184768, (modelica_real)0.697798298, (modelica_real)0.630806722, (modelica_real)0.558719885, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3312, 28, (modelica_real)-0.610865, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.5974542859999999, (modelica_real)0.674538691, (modelica_real)0.746174596, (modelica_real)0.811816808, (modelica_real)0.870965752, (modelica_real)0.923171268, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.923171268, (modelica_real)0.870965752, (modelica_real)0.811816808, (modelica_real)0.746174596, (modelica_real)0.674538691, (modelica_real)0.5974542859999999, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3313, 28, (modelica_real)-0.523599, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.6316417, (modelica_real)0.713137013, (modelica_real)0.788872054, (modelica_real)0.8582704330000001, (modelica_real)0.920803986, (modelica_real)0.975996795, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.975996795, (modelica_real)0.920803986, (modelica_real)0.8582704330000001, (modelica_real)0.788872054, (modelica_real)0.713137013, (modelica_real)0.6316417, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3314, 28, (modelica_real)-0.436332, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3315, 28, (modelica_real)-0.349066, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3316, 28, (modelica_real)-0.261799, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3317, 28, (modelica_real)-0.174533, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3318, 28, (modelica_real)-0.087266, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3319, 28, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3320, 28, (modelica_real)0.087266, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3321, 28, (modelica_real)0.174533, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3322, 28, (modelica_real)0.261799, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3323, 28, (modelica_real)0.349066, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3324, 28, (modelica_real)0.436332, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3325, 28, (modelica_real)0.523599, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.6316417, (modelica_real)0.713137013, (modelica_real)0.788872054, (modelica_real)0.8582704330000001, (modelica_real)0.920803986, (modelica_real)0.975996795, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.975996795, (modelica_real)0.920803986, (modelica_real)0.8582704330000001, (modelica_real)0.788872054, (modelica_real)0.713137013, (modelica_real)0.6316417, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3326, 28, (modelica_real)0.610865, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.5974542859999999, (modelica_real)0.674538691, (modelica_real)0.746174596, (modelica_real)0.811816808, (modelica_real)0.870965752, (modelica_real)0.923171268, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.923171268, (modelica_real)0.870965752, (modelica_real)0.811816808, (modelica_real)0.746174596, (modelica_real)0.674538691, (modelica_real)0.5974542859999999, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3327, 28, (modelica_real)0.698132, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.558719885, (modelica_real)0.630806722, (modelica_real)0.697798298, (modelica_real)0.759184768, (modelica_real)0.814498944, (modelica_real)0.86331985, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.86331985, (modelica_real)0.814498944, (modelica_real)0.759184768, (modelica_real)0.697798298, (modelica_real)0.630806722, (modelica_real)0.558719885, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3328, 28, (modelica_real)0.785398, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.515733288, (modelica_real)0.582273933, (modelica_real)0.644111335, (modelica_real)0.700774874, (modelica_real)0.751833306, (modelica_real)0.796898047, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.796898047, (modelica_real)0.751833306, (modelica_real)0.700774874, (modelica_real)0.644111335, (modelica_real)0.582273933, (modelica_real)0.515733288, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3329, 28, (modelica_real)0.872665, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_real_array(&tmp3307, 22, &tmp3308, &tmp3309, &tmp3310, &tmp3311, &tmp3312, &tmp3313, &tmp3314, &tmp3315, &tmp3316, &tmp3317, &tmp3318, &tmp3319, &tmp3320, &tmp3321, &tmp3322, &tmp3323, &tmp3324, &tmp3325, &tmp3326, &tmp3327, &tmp3328, &tmp3329);
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB3$rB$Pshading_twelve1$PmodShadingLUT_2$PtableID = tmp3306.c1;
+  alloc_real_array(&tmp3307, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3330 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "NoName", "NoName", tmp3307, 1);
+  tmp3308 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\1.txt", tmp3307, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB3$rB$Pshading_twelve1$PShading_matrix$PtableID = tmp3330.c1;
-  alloc_real_array(&tmp3331, 2, 0, 1);
-  array_alloc_scalar_integer_array(&tmp3332, 12, (modelica_integer)(modelica_integer) 2, (modelica_integer)(modelica_integer) 3, (modelica_integer)(modelica_integer) 4, (modelica_integer)(modelica_integer) 5, (modelica_integer)(modelica_integer) 6, (modelica_integer)(modelica_integer) 7, (modelica_integer)(modelica_integer) 8, (modelica_integer)(modelica_integer) 9, (modelica_integer)(modelica_integer) 10, (modelica_integer)(modelica_integer) 11, (modelica_integer)(modelica_integer) 12, (modelica_integer)(modelica_integer) 13);
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB3$rB$Pshading_twelve1$PmodShadingLUT_1$PtableID = tmp3308.c1;
+  array_alloc_scalar_real_array(&tmp3310, 28, (modelica_real)0.0, (modelica_real)-3.1415926, (modelica_real)-1.04719, (modelica_real)-0.959927, (modelica_real)-0.872667, (modelica_real)-0.785397, (modelica_real)-0.6981270000000001, (modelica_real)-0.610867, (modelica_real)-0.523597, (modelica_real)-0.436327, (modelica_real)-0.349067, (modelica_real)-0.261797, (modelica_real)-0.174837, (modelica_real)-0.08726730000000001, (modelica_real)0.0, (modelica_real)0.08726730000000001, (modelica_real)0.174837, (modelica_real)0.261797, (modelica_real)0.349067, (modelica_real)0.436327, (modelica_real)0.523597, (modelica_real)0.610867, (modelica_real)0.6981270000000001, (modelica_real)0.785397, (modelica_real)0.872667, (modelica_real)0.959927, (modelica_real)1.04719, (modelica_real)3.1415926);
+  array_alloc_scalar_real_array(&tmp3311, 28, (modelica_real)-0.872665, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3312, 28, (modelica_real)-0.785398, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.515733288, (modelica_real)0.582273933, (modelica_real)0.644111335, (modelica_real)0.700774874, (modelica_real)0.751833306, (modelica_real)0.796898047, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.796898047, (modelica_real)0.751833306, (modelica_real)0.700774874, (modelica_real)0.644111335, (modelica_real)0.582273933, (modelica_real)0.515733288, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3313, 28, (modelica_real)-0.698132, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.558719885, (modelica_real)0.630806722, (modelica_real)0.697798298, (modelica_real)0.759184768, (modelica_real)0.814498944, (modelica_real)0.86331985, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.86331985, (modelica_real)0.814498944, (modelica_real)0.759184768, (modelica_real)0.697798298, (modelica_real)0.630806722, (modelica_real)0.558719885, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3314, 28, (modelica_real)-0.610865, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.5974542859999999, (modelica_real)0.674538691, (modelica_real)0.746174596, (modelica_real)0.811816808, (modelica_real)0.870965752, (modelica_real)0.923171268, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.923171268, (modelica_real)0.870965752, (modelica_real)0.811816808, (modelica_real)0.746174596, (modelica_real)0.674538691, (modelica_real)0.5974542859999999, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3315, 28, (modelica_real)-0.523599, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.6316417, (modelica_real)0.713137013, (modelica_real)0.788872054, (modelica_real)0.8582704330000001, (modelica_real)0.920803986, (modelica_real)0.975996795, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.975996795, (modelica_real)0.920803986, (modelica_real)0.8582704330000001, (modelica_real)0.788872054, (modelica_real)0.713137013, (modelica_real)0.6316417, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3316, 28, (modelica_real)-0.436332, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3317, 28, (modelica_real)-0.349066, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3318, 28, (modelica_real)-0.261799, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3319, 28, (modelica_real)-0.174533, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3320, 28, (modelica_real)-0.087266, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3321, 28, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3322, 28, (modelica_real)0.087266, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3323, 28, (modelica_real)0.174533, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3324, 28, (modelica_real)0.261799, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3325, 28, (modelica_real)0.349066, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3326, 28, (modelica_real)0.436332, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3327, 28, (modelica_real)0.523599, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.6316417, (modelica_real)0.713137013, (modelica_real)0.788872054, (modelica_real)0.8582704330000001, (modelica_real)0.920803986, (modelica_real)0.975996795, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.975996795, (modelica_real)0.920803986, (modelica_real)0.8582704330000001, (modelica_real)0.788872054, (modelica_real)0.713137013, (modelica_real)0.6316417, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3328, 28, (modelica_real)0.610865, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.5974542859999999, (modelica_real)0.674538691, (modelica_real)0.746174596, (modelica_real)0.811816808, (modelica_real)0.870965752, (modelica_real)0.923171268, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.923171268, (modelica_real)0.870965752, (modelica_real)0.811816808, (modelica_real)0.746174596, (modelica_real)0.674538691, (modelica_real)0.5974542859999999, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3329, 28, (modelica_real)0.698132, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.558719885, (modelica_real)0.630806722, (modelica_real)0.697798298, (modelica_real)0.759184768, (modelica_real)0.814498944, (modelica_real)0.86331985, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.86331985, (modelica_real)0.814498944, (modelica_real)0.759184768, (modelica_real)0.697798298, (modelica_real)0.630806722, (modelica_real)0.558719885, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3330, 28, (modelica_real)0.785398, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.515733288, (modelica_real)0.582273933, (modelica_real)0.644111335, (modelica_real)0.700774874, (modelica_real)0.751833306, (modelica_real)0.796898047, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.796898047, (modelica_real)0.751833306, (modelica_real)0.700774874, (modelica_real)0.644111335, (modelica_real)0.582273933, (modelica_real)0.515733288, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3331, 28, (modelica_real)0.872665, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_real_array(&tmp3309, 22, &tmp3310, &tmp3311, &tmp3312, &tmp3313, &tmp3314, &tmp3315, &tmp3316, &tmp3317, &tmp3318, &tmp3319, &tmp3320, &tmp3321, &tmp3322, &tmp3323, &tmp3324, &tmp3325, &tmp3326, &tmp3327, &tmp3328, &tmp3329, &tmp3330, &tmp3331);
+
+  #ifdef _OMC_MEASURE_TIME
+  SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
+  #endif
+  tmp3332 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "NoName", "NoName", tmp3309, 1);
+
+  #ifdef _OMC_MEASURE_TIME
+  SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
+  #endif
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB3$rB$Pshading_twelve1$PShading_matrix$PtableID = tmp3332.c1;
+  alloc_real_array(&tmp3333, 2, 0, 1);
+  array_alloc_scalar_integer_array(&tmp3334, 12, (modelica_integer)(modelica_integer) 2, (modelica_integer)(modelica_integer) 3, (modelica_integer)(modelica_integer) 4, (modelica_integer)(modelica_integer) 5, (modelica_integer)(modelica_integer) 6, (modelica_integer)(modelica_integer) 7, (modelica_integer)(modelica_integer) 8, (modelica_integer)(modelica_integer) 9, (modelica_integer)(modelica_integer) 10, (modelica_integer)(modelica_integer) 11, (modelica_integer)(modelica_integer) 12, (modelica_integer)(modelica_integer) 13);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTimeTable_constructor_index);
   #endif
-  tmp3333 = omc_Modelica_Blocks_Types_ExternalCombiTimeTable_constructor(threadData, "EgenIO", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\20150220\\EgenIO.txt", tmp3331, 0.0, tmp3332, 3, 1);
+  tmp3335 = omc_Modelica_Blocks_Types_ExternalCombiTimeTable_constructor(threadData, "EgenIO", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\20150220\\EgenIO.txt", tmp3333, 0.0, tmp3334, 3, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTimeTable_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB2$rB$PeGen_on$PtableID = tmp3333.c1;
-  alloc_real_array(&tmp3334, 2, 0, 1);
-
-  #ifdef _OMC_MEASURE_TIME
-  SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
-  #endif
-  tmp3335 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\12.txt", tmp3334, 1);
-
-  #ifdef _OMC_MEASURE_TIME
-  SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
-  #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB2$rB$Pshading_twelve1$PmodShadingLUT_12$PtableID = tmp3335.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB2$rB$PeGen_on$PtableID = tmp3335.c1;
   alloc_real_array(&tmp3336, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3337 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\11.txt", tmp3336, 1);
+  tmp3337 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\12.txt", tmp3336, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB2$rB$Pshading_twelve1$PmodShadingLUT_11$PtableID = tmp3337.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB2$rB$Pshading_twelve1$PmodShadingLUT_12$PtableID = tmp3337.c1;
   alloc_real_array(&tmp3338, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3339 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\10.txt", tmp3338, 1);
+  tmp3339 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\11.txt", tmp3338, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB2$rB$Pshading_twelve1$PmodShadingLUT_10$PtableID = tmp3339.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB2$rB$Pshading_twelve1$PmodShadingLUT_11$PtableID = tmp3339.c1;
   alloc_real_array(&tmp3340, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3341 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\9.txt", tmp3340, 1);
+  tmp3341 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\10.txt", tmp3340, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB2$rB$Pshading_twelve1$PmodShadingLUT_9$PtableID = tmp3341.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB2$rB$Pshading_twelve1$PmodShadingLUT_10$PtableID = tmp3341.c1;
   alloc_real_array(&tmp3342, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3343 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\8.txt", tmp3342, 1);
+  tmp3343 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\9.txt", tmp3342, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB2$rB$Pshading_twelve1$PmodShadingLUT_8$PtableID = tmp3343.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB2$rB$Pshading_twelve1$PmodShadingLUT_9$PtableID = tmp3343.c1;
   alloc_real_array(&tmp3344, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3345 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\7.txt", tmp3344, 1);
+  tmp3345 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\8.txt", tmp3344, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB2$rB$Pshading_twelve1$PmodShadingLUT_7$PtableID = tmp3345.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB2$rB$Pshading_twelve1$PmodShadingLUT_8$PtableID = tmp3345.c1;
   alloc_real_array(&tmp3346, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3347 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\6.txt", tmp3346, 1);
+  tmp3347 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\7.txt", tmp3346, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB2$rB$Pshading_twelve1$PmodShadingLUT_6$PtableID = tmp3347.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB2$rB$Pshading_twelve1$PmodShadingLUT_7$PtableID = tmp3347.c1;
   alloc_real_array(&tmp3348, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3349 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\5.txt", tmp3348, 1);
+  tmp3349 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\6.txt", tmp3348, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB2$rB$Pshading_twelve1$PmodShadingLUT_5$PtableID = tmp3349.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB2$rB$Pshading_twelve1$PmodShadingLUT_6$PtableID = tmp3349.c1;
   alloc_real_array(&tmp3350, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3351 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\4.txt", tmp3350, 1);
+  tmp3351 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\5.txt", tmp3350, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB2$rB$Pshading_twelve1$PmodShadingLUT_4$PtableID = tmp3351.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB2$rB$Pshading_twelve1$PmodShadingLUT_5$PtableID = tmp3351.c1;
   alloc_real_array(&tmp3352, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3353 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\3.txt", tmp3352, 1);
+  tmp3353 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\4.txt", tmp3352, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB2$rB$Pshading_twelve1$PmodShadingLUT_3$PtableID = tmp3353.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB2$rB$Pshading_twelve1$PmodShadingLUT_4$PtableID = tmp3353.c1;
   alloc_real_array(&tmp3354, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3355 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\2.txt", tmp3354, 1);
+  tmp3355 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\3.txt", tmp3354, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB2$rB$Pshading_twelve1$PmodShadingLUT_2$PtableID = tmp3355.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB2$rB$Pshading_twelve1$PmodShadingLUT_3$PtableID = tmp3355.c1;
   alloc_real_array(&tmp3356, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3357 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\1.txt", tmp3356, 1);
+  tmp3357 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\2.txt", tmp3356, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB2$rB$Pshading_twelve1$PmodShadingLUT_1$PtableID = tmp3357.c1;
-  array_alloc_scalar_real_array(&tmp3359, 28, (modelica_real)0.0, (modelica_real)-3.1415926, (modelica_real)-1.04719, (modelica_real)-0.959927, (modelica_real)-0.872667, (modelica_real)-0.785397, (modelica_real)-0.6981270000000001, (modelica_real)-0.610867, (modelica_real)-0.523597, (modelica_real)-0.436327, (modelica_real)-0.349067, (modelica_real)-0.261797, (modelica_real)-0.174837, (modelica_real)-0.08726730000000001, (modelica_real)0.0, (modelica_real)0.08726730000000001, (modelica_real)0.174837, (modelica_real)0.261797, (modelica_real)0.349067, (modelica_real)0.436327, (modelica_real)0.523597, (modelica_real)0.610867, (modelica_real)0.6981270000000001, (modelica_real)0.785397, (modelica_real)0.872667, (modelica_real)0.959927, (modelica_real)1.04719, (modelica_real)3.1415926);
-  array_alloc_scalar_real_array(&tmp3360, 28, (modelica_real)-0.872665, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3361, 28, (modelica_real)-0.785398, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.515733288, (modelica_real)0.582273933, (modelica_real)0.644111335, (modelica_real)0.700774874, (modelica_real)0.751833306, (modelica_real)0.796898047, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.796898047, (modelica_real)0.751833306, (modelica_real)0.700774874, (modelica_real)0.644111335, (modelica_real)0.582273933, (modelica_real)0.515733288, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3362, 28, (modelica_real)-0.698132, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.558719885, (modelica_real)0.630806722, (modelica_real)0.697798298, (modelica_real)0.759184768, (modelica_real)0.814498944, (modelica_real)0.86331985, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.86331985, (modelica_real)0.814498944, (modelica_real)0.759184768, (modelica_real)0.697798298, (modelica_real)0.630806722, (modelica_real)0.558719885, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3363, 28, (modelica_real)-0.610865, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.5974542859999999, (modelica_real)0.674538691, (modelica_real)0.746174596, (modelica_real)0.811816808, (modelica_real)0.870965752, (modelica_real)0.923171268, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.923171268, (modelica_real)0.870965752, (modelica_real)0.811816808, (modelica_real)0.746174596, (modelica_real)0.674538691, (modelica_real)0.5974542859999999, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3364, 28, (modelica_real)-0.523599, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.6316417, (modelica_real)0.713137013, (modelica_real)0.788872054, (modelica_real)0.8582704330000001, (modelica_real)0.920803986, (modelica_real)0.975996795, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.975996795, (modelica_real)0.920803986, (modelica_real)0.8582704330000001, (modelica_real)0.788872054, (modelica_real)0.713137013, (modelica_real)0.6316417, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3365, 28, (modelica_real)-0.436332, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3366, 28, (modelica_real)-0.349066, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3367, 28, (modelica_real)-0.261799, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3368, 28, (modelica_real)-0.174533, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3369, 28, (modelica_real)-0.087266, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3370, 28, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3371, 28, (modelica_real)0.087266, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3372, 28, (modelica_real)0.174533, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3373, 28, (modelica_real)0.261799, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3374, 28, (modelica_real)0.349066, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3375, 28, (modelica_real)0.436332, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3376, 28, (modelica_real)0.523599, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.6316417, (modelica_real)0.713137013, (modelica_real)0.788872054, (modelica_real)0.8582704330000001, (modelica_real)0.920803986, (modelica_real)0.975996795, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.975996795, (modelica_real)0.920803986, (modelica_real)0.8582704330000001, (modelica_real)0.788872054, (modelica_real)0.713137013, (modelica_real)0.6316417, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3377, 28, (modelica_real)0.610865, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.5974542859999999, (modelica_real)0.674538691, (modelica_real)0.746174596, (modelica_real)0.811816808, (modelica_real)0.870965752, (modelica_real)0.923171268, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.923171268, (modelica_real)0.870965752, (modelica_real)0.811816808, (modelica_real)0.746174596, (modelica_real)0.674538691, (modelica_real)0.5974542859999999, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3378, 28, (modelica_real)0.698132, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.558719885, (modelica_real)0.630806722, (modelica_real)0.697798298, (modelica_real)0.759184768, (modelica_real)0.814498944, (modelica_real)0.86331985, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.86331985, (modelica_real)0.814498944, (modelica_real)0.759184768, (modelica_real)0.697798298, (modelica_real)0.630806722, (modelica_real)0.558719885, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3379, 28, (modelica_real)0.785398, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.515733288, (modelica_real)0.582273933, (modelica_real)0.644111335, (modelica_real)0.700774874, (modelica_real)0.751833306, (modelica_real)0.796898047, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.796898047, (modelica_real)0.751833306, (modelica_real)0.700774874, (modelica_real)0.644111335, (modelica_real)0.582273933, (modelica_real)0.515733288, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3380, 28, (modelica_real)0.872665, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_real_array(&tmp3358, 22, &tmp3359, &tmp3360, &tmp3361, &tmp3362, &tmp3363, &tmp3364, &tmp3365, &tmp3366, &tmp3367, &tmp3368, &tmp3369, &tmp3370, &tmp3371, &tmp3372, &tmp3373, &tmp3374, &tmp3375, &tmp3376, &tmp3377, &tmp3378, &tmp3379, &tmp3380);
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB2$rB$Pshading_twelve1$PmodShadingLUT_2$PtableID = tmp3357.c1;
+  alloc_real_array(&tmp3358, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3381 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "NoName", "NoName", tmp3358, 1);
+  tmp3359 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\1.txt", tmp3358, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB2$rB$Pshading_twelve1$PShading_matrix$PtableID = tmp3381.c1;
-  alloc_real_array(&tmp3382, 2, 0, 1);
-  array_alloc_scalar_integer_array(&tmp3383, 12, (modelica_integer)(modelica_integer) 2, (modelica_integer)(modelica_integer) 3, (modelica_integer)(modelica_integer) 4, (modelica_integer)(modelica_integer) 5, (modelica_integer)(modelica_integer) 6, (modelica_integer)(modelica_integer) 7, (modelica_integer)(modelica_integer) 8, (modelica_integer)(modelica_integer) 9, (modelica_integer)(modelica_integer) 10, (modelica_integer)(modelica_integer) 11, (modelica_integer)(modelica_integer) 12, (modelica_integer)(modelica_integer) 13);
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB2$rB$Pshading_twelve1$PmodShadingLUT_1$PtableID = tmp3359.c1;
+  array_alloc_scalar_real_array(&tmp3361, 28, (modelica_real)0.0, (modelica_real)-3.1415926, (modelica_real)-1.04719, (modelica_real)-0.959927, (modelica_real)-0.872667, (modelica_real)-0.785397, (modelica_real)-0.6981270000000001, (modelica_real)-0.610867, (modelica_real)-0.523597, (modelica_real)-0.436327, (modelica_real)-0.349067, (modelica_real)-0.261797, (modelica_real)-0.174837, (modelica_real)-0.08726730000000001, (modelica_real)0.0, (modelica_real)0.08726730000000001, (modelica_real)0.174837, (modelica_real)0.261797, (modelica_real)0.349067, (modelica_real)0.436327, (modelica_real)0.523597, (modelica_real)0.610867, (modelica_real)0.6981270000000001, (modelica_real)0.785397, (modelica_real)0.872667, (modelica_real)0.959927, (modelica_real)1.04719, (modelica_real)3.1415926);
+  array_alloc_scalar_real_array(&tmp3362, 28, (modelica_real)-0.872665, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3363, 28, (modelica_real)-0.785398, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.515733288, (modelica_real)0.582273933, (modelica_real)0.644111335, (modelica_real)0.700774874, (modelica_real)0.751833306, (modelica_real)0.796898047, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.796898047, (modelica_real)0.751833306, (modelica_real)0.700774874, (modelica_real)0.644111335, (modelica_real)0.582273933, (modelica_real)0.515733288, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3364, 28, (modelica_real)-0.698132, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.558719885, (modelica_real)0.630806722, (modelica_real)0.697798298, (modelica_real)0.759184768, (modelica_real)0.814498944, (modelica_real)0.86331985, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.86331985, (modelica_real)0.814498944, (modelica_real)0.759184768, (modelica_real)0.697798298, (modelica_real)0.630806722, (modelica_real)0.558719885, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3365, 28, (modelica_real)-0.610865, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.5974542859999999, (modelica_real)0.674538691, (modelica_real)0.746174596, (modelica_real)0.811816808, (modelica_real)0.870965752, (modelica_real)0.923171268, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.923171268, (modelica_real)0.870965752, (modelica_real)0.811816808, (modelica_real)0.746174596, (modelica_real)0.674538691, (modelica_real)0.5974542859999999, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3366, 28, (modelica_real)-0.523599, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.6316417, (modelica_real)0.713137013, (modelica_real)0.788872054, (modelica_real)0.8582704330000001, (modelica_real)0.920803986, (modelica_real)0.975996795, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.975996795, (modelica_real)0.920803986, (modelica_real)0.8582704330000001, (modelica_real)0.788872054, (modelica_real)0.713137013, (modelica_real)0.6316417, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3367, 28, (modelica_real)-0.436332, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3368, 28, (modelica_real)-0.349066, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3369, 28, (modelica_real)-0.261799, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3370, 28, (modelica_real)-0.174533, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3371, 28, (modelica_real)-0.087266, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3372, 28, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3373, 28, (modelica_real)0.087266, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3374, 28, (modelica_real)0.174533, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3375, 28, (modelica_real)0.261799, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3376, 28, (modelica_real)0.349066, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3377, 28, (modelica_real)0.436332, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3378, 28, (modelica_real)0.523599, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.6316417, (modelica_real)0.713137013, (modelica_real)0.788872054, (modelica_real)0.8582704330000001, (modelica_real)0.920803986, (modelica_real)0.975996795, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.975996795, (modelica_real)0.920803986, (modelica_real)0.8582704330000001, (modelica_real)0.788872054, (modelica_real)0.713137013, (modelica_real)0.6316417, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3379, 28, (modelica_real)0.610865, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.5974542859999999, (modelica_real)0.674538691, (modelica_real)0.746174596, (modelica_real)0.811816808, (modelica_real)0.870965752, (modelica_real)0.923171268, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.923171268, (modelica_real)0.870965752, (modelica_real)0.811816808, (modelica_real)0.746174596, (modelica_real)0.674538691, (modelica_real)0.5974542859999999, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3380, 28, (modelica_real)0.698132, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.558719885, (modelica_real)0.630806722, (modelica_real)0.697798298, (modelica_real)0.759184768, (modelica_real)0.814498944, (modelica_real)0.86331985, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.86331985, (modelica_real)0.814498944, (modelica_real)0.759184768, (modelica_real)0.697798298, (modelica_real)0.630806722, (modelica_real)0.558719885, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3381, 28, (modelica_real)0.785398, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.515733288, (modelica_real)0.582273933, (modelica_real)0.644111335, (modelica_real)0.700774874, (modelica_real)0.751833306, (modelica_real)0.796898047, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.796898047, (modelica_real)0.751833306, (modelica_real)0.700774874, (modelica_real)0.644111335, (modelica_real)0.582273933, (modelica_real)0.515733288, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3382, 28, (modelica_real)0.872665, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_real_array(&tmp3360, 22, &tmp3361, &tmp3362, &tmp3363, &tmp3364, &tmp3365, &tmp3366, &tmp3367, &tmp3368, &tmp3369, &tmp3370, &tmp3371, &tmp3372, &tmp3373, &tmp3374, &tmp3375, &tmp3376, &tmp3377, &tmp3378, &tmp3379, &tmp3380, &tmp3381, &tmp3382);
+
+  #ifdef _OMC_MEASURE_TIME
+  SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
+  #endif
+  tmp3383 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "NoName", "NoName", tmp3360, 1);
+
+  #ifdef _OMC_MEASURE_TIME
+  SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
+  #endif
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB2$rB$Pshading_twelve1$PShading_matrix$PtableID = tmp3383.c1;
+  alloc_real_array(&tmp3384, 2, 0, 1);
+  array_alloc_scalar_integer_array(&tmp3385, 12, (modelica_integer)(modelica_integer) 2, (modelica_integer)(modelica_integer) 3, (modelica_integer)(modelica_integer) 4, (modelica_integer)(modelica_integer) 5, (modelica_integer)(modelica_integer) 6, (modelica_integer)(modelica_integer) 7, (modelica_integer)(modelica_integer) 8, (modelica_integer)(modelica_integer) 9, (modelica_integer)(modelica_integer) 10, (modelica_integer)(modelica_integer) 11, (modelica_integer)(modelica_integer) 12, (modelica_integer)(modelica_integer) 13);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTimeTable_constructor_index);
   #endif
-  tmp3384 = omc_Modelica_Blocks_Types_ExternalCombiTimeTable_constructor(threadData, "EgenIO", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\20150220\\EgenIO.txt", tmp3382, 0.0, tmp3383, 3, 1);
+  tmp3386 = omc_Modelica_Blocks_Types_ExternalCombiTimeTable_constructor(threadData, "EgenIO", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\20150220\\EgenIO.txt", tmp3384, 0.0, tmp3385, 3, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTimeTable_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB1$rB$PeGen_on$PtableID = tmp3384.c1;
-  alloc_real_array(&tmp3385, 2, 0, 1);
-
-  #ifdef _OMC_MEASURE_TIME
-  SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
-  #endif
-  tmp3386 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\12.txt", tmp3385, 1);
-
-  #ifdef _OMC_MEASURE_TIME
-  SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
-  #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB1$rB$Pshading_twelve1$PmodShadingLUT_12$PtableID = tmp3386.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB1$rB$PeGen_on$PtableID = tmp3386.c1;
   alloc_real_array(&tmp3387, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3388 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\11.txt", tmp3387, 1);
+  tmp3388 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\12.txt", tmp3387, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB1$rB$Pshading_twelve1$PmodShadingLUT_11$PtableID = tmp3388.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB1$rB$Pshading_twelve1$PmodShadingLUT_12$PtableID = tmp3388.c1;
   alloc_real_array(&tmp3389, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3390 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\10.txt", tmp3389, 1);
+  tmp3390 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\11.txt", tmp3389, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB1$rB$Pshading_twelve1$PmodShadingLUT_10$PtableID = tmp3390.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB1$rB$Pshading_twelve1$PmodShadingLUT_11$PtableID = tmp3390.c1;
   alloc_real_array(&tmp3391, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3392 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\9.txt", tmp3391, 1);
+  tmp3392 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\10.txt", tmp3391, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB1$rB$Pshading_twelve1$PmodShadingLUT_9$PtableID = tmp3392.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB1$rB$Pshading_twelve1$PmodShadingLUT_10$PtableID = tmp3392.c1;
   alloc_real_array(&tmp3393, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3394 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\8.txt", tmp3393, 1);
+  tmp3394 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\9.txt", tmp3393, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB1$rB$Pshading_twelve1$PmodShadingLUT_8$PtableID = tmp3394.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB1$rB$Pshading_twelve1$PmodShadingLUT_9$PtableID = tmp3394.c1;
   alloc_real_array(&tmp3395, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3396 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\7.txt", tmp3395, 1);
+  tmp3396 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\8.txt", tmp3395, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB1$rB$Pshading_twelve1$PmodShadingLUT_7$PtableID = tmp3396.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB1$rB$Pshading_twelve1$PmodShadingLUT_8$PtableID = tmp3396.c1;
   alloc_real_array(&tmp3397, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3398 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\6.txt", tmp3397, 1);
+  tmp3398 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\7.txt", tmp3397, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB1$rB$Pshading_twelve1$PmodShadingLUT_6$PtableID = tmp3398.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB1$rB$Pshading_twelve1$PmodShadingLUT_7$PtableID = tmp3398.c1;
   alloc_real_array(&tmp3399, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3400 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\5.txt", tmp3399, 1);
+  tmp3400 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\6.txt", tmp3399, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB1$rB$Pshading_twelve1$PmodShadingLUT_5$PtableID = tmp3400.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB1$rB$Pshading_twelve1$PmodShadingLUT_6$PtableID = tmp3400.c1;
   alloc_real_array(&tmp3401, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3402 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\4.txt", tmp3401, 1);
+  tmp3402 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\5.txt", tmp3401, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB1$rB$Pshading_twelve1$PmodShadingLUT_4$PtableID = tmp3402.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB1$rB$Pshading_twelve1$PmodShadingLUT_5$PtableID = tmp3402.c1;
   alloc_real_array(&tmp3403, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3404 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\3.txt", tmp3403, 1);
+  tmp3404 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\4.txt", tmp3403, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB1$rB$Pshading_twelve1$PmodShadingLUT_3$PtableID = tmp3404.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB1$rB$Pshading_twelve1$PmodShadingLUT_4$PtableID = tmp3404.c1;
   alloc_real_array(&tmp3405, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3406 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\2.txt", tmp3405, 1);
+  tmp3406 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\3.txt", tmp3405, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB1$rB$Pshading_twelve1$PmodShadingLUT_2$PtableID = tmp3406.c1;
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB1$rB$Pshading_twelve1$PmodShadingLUT_3$PtableID = tmp3406.c1;
   alloc_real_array(&tmp3407, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3408 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\1.txt", tmp3407, 1);
+  tmp3408 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\2.txt", tmp3407, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB1$rB$Pshading_twelve1$PmodShadingLUT_1$PtableID = tmp3408.c1;
-  array_alloc_scalar_real_array(&tmp3410, 28, (modelica_real)0.0, (modelica_real)-3.1415926, (modelica_real)-1.04719, (modelica_real)-0.959927, (modelica_real)-0.872667, (modelica_real)-0.785397, (modelica_real)-0.6981270000000001, (modelica_real)-0.610867, (modelica_real)-0.523597, (modelica_real)-0.436327, (modelica_real)-0.349067, (modelica_real)-0.261797, (modelica_real)-0.174837, (modelica_real)-0.08726730000000001, (modelica_real)0.0, (modelica_real)0.08726730000000001, (modelica_real)0.174837, (modelica_real)0.261797, (modelica_real)0.349067, (modelica_real)0.436327, (modelica_real)0.523597, (modelica_real)0.610867, (modelica_real)0.6981270000000001, (modelica_real)0.785397, (modelica_real)0.872667, (modelica_real)0.959927, (modelica_real)1.04719, (modelica_real)3.1415926);
-  array_alloc_scalar_real_array(&tmp3411, 28, (modelica_real)-0.872665, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3412, 28, (modelica_real)-0.785398, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.515733288, (modelica_real)0.582273933, (modelica_real)0.644111335, (modelica_real)0.700774874, (modelica_real)0.751833306, (modelica_real)0.796898047, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.796898047, (modelica_real)0.751833306, (modelica_real)0.700774874, (modelica_real)0.644111335, (modelica_real)0.582273933, (modelica_real)0.515733288, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3413, 28, (modelica_real)-0.698132, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.558719885, (modelica_real)0.630806722, (modelica_real)0.697798298, (modelica_real)0.759184768, (modelica_real)0.814498944, (modelica_real)0.86331985, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.86331985, (modelica_real)0.814498944, (modelica_real)0.759184768, (modelica_real)0.697798298, (modelica_real)0.630806722, (modelica_real)0.558719885, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3414, 28, (modelica_real)-0.610865, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.5974542859999999, (modelica_real)0.674538691, (modelica_real)0.746174596, (modelica_real)0.811816808, (modelica_real)0.870965752, (modelica_real)0.923171268, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.923171268, (modelica_real)0.870965752, (modelica_real)0.811816808, (modelica_real)0.746174596, (modelica_real)0.674538691, (modelica_real)0.5974542859999999, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3415, 28, (modelica_real)-0.523599, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.6316417, (modelica_real)0.713137013, (modelica_real)0.788872054, (modelica_real)0.8582704330000001, (modelica_real)0.920803986, (modelica_real)0.975996795, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.975996795, (modelica_real)0.920803986, (modelica_real)0.8582704330000001, (modelica_real)0.788872054, (modelica_real)0.713137013, (modelica_real)0.6316417, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3416, 28, (modelica_real)-0.436332, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3417, 28, (modelica_real)-0.349066, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3418, 28, (modelica_real)-0.261799, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3419, 28, (modelica_real)-0.174533, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3420, 28, (modelica_real)-0.087266, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3421, 28, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3422, 28, (modelica_real)0.087266, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3423, 28, (modelica_real)0.174533, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3424, 28, (modelica_real)0.261799, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3425, 28, (modelica_real)0.349066, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3426, 28, (modelica_real)0.436332, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3427, 28, (modelica_real)0.523599, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.6316417, (modelica_real)0.713137013, (modelica_real)0.788872054, (modelica_real)0.8582704330000001, (modelica_real)0.920803986, (modelica_real)0.975996795, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.975996795, (modelica_real)0.920803986, (modelica_real)0.8582704330000001, (modelica_real)0.788872054, (modelica_real)0.713137013, (modelica_real)0.6316417, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3428, 28, (modelica_real)0.610865, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.5974542859999999, (modelica_real)0.674538691, (modelica_real)0.746174596, (modelica_real)0.811816808, (modelica_real)0.870965752, (modelica_real)0.923171268, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.923171268, (modelica_real)0.870965752, (modelica_real)0.811816808, (modelica_real)0.746174596, (modelica_real)0.674538691, (modelica_real)0.5974542859999999, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3429, 28, (modelica_real)0.698132, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.558719885, (modelica_real)0.630806722, (modelica_real)0.697798298, (modelica_real)0.759184768, (modelica_real)0.814498944, (modelica_real)0.86331985, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.86331985, (modelica_real)0.814498944, (modelica_real)0.759184768, (modelica_real)0.697798298, (modelica_real)0.630806722, (modelica_real)0.558719885, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3430, 28, (modelica_real)0.785398, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.515733288, (modelica_real)0.582273933, (modelica_real)0.644111335, (modelica_real)0.700774874, (modelica_real)0.751833306, (modelica_real)0.796898047, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.796898047, (modelica_real)0.751833306, (modelica_real)0.700774874, (modelica_real)0.644111335, (modelica_real)0.582273933, (modelica_real)0.515733288, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_scalar_real_array(&tmp3431, 28, (modelica_real)0.872665, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0);
-  array_alloc_real_array(&tmp3409, 22, &tmp3410, &tmp3411, &tmp3412, &tmp3413, &tmp3414, &tmp3415, &tmp3416, &tmp3417, &tmp3418, &tmp3419, &tmp3420, &tmp3421, &tmp3422, &tmp3423, &tmp3424, &tmp3425, &tmp3426, &tmp3427, &tmp3428, &tmp3429, &tmp3430, &tmp3431);
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB1$rB$Pshading_twelve1$PmodShadingLUT_2$PtableID = tmp3408.c1;
+  alloc_real_array(&tmp3409, 2, 0, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  tmp3432 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "NoName", "NoName", tmp3409, 1);
+  tmp3410 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "shading_matrix", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\\\shading_matrices\\1.txt", tmp3409, 1);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
   #endif
-  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB1$rB$Pshading_twelve1$PShading_matrix$PtableID = tmp3432.c1;
-  alloc_real_array(&tmp3433, 2, 0, 1);
-  array_alloc_scalar_integer_array(&tmp3434, 4, (modelica_integer)(modelica_integer) 8, (modelica_integer)(modelica_integer) 9, (modelica_integer)(modelica_integer) 10, (modelica_integer)(modelica_integer) 11);
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB1$rB$Pshading_twelve1$PmodShadingLUT_1$PtableID = tmp3410.c1;
+  array_alloc_scalar_real_array(&tmp3412, 28, (modelica_real)0.0, (modelica_real)-3.1415926, (modelica_real)-1.04719, (modelica_real)-0.959927, (modelica_real)-0.872667, (modelica_real)-0.785397, (modelica_real)-0.6981270000000001, (modelica_real)-0.610867, (modelica_real)-0.523597, (modelica_real)-0.436327, (modelica_real)-0.349067, (modelica_real)-0.261797, (modelica_real)-0.174837, (modelica_real)-0.08726730000000001, (modelica_real)0.0, (modelica_real)0.08726730000000001, (modelica_real)0.174837, (modelica_real)0.261797, (modelica_real)0.349067, (modelica_real)0.436327, (modelica_real)0.523597, (modelica_real)0.610867, (modelica_real)0.6981270000000001, (modelica_real)0.785397, (modelica_real)0.872667, (modelica_real)0.959927, (modelica_real)1.04719, (modelica_real)3.1415926);
+  array_alloc_scalar_real_array(&tmp3413, 28, (modelica_real)-0.872665, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3414, 28, (modelica_real)-0.785398, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.515733288, (modelica_real)0.582273933, (modelica_real)0.644111335, (modelica_real)0.700774874, (modelica_real)0.751833306, (modelica_real)0.796898047, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.796898047, (modelica_real)0.751833306, (modelica_real)0.700774874, (modelica_real)0.644111335, (modelica_real)0.582273933, (modelica_real)0.515733288, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3415, 28, (modelica_real)-0.698132, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.558719885, (modelica_real)0.630806722, (modelica_real)0.697798298, (modelica_real)0.759184768, (modelica_real)0.814498944, (modelica_real)0.86331985, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.86331985, (modelica_real)0.814498944, (modelica_real)0.759184768, (modelica_real)0.697798298, (modelica_real)0.630806722, (modelica_real)0.558719885, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3416, 28, (modelica_real)-0.610865, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.5974542859999999, (modelica_real)0.674538691, (modelica_real)0.746174596, (modelica_real)0.811816808, (modelica_real)0.870965752, (modelica_real)0.923171268, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.923171268, (modelica_real)0.870965752, (modelica_real)0.811816808, (modelica_real)0.746174596, (modelica_real)0.674538691, (modelica_real)0.5974542859999999, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3417, 28, (modelica_real)-0.523599, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.6316417, (modelica_real)0.713137013, (modelica_real)0.788872054, (modelica_real)0.8582704330000001, (modelica_real)0.920803986, (modelica_real)0.975996795, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.975996795, (modelica_real)0.920803986, (modelica_real)0.8582704330000001, (modelica_real)0.788872054, (modelica_real)0.713137013, (modelica_real)0.6316417, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3418, 28, (modelica_real)-0.436332, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3419, 28, (modelica_real)-0.349066, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3420, 28, (modelica_real)-0.261799, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3421, 28, (modelica_real)-0.174533, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3422, 28, (modelica_real)-0.087266, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3423, 28, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3424, 28, (modelica_real)0.087266, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3425, 28, (modelica_real)0.174533, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3426, 28, (modelica_real)0.261799, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3427, 28, (modelica_real)0.349066, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3428, 28, (modelica_real)0.436332, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.639557866, (modelica_real)0.722074534, (modelica_real)0.798758738, (modelica_real)0.869026865, (modelica_real)0.932344131, (modelica_real)0.988228655, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)1.0, (modelica_real)0.988228655, (modelica_real)0.932344131, (modelica_real)0.869026865, (modelica_real)0.798758738, (modelica_real)0.722074534, (modelica_real)0.639557866, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3429, 28, (modelica_real)0.523599, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.6316417, (modelica_real)0.713137013, (modelica_real)0.788872054, (modelica_real)0.8582704330000001, (modelica_real)0.920803986, (modelica_real)0.975996795, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.98762244, (modelica_real)0.975996795, (modelica_real)0.920803986, (modelica_real)0.8582704330000001, (modelica_real)0.788872054, (modelica_real)0.713137013, (modelica_real)0.6316417, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3430, 28, (modelica_real)0.610865, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.5974542859999999, (modelica_real)0.674538691, (modelica_real)0.746174596, (modelica_real)0.811816808, (modelica_real)0.870965752, (modelica_real)0.923171268, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.934167678, (modelica_real)0.923171268, (modelica_real)0.870965752, (modelica_real)0.811816808, (modelica_real)0.746174596, (modelica_real)0.674538691, (modelica_real)0.5974542859999999, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3431, 28, (modelica_real)0.698132, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.558719885, (modelica_real)0.630806722, (modelica_real)0.697798298, (modelica_real)0.759184768, (modelica_real)0.814498944, (modelica_real)0.86331985, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.873603336, (modelica_real)0.86331985, (modelica_real)0.814498944, (modelica_real)0.759184768, (modelica_real)0.697798298, (modelica_real)0.630806722, (modelica_real)0.558719885, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3432, 28, (modelica_real)0.785398, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.515733288, (modelica_real)0.582273933, (modelica_real)0.644111335, (modelica_real)0.700774874, (modelica_real)0.751833306, (modelica_real)0.796898047, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.806390346, (modelica_real)0.796898047, (modelica_real)0.751833306, (modelica_real)0.700774874, (modelica_real)0.644111335, (modelica_real)0.582273933, (modelica_real)0.515733288, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_scalar_real_array(&tmp3433, 28, (modelica_real)0.872665, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0, (modelica_real)0.0);
+  array_alloc_real_array(&tmp3411, 22, &tmp3412, &tmp3413, &tmp3414, &tmp3415, &tmp3416, &tmp3417, &tmp3418, &tmp3419, &tmp3420, &tmp3421, &tmp3422, &tmp3423, &tmp3424, &tmp3425, &tmp3426, &tmp3427, &tmp3428, &tmp3429, &tmp3430, &tmp3431, &tmp3432, &tmp3433);
+
+  #ifdef _OMC_MEASURE_TIME
+  SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
+  #endif
+  tmp3434 = omc_Modelica_Blocks_Types_ExternalCombiTable2D_constructor(threadData, "NoName", "NoName", tmp3411, 1);
+
+  #ifdef _OMC_MEASURE_TIME
+  SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable2D_constructor_index);
+  #endif
+  $Pics_envelopecassette1$Pics_stack2$PICS_Module_Twelve_1$lB1$rB$Pshading_twelve1$PShading_matrix$PtableID = tmp3434.c1;
+  alloc_real_array(&tmp3435, 2, 0, 1);
+  array_alloc_scalar_integer_array(&tmp3436, 4, (modelica_integer)(modelica_integer) 8, (modelica_integer)(modelica_integer) 9, (modelica_integer)(modelica_integer) 10, (modelica_integer)(modelica_integer) 11);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable1D_constructor_index);
   #endif
-  tmp3435 = omc_Modelica_Blocks_Types_ExternalCombiTable1D_constructor(threadData, "tab1", "C:/Users/kenton.phillips/Documents/GitHub/RPI_CASE_ICS_Modelica/weatherdata/USA_NY_New.York-Central.Park.725033_TMY3.mos", tmp3433, tmp3434, 2);
+  tmp3437 = omc_Modelica_Blocks_Types_ExternalCombiTable1D_constructor(threadData, "tab1", "C:/Users/kenton.phillips/Documents/GitHub/RPI_CASE_ICS_Modelica/weatherdata/USA_NY_New.York-Central.Park.725033_TMY3.mos", tmp3435, tmp3436, 2);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable1D_constructor_index);
   #endif
-  $Pics_context1$PweaDat$PdatRea1$PtableID = tmp3435.c1;
-  alloc_real_array(&tmp3436, 2, 0, 1);
-  array_alloc_scalar_integer_array(&tmp3437, 25, (modelica_integer)(modelica_integer) 2, (modelica_integer)(modelica_integer) 3, (modelica_integer)(modelica_integer) 4, (modelica_integer)(modelica_integer) 5, (modelica_integer)(modelica_integer) 6, (modelica_integer)(modelica_integer) 11, (modelica_integer)(modelica_integer) 12, (modelica_integer)(modelica_integer) 13, (modelica_integer)(modelica_integer) 14, (modelica_integer)(modelica_integer) 15, (modelica_integer)(modelica_integer) 16, (modelica_integer)(modelica_integer) 17, (modelica_integer)(modelica_integer) 18, (modelica_integer)(modelica_integer) 19, (modelica_integer)(modelica_integer) 20, (modelica_integer)(modelica_integer) 21, (modelica_integer)(modelica_integer) 22, (modelica_integer)(modelica_integer) 23, (modelica_integer)(modelica_integer) 24, (modelica_integer)(modelica_integer) 25, (modelica_integer)(modelica_integer) 26, (modelica_integer)(modelica_integer) 27, (modelica_integer)(modelica_integer) 28, (modelica_integer)(modelica_integer) 29, (modelica_integer)(modelica_integer) 30);
+  $Pics_context1$PweaDat$PdatRea1$PtableID = tmp3437.c1;
+  alloc_real_array(&tmp3438, 2, 0, 1);
+  array_alloc_scalar_integer_array(&tmp3439, 25, (modelica_integer)(modelica_integer) 2, (modelica_integer)(modelica_integer) 3, (modelica_integer)(modelica_integer) 4, (modelica_integer)(modelica_integer) 5, (modelica_integer)(modelica_integer) 6, (modelica_integer)(modelica_integer) 11, (modelica_integer)(modelica_integer) 12, (modelica_integer)(modelica_integer) 13, (modelica_integer)(modelica_integer) 14, (modelica_integer)(modelica_integer) 15, (modelica_integer)(modelica_integer) 16, (modelica_integer)(modelica_integer) 17, (modelica_integer)(modelica_integer) 18, (modelica_integer)(modelica_integer) 19, (modelica_integer)(modelica_integer) 20, (modelica_integer)(modelica_integer) 21, (modelica_integer)(modelica_integer) 22, (modelica_integer)(modelica_integer) 23, (modelica_integer)(modelica_integer) 24, (modelica_integer)(modelica_integer) 25, (modelica_integer)(modelica_integer) 26, (modelica_integer)(modelica_integer) 27, (modelica_integer)(modelica_integer) 28, (modelica_integer)(modelica_integer) 29, (modelica_integer)(modelica_integer) 30);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTable1D_constructor_index);
   #endif
-  tmp3438 = omc_Modelica_Blocks_Types_ExternalCombiTable1D_constructor(threadData, "tab1", "C:/Users/kenton.phillips/Documents/GitHub/RPI_CASE_ICS_Modelica/weatherdata/USA_NY_New.York-Central.Park.725033_TMY3.mos", tmp3436, tmp3437, 2);
+  tmp3440 = omc_Modelica_Blocks_Types_ExternalCombiTable1D_constructor(threadData, "tab1", "C:/Users/kenton.phillips/Documents/GitHub/RPI_CASE_ICS_Modelica/weatherdata/USA_NY_New.York-Central.Park.725033_TMY3.mos", tmp3438, tmp3439, 2);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTable1D_constructor_index);
   #endif
-  $Pics_context1$PweaDat$PdatRea$PtableID = tmp3438.c1;
-  alloc_real_array(&tmp3439, 2, 0, 1);
-  array_alloc_scalar_integer_array(&tmp3440, 22, (modelica_integer)(modelica_integer) 2, (modelica_integer)(modelica_integer) 3, (modelica_integer)(modelica_integer) 4, (modelica_integer)(modelica_integer) 5, (modelica_integer)(modelica_integer) 6, (modelica_integer)(modelica_integer) 7, (modelica_integer)(modelica_integer) 8, (modelica_integer)(modelica_integer) 9, (modelica_integer)(modelica_integer) 10, (modelica_integer)(modelica_integer) 11, (modelica_integer)(modelica_integer) 12, (modelica_integer)(modelica_integer) 13, (modelica_integer)(modelica_integer) 14, (modelica_integer)(modelica_integer) 15, (modelica_integer)(modelica_integer) 16, (modelica_integer)(modelica_integer) 17, (modelica_integer)(modelica_integer) 18, (modelica_integer)(modelica_integer) 19, (modelica_integer)(modelica_integer) 20, (modelica_integer)(modelica_integer) 21, (modelica_integer)(modelica_integer) 22, (modelica_integer)(modelica_integer) 23);
+  $Pics_context1$PweaDat$PdatRea$PtableID = tmp3440.c1;
+  alloc_real_array(&tmp3441, 2, 0, 1);
+  array_alloc_scalar_integer_array(&tmp3442, 22, (modelica_integer)(modelica_integer) 2, (modelica_integer)(modelica_integer) 3, (modelica_integer)(modelica_integer) 4, (modelica_integer)(modelica_integer) 5, (modelica_integer)(modelica_integer) 6, (modelica_integer)(modelica_integer) 7, (modelica_integer)(modelica_integer) 8, (modelica_integer)(modelica_integer) 9, (modelica_integer)(modelica_integer) 10, (modelica_integer)(modelica_integer) 11, (modelica_integer)(modelica_integer) 12, (modelica_integer)(modelica_integer) 13, (modelica_integer)(modelica_integer) 14, (modelica_integer)(modelica_integer) 15, (modelica_integer)(modelica_integer) 16, (modelica_integer)(modelica_integer) 17, (modelica_integer)(modelica_integer) 18, (modelica_integer)(modelica_integer) 19, (modelica_integer)(modelica_integer) 20, (modelica_integer)(modelica_integer) 21, (modelica_integer)(modelica_integer) 22, (modelica_integer)(modelica_integer) 23);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_TICK_FN(Modelica_Blocks_Types_ExternalCombiTimeTable_constructor_index);
   #endif
-  tmp3441 = omc_Modelica_Blocks_Types_ExternalCombiTimeTable_constructor(threadData, "DNI_THTFin_vdot", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\20150220\\measuredData.txt", tmp3439, 0.0, tmp3440, 1, 2);
+  tmp3443 = omc_Modelica_Blocks_Types_ExternalCombiTimeTable_constructor(threadData, "DNI_THTFin_vdot", "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\20150220\\measuredData.txt", tmp3441, 0.0, tmp3442, 1, 2);
 
   #ifdef _OMC_MEASURE_TIME
   SIM_PROF_ACC_FN(Modelica_Blocks_Types_ExternalCombiTimeTable_constructor_index);
   #endif
-  $PIC_Data_all$PtableID = tmp3441.c1;
+  $PIC_Data_all$PtableID = tmp3443.c1;
   infoStreamPrint(LOG_DEBUG, 0, "call external Object Constructors finished");
 }
 

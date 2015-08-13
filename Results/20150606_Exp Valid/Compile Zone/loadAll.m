@@ -1,4 +1,7 @@
 %% Load parameters from all files to compar
+clc;
+clear all;
+
 err = [0,0,0];
 per_err = [0,0,0];
 
@@ -6,7 +9,7 @@ total_err = 0;
 total_per_err = 0;
 
 
-load('ICSolar.ICS_Skeleton_20_Feb_2015.mat','Egen_arrayTotal',...
+load('ICSolar.ICS_Skeleton_20_Feb_2015_vt.mat','Egen_arrayTotal',...
     'measured_Egen_arrayTotal','Qgen_arrayTotal','measured_Qgen_arrayTotal',...
     'Start','End')
 %observed 
@@ -23,7 +26,7 @@ s_Qgen = Qgen_arrayTotal(Start:End);
 
 
 
-load('ICSolar.ICS_Skeleton_19_Mar_2015.mat','Egen_arrayTotal',...
+load('ICSolar.ICS_Skeleton_19_Mar_2015_vt.mat','Egen_arrayTotal',...
     'measured_Egen_arrayTotal','Qgen_arrayTotal','measured_Qgen_arrayTotal',...
     'Start','End')
 %trimmed observed 
@@ -52,7 +55,7 @@ s_Qgen = [s_Qgen Qgen_arrayTotal(Start:End)];
 
 
 
-load('ICSolar.ICS_Skeleton_23_Mar_2015.mat','Egen_arrayTotal',...
+load('ICSolar.ICS_Skeleton_23_Mar_2015_vt.mat','Egen_arrayTotal',...
     'measured_Egen_arrayTotal','Qgen_arrayTotal','measured_Qgen_arrayTotal',...
     'Start','End')
 %trimmed observed 

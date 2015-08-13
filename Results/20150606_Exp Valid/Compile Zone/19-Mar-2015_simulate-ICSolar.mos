@@ -44,6 +44,7 @@ getErrorString();
 
 // ---- FOR Mar 19 2015
 setParameterValue(ICSolar.Parameters, Date, "20150319\\");
+setParameterValue(ICSolar.Parameters, Resistivity_WaterPlate, 0.7);
 simulate(ICSolar.ICS_Skeleton, startTime=6701501, stopTime=6705690, numberOfIntervals=418);
 //getErrorString();
 

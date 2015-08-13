@@ -29,6 +29,8 @@ getErrorString();
 
 //Change a parameter, if ya want
 setParameterValue(ICSolar.Parameters, OpticalEfficiency, 0.886);
+setParameterValue(ICSolar.Parameters, Resistivity_WaterPlate, Resistivity_WaterBlock);
+//  Real measured_DNI = IC_Data_all.y[1] * (85/68);
 //getErrorString();
 
 

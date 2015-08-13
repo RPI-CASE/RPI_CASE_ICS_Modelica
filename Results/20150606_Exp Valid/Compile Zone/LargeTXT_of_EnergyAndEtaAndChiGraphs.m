@@ -219,9 +219,9 @@ Orange = [0.85 0.33 0.1];
 
 %%Plots the Eta (only modeled)
 %trimmed simulated
-t_s_eta_Egen = eta_Egen_mods(:,Start:End); 
-t_s_eta_Qgen = eta_Qgen_mods(:,Start:End); 
-t_s_eta_Com = t_s_eta_Qgen + t_s_eta_Egen;
+t_s_eta_Egen = eta_Egen_6mods(:,Start:End); 
+t_s_eta_Qgen = eta_Qgen_6mods(:,Start:End); 
+t_s_eta_Com = eta_Cgen_6mods(:,Start:End); 
 t_o_Tin = measured_T_HTFin(:,Start:End) - 273; 
 x = 1:length(t_s_eta_Egen);
 
