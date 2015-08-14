@@ -8,8 +8,8 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     // DNI, T inlet, vFlow...and then aaaalll the T ins and outs. Total situational awareness. good for tuning both
     //module behavior and whole-array behavior
     Modelica.Blocks.Sources.CombiTimeTable IC_Data_all(tableOnFile = true, fileName = Path + Date + "measuredData.txt", tableName = "DNI_THTFin_vdot", nout = 22, columns = {2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23}) annotation(Placement(visible = true, transformation(origin = {-80,0}, extent = {{-15,-15},{15,15}}, rotation = 0)));
-    Real measured_DNI = IC_Data_all.y[1];
-    Real measured_T_HTFin = IC_Data_all.y[2];
+    Real measured_DNI = IC_Data_all.y[1] * 85 / 68;
+    Real measured_T_HTFin = IC_Data_all.y[2] + 25;
     //Real measured_T_HTFin = IC_Data_all.y[6] + 52.5;
     /// MAKING CHI ZERO
     Real measured_vFlow = IC_Data_all.y[3];
@@ -114,8 +114,8 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     //start and stop from the mar19_2015 data:
     //annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200, -100}, {200, 100}}), graphics), experiment(StartTime = 0, StopTime = 7050593, Tolerance = 1e-006, Interval = 60));
     //annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200,-100},{200,100}}), graphics), experiment(StartTime = 7046000, StopTime = 7050573, Tolerance = 1e-006, Interval = 10));
-    //annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200,-100},{200,100}}), graphics), experiment(StartTime = 4365153, StopTime = 4371284, Tolerance = 1e-006, Interval = 10));
-    annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200,-100},{200,100}}), graphics), experiment(StartTime = 6701501, StopTime = 6705690, Tolerance = 1e-006, Interval = 10));
+    //annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200,-100},{200,100}}), graphics), experiment(StartTime = 6701501, StopTime = 6705690, Tolerance = 1e-006, Interval = 10));
+    annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200,-100},{200,100}}), graphics), experiment(StartTime = 4365153, StopTime = 4371284, Tolerance = 1e-006, Interval = 10));
   end ICS_Skeleton;
   model ICS_Context "This model provides the pieces necessary to set up the context to run the simulation, in FMU practice this will be cut out and provided from the EnergyPlus file"
     extends ICSolar.Parameters;
@@ -1161,8 +1161,8 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     //////// PATH /////////
     ///////////////////////
     //
-    //parameter String Date = "20150220\\";
-    parameter String Date = "20150319\\";
+    parameter String Date = "20150220\\";
+    //parameter String Date = "20150319\\";
     //parameter String Date = "20150323\\";
     // C:\Users\Kenton\Documents\GitHub\RPI_CASE_ICS_Modelica
     parameter String Path = "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\";
@@ -1212,8 +1212,8 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     parameter Real Trans_glazinglosses_eta = 0.86;
     // parameter Real OpticalEfficiency = 0.57 "The optical efficiency of the concentrating lens and optics prior to the photovoltaic cell";
     //1. parameter Real OpticalEfficiency = 0.5649999999999999;
-    parameter Real OpticalEfficiency = 0.57;
-    //parameter Real OpticalEfficiency = 0.886;
+    //parameter Real OpticalEfficiency = 0.57;
+    parameter Real OpticalEfficiency = 0.886;
     //parameter Real Exp_Observed = 0.215 "observed electrical efficiency of ICSFg8";
     //parameter Real Exp_nom_tweak = 0.364 * OpticalEfficiency "matching the observed to modeled data, compensating for temperature 'unknown'. 0.364 matches the Nov25-13 data well when eta_observed is 0.215. set same as eta_obs for full-strength output.";
     //
@@ -1248,9 +1248,9 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     //?Why doesn't this if structure work here? for now, swap things manually
     //if isStudioExperiment == true then
     //parameter Real Resistivity_WaterPlate = 0.7;
-    parameter Real Resistivity_WaterPlate = 0.7;
+    //parameter Real Resistivity_WaterPlate = 0.9;
     //  parameter Real Resistivity_WaterPlate = 0.17;
-    //parameter Real Resistivity_WaterPlate = Resistivity_WaterBlock;
+    parameter Real Resistivity_WaterPlate = Resistivity_WaterBlock;
     // 0.8 "Thermal resisitivity of the water plate heat exchanger, experiment";
     //else
     //  parameter Real Resistivity_WaterPlate = 5.05e3 * OneBranchFlow ^ (-0.773) "Thermal resisitivity of the water block heat exchanger, projected";
