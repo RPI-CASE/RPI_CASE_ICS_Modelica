@@ -314,7 +314,8 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     equation
       vCartToSph = Rx * Rz * vSphToCart;
       arrayPitch = Modelica.Constants.pi / 2 - Modelica.Math.acos(vCartToSph[3,1]);
-      arrayYaw = (-1 * Modelica.Math.atan(vCartToSph[2,1] / vCartToSph[1,1])) - sign(vCartToSph[1,1]) * Modelica.Constants.pi / 2;
+      //arrayYaw = (-1 * Modelica.Math.atan(vCartToSph[2,1] / vCartToSph[1,1])) - sign(vCartToSph[1,1]) * Modelica.Constants.pi / 2;
+      arrayYaw = Modelica.Math.atan2(vCartToSph[2,1], vCartToSph[1,1]);
       annotation(Diagram(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2,2})), Icon(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2,2}), graphics = {Text(origin = {16.0156,3.67356}, extent = {{-101.49,60.28},{73.98,-63.83}}, textString = "Transform Matrix")}), experiment(StartTime = 0, StopTime = 86400, Tolerance = 0.001, Interval = 86.5731));
     end RotationMatrixForSphericalCood;
     model CavityHeatBalance
@@ -1176,7 +1177,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     //////////////////////////////////
     ///// BUILDING CONFIGURATION /////
     //////////////////////////////////
-    parameter Real BuildingOrientation = 40 * 3.14159 / 180 "Radians, 0 being south";
+    parameter Real BuildingOrientation = -1 * 40 * 3.14159 / 180 "Radians, 0 being south";
     parameter Real BuildingLatitude = 40.71 * Modelica.Constants.pi / 180 "Latitude (radians)";
     parameter Real ArrayTilt = 0 "Radians, 0 being wall";
     /////////////////////////
