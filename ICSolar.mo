@@ -3,6 +3,8 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
 
   model ICS_Skeleton "This model calculates the electrical and thermal generation of ICSolar. This model is used as a skeleton piece to hold together the other models until it is packages as an FMU."
     extends ICSolar.Parameters;
+    Real EPC = ics_envelopecassette1.EPC;
+    Real Shade = ics_envelopecassette1.Shade;
     //extends ICSolar.measured_data;
     /////////////////////
     /// Measured Data ///
@@ -55,12 +57,14 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     Real Egen_arrayTotal = if ics_envelopecassette1.Power_Electric < 0 then 0 else ics_envelopecassette1.Power_Electric;
     // Area of modules is assumed to be 0.3^2
     // m_dot*cp*(1 - Tamb/T2)
-    Real Ex_carnot_arrayTotal = Q_arrayTotal * (1 - ics_context1.TDryBul / temp_flowport_b);
+    Real Ex_carnot_arrayTotal = Q_arrayTotal * (1 - Tref_ex / temp_flowport_b);
     // m_dot*cp*(T2 - T1 - Tamb*ln(T2/T1))
     // note "log" in OMedit is the natural log.  "log10" is log base 10 in OM
-    Real Ex_arrayTotal = ics_envelopecassette1.flowport_a.m_flow * mediumHTF.cp * (temp_flowport_b - temp_flowport_a - ics_context1.TDryBul * log(temp_flowport_b / temp_flowport_a));
+    Real Tref_ex = ics_context1.TDryBul.T + 3;
+    Real Ex_arrayTotal = Egen_arrayTotal + ics_envelopecassette1.flowport_a.m_flow * mediumHTF.cp * (temp_flowport_b - temp_flowport_a - Tref_ex * log(temp_flowport_b / temp_flowport_a));
     //epsilon = the Exergenic efficiency (~93% for sunlight)
-    Real Ex_epsilon = Ex_arrayTotal / (G_DN * 0.93);
+    Real Ex_epsilon = Ex_arrayTotal / (ics_context1.IncidentSolar * 0.93);
+    Real Ex_epsilon_GHI = Ex_arrayTotal / (GHI_module * 0.93);
     ////////////////////////
     /// Init. Components ///
     ////////////////////////
@@ -68,15 +72,17 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     ICSolar.ICS_Context ics_context1 annotation(Placement(visible = true, transformation(origin = {-180, 40}, extent = {{-25, -25}, {25, 25}}, rotation = 0)));
     ICSolar.Envelope.ICS_EnvelopeCassette_Twelve ics_envelopecassette1 annotation(Placement(visible = true, transformation(origin = {20, 40}, extent = {{-25, -25}, {25, 25}}, rotation = 0)));
     // Fluid Comp.
-    Modelica.Thermal.FluidHeatFlow.Sources.Ambient Source(medium = mediumHTF, useTemperatureInput = true, constantAmbientPressure = 101325, constantAmbientTemperature = TAmb) "Thermal fluid source" annotation(Placement(visible = true, transformation(origin = {-60, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 180)));
+    Modelica.Thermal.FluidHeatFlow.Sources.Ambient Source(medium = mediumHTF, useTemperatureInput = true, constantAmbientPressure = 101325, constantAmbientTemperature = Temp_Indoor) "Thermal fluid source" annotation(Placement(visible = true, transformation(origin = {-60, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 180)));
     Modelica.Thermal.FluidHeatFlow.Sources.VolumeFlow Pump(m = 0.01, medium = mediumHTF, T0fixed = false, useVolumeFlowInput = true) "Fluid pump for thermal fluid" annotation(Placement(visible = true, transformation(origin = {-20, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-    Modelica.Thermal.FluidHeatFlow.Sources.Ambient Sink(medium = mediumHTF, constantAmbientPressure = 101325, constantAmbientTemperature = TAmb) "Thermal fluid sink, will be replaced with a tank later" annotation(Placement(visible = true, transformation(origin = {80, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Thermal.FluidHeatFlow.Sources.Ambient Sink(medium = mediumHTF, constantAmbientPressure = 101325, constantAmbientTemperature = Temp_Indoor) "Thermal fluid sink, will be replaced with a tank later" annotation(Placement(visible = true, transformation(origin = {80, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     Modelica.Blocks.Sources.Constant inletTempConst(k = inletTemp) annotation(Placement(visible = true, transformation(origin = {-160, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     Modelica.Blocks.Sources.Constant PumpFlowRate(k = AllBranchesFlow) annotation(Placement(visible = true, transformation(origin = {-160, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     Modelica.Blocks.Sources.CombiTimeTable IC_Data_all(tableOnFile = true, fileName = Path + "20150323\\measuredData20150323r1.txt", tableName = "DNI_THTFin_vdot", nout = 24, columns = {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25}) annotation(Placement(visible = true, transformation(origin = {-120, -80}, extent = {{-15, -15}, {15, 15}}, rotation = 0)));
-    Real eta_E = if G_DN <= 1.0 then 0 else Egen_arrayTotal / G_DN;
+    Real eta_E = if G_DN <= 1.0 then 0 else Egen_arrayTotal / (ics_context1.IncidentSolar * GlassArea);
     Real G_DN = ics_context1.DNI * GlassArea * Modelica.Math.cos(ics_context1.AOI);
-    Real eta_Q = if G_DN <= 1.0 then 0 else Q_arrayTotal / G_DN;
+    Real eta_Q = if G_DN <= 1.0 then 0 else Q_arrayTotal / (ics_context1.IncidentSolar * GlassArea);
+    Real elevationAngle = 90 * 3.14159 / 180 - BuildingLatitude + ics_context1.Declination;
+    Real GHI_module = ics_context1.GHI * Modelica.Math.sin(elevationAngle + 90 * 3.14159 / 180 - ArrayTilt) / Modelica.Math.sin(elevationAngle) * GlassArea * Modelica.Math.cos(ics_context1.AOI);
   equation
     connect(inletTempConst.y, Source.ambientTemperature) annotation(Line(points = {{-149, -40}, {-94.452, -40}, {-94.452, -33.0176}, {-70.636, -33.0176}, {-70.636, -33.0176}}, color = {0, 0, 127}));
     connect(PumpFlowRate.y, Pump.volumeFlow) annotation(Line(points = {{-149, 0}, {-19.7564, 0}, {-19.7564, -29.77}, {-19.7564, -29.77}}, color = {0, 0, 127}));
@@ -99,7 +105,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     //connect(measured_T_cavAvg, ics_envelopecassette1.Tcav_measured);
     //experiment(StartTime = 7137000.0, StopTime = 7141200.0, Tolerance = 1e-006, Interval = 100));
     //StopTime = 3.15569e07, Tolerance = 1e-06, Interval = 3600));
-    annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200, -100}, {200, 100}}), graphics), experiment(StartTime = 0, StopTime = 3.15569e+07, Tolerance = 1e-06, Interval = 3600.33));
+    annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-200, -100}, {200, 100}}), graphics), experiment(StartTime = 0, StopTime = 3.15569e+07, Tolerance = 1e-06, Interval = 3600.0));
   end ICS_Skeleton;
 
   model ICS_Context "This model provides the pieces necessary to set up the context to run the simulation, in FMU practice this will be cut out and provided from the EnergyPlus file"
@@ -107,19 +113,28 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     Real Lat = BuildingLatitude "Latitude";
     Real SurfOrientation = BuildingOrientation "Surface orientation: Change 'S' to 'W','E', or 'N' for other orientations";
     Real SurfTilt = ArrayTilt "Tilt of the ICSolar array";
-    Buildings.BoundaryConditions.WeatherData.ReaderTMY3 weaDat(filNam = "modelica://ICSolar/weatherdata/USA_NY_New.York-Central.Park.725033_TMY3.mos", pAtmSou = Buildings.BoundaryConditions.Types.DataSource.Parameter, TDryBul(displayUnit = "K"), TDewPoi(displayUnit = "K"), totSkyCovSou = Buildings.BoundaryConditions.Types.DataSource.Parameter, opaSkyCovSou = Buildings.BoundaryConditions.Types.DataSource.Parameter, totSkyCov = 0.01, opaSkyCov = 0.01) "Weather data reader for New York Central Park" annotation(Placement(visible = true, transformation(origin = {-40, 20}, extent = {{-20, -20}, {20, 20}}, rotation = 0)));
+    Buildings.BoundaryConditions.WeatherData.ReaderTMY3 weaDat(filNam = "modelica://ICSolar/weatherdata/USA_NY_New.York-Central.Park.725033_TMY3.mos", pAtmSou = Buildings.BoundaryConditions.Types.DataSource.File, TDryBul(displayUnit = "K"), TDewPoi(displayUnit = "K"), totSkyCovSou = Buildings.BoundaryConditions.Types.DataSource.File, opaSkyCovSou = Buildings.BoundaryConditions.Types.DataSource.File, totSkyCov = 0.01, opaSkyCov = 0.01) "Weather data reader for New York Central Park" annotation(Placement(visible = true, transformation(origin = {-40, 20}, extent = {{-20, -20}, {20, 20}}, rotation = 0)));
     Buildings.BoundaryConditions.SolarGeometry.BaseClasses.Declination decAng "Solar declination (seasonal offset)" annotation(Placement(visible = true, transformation(origin = {-40, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     Buildings.BoundaryConditions.SolarGeometry.BaseClasses.SolarHourAngle solHouAng "Solar hour angle" annotation(Placement(visible = true, transformation(origin = {-40, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     Buildings.BoundaryConditions.WeatherData.Bus weatherBus "Connector to put variables from the weather file" annotation(Placement(visible = true, transformation(origin = {20, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {20, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     Buildings.HeatTransfer.Sources.PrescribedTemperature TOutside "Outside temperature" annotation(Placement(visible = true, transformation(origin = {60, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-    Modelica.Blocks.Interfaces.RealOutput SurfOrientation_out "Surface Orientation" annotation(Placement(visible = true, transformation(origin = {100, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-    Modelica.Blocks.Interfaces.RealOutput SurfTilt_out "Surface tilt" annotation(Placement(visible = true, transformation(origin = {100, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-    Modelica.Blocks.Interfaces.RealOutput SunAlt "Solar altitude" annotation(Placement(visible = true, transformation(origin = {100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-    Modelica.Blocks.Interfaces.RealOutput SunAzi "Solar azimuth" annotation(Placement(visible = true, transformation(origin = {100, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-    Modelica.Blocks.Interfaces.RealOutput AOI "Angle of incidence" annotation(Placement(visible = true, transformation(origin = {100, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-    Modelica.Blocks.Interfaces.RealOutput DNI "Direct normal irradiance" annotation(Placement(visible = true, transformation(origin = {100, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-    Modelica.Thermal.HeatTransfer.Interfaces.HeatPort_b TDryBul "Dry bulb temperature" annotation(Placement(visible = true, transformation(origin = {100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     // Modelica.Blocks.Interfaces.RealOutput Q_gen "don't know why these experiment outputs get stuck in context, but here they are" annotation(Placement(visible = true, transformation(origin = {100, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Real GHI "Global Horizontal Irradiance";
+    Real Declination;
+    Buildings.BoundaryConditions.SolarIrradiation.DirectTiltedSurface HDirTil(lat = BuildingLatitude, azi = BuildingOrientation, til = Modelica.Constants.pi / 2 - ArrayTilt) annotation(Placement(visible = true, transformation(origin = {40, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Buildings.BoundaryConditions.SolarIrradiation.DiffusePerez HDifTil(lat = BuildingLatitude, azi = BuildingOrientation, til = Modelica.Constants.pi / 2 - ArrayTilt, outSkyCon = true, outGroCon = true) annotation(Placement(visible = true, transformation(origin = {40, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Blocks.Math.Add add1 annotation(Placement(visible = true, transformation(origin = {74, 90}, extent = {{-5, -5}, {5, 5}}, rotation = 0)));
+    Modelica.Blocks.Interfaces.RealOutput IncidentDiffuse annotation(Placement(visible = true, transformation(origin = {100, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 57}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Blocks.Interfaces.RealOutput IncidentBeam annotation(Placement(visible = true, transformation(origin = {100, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 77}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Blocks.Interfaces.RealOutput IncidentSolar annotation(Placement(visible = true, transformation(origin = {100, 100}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 97}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Thermal.HeatTransfer.Interfaces.HeatPort_b TDryBul "Dry bulb temperature" annotation(Placement(visible = true, transformation(origin = {100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 37}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Blocks.Interfaces.RealOutput SurfTilt_out "Surface tilt" annotation(Placement(visible = true, transformation(origin = {100, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 17}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Blocks.Interfaces.RealOutput SurfOrientation_out "Surface Orientation" annotation(Placement(visible = true, transformation(origin = {100, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, -3}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Blocks.Interfaces.RealOutput SunAlt "Solar altitude" annotation(Placement(visible = true, transformation(origin = {100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, -23}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Blocks.Interfaces.RealOutput SunAzi "Solar azimuth" annotation(Placement(visible = true, transformation(origin = {100, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, -43}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Blocks.Interfaces.RealOutput AOI "Angle of incidence" annotation(Placement(visible = true, transformation(origin = {100, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, -63}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Blocks.Interfaces.RealOutput DNI "Direct normal irradiance" annotation(Placement(visible = true, transformation(origin = {100, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, -83}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Blocks.Math.Add add2 annotation(Placement(visible = true, transformation(origin = {72, 52}, extent = {{-5, -5}, {5, 5}}, rotation = 0)));
   protected
     Real del_c = Modelica.Math.cos(decAng.decAng);
     Real del_s = Modelica.Math.sin(decAng.decAng);
@@ -132,8 +147,18 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     Real gam_c = Modelica.Math.cos(SurfOrientation);
     Real gam_s = Modelica.Math.sin(SurfOrientation);
   equation
+    connect(add2.y, add1.u2) annotation(Line(points = {{77.5, 52}, {79.9458, 52}, {79.9458, 74.7967}, {63.6856, 74.7967}, {63.6856, 86.7209}, {66.9377, 86.7209}, {66.9377, 86.7209}}, color = {0, 0, 127}));
+    connect(add2.y, IncidentDiffuse) annotation(Line(points = {{77.5, 52}, {83.1978, 52}, {83.1978, 60.7046}, {94.0379, 60.7046}, {94.0379, 60.7046}}, color = {0, 0, 127}));
+    connect(HDifTil.HGroDifTil, add2.u2) annotation(Line(points = {{51, 54}, {55.0136, 54}, {55.0136, 48.7805}, {65.5827, 48.7805}, {65.5827, 48.7805}}, color = {0, 0, 127}));
+    connect(HDifTil.HSkyDifTil, add2.u1) annotation(Line(points = {{51, 66}, {56.6396, 66}, {56.6396, 55.0136}, {65.8537, 55.0136}, {65.8537, 55.0136}}, color = {0, 0, 127}));
+    connect(weaDat.weaBus, HDifTil.weaBus) annotation(Line(points = {{-20, 20}, {7.52566, 20}, {7.52566, 60.2052}, {30.3307, 60.2052}, {30.3307, 60.2052}}, color = {255, 204, 51}));
+    connect(weaDat.weaBus, HDirTil.weaBus) annotation(Line(points = {{-20, 20}, {0.4561, 20}, {0.4561, 80.2737}, {30.1026, 80.2737}, {30.1026, 80.2737}}, color = {255, 204, 51}));
+    connect(add1.y, IncidentSolar) annotation(Line(points = {{79.5, 90}, {93.2725, 90}, {93.2725, 100.342}, {93.2725, 100.342}}, color = {0, 0, 127}));
+    connect(HDirTil.H, add1.u1) annotation(Line(points = {{51, 80}, {58.8369, 80}, {58.8369, 92.8164}, {67.7309, 92.8164}, {67.7309, 92.8164}}, color = {0, 0, 127}));
+    connect(HDirTil.H, IncidentBeam) annotation(Line(points = {{51, 80}, {94.1847, 80}, {94.1847, 80.5017}, {94.1847, 80.5017}}, color = {0, 0, 127}));
     connect(TOutside.port, TDryBul) annotation(Line(points = {{70, 20}, {97.8229, 0}, {100, 0}}));
     connect(weatherBus.HDirNor, DNI) "Connects Hourly Direct Normal Irradiance from the weather file to the DNI output of context";
+    connect(weatherBus.HGloHor, GHI) "Connects Hourly Direct Horizontal Irradiance from the weather file to the DHI output of context";
     connect(SurfOrientation, SurfOrientation_out) "Connects Surface Orientation Parameter to Surface Orientation Output";
     connect(SurfTilt, SurfTilt_out) "Connects Surface Tilt Parameter to Surface Tilt Output";
     connect(weatherBus.TDryBul, TOutside.T) "Connects the weather file Dry Bult to the TOutside prescribed temperature model" annotation(Line(points = {{20, 20}, {47.0247, 20}, {48, 20}}));
@@ -149,6 +174,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     //Eq 1.6.2 Solar Engineering of Thermal Processes - Duff & Beckman
     // Ask about the origin of this AOI when we can get AOI from HDirTil component.
     AOI = Modelica.Math.acos(del_s * phi_s * bet_c - del_s * phi_c * bet_s * gam_c + del_c * phi_c * bet_c * omg_c + del_c * phi_s * bet_s * gam_c * omg_c + del_c * bet_s * gam_s * omg_s);
+    connect(Declination, decAng.decAng);
     annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics), experiment(StartTime = 7084800, StopTime = 7171200, Tolerance = 1e-006, Interval = 864));
   end ICS_Context;
 
@@ -340,6 +366,8 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
 
     model ICS_EnvelopeCassette_Twelve "This model in the Envelope Cassette (Double-Skin Facade) that houses the ICSolar Stack and Modules. This presents a building envelope"
       extends ICSolar.Parameters;
+      Real EPC = ics_stack[1].EPC;
+      Real Shade = ics_stack[1].Shade;
       /// Redundant but here to true model
       //  Modelica.Blocks.Sources.CombiTimeTable IC_Data_all(tableOnFile = true, fileName = Path + "20150323\\ICSFdata_DLS.txt", tableName = "DNI_THTFin_vdot", nout = 3, columns = {2, 3, 4}) annotation(Placement(visible = true, transformation(origin = {-80, 0}, extent = {{-15, -15}, {15, 15}}, rotation = 0)));
       //
@@ -601,6 +629,8 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
 
     model ICS_Stack_Twelve "This model represents an individual Integrated Concentrating Solar Stack"
       extends ICSolar.Parameters;
+      Real EPC = ICS_Module_Twelve_1[5].EPC;
+      Real Shade = ICS_Module_Twelve_1[5].Shade;
       Modelica.Thermal.FluidHeatFlow.Interfaces.FlowPort_b flowport_b1(medium = mediumHTF) "Thermal fluid outflow port" annotation(Placement(visible = true, transformation(origin = {100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       output Modelica.Blocks.Interfaces.RealOutput Power_out "Electrical power generated" annotation(Placement(visible = true, transformation(origin = {100, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.Thermal.FluidHeatFlow.Interfaces.FlowPort_a flowport_a1(medium = mediumHTF) "Thermal fluid inflow port" annotation(Placement(visible = true, transformation(origin = {-100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
@@ -928,6 +958,8 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       Modelica.SIunits.Length LensWidth = 0.25019 "Width of Fresnel Lens, meters";
       Modelica.SIunits.Length CellWidth = 0.01 "Width of the PV cell, meters";
       Real measured_eGen_on = eGen_on.y[modNum];
+      Real EPC = ics_pvperformance1.EIPC;
+      Real Shade = shadingfraction_function1.SOLAR_frac;
       //Stores only column related to module of interests
       //  parameter String FresMat = "PMMA" "'PMMA' or 'Silicon on Glass', use the exact spellings provided";
       //  parameter Real FNum = 0.85 "FNum determines the lens transmittance based on concentrating";
@@ -1038,7 +1070,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
         Modelica.Thermal.HeatTransfer.Interfaces.HeatPort_a heatCap_waterBlock annotation(Placement(visible = true, transformation(origin = {-100, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
         Modelica.Thermal.HeatTransfer.Interfaces.HeatPort_a heatLoss_to_ambient annotation(Placement(visible = true, transformation(origin = {-100, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
         Modelica.Thermal.HeatTransfer.Components.ThermalCollector thermalcollector1 annotation(Placement(visible = true, transformation(origin = {-20, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-        Modelica.Thermal.FluidHeatFlow.Components.HeatedPipe heatedpipe1(h_g = 0, T0 = TAmb, medium = mediumHTF, T(start = TAmb), pressureDrop(fixed = false), T0fixed = false, m = 0.003, dpNominal(displayUnit = "kPa") = 62270, V_flowLaminar(displayUnit = "l/min") = 1.6666666666667e-006, dpLaminar(displayUnit = "kPa") = 14690, V_flowNominal(displayUnit = "l/min") = 3.995e-006) annotation(Placement(visible = true, transformation(origin = {-20, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+        Modelica.Thermal.FluidHeatFlow.Components.HeatedPipe heatedpipe1(h_g = 0, T0 = Temp_Indoor, medium = mediumHTF, T(start = Temp_Indoor), pressureDrop(fixed = false), T0fixed = false, m = 0.003, dpNominal(displayUnit = "kPa") = 62270, V_flowLaminar(displayUnit = "l/min") = 1.6666666666667e-006, dpLaminar(displayUnit = "kPa") = 14690, V_flowNominal(displayUnit = "l/min") = 3.995e-006) annotation(Placement(visible = true, transformation(origin = {-20, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
         Modelica.Thermal.HeatTransfer.Components.ThermalResistor thermalresistor_waterblock(R = Resistivity_WaterBlock) annotation(Placement(visible = true, transformation(origin = {-20, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 90)));
         Modelica.Thermal.HeatTransfer.Components.ThermalResistor thermalresistor_celltoreceiver(R = Resistivity_Cell) annotation(Placement(visible = true, transformation(origin = {-60, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
         //
@@ -1104,18 +1136,18 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     //--------------------------------
     parameter Boolean isStudioExperiment = true "True if this run is referring to the gen8 studio experiment. For now, just search through the code for the variable name and flip things where necessary";
     /*off hand, that's 
-                                                                                                                                                                                                                                                                                                                                                                                      numOfStacks
-                                                                                                                                                                                                                                                                                                                                                                                      StackHeight
-                                                                                                                                                                                                                                                                                                                                                                                      BuildingOrientation
-                                                                                                                                                                                                                                                                                                                                                                                      ArrayTilt
-                                                                                                                                                                                                                                                                                                                                                                                      [glazing losses stuff]
-                                                                                                                                                                                                                                                                                                                                                                                    opticalEfficiency
-                                                                                                                                                                                                                                                                                                                                                                                      */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                numOfStacks
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                StackHeight
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                BuildingOrientation
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ArrayTilt
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                [glazing losses stuff]
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              opticalEfficiency
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
     //////////////////////////////////
     ///// BUILDING CONFIGURATION /////
     //////////////////////////////////
     parameter Real BuildingOrientation = 0 * 3.14159 / 180 "Radians, 0 being south";
-    parameter Real BuildingLatitude = 40.71 * Modelica.Constants.pi / 180 "Latitude (radians)";
+    parameter Real BuildingLatitude = 40.783 * Modelica.Constants.pi / 180 "Latitude (radians)";
     parameter Real ArrayTilt = 60 * 3.14159 / 180 "Radians, 0 being wall";
     ////////////////////////
     ///// ARRAY SIZING /////
@@ -1175,9 +1207,9 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     ///// FLUID /////
     /////////////////
     parameter Modelica.Thermal.FluidHeatFlow.Media.Medium mediumHTF = Modelica.Thermal.FluidHeatFlow.Media.Water() "Water" annotation(choicesAllMatching = true);
-    parameter Real OneBranchFlow = 1.63533e-006;
+    parameter Real OneBranchFlow = 1.6e-006;
     parameter Real AllBranchesFlow = OneBranchFlow * NumOfStacks;
-    parameter Real inletTemp = 85 + 273.15;
+    parameter Real inletTemp = 20 + 273.15;
     //parameter Real cp_h2o = 4177;
     //////////////////////////////////////
     ///// HEAT TRANSFER COEFFICIENTS /////
@@ -1640,11 +1672,11 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     // THE PATH FOR THE LUT TXT WILL NEED TO BE DYNAMIC
     //*******************************************************
     /*
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         Modelica.Blocks.Interfaces.IntegerInput rowType annotation(Placement(visible = true, transformation(origin = {-100, 40}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {-100, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Modelica.Blocks.Interfaces.IntegerInput colType annotation(Placement(visible = true, transformation(origin = {-100, 80}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {-100, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Modelica.Blocks.Interfaces.RealInput arrayYaw annotation(Placement(visible = true, transformation(origin = {-100, 0}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {-100, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Modelica.Blocks.Interfaces.RealInput arrayPitch annotation(Placement(visible = true, transformation(origin = {-100, -60}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {-100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             Modelica.Blocks.Interfaces.IntegerInput rowType annotation(Placement(visible = true, transformation(origin = {-100, 40}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {-100, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Modelica.Blocks.Interfaces.IntegerInput colType annotation(Placement(visible = true, transformation(origin = {-100, 80}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {-100, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Modelica.Blocks.Interfaces.RealInput arrayYaw annotation(Placement(visible = true, transformation(origin = {-100, 0}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {-100, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Modelica.Blocks.Interfaces.RealInput arrayPitch annotation(Placement(visible = true, transformation(origin = {-100, -60}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {-100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
     Modelica.Blocks.Interfaces.RealOutput SOLAR_frac annotation(Placement(visible = true, transformation(origin = {100, 0}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     Real index_num = ShadingFraction_Index(rowType, colType, arrayPitch, arrayYaw);
     Modelica.Blocks.Interfaces.RealInput arrayYaw annotation(Placement(visible = true, transformation(origin = {-100, -60}, extent = {{-16.25, -16.25}, {16.25, 16.25}}, rotation = 0), iconTransformation(origin = {-100, -80}, extent = {{-16.25, -16.25}, {16.25, 16.25}}, rotation = 0)));
@@ -1653,9 +1685,16 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     Modelica.Blocks.Interfaces.IntegerInput rowType annotation(Placement(visible = true, transformation(origin = {-100, 80}, extent = {{-16.25, -16.25}, {16.25, 16.25}}, rotation = 0), iconTransformation(origin = {-100, 40}, extent = {{-16.25, -16.25}, {16.25, 16.25}}, rotation = 0)));
     Modelica.Blocks.Tables.CombiTable1Ds LUT(tableOnFile = true, fileName = ICSolar.Parameters.Path + "4D_LUT\\4DLUT.txt", tableName = "4DLUT") annotation(Placement(visible = true, transformation(origin = {0, 0}, extent = {{-15, -15}, {15, 15}}, rotation = 0)));
   equation
-    connect(LUT.y[1], SOLAR_frac) annotation(Line(points = {{16.5, 0}, {90.9337, 0}, {90.9337, -0.811908}, {90.9337, -0.811908}}, color = {0, 0, 127}));
+    //connect(LUT.y[1], SOLAR_frac) annotation(Line(points = {{16.5, 0}, {90.9337, 0}, {90.9337, -0.811908}, {90.9337, -0.811908}}, color = {0, 0, 127}));
     //connect(index_num, LUT.u);
     LUT.u = index_num;
+    if abs(arrayPitch) > 1.25663706 then
+      SOLAR_frac = 0.0;
+    elseif abs(arrayYaw) > 1.25663706 then
+      SOLAR_frac = 0.0;
+    else
+      SOLAR_frac = LUT.y[1];
+    end if;
     annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})));
   end ShadingFraction_Function;
 
