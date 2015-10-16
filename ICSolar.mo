@@ -8,8 +8,9 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     // DNI, T inlet, vFlow...and then aaaalll the T ins and outs. Total situational awareness. good for tuning both
     //module behavior and whole-array behavior
     Modelica.Blocks.Sources.CombiTimeTable IC_Data_all(tableOnFile = true, fileName = Path + Date + "measuredData.txt", tableName = "DNI_THTFin_vdot", nout = 22, columns = {2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23}) annotation(Placement(visible = true, transformation(origin = {-80,0}, extent = {{-15,-15},{15,15}}, rotation = 0)));
-    Real measured_DNI = IC_Data_all.y[1] * 85 / 68;
-    Real measured_T_HTFin = IC_Data_all.y[2] + 25;
+    //Real measured_DNI = IC_Data_all.y[1] * 85 / 68;
+    Real measured_DNI = IC_Data_all.y[1];
+    Real measured_T_HTFin = IC_Data_all.y[2];
     //Real measured_T_HTFin = IC_Data_all.y[6] + 52.5;
     /// MAKING CHI ZERO
     Real measured_vFlow = IC_Data_all.y[3];
@@ -314,8 +315,8 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     equation
       vCartToSph = Rx * Rz * vSphToCart;
       arrayPitch = Modelica.Constants.pi / 2 - Modelica.Math.acos(vCartToSph[3,1]);
-      //arrayYaw = (-1 * Modelica.Math.atan(vCartToSph[2,1] / vCartToSph[1,1])) - sign(vCartToSph[1,1]) * Modelica.Constants.pi / 2;
-      arrayYaw = Modelica.Math.atan2(vCartToSph[2,1], vCartToSph[1,1]);
+      arrayYaw = (-1 * Modelica.Math.atan(vCartToSph[2,1] / vCartToSph[1,1])) - sign(vCartToSph[1,1]) * Modelica.Constants.pi / 2;
+      //arrayYaw = Modelica.Math.atan2(vCartToSph[2,1], vCartToSph[1,1]);
       annotation(Diagram(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2,2})), Icon(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2,2}), graphics = {Text(origin = {16.0156,3.67356}, extent = {{-101.49,60.28},{73.98,-63.83}}, textString = "Transform Matrix")}), experiment(StartTime = 0, StopTime = 86400, Tolerance = 0.001, Interval = 86.5731));
     end RotationMatrixForSphericalCood;
     model CavityHeatBalance
@@ -1177,7 +1178,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     //////////////////////////////////
     ///// BUILDING CONFIGURATION /////
     //////////////////////////////////
-    parameter Real BuildingOrientation = -1 * 40 * 3.14159 / 180 "Radians, 0 being south";
+    parameter Real BuildingOrientation = 40 * 3.14159 / 180 "Radians, 0 being south";
     parameter Real BuildingLatitude = 40.71 * Modelica.Constants.pi / 180 "Latitude (radians)";
     parameter Real ArrayTilt = 0 "Radians, 0 being wall";
     /////////////////////////
@@ -1211,10 +1212,10 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     //    parameter Real Trans_glazinglosses = 0.74 "Transmittance of outter glazing losses (single glass layer). Good glass: Guardian Ultraclear 6mm: 0.87. For our studio IGUs, measured 0.71. But give it 0.74, because we measured at ~28degrees, which will increase absorptance losses.";
     //still need to do something about this:
     parameter Real Trans_glazinglosses_eta = 0.86;
-    // parameter Real OpticalEfficiency = 0.57 "The optical efficiency of the concentrating lens and optics prior to the photovoltaic cell";
+    parameter Real OpticalEfficiency = 0.57 "The optical efficiency of the concentrating lens and optics prior to the photovoltaic cell";
     //1. parameter Real OpticalEfficiency = 0.5649999999999999;
     //parameter Real OpticalEfficiency = 0.57;
-    parameter Real OpticalEfficiency = 0.886;
+    //parameter Real OpticalEfficiency = 0.886;
     //parameter Real Exp_Observed = 0.215 "observed electrical efficiency of ICSFg8";
     //parameter Real Exp_nom_tweak = 0.364 * OpticalEfficiency "matching the observed to modeled data, compensating for temperature 'unknown'. 0.364 matches the Nov25-13 data well when eta_observed is 0.215. set same as eta_obs for full-strength output.";
     //

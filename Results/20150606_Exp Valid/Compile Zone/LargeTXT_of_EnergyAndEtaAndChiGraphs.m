@@ -217,34 +217,54 @@ Purple = [0.494117647409439 0.184313729405403 0.556862771511078];
 Grey = [0.7 0.7 0.7];
 Orange = [0.85 0.33 0.1];
 
+measured_Qgen_3mods = measured_vFlow * 974.9 * 4190.* (...
+    measured_T_s3m1in - measured_T_s3m2in + measured_T_s3m2in - measured_T_s3m3in ...
+    + measured_T_s3m5in - measured_T_s3m6in);
+
+
+
 %%Plots the Eta (only modeled)
 %trimmed simulated
-t_s_eta_Egen = eta_Egen_6mods(:,Start:End); 
-t_s_eta_Qgen = eta_Qgen_6mods(:,Start:End); 
-t_s_eta_Com = eta_Cgen_6mods(:,Start:End); 
+t_o_Egen = measured_Egen_arrayTotal(:,Start:End);
+t_o_Qgen3 = measured_Qgen_3mods(:,Start:End);
+t_s_Gdn_6mods = G_DN_6mods(:,Start:End);
+
+
+
+
+% LEGACY BASED ON MODELED
+% t_s_eta_Egen = eta_Egen_6mods(:,Start:End); 
+% t_s_eta_Qgen = eta_Qgen_6mods(:,Start:End); 
+% t_s_eta_Com = eta_Cgen_6mods(:,Start:End); 
+
+% NEW BASED ON MEASURED!!
+t_o_eta_Egen = t_o_Egen./t_s_Gdn_6mods;
+t_o_eta_Qgen = t_o_Qgen3./(t_s_Gdn_6mods./2);
+t_o_eta_Cgen = t_o_eta_Egen + t_o_eta_Qgen;
+
 t_o_Tin = measured_T_HTFin(:,Start:End) - 273; 
-x = 1:length(t_s_eta_Egen);
+x = 1:length(t_o_eta_Egen);
 
 
 figure('Color',[1 1 1],'Position', [100, 100, 500, 500]);
 hold on;
 
 % Plot ALL
-[Ax,H1,H2]=plotyy(x,[t_s_eta_Qgen' t_s_eta_Egen' t_s_eta_Com'],x,t_o_Tin);
+[Ax,H1,H2]=plotyy(x,[t_o_eta_Qgen' t_o_eta_Egen' t_o_eta_Cgen'],x,t_o_Tin);
 
 % Set Qgen Properties
 set(H1(1),'Color',[1 0 0 ],...
-    'LineStyle',':',...
+    'LineStyle','-',...
     'LineWidth',3);
 
 % Set Egen Properties
 set(H1(2),'Color',Turquoise,...
-    'LineStyle',':',...
+    'LineStyle','-',...
     'LineWidth',3);
 
 % Set Cgen Properties
 set(H1(3),'Color',Purple,...
-    'LineStyle',':',...
+    'LineStyle','-',...
     'LineWidth',3);
 
 % Set Temp Properties
