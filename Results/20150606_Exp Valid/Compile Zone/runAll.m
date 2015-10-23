@@ -14,7 +14,7 @@ day = '20 Feb 2015';
 Start = 62;
 End = 613;
 
-filename = 'ICSolar.ICS_Skeleton_20_Feb_2015_vt.mat';
+filename = 'ICSolar.ICS_Skeleton_20_Feb_2015_v5.mat';
 save(filename);
 
 
@@ -28,7 +28,7 @@ day = '19 Mar 2015';
 Start = 98;
 End = 418;
 
-filename = 'ICSolar.ICS_Skeleton_19_Mar_2015_vt.mat';
+filename = 'ICSolar.ICS_Skeleton_19_Mar_2015_v5.mat';
 save(filename);
 
 
@@ -42,5 +42,5 @@ day = '23 Mar 2015';
 Start = 161;
 End = 456;
 
-filename = 'ICSolar.ICS_Skeleton_23_Mar_2015_vt.mat';
+filename = 'ICSolar.ICS_Skeleton_23_Mar_2015_v5.mat';
 save(filename);

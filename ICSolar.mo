@@ -10,7 +10,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     Modelica.Blocks.Sources.CombiTimeTable IC_Data_all(tableOnFile = true, fileName = Path + Date + "measuredData.txt", tableName = "DNI_THTFin_vdot", nout = 22, columns = {2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23}) annotation(Placement(visible = true, transformation(origin = {-80,0}, extent = {{-15,-15},{15,15}}, rotation = 0)));
     //Real measured_DNI = IC_Data_all.y[1] * 85 / 68;
     Real measured_DNI = IC_Data_all.y[1];
-    Real measured_T_HTFin = IC_Data_all.y[2];
+    Real measured_T_HTFin = IC_Data_all.y[2] + 25;
     //Real measured_T_HTFin = IC_Data_all.y[6] + 52.5;
     /// MAKING CHI ZERO
     Real measured_vFlow = IC_Data_all.y[3];
@@ -42,7 +42,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     // Energy / Exergy / Eta / Epsilon
     Real measured_Qgen_arrayTotal = measured_vFlow * mediumHTF.rho * mediumHTF.cp * (measured_T_HTFout - measured_T_HTFin);
     Real measured_eta_Cgen_arrayTotal = (measured_Qgen_arrayTotal + measured_Egen_arrayTotal) / GN_arrayTotal;
-    Real measured_Ex_arrayTotal = measured_vFlow * mediumHTF.rho * mediumHTF.cp * (measured_T_HTFout - measured_T_HTFin - measured_T_cavAvg * log(measured_T_HTFout / measured_T_HTFin)) + measured_Egen_arrayTotal;
+    Real measured_Ex_arrayTotal = measured_vFlow * mediumHTF.rho * mediumHTF.cp * (measured_T_HTFout - measured_T_HTFin - (20 + 273) * log(measured_T_HTFout / measured_T_HTFin)) + measured_Egen_arrayTotal;
     Real Ex_epsilon_solar = 0.93 "exergic efficiency of sunlight";
     Real measured_Ex_epsilon = measured_Ex_arrayTotal / (GN_arrayTotal * Ex_epsilon_solar);
     Real chi_arrayTotal = (measured_T_HTFin - measured_T_cavAvg) / (GN_arrayTotal / (NumOfModules * A_POE));
@@ -61,7 +61,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     Real Qgen_arrayTotal = abs(ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[1].modulereceiver1.water_Block_HX1.flowport_b1.H_flow) - ics_envelopecassette1.flowport_a.H_flow;
     Real Egen_arrayTotal = ics_envelopecassette1.Power_Electric;
     Real eta_Cgen_arrayTotal = (Egen_arrayTotal + Qgen_arrayTotal) / GN_arrayTotal;
-    Real Ex_arrayTotal = ics_envelopecassette1.flowport_a.m_flow * mediumHTF.cp * (temp_flowport_b - temp_flowport_a - measured_T_cavAvg * log(temp_flowport_b / temp_flowport_a)) + Egen_arrayTotal;
+    Real Ex_arrayTotal = ics_envelopecassette1.flowport_a.m_flow * mediumHTF.cp * (temp_flowport_b - temp_flowport_a - (20 + 273) * log(temp_flowport_b / temp_flowport_a)) + Egen_arrayTotal;
     //epsilon = the Exergenic efficiency (~93% for sunlight)
     Real Ex_epsilon = Ex_arrayTotal / (GN_arrayTotal * Ex_epsilon_solar);
     // CHI: note measured chi is the same as modeled chi because the inlet temperature is given from the experiment
@@ -73,11 +73,11 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     Real eta_Egen_6mods = (ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[2].eta_Egen_mod + ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[3].eta_Egen_mod + ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[6].eta_Egen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[2].eta_Egen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[3].eta_Egen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[6].eta_Egen_mod) / 6;
     Real eta_Cgen_6mods = eta_Qgen_6mods + eta_Egen_6mods;
     Real G_DN_6mods = ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[2].G_DN_mod + ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[3].G_DN_mod + ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[6].G_DN_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[2].G_DN_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[3].G_DN_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[6].G_DN_mod;
-    Real Ex_Qgen_6mods = ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[2].Ex_Qgen_mod + ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[3].Ex_Qgen_mod + ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[6].Ex_Qgen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[2].Ex_Qgen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[3].Ex_Qgen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[6].Ex_Qgen_mod;
-    Real Ex_epsilon_Qgen_6mods = Ex_Qgen_6mods / (G_DN_6mods * Ex_epsilon_solar);
-    Real Ex_epsilon_Egen_6mods = Egen_arrayTotal / (G_DN_6mods * Ex_epsilon_solar);
-    Real Ex_epsilon_Cgen_6mods = (Egen_arrayTotal + Ex_Qgen_6mods) / (G_DN_6mods * Ex_epsilon_solar);
-    Real chi_6mods = (measured_T_HTFin - measured_T_cavAvg) / (G_DN_6mods / (6 * A_POE));
+    //  Real Ex_Qgen_6mods = ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[2].Ex_Qgen_mod + ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[3].Ex_Qgen_mod + ics_envelopecassette1.ics_stack1.ICS_Module_Twelve_1[6].Ex_Qgen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[2].Ex_Qgen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[3].Ex_Qgen_mod + ics_envelopecassette1.ics_stack2.ICS_Module_Twelve_1[6].Ex_Qgen_mod;
+    // Real Ex_epsilon_Qgen_6mods = Ex_Qgen_6mods / (G_DN_6mods * Ex_epsilon_solar);
+    // Real Ex_epsilon_Egen_6mods = Egen_arrayTotal / (G_DN_6mods * Ex_epsilon_solar);
+    // Real Ex_epsilon_Cgen_6mods = (Egen_arrayTotal + Ex_Qgen_6mods) / (G_DN_6mods * Ex_epsilon_solar);
+    // Real chi_6mods = (measured_T_HTFin - measured_T_cavAvg) / (G_DN_6mods / (6 * A_POE));
     // End of 6 mods
     //**********************
     ////////////////////////
@@ -1250,9 +1250,9 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     //?Why doesn't this if structure work here? for now, swap things manually
     //if isStudioExperiment == true then
     //parameter Real Resistivity_WaterPlate = 0.7;
-    //parameter Real Resistivity_WaterPlate = 0.9;
+    parameter Real Resistivity_WaterPlate = 0.9;
     //  parameter Real Resistivity_WaterPlate = 0.17;
-    parameter Real Resistivity_WaterPlate = Resistivity_WaterBlock;
+    //parameter Real Resistivity_WaterPlate = Resistivity_WaterBlock;
     // 0.8 "Thermal resisitivity of the water plate heat exchanger, experiment";
     //else
     //  parameter Real Resistivity_WaterPlate = 5.05e3 * OneBranchFlow ^ (-0.773) "Thermal resisitivity of the water block heat exchanger, projected";

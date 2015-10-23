@@ -41,7 +41,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     // Energy / Exergy / Eta / Epsilon
     Real measured_Qgen_arrayTotal = measured_vFlow * mediumHTF.rho * mediumHTF.cp * (measured_T_HTFout - measured_T_HTFin);
     Real measured_eta_Cgen_arrayTotal = (measured_Qgen_arrayTotal + measured_Egen_arrayTotal) / GN_arrayTotal;
-    Real measured_Ex_arrayTotal = measured_vFlow * mediumHTF.rho * mediumHTF.cp * (measured_T_HTFout - measured_T_HTFin - measured_T_cavAvg * log(measured_T_HTFout / measured_T_HTFin)) + measured_Egen_arrayTotal;
+    Real measured_Ex_arrayTotal = measured_vFlow * mediumHTF.rho * mediumHTF.cp * (measured_T_HTFout - measured_T_HTFin - (20 + 273) * log(measured_T_HTFout / measured_T_HTFin)) + measured_Egen_arrayTotal;
     Real Ex_epsilon_solar = 0.93 "exergic efficiency of sunlight";
     Real measured_Ex_epsilon = measured_Ex_arrayTotal / (GN_arrayTotal * Ex_epsilon_solar);
     Real chi_arrayTotal = (measured_T_HTFin - measured_T_cavAvg) / (GN_arrayTotal / (NumOfModules * A_POE));
@@ -62,7 +62,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     Real eta_Cgen_arrayTotal = (Egen_arrayTotal + Qgen_arrayTotal) / GN_arrayTotal;
     Real eta_Egen_arrayTotal = Egen_arrayTotal / GN_arrayTotal;
     Real eta_Qgen_arrayTotal = Qgen_arrayTotal / GN_arrayTotal;
-    Real Ex_arrayTotal = ics_envelopecassette1.flowport_a.m_flow * mediumHTF.cp * (temp_flowport_b - temp_flowport_a - measured_T_cavAvg * log(temp_flowport_b / temp_flowport_a)) + Egen_arrayTotal;
+    Real Ex_arrayTotal = ics_envelopecassette1.flowport_a.m_flow * mediumHTF.cp * (temp_flowport_b - temp_flowport_a - (20 + 273) * log(temp_flowport_b / temp_flowport_a)) + Egen_arrayTotal;
     //epsilon = the Exergenic efficiency (~93% for sunlight)
     Real Ex_epsilon = Ex_arrayTotal / (GN_arrayTotal * Ex_epsilon_solar);
     // CHI: note measured chi is the same as modeled chi because the inlet temperature is given from the experiment

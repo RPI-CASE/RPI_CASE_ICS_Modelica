@@ -8,6 +8,11 @@ Grey = [.5 .5 .5];
 nthElement = 50;
 markerSize = 100;
 
+
+T_ref = 20; % (c)
+
+
+
 figure('Color',[1 1 1]);
 hold on;
 
@@ -37,7 +42,7 @@ axis([50 90 0 0.8]);
 
 
 %% Plot Feb 20th
-load('ICSolar.ICS_Skeleton_20_Feb_2015_v4.mat','chi_arrayTotal',...
+load('ICSolar.ICS_Skeleton_20_Feb_2015_v5.mat','chi_arrayTotal',...
     'Ex_epsilon_Cgen_6mods','Start','End','day','measured_T_HTFin',...
     'measured_T_cavAvg','G_DN_6mods','eta_Cgen_6mods',...
     'measured_eta_Cgen_arrayTotal','measured_Ex_epsilon','measured_Egen_arrayTotal',...
@@ -48,8 +53,10 @@ load('ICSolar.ICS_Skeleton_20_Feb_2015_v4.mat','chi_arrayTotal',...
 Color = Grey;
 
 % Modeled Extropaltated Ex Epsilon Array total 
-T_HTFin = [40 50 60 75 85];
-predict_eps = [0.1425 0.146 0.1477 0.146 0.1425];
+% T_HTFin = [40 50 60 75 85];
+% predict_eps = [0.1425 0.146 0.1477 0.146 0.1425];
+T_HTFin = [350-273 300-273 325-273 375-273];
+predict_eps = [0.1492 0.1414 .152 .1355];
 
 f=fit(T_HTFin',predict_eps','poly2');
 x=0:5:100;
@@ -67,9 +74,10 @@ Color = Blueish;
 
 %trimmed obseverd chi and epsilon
 t_o_Gdn = G_DN_6mods(:,Start:End);
-t_o_epsilon = measured_Ex_epsilon(:,Start:End);
+t_o_epsilon = measured_Ex_epsilon(:,Start:End); % assumes Tcav as ref
 t_o_Tin =  measured_T_HTFin(:,Start:End) - 273;
 t_o_Tcav = measured_T_cavAvg(:,Start:End);
+t_s_Tref = (T_ref+273).*ones(1,length(t_o_Tcav));
 t_o_eta = measured_eta_Cgen_arrayTotal(:,Start:End);
 t_o_Egen = measured_Egen_arrayTotal(:,Start:End);
 t_o_Qgen = measured_Qgen_arrayTotal(:,Start:End); 
@@ -81,7 +89,8 @@ t_s_Gdn = GN_arrayTotal(:,Start:End);
 
 s_Qgen = UQ_Qgen(t_o_vFlow,t_o_Tin,t_o_Tout);
 s_eta_Cgen = UQ_eta_Cgen(t_o_Qgen,s_Qgen,t_o_Egen,t_s_Gdn);
-s_ex_epsilon = UQ_ex_epsilon(t_o_vFlow,t_o_Tcav,t_o_Tin,t_o_Tout,t_o_Egen,t_s_Gdn);
+% Returns based on fixed T ref
+[s_ex_epsilon,t_o_epsilon] = UQ_ex_epsilon(t_o_vFlow,t_s_Tref,t_o_Tin,t_o_Tout,t_o_Egen,t_s_Gdn);
 %error = 0.03.*ones(length(t_o_Tin(1:nthElement:end)'),1);
 error_eta = s_eta_Cgen(1:nthElement:end);
 error_ex = s_ex_epsilon(1:nthElement:end);
@@ -142,7 +151,7 @@ errorbar(t_o_Tin(1:nthElement:end)',t_o_eta(1:nthElement:end)',error_eta,...
 
 
 %% Plot Mar 19th
-load('ICSolar.ICS_Skeleton_19_Mar_2015_v4.mat','chi_arrayTotal',...
+load('ICSolar.ICS_Skeleton_19_Mar_2015_v5.mat','chi_arrayTotal',...
     'Ex_epsilon_Cgen_6mods','Start','End','day','measured_T_HTFin',...
     'measured_T_cavAvg','G_DN_6mods','eta_Cgen_6mods',...
     'measured_eta_Cgen_arrayTotal','measured_Ex_epsilon','measured_Egen_arrayTotal',...
@@ -160,6 +169,7 @@ t_o_Gdn = G_DN_6mods(:,Start:End);
 t_o_epsilon = measured_Ex_epsilon(:,Start:End);
 t_o_Tin =  measured_T_HTFin(:,Start:End) - 273;
 t_o_Tcav = measured_T_cavAvg(:,Start:End);
+t_s_Tref = (T_ref+273).*ones(1,length(t_o_Tcav));
 t_o_eta = measured_eta_Cgen_arrayTotal(:,Start:End);
 t_o_Egen = measured_Egen_arrayTotal(:,Start:End);
 t_o_Qgen = measured_Qgen_arrayTotal(:,Start:End); 
@@ -183,7 +193,8 @@ t_s_Gdn = GN_arrayTotal(:,Start:End);
 
 s_Qgen = UQ_Qgen(t_o_vFlow,t_o_Tin,t_o_Tout);
 s_eta_Cgen = UQ_eta_Cgen(t_o_Qgen,s_Qgen,t_o_Egen,t_s_Gdn);
-s_ex_epsilon = UQ_ex_epsilon(t_o_vFlow,t_o_Tcav,t_o_Tin,t_o_Tout,t_o_Egen,t_s_Gdn);
+% Returns based on fixed T ref
+[s_ex_epsilon,t_o_epsilon] = UQ_ex_epsilon(t_o_vFlow,t_s_Tref,t_o_Tin,t_o_Tout,t_o_Egen,t_s_Gdn);
 %error = 0.03.*ones(length(t_o_Tin(1:nthElement:end)'),1);
 
 t_o_eta=t_o_eta(1:nthElement:end);
@@ -241,7 +252,7 @@ y=f(x);
 %     'LineWidth',3);
 
 %% Plot 23-Mar
-load('ICSolar.ICS_Skeleton_23_Mar_2015_v4.mat','chi_arrayTotal',...
+load('ICSolar.ICS_Skeleton_23_Mar_2015_v5.mat','chi_arrayTotal',...
     'Ex_epsilon_Cgen_6mods','Start','End','day','measured_T_HTFin',...
     'measured_T_cavAvg','G_DN_6mods','eta_Cgen_6mods',...
     'measured_eta_Cgen_arrayTotal','measured_Ex_epsilon','measured_Egen_arrayTotal',...
@@ -256,6 +267,7 @@ t_o_Gdn = G_DN_6mods(:,Start:End);
 t_o_epsilon = measured_Ex_epsilon(:,Start:End);
 t_o_Tin =  measured_T_HTFin(:,Start:End) - 273;
 t_o_Tcav = measured_T_cavAvg(:,Start:End);
+t_s_Tref = (T_ref+273).*ones(1,length(t_o_Tcav));
 t_o_eta = measured_eta_Cgen_arrayTotal(:,Start:End);
 t_o_Egen = measured_Egen_arrayTotal(:,Start:End);
 t_o_Qgen = measured_Qgen_arrayTotal(:,Start:End); 
@@ -268,7 +280,8 @@ t_s_Gdn = GN_arrayTotal(:,Start:End);
 
 s_Qgen = UQ_Qgen(t_o_vFlow,t_o_Tin,t_o_Tout);
 s_eta_Cgen = UQ_eta_Cgen(t_o_Qgen,s_Qgen,t_o_Egen,t_s_Gdn);
-s_ex_epsilon = UQ_ex_epsilon(t_o_vFlow,t_o_Tcav,t_o_Tin,t_o_Tout,t_o_Egen,t_s_Gdn);
+% Returns based on fixed T ref
+[s_ex_epsilon,t_o_epsilon] = UQ_ex_epsilon(t_o_vFlow,t_s_Tref,t_o_Tin,t_o_Tout,t_o_Egen,t_s_Gdn);
 %error = 0.03.*ones(length(t_o_Tin(1:nthElement:end)'),1);
 
 t_o_eta=t_o_eta(1:nthElement:end);
