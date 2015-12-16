@@ -44,14 +44,14 @@ save('NYC_S60Tilt.mat');
 
 clear all
 
-% %Roof Horizontal
-% display('South, Horizontal')
-% win_om_path = 'C:\OpenModelica1.9.1\bin\';
-% system([win_om_path,'omc.exe +d=failtrace +s simulate-ICSolar_S90.mos.']);
-% omimport('ICSolar.ICS_Skeleton');
-% save('NYC_S90Tilt.mat');
+%Roof Horizontal
+display('South, Horizontal')
+win_om_path = 'C:\OpenModelica1.9.1\bin\';
+system([win_om_path,'omc.exe +d=failtrace +s simulate-ICSolar_S90.mos.']);
+omimport('ICSolar.ICS_Skeleton');
+save('NYC_S90Tilt.mat');
 
-% clear all
+clear all
 
 
 %WEST West, Vertical

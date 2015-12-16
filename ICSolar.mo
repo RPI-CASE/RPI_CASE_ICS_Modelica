@@ -1207,9 +1207,9 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     ///// FLUID /////
     /////////////////
     parameter Modelica.Thermal.FluidHeatFlow.Media.Medium mediumHTF = Modelica.Thermal.FluidHeatFlow.Media.Water() "Water" annotation(choicesAllMatching = true);
-    parameter Real OneBranchFlow = 1.6e-006;
+    parameter Real OneBranchFlow = 5.0e-006;
     parameter Real AllBranchesFlow = OneBranchFlow * NumOfStacks;
-    parameter Real inletTemp = 20 + 273.15;
+    parameter Real inletTemp = 45 + 273.15;
     //parameter Real cp_h2o = 4177;
     //////////////////////////////////////
     ///// HEAT TRANSFER COEFFICIENTS /////
