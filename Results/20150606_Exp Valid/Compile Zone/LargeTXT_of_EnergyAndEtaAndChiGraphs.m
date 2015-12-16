@@ -18,6 +18,7 @@ Turquoise = [0.301960796117783 0.745098054409027 0.933333337306976];
 Purple = [0.494117647409439 0.184313729405403 0.556862771511078];
 Grey = [0.7 0.7 0.7];
 
+
 big = 16;
 little = 16;
 legendFont = 16;
@@ -67,6 +68,21 @@ s_Egen = 0.73; % please refer to UQ calcs in 'UQ_24-May-15_v1_KP.xlsx'
 s_Qgen = UQ_Qgen(t_o_vFlow,t_o_Tin,t_o_Tout);
 %s_Qgen = 10;
 
+% Calculation of error in G_Dn
+F_poe = GN_arrayTotal./(measured_DNI .* 0.0626);
+A_poe = 0.0626;
+s_G_DN = sqrt((measured_DNI.*A_poe).^2 .* ((3/100)*12).^2  +...
+    (F_poe.*A_poe).^2 .* ((1.2/100).*measured_DNI).^2);
+% trim the results to the smaller reported domain
+s_G_DN = s_G_DN(:,Start:End);
+
+s_tin_upper = t_o_Tin-273 + 0.5;
+s_tin_lower = t_o_Tin-273 - 0.5;
+
+
+
+s_gdn_upper = t_s_Gdn + s_G_DN;
+s_gdn_lower = t_s_Gdn - s_G_DN;
 
 % Creat Upper and Lower Limits
 s_Qgen_upper = t_o_Qgen + s_Qgen;
@@ -154,6 +170,18 @@ hold on;
 % 2 y axes plot
 [Ax,h1,h2] = plotyy(x,t_s_Gdn,x,t_o_Tin-273);
 
+% Create Fill between lines
+x = 1:length(t_o_Qgen);
+y1 = s_gdn_lower;
+y2 = s_gdn_upper;
+
+% For Thermal
+fill([x,fliplr(x)],[y1,fliplr(y2)],Grey,'FaceAlpha',0.15,'LineStyle','--',...
+    'EdgeColor',Grey);    
+
+
+
+
 set(h1,'LineStyle',':');
 set(h2,'LineStyle','-.');
 
@@ -178,6 +206,17 @@ set(Ax(2),'FontName','arial narrow',...
     'FontWeight','bold');
 set(Ax(2),'YTick',[50 60 70 80 90 100]);
 set(Ax(2),'YGrid','on');
+
+% Create Fill between lines
+x = 1:length(t_o_Qgen);
+y1 = s_tin_lower;
+y2 = s_tin_upper;
+
+% For Thermal
+fill([x,fliplr(x)],[y1,fliplr(y2)],Grey,'FaceAlpha',0.15,'LineStyle','--',...
+    'EdgeColor',Grey);    
+
+
 
 set(Ax(1),'XTickLabel',{'0','15','30','45','60'},...
     'FontName','arial narrow',...
@@ -216,6 +255,9 @@ Turquoise = [0.301960796117783 0.745098054409027 0.933333337306976];
 Purple = [0.494117647409439 0.184313729405403 0.556862771511078];
 Grey = [0.7 0.7 0.7];
 Orange = [0.85 0.33 0.1];
+Tref = 20+273;
+
+
 
 measured_Qgen_3mods = measured_vFlow * 974.9 * 4190.* (...
     measured_T_s3m1in - measured_T_s3m2in + measured_T_s3m2in - measured_T_s3m3in ...
@@ -229,6 +271,9 @@ t_o_Egen = measured_Egen_arrayTotal(:,Start:End);
 t_o_Qgen3 = measured_Qgen_3mods(:,Start:End);
 t_s_Gdn_6mods = G_DN_6mods(:,Start:End);
 
+ex3Gen;
+
+t_o_Exgen3 = Ex_totes(:,Start:End); 
 
 
 
@@ -241,6 +286,8 @@ t_s_Gdn_6mods = G_DN_6mods(:,Start:End);
 t_o_eta_Egen = t_o_Egen./t_s_Gdn_6mods;
 t_o_eta_Qgen = t_o_Qgen3./(t_s_Gdn_6mods./2);
 t_o_eta_Cgen = t_o_eta_Egen + t_o_eta_Qgen;
+t_o_ex_epsilon = (t_o_Exgen3 + t_o_Egen./2)./(0.93.*t_s_Gdn_6mods./2);
+
 
 t_o_Tin = measured_T_HTFin(:,Start:End) - 273; 
 x = 1:length(t_o_eta_Egen);
