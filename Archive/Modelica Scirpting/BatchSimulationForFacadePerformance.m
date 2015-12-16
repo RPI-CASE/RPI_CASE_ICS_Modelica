@@ -3,7 +3,7 @@
 %system([win_om_path,'omc.exe +d=failtrace +s simulate-ICSolar.mos.'])
 %omimport(modelname, saveName)
 
-cd 'C:\Users\Justin\Documents\GitHub\RPI_CASE_ICS_Modelica\Archive\Modelica Scirpting'
+cd 'C:\Users\Kenton\Documents\GitHub\RPI_CASE_ICS_Modelica\Archive\Modelica Scirpting'
 
 %SOUTH
 %South, Vertical
