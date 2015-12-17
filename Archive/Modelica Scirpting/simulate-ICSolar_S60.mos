@@ -18,15 +18,15 @@ loadModel(Modelica);
 loadFile("C:/OpenModelica1.9.1/lib/omlibrary/Buildings 1.6/package.mo");
 
 //load IC Solar File
-loadFile("C:/Users/Justin/Documents/GitHub/RPI_CASE_ICS_Modelica/ICSolar.mo");
+loadFile("C:/Users/kenton.phillips/Documents/GitHub/RPI_CASE_ICS_Modelica/ICSolar.mo");
 
 // Use this to report the error is run the script
 getErrorString(); 
 
 
 //Make sure we have the proper path
-//setParameterValue(ICSolar.Parameters, Path, "C:\\Users\\Justin\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\");
-//setParameterValue(ICSolar.shadingImport, Path_2, "C:\\Users\\Justin\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\shading_matrices\\");
+//setParameterValue(ICSolar.Parameters, Path, "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\");
+//setParameterValue(ICSolar.shadingImport, Path_2, "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\shading_matrices\\");
 
 //Change a parameter, if ya want
 //setParameterValue(ICSolar.Parameters, OpticalEfficiency, 0.45);
