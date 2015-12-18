@@ -1,4 +1,4 @@
-function [ s_ex_epsilon_out,ex_epsilon_out] = UQ_ex_epilsion(V_dot_in, T0_in,T1_in, T2_in, Egen_in, Gdn_in)
+function [ s_ex_epsilon_out,ex_epsilon_out] = UQ_ex_epilsion(V_dot_in, T0_in,T1_in, T2_in, Egen_in, Gdn_in,s_Tin)
 %UQ_ex_epsilon returns the error in the epsilon calculation
 %   UQ_ex_epilsion(V_dot_in, T0_in,T1_in, T2_in, Egen_in, Gdn_in)
 
@@ -29,8 +29,8 @@ s_Egen_in = 0.73;
 s_Gdn_in = 10;
 %INIT Uncertainlty values
 s_V_dot_in = (3.5e-06)*0.05;
-s_T1_in = 0.5;
-s_T2_in = 0.5;
+s_T1_in = s_Tin;
+s_T2_in = s_Tin;
 %s_T0_in = 0.5;
 s_T0_in = 0; 
 s_cp_in =  cp_in*(1/100);
