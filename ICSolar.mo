@@ -10,40 +10,40 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     /////////////////////
     // DNI, T inlet, vFlow...and then aaaalll the T ins and outs. Total situational awareness. good for tuning both
     //module behavior and whole-array behavior
-    Real measured_DNI = IC_Data_all.y[1];
-    Real measured_T_HTFin = IC_Data_all.y[2];
-    Real measured_vFlow = IC_Data_all.y[3];
-    Real measured_Egen = IC_Data_all.y[4];
-    Real measured_T_HTFout = IC_Data_all.y[5];
-    Real measured_T_cavAvg = IC_Data_all.y[6];
-    Real measured_T_s3m6in = IC_Data_all.y[7];
-    Real measured_T_s3m6out = IC_Data_all.y[8];
-    Real measured_T_s3m5in = IC_Data_all.y[9];
-    Real measured_T_s3m5out = IC_Data_all.y[10];
-    Real measured_T_s3m4in = IC_Data_all.y[11];
-    Real measured_T_s3m4out = IC_Data_all.y[12];
-    Real measured_T_s3m3in = IC_Data_all.y[13];
-    Real measured_T_s3m3out = IC_Data_all.y[14];
-    Real measured_T_s3m2in = IC_Data_all.y[15];
-    Real measured_T_s3m2out = IC_Data_all.y[16];
-    Real measured_T_s3m1in = IC_Data_all.y[17];
-    Real measured_T_s3m1out = IC_Data_all.y[18];
-    Real measured_T_s2m6in = IC_Data_all.y[19];
-    Real measured_T_s2m1out = IC_Data_all.y[20];
-    Real measured_T_s2CPVa = IC_Data_all.y[21];
-    Real measured_T_s2CPVb = IC_Data_all.y[22];
-    Real measured_yaw = IC_Data_all.y[23];
-    Real measured_pitch = IC_Data_all.y[24];
+    // Real measured_DNI = IC_Data_all.y[1];
+    // Real measured_T_HTFin = IC_Data_all.y[2];
+    // Real measured_vFlow = IC_Data_all.y[3];
+    // Real measured_Egen = IC_Data_all.y[4];
+    // Real measured_T_HTFout = IC_Data_all.y[5];
+    // Real measured_T_cavAvg = IC_Data_all.y[6];
+    // Real measured_T_s3m6in = IC_Data_all.y[7];
+    // Real measured_T_s3m6out = IC_Data_all.y[8];
+    // Real measured_T_s3m5in = IC_Data_all.y[9];
+    // Real measured_T_s3m5out = IC_Data_all.y[10];
+    // Real measured_T_s3m4in = IC_Data_all.y[11];
+    // Real measured_T_s3m4out = IC_Data_all.y[12];
+    // Real measured_T_s3m3in = IC_Data_all.y[13];
+    // Real measured_T_s3m3out = IC_Data_all.y[14];
+    // Real measured_T_s3m2in = IC_Data_all.y[15];
+    // Real measured_T_s3m2out = IC_Data_all.y[16];
+    // Real measured_T_s3m1in = IC_Data_all.y[17];
+    // Real measured_T_s3m1out = IC_Data_all.y[18];
+    // Real measured_T_s2m6in = IC_Data_all.y[19];
+    // Real measured_T_s2m1out = IC_Data_all.y[20];
+    // Real measured_T_s2CPVa = IC_Data_all.y[21];
+    // Real measured_T_s2CPVb = IC_Data_all.y[22];
+    // Real measured_yaw = IC_Data_all.y[23];
+    // Real measured_pitch = IC_Data_all.y[24];
     // Processed Data
-    Real measured_T_drop_jumper = measured_T_s2m6in - measured_T_s3m1out;
+    // Real measured_T_drop_jumper = measured_T_s2m6in - measured_T_s3m1out;
     // Uncertainity Qualification
-    Real UQ_measured_Egen_upper = measured_Egen + 0.73;
-    Real UQ_measured_Egen_lower = measured_Egen - 0.73;
-    Real UQ_measured_T_HTFout_upper = measured_T_HTFout + 2.2;
-    Real UQ_measured_T_HTFout_lower = measured_T_HTFout - 2.2;
+    // Real UQ_measured_Egen_upper = measured_Egen + 0.73;
+    // Real UQ_measured_Egen_lower = measured_Egen - 0.73;
+    // Real UQ_measured_T_HTFout_upper = measured_T_HTFout + 2.2;
+    // Real UQ_measured_T_HTFout_lower = measured_T_HTFout - 2.2;
     // Ambient / Cavity Temp
-    Modelica.Blocks.Sources.CombiTimeTable T_cav_in(tableOnFile = true, fileName = Path + "20150323\\T_Cav_data.txt", tableName = "T_Cav");
-    Real measured_T_amb = measured_T_cavAvg;
+    // Modelica.Blocks.Sources.CombiTimeTable T_cav_in(tableOnFile = true, fileName = Path + "20150323\\T_Cav_data.txt", tableName = "T_Cav");
+    // Real measured_T_amb = measured_T_cavAvg;
     //  Real measured_T_amb = T_cav_in.y[1];
     /////////////////////////////
     ///  Energy / Exergy Var. ///
@@ -78,21 +78,31 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     Modelica.Blocks.Sources.Constant PumpFlowRate(k = AllBranchesFlow) annotation(Placement(visible = true, transformation(origin = {-160,0}, extent = {{-10,-10},{10,10}}, rotation = 0)));
     Modelica.Blocks.Sources.CombiTimeTable IC_Data_all(tableOnFile = true, fileName = Path + "20150323\\measuredData20150323r1.txt", tableName = "DNI_THTFin_vdot", nout = 24, columns = {2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25}) annotation(Placement(visible = true, transformation(origin = {-120,-80}, extent = {{-15,-15},{15,15}}, rotation = 0)));
     // G_DN_ext_cos - Direct Normal on Exterior with Cosine Losses
-    Real G_DN_ext_cos = ics_context1.DNI * GlassArea * Modelica.Math.cos(ics_context1.AOI);
-    Real eta_E_G_cos = if G_DN_ext_cos <= 1.0 then 0 else Egen_arrayTotal / G_DN_ext_cos;
-    Real eta_Q_G_cos = if G_DN_ext_cos <= 1.0 then 0 else Q_arrayTotal / G_DN_ext_cos;
+    Real G_DN_ext_cos = ics_context1.DNI * Modelica.Math.cos(ics_context1.AOI);
+    Real eta_E_G_cos = if G_DN_ext_cos <= 1.0 then 0 else Egen_arrayTotal / (G_DN_ext_cos*GlassArea);
+    Real eta_Q_G_cos = if G_DN_ext_cos <= 1.0 then 0 else Q_arrayTotal / (G_DN_ext_cos*GlassArea);
     Real Ex_epsilon_G_cos = Ex_arrayTotal / (G_DN_ext_cos * 0.93);
 
     // G_DN_ext - Direct Normal on Exterior without cosine losses
-    Real G_DN_ext = ics_context1.DNI * GlassArea;
-    Real eta_E_G = if G_DN_ext_cos <= 1.0 then 0 else Egen_arrayTotal / G_DN_ext;
-    Real eta_Q_G = if G_DN_ext_cos <= 1.0 then 0 else Q_arrayTotal / G_DN_ext;
+    Real G_DN_ext = ics_context1.DNI;
+    Real eta_E_G = if G_DN_ext_cos <= 1.0 then 0 else Egen_arrayTotal / (G_DN_ext*GlassArea);
+    Real eta_Q_G = if G_DN_ext_cos <= 1.0 then 0 else Q_arrayTotal / (G_DN_ext*GlassArea);
     Real Ex_epsilon_G = Ex_arrayTotal / (G_DN_ext * 0.93);
 
     // I_hemi - Incident solar radiation
     Real eta_E = if G_DN_ext_cos <= 1.0 then 0 else Egen_arrayTotal / (ics_context1.IncidentSolar * GlassArea);
     Real eta_Q = if G_DN_ext_cos <= 1.0 then 0 else Q_arrayTotal / (ics_context1.IncidentSolar * GlassArea);
     Real Ex_epsilon = Ex_arrayTotal / (ics_context1.IncidentSolar * 0.93 * GlassArea);
+
+    // G_DN_cav - Direct normal after glazing losses
+    Real G_DN_cav = ics_envelopecassette1.glazingLossesOuter.SurfDirNor;
+
+    // G_DN_mod - Direct normal after glazing and shading losses
+    Real G_DN_mod = ics_envelopecassette1.glazingLossesOuter.SurfDirNor * Shade;
+
+    // G_DN_cell - Direct normal irradiance after lens optical losses, without concentration factor
+    Real G_DN_cell = ics_envelopecassette1.ics_stack[1].ICS_Module_Twelve_1[5].ics_lenslosses1.G_DN_cell;
+
     //
     Real elevationAngle = 90 * 3.14159 / 180 - BuildingLatitude + ics_context1.Declination;
     //Real GHI_module = ics_context1.GHI * Modelica.Math.sin(elevationAngle + 90 * 3.14159 / 180 - ArrayTilt) / Modelica.Math.sin(elevationAngle) * GlassArea * Modelica.Math.cos(ics_context1.AOI);
@@ -765,6 +775,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       Modelica.Blocks.Interfaces.IntegerInput FMat "Integer describing lens material and selecting tran losses equation accordingly" annotation(Placement(visible = false, transformation(origin = {-100,-80}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {-100,-80}, extent = {{-10,-10},{10,10}}, rotation = 0)));
       Real ModuleDepth = LensWidth * sqrt(2) * FNum;
       Real LensTrans "Lens transmittance variable";
+      Real G_DN_cell "Direct Normal Irradiance after optical losses without concentration factor";
       Modelica.Blocks.Interfaces.RealOutput DNI_out "Output DNI after Lens manipulation (including concentration)" annotation(Placement(visible = true, transformation(origin = {100,40}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {100,40}, extent = {{-10,-10},{10,10}}, rotation = 0)));
       Modelica.Blocks.Interfaces.RealOutput ConcentrationFactor = LensWidth ^ 2 / CellWidth ^ 2 "Concentration Factor determined from area of Lens in relation to area of Cell" annotation(Placement(visible = true, transformation(origin = {100,0}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {100,0}, extent = {{-10,-10},{10,10}}, rotation = 0)));
     equation
@@ -774,6 +785,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
         LensTrans = ((-104.17 * FNum ^ 3) + 171.43 * FNum ^ 2 - 40.744 * FNum + 57.236) / 100;
       end if;
       DNI_out = DNI_in * LensTrans * ConcentrationFactor "Calculating DNI after Lens Transmission Losses and Lens Concentration";
+      G_DN_cell = DNI_in * LensTrans;
     end ICS_Lens;
     model ICS_PVPerformance "This model uses the EIPC (based on cell area) and PVEfficiency (based on ConcentrationFactor) to calculate the ElectricalGen and ThermalGen"
       extends ICSolar.Parameters;
@@ -812,16 +824,18 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       Modelica.Blocks.Interfaces.RealOutput DNI_out annotation(Placement(visible = true, transformation(origin = {100,40}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {100,40}, extent = {{-10,-10},{10,10}}, rotation = 0)));
       Modelica.Blocks.Interfaces.RealOutput ConcentrationFactor = LensWidth ^ 2 / CellWidth ^ 2 annotation(Placement(visible = true, transformation(origin = {100,-40}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {100,-60}, extent = {{-10,-10},{10,10}}, rotation = 0)));
       Modelica.Blocks.Interfaces.RealInput DNI_in annotation(Placement(visible = true, transformation(origin = {-100,0}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {-100,60}, extent = {{-10,-10},{10,10}}, rotation = 0)));
+      Real G_DN_cell "Direct Normal Irradiance after optical losses without concentration factor";
     equation
       DNI_out = DNI_in * Eff_Optic * ConcentrationFactor;
+      G_DN_cell = DNI_in * LensTrans;
       annotation(Documentation(info = "<HTML>
-                                                                                                                                                                                       <p><b> Tramission losses associated with the lens / optic elements. Ratio of power on the cell to power on the entry aperture.</b></p>
+       <p><b> Tramission losses associated with the lens / optic elements. Ratio of power on the cell to power on the entry aperture.</b></p>
 
-                                                                                                                                                                                       <p>Optical efficiency from LBI Benitez <b>High performance Fresnel-based photovoltaic concentrator</b> where Eff_Opt(F#). Assuming anti-reflective coating on secondary optic element (SOE), current Gen8 module design Eff_Opt(0.84) = 88.2%</p> 
+       <p>Optical efficiency from LBI Benitez <b>High performance Fresnel-based photovoltaic concentrator</b> where Eff_Opt(F#). Assuming anti-reflective coating on secondary optic element (SOE), current Gen8 module design Eff_Opt(0.84) = 88.2%</p> 
 
-                                                                                                                                                                                       <b>More Information:</b>
-                                                                                                                                                                                       <p> The F-number for a Fresnal-Köhler lens is the ratio of the distance between cell and Fresenel lens to the diagonal measurement of the front lens. The concentrator optical efficiency is defined as the ratio of power on the cell to the power on the entry aperture when the sun is exactly on-axis.</p>
-                                                                                                                                                                                       </HTML>"), Icon(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2,2}), graphics = {Text(origin = {0.694127,36.2079}, extent = {{-72.52,54.46},{72.52,-54.46}}, textString = "Lens Losses")}));
+       <b>More Information:</b>
+       <p> The F-number for a Fresnal-Köhler lens is the ratio of the distance between cell and Fresenel lens to the diagonal measurement of the front lens. The concentrator optical efficiency is defined as the ratio of power on the cell to the power on the entry aperture when the sun is exactly on-axis.</p>
+       </HTML>"), Icon(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2,2}), graphics = {Text(origin = {0.694127,36.2079}, extent = {{-72.52,54.46},{72.52,-54.46}}, textString = "Lens Losses")}));
     end ICS_LensLosses;
     model chooseShadeMatrix "based on a module's position in an array, choose it's shading matrix. Two modes of operation, based on the value of the isStudioExperiment boolean flag in Parameters"
       //  extends ICSolar.Envelope.ICS_EnvelopeCassette;
