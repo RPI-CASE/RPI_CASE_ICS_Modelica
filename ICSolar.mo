@@ -60,10 +60,10 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     // m_dot*cp*(T2 - T1 - Tamb*ln(T2/T1))
     // note "log" in OMedit is the natural log.  "log10" is log base 10 in OM
     Real Tref_ex = ics_context1.TWetBul + 2;
-    Real Ex_arrayTotal = Egen_arrayTotal + ics_envelopecassette1.flowport_a.m_flow * mediumHTF.cp * (temp_flowport_b - temp_flowport_a - Tref_ex * log(temp_flowport_b / temp_flowport_a));
+    Real Ex_arrayTotal_temp = Egen_arrayTotal + ics_envelopecassette1.flowport_a.m_flow * mediumHTF.cp * (temp_flowport_b - temp_flowport_a - Tref_ex * log(temp_flowport_b / temp_flowport_a));
+    Real Ex_arrayTotal = if Ex_arrayTotal_temp < 0 then 0 else Ex_arrayTotal_temp;
     //epsilon = the Exergenic efficiency (~93% for sunlight)
-    Real Ex_epsilon = Ex_arrayTotal / (ics_context1.IncidentSolar * 0.93);
-    Real Ex_epsilon_GHI = Ex_arrayTotal / (GHI_module * 0.93);
+    //Real Ex_epsilon_GHI = Ex_arrayTotal / (GHI_module * 0.93);
     ////////////////////////
     /// Init. Components ///
     ////////////////////////
@@ -77,11 +77,25 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     Modelica.Blocks.Sources.Constant inletTempConst(k = inletTemp) annotation(Placement(visible = true, transformation(origin = {-160,-40}, extent = {{-10,-10},{10,10}}, rotation = 0)));
     Modelica.Blocks.Sources.Constant PumpFlowRate(k = AllBranchesFlow) annotation(Placement(visible = true, transformation(origin = {-160,0}, extent = {{-10,-10},{10,10}}, rotation = 0)));
     Modelica.Blocks.Sources.CombiTimeTable IC_Data_all(tableOnFile = true, fileName = Path + "20150323\\measuredData20150323r1.txt", tableName = "DNI_THTFin_vdot", nout = 24, columns = {2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25}) annotation(Placement(visible = true, transformation(origin = {-120,-80}, extent = {{-15,-15},{15,15}}, rotation = 0)));
-    Real eta_E = if G_DN <= 1.0 then 0 else Egen_arrayTotal / (ics_context1.IncidentSolar * GlassArea);
-    Real G_DN = ics_context1.DNI * GlassArea * Modelica.Math.cos(ics_context1.AOI);
-    Real eta_Q = if G_DN <= 1.0 then 0 else Q_arrayTotal / (ics_context1.IncidentSolar * GlassArea);
+    // G_DN_ext_cos - Direct Normal on Exterior with Cosine Losses
+    Real G_DN_ext_cos = ics_context1.DNI * GlassArea * Modelica.Math.cos(ics_context1.AOI);
+    Real eta_E_G_cos = if G_DN_ext_cos <= 1.0 then 0 else Egen_arrayTotal / G_DN_ext_cos;
+    Real eta_Q_G_cos = if G_DN_ext_cos <= 1.0 then 0 else Q_arrayTotal / G_DN_ext_cos;
+    Real Ex_epsilon_G_cos = Ex_arrayTotal / (G_DN_ext_cos * 0.93);
+
+    // G_DN_ext - Direct Normal on Exterior without cosine losses
+    Real G_DN_ext = ics_context1.DNI * GlassArea;
+    Real eta_E_G = if G_DN_ext_cos <= 1.0 then 0 else Egen_arrayTotal / G_DN_ext;
+    Real eta_Q_G = if G_DN_ext_cos <= 1.0 then 0 else Q_arrayTotal / G_DN_ext;
+    Real Ex_epsilon_G = Ex_arrayTotal / (G_DN_ext * 0.93);
+
+    // I_hemi - Incident solar radiation
+    Real eta_E = if G_DN_ext_cos <= 1.0 then 0 else Egen_arrayTotal / (ics_context1.IncidentSolar * GlassArea);
+    Real eta_Q = if G_DN_ext_cos <= 1.0 then 0 else Q_arrayTotal / (ics_context1.IncidentSolar * GlassArea);
+    Real Ex_epsilon = Ex_arrayTotal / (ics_context1.IncidentSolar * 0.93 * GlassArea);
+    //
     Real elevationAngle = 90 * 3.14159 / 180 - BuildingLatitude + ics_context1.Declination;
-    Real GHI_module = ics_context1.GHI * Modelica.Math.sin(elevationAngle + 90 * 3.14159 / 180 - ArrayTilt) / Modelica.Math.sin(elevationAngle) * GlassArea * Modelica.Math.cos(ics_context1.AOI);
+    //Real GHI_module = ics_context1.GHI * Modelica.Math.sin(elevationAngle + 90 * 3.14159 / 180 - ArrayTilt) / Modelica.Math.sin(elevationAngle) * GlassArea * Modelica.Math.cos(ics_context1.AOI);
   equation
     connect(inletTempConst.y,Source.ambientTemperature) annotation(Line(points = {{-149,-40},{-94.452,-40},{-94.452,-33.0176},{-70.636,-33.0176},{-70.636,-33.0176}}, color = {0,0,127}));
     connect(PumpFlowRate.y,Pump.volumeFlow) annotation(Line(points = {{-149,0},{-19.7564,0},{-19.7564,-29.77},{-19.7564,-29.77}}, color = {0,0,127}));
@@ -1170,10 +1184,10 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     //parameter String Date = "20150220\\";
     //need to change path here to compile, also where path_2 shows up:
     // C:\Users\Kenton\Documents\GitHub\RPI_CASE_ICS_Modelica
-    constant String Path = "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\";
+    //constant String Path = "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\";
     //parameter String Path = "C:\\Users\\Kenton\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\";
     //constant String Path = "C:\\Users\\Nick\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\";
-    //constant String Path = "C:\\Users\\Justin\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\";
+    constant String Path = "C:\\Users\\Justin\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\";
     //    parameter String Path = "C:\\Users\\Nicholas.Novelli\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\";
     //________________________________
     //////// MODEL OPERATION /////////
@@ -1532,8 +1546,8 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
   end ShadingLUT0;
   model shadingImport
     //   parameter String Path_2 = "C:\\Users\\Kenton\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\shading_matrices\\";
-    //parameter String Path_2 = "C:\\Users\\Justin\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\shading_matrices\\";
-    parameter String Path_2 = "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\shading_matrices\\";
+    constant String Path_2 = "C:\\Users\\Justin\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\shading_matrices\\";
+    //parameter String Path_2 = "C:\\Users\\kenton.phillips\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\shading_matrices\\";
     //    parameter String Path_2 = "C:\\Users\\Nicholas.Novelli\\Documents\\GitHub\\RPI_CASE_ICS_Modelica\\shading_matrices\\";
     Modelica.Blocks.Tables.CombiTable2D modShadingLUT_1(tableOnFile = true, fileName = Path_2 + "1" + ".txt", tableName = "shading_matrix", smoothness = Modelica.Blocks.Types.Smoothness.LinearSegments);
     Modelica.Blocks.Tables.CombiTable2D modShadingLUT_2(tableOnFile = true, fileName = Path_2 + "2" + ".txt", tableName = "shading_matrix", smoothness = Modelica.Blocks.Types.Smoothness.LinearSegments);
