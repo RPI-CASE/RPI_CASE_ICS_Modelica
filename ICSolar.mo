@@ -10,7 +10,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     /////////////////////
     // DNI, T inlet, vFlow...and then aaaalll the T ins and outs. Total situational awareness. good for tuning both
     //module behavior and whole-array behavior
-    // Real measured_DNI = IC_Data_all.y[1];
+    Real measured_DNI = IC_Data_all.y[1];
     // Real measured_T_HTFin = IC_Data_all.y[2];
     // Real measured_vFlow = IC_Data_all.y[3];
     // Real measured_Egen = IC_Data_all.y[4];
@@ -827,7 +827,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       Real G_DN_cell "Direct Normal Irradiance after optical losses without concentration factor";
     equation
       DNI_out = DNI_in * Eff_Optic * ConcentrationFactor;
-      G_DN_cell = DNI_in * LensTrans;
+      G_DN_cell = DNI_in * Eff_Optic;
       annotation(Documentation(info = "<HTML>
        <p><b> Tramission losses associated with the lens / optic elements. Ratio of power on the cell to power on the entry aperture.</b></p>
 
@@ -1206,7 +1206,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     //________________________________
     //////// MODEL OPERATION /////////
     //--------------------------------
-    parameter Boolean isStudioExperiment = true "True if this run is referring to the gen8 studio experiment. For now, just search through the code for the variable name and flip things where necessary";
+    parameter Boolean isStudioExperiment = false "True if this run is referring to the gen8 studio experiment. For now, just search through the code for the variable name and flip things where necessary";
     /*off hand, that's 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 numOfStacks
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 StackHeight
