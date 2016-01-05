@@ -47,6 +47,8 @@ Archive/Modelica Scirpting/ICSolar.ICS_Skeleton_res.mat
 ./Archive/Modelica\ Scirpting/ICSolar.ICS_Skeleton*
 Archive/"Modelica Scirpting"/ICSolar.ICS_Skeleton*
 Archive/Modelica Scirpting/ICSolar.ICS_Skeleton*
+Archive/Modelica Scirpting/*.mat
 
 *.c
 *.o
+
