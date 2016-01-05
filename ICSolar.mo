@@ -418,7 +418,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       Modelica.Thermal.FluidHeatFlow.Interfaces.FlowPort_b flowport_b(medium = mediumHTF) "Thermal fluid outflow port, after heat exchange" annotation(Placement(visible = true, transformation(origin = {100,-20}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {100,0}, extent = {{-10,-10},{10,10}}, rotation = 0)));
       Modelica.Thermal.HeatTransfer.Sources.FixedTemperature T_indoors(T = Temp_Indoor) annotation(Placement(visible = true, transformation(origin = {-20,60}, extent = {{-10,-10},{10,10}}, rotation = 0)));
       ICSolar.Envelope.CavityHeatBalance cavityheatbalance1 annotation(Placement(visible = true, transformation(origin = {20,60}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-      ICSolar.Envelope.GlazingTransmittance_ETFE glazingLossesOuter annotation(Placement(visible = true, transformation(origin = {-60,60}, extent = {{-15,-15},{15,15}}, rotation = 0)));
+      ICSolar.Envelope.GlazingTransmittance glazingLossesOuter annotation(Placement(visible = true, transformation(origin = {-60,60}, extent = {{-15,-15},{15,15}}, rotation = 0)));
       ICSolar.Envelope.RotationMatrixForSphericalCood rotationmatrixforsphericalcood1 annotation(Placement(visible = true, transformation(origin = {-60,-20}, extent = {{-10,-10},{10,10}}, rotation = 0)));
       constant Real GND = 0 annotation(Placement(visible = true, transformation(origin = {-40,0}, extent = {{-25,-25},{25,25}}, rotation = 0)));
       ICSolar.Stack.ICS_Stack_Twelve ics_stack[NumOfStacks] annotation(Placement(visible = true, transformation(origin = {40,0}, extent = {{-25,-25},{25,25}}, rotation = 0)));
@@ -465,6 +465,43 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       //thermal balance
       connect(T_indoors.port,cavityheatbalance1.Interior) annotation(Line(points = {{-10,60},{-1.48368,60},{-1.48368,55.7864},{10,55.7864},{10,56}}));
     end ICS_EnvelopeCassette_Twelve;
+    model GlazingTransmittance
+      // NO LONGER USES EXTEND ICSolar.Parameters BECAUSE VARIABLE OVERLAP
+      input Real IncidentSolar (start=0.0);
+      Real IncidentSolar_cav (start=0.0, min=0.0);
+      //Using Schlick's approximation to get glazing transmittance
+      Integer n_lites = 1 "number of lites in glazing unit. for Studio =2. for projected =1 (isStudioExperiment=false)";
+      Real x_lite = 6 "thickness of lite (mm). for studio =3. for projected =6 (isStudioExperiment=true)";
+      parameter Real R_sfc = 1e-005 "surface soiling coefficient. if isStudioExperiment=true then 0.030 else .00001 (don't like to use zero, generally)";
+      parameter Real c_disp = 0.0075 "coeff. dispersion. for Ultrawhite =0.0075. for studio = 0.0221(isStudioExperiment = false)";
+      constant Real n_air = 1.0 "optical index, air";
+      constant Real n_glass = 1.53 "optical index, glass";
+      constant Real R_o = ((n_air - n_glass) / (n_air + n_glass)) ^ 2 "normal reflection (Snell's)";
+      Real R_Fres (start=0.0, max=1.0, min=0.0) "for Schlick's approximation";
+      Modelica.Blocks.Interfaces.RealOutput Trans_glaz_transient "momentary transmittance of exterior glazing" annotation(Placement(visible = true, transformation(origin = {100,-20}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {100,20}, extent = {{-10,-10},{10,10}}, rotation = 0)));
+      Modelica.Blocks.Interfaces.RealOutput SurfDirNor "Surface direct normal solar irradiance" annotation(Placement(visible = true, transformation(origin = {100,20}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {100,20}, extent = {{-10,-10},{10,10}}, rotation = 0)));
+      Modelica.Blocks.Interfaces.RealInput AOI "Angle of incidence" annotation(Placement(visible = true, transformation(origin = {-100,-60}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {-100,-60}, extent = {{-10,-10},{10,10}}, rotation = 0)));
+      Modelica.Blocks.Interfaces.RealInput DNI "Direct normal irradiance" annotation(Placement(visible = true, transformation(origin = {-100,20}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {-100,60}, extent = {{-10,-10},{10,10}}, rotation = 0)));
+      Real Trans_glazinglosses_Schlick (start=0.0, min=0.0, max=1.0) "glazing transmittance vs AOI";
+    equation
+      R_Fres = R_o + (1 - R_o) * (1 - cos(AOI)) ^ 5;
+      Trans_glazinglosses_Schlick = if (1 - R_sfc / cos(AOI)) * ((1 - c_disp * x_lite / cos(AOI)) * (1 - 2 * R_Fres / (1 + R_Fres))) ^ n_lites < 0 then 0 else (1 - R_sfc / cos(AOI)) * ((1 - c_disp * x_lite / cos(AOI)) * (1 - 2 * R_Fres / (1 + R_Fres))) ^ n_lites;
+      //if AOI <= 1.570795 then
+      //  SurfDirNor = DNI * Trans_glazinglosses_Schlick;
+      //  IncidentSolar_cav = IncidentSolar * Trans_glazinglosses_Schlick;
+      //else
+      //  SurfDirNor = 0;
+      //  IncidentSolar_cav = 0;
+      //end if;
+      SurfDirNor = DNI * Trans_glazinglosses_Schlick;
+      IncidentSolar_cav = IncidentSolar * Trans_glazinglosses_Schlick;
+      if DNI > 0 then
+        Trans_glaz_transient = SurfDirNor / DNI;
+      else
+        Trans_glaz_transient = Trans_glazinglosses_Schlick;
+      end if;
+      annotation(Icon(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2,2})), Diagram(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2,2})));
+    end GlazingTransmittance;
     model GlazingTransmittance_ETFE
       // NO LONGER USES EXTEND ICSolar.Parameters BECAUSE VARIABLE OVERLAP
       input Real IncidentSolar;
