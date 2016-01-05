@@ -6,6 +6,15 @@
 cd 'C:\Users\Justin\Documents\GitHub\RPI_CASE_ICS_Modelica\Archive\Modelica Scirpting'
 
 %SOUTH
+%Roof tilted 60 degrees (0 being vertical)
+display('South, 60 degrees')
+win_om_path = 'C:\OpenModelica1.9.1Beta2\bin\';
+system([win_om_path,'omc.exe +d=failtrace +s simulate-ICSolar_S60.mos.']);
+omimport('ICSolar.ICS_Skeleton');
+save('NYC_S60Tilt.mat');
+
+clear all
+
 %South, Vertical
 display('South, vertical')
 win_om_path = 'C:\OpenModelica1.9.1Beta2\bin\';
@@ -35,14 +44,6 @@ save('NYC_S45Tilt.mat');
 
 clear all
 
-%Roof tilted 60 degrees (0 being vertical)
-display('South, 60 degrees')
-win_om_path = 'C:\OpenModelica1.9.1Beta2\bin\';
-system([win_om_path,'omc.exe +d=failtrace +s simulate-ICSolar_S60.mos.']);
-omimport('ICSolar.ICS_Skeleton');
-save('NYC_S60Tilt.mat');
-
-clear all
 
 %Roof Horizontal
 display('South, Horizontal')

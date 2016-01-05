@@ -79,34 +79,51 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     Modelica.Blocks.Sources.CombiTimeTable IC_Data_all(tableOnFile = true, fileName = Path + "20150323\\measuredData20150323r1.txt", tableName = "DNI_THTFin_vdot", nout = 24, columns = {2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25}) annotation(Placement(visible = true, transformation(origin = {-120,-80}, extent = {{-15,-15},{15,15}}, rotation = 0)));
     // G_DN_ext_cos - Direct Normal on Exterior with Cosine Losses
     Real G_DN_ext_cos = ics_context1.DNI * Modelica.Math.cos(ics_context1.AOI);
-    Real eta_E_G_cos = if G_DN_ext_cos <= 1.0 then 0 else Egen_arrayTotal / (G_DN_ext_cos*GlassArea);
-    Real eta_Q_G_cos = if G_DN_ext_cos <= 1.0 then 0 else Q_arrayTotal / (G_DN_ext_cos*GlassArea);
+    Real eta_E_G_cos = if G_DN_ext_cos <= 10.0 then 0 else Egen_arrayTotal / (G_DN_ext_cos*GlassArea);
+    Real eta_Q_G_cos = if G_DN_ext_cos <= 10.0 then 0 else Q_arrayTotal / (G_DN_ext_cos*GlassArea);
     Real Ex_epsilon_G_cos = Ex_arrayTotal / (G_DN_ext_cos * 0.93);
 
     // G_DN_ext - Direct Normal on Exterior without cosine losses
     Real G_DN_ext = ics_context1.DNI;
-    Real eta_E_G = if G_DN_ext_cos <= 1.0 then 0 else Egen_arrayTotal / (G_DN_ext*GlassArea);
-    Real eta_Q_G = if G_DN_ext_cos <= 1.0 then 0 else Q_arrayTotal / (G_DN_ext*GlassArea);
-    Real Ex_epsilon_G = Ex_arrayTotal / (G_DN_ext * 0.93);
+    Real eta_E_G = if G_DN_ext_cos <= 10.0 then 0 else Egen_arrayTotal / (G_DN_ext*GlassArea);
+    Real eta_Q_G = if G_DN_ext_cos <= 10.0 then 0 else Q_arrayTotal / (G_DN_ext*GlassArea);
+    Real Ex_epsilon_G = Ex_arrayTotal / (G_DN_ext * 0.93*GlassArea);
 
     // I_hemi - Incident solar radiation
-    Real eta_E = if G_DN_ext_cos <= 1.0 then 0 else Egen_arrayTotal / (ics_context1.IncidentSolar * GlassArea);
-    Real eta_Q = if G_DN_ext_cos <= 1.0 then 0 else Q_arrayTotal / (ics_context1.IncidentSolar * GlassArea);
-    Real Ex_epsilon = Ex_arrayTotal / (ics_context1.IncidentSolar * 0.93 * GlassArea);
+    Real I_hemi = ics_context1.IncidentSolar;
+    Real eta_E = if I_hemi <= 10.0 then 0 else Egen_arrayTotal / (I_hemi * GlassArea);
+    Real eta_Q = if I_hemi <= 10.0 then 0 else Q_arrayTotal / (I_hemi * GlassArea);
+    Real Ex_epsilon = if I_hemi <= 10.0 then 0 else Ex_arrayTotal / (I_hemi * 0.93*GlassArea);
+
+    // I_cav - Incident solar raidation after glazing losses
+    Real I_cav = ics_envelopecassette1.glazingLossesOuter.IncidentSolar_cav;
+    Real eta_E_cav = if I_cav <= 10.0 then 0 else Egen_arrayTotal / (I_cav * GlassArea);
+    Real eta_Q_cav = if I_cav <= 10.0 then 0 else Q_arrayTotal / (I_cav * GlassArea);
+    Real Ex_epsilon_cav = if I_cav <= 10.0 then 0 else Ex_arrayTotal / (I_cav * 0.93*GlassArea);    
 
     // G_DN_cav - Direct normal after glazing losses
     Real G_DN_cav = ics_envelopecassette1.glazingLossesOuter.SurfDirNor;
+    Real eta_E_G_cav = if G_DN_cav <= 10.0 then 0 else Egen_arrayTotal / (G_DN_cav*GlassArea);
+    Real eta_Q_G_cav = if G_DN_cav <= 10.0 then 0 else Q_arrayTotal / (G_DN_cav*GlassArea);
+    Real Ex_epsilon_G_cav = if G_DN_cav <= 10.0 then 0 else Ex_arrayTotal / (G_DN_cav * 0.93*GlassArea);
 
     // G_DN_mod - Direct normal after glazing and shading losses
     Real G_DN_mod = ics_envelopecassette1.glazingLossesOuter.SurfDirNor * Shade;
+    Real eta_E_G_mod = if G_DN_mod <= 10.0 then 0 else Egen_arrayTotal / (G_DN_mod*GlassArea);
+    Real eta_Q_G_mod = if G_DN_mod <= 10.0 then 0 else Q_arrayTotal / (G_DN_mod*GlassArea);
+    Real Ex_epsilon_G_mod = if G_DN_mod <= 10.0 then 0 else Ex_arrayTotal / (G_DN_mod * 0.93*GlassArea);
 
     // G_DN_cell - Direct normal irradiance after lens optical losses, without concentration factor
     Real G_DN_cell = ics_envelopecassette1.ics_stack[1].ICS_Module_Twelve_1[5].ics_lenslosses1.G_DN_cell;
+    Real eta_E_G_cell = if G_DN_cell <= 10.0 then 0 else Egen_arrayTotal / (G_DN_cell*GlassArea);
+    Real eta_Q_G_cell = if G_DN_cell <= 10.0 then 0 else Q_arrayTotal / (G_DN_cell*GlassArea);
+    Real Ex_epsilon_G_cell = if G_DN_cell <= 10.0 then 0 else Ex_arrayTotal / (G_DN_cell * 0.93*GlassArea);
 
     //
     Real elevationAngle = 90 * 3.14159 / 180 - BuildingLatitude + ics_context1.Declination;
     //Real GHI_module = ics_context1.GHI * Modelica.Math.sin(elevationAngle + 90 * 3.14159 / 180 - ArrayTilt) / Modelica.Math.sin(elevationAngle) * GlassArea * Modelica.Math.cos(ics_context1.AOI);
   equation
+    connect(ics_context1.IncidentSolar,ics_envelopecassette1.IncidentSolar);
     connect(inletTempConst.y,Source.ambientTemperature) annotation(Line(points = {{-149,-40},{-94.452,-40},{-94.452,-33.0176},{-70.636,-33.0176},{-70.636,-33.0176}}, color = {0,0,127}));
     connect(PumpFlowRate.y,Pump.volumeFlow) annotation(Line(points = {{-149,0},{-19.7564,0},{-19.7564,-29.77},{-19.7564,-29.77}}, color = {0,0,127}));
     //set the HTF temperature according to measured data
@@ -384,6 +401,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       extends ICSolar.Parameters;
       Real EPC = ics_stack[1].EPC;
       Real Shade = ics_stack[1].Shade;
+      input Real IncidentSolar;
       /// Redundant but here to true model
       //  Modelica.Blocks.Sources.CombiTimeTable IC_Data_all(tableOnFile = true, fileName = Path + "20150323\\ICSFdata_DLS.txt", tableName = "DNI_THTFin_vdot", nout = 3, columns = {2, 3, 4}) annotation(Placement(visible = true, transformation(origin = {-80, 0}, extent = {{-15, -15}, {15, 15}}, rotation = 0)));
       //
@@ -416,6 +434,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       ics_stack[1].Power_in = 0;
       for i in 1:NumOfStacks loop
       connect(glazingLossesOuter.SurfDirNor,ics_stack[i].DNI);
+      connect(IncidentSolar, glazingLossesOuter.IncidentSolar);
       connect(ics_stack[i].flowport_a1,flowport_a);
       ics_stack[i].stackNum = i;
       connect(rotationmatrixforsphericalcood1.arrayYaw,ics_stack[i].arrayYaw);
@@ -448,6 +467,8 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     end ICS_EnvelopeCassette_Twelve;
     model GlazingTransmittance_ETFE
       // NO LONGER USES EXTEND ICSolar.Parameters BECAUSE VARIABLE OVERLAP
+      input Real IncidentSolar;
+      Real IncidentSolar_cav;
       Integer n_lites = 1 "One layer";
       Real x_lite = 0.1 "[mm] ETFE is much thinner than class";
       Real R_sfc = 1e-005 "Surface spoil coefficient";
@@ -464,8 +485,10 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
     equation
       if AOI <= 1.570795 then
         SurfDirNor = DNI * Trans_glazinglosses_Schlick;
+        IncidentSolar_cav = IncidentSolar * Trans_glazinglosses_Schlick;
       else
         SurfDirNor = 0;
+        IncidentSolar_cav = 0;
       end if;
       if DNI > 0 then
         Trans_glaz_transient = SurfDirNor / DNI;
