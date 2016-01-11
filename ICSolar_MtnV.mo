@@ -241,7 +241,7 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       Modelica.Thermal.FluidHeatFlow.Interfaces.FlowPort_b flowport_b(medium = mediumHTF) "Thermal fluid outflow port, after heat exchange" annotation(Placement(visible = true, transformation(origin = {100,-20}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {100,0}, extent = {{-10,-10},{10,10}}, rotation = 0)));
       Modelica.Thermal.HeatTransfer.Sources.FixedTemperature T_indoors(T = Temp_Indoor) annotation(Placement(visible = true, transformation(origin = {-20,60}, extent = {{-10,-10},{10,10}}, rotation = 0)));
       ICSolar.Envelope.CavityHeatBalance cavityheatbalance1 annotation(Placement(visible = true, transformation(origin = {20,60}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-      ICSolar.Envelope.GlazingTransmittance glazingLossesOuter annotation(Placement(visible = true, transformation(origin = {-60,60}, extent = {{-15,-15},{15,15}}, rotation = 0)));
+      ICSolar.Envelope.GlazingTransmittance_ETFE glazingLossesOuter annotation(Placement(visible = true, transformation(origin = {-60,60}, extent = {{-15,-15},{15,15}}, rotation = 0)));
       ICSolar.Envelope.RotationMatrixForSphericalCood rotationmatrixforsphericalcood1 annotation(Placement(visible = true, transformation(origin = {-60,-20}, extent = {{-10,-10},{10,10}}, rotation = 0)));
       constant Real GND = 0 annotation(Placement(visible = true, transformation(origin = {-40,0}, extent = {{-25,-25},{25,25}}, rotation = 0)));
       ICSolar.Stack.ICS_Stack_Twelve ics_stack[NumOfStacks] annotation(Placement(visible = true, transformation(origin = {40,0}, extent = {{-25,-25},{25,25}}, rotation = 0)));
