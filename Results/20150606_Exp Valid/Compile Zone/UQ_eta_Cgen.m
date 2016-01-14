@@ -1,4 +1,4 @@
-function [ s_eta_cgen_out ] = UQ_eta_cgen( Qgen_in, s_Qgen_in, Egen_in, Gdn_in)
+function [ eta_cgen_out, s_eta_cgen_out ] = UQ_eta_Cgen( Qgen_in, s_Qgen_in, Egen_in, Gdn_in)
 %UNTITLED4 Summary of this function goes here
 %   Detailed explanation goes here
 
@@ -19,5 +19,7 @@ s_Gdn_in = 10; %With area un. of 1% assumes max error at each point
 
 s_eta_cgen_out = double(s_eta_cgen(Qgen_in,Egen_in,Gdn_in,s_Qgen_in,s_Egen_in,...
     s_Gdn_in));
+eta_cgen_out = double(eta_cgen(Qgen_in,Egen_in,Gdn_in));
+
 end
 

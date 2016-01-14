@@ -42,12 +42,13 @@ axis([50 90 0 0.8]);
 
 
 %% Plot Feb 20th
+
 load('ICSolar.ICS_Skeleton_20_Feb_2015_v5.mat','chi_arrayTotal',...
-    'Ex_epsilon_Cgen_6mods','Start','End','day','measured_T_HTFin',...
+    'Start','End','day','measured_T_HTFin',...
     'measured_T_cavAvg','G_DN_6mods','eta_Cgen_6mods',...
     'measured_eta_Cgen_arrayTotal','measured_Ex_epsilon','measured_Egen_arrayTotal',...
     'measured_Qgen_arrayTotal','measured_vFlow','measured_T_HTFout',...
-    'GN_arrayTotal');
+    'GN_arrayTotal','measured_T_s3m5in','measured_T_s3m3in', 'measured_T_s3m1in')
 
 % Modeled
 Color = Grey;
@@ -55,50 +56,76 @@ Color = Grey;
 % Modeled Extropaltated Ex Epsilon Array total 
 % T_HTFin = [40 50 60 75 85];
 % predict_eps = [0.1425 0.146 0.1477 0.146 0.1425];
-T_HTFin = [350-273 300-273 325-273 375-273];
-predict_eps = [0.1492 0.1414 .152 .1355];
+% T_HTFin = [350-273 300-273 325-273 375-273];
+% predict_eps = [0.1492 0.1414 .152 .1355];
 
-f=fit(T_HTFin',predict_eps','poly2');
-x=0:5:100;
-y=f(x);
-indexmax = find(max(y) == y);
-xmax = x(indexmax);
-ymax = y(indexmax);
-
-plot(x,y,'LineStyle',':',...
-    'DisplayName','Extrapolated Modeled Results',...
-    'Color',Color,...
-    'LineWidth',3);
+% f=fit(T_HTFin',predict_eps','poly2');
+% x=0:5:100;
+% y=f(x);
+% indexmax = find(max(y) == y);
+% xmax = x(indexmax);
+% ymax = y(indexmax);
+% 
+% plot(x,y,'LineStyle',':',...
+%     'DisplayName','Extrapolated Modeled Results',...
+%     'Color',Color,...
+%     'LineWidth',3);
 
 Color = Blueish;
 
-%trimmed obseverd chi and epsilon
-t_o_Gdn = G_DN_6mods(:,Start:End);
-t_o_epsilon = measured_Ex_epsilon(:,Start:End); % assumes Tcav as ref
-t_o_Tin =  measured_T_HTFin(:,Start:End) - 273;
-t_o_Tcav = measured_T_cavAvg(:,Start:End);
-t_s_Tref = (T_ref+273).*ones(1,length(t_o_Tcav));
-t_o_eta = measured_eta_Cgen_arrayTotal(:,Start:End);
-t_o_Egen = measured_Egen_arrayTotal(:,Start:End);
-t_o_Qgen = measured_Qgen_arrayTotal(:,Start:End); 
+%trimmed obseverd 
 t_o_vFlow = measured_vFlow(:,Start:End); 
-t_o_Tout = measured_T_HTFout(:,Start:End) - 273; 
+t_s_Tref = (T_ref+273).*ones(1,length(t_o_vFlow));
 
-%trimmed simulated
-t_s_Gdn = GN_arrayTotal(:,Start:End);
+t_o_Tin =  measured_T_HTFin(:,Start:End) - 273;
+t_o_Ts3m5in = measured_T_s3m5in(:,Start:End) - 273;
+t_o_Ts3m3in = measured_T_s3m3in(:,Start:End) - 273;
+t_o_Ts3m1in = measured_T_s3m1in(:,Start:End) - 273;
 
-s_Qgen = UQ_Qgen(t_o_vFlow,t_o_Tin,t_o_Tout);
-s_eta_Cgen = UQ_eta_Cgen(t_o_Qgen,s_Qgen,t_o_Egen,t_s_Gdn);
-% Returns based on fixed T ref
-[s_ex_epsilon,t_o_epsilon] = UQ_ex_epsilon(t_o_vFlow,t_s_Tref,t_o_Tin,...
-    t_o_Tout,t_o_Egen,t_s_Gdn,0.5);
+t_o_Gdn_mod = G_DN_6mods(:,Start:End)./6;
+t_o_Egen_mod = measured_Egen_arrayTotal(:,Start:End)./6;
+t_o_Gdn_mod23 = G_DN_6mods(:,Start:End)./3;
+t_o_Egen_mod23 = measured_Egen_arrayTotal(:,Start:End)./3;
+ 
+t_o_Qgen6 = 4190 * 974.9 * t_o_vFlow .* (t_o_Ts3m5in - t_o_Tin);
+t_o_Qgen23 = 4190 * 974.9 * t_o_vFlow .* (t_o_Ts3m1in - t_o_Ts3m3in);
+
+t_o_Qgen = t_o_Qgen23 + t_o_Qgen6;
+t_o_Egen = t_o_Egen_mod + t_o_Egen_mod23; 
+
+[s_Qgen_mod6] = UQ_Qgen(t_o_vFlow,t_o_Tin,t_o_Ts3m5in);
+[s_Qgen_mod23] = UQ_Qgen(t_o_vFlow,t_o_Ts3m3in,t_o_Ts3m1in);
+s_Qgen = sqrt( (s_Qgen_mod6).^2 + (s_Qgen_mod23).^2);
+
+[t_o_eta_Cgen6, s_eta_Cgen_mod6] = UQ_eta_Cgen(t_o_Qgen6,s_Qgen_mod6,...
+    t_o_Egen_mod,t_o_Gdn_mod);
+[t_o_eta_Cgen23, s_eta_Cgen_mod23] = UQ_eta_Cgen(t_o_Qgen23,s_Qgen_mod23,...
+    t_o_Egen_mod23,t_o_Gdn_mod23);
+
+s_eta_Cgen = sqrt((2/3)^2.*(s_eta_Cgen_mod23).^2 + (1/3)^2.*(s_eta_Cgen_mod6).^2);
+t_o_eta_Cgen = (2/3)*t_o_eta_Cgen23 + (1/3)*t_o_eta_Cgen6;
+
+
+[s_ex_epsilon_mod6,t_o_epsilon_mod6] = UQ_ex_epsilon(...
+    t_o_vFlow,t_s_Tref,t_o_Tin,t_o_Ts3m5in,t_o_Egen_mod,t_o_Gdn_mod,0.5);
+[s_ex_epsilon_mod23,t_o_epsilon_mod23] = UQ_ex_epsilon(...
+    t_o_vFlow,t_s_Tref,t_o_Ts3m3in,t_o_Ts3m1in,t_o_Egen_mod23,t_o_Gdn_mod23,0.5);
+
+
+s_ex_epsilon =  sqrt( ((1/3)^2).* s_ex_epsilon_mod6.^2  + ((2/3)^2).* s_ex_epsilon_mod23.^2);
+
+t_o_epsilon = (t_o_epsilon_mod6 + 2.*t_o_epsilon_mod23 )./3;
+
+
 %error = 0.03.*ones(length(t_o_Tin(1:nthElement:end)'),1);
 error_eta = s_eta_Cgen(1:nthElement:end);
 error_ex = s_ex_epsilon(1:nthElement:end);
 
+error_eta_mod23 = s_eta_Cgen_mod23(1:nthElement:end);
+error_ex_mod23 = s_ex_epsilon_mod23(1:nthElement:end);
 
 %add the zero point
-f=fit(t_o_Tin',t_o_eta','poly1');
+f=fit(t_o_Tin',t_o_eta_Cgen','poly1');
 x=0:5:100;
 y=f(x);
 
@@ -123,7 +150,7 @@ errorbar(t_o_Tin(1:nthElement:end)',t_o_epsilon(1:nthElement:end)',error_ex,...
 %     'MarkerEdgeColor',Color,...
 %     'DisplayName','20 Feb \eta');
 
-errorbar(t_o_Tin(1:nthElement:end)',t_o_eta(1:nthElement:end)',error_eta,...
+errorbar(t_o_Tin(1:nthElement:end)',t_o_eta_Cgen(1:nthElement:end)',error_eta,...
     'Marker','o',...
     'MarkerSize',8,...
     'LineStyle','none',...

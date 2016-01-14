@@ -20,8 +20,8 @@ rho_in = 974.9;
 s_V_dot_in = (3.5e-06)*0.05;
 s_T1_in = 0.5;
 s_T2_in = 0.5;
-s_cp_in =  cp_in*(1/100);
-s_rho_in = rho_in*(1/100);
+s_cp_in =  cp_in*(1/1000);
+s_rho_in = rho_in*(1/1000);
 
 %Convert symbolic to numeric double
 s1_Qgen = double(s_Q_dot(V_dot_in,cp_in,rho_in,T1_in,T2_in,s_V_dot_in,s_cp_in,...

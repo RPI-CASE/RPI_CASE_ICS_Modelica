@@ -261,7 +261,7 @@ load('ICSolar.ICS_Skeleton_23_Mar_2015_v5.mat','chi_arrayTotal',...
     'measured_Qgen_arrayTotal','measured_vFlow','measured_T_HTFout',...
     'GN_arrayTotal');
 
-nthElement = 120;
+nthElement = 80;
 Color = Redish;
 
 %trimmed obseverd chi and epsilon
