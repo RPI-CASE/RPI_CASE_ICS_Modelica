@@ -748,8 +748,14 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       //##############################################################################
       // parameter Real Eta_Observed = Exp_Observed "From ICSolar.Parameters, observed electrical efficiency of ICSFg8";
       // parameter Real Eta_nom_tweak = Exp_nom_tweak "From ICSolar.Parameters, matching the observed to modeled data, compensating for temperature 'unknown'. 0.364 matches the Nov25-13 data well when eta_observed is 0.215. set same as eta_obs for full-strength output.";
+      //Real CellEfficiency = 0.36436 + (52.5 - (ThermalGen.T - 273.15)) * 0.0005004 + (ConcentrationFactor - 627.5) * 1.9965e-006;
+      Real k_Isc = 0.0013 "Current short circuit efficiency change relative to cell temperature";
+      Real k_Voc = -0.0018 "Voltage open circuit efficiency change relative to cell temperature";
+      Real k_FF = -0.0016 "Fill Factor efficiency change relative to cell temperature";
       Real CellWidth = 0.01 "Width of the PV Cell";
-      Real CellEfficiency = 0.36436 + (52.5 - (ThermalGen.T - 273.15)) * 0.0005004 + (ConcentrationFactor - 627.5) * 1.9965e-006;
+      Real CellEfficiency = 0.42 * (1 + k_Isc * (ThermalGen.T - (273.15 + 22.5))) * (1 + k_Voc * (ThermalGen.T - (273.15 + 22.5))) * (1 + k_FF * (ThermalGen.T - (273.15 + 22.5)));
+      // 0.36436 + (52.5 - (ThermalGen.T - 273.15)) * 0.0005004 + (ConcentrationFactor - 627.5) * 1.9965e-006;
+      //* Exp_Observed / Exp_nom_tweak "Equation to determine the PVEfficiency from the ConcentrationFactor and Cell Temperature";
       //* Exp_Observed / Exp_nom_tweak "Equation to determine the PVEfficiency from the ConcentrationFactor and Cell Temperature";
       Real EIPC "Energy In Per Cell";
       //
