@@ -1,0 +1,20 @@
+- Working on Linux with Matlab / Octave (not tested very well), not tested on Windows at all... 
+- For  omparameter.m to work with the new  xml-fileformat it's important to name parameters, e.g.   parameter Real a = 1 "blabla";
+
+Check out om_mat_example or omparvar
+ 
+
+Files:
+
+Most important:
+
+omcompilerun
+omimport
+omparameter
+omrun
+
+Additional tools:
+
+omcleanup
+om_mat_example
+omparvar

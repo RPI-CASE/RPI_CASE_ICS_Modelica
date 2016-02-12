@@ -1,0 +1,9 @@
+gcc -I"C:/OpenModelica1.9.1//include/omc/c"   -O0 -falign-functions -msse2 -mfpmath=sse   -c -o Buildings_getTimeZoneTMY3_8.o Buildings_getTimeZoneTMY3_8.c
+Buildings_getTimeZoneTMY3_8.c: In function 'boxptr_Buildings_BoundaryConditions_WeatherData_BaseClasses_getHeaderElementTMY3':
+Buildings_getTimeZoneTMY3_8.c:382: warning: return discards qualifiers from pointer target type
+Buildings_getTimeZoneTMY3_8.c: In function 'boxptr_Modelica_Utilities_Strings_substring':
+Buildings_getTimeZoneTMY3_8.c:405: warning: return discards qualifiers from pointer target type
+Buildings_getTimeZoneTMY3_8.c: In function 'boxptr_Modelica_Utilities_Streams_readLine':
+Buildings_getTimeZoneTMY3_8.c:532: warning: return discards qualifiers from pointer target type
+gcc -I"C:/OpenModelica1.9.1//include/omc/c"   -O0 -falign-functions -msse2 -mfpmath=sse   -c -o Buildings_getTimeZoneTMY3_8_records.o Buildings_getTimeZoneTMY3_8_records.c
+g++ -shared -Xlinker --export-all-symbols -o Buildings_getTimeZoneTMY3_8.dll Buildings_getTimeZoneTMY3_8.o Buildings_getTimeZoneTMY3_8_records.o -lModelicaExternalC -I"C:/OpenModelica1.9.1//include/omc/c"   -O0 -falign-functions -msse2 -mfpmath=sse   -L"C:/OpenModelica1.9.1//lib/omc" -Wl,-rpath,'C:/OpenModelica1.9.1//lib/omc'  -lregex -lexpat -lgc -lpthread -fopenmp -loleaut32  -lOpenModelicaRuntimeC -lgc -lexpat -lregex -static-libgcc -luuid -loleaut32 -lole32 -lws2_32 -lsundials_kinsol -lsundials_nvecserial -lipopt -lcoinmumps -lpthread -lm -lgfortranbegin -lgfortran -lmingw32 -lgcc_eh -lmoldname -lmingwex -lmsvcrt -luser32 -lkernel32 -ladvapi32 -lshell32 -llapack-mingw -lcminpack -ltmglib-mingw -lblas-mingw -lf2c -lm

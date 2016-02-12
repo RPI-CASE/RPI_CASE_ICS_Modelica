@@ -1,0 +1,13 @@
+<!DOCTYPE MOProjectXML>
+<MOProject Version="0922496">
+ <Basic name="Test_ICSolar"/>
+ <MoFiles>
+  <MoFile path="C:/Users/Kenton/Documents/GitHub/RPI_CASE_ICS_Modelica/ICSolar.mo"/>
+ </MoFiles>
+ <MmoFiles>
+  <MmoFile path="Models/ICSolar.ICS_Skeleton/ICSolar.ICS_Skeleton.mmo"/>
+ </MmoFiles>
+ <Problems>
+  <Problem path="Problems/Optimization/Optimization.mpb"/>
+ </Problems>
+</MOProject>

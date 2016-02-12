@@ -1,0 +1,26 @@
+cd("C:/Users/Kenton/Desktop/Modelica Scirpting")
+
+runScript("test.mos")
+
+setPlotSilent(false)
+
+
+
+size := readSimulationResultSize("ICSolar.ICS_Skeleton_res.mat")
+A:=readSimulationResult("ICSolar.ICS_Skeleton_res.mat",Egen_arrayTotal,size)
+
+
+
+for i in 1:lengh loop
+  sum := sum + eGen_O[i]
+end for;
+
+
+
+for i in 1:1000 loop
+     k := k + i;
+   end for;
+
+
+loadFile("vect_subtract.mo")
+
