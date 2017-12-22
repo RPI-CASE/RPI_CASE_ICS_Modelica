@@ -43,11 +43,12 @@ axis([50 90 0 0.8]);
 
 %% Plot Feb 20th
 load('ICSolar.ICS_Skeleton_20_Feb_2015_v5.mat','chi_arrayTotal',...
-    'Ex_epsilon_Cgen_6mods','Start','End','day','measured_T_HTFin',...
+    'Start','End','day','measured_T_HTFin',...
     'measured_T_cavAvg','G_DN_6mods','eta_Cgen_6mods',...
     'measured_eta_Cgen_arrayTotal','measured_Ex_epsilon','measured_Egen_arrayTotal',...
     'measured_Qgen_arrayTotal','measured_vFlow','measured_T_HTFout',...
     'GN_arrayTotal');
+% taken out: 'Ex_epsilon_Cgen_6mods',
 
 % Modeled
 Color = Grey;
@@ -59,16 +60,19 @@ T_HTFin = [350-273 300-273 325-273 375-273];
 predict_eps = [0.1492 0.1414 .152 .1355];
 
 %20171222 f=fit(T_HTFin',predict_eps','poly2');
-%20171222 x=0:5:100;
+x = 0:5:100;
 %20171222 y=f(x);
 %20171222 indexmax = find(max(y) == y);
 %20171222 xmax = x(indexmax);
 %20171222 ymax = y(indexmax);
+y = 0:0.1:1;
 
-%20171222 plot(x,y,'LineStyle',':',...
-%20171222     'DisplayName','Extrapolated Modeled Results',...
-%20171222     'Color',Color,...
-%20171222     'LineWidth',3);
+x = -pi:.1:pi;
+y = sin(x);
+plot(x,y)
+
+% plot(x,y,'DisplayName','Extrapolated Modeled Results','Color',Color,'LineWidth',3);
+% taken out: 'LineStyle',':',
 
 Color = Blueish;
 
@@ -87,20 +91,22 @@ t_o_Tout = measured_T_HTFout(:,Start:End) - 273;
 %trimmed simulated
 t_s_Gdn = GN_arrayTotal(:,Start:End);
 
-%20171222 s_Qgen = UQ_Qgen(t_o_vFlow,t_o_Tin,t_o_Tout);
-%20171222 s_eta_Cgen = UQ_eta_Cgen(t_o_Qgen,s_Qgen,t_o_Egen,t_s_Gdn);
+
+%% feb 20 uncertainty
+s_Qgen = UQ_Qgen(t_o_vFlow,t_o_Tin,t_o_Tout);
+s_eta_Cgen = UQ_eta_Cgen(t_o_Qgen,s_Qgen,t_o_Egen,t_s_Gdn);
 % Returns based on fixed T ref
-%20171222 [s_ex_epsilon,t_o_epsilon] = UQ_ex_epsilon(t_o_vFlow,t_s_Tref,t_o_Tin,...
-%20171222     t_o_Tout,t_o_Egen,t_s_Gdn,0.5);
+[s_ex_epsilon,t_o_epsilon] = UQ_ex_epsilon(t_o_vFlow,t_s_Tref,t_o_Tin,...
+    t_o_Tout,t_o_Egen,t_s_Gdn,0.5);
 %error = 0.03.*ones(length(t_o_Tin(1:nthElement:end)'),1);
-%20171222 error_eta = s_eta_Cgen(1:nthElement:end);
-%20171222 error_ex = s_ex_epsilon(1:nthElement:end);
+error_eta = s_eta_Cgen(1:nthElement:end);
+error_ex = s_ex_epsilon(1:nthElement:end);
 
 
 %add the zero point
-%20171222 f=fit(t_o_Tin',t_o_eta','poly1');
-%20171222 x=0:5:100;
-%20171222 y=f(x);
+f=fit(t_o_Tin',t_o_eta','poly1');
+x=0:5:100;
+y=f(x);
 
 
 % plot(x,y,'LineStyle',':',...
@@ -210,8 +216,6 @@ error_eta = s_eta_Cgen([min_eta max_eta])';
 [b,min_ex] = min(t_o_epsilon);
 error_ex = s_ex_epsilon([min_ex max_ex])';
 
-
-
 scatter(t_o_Tin',t_o_epsilon',...
      markerSize,'o',...
     'MarkerFaceColor',Color,...
@@ -241,9 +245,6 @@ errorbar(t_o_Tin([min_ex max_ex])',t_o_epsilon([min_ex max_ex])',error_ex,...
     'MarkerFaceColor',Color,...
     'MarkerEdgeColor',Color,...
     'Marker','square')
-
-
-
 
 x=0:.01:.2;
 y=f(x);

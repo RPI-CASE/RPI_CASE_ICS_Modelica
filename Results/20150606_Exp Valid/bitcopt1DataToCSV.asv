@@ -1,0 +1,6 @@
+%% bitcopt1DataToCSV
+%20171222 exporting to check numbers out of matlab
+csvwrite('bitcopt1data.csv', ...
+    measured_T_HTFin',eta_Cgen_6mods',measured_Qgen_arrayTotal',measured_eta_Cgen_arrayTotal)
+
+%% 
