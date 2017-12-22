@@ -1,9 +1,0 @@
-gcc -I"C:/OpenModelica1.9.1//include/omc/c"   -O0 -falign-functions -msse2 -mfpmath=sse   -c -o Buildings_getLatitudeTMY3_16.o Buildings_getLatitudeTMY3_16.c
-Buildings_getLatitudeTMY3_16.c: In function 'boxptr_Buildings_BoundaryConditions_WeatherData_BaseClasses_getHeaderElementTMY3':
-Buildings_getLatitudeTMY3_16.c:381: warning: return discards qualifiers from pointer target type
-Buildings_getLatitudeTMY3_16.c: In function 'boxptr_Modelica_Utilities_Strings_substring':
-Buildings_getLatitudeTMY3_16.c:404: warning: return discards qualifiers from pointer target type
-Buildings_getLatitudeTMY3_16.c: In function 'boxptr_Modelica_Utilities_Streams_readLine':
-Buildings_getLatitudeTMY3_16.c:531: warning: return discards qualifiers from pointer target type
-gcc -I"C:/OpenModelica1.9.1//include/omc/c"   -O0 -falign-functions -msse2 -mfpmath=sse   -c -o Buildings_getLatitudeTMY3_16_records.o Buildings_getLatitudeTMY3_16_records.c
-g++ -shared -Xlinker --export-all-symbols -o Buildings_getLatitudeTMY3_16.dll Buildings_getLatitudeTMY3_16.o Buildings_getLatitudeTMY3_16_records.o -lModelicaExternalC -I"C:/OpenModelica1.9.1//include/omc/c"   -O0 -falign-functions -msse2 -mfpmath=sse   -L"C:/OpenModelica1.9.1//lib/omc" -Wl,-rpath,'C:/OpenModelica1.9.1//lib/omc'  -lregex -lexpat -lgc -lpthread -fopenmp -loleaut32  -lOpenModelicaRuntimeC -lgc -lexpat -lregex -static-libgcc -luuid -loleaut32 -lole32 -lws2_32 -lsundials_kinsol -lsundials_nvecserial -lipopt -lcoinmumps -lpthread -lm -lgfortranbegin -lgfortran -lmingw32 -lgcc_eh -lmoldname -lmingwex -lmsvcrt -luser32 -lkernel32 -ladvapi32 -lshell32 -llapack-mingw -lcminpack -ltmglib-mingw -lblas-mingw -lf2c -lm

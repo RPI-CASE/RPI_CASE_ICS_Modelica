@@ -568,7 +568,11 @@ package ICSolar "Integrated Concentrating Solar simulation, packaged for hierarc
       Real k_Voc = -0.0018 "Voltage open circuit efficiency change relative to cell temperature";
       Real k_FF = -0.0016 "Fill Factor efficiency change relative to cell temperature";
       Real CellWidth = 0.01 "Width of the PV Cell";
+<<<<<<< HEAD
       Real CellEfficiency = 0.42 * (1 + k_Isc * (ThermalGen.T-(273.15+22.5))) * (1 + k_Voc * (ThermalGen.T-(273.15+22.5))) * (1 + k_FF * (ThermalGen.T-(273.15+22.5)));
+=======
+      Real CellEfficiency = 0.447 * (1 + k_Isc * ThermalGen.T) * (1 + k_Voc * ThermalGen.T) * (1 + k_FF * ThermalGen.T);
+>>>>>>> parent of 267a02c... Updating ETFE files
       // 0.36436 + (52.5 - (ThermalGen.T - 273.15)) * 0.0005004 + (ConcentrationFactor - 627.5) * 1.9965e-006;
       //* Exp_Observed / Exp_nom_tweak "Equation to determine the PVEfficiency from the ConcentrationFactor and Cell Temperature";
       Real EIPC "Energy In Per Cell";
