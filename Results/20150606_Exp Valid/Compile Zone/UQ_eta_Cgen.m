@@ -12,7 +12,7 @@ s_eta_cgen(Qgen,Egen,Gdn,s_Qgen,s_Egen,s_Gdn) = sqrt(...
     diff(eta_cgen,Gdn)^2*s_Gdn^2);
 
 %INIT Uncertainlty values
-s_Egen_in = 0.73;
+s_Egen_in = 0.73; % check BITCOPT1 appendix for value
 %s_Gdn_in = Gdn_in*(5/100);
 %s_Gdn_in = 7.6; %no uncertainity in area
 s_Gdn_in = 10; %With area un. of 1% assumes max error at each point
