@@ -110,7 +110,8 @@ set(legend,'FontName','Arial Narrow');
 
 
 
-filename = strcat(day,' Energy'); 
+%filename = strcat(day,' Energy'); 
+filename = strcat(day,' Energy20180327'); 
 savefig(filename);
 print(filename,'-dpng');
 hold off;

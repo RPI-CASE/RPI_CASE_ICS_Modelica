@@ -13,7 +13,7 @@ T_ref = 20; % (c)
 
 
 
-figure('Color',[1 1 1]);
+ffigure = figure('Color',[1 1 1]);
 hold on;
 
 % title({'\chi vs \epsilon','Measured Total Array'},...

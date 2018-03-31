@@ -85,6 +85,7 @@ legend('eta Qgen','eta Egen','eta Combined','Location','northeast');
 
 
 %% Plot chi vs eta_QGen
+% 20180327 NEN plots experimental data
 hold on;
 
 figure('Color','white')

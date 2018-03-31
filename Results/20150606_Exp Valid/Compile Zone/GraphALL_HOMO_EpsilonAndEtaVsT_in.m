@@ -50,6 +50,7 @@ load('ICSolar.ICS_Skeleton_20_Feb_2015_v5.mat','chi_arrayTotal',...
     'measured_Qgen_arrayTotal','measured_vFlow','measured_T_HTFout',...
     'GN_arrayTotal','measured_T_s3m5in','measured_T_s3m3in', 'measured_T_s3m1in')
 
+Start = 36;
 % Modeled
 Color = Grey;
 
