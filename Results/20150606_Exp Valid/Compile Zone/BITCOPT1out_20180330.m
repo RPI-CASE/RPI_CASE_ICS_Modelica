@@ -32,4 +32,17 @@ ylabel('\eta_{(cogen, homo)}',...
 
 % plot20180330 = scatter(out_reassembled(1,:),out_reassembled(2,:))
 
+%% generate output values
+% efficiencies at 58C and 80C
+% Cgen, Egen, Qgen
+% determined by averaging all the datapoints at 58 and 80C (~10 each)
+out_eta_Cgen_at58C = 0.433
+out_eta_Cgen_at80C = 0.365
+
+out_eta_Egen_at58C = 0.201
+out_eta_Egen_at80C = 0.194
+
+out_eta_Qgen_at58C = 0.2323
+out_eta_Qgen_at80C = 0.171
+
 %% fin
