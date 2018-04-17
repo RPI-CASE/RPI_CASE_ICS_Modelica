@@ -14,9 +14,12 @@ Grey = [0.7 0.7 0.7];
 mean_eta_combined = [0,0];
 
 % 20-Feb Measured Qgen & Egen 
-
-load('ICSolar.ICS_Skeleton_20_Feb_2015.mat','eta_Qgen_mods',...
+% load('PROJECTED_ICSolar.ICS_Skeleton_20_Feb_2015.mat','eta_Qgen_mods',...
+load('PROJECTED_ICSolar.ICS_Skeleton_20_Feb_2015_v7.mat','eta_Qgen_mods',...
     'eta_Egen_mods','Start','End','day');
+
+% load('ICSolar.ICS_Skeleton_20_Feb_2015.mat','eta_Qgen_mods',...
+%     'eta_Egen_mods','Start','End','day');
 
 figure('Color',[1 1 1]);
 hold on;
@@ -72,8 +75,9 @@ plot(t_s_eta_Com,'Color',Purple,...
 %clc;
 %clear all;
 
-load('PROJECTED_ICSolar.ICS_Skeleton_20_Feb_2015.mat','eta_Qgen_mods',...
-    'eta_Egen_mods','Start','End','day');
+% load('PROJECTED_ICSolar.ICS_Skeleton_20_Feb_2015.mat','eta_Qgen_mods',...
+% load('PROJECTED_ICSolar.ICS_Skeleton_20_Feb_2015v5.mat','eta_Qgen_mods',...
+%     'eta_Egen_mods','Start','End','day');
 Turquoise = [0.301960796117783 0.745098054409027 0.933333337306976];
 Purple = [0.494117647409439 0.184313729405403 0.556862771511078];
 

@@ -7,11 +7,20 @@
 % specifically the 20150220 data
 % save this stuff to ..\ICSolar.ICS_Skeleton_20_Feb_2015_v20180330.mat
 
-%% Create variables
+%% Create variables for proto
+load('ICSolar.ICS_Skeleton_20_Feb_2015_v20180330.mat')
+
 out_eta_Qgen_3mods = measured_Qgen_3mods./G_DN_3mods
 out_eta_Egen_6mods = eta_Egen_6mods
 out_eta_Cgen_3mods = out_eta_Egen_6mods + out_eta_Qgen_3mods
 out_reassembled = [measured_T_HTFin-273.15 ; out_eta_Cgen_3mods ; out_eta_Egen_6mods ; out_eta_Qgen_3mods]
+
+%% Create variables for proj
+
+load('PROJECTED_ICSolar.ICS_Skeleton_20_Feb_2015_v20180404.mat',...
+    'eta_Cgen_arrayTotal','eta_Egen_arrayTotal','eta_Qgen_arrayTotal'...
+    );
+
 
 %% plot 
 figure('Color',[1 1 1],'Position', [100, 100, 500, 500]);
@@ -35,14 +44,39 @@ ylabel('\eta_{(cogen, homo)}',...
 %% generate output values
 % efficiencies at 58C and 80C
 % Cgen, Egen, Qgen
+% determined by averaging all the datapoints at 58 and 80C (~10 each)
 
-out_eta_Cgen_at58C = 1
-out_eta_Cgen_at80C = 1
+% the Tlook parameters define the temperature ranges for reporting average
+% values for the output variables. they are based on the full n=613 dataset
+% from 20150220
+Tlook_58C_start = 27;
+Tlook_58C_end = 43;
+Tlook_70C_start = 280;
+Tlook_70C_end = 329;
+Tlook_80C_start = 607;
+Tlook_80C_end = 612;
 
-out_eta_Egen_at58C = 1
-out_eta_Egen_at80C = 1
+% deprecated in favor of a mean about the % reported value, rather than mean of the records that round down to the reported value
+% out_eta_Cgen_at58C = 0.433 
+% out_eta_Cgen_at80C = 0.365
+% out_eta_Egen_at58C = 0.201
+% out_eta_Egen_at80C = 0.194
+% out_eta_Qgen_at58C = 0.2323
+% out_eta_Qgen_at80C = 0.171
 
-out_eta_Qgen_at58C = 1
-out_eta_Qgen_at80C = 1
+out_eta_Cgen_at58C = mean(out_eta_Cgen_3mods(Tlook_58C_start:Tlook_58C_end));
+out_eta_Cgen_at70C = mean(out_eta_Cgen_3mods(Tlook_70C_start:Tlook_70C_end));
+out_eta_Cgen_at80C = mean(out_eta_Cgen_3mods(Tlook_80C_start:Tlook_80C_end));
+
+out_eta_Egen_at58C = mean(out_eta_Egen_6mods(Tlook_58C_start:Tlook_58C_end));
+out_eta_Egen_at70C = mean(out_eta_Egen_6mods(Tlook_70C_start:Tlook_70C_end));
+out_eta_Egen_at80C = mean(out_eta_Egen_6mods(Tlook_80C_start:Tlook_80C_end));
+
+out_eta_Qgen_at58C = mean(out_eta_Qgen_3mods(Tlook_58C_start:Tlook_58C_end));
+out_eta_Qgen_at70C = mean(out_eta_Qgen_3mods(Tlook_70C_start:Tlook_70C_end));
+out_eta_Qgen_at80C = mean(out_eta_Qgen_3mods(Tlook_80C_start:Tlook_80C_end));
+
+out_s_eta_Cgen_at80C = mean([0.0771930130897608,0.0766683669357484,0.0768740832206731,0.0770843345836506,0.0766480961713483,0.0773463326071412,0.0768709110397642,0.0770613967874629,0.0777563758812591,0.0775770185393822,0.0772031788771222,0.0778764330640413,0.0782059850780202,0.0773665401083797,0.0767739913946461,0.0764947504249575,0.0767956221947554,0.0765913567362009,0.0762706393139432,0.0773397387239622,0.0763877223045878,0.0765453135859576,0.0761890745647409,0.0764705282438789]);
+
 
 %% fin
